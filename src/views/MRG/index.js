@@ -34,7 +34,7 @@ import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(styles);
 
-export default function ProfilePage(props) {
+export default function Miccosukee(props) {
   const classes = useStyles();
   const { ...rest } = props;
   const imageClasses = classNames(
@@ -42,13 +42,31 @@ export default function ProfilePage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
+
+  const menuLinks = [
+    {
+      text: "",
+      href: "/",
+      target: "",
+      color: "",
+      icon: () => <i className={classes.socialIcons + " fab fa-twitter"} />,
+    },
+    {
+      text: "test 2",
+      href: "",
+      target: "",
+      color: "",
+      icon: () => <i className={classes.socialIcons + " fab fa-twitter"} />,
+    },
+  ];
+
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
       <Header
         color="transparent"
         brand="Material Kit React"
-        rightLinks={<HeaderLinks />}
+        rightLinks={<HeaderLinks menuItems={menuLinks} />}
         fixed
         changeColorOnScroll={{
           height: 200,
