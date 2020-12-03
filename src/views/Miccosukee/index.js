@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-
+//components
+import Header from "./Components/header";
+//pages
 import Home from "./Pages/home";
-import MRG from "./Pages/mrg";
+//import MRG from "./Pages/mrg";
+import GamingGolf from "./Pages/gamingGolf";
 import Everglades from "./Pages/everglades";
 import History from "./Pages/history";
 import Administration from "./Pages/administration";
@@ -19,7 +22,7 @@ const Miccosukee = () => {
       case "/":
         return <Home click={cardClicked} />;
       case "Miccosukee Resort & Gaming":
-        return <MRG click={cardClicked} />;
+        return <GamingGolf click={cardClicked} />;
       case "Everglades Experiences":
         return <Everglades click={cardClicked} />;
       case "History":
@@ -31,7 +34,12 @@ const Miccosukee = () => {
     }
   };
 
-  return <React.Fragment>{renderMiccosukee()}</React.Fragment>;
+  return (
+    <React.Fragment>
+      <Header click={cardClicked} />
+      {renderMiccosukee()}
+    </React.Fragment>
+  );
 };
 
 export default Miccosukee;

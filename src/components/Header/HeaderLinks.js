@@ -26,17 +26,30 @@ export default function HeaderLinks(props) {
   const classes = useStyles();
 
   const renderLists = () => {
+    console.log("headerlinks props: ", props);
     //map through number of props.text and create ListItems for each
+    /* EXAMPLE OF PROVIDED HEADERLINKS PROPS 
+    const headerLinkArray = [
+      {
+        text: "GO BACK",
+        color: "transparent",
+        icon: () => <i className={classes.socialIcons + " fab fa-twitter"} />,
+        //onClick: () => props.click("/"),
+        //onClick: () => window.open("https://google.com", "_self"),
+      },
+    ];
+  */
     return props.menuItems.map((menuItem) => {
       return (
         <ListItem key={menuItem.text} className={classes.listItem}>
           <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            color="transparent"
+            //href="https://twitter.com/CreativeTim?ref=creativetim"
+            //target="_blank"
+            onClick={menuItem.onClick}
+            color={menuItem.color}
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
+            <i className={menuItem.iconClass || ""} />
             {menuItem.text}
           </Button>
         </ListItem>

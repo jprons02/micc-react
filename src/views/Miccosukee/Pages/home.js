@@ -11,10 +11,16 @@ import CardHeader from "components/Card/CardHeader";
 import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
 import styles from "assets/jss/material-kit-react/views/miccosukee/home.js";
+//images
+import mrgGolfImg from "assets/img/miccosukee/pages/home/home-mrg.jpg";
+import evergladesImg from "assets/img/miccosukee/pages/home/home-airboats.jpg";
+import historyImg from "assets/img/miccosukee/pages/home/home-history.jpg";
+import adminImg from "assets/img/miccosukee/pages/home/home-admin.jpg";
 
 const useStyles = makeStyles(styles);
 
 //<Link to="/about">About</Link>
+//"https://miccosukee.com/wp-content/uploads/2019/12/gaming-scaled.jpg"
 
 const Home = (props) => {
   const classes = useStyles();
@@ -28,7 +34,7 @@ const Home = (props) => {
         background: `linear-gradient(
                 rgba(156, 39, 176, 0.45), 
                 rgba(156, 39, 176, 0.45)),
-                url("https://miccosukee.com/wp-content/uploads/2019/12/gaming-scaled.jpg")`,
+                url(${mrgGolfImg})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -46,7 +52,7 @@ const Home = (props) => {
         background: `linear-gradient(
                 rgba(67, 169, 70, 0.45), 
                 rgba(67, 169, 70, 0.45)),
-                url("https://miccosukee.com/wp-content/uploads/2019/12/airboatrides-scaled.jpg")`,
+                url(${evergladesImg})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -66,7 +72,7 @@ const Home = (props) => {
         background: `linear-gradient(
                 rgba(224, 206, 0, 0.45), 
                 rgba(224, 206, 0, 0.45)),
-                url("https://miccosukee.com/wp-content/uploads/2018/06/01292012195.jpg")`,
+                url(${historyImg})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -86,7 +92,7 @@ const Home = (props) => {
         background: `linear-gradient(
                 rgba(197, 78, 69, 0.45), 
                 rgba(197, 78, 69, 0.45)),
-                url("https://miccosukee.com/wp-content/uploads/2019/11/Performers_PowWow-1.jpg")`,
+                url(${adminImg})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -138,7 +144,7 @@ const Home = (props) => {
     <div className={classNames(classes.main)}>
       <div className={classes.container}>
         <GridContainer
-          style={{ height: "100vh" }}
+          style={{ height: "100vh", paddingBottom: "30px" }}
           justify="center"
           alignItems="center"
         >
