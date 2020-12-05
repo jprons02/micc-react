@@ -1,27 +1,16 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
-// @material-ui/core components
-import { Icon } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-//import CardHeader from "components/Card/CardHeader";
-import CardBody from "components/Card/CardBody";
-import CardFooter from "components/Card/CardFooter";
-import Button from "components/CustomButtons/Button.js";
-import styles from "assets/jss/material-kit-react/views/miccosukee/gaming_golf.js";
 //images
 import mrgImg from "assets/img/miccosukee/pages/mrg_golf/mrg-card.jpg";
 import golfImg from "assets/img/miccosukee/pages/mrg_golf/golf-card.jpg";
+//Miccosukee Component
+import EntityCard from "../Components/EntityCards";
 
-const useStyles = makeStyles(styles);
+//props gives me the cardClicked function...
 
 const GamingGolf = (props) => {
-  const classes = useStyles();
-
   const cards = [
     {
       title: "Resort & Gaming",
@@ -72,13 +61,49 @@ const GamingGolf = (props) => {
           md={6}
           style={{ maxWidth: "450px", padding: "15px" }}
         >
-          <Card style={{ margin: "0" }}>
+          <EntityCard
+            title={card.title}
+            description={card.description}
+            imgSrc={card.imgSrc}
+            buttonOne={card.buttonOne}
+            buttonTwo={card.buttonTwo}
+            hours={card.hours}
+            phone={card.phone}
+            address={card.address}
+          />
+        </GridItem>
+      );
+    });
+  };
+
+  return (
+    <GridContainer style={{ clear: "both" }} justify="center">
+      {renderCards()}
+    </GridContainer>
+  );
+};
+
+export default GamingGolf;
+
+/*
+    <div>
+    <Button
+        className={classes.backButton}
+        onClick={() => props.click("/")}
+        simple
+    >
+        <Icon>arrow_back_ios</Icon>BACK
+    </Button>
+    </div>
+*/
+
+/*
+<Card style={{ margin: "0" }}>
             <img
               style={{
                 width: "100%",
                 display: "block",
               }}
-              className={classes.imgCardTop}
               src={card.imgSrc}
               alt="Card-img-cap"
             />
@@ -128,32 +153,4 @@ const GamingGolf = (props) => {
               </GridContainer>
             </CardFooter>
           </Card>
-        </GridItem>
-      );
-    });
-  };
-
-  return (
-    <div className={classNames(classes.main)}>
-      <div className={classes.container}>
-        <GridContainer style={{ clear: "both" }} justify="center">
-          {renderCards()}
-        </GridContainer>
-      </div>
-    </div>
-  );
-};
-
-export default GamingGolf;
-
-/*
-    <div>
-    <Button
-        className={classes.backButton}
-        onClick={() => props.click("/")}
-        simple
-    >
-        <Icon>arrow_back_ios</Icon>BACK
-    </Button>
-    </div>
 */
