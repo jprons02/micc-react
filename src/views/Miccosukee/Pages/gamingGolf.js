@@ -1,4 +1,6 @@
 import React from "react";
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -8,9 +10,15 @@ import golfImg from "assets/img/miccosukee/pages/mrg_golf/golf-card.jpg";
 //Miccosukee Component
 import EntityCard from "../Components/EntityCards";
 
+import styles from "assets/jss/material-kit-react/views/miccosukee/gaming_golf.js";
+
+const useStyles = makeStyles(styles);
+
 //props gives me the cardClicked function...
 
 const GamingGolf = (props) => {
+  const classes = useStyles();
+
   const cards = [
     {
       title: "Resort & Gaming",
@@ -55,12 +63,7 @@ const GamingGolf = (props) => {
   const renderCards = () => {
     return cards.map((card) => {
       return (
-        <GridItem
-          key={card.title}
-          sm={12}
-          md={6}
-          style={{ maxWidth: "450px", padding: "15px" }}
-        >
+        <GridItem key={card.title} sm={12} md={6} className={classes.gridItem}>
           <EntityCard
             title={card.title}
             description={card.description}
@@ -77,80 +80,10 @@ const GamingGolf = (props) => {
   };
 
   return (
-    <GridContainer style={{ clear: "both" }} justify="center">
+    <GridContainer className={classes.gridContainer} justify="center">
       {renderCards()}
     </GridContainer>
   );
 };
 
 export default GamingGolf;
-
-/*
-    <div>
-    <Button
-        className={classes.backButton}
-        onClick={() => props.click("/")}
-        simple
-    >
-        <Icon>arrow_back_ios</Icon>BACK
-    </Button>
-    </div>
-*/
-
-/*
-<Card style={{ margin: "0" }}>
-            <img
-              style={{
-                width: "100%",
-                display: "block",
-              }}
-              src={card.imgSrc}
-              alt="Card-img-cap"
-            />
-            <CardBody>
-              <h4 className={classes.cardTitle}>{card.title}</h4>
-              <p>{card.description}</p>
-              <div style={{ textAlign: "center" }}>
-                <Button style={{ width: "49%" }} color={card.buttonOne.color}>
-                  {card.buttonOne.text}
-                </Button>
-                <Button style={{ width: "49%" }} color={card.buttonTwo.color}>
-                  {card.buttonTwo.text}
-                </Button>
-              </div>
-            </CardBody>
-            <CardFooter>
-              <GridContainer direction="column">
-                <GridItem style={{ marginBottom: "8px" }}>
-                  <Icon
-                    style={{
-                      color: "#5a5a5a",
-                      verticalAlign: "middle",
-                    }}
-                  >
-                    schedule
-                  </Icon>
-                  &nbsp;
-                  {card.hours}
-                </GridItem>
-                <GridItem style={{ marginBottom: "8px" }}>
-                  <Icon
-                    style={{
-                      color: "#5a5a5a",
-                      verticalAlign: "middle",
-                    }}
-                  >
-                    phone
-                  </Icon>
-                  &nbsp; {card.phone}
-                </GridItem>
-                <GridItem>
-                  <Icon style={{ color: "#5a5a5a", verticalAlign: "middle" }}>
-                    map
-                  </Icon>
-                  &nbsp; {card.address}
-                </GridItem>
-              </GridContainer>
-            </CardFooter>
-          </Card>
-*/

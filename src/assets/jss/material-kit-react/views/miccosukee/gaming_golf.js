@@ -1,17 +1,19 @@
-import { cardTitle } from "assets/jss/material-kit-react.js";
-import imagesStyles from "assets/jss/material-kit-react/imagesStyles.js";
-
 const gamingGolf = {
-  imagesStyles,
-  cardTitle,
-  backButton: {
-    float: "right",
-    marginBottom: "0",
-    marginTop: "15px",
-    padding: "12px 15px",
-    color: "#3C4858",
-    "&:hover": {
-      color: "black",
+  gridContainer: {
+    clear: "both",
+    position: "absolute",
+    width: "100%",
+    margin: "auto",
+  },
+  gridItem: {
+    maxWidth: "450px",
+    padding: "15px 0px",
+  },
+  //DESKTOP VIEW
+  "@media screen and (min-width: 960px)": {
+    gridItem: {
+      maxWidth: "450px",
+      padding: "15px",
     },
   },
 };

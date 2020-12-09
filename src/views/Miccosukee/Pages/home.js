@@ -105,17 +105,7 @@ const Home = (props) => {
   const renderMiccCards = () => {
     return cards.map((card) => {
       return (
-        <GridItem
-          key={card.title}
-          style={{
-            padding: "15px",
-            height: "50%",
-            minHeight: "350px",
-            width: "100%",
-          }}
-          sm={12}
-          md={6}
-        >
+        <GridItem key={card.title} className={classes.gridItem} sm={12} md={6}>
           <Card
             onClick={() => props.click(card.title) || null}
             className={classes.mCard}
@@ -140,7 +130,7 @@ const Home = (props) => {
 
   return (
     <GridContainer
-      style={{ height: "100vh", paddingBottom: "30px" }}
+      className={classes.gridContainer}
       justify="center"
       alignItems="center"
     >

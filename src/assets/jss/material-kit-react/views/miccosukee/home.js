@@ -3,6 +3,19 @@ import { cardTitle } from "assets/jss/material-kit-react.js";
 
 const miccosukeeHomePageStyle = {
   container,
+  gridContainer: {
+    height: "100vh",
+    paddingBottom: "30px",
+    position: "absolute",
+    width: "100%",
+    margin: "auto",
+  },
+  gridItem: {
+    padding: "15px 0px",
+    height: "50%",
+    minHeight: "350px",
+    width: "100%",
+  },
   cardTitle,
   mCard: {
     width: "100%",
@@ -14,6 +27,8 @@ const miccosukeeHomePageStyle = {
     padding: "0 1.875rem",
     backgroundColor: "#0000008a",
     color: "white",
+    borderTopLeftRadius: "6px",
+    borderTopRightRadius: "6px",
   },
   mCardDescription: {
     marginTop: "-8px",
@@ -22,6 +37,15 @@ const miccosukeeHomePageStyle = {
     zIndex: "3",
     maxWidth: "1200px",
     margin: "auto",
+  },
+  //DESKTOP VIEW
+  "@media screen and (min-width: 960px)": {
+    gridItem: {
+      padding: "15px",
+      height: "50%",
+      minHeight: "350px",
+      width: "100%",
+    },
   },
 };
 

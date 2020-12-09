@@ -18,6 +18,8 @@ const EntityCard = (props) => {
         style={{
           width: "100%",
           display: "block",
+          borderTopLeftRadius: "6px",
+          borderTopRightRadius: "6px",
         }}
         src={props.imgSrc}
         alt="Card-img-cap"
