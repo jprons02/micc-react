@@ -15,12 +15,15 @@ import evergladesImg from "assets/img/miccosukee/pages/home/home-airboats.jpg";
 import historyImg from "assets/img/miccosukee/pages/home/home-history.jpg";
 import adminImg from "assets/img/miccosukee/pages/home/home-admin.jpg";
 
+import { useLanguage } from "../../../context/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 //<Link to="/about">About</Link>
 //"https://miccosukee.com/wp-content/uploads/2019/12/gaming-scaled.jpg"
 
 const Home = (props) => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const cards = [
@@ -134,6 +137,9 @@ const Home = (props) => {
       justify="center"
       alignItems="center"
     >
+      <div style={{ width: "100%", textAlign: "center" }}>
+        {language ? "hello" : "hola"}
+      </div>
       {renderMiccCards()}
     </GridContainer>
   );
