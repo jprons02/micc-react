@@ -45,7 +45,7 @@ export default function Miccosukee(props) {
 
   const menuLinks = [
     {
-      text: "",
+      text: "hello",
       href: "/",
       target: "",
       color: "",

@@ -10,7 +10,7 @@ import golfImg from "assets/img/miccosukee/pages/mrg_golf/golf-card.jpg";
 //Miccosukee Component
 import EntityCard from "../Components/EntityCards";
 
-import styles from "assets/jss/material-kit-react/views/miccosukee/gaming_golf.js";
+import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js";
 
 const useStyles = makeStyles(styles);
 
@@ -28,12 +28,14 @@ const GamingGolf = (props) => {
       buttonOne: {
         text: "CONTACT",
         color: "primary",
+        usesRouter: false,
         link: "https://google.com",
       },
       buttonTwo: {
         text: "WEBSITE",
         color: "primary",
-        link: "https://google.com",
+        usesRouter: true,
+        link: `/mrg2`,
       },
       hours: "Today's Hours: 9:00 AM - 2:00 AM",
       phone: "1-877-242-6464",
@@ -47,11 +49,13 @@ const GamingGolf = (props) => {
       buttonOne: {
         text: "CONTACT",
         color: "success",
+        usesRouter: false,
         link: "https://google.com",
       },
       buttonTwo: {
         text: "WEBSITE",
         color: "success",
+        usesRouter: false,
         link: "https://google.com",
       },
       hours: "Today's Hours: 9:00 AM - 5:00 PM",

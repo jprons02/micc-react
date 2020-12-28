@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // @material-ui/core components
 import { Icon } from "@material-ui/core";
 import { cardTitle } from "assets/jss/material-kit-react.js";
@@ -12,6 +13,44 @@ import CardFooter from "components/Card/CardFooter";
 import Button from "components/CustomButtons/Button.js";
 
 const EntityCard = (props) => {
+  const renderButtonOne = () => {
+    //if button one is a function, it contains a routing Link component
+    if (props.buttonOne.usesRouter) {
+      return (
+        <Link to={props.buttonOne.link}>
+          <Button style={{ width: "49%" }} color={props.buttonOne.color}>
+            {props.buttonOne.text}
+          </Button>
+        </Link>
+      );
+    } else {
+      return (
+        <Button style={{ width: "49%" }} color={props.buttonOne.color}>
+          {props.buttonOne.text}
+        </Button>
+      );
+    }
+  };
+
+  const renderButtonTwo = () => {
+    //if button one is a function, it contains a routing Link component
+    if (props.buttonTwo.usesRouter) {
+      return (
+        <Link to={props.buttonTwo.link}>
+          <Button style={{ width: "49%" }} color={props.buttonTwo.color}>
+            {props.buttonTwo.text}
+          </Button>
+        </Link>
+      );
+    } else {
+      return (
+        <Button style={{ width: "49%" }} color={props.buttonTwo.color}>
+          {props.buttonTwo.text}
+        </Button>
+      );
+    }
+  };
+
   return (
     <Card style={{ margin: "0" }}>
       <img
@@ -28,12 +67,8 @@ const EntityCard = (props) => {
         <h4 className={cardTitle}>{props.title}</h4>
         <p>{props.description}</p>
         <div style={{ textAlign: "center" }}>
-          <Button style={{ width: "49%" }} color={props.buttonOne.color}>
-            {props.buttonOne.text}
-          </Button>
-          <Button style={{ width: "49%" }} color={props.buttonTwo.color}>
-            {props.buttonTwo.text}
-          </Button>
+          {renderButtonOne()}
+          {renderButtonTwo()}
         </div>
       </CardBody>
       <CardFooter>
