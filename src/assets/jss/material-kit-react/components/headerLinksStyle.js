@@ -21,7 +21,7 @@ const headerLinksStyle = (theme) => ({
     width: "auto",
     margin: "0",
     padding: "0",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       width: "100%",
       "&:after": {
         width: "calc(100% - 30px)",
@@ -43,7 +43,7 @@ const headerLinksStyle = (theme) => ({
     margin: "0",
     padding: "0",
     paddingLeft: "8px",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       width: "100%",
       textAlign: "center",
       padding: "0",
@@ -68,7 +68,7 @@ const headerLinksStyle = (theme) => ({
       color: "inherit",
       background: "rgba(200, 200, 200, 0.2)",
     },
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       width: "calc(100% - 30px)",
       marginLeft: "15px",
       marginBottom: "8px",
@@ -102,7 +102,7 @@ const headerLinksStyle = (theme) => ({
     margin: "0px",
     display: "inline-flex",
     //joey custom
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("md")]: {
       marginTop: "20px",
       width: "80%",
     },

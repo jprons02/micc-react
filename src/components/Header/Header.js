@@ -75,17 +75,17 @@ export default function Header(props) {
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
           {leftLinks !== undefined ? (
-            <Hidden smDown implementation="css">
+            <Hidden mdDown implementation="css">
               {leftLinks}
             </Hidden>
           ) : (
             brandComponent
           )}
         </div>
-        <Hidden smDown implementation="css">
+        <Hidden mdDown implementation="css">
           {rightLinks}
         </Hidden>
-        <Hidden mdUp>
+        <Hidden lgUp>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -95,7 +95,7 @@ export default function Header(props) {
           </IconButton>
         </Hidden>
       </Toolbar>
-      <Hidden mdUp implementation="js">
+      <Hidden lgUp implementation="js">
         <Drawer
           variant="temporary"
           anchor={"right"}
