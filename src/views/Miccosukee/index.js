@@ -56,13 +56,13 @@ const Miccosukee = () => {
     switch (x) {
       case "/":
         return setPage(0);
-      case "Miccosukee Resort & Gaming":
+      case 1:
         return setPage(1);
-      case "Everglades Experiences":
+      case 2:
         return setPage(2);
-      case "History":
+      case 3:
         return setPage(3);
-      case "Administration":
+      case 4:
         return setPage(4);
       default:
         return setPage(0);

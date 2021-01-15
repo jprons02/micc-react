@@ -26,11 +26,17 @@ const Home = (props) => {
   const language = useLanguage();
   const classes = useStyles();
 
+  console.log("language", language);
+
   const cards = [
     {
-      title: "Miccosukee Resort & Gaming",
-      description:
-        "With supporting text below as a natural lead-in to additional content.",
+      id: 1,
+      title: language
+        ? "Miccosukee Resort & Gaming"
+        : "Miccosukee Resort & Gaming",
+      description: language
+        ? "With supporting text below as a natural lead-in to additional content."
+        : "Con texto de apoyo debajo dirigiendo a contenido adicional",
       cardBackground: {
         background: `linear-gradient(
                 rgba(156, 39, 176, 0.45), 
@@ -46,9 +52,13 @@ const Home = (props) => {
       buttonColor: "primary",
     },
     {
-      title: "Everglades Experiences",
-      description:
-        "With supporting text below as a natural lead-in to additional content.",
+      id: 2,
+      title: language
+        ? "Everglades Experiences"
+        : "Experiencias en los Everglades",
+      description: language
+        ? "With supporting text below as a natural lead-in to additional content."
+        : "Con texto de apoyo debajo dirigiendo a contenido adicional",
       cardBackground: {
         background: `linear-gradient(
                 rgba(67, 169, 70, 0.45), 
@@ -66,9 +76,11 @@ const Home = (props) => {
       buttonColor: "success",
     },
     {
-      title: "History",
-      description:
-        "With supporting text below as a natural lead-in to additional content.",
+      id: 3,
+      title: language ? "History" : "Historia",
+      description: language
+        ? "With supporting text below as a natural lead-in to additional content."
+        : "Con texto de apoyo debajo dirigiendo a contenido adicional",
       cardBackground: {
         background: `linear-gradient(
                 rgba(224, 206, 0, 0.45), 
@@ -86,9 +98,11 @@ const Home = (props) => {
       buttonColor: "info",
     },
     {
-      title: "Administration",
-      description:
-        "With supporting text below as a natural lead-in to additional content.",
+      id: 4,
+      title: language ? "Administration" : "Administración",
+      description: language
+        ? "With supporting text below as a natural lead-in to additional content."
+        : "Con texto de apoyo debajo dirigiendo a contenido adicional",
       cardBackground: {
         background: `linear-gradient(
                 rgba(197, 78, 69, 0.45), 
@@ -108,9 +122,9 @@ const Home = (props) => {
   const renderMiccCards = () => {
     return cards.map((card) => {
       return (
-        <GridItem key={card.title} className={classes.gridItem} sm={12} md={6}>
+        <GridItem key={card.id} className={classes.gridItem} sm={12} md={6}>
           <Card
-            onClick={() => props.click(card.title) || null}
+            onClick={() => props.click(card.id) || null}
             className={classes.mCard}
             style={card.cardBackground || {}}
           >
@@ -137,9 +151,6 @@ const Home = (props) => {
       justify="center"
       alignItems="center"
     >
-      <div style={{ width: "100%", textAlign: "center" }}>
-        {language ? "hello" : "hola"}
-      </div>
       {renderMiccCards()}
     </GridContainer>
   );

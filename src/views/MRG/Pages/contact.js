@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Button from "components/CustomButtons/Button.js";
 import Typography from "@material-ui/core/Typography";
 
-const Gaming = () => {
+const Amenities = (props) => {
   return (
     <div>
-      <Typography variant="h4">Gaming</Typography>
+      <Typography variant="h4">Contact</Typography>
       <Link to="/mrg">
         <Button usetheme="true">Back</Button>
       </Link>
@@ -14,4 +14,4 @@ const Gaming = () => {
   );
 };
 
-export default Gaming;
+export default Amenities;

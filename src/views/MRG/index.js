@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -32,6 +33,22 @@ import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
 
+// theme
+import { theme } from "../../themes";
+import { ThemeProvider } from "@material-ui/core/styles";
+
+// my components
+import MrgHeader from "./Components/Header.js";
+
+// pages
+import Home from "views/MRG/Pages/home.js";
+import Accommodations from "views/MRG/Pages/accommodations.js";
+import Amenities from "views/MRG/Pages/amenities.js";
+import Gaming from "views/MRG/Pages/gaming.js";
+import DiningNightlife from "views/MRG/Pages/diningNightlife.js";
+import Events from "views/MRG/Pages/events.js";
+import Contact from "views/MRG/Pages/contact.js";
+
 const useStyles = makeStyles(styles);
 
 export default function Miccosukee(props) {
@@ -42,192 +59,47 @@ export default function Miccosukee(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-
-  const menuLinks = [
-    {
-      text: "hello",
-      href: "/",
-      target: "",
-      color: "",
-      icon: () => <i className={classes.socialIcons + " fab fa-twitter"} />,
-    },
-    {
-      text: "test 2",
-      href: "",
-      target: "",
-      color: "",
-      icon: () => <i className={classes.socialIcons + " fab fa-twitter"} />,
-    },
-  ];
+  let match = useRouteMatch();
 
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
-    <div>
-      <Header
-        color="transparent"
-        brand="Material Kit React"
-        rightLinks={<HeaderLinks menuItems={menuLinks} />}
-        fixed
-        changeColorOnScroll={{
-          height: 200,
-          color: "white",
-        }}
-        {...rest}
-      />
-      <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div>
-          <div className={classes.container}>
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
-                <div className={classes.profile}>
-                  <div>
-                    <img src={profile} alt="..." className={imageClasses} />
-                  </div>
-                  <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-instagram"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button>
-                  </div>
-                </div>
-              </GridItem>
-            </GridContainer>
-            <div className={classes.description}>
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
-              </p>
-            </div>
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
-                <NavPills
-                  alignCenter
-                  color="primary"
-                  tabs={[
-                    {
-                      tabButton: "Studio",
-                      tabIcon: Camera,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio2}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={studio5}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio4}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                        </GridContainer>
-                      ),
-                    },
-                    {
-                      tabButton: "Work",
-                      tabIcon: Palette,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work3}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work5}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                        </GridContainer>
-                      ),
-                    },
-                    {
-                      tabButton: "Favorite",
-                      tabIcon: Favorite,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work4}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio3}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={work2}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={work1}
-                              className={navImageClasses}
-                            />
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                        </GridContainer>
-                      ),
-                    },
-                  ]}
+    <ThemeProvider theme={theme("mrg")}>
+      <div>
+        <MrgHeader props={props} />
+        <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <div>
+            <div className={classes.container}>
+              <Switch>
+                <Route exact path={`${match.path}/`} component={Home} />
+                <Route
+                  exact
+                  path={`${match.path}/accommodations`}
+                  component={Accommodations}
                 />
-              </GridItem>
-            </GridContainer>
+                <Route
+                  exact
+                  path={`${match.path}/amenities`}
+                  component={Amenities}
+                />
+                <Route exact path={`${match.path}/gaming`} component={Gaming} />
+                <Route
+                  exact
+                  path={`${match.path}/dining-nightlife`}
+                  component={DiningNightlife}
+                />
+                <Route exact path={`${match.path}/events`} component={Events} />
+                <Route
+                  exact
+                  path={`${match.path}/contact`}
+                  component={Contact}
+                />
+              </Switch>
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </ThemeProvider>
   );
 }

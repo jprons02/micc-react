@@ -3,7 +3,7 @@ import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
 // react components for routing our app without refresh
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,16 +17,48 @@ import { Apps, CloudDownload } from "@material-ui/icons";
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
-
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
+  let match = useRouteMatch();
   const classes = useStyles();
 
+  //remove trailing slash to avoid double //. such as /mrg//accommodations.
+  const getBaseUrl = () => {
+    const regex = /([a-z])+\//;
+    if (regex.test(match.url)) {
+      return match.url.slice(0, -1);
+    } else {
+      return match.url;
+    }
+  };
+
+  //Material ui kit needs an array. Cycle through the submenu object and return a new array.
+  const renderDropDownItems = (originalArr) => {
+    if (originalArr.subMenu == false) {
+      return (
+        <Link to="/" className={classes.dropdownLink}>
+          TESTING
+        </Link>
+      );
+    }
+    let arrayOfItems = [];
+    for (let i = 0; i < originalArr.length; i++) {
+      arrayOfItems.push(
+        <Link
+          to={`${getBaseUrl()}${originalArr[i]["link"]}`}
+          className={classes.dropdownLink}
+        >
+          {originalArr[i]["text"]}
+        </Link>
+      );
+    }
+    return arrayOfItems;
+  };
+
   const renderLists = () => {
-    console.log("headerlinks props: ", props);
     //map through number of props.text and create ListItems for each
     /* EXAMPLE OF PROVIDED HEADERLINKS PROPS 
     const headerLinkArray = [
@@ -40,20 +72,58 @@ export default function HeaderLinks(props) {
     ];
   */
     return props.menuItems.map((menuItem) => {
-      return (
-        <ListItem key={menuItem.text} className={classes.listItem}>
-          <Button
-            //href="https://twitter.com/CreativeTim?ref=creativetim"
-            //target="_blank"
-            onClick={menuItem.onClick}
-            color={menuItem.color}
-            className={classes.navLink}
+      // if action menu item - ex) BOOK A ROOM button
+      if (menuItem.itemType === "action") {
+        return (
+          <ListItem
+            key={menuItem.text}
+            className={classes.listItemActionButton}
           >
-            <i className={menuItem.iconClass || ""} />
-            {menuItem.text}
-          </Button>
-        </ListItem>
-      );
+            <Button
+              usetheme="true"
+              className={classes.registerNavLink}
+              round={true}
+            >
+              {menuItem.icon ? menuItem.icon() : ""}
+              {menuItem.text}
+            </Button>
+          </ListItem>
+        );
+        // if dropdown menu item
+      } else if (menuItem.itemType === "dropdown") {
+        return (
+          <ListItem key={menuItem.text} className={classes.listItem}>
+            <CustomDropdown
+              hoverColor="black"
+              noLiPadding
+              buttonText={menuItem.text}
+              buttonProps={{
+                className: classes.navLink,
+                color: "transparent",
+              }}
+              dropdownList={renderDropDownItems(menuItem.subMenu)}
+            />
+          </ListItem>
+        );
+        // if standard menu item
+      } else {
+        return (
+          <ListItem key={menuItem.text} className={classes.listItem}>
+            <Link
+              style={{ padding: "0px", color: "inherit" }}
+              to={`${getBaseUrl()}${menuItem.link}` || "#"}
+            >
+              <Button
+                className={classes.navLink}
+                color={"transparent" || menuItem.color}
+              >
+                {menuItem.icon ? menuItem.icon() : ""}
+                {menuItem.text}
+              </Button>
+            </Link>
+          </ListItem>
+        );
+      }
     });
   };
 
@@ -126,6 +196,7 @@ export default function HeaderLinks(props) {
               className={classes.navLink}
             >
               <i className={classes.socialIcons + " fab fa-facebook"} />
+              &nbsp;Facebook
             </Button>
           </Tooltip>
         </ListItem>
@@ -143,8 +214,23 @@ export default function HeaderLinks(props) {
               className={classes.navLink}
             >
               <i className={classes.socialIcons + " fab fa-instagram"} />
+              &nbsp;Instagram
             </Button>
           </Tooltip>
+        </ListItem>
+        <ListItem className={classes.listItemActionButton}>
+          <Button
+            usetheme="true"
+            href={props.href || "https://google.com"}
+            //color={props.color || "transparent"}
+            color={props.color || "primary"}
+            target={props.target || ""}
+            className={classes.registerNavLink}
+            round={true}
+            //fullWidth={true}
+          >
+            BOOK A ROOM
+          </Button>
         </ListItem>
       </div>
     );

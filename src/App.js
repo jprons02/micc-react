@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/profile-page" component={ProfilePage} />
           <Route path="/login-page" component={LoginPage} />
           <Route path="/components" component={Components} />
-          <Route path="/resortandgaming" component={MRG} />
+          <Route path="/mrg" component={MRG} />
           <Route path="/mrg2" component={MRG2} />
           <Route path="/" component={Miccosukee} />
         </Switch>

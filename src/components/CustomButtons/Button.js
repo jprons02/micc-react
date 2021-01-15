@@ -72,10 +72,6 @@ const RegularButton = React.forwardRef((props, ref) => {
 
   return renderButton();
 });
-/*
-variant={props.usetheme === "true" ? "contained" : null}
-color={props.usetheme === "true" ? "primary" : props.overrideColor}
-*/
 
 RegularButton.propTypes = {
   color: PropTypes.oneOf([

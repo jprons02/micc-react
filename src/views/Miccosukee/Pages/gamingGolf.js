@@ -12,53 +12,64 @@ import EntityCard from "../Components/EntityCards";
 
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js";
 
+import { useLanguage } from "../../../context/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 //props gives me the cardClicked function...
 
 const GamingGolf = (props) => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const cards = [
     {
-      title: "Resort & Gaming",
-      description:
-        "With supporting text below as a natural lead-in to additional content.",
+      id: 1,
+      title: language ? "Resort & Gaming" : "Resort & Gaming",
+      description: language
+        ? "With supporting text below as a natural lead-in to additional content."
+        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
       imgSrc: mrgImg,
       buttonOne: {
-        text: "CONTACT",
+        text: language ? "CONTACT" : "Contacto",
         color: "primary",
         usesRouter: false,
         link: "https://google.com",
       },
       buttonTwo: {
-        text: "WEBSITE",
+        text: language ? "WEBSITE" : "Página web",
         color: "primary",
         usesRouter: true,
-        link: `/mrg2`,
+        link: `/mrg`,
       },
-      hours: "Today's Hours: 9:00 AM - 2:00 AM",
+      hours: language
+        ? "Today's Hours: 9:00 AM - 2:00 AM"
+        : "Horario de Hoy: 9:00 AM - 5:00 PM",
       phone: "1-877-242-6464",
       address: "500 SW 177th Ave, Miami, FL 33194",
     },
     {
-      title: "Golf & Country Club",
-      description:
-        "With supporting text below as a natural lead-in to additional content.",
+      id: 2,
+      title: language ? "Golf & Country Club" : "Golf & Country Club",
+      description: language
+        ? "With supporting text below as a natural lead-in to additional content."
+        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
       imgSrc: golfImg,
       buttonOne: {
-        text: "CONTACT",
+        text: language ? "CONTACT" : "Contacto",
         color: "success",
         usesRouter: false,
         link: "https://google.com",
       },
       buttonTwo: {
-        text: "WEBSITE",
+        text: language ? "WEBSITE" : "Página web",
         color: "success",
         usesRouter: false,
         link: "https://google.com",
       },
-      hours: "Today's Hours: 9:00 AM - 5:00 PM",
+      hours: language
+        ? "Today's Hours: 9:00 AM - 5:00 PM"
+        : "Horario de Hoy: 9:00 AM - 5:00 PM",
       phone: "305-382-3930",
       address: "6401 Kendale Lakes Dr, Miami, FL 33183",
     },
@@ -67,7 +78,7 @@ const GamingGolf = (props) => {
   const renderCards = () => {
     return cards.map((card) => {
       return (
-        <GridItem key={card.title} sm={12} md={6} className={classes.gridItem}>
+        <GridItem key={card.id} sm={12} md={6} className={classes.gridItem}>
           <EntityCard
             title={card.title}
             description={card.description}
