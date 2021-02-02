@@ -38,7 +38,8 @@ import { theme } from "../../themes";
 import { ThemeProvider } from "@material-ui/core/styles";
 
 // my components
-import MrgHeader from "./Components/Header.js";
+import MrgHeader from "./Components/MrgHeader.js";
+import MrgFooter from "./Components/MrgFooter.js";
 
 // pages
 import Home from "views/MRG/Pages/home.js";
@@ -65,7 +66,7 @@ export default function Miccosukee(props) {
   return (
     <ThemeProvider theme={theme("mrg")}>
       <div>
-        <MrgHeader props={props} />
+        <MrgHeader />
         <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div>
@@ -98,7 +99,7 @@ export default function Miccosukee(props) {
             </div>
           </div>
         </div>
-        <Footer />
+        <MrgFooter />
       </div>
     </ThemeProvider>
   );

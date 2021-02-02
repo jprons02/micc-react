@@ -12,13 +12,29 @@ const useStyles = makeStyles(styles);
 export default function Badge(props) {
   const classes = useStyles();
   const { color, children } = props;
-  return (
-    <span className={classes.badge + " " + classes[color]}>{children}</span>
-  );
+
+  if (props.onClick) {
+    return (
+      <span
+        onClick={() => props.onClick()}
+        className={classes.badge + " " + classes[color]}
+        style={{
+          cursor: "pointer",
+          width: props.widthProp ? props.widthProp : "",
+        }}
+      >
+        {children}
+      </span>
+    );
+  } else {
+    return (
+      <span className={classes.badge + " " + classes[color]}>{children}</span>
+    );
+  }
 }
 
 Badge.defaultProps = {
-  color: "gray"
+  color: "gray",
 };
 
 Badge.propTypes = {
@@ -29,7 +45,7 @@ Badge.propTypes = {
     "success",
     "info",
     "rose",
-    "gray"
+    "gray",
   ]),
-  children: PropTypes.node
+  children: PropTypes.node,
 };

@@ -13,7 +13,8 @@ import Events from "views/MRG/Pages/events.js";
 import Gaming from "views/MRG/Pages/gaming.js";
 
 // my components
-import MrgHeader from "./Components/Header.js";
+import MrgHeader from "./Components/MrgHeader.js";
+import MrgFooter from "./Components/MrgFooter.js";
 
 const HomeTest = () => {
   let match = useRouteMatch();
@@ -42,6 +43,7 @@ const HomeTest = () => {
         <Route exact path={`${match.path}/events`} component={Events} />
         <Route exact path={`${match.path}/gaming`} component={Gaming} />
       </Switch>
+      <MrgFooter />
     </ThemeProvider>
   );
 };

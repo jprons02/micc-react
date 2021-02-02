@@ -27,5 +27,10 @@ export const mrgTheme = createMuiTheme({
       h1: {},
       paragraph: {},
     },
+    MuiCheckbox: {
+      colorPrimary: {
+        color: `${mrgColor[500]} !important`,
+      },
+    },
   },
 });

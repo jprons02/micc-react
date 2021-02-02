@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -62,7 +63,9 @@ export default function Header(props) {
   });
   const brandComponent = (
     <Button className={classes.title}>
-      <img style={{ width: "175px" }} src={brand} alt={props.brandAlt} />
+      <Link to={props.brandLink}>
+        <img style={{ width: "175px" }} src={brand} alt={props.brandAlt} />
+      </Link>
     </Button>
   );
 

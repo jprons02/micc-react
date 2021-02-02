@@ -148,6 +148,7 @@ const MrgHeader = () => {
       //brand={<img style={{ width: "175px" }} src={mrgLogo} alt="mrg_logo" />}
       brand={mrgLogo}
       brandAlt="mrgLogo"
+      brandLink="/mrg"
       rightLinks={<HeaderLinks menuItems={menuLinks} />}
       fixed
       changeColorOnScroll={{
