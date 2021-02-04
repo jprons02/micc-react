@@ -22,6 +22,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 // @material-ui/icons
 import Check from "@material-ui/icons/Check";
+import { signupFunction } from "services/signupFucntion.js";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles(modalStyle);
 const useCheckboxStyles = makeStyles(checkboxStyles);
@@ -48,6 +50,8 @@ export default function Modal(props) {
     checked5: defaultCheck(props.interests[5].defaultCheck),
     checked6: defaultCheck(props.interests[6].defaultCheck),
   });
+  const [loading, setLoading] = React.useState(false);
+
   const checkboxClasses = useCheckboxStyles();
   const wrapperDiv = classNames(
     checkboxClasses.checkboxAndRadio,
@@ -83,11 +87,26 @@ export default function Modal(props) {
   };
 
   const onSubmit = () => {
-    const checkValueArr = checkedValuesFunction();
-    const formValues = [props.name, props.email];
-    console.log("checked Values", checkValueArr);
-    console.log("Name, Email Values: ", formValues);
-    //merge both values into one array and send array to service...
+    setLoading(true);
+    let allValues = {};
+
+    const buildValuesObj = () => {
+      allValues.formInputValues = { name: props.name, email: props.email };
+      allValues.formCheckedValues = {};
+      checkedValuesFunction().forEach((checkedItem) => {
+        allValues.formCheckedValues[checkedItem.id] = true;
+      });
+    };
+    buildValuesObj();
+
+    const uploaded = () => {
+      console.log("yooooo i finally understand after 10 years...");
+      setLoading(false);
+      props.closeModal();
+      //then open snackbar.
+    };
+
+    signupFunction(allValues, uploaded);
   };
   const handleChange = (event) => {
     setChecked({ ...checked, [event.target.name]: event.target.checked });
@@ -282,121 +301,41 @@ export default function Modal(props) {
         </IconButton>
         <h3 className={classes.modalTitle}>Confirm your interests:</h3>
       </DialogTitle>
-      <DialogContent
-        style={{
-          paddingLeft: "39px",
-          paddingTop: "0px",
-        }}
-        id="modal-slide-description"
-        className={classes.modalBody}
-      >
-        {renderCheckboxes()}
-      </DialogContent>
-      <DialogActions
-        style={{ width: "100%" }}
-        className={classes.modalFooter + " " + classes.modalFooterCenter}
-      >
-        <Button
-          onClick={onSubmit}
+      <DialogContent id="modal-slide-description" className={classes.modalBody}>
+        <div
           style={{
-            width: "100%",
-            margin: "0 23px",
+            marginTop: "-24px",
+            paddingTop: "0",
+            paddingLeft: "15px",
           }}
-          usetheme="true"
         >
-          DONE
-        </Button>
-      </DialogActions>
+          {renderCheckboxes()}
+        </div>
+        <div style={{ position: "relative" }}>
+          <Button
+            onClick={onSubmit}
+            style={{
+              width: "100%",
+            }}
+            usetheme="true"
+          >
+            DONE
+          </Button>
+          {loading && (
+            <CircularProgress
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                marginTop: "-12px",
+                marginLeft: "-12px",
+              }}
+              size={24}
+              color="primary"
+            />
+          )}
+        </div>
+      </DialogContent>
     </Dialog>
   );
 }
-
-/*
-export default function Modal(props) {
-  const classes = useStyles();
-  //take control away from CustomChecked component. need to also record what is checked to send to api.
-  // ****problem is there is only one state to checkmark...****
-  // should make state for array to hold string id of whatever is checkmarked.
-
-  const onSubmit = () => {
-    console.log("all info submitted.");
-  };
-
-  const renderCheckboxes = () => {
-    const found = (array) => {
-      if (array.find((element) => element === props.entity) !== undefined) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-
-    return props.interests.map((interest) => {
-      return (
-        <CustomCheckBox
-          key={interest.id}
-          keyProp={interest.id}
-          defaultCheck={found(interest.defaultCheck) || false}
-          label={interest.name}
-        />
-      );
-    });
-  };
-
-  return (
-    <Dialog
-      classes={{
-        root: classes.center,
-        paper: classes.modal,
-      }}
-      open={props.modal}
-      keepMounted
-      onClose={() => props.closeModal()}
-      aria-labelledby="modal-slide-title"
-      aria-describedby="modal-slide-description"
-    >
-      <DialogTitle
-        id="classic-modal-slide-title"
-        disableTypography
-        className={classes.modalHeader}
-      >
-        <IconButton
-          className={classes.modalCloseButton}
-          key="close"
-          aria-label="Close"
-          color="inherit"
-          onClick={() => props.closeModal()}
-        >
-          <Close className={classes.modalClose} />
-        </IconButton>
-        <h3 className={classes.modalTitle}>Confirm your interests:</h3>
-      </DialogTitle>
-      <DialogContent
-        style={{
-          paddingLeft: "39px",
-          paddingTop: "0px",
-        }}
-        id="modal-slide-description"
-        className={classes.modalBody}
-      >
-        {renderCheckboxes()}
-      </DialogContent>
-      <DialogActions
-        style={{ width: "100%" }}
-        className={classes.modalFooter + " " + classes.modalFooterCenter}
-      >
-        <Button
-          onClick={onSubmit}
-          style={{
-            width: "100%",
-            margin: "0 23px",
-          }}
-          usetheme="true"
-        >
-          DONE
-        </Button>
-      </DialogActions>
-    </Dialog>
-  );
-}
-*/

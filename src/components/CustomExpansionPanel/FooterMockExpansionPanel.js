@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core/styles";
 import MuiExpansionPanel from "@material-ui/core/ExpansionPanel";
@@ -16,7 +16,7 @@ export default function FooterMockExpansionPanel(props) {
     <MuiExpansionPanel
       style={{ width: "100%" }}
       className={classes.expansionPanel}
-      onClick={props.buttonClick}
+      onClick={props.handleClick}
       expanded={false}
       square={true}
     >

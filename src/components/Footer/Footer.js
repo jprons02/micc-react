@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
@@ -20,6 +20,7 @@ import FooterMockExpansionPanel from "components/CustomExpansionPanel/FooterMock
 import Button from "components/CustomButtons/Button.js";
 import Badge from "components/Badge/Badge.js";
 import emblem from "assets/img/miccosukee/MiccosukeeEmblem_Color.svg";
+import CustomMobileModal from "components/CustomModal/CustomFooterModals/CustomMobileModal.js";
 
 //test
 import GridContainer from "components/Grid/GridContainer.js";
@@ -36,6 +37,7 @@ const useStyles = makeStyles(styles);
 
 export default function Footer(props) {
   const classes = useStyles();
+  const [mobileModal, setMobileModal] = useState(false);
   const { whiteFont } = props;
   const footerClasses = classNames({
     [classes.footer]: true,
@@ -48,6 +50,13 @@ export default function Footer(props) {
 
   const language = useLanguage();
   const toggleLanguage = useLanguageUpdate();
+
+  const handleMobileSubscribeClick = () => {
+    setMobileModal(true);
+  };
+  const closeMobileModal = (props) => {
+    setMobileModal(false);
+  };
 
   const renderDesktopFooterSubMenu = (footerSection) => {
     return footerSection.map((item) => {
@@ -102,32 +111,41 @@ export default function Footer(props) {
 
   const renderMobileFooter = () => {
     return (
-      <List className={classes.list}>
-        <ListItem style={{ padding: "0px" }}>
-          <FooterExpansionPanel
-            header={props.header1}
-            subMenu={props.headersubmenu1}
-          />
-        </ListItem>
-        <ListItem style={{ padding: "0px" }}>
-          <FooterExpansionPanel
-            header={props.header2}
-            subMenu={props.headersubmenu2}
-          />
-        </ListItem>
-        <ListItem style={{ padding: "0px" }}>
-          <FooterExpansionPanel
-            header={props.header3}
-            subMenu={props.headersubmenu3}
-          />
-        </ListItem>
-        <ListItem style={{ padding: "0px" }}>
-          <FooterMockExpansionPanel
-            header={props.header4}
-            buttonClick={props.header4onclick || null}
-          />
-        </ListItem>
-      </List>
+      <div style={{ marginBottom: "30px" }}>
+        <List className={classes.list}>
+          <ListItem style={{ padding: "0px" }}>
+            <FooterExpansionPanel
+              header={props.header1}
+              subMenu={props.headersubmenu1}
+            />
+          </ListItem>
+          <ListItem style={{ padding: "0px" }}>
+            <FooterExpansionPanel
+              header={props.header2}
+              subMenu={props.headersubmenu2}
+            />
+          </ListItem>
+          <ListItem style={{ padding: "0px" }}>
+            <FooterExpansionPanel
+              header={props.header3}
+              subMenu={props.headersubmenu3}
+            />
+          </ListItem>
+          <ListItem style={{ padding: "0px" }}>
+            <FooterMockExpansionPanel
+              header={props.header4}
+              handleClick={handleMobileSubscribeClick}
+            />
+          </ListItem>
+        </List>
+        <CustomMobileModal
+          formView="mobile"
+          entity={props.signup}
+          color={props.color}
+          closeModal={closeMobileModal}
+          modal={mobileModal}
+        />
+      </div>
     );
   };
 
@@ -205,12 +223,10 @@ export default function Footer(props) {
                 marginBottom: "20px",
               }}
             >
-              <div>{renderDesktopFooter()}</div>
+              {renderDesktopFooter()}
             </div>
           </Hidden>
-          <Hidden mdUp>
-            <div>{renderMobileFooter()}</div>
-          </Hidden>
+          <Hidden mdUp>{renderMobileFooter()}</Hidden>
           <div style={{ paddingBottom: "10px" }}>
             <div style={{ fontSize: "10px" }} className={classes.left}>
               <img

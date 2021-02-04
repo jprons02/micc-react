@@ -40,9 +40,11 @@ const MrgFooter = () => {
     },
   ];
 
-  const bookNowClick = () => {
+  /*
+  const subscribeClick = () => {
     console.log("SUBSCRIBED CLICKED!!");
   };
+  */
 
   return (
     <Footer
@@ -54,7 +56,7 @@ const MrgFooter = () => {
       headersubmenu3={followUsMenuItems}
       header4="SUBSCRIBE"
       header4Desktop="SIGN UP FOR OUR PROMOTIONS"
-      header4onclick={bookNowClick}
+      //header4onclick={subscribeClick}
       color={mrgColor}
       signup="mrg"
     />

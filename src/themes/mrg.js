@@ -32,5 +32,10 @@ export const mrgTheme = createMuiTheme({
         color: `${mrgColor[500]} !important`,
       },
     },
+    MuiCircularProgress: {
+      colorPrimary: {
+        color: `${mrgColor[900]} !important`,
+      },
+    },
   },
 });
