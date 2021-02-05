@@ -3,40 +3,54 @@ import Footer from "components/Footer/Footer.js";
 import { mrgColor } from "themes/colors.js";
 
 const MrgFooter = () => {
-  const miccoMenuItems = [
+  const footerArray = [
     {
-      linkText: "Main Home",
-      linkTo: "/",
+      header: "MICCOSUKEE",
+      subMenu: [
+        {
+          linkText: "Main Home",
+          linkTo: "/",
+        },
+        {
+          linkText: "Covid-19",
+          linkTo: "#",
+        },
+        {
+          linkText: "Careers",
+          linkTo: "#",
+        },
+      ],
     },
     {
-      linkText: "Covid-19",
-      linkTo: "#",
+      header: "ADDITIONAL LINKS",
+      subMenu: [
+        {
+          linkText: "Test",
+          linkTo: "#",
+        },
+      ],
     },
     {
-      linkText: "Careers",
-      linkTo: "#",
-    },
-  ];
-
-  const additionalLinksMenuItems = [
-    {
-      linkText: "Test",
-      linkTo: "#",
-    },
-  ];
-
-  const followUsMenuItems = [
-    {
-      linkText: "Facebook",
-      linkTo: "#",
-    },
-    {
-      linkText: "Instagram",
-      linkTo: "#",
+      header: "FOLLOW US",
+      subMenu: [
+        {
+          linkText: "Facebook",
+          linkTo: "#",
+        },
+        {
+          linkText: "Instagram",
+          linkTo: "#",
+        },
+        {
+          linkText: "Twitter",
+          linkTo: "#",
+        },
+      ],
     },
     {
-      linkText: "Twitter",
-      linkTo: "#",
+      action: true,
+      headerDesktop: "SIGN UP FOR OUR PROMOTIONS",
+      headerMobile: "SUBSCRIBE",
     },
   ];
 
@@ -46,6 +60,12 @@ const MrgFooter = () => {
   };
   */
 
+  return <Footer footerMenuItems={footerArray} color={mrgColor} signup="mrg" />;
+};
+
+export default MrgFooter;
+
+/*
   return (
     <Footer
       header1="MICCOSUKEE"
@@ -61,6 +81,4 @@ const MrgFooter = () => {
       signup="mrg"
     />
   );
-};
-
-export default MrgFooter;
+*/
