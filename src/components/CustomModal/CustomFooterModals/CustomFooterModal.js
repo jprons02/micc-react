@@ -40,17 +40,32 @@ export default function Modal(props) {
     return (
       <React.Fragment>
         <Typography
-          style={{
-            paddingTop: "30px",
-            textTransform: "uppercase",
-            textAlign: "center",
-          }}
+          style={
+            props.isDesktop
+              ? {
+                  paddingTop: "30px",
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                }
+              : {
+                  paddingTop: "30px",
+                  textTransform: "uppercase",
+                  textAlign: "center",
+                  fontSize: "16px",
+                }
+          }
           variant="h6"
           component="h1"
         >
           Sign up for our promotions
         </Typography>
-        <Typography style={{ textAlign: "center" }} variant="body1">
+        <Typography
+          style={
+            props.isDesktop
+              ? { textAlign: "center", fontWeight: "300" }
+              : { textAlign: "center", fontWeight: "300", fontSize: "12px" }
+          }
+        >
           Be the first to find out about offers &amp; promotions
         </Typography>
       </React.Fragment>
@@ -61,7 +76,7 @@ export default function Modal(props) {
     <Dialog
       classes={{
         root: classes.center,
-        paper: classes.modal,
+        paper: props.isDesktop ? classes.desktopModal : classes.modal,
       }}
       open={props.modal}
       keepMounted
@@ -73,6 +88,7 @@ export default function Modal(props) {
         id="classic-modal-slide-title"
         disableTypography
         className={classes.modalHeader}
+        style={{ width: "100%" }}
       >
         <IconButton
           className={classes.modalCloseButton}
@@ -87,22 +103,19 @@ export default function Modal(props) {
       </DialogTitle>
       <DialogContent
         style={{
-          paddingLeft: "39px",
           paddingTop: "0px",
         }}
         id="modal-slide-description"
         className={classes.modalBody}
       >
-        Test
+        <Signup
+          closeModal={props.closeModal}
+          entity={props.entity}
+          isDesktop={props.isDesktop}
+          //name={props.name}
+          //email={props.email}
+        />
       </DialogContent>
     </Dialog>
   );
 }
-/*
-<Signup
-  name={props.name || ""}
-  email={props.email || ""}
-  color={props.color}
-  isDesktop={props.isDesktop}
-/>;
-*/

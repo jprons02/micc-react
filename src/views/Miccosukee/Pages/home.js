@@ -15,7 +15,7 @@ import evergladesImg from "assets/img/miccosukee/pages/home/home-airboats.jpg";
 import historyImg from "assets/img/miccosukee/pages/home/home-history.jpg";
 import adminImg from "assets/img/miccosukee/pages/home/home-admin.jpg";
 
-import { useLanguage } from "../../../context/languageContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 

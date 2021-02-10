@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
@@ -32,32 +32,31 @@ import DesktopFooter from "components/Footer/Components/DesktopFooter.js";
 import MobileFooter from "components/Footer/Components/MobileFooter.js";
 import DemoFooter from "components/Footer/Components/DemoFooter.js";
 
-import {
-  useLanguage,
-  useLanguageUpdate,
-} from "../../context/languageContext.js";
+// Contexts
+import { SignupFormProvider } from "contexts/SignupFormContext.js";
+import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
+
+// test snackbar
+import SnackbarContent from "components/Snackbar/SnackbarContent.js";
+import Check from "@material-ui/icons/Check";
+
+import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";
+import { AddAlertSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
 export default function Footer(props) {
-  const [modal, setModal] = useState(false);
-
   const language = useLanguage();
   const toggleLanguage = useLanguageUpdate();
 
+  const [alerts, setAlerts] = useContext(AlertContext);
+  const [modal, setModal] = useState(false);
+
   const classes = useStyles();
-  //const { whiteFont } = props;
 
   const footerClasses = classNames({
     [classes.footer]: true,
   });
-
-  /*
-  const aClasses = classNames({
-    [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont,
-  });
-  */
 
   const openModal = () => {
     setModal(true);
@@ -66,9 +65,14 @@ export default function Footer(props) {
     setModal(false);
   };
 
-  if (!props.footerMenuItems) {
-    return <DemoFooter />;
-  } else {
+  // Reset alert state when footer unmounts.
+  useEffect(() => {
+    return () => {
+      setAlerts({ ...alerts, [signupAlertId]: false });
+    };
+  }, []);
+
+  const renderFooter = () => {
     return (
       <footer className={footerClasses}>
         <div className={classes.container}>
@@ -110,5 +114,25 @@ export default function Footer(props) {
         </div>
       </footer>
     );
-  }
+  };
+
+  return (
+    <SignupFormProvider entity={props.signup}>
+      {!props.footerMenuItems ? <DemoFooter /> : renderFooter()}
+      <div style={{ position: "fixed", bottom: 0, zIndex: 5, width: "100%" }}>
+        <SnackbarContent
+          id={signupAlertId}
+          message={
+            <span>
+              <b>Message Sent Successfully:</b> Now P$ gonna send you some cool
+              stuff.
+            </span>
+          }
+          close
+          color="success"
+          icon={Check}
+        />
+      </div>
+    </SignupFormProvider>
+  );
 }

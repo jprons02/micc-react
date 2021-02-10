@@ -49,6 +49,7 @@ const MobileFooter = (props) => {
         isDesktop={false}
         modal={props.modal}
         closeModal={props.closeModal}
+        entity={props.entity}
       />
     </div>
   );

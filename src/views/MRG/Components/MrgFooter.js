@@ -54,31 +54,7 @@ const MrgFooter = () => {
     },
   ];
 
-  /*
-  const subscribeClick = () => {
-    console.log("SUBSCRIBED CLICKED!!");
-  };
-  */
-
   return <Footer footerMenuItems={footerArray} color={mrgColor} signup="mrg" />;
 };
 
 export default MrgFooter;
-
-/*
-  return (
-    <Footer
-      header1="MICCOSUKEE"
-      headersubmenu1={miccoMenuItems}
-      header2="ADDITIONAL LINKS"
-      headersubmenu2={additionalLinksMenuItems}
-      header3="FOLLOW US"
-      headersubmenu3={followUsMenuItems}
-      header4="SUBSCRIBE"
-      header4Desktop="SIGN UP FOR OUR PROMOTIONS"
-      //header4onclick={subscribeClick}
-      color={mrgColor}
-      signup="mrg"
-    />
-  );
-*/

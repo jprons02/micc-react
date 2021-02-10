@@ -3,7 +3,8 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
 // context
-import { LanguageProvider } from "./context/languageContext.js";
+import { LanguageProvider } from "./contexts/languageContext.js";
+import { AlertProvider } from "contexts/AlertContext.js";
 
 // demo pages for this product
 import Components from "views/_demo_Components/Components.js";
@@ -22,17 +23,19 @@ var hist = createBrowserHistory();
 const App = () => {
   return (
     <LanguageProvider>
-      <Router history={hist}>
-        <Switch>
-          <Route path="/landing-page" component={LandingPage} />
-          <Route path="/profile-page" component={ProfilePage} />
-          <Route path="/login-page" component={LoginPage} />
-          <Route path="/components" component={Components} />
-          <Route path="/mrg" component={MRG} />
-          <Route path="/mrg2" component={MRG2} />
-          <Route path="/" component={Miccosukee} />
-        </Switch>
-      </Router>
+      <AlertProvider>
+        <Router history={hist}>
+          <Switch>
+            <Route path="/landing-page" component={LandingPage} />
+            <Route path="/profile-page" component={ProfilePage} />
+            <Route path="/login-page" component={LoginPage} />
+            <Route path="/components" component={Components} />
+            <Route path="/mrg" component={MRG} />
+            <Route path="/mrg2" component={MRG2} />
+            <Route path="/" component={Miccosukee} />
+          </Switch>
+        </Router>
+      </AlertProvider>
     </LanguageProvider>
   );
 };

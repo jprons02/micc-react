@@ -12,7 +12,7 @@ import EntityCard from "../Components/EntityCards";
 
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js";
 
-import { useLanguage } from "../../../context/languageContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 

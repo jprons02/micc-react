@@ -2,6 +2,10 @@ const modalStyle = {
   modal: {
     borderRadius: "6px",
   },
+  desktopModal: {
+    borderRadius: "6px",
+    minWidth: "500px",
+  },
   modalHeader: {
     borderBottom: "none",
     paddingTop: "24px",
@@ -9,7 +13,6 @@ const modalStyle = {
     paddingBottom: "0",
     paddingLeft: "24px",
     minHeight: "16.43px",
-    minWidth: "400px",
   },
   modalTitle: {
     margin: "0",

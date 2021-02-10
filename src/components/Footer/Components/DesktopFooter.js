@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // material-ui core components
@@ -19,33 +19,28 @@ import CustomFooterModal from "components/CustomModal/CustomFooterModals/CustomF
 // CSS
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 
+// Context
+import { SignupFormContext } from "contexts/SignupFormContext.js";
+
 const useStyles = makeStyles(styles);
 
 const DesktopFooter = (props) => {
-  const [nameDesktop, setNameDesktop] = useState("");
-  const [emailDesktop, setEmailDesktop] = useState("");
-
-  //Clear state whenever component is mounted. Organized when transitioning from mobile to desktop and back.
-  /*
-  useEffect(() => {
-    setNameDesktop("");
-    setEmailDesktop("");
-    console.log("desktop footer component mounted");
-  }, []);
-  */
-
-  console.log("Desktop Footer State: ", nameDesktop, " ", emailDesktop);
+  const [formValues, setFormValues] = useContext(SignupFormContext);
 
   const classes = useStyles();
 
-  const onInputChange = (e, id) => {
-    if (id === "name-desktop") {
-      setNameDesktop(e.target.value);
-    }
-    if (id === "email-desktop") {
-      setEmailDesktop(e.target.value);
-    }
-  };
+  // Reset input state on component mount.
+  useEffect(() => {
+    setFormValues({
+      ...formValues,
+      inputValues: {
+        ...formValues.inputValues,
+        name: "",
+        email: "",
+      },
+    });
+    props.closeModal();
+  }, []);
 
   const renderDesktopFooter = () => {
     const renderDesktopFooterSubMenu = (footerSection) => {
@@ -75,35 +70,51 @@ const DesktopFooter = (props) => {
                 {section.headerDesktop}
               </Typography>
               <ListItem
-                style={{ paddingBottom: "0px" }}
+                style={{
+                  paddingBottom: "0px",
+                }}
                 className={classes.listItemDesktop}
               >
                 <CustomInput
+                  name="name"
                   id="name-desktop"
                   label="Name"
-                  value={nameDesktop}
-                  onInputChange={onInputChange}
-                  color={props.color}
+                  style={{
+                    margin: 8,
+                    marginLeft: "0px",
+                  }}
+                  fullWidth={true}
                 />
               </ListItem>
               <ListItem
-                style={{ paddingBottom: "0px", paddingTop: "0px" }}
+                style={{
+                  paddingBottom: "0px",
+                  paddingTop: "0px",
+                }}
                 className={classes.listItemDesktop}
               >
                 <CustomInput
+                  name="email"
                   id="email-desktop"
                   label="Email"
-                  value={emailDesktop}
-                  onInputChange={onInputChange}
-                  color={props.color}
+                  style={{
+                    margin: 8,
+                    marginLeft: "0px",
+                  }}
+                  fullWidth={true}
                 />
               </ListItem>
               <ListItem
-                style={{ paddingBottom: "0px", paddingTop: "0px" }}
+                style={{
+                  paddingBottom: "0px",
+                  paddingTop: "0px",
+                }}
                 className={classes.listItemDesktop}
               >
                 <Button
-                  style={{ margin: "8px 8px 8px 0" }}
+                  style={{
+                    margin: "8px 8px 8px 0",
+                  }}
                   fullWidth
                   onClick={props.onSubscribe}
                   usetheme="true"
@@ -146,8 +157,8 @@ const DesktopFooter = (props) => {
         isDesktop={true}
         modal={props.modal}
         closeModal={props.closeModal}
-        name={nameDesktop}
-        email={emailDesktop}
+        //name={name}
+        //email={email}
         entity={props.entity}
       />
     </div>

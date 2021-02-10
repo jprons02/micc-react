@@ -6,10 +6,7 @@ import { Icon } from "@material-ui/core";
 import logo from "assets/img/miccosukee/emblem_logo.png";
 import Button from "components/CustomButtons/Button.js";
 
-import {
-  useLanguage,
-  useLanguageUpdate,
-} from "../../../context/languageContext.js";
+import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 

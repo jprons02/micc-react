@@ -1,6 +1,6 @@
 // MRG Website Theme - colors, fonts, etc.
 import { createMuiTheme } from "@material-ui/core/styles";
-import { mrgColor } from "./colors.js";
+import { mrgColor, errorColor } from "./colors.js";
 
 //orange is used for testing... since default primary is purple
 
@@ -35,6 +35,22 @@ export const mrgTheme = createMuiTheme({
     MuiCircularProgress: {
       colorPrimary: {
         color: `${mrgColor[900]} !important`,
+      },
+    },
+    MuiTextField: {
+      root: {
+        "& label.Mui-focused": {
+          color: `${mrgColor[500]}`,
+        },
+        "& label.Mui-focused.Mui-error": {
+          color: errorColor,
+        },
+        "& .MuiFilledInput-underline:after": {
+          borderBottomColor: `${mrgColor[500]}`,
+        },
+        "& .MuiFilledInput-underline.Mui-error:after": {
+          borderBottomColor: errorColor,
+        },
       },
     },
   },
