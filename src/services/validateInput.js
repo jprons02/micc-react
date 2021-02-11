@@ -1,10 +1,7 @@
 export const validateInput = (fieldName, fieldValue) => {
-  console.log("fieldName: ", fieldName);
-  console.log("fieldValue: ", fieldValue);
-
   // Validate name
   if (fieldName === "name") {
-    if (fieldValue.trim() === "") {
+    if (fieldValue === "" || !fieldValue) {
       return `${fieldName} is required`;
     }
     if (/[^a-zA-Z -]/.test(fieldValue)) {
@@ -22,9 +19,9 @@ export const validateInput = (fieldName, fieldValue) => {
     ) {
       return null;
     }
-    if (fieldValue.trim() === "") {
-      return "Email is required";
+    if (fieldValue.trim() === "" || !fieldValue) {
+      return `${fieldName} is required`;
     }
-    return "Please enter a valid email";
+    return `Please enter a valid ${fieldName}`;
   }
 };

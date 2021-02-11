@@ -17,3 +17,9 @@ export const signupFunction = (valuesObj, callback) => {
 
   setTimeout(callback, 4000);
 };
+
+export const inputErrorsExist = (nameErrorField, emailErrorField) => {
+  if (nameErrorField !== false || emailErrorField !== false) {
+    return true;
+  }
+};

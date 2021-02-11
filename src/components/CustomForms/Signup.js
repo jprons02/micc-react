@@ -26,6 +26,9 @@ import { SignupFormContext } from "contexts/SignupFormContext.js";
 import { interests } from "contexts/SignupFormContext.js";
 import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
 
+// Custom functions
+import { inputErrorsExist } from "services/signupFucntion.js";
+
 // validate as you type, snackbar, mailchimp api
 const useCheckboxStyles = makeStyles(checkboxStyles);
 
@@ -33,7 +36,6 @@ export default function SignUpForm(props) {
   const [formValues, setFormValues] = useContext(SignupFormContext);
   const [alerts, setAlerts] = useContext(AlertContext);
   const [loading, setLoading] = useState(false);
-  const [nameError, setNameError] = useState(false);
 
   const checkboxClasses = useCheckboxStyles();
   const wrapperDiv = classNames(
@@ -56,9 +58,8 @@ export default function SignUpForm(props) {
     });
   };
 
-  // Reset input and checkbox values to default
+  // Reset input values to default
   const resetState = () => {
-    console.log("reset state here. input and checkboxes.");
     setFormValues({
       ...formValues,
       inputValues: {
@@ -68,7 +69,7 @@ export default function SignUpForm(props) {
     });
   };
 
-  //On submit, gets checked values, organizes data to send, callback function after data is sent.
+  //On submit: gets checked values, organizes data to send, callback function after data is sent.
   const submit = (e) => {
     e.preventDefault();
 
@@ -100,12 +101,10 @@ export default function SignUpForm(props) {
 
     // callback function after values have been successfully uploaded
     const uploaded = () => {
-      console.log("yooooo i finally understand after 10 years...");
       setLoading(false);
       resetState();
       props.closeModal();
-      //then open snackbar.
-      //SET THE ALERT OF THE SNACKBAR AND PASS THE ID OF THE SNACKBAR FROM FOOTER
+      // Set state of the snackbar and pass the id to create a unique snackbar state - this allows for multiple snackbars handled independently
       setAlerts({ ...alerts, [signupAlertId]: true });
     };
 
@@ -156,20 +155,8 @@ export default function SignUpForm(props) {
   const renderFullForm = () => {
     return (
       <div style={{ paddingTop: "15px" }}>
-        <CustomInput
-          error={nameError}
-          name="name"
-          id="name"
-          label={nameError ? "Error" : "Name"}
-          fullWidth={true}
-        />
-        <CustomInput
-          error={false}
-          name="email"
-          id="email"
-          label={false ? "Error" : "Email"}
-          fullWidth={true}
-        />
+        <CustomInput name="name" id="name" label={"Name"} fullWidth={true} />
+        <CustomInput name="email" id="email" label={"Email"} fullWidth={true} />
         <div
           style={{
             paddingTop: "30px",
@@ -199,7 +186,12 @@ export default function SignUpForm(props) {
           }}
         >
           <Button
-            disabled={loading}
+            disabled={
+              inputErrorsExist(
+                formValues.inputValues.nameError,
+                formValues.inputValues.emailError
+              ) || loading
+            }
             style={{
               margin: "15px 0 0 0",
             }}

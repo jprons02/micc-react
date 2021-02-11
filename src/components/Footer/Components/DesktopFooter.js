@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 // material-ui core components
@@ -22,6 +22,9 @@ import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 // Context
 import { SignupFormContext } from "contexts/SignupFormContext.js";
 
+// Custom Functions
+import { inputErrorsExist } from "services/signupFucntion.js";
+
 const useStyles = makeStyles(styles);
 
 const DesktopFooter = (props) => {
@@ -29,19 +32,12 @@ const DesktopFooter = (props) => {
 
   const classes = useStyles();
 
-  // Reset input state on component mount.
+  // Close modal on component mount.
   useEffect(() => {
-    setFormValues({
-      ...formValues,
-      inputValues: {
-        ...formValues.inputValues,
-        name: "",
-        email: "",
-      },
-    });
     props.closeModal();
   }, []);
 
+  // Render desktop view
   const renderDesktopFooter = () => {
     const renderDesktopFooterSubMenu = (footerSection) => {
       return footerSection.map((item) => {
@@ -57,6 +53,7 @@ const DesktopFooter = (props) => {
       });
     };
 
+    // Render desktop accordions
     const renderDesktopMenu = () => {
       return props.footerMenuItems.map((section) => {
         if (section.action) {
@@ -112,6 +109,10 @@ const DesktopFooter = (props) => {
                 className={classes.listItemDesktop}
               >
                 <Button
+                  disabled={inputErrorsExist(
+                    formValues.inputValues.nameError,
+                    formValues.inputValues.emailError
+                  )}
                   style={{
                     margin: "8px 8px 8px 0",
                   }}
@@ -157,8 +158,6 @@ const DesktopFooter = (props) => {
         isDesktop={true}
         modal={props.modal}
         closeModal={props.closeModal}
-        //name={name}
-        //email={email}
         entity={props.entity}
       />
     </div>

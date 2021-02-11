@@ -1,47 +1,33 @@
 /*eslint-disable*/
 import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
+
 // nodejs library that concatenates classes
 import classNames from "classnames";
+
 // material-ui core components
-import { List, ListItem, Hidden } from "@material-ui/core";
+import { Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
-import styles from "assets/jss/material-kit-react/components/footerStyle.js";
-
-import FooterExpansionPanel from "components/CustomExpansionPanel/FooterExpansionPanel.js";
-import FooterMockExpansionPanel from "components/CustomExpansionPanel/FooterMockExpansionPanel.js";
-import Button from "components/CustomButtons/Button.js";
+// Custom Components
 import Badge from "components/Badge/Badge.js";
-import emblem from "assets/img/miccosukee/MiccosukeeEmblem_Color.svg";
-import CustomFooterModal from "components/CustomModal/CustomFooterModals/CustomFooterModal.js";
 
-//test
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-
-import SignUpForm from "components/CustomForms/Signup.js";
-import CustomInput from "components/Footer/Components/CustomTextField.js";
+// My Custom Components
 import DesktopFooter from "components/Footer/Components/DesktopFooter.js";
 import MobileFooter from "components/Footer/Components/MobileFooter.js";
 import DemoFooter from "components/Footer/Components/DemoFooter.js";
 
+// Styles
+import styles from "assets/jss/material-kit-react/components/footerStyle.js";
+import emblem from "assets/img/miccosukee/MiccosukeeEmblem_Color.svg";
+
 // Contexts
 import { SignupFormProvider } from "contexts/SignupFormContext.js";
 import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
+import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";
 
-// test snackbar
+// Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 import Check from "@material-ui/icons/Check";
-
-import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";
-import { AddAlertSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -65,7 +51,7 @@ export default function Footer(props) {
     setModal(false);
   };
 
-  // Reset alert state when footer unmounts.
+  // Reset snackbar state when footer unmounts.
   useEffect(() => {
     return () => {
       setAlerts({ ...alerts, [signupAlertId]: false });
