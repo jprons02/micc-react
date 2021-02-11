@@ -78,7 +78,7 @@ export default function SnackbarContent(props) {
   if (alerts[id] === true) {
     setTimeout(function () {
       closeAlert();
-    }, 10000);
+    }, 4000);
     return renderSnack();
   } else {
     return null;

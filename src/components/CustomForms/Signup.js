@@ -207,7 +207,7 @@ export default function SignUpForm(props) {
                 position: "absolute",
                 top: "50%",
                 left: "50%",
-                marginTop: "-7px",
+                marginTop: "-5px",
                 marginLeft: "-12px",
               }}
               size={24}
