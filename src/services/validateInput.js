@@ -25,3 +25,9 @@ export const validateInput = (fieldName, fieldValue) => {
     return `Please enter a valid ${fieldName}`;
   }
 };
+
+export const inputErrorsExist = (nameErrorField, emailErrorField) => {
+  if (nameErrorField !== false || emailErrorField !== false) {
+    return true;
+  }
+};

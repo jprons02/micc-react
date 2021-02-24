@@ -23,7 +23,7 @@ import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 import { SignupFormContext } from "contexts/SignupFormContext.js";
 
 // Custom Functions
-import { inputErrorsExist } from "services/signupFucntion.js";
+import { inputErrorsExist } from "services/validateInput.js";
 
 const useStyles = makeStyles(styles);
 

@@ -27,7 +27,7 @@ import { interests } from "contexts/SignupFormContext.js";
 import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
 
 // Custom functions
-import { inputErrorsExist } from "services/signupFucntion.js";
+import { inputErrorsExist } from "services/validateInput.js";
 
 // validate as you type, snackbar, mailchimp api
 const useCheckboxStyles = makeStyles(checkboxStyles);
