@@ -4,17 +4,19 @@ import { Switch, Route, useRouteMatch } from "react-router-dom";
 // theme
 import { theme } from "../../themes";
 import { ThemeProvider } from "@material-ui/core/styles";
-// pages
-import Home from "views/MRG/Pages/home.js";
-import Accommodations from "views/MRG/Pages/accommodations.js";
-import Amenities from "views/MRG/Pages/amenities.js";
-import DiningNightlife from "views/MRG/Pages/diningNightlife.js";
-import Events from "views/MRG/Pages/events.js";
-import Gaming from "views/MRG/Pages/gaming.js";
+// Pages
+import Home from "views/MRG/Pages/home/home.js";
+import Accommodations from "views/MRG/Pages/accommodations/accommodations.js";
+import Amenities from "views/MRG/Pages/amenities/amenities.js";
+import Gaming from "views/MRG/Pages/gaming/gaming.js";
+import DiningNightlife from "views/MRG/Pages/diningNightlife/diningNightlife.js";
+import Events from "views/MRG/Pages/events/events.js";
+import VirtualEvent from "views/MRG/Pages/events/virtual/virtualEvent.js";
+import Contact from "views/MRG/Pages/contact/contact.js";
 
 // my components
-import MrgHeader from "./Components/MrgHeader.js";
-import MrgFooter from "./Components/MrgFooter.js";
+import MrgHeader from "components/CustomHeaders/MrgHeader.js";
+import MrgFooter from "components/CustomFooters/MrgFooter.js";
 
 const HomeTest = () => {
   let match = useRouteMatch();

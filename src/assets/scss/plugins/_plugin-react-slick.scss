@@ -159,7 +159,7 @@ button.slick-arrow.slick-next {
   &::before {
     content: "\f053";
     font-weight: 600;
-    font-family: Font Awesome\ 5 Free;
+    font-family: Font Awesome\5 Free;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -177,7 +177,7 @@ button.slick-arrow.slick-next {
   &::before {
     content: "\f054";
     font-weight: 600;
-    font-family: Font Awesome\ 5 Free;
+    font-family: Font Awesome\5 Free;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -195,7 +195,9 @@ button.slick-arrow.slick-next {
 }
 .slick-dots {
   margin-top: 0;
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
+  // joey custom
+  margin-bottom: 40px;
   position: absolute;
   bottom: 5px;
   // margin-right: 15%;
@@ -206,6 +208,13 @@ button.slick-arrow.slick-next {
   text-align: center;
   z-index: 3;
 }
+// Desktop View
+@media screen and (min-width: 960px) {
+  .slick-dots {
+    margin-bottom: 70px;
+  }
+}
+
 .slick-dots li,
 .slick-dots li button {
   width: 20px;

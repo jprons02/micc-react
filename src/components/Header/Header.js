@@ -72,7 +72,10 @@ export default function Header(props) {
   return (
     <AppBar
       className={appBarClasses}
-      style={{ borderBottom: `3px solid ${props.borderColor}` }}
+      style={{
+        borderBottom: `3px solid ${props.borderColor}`,
+        borderRadius: "0",
+      }}
     >
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}

@@ -13,17 +13,18 @@ import { theme } from "../../themes";
 import { ThemeProvider } from "@material-ui/core/styles";
 
 // My components
-import MrgHeader from "./Components/MrgHeader.js";
-import MrgFooter from "./Components/MrgFooter.js";
+import MrgHeader from "components/CustomHeaders/MrgHeader.js";
+import MrgFooter from "components/CustomFooters/MrgFooter.js";
 
 // Pages
-import Home from "views/MRG/Pages/home.js";
-import Accommodations from "views/MRG/Pages/accommodations.js";
-import Amenities from "views/MRG/Pages/amenities.js";
-import Gaming from "views/MRG/Pages/gaming.js";
-import DiningNightlife from "views/MRG/Pages/diningNightlife.js";
-import Events from "views/MRG/Pages/events.js";
-import Contact from "views/MRG/Pages/contact.js";
+import Home from "views/MRG/Pages/home/home.js";
+import Accommodations from "views/MRG/Pages/accommodations/accommodations.js";
+import Amenities from "views/MRG/Pages/amenities/amenities.js";
+import Gaming from "views/MRG/Pages/gaming/gaming.js";
+import DiningNightlife from "views/MRG/Pages/diningNightlife/diningNightlife.js";
+import Events from "views/MRG/Pages/events/events.js";
+import VirtualEvent from "views/MRG/Pages/events/virtual/virtualEvent.js";
+import Contact from "views/MRG/Pages/contact/contact.js";
 
 const useStyles = makeStyles(styles);
 
@@ -42,38 +43,28 @@ export default function Miccosukee(props) {
     <ThemeProvider theme={theme("mrg")}>
       <div>
         <MrgHeader />
-        <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          <div>
-            <div className={classes.container}>
-              <Switch>
-                <Route exact path={`${match.path}/`} component={Home} />
-                <Route
-                  exact
-                  path={`${match.path}/accommodations`}
-                  component={Accommodations}
-                />
-                <Route
-                  exact
-                  path={`${match.path}/amenities`}
-                  component={Amenities}
-                />
-                <Route exact path={`${match.path}/gaming`} component={Gaming} />
-                <Route
-                  exact
-                  path={`${match.path}/dining-nightlife`}
-                  component={DiningNightlife}
-                />
-                <Route exact path={`${match.path}/events`} component={Events} />
-                <Route
-                  exact
-                  path={`${match.path}/contact`}
-                  component={Contact}
-                />
-              </Switch>
-            </div>
-          </div>
-        </div>
+        <Switch>
+          <Route exact path={`${match.path}/`} component={Home} />
+          <Route
+            exact
+            path={`${match.path}/accommodations`}
+            component={Accommodations}
+          />
+          <Route exact path={`${match.path}/amenities`} component={Amenities} />
+          <Route exact path={`${match.path}/gaming`} component={Gaming} />
+          <Route
+            exact
+            path={`${match.path}/dining-nightlife`}
+            component={DiningNightlife}
+          />
+          <Route exact path={`${match.path}/events`} component={Events} />
+          <Route
+            exact
+            path={`${match.path}/events/virtualevent`}
+            component={VirtualEvent}
+          />
+          <Route exact path={`${match.path}/contact`} component={Contact} />
+        </Switch>
         <MrgFooter />
       </div>
     </ThemeProvider>

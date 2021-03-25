@@ -5,7 +5,7 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 //components
-import Header from "./Components/header.js";
+import Header from "components/CustomHeaders/MiccosukeeHeader.js";
 //pages
 import Home from "./Pages/home";
 //import MRG from "./Pages/mrg";

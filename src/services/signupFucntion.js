@@ -1,4 +1,3 @@
-import { keys } from "keys.js";
 import axios from "axios";
 
 export const signupFunction = (valuesObj, callback) => {

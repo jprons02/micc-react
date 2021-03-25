@@ -9,6 +9,7 @@ export const mrgTheme = createMuiTheme({
     // Style sheet name
     MuiButton: {
       // Name of the rule
+      // component use example (component is imported from CustomButton): <Button usetheme="true">
       containedPrimary: {
         backgroundColor: `${mrgColor[500]} !important`,
         boxShadow: `0 2px 2px 0 ${mrgColor[500]}14, 0 3px 1px -2px ${mrgColor[500]}20, 0 1px 5px 0 ${mrgColor[500]}12 !important`,
@@ -20,7 +21,7 @@ export const mrgTheme = createMuiTheme({
     },
     MuiTypography: {
       // colorInherit property is used only to style links.
-      // component example) <Link to={`/`}><Typography color="inherit" variant="inherit"></Links>
+      // component use example: <Link to={`/`}><Typography color="inherit" variant="inherit"></Links>
       colorInherit: {
         color: `${mrgColor[500]}`,
       },

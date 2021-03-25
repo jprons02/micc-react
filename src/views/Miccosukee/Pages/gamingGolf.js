@@ -8,7 +8,7 @@ import GridItem from "components/Grid/GridItem.js";
 import mrgImg from "assets/img/miccosukee/pages/mrg_golf/mrg-card.jpg";
 import golfImg from "assets/img/miccosukee/pages/mrg_golf/golf-card.jpg";
 //Miccosukee Component
-import EntityCard from "../Components/EntityCards";
+import MiccosukeeCard from "components/CustomCards/MiccosukeeCard.js";
 
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js";
 
@@ -79,7 +79,7 @@ const GamingGolf = (props) => {
     return cards.map((card) => {
       return (
         <GridItem key={card.id} sm={12} md={6} className={classes.gridItem}>
-          <EntityCard
+          <MiccosukeeCard
             title={card.title}
             description={card.description}
             imgSrc={card.imgSrc}
