@@ -31,3 +31,9 @@ export const inputErrorsExist = (nameErrorField, emailErrorField) => {
     return true;
   }
 };
+
+export const inputErrorsExistVirtualEvent = (emailErrorField) => {
+  if (emailErrorField !== false) {
+    return true;
+  }
+};

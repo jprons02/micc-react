@@ -21,9 +21,10 @@ import Home from "views/MRG/Pages/home/home.js";
 import Accommodations from "views/MRG/Pages/accommodations/accommodations.js";
 import Amenities from "views/MRG/Pages/amenities/amenities.js";
 import Gaming from "views/MRG/Pages/gaming/gaming.js";
+import GamingPromos from "views/MRG/Pages/gaming/gamingPromos/gamingPromos.js";
 import DiningNightlife from "views/MRG/Pages/diningNightlife/diningNightlife.js";
 import Events from "views/MRG/Pages/events/events.js";
-import VirtualEvent from "views/MRG/Pages/events/virtual/virtualEvent.js";
+import AidEvent from "views/MRG/Pages/events/virtual/21_americanIndianDay.js";
 import Contact from "views/MRG/Pages/contact/contact.js";
 
 const useStyles = makeStyles(styles);
@@ -54,6 +55,11 @@ export default function Miccosukee(props) {
           <Route exact path={`${match.path}/gaming`} component={Gaming} />
           <Route
             exact
+            path={`${match.path}/promotions`}
+            component={GamingPromos}
+          />
+          <Route
+            exact
             path={`${match.path}/dining-nightlife`}
             component={DiningNightlife}
           />
@@ -61,7 +67,7 @@ export default function Miccosukee(props) {
           <Route
             exact
             path={`${match.path}/events/virtualevent`}
-            component={VirtualEvent}
+            component={AidEvent}
           />
           <Route exact path={`${match.path}/contact`} component={Contact} />
         </Switch>

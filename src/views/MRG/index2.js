@@ -11,7 +11,7 @@ import Amenities from "views/MRG/Pages/amenities/amenities.js";
 import Gaming from "views/MRG/Pages/gaming/gaming.js";
 import DiningNightlife from "views/MRG/Pages/diningNightlife/diningNightlife.js";
 import Events from "views/MRG/Pages/events/events.js";
-import VirtualEvent from "views/MRG/Pages/events/virtual/virtualEvent.js";
+import AidEvent from "views/MRG/Pages/events/virtual/21_americanIndianDay.js";
 import Contact from "views/MRG/Pages/contact/contact.js";
 
 // my components

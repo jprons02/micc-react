@@ -29,9 +29,12 @@ import cardImage4 from "assets/img/mrg/homeCard_spa.jpg";
 import cardImage5 from "assets/img/mrg/homeCard_events.jpg";
 import cardImage6 from "assets/img/mrg/homeCard_banquets.jpg";
 
+// Styles
 import styles from "assets/jss/material-kit-react/views/mrg/home.js";
+import cardStyles from "assets/jss/material-kit-react/views/mrg/homeCardStyles.js";
 
 const useStyles = makeStyles(styles);
+const useCardStyles = makeStyles(cardStyles);
 
 const sliderContent = [
   {
@@ -127,13 +130,15 @@ const cardContent = [
 
 const Home = () => {
   const classes = useStyles();
+  const cardClasses = useCardStyles();
+
   let match = useRouteMatch();
 
-  const renderCards = (style) => {
+  const renderCards = () => {
     return cardContent.map((card) => {
       return (
         <StandardCard
-          customStyle={classes.serviceCards}
+          classes={cardClasses}
           key={card.id}
           img={card.img}
           title={card.title}
@@ -157,7 +162,7 @@ const Home = () => {
       slidesToScroll: 1,
       autoplay: false,
       dots: true,
-      dotsClass: `slick-dots ${classes.dots}`,
+      dotsClass: `slick-dots ${cardClasses.dots}`,
     };
     return <Slider {...settings}>{renderCards()}</Slider>;
   };
@@ -176,7 +181,7 @@ const Home = () => {
           </Typography>
           <hr className={classes.hr} />
         </div>
-        <div className={classes.cardContainer}>
+        <div className={cardClasses.cardContainer}>
           <Hidden mdUp>{renderMobileView()}</Hidden>
           <Hidden smDown>{renderDesktopView()}</Hidden>
         </div>

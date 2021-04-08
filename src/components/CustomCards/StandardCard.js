@@ -1,6 +1,8 @@
 import React from "react";
 // material-ui components
 import { makeStyles } from "@material-ui/core/styles";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 // core components
 import Icon from "@material-ui/core/Icon";
 import Card from "components/Card/Card.js";
@@ -22,18 +24,38 @@ const useStyles = makeStyles(styles);
 
 export default function Cards(props) {
   const classes = useStyles();
+
   return (
-    <Card className={props.customStyle}>
+    <Card className={props.classes.serviceCards}>
       <img
-        style={{ height: "180px", width: "100%", display: "block" }}
-        className={classes.imgCardTop}
+        className={
+          props.classes
+            ? classNames(classes.imgCardTop, props.classes.imgStyle)
+            : classes.imgCardTop
+        }
         src={props.img}
         alt="Card-img-cap"
       />
       <CardBody>
-        <h4 className={classes.cardTitle}>{props.title}</h4>
-        <p>{props.body}</p>
-        <Button usetheme="true">{props.buttonText}</Button>
+        <h4
+          className={
+            props.classes
+              ? classNames(classes.cardTitle, props.classes.cardTitle)
+              : classes.cardTitle
+          }
+        >
+          {props.title}
+        </h4>
+        <p className={props.classes ? props.classes.cardBodyText : ""}>
+          {props.body}
+        </p>
+        <Button
+          className={props.classes ? props.classes.buttonStyle : {}}
+          onClick={props.buttonFunction ? props.buttonFunction : null}
+          usetheme="true"
+        >
+          {props.buttonText}
+        </Button>
       </CardBody>
     </Card>
   );

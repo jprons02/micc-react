@@ -41,12 +41,25 @@ const useStyles = makeStyles({
 export default function CustomVirtualEventSchedule(props) {
   const classes = useStyles();
 
+  // Formating away from military time and adding AM/PM
+  const formatTime = (hour, minute) => {
+    if (hour == 12) {
+      return `${hour}:${minute} PM`;
+    }
+    if (hour > 12) {
+      return `${hour - 12}:${minute} PM`;
+    }
+    if (hour < 12) {
+      return `${hour}:${minute} AM`;
+    }
+  };
+
   const renderTableBody = () => {
     if (props.events) {
       return props.events.map((event) => (
         <StyledTableRow key={event.key}>
           <StyledTableCell component="th" scope="row">
-            {`${event.releaseTime.hour}:${event.releaseTime.minutes}`}
+            {formatTime(event.releaseTime.hour, event.releaseTime.minutes)}
           </StyledTableCell>
           <StyledTableCell align="left">{event.key}</StyledTableCell>
         </StyledTableRow>

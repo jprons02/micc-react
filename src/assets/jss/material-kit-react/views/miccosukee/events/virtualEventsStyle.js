@@ -1,8 +1,9 @@
 import green from "@material-ui/core/colors/green";
+import { standardLinkColor } from "themes/colors.js";
 
 const virtualEventsStyle = {
   welcomeSection: {
-    marginTop: "22px",
+    marginTop: "30px",
     marginBottom: "6px",
   },
   welcome: {
@@ -14,7 +15,7 @@ const virtualEventsStyle = {
     paddingBottom: "0px",
   },
   buttonSection: {
-    margin: "18px 0",
+    margin: "18px 0 5px 0",
   },
   button: {
     width: "100%",
@@ -27,11 +28,41 @@ const virtualEventsStyle = {
       boxShadow: `0 14px 26px -12px ${green[500]}42, 0 4px 23px 0px #00000012, 0 8px 10px -5px ${green[500]}20 !important`,
     },
   },
+  loginButtonSection: {
+    textAlign: "center",
+  },
+  loginButton: {
+    fontSize: "12px",
+    color: standardLinkColor.color,
+    "&:hover,&:focus": {
+      color: standardLinkColor.hover,
+    },
+  },
   header: {
     fontSize: "50px",
   },
   subHeader: {
     fontSize: "14px",
+  },
+  videoSection: {
+    margin: "30px 0",
+  },
+  vendorsSection: {
+    margin: "30px 0",
+  },
+  extrasSection: {
+    margin: "30px 0",
+  },
+  extrasButton: {
+    marginTop: "-5px",
+    fontSize: "12px",
+    color: standardLinkColor.color,
+    "&:hover,&:focus": {
+      color: standardLinkColor.hover,
+    },
+  },
+  extrasButtonIcon: {
+    fontSize: "15px",
   },
   //DESKTOP VIEW
   "@media screen and (min-width: 960px)": {
@@ -44,7 +75,7 @@ const virtualEventsStyle = {
     },
     subsection: {
       paddingTop: "0",
-      paddingBottom: "38px",
+      paddingBottom: "34px",
     },
     header: {
       fontSize: "50px",
@@ -55,6 +86,15 @@ const virtualEventsStyle = {
     button: {
       paddingTop: "14px",
       paddingBottom: "14px",
+    },
+    videoSection: {
+      margin: "0",
+    },
+    vendorsSection: {
+      margin: "0",
+    },
+    extrasSection: {
+      margin: "0",
     },
   },
 };

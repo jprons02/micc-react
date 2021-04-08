@@ -19,7 +19,6 @@ const CustomEventVideo = (props) => {
 
     // Set interval to look for new video source every 10 seconds
     const interval = setInterval(() => {
-      console.log("interval started...");
       const d = setEstTime();
       const time = {
         currentYear: d.getFullYear(),
@@ -35,16 +34,12 @@ const CustomEventVideo = (props) => {
     return () => clearInterval(interval);
   }, []);
 
-  //console.log("minutes state: ", timeState.currentMinutes);
-  console.log("video state: ", video);
-
   const videoSrc = (time, interval) => {
     // Loop through all videos and break as soon as isVideoAvailable returns true
     for (let i = 0; i < props.videos.length; i++) {
       if (isVideoAvailable(time, props.videos[i].releaseTime)) {
         setVideo(props.videos[i]);
         if (i === 0) {
-          console.log("interval cleared!");
           clearInterval(interval);
         }
         break;
