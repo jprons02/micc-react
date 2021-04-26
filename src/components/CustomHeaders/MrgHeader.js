@@ -101,11 +101,37 @@ const MrgHeader = () => {
       href: "",
       target: "",
       color: "",
-      link: "/dining-nightlife",
+      link: "",
       subMenu: [
         {
           text: "Bravo Bravissimo!",
           link: "/bravo-bravissimo",
+          target: "",
+        },
+        {
+          text: "Empeeke Aaweeke International Buffet",
+          link: "/international-buffet",
+          target: "",
+        },
+        {
+          text: "Empeeke Aya Deli",
+          link: "/deli",
+          target: "",
+        },
+        {
+          text: "Café Hammock",
+          link: "/cafe-hammock",
+          target: "",
+          divider: true,
+        },
+        {
+          text: "Cypress Lounge",
+          link: "/cypress-lounge",
+          target: "",
+        },
+        {
+          text: "Martini Bar",
+          link: "/martini-bar",
           target: "",
         },
       ],
@@ -117,7 +143,7 @@ const MrgHeader = () => {
       href: "",
       target: "",
       color: "",
-      link: "/events/virtualevent",
+      link: "/events",
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {

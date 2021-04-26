@@ -54,5 +54,15 @@ export const mrgTheme = createMuiTheme({
         },
       },
     },
+    MuiTabs: {
+      root: {
+        "& .MuiTabs-indicator": {
+          backgroundColor: mrgColor[500],
+        },
+        "& .MuiTab-textColorPrimary.Mui-selected": {
+          color: "black",
+        },
+      },
+    },
   },
 });

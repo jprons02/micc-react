@@ -7,8 +7,8 @@ const Events = () => {
   return (
     <div>
       <Typography variant="h4">Events</Typography>
-      <Link to="/mrg">
-        <Button usetheme="true">Back</Button>
+      <Link to="/mrg/american-indian-day">
+        <Button usetheme="true">AID</Button>
       </Link>
     </div>
   );

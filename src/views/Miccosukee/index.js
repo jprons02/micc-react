@@ -1,5 +1,10 @@
-import React, { useState } from "react";
-import { useTransition, animated } from "react-spring";
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useRouteMatch,
+} from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -11,8 +16,9 @@ import Home from "./Pages/home";
 //import MRG from "./Pages/mrg";
 import GamingGolf from "./Pages/gamingGolf";
 import Everglades from "./Pages/everglades";
-import History from "./Pages/history";
-import Administration from "./Pages/administration";
+import Events from "./Pages/events";
+import EventPage from "./Pages/eventPage";
+import HistoryAdmin from "./Pages/historyAdmin";
 
 import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
 
@@ -20,66 +26,20 @@ const useStyles = makeStyles(styles);
 
 const Miccosukee = () => {
   const classes = useStyles();
-
-  const pages = [
-    {
-      id: "/",
-      component: () => <Home click={cardClicked} />,
-    },
-    {
-      id: "Miccosukee Resort & Gaming",
-      component: () => <GamingGolf click={cardClicked} />,
-    },
-    {
-      id: "Everglades Experiences",
-      component: () => <Everglades click={cardClicked} />,
-    },
-    {
-      id: "History",
-      component: () => <History click={cardClicked} />,
-    },
-    {
-      id: "Administration",
-      component: () => <Administration click={cardClicked} />,
-    },
-  ];
-
-  const [page, setPage] = useState(0);
-
-  const transitions = useTransition(pages[page], (item) => item.id, {
-    from: { opacity: 0, transform: "translate3d(100%,0,0)" },
-    enter: { opacity: 1, transform: "translate3d(0%,0,0)" },
-    leave: { opacity: 0, transform: "translate3d(-50%,0,0)" },
-  });
-  //x is passed up from home.js <Card onClick function
-  const cardClicked = (x) => {
-    switch (x) {
-      case "/":
-        return setPage(0);
-      case 1:
-        return setPage(1);
-      case 2:
-        return setPage(2);
-      case 3:
-        return setPage(3);
-      case 4:
-        return setPage(4);
-      default:
-        return setPage(0);
-    }
-  };
+  let { path, url } = useRouteMatch();
 
   return (
     <div className={classNames(classes.main)}>
       <div className={classes.container}>
-        <Header click={cardClicked} page={page} />
-        {transitions.map(({ item, key, props }) => {
-          return (
-            <animated.div key={key} style={{ ...props }}>
-              {item.component()}
-            </animated.div>
-          );
-        })}
+        <Header />
+        <Switch>
+          <Route exact path={"/"} component={Home} />
+          <Route exact path={`${path}gaming-golf`} component={GamingGolf} />
+          <Route exact path={`${path}glades`} component={Everglades} />
+          <Route exact path={`${path}events`} component={Events} />
+          <Route exact path={`${path}events/:eventId`} component={EventPage} />
+          <Route exact path={`${path}history-admin`} component={HistoryAdmin} />
+        </Switch>
       </div>
     </div>
   );

@@ -20,14 +20,14 @@ import Slider from "react-slick";
 import image1 from "assets/img/bg.jpg";
 import image2 from "assets/img/bg2.jpg";
 import image3 from "assets/img/bg3.jpg";
-import heroImg1 from "assets/img/mrg/mrg_hero.jpg";
+import heroImg1 from "assets/img/mrg/home/mrg_hero.jpg";
 
-import cardImage1 from "assets/img/mrg/homeCard_gaming.jpg";
-import cardImage2 from "assets/img/mrg/homeCard_accommodations.jpg";
-import cardImage3 from "assets/img/mrg/homeCard_fineDining.jpg";
-import cardImage4 from "assets/img/mrg/homeCard_spa.jpg";
-import cardImage5 from "assets/img/mrg/homeCard_events.jpg";
-import cardImage6 from "assets/img/mrg/homeCard_banquets.jpg";
+import cardImage1 from "assets/img/mrg/home/homeCard_gaming.jpg";
+import cardImage2 from "assets/img/mrg/home/homeCard_accommodations.jpg";
+import cardImage3 from "assets/img/mrg/home/homeCard_fineDining.jpg";
+import cardImage4 from "assets/img/mrg/home/homeCard_spa.jpg";
+import cardImage5 from "assets/img/mrg/home/homeCard_events.jpg";
+import cardImage6 from "assets/img/mrg/home/homeCard_banquets.jpg";
 
 // Styles
 import styles from "assets/jss/material-kit-react/views/mrg/home.js";

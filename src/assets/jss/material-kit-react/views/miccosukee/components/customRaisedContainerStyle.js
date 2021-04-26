@@ -18,6 +18,9 @@ const customRaisedContainerStyle = {
   "@media screen and (min-width: 960px)": {
     mainRaised: {
       margin: "-60px 30px 0px",
+      maxWidth: "1300px",
+      marginLeft: "auto",
+      marginRight: "auto",
     },
     container: {
       maxWidth: "90%",

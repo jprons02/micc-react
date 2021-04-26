@@ -9,6 +9,9 @@ import CustomGamingPromoModal from "components/CustomModal/CustomPromosModal/Cus
 // @material-ui/core components
 import { Hidden } from "@material-ui/core";
 
+// Custom function
+import { urlify } from "services/urlify.js";
+
 // React component for creating beautiful carousel
 import Slider from "react-slick";
 
@@ -43,22 +46,13 @@ const GamingPromos = () => {
   useEffect(() => {
     // link to specific promo - check current url and if x then open x promo modal
     cardContent.map((promo) => {
-      // Takes title, transform to lowercase, splits string into array and then joins array with "-". Purpose is ability to link to specific promos from url
-      // example) "Anniversary Gift" will become "anniversary-gift"
-      const url = () => {
-        const splitString = promo.title.toLowerCase().split(" ");
-        if (splitString.length > 1) {
-          return splitString.join("-");
-        } else {
-          return splitString[0];
-        }
-      };
-
+      //Purpose is ability to link to specific promos from url
+      // example using urlify service) "Anniversary Gift" will become "anniversary-gift"
       if (
         window.location.href ===
-          `http://localhost:3000/mrg/promotions#${url()}` ||
+          `http://localhost:3000/mrg/promotions#${urlify(promo.title)}` ||
         window.location.href ===
-          `https://miccosukee.com/mrg/promotions#${url()}`
+          `https://miccosukee.com/mrg/promotions#${urlify(promo.title)}`
       ) {
         setSelectedPromo(promo);
         setShowModal(true);
@@ -121,7 +115,7 @@ const GamingPromos = () => {
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
-      <RaisedContainer style={{ border: "1px solid pink" }}>
+      <RaisedContainer>
         <div style={{ textAlign: "center" }}>
           <h2 style={{ fontSize: "30px" }}>{getMonth()}</h2>
           <a target="_blank" href={getCalendarPdf()}>

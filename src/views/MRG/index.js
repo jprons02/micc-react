@@ -19,12 +19,22 @@ import MrgFooter from "components/CustomFooters/MrgFooter.js";
 // Pages
 import Home from "views/MRG/Pages/home/home.js";
 import Accommodations from "views/MRG/Pages/accommodations/accommodations.js";
-import Amenities from "views/MRG/Pages/amenities/amenities.js";
-import Gaming from "views/MRG/Pages/gaming/gaming.js";
+import SalonSpa from "views/MRG/Pages/amenities/salon-spa/salonSpa.js";
+import ClubEgret from "views/MRG/Pages/amenities/club-egret/clubEgret.js";
+import PoolGym from "views/MRG/Pages/amenities/pool-gym/poolGym.js";
+import TeenArcade from "views/MRG/Pages/amenities/teen-arcade/teenArcade.js";
+import GamingMachines from "views/MRG/Pages/gaming/gamingMachines/gamingMachines.js";
 import GamingPromos from "views/MRG/Pages/gaming/gamingPromos/gamingPromos.js";
-import DiningNightlife from "views/MRG/Pages/diningNightlife/diningNightlife.js";
+import OneRewards from "views/MRG/Pages/gaming/oneRewards/oneRewards.js";
+import Bingo from "views/MRG/Pages/gaming/bingo/bingo.js";
+import Poker from "views/MRG/Pages/gaming/poker/poker.js";
+import InternationalBuffet from "views/MRG/Pages/diningNightlife/international-buffet/internationalBuffet.js";
+import Bravo from "views/MRG/Pages/diningNightlife/bravo-bravissimo/bravoBravissimo.js";
+import Deli from "views/MRG/Pages/diningNightlife/deli/deli.js";
+import CafeHammock from "views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js";
+import CypressLounge from "views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js";
+import MartiniBar from "views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js";
 import Events from "views/MRG/Pages/events/events.js";
-import AidEvent from "views/MRG/Pages/events/virtual/21_americanIndianDay.js";
 import Contact from "views/MRG/Pages/contact/contact.js";
 
 const useStyles = makeStyles(styles);
@@ -51,8 +61,25 @@ export default function Miccosukee(props) {
             path={`${match.path}/accommodations`}
             component={Accommodations}
           />
-          <Route exact path={`${match.path}/amenities`} component={Amenities} />
-          <Route exact path={`${match.path}/gaming`} component={Gaming} />
+          <Route exact path={`${match.path}/salon-spa`} component={SalonSpa} />
+          <Route
+            exact
+            path={`${match.path}/club-egret`}
+            component={ClubEgret}
+          />
+          <Route exact path={`${match.path}/pool-gym`} component={PoolGym} />
+          <Route
+            exact
+            path={`${match.path}/teen-arcade`}
+            component={TeenArcade}
+          />
+          <Route
+            exact
+            path={`${match.path}/gaming-machines`}
+            component={GamingMachines}
+          />
+          <Route exact path={`${match.path}/bingo`} component={Bingo} />
+          <Route exact path={`${match.path}/poker`} component={Poker} />
           <Route
             exact
             path={`${match.path}/promotions`}
@@ -60,15 +87,36 @@ export default function Miccosukee(props) {
           />
           <Route
             exact
-            path={`${match.path}/dining-nightlife`}
-            component={DiningNightlife}
+            path={`${match.path}/miccosukee-one`}
+            component={OneRewards}
           />
-          <Route exact path={`${match.path}/events`} component={Events} />
           <Route
             exact
-            path={`${match.path}/events/virtualevent`}
-            component={AidEvent}
+            path={`${match.path}/bravo-bravissimo`}
+            component={Bravo}
           />
+          <Route
+            exact
+            path={`${match.path}/international-buffet`}
+            component={InternationalBuffet}
+          />
+          <Route exact path={`${match.path}/deli`} component={Deli} />
+          <Route
+            exact
+            path={`${match.path}/cafe-hammock`}
+            component={CafeHammock}
+          />
+          <Route
+            exact
+            path={`${match.path}/cypress-lounge`}
+            component={CypressLounge}
+          />
+          <Route
+            exact
+            path={`${match.path}/martini-bar`}
+            component={MartiniBar}
+          />
+          <Route exact path={`${match.path}/events`} component={Events} />
           <Route exact path={`${match.path}/contact`} component={Contact} />
         </Switch>
         <MrgFooter />

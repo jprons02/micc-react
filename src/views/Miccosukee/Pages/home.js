@@ -13,7 +13,7 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/pages/home.js
 import mrgGolfImg from "assets/img/miccosukee/pages/home/home-mrg.jpg";
 import evergladesImg from "assets/img/miccosukee/pages/home/home-airboats.jpg";
 import historyImg from "assets/img/miccosukee/pages/home/home-history.jpg";
-import adminImg from "assets/img/miccosukee/pages/home/home-admin.jpg";
+import eventsImg from "assets/img/miccosukee/pages/home/home-admin.jpg";
 
 import { useLanguage } from "contexts/languageContext.js";
 
@@ -22,15 +22,14 @@ const useStyles = makeStyles(styles);
 //<Link to="/about">About</Link>
 //"https://miccosukee.com/wp-content/uploads/2019/12/gaming-scaled.jpg"
 
-const Home = (props) => {
+const Home = ({ history }) => {
   const language = useLanguage();
   const classes = useStyles();
-
-  console.log("language", language);
 
   const cards = [
     {
       id: 1,
+      url: "gaming-golf",
       title: language
         ? "Miccosukee Resort & Gaming"
         : "Miccosukee Resort & Gaming",
@@ -53,6 +52,7 @@ const Home = (props) => {
     },
     {
       id: 2,
+      url: "glades",
       title: language
         ? "Everglades Experiences"
         : "Experiencias en los Everglades",
@@ -77,7 +77,33 @@ const Home = (props) => {
     },
     {
       id: 3,
-      title: language ? "History" : "Historia",
+      url: "events",
+      title: language ? "Events" : "Eventos",
+      description: language
+        ? "With supporting text below as a natural lead-in to additional content."
+        : "Con texto de apoyo debajo dirigiendo a contenido adicional",
+      cardBackground: {
+        background: `linear-gradient(
+                rgba(197, 78, 69, 0.45), 
+                rgba(197, 78, 69, 0.45)),
+                url(${eventsImg})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      },
+      bgImage: "test3",
+      bgColor: "#008fa0",
+      header: "",
+      headerColor: "",
+      footer: "",
+      buttonColor: "info",
+    },
+    {
+      id: 4,
+      url: "history-admin",
+      title: language
+        ? "History & Administration"
+        : "Historia y Administración",
       description: language
         ? "With supporting text below as a natural lead-in to additional content."
         : "Con texto de apoyo debajo dirigiendo a contenido adicional",
@@ -97,26 +123,6 @@ const Home = (props) => {
       footer: "",
       buttonColor: "info",
     },
-    {
-      id: 4,
-      title: language ? "Administration" : "Administración",
-      description: language
-        ? "With supporting text below as a natural lead-in to additional content."
-        : "Con texto de apoyo debajo dirigiendo a contenido adicional",
-      cardBackground: {
-        background: `linear-gradient(
-                rgba(197, 78, 69, 0.45), 
-                rgba(197, 78, 69, 0.45)),
-                url(${adminImg})`,
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      },
-      header: "",
-      headerColor: "",
-      footer: "",
-      buttonColor: "danger",
-    },
   ];
 
   const renderMiccCards = () => {
@@ -124,7 +130,7 @@ const Home = (props) => {
       return (
         <GridItem key={card.id} className={classes.gridItem} sm={12} md={6}>
           <Card
-            onClick={() => props.click(card.id) || null}
+            onClick={() => history.push(`/${card.url}`)}
             className={classes.mCard}
             style={card.cardBackground || {}}
           >
@@ -150,6 +156,7 @@ const Home = (props) => {
       className={classes.gridContainer}
       justify="center"
       alignItems="center"
+      style={{ position: "static" }}
     >
       {renderMiccCards()}
     </GridContainer>

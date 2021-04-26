@@ -43,6 +43,7 @@ export default function CustomTabs(props) {
       <CardHeader color={headerColor} plain={plainTabs}>
         {title !== undefined ? <div className={cardTitle}>{title}</div> : null}
         <Tabs
+          orientation={props.orientation ? props.orientation : "horizontal"}
           value={value}
           variant={variant}
           onChange={handleChange}

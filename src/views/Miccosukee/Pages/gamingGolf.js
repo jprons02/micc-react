@@ -16,9 +16,7 @@ import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
-//props gives me the cardClicked function...
-
-const GamingGolf = (props) => {
+const GamingGolf = () => {
   const language = useLanguage();
   const classes = useStyles();
 
@@ -95,7 +93,11 @@ const GamingGolf = (props) => {
   };
 
   return (
-    <GridContainer className={classes.gridContainer} justify="center">
+    <GridContainer
+      className={classes.gridContainer}
+      justify="center"
+      style={{ position: "static" }}
+    >
       {renderCards()}
     </GridContainer>
   );

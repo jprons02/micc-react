@@ -15,8 +15,7 @@ import LoginPage from "views/_demo_LoginPage/LoginPage.js";
 // my pages
 import Miccosukee from "views/Miccosukee";
 import MRG from "views/MRG";
-//test
-import MRG2 from "views/MRG/index2";
+import AID from "views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js";
 
 var hist = createBrowserHistory();
 
@@ -26,12 +25,12 @@ const App = () => {
       <AlertProvider>
         <Router history={hist}>
           <Switch>
-            <Route path="/landing-page" component={LandingPage} />
-            <Route path="/profile-page" component={ProfilePage} />
-            <Route path="/login-page" component={LoginPage} />
-            <Route path="/components" component={Components} />
+            <Route exact path="/landing-page" component={LandingPage} />
+            <Route exact path="/profile-page" component={ProfilePage} />
+            <Route exact path="/login-page" component={LoginPage} />
+            <Route exact path="/components" component={Components} />
+            <Route exact path={"/virtual-event/aid"} component={AID} />
             <Route path="/mrg" component={MRG} />
-            <Route path="/mrg2" component={MRG2} />
             <Route path="/" component={Miccosukee} />
           </Switch>
         </Router>

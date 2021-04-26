@@ -13,8 +13,6 @@ import imagesStyles from "assets/jss/material-kit-react/imagesStyles.js";
 
 import { cardTitle } from "assets/jss/material-kit-react.js";
 
-import image1 from "assets/img/bg.jpg";
-
 const styles = {
   ...imagesStyles,
   cardTitle,

@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/header.js";
@@ -14,12 +15,16 @@ const Header = (props) => {
   const classes = useStyles();
   const language = useLanguage();
   const toggleLanguage = useLanguageUpdate();
-  const showBackButton = props.page !== 0 ? true : false;
+  const showBackButton = props.location.pathname !== "/" ? true : false;
+
+  const goToHomePage = () => {
+    props.history.push("/");
+  };
 
   return (
     <div className={classes.container}>
       <img
-        onClick={() => props.click("/")}
+        onClick={goToHomePage}
         src={logo}
         alt="miccosukee emblem logo"
         className={classes.logo}
@@ -37,7 +42,7 @@ const Header = (props) => {
             }
             className={classes.backButton}
             color="white"
-            onClick={() => props.click("/")}
+            onClick={() => props.history.goBack()}
           >
             <Icon style={{ fontSize: "16px", marginLeft: "2px" }}>
               arrow_back_ios
@@ -69,24 +74,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
-
-/*
-  <div
-    style={{ display: "inline-block", position: "absolute", left: "0" }}
-  >
-    <Button
-      justIcon
-      round
-      style={
-        showBackButton ? { display: "inline-block" } : { display: "none" }
-      }
-      color="white"
-      onClick={() => props.click("/")}
-    >
-      <Icon style={{ fontSize: "16px", marginLeft: "2px" }}>
-        arrow_back_ios
-      </Icon>
-    </Button>
-  </div>
-*/
+export default withRouter(Header);
