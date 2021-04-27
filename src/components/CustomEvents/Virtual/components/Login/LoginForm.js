@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import classNames from "classnames";
 
 // material-ui core components
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "components/CustomButtons/Button.js";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Typography from "@material-ui/core/Typography";
 import CircularProgress from "@material-ui/core/CircularProgress";
 

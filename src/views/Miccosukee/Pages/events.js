@@ -33,9 +33,6 @@ const Events = ({ history }) => {
 
     const eventDateObj = new Date(year, month, day);
 
-    console.log("current date: ", currentDateObj);
-    console.log("event date: ", eventDateObj);
-
     if (currentDateObj <= eventDateObj) {
       return true;
     } else {

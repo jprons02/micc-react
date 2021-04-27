@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 // material-ui core components
 import { Hidden } from "@material-ui/core";
@@ -22,6 +22,9 @@ import Schedule from "components/CustomEvents/Virtual/components/Schedule.js";
 import LoginModal from "components/CustomEvents/Virtual/components/Login/LoginModal.js";
 import PurchaseTicketsModal from "components/CustomEvents/Virtual/components/PurchaseTickets/PurchaseTicketsModal.js";
 
+// Context
+import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";
+
 // My styles
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/miccosukee/events/virtualEventsStyle.js";
@@ -32,6 +35,7 @@ const useStyles = makeStyles(styles);
 
 const VirtualEvent = (props) => {
   const classes = useStyles();
+  const [alerts, setAlerts] = useContext(AlertContext);
 
   const [isLoggedIn, setLogIn] = useState(false);
   // loginClick state used for Login component. If user clicks login they should go to email input render.
@@ -46,6 +50,16 @@ const VirtualEvent = (props) => {
     if (!isLoggedIn) {
       setShowLoginModal(true);
     }
+  }, []);
+
+  // Reset snackbar state when component unmounts.
+  useEffect(() => {
+    return () => {
+      setAlerts({
+        ...alerts,
+        [virtualEventLoginId]: false,
+      });
+    };
   }, []);
 
   const closeLoginModal = () => {

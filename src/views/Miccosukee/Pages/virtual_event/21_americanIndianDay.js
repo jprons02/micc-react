@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import VirtualEvent from "components/CustomEvents/Virtual";
 
 // My content

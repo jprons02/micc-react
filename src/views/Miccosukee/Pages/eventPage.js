@@ -22,8 +22,6 @@ const EventPage = ({ match }) => {
 
   // Fetch event that matches url and set as state
   useEffect(() => {
-    console.log("match url: ", match.url);
-
     const matchedEvent = events.find((event) => {
       const eventUrl = `/events/${urlify(event.title)}${event.startDate
         .split("/")

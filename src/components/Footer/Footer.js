@@ -22,16 +22,8 @@ import emblem from "assets/img/miccosukee/MiccosukeeEmblem_Color.svg";
 
 // Contexts
 import { SignupFormProvider } from "contexts/SignupFormContext.js";
-import {
-  AlertContext,
-  signupAlertId,
-  virtualEventLoginId,
-} from "contexts/AlertContext.js";
+import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
 import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";
-
-// Snackbar
-import SnackbarContent from "components/Snackbar/SnackbarContent.js";
-import Check from "@material-ui/icons/Check";
 
 const useStyles = makeStyles(styles);
 
@@ -106,67 +98,10 @@ export default function Footer(props) {
     );
   };
 
-  const renderSnackbar = () => {
-    // snackbar message determined by alert
-    const getMessage = (id) => {
-      if (id === "virtualEventLoginId") {
-        return (
-          <span>
-            <b>Congratulations!</b> You have successfully logged in!
-          </span>
-        );
-      }
-      if (id === "signupAlertId") {
-        return (
-          <span>
-            <b>Message Sent Successfully:</b> Now P$ gonna send you some cool
-            stuff.
-          </span>
-        );
-      }
-    };
-
-    // iterate through all alerts and set id to the one that is true
-    for (const alert in alerts) {
-      if (alerts[alert] === true) {
-        return (
-          <div
-            style={{ position: "fixed", bottom: 0, zIndex: 5, width: "100%" }}
-          >
-            <SnackbarContent
-              id={alert}
-              message={getMessage(alert)}
-              close
-              color="success"
-              icon={Check}
-            />
-          </div>
-        );
-      }
-    }
-    /*return (
-      <div style={{ position: "fixed", bottom: 0, zIndex: 5, width: "100%" }}>
-        <SnackbarContent
-          id={signupAlertId}
-          //id={virtualEventLoginId}
-          message={
-            <span>
-              <b>Message Sent Successfully:</b> Now P$ gonna send you some cool
-              stuff.
-            </span>
-          }
-          close
-          color="success"
-          icon={Check}
-        />
-      </div>
-    );*/
-  };
-
   return (
     <SignupFormProvider entity={props.signup}>
       {!props.footerMenuItems ? <DemoFooter /> : renderFooter()}
-      {renderSnackbar()}
+      {/*renderSnackbar()*/}
     </SignupFormProvider>
   );
 }
