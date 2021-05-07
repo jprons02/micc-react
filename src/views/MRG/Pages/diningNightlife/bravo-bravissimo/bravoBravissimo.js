@@ -27,7 +27,6 @@ const imageArray = [image1, image2];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",
@@ -58,14 +57,14 @@ const Bravo = () => {
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_Menu_11x17.pdf"
                 target="_blank"
-                usetheme="true"
+                usetheme="contained"
               >
                 MENU
               </Button>{" "}
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_DrinksMenu.pdf"
                 target="_blank"
-                usetheme="true"
+                usetheme="contained"
               >
                 DRINK MENU
               </Button>

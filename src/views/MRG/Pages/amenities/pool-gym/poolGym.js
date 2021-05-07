@@ -28,7 +28,6 @@ const imageArray = [image1, image2, image3, image4, image5];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",

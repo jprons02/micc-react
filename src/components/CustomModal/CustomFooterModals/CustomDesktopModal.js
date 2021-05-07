@@ -100,7 +100,6 @@ export default function Modal(props) {
     buildValuesObj();
 
     const uploaded = () => {
-      console.log("yooooo i finally understand after 10 years...");
       setLoading(false);
       props.closeModal();
       //then open snackbar.
@@ -317,7 +316,7 @@ export default function Modal(props) {
             style={{
               width: "100%",
             }}
-            usetheme="true"
+            usetheme="contained"
           >
             DONE
           </Button>

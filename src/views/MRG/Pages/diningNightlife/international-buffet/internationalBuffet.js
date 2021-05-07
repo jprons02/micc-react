@@ -33,7 +33,6 @@ const imageArray = [image1, image2];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",

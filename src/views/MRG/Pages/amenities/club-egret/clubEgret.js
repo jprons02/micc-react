@@ -27,7 +27,6 @@ const imageArray = [image1, image2, image3];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",
@@ -55,7 +54,7 @@ const ClubEgret = () => {
                 Club Egret is reserved for children ages 12 and under. <br />
                 For more information, please call{" "}
                 <a href="tel:+13059252555">
-                  <Typography color="inherit" variant="inherit">
+                  <Typography variant="inherit" color="primary">
                     305-925-2555
                   </Typography>
                 </a>

@@ -8,7 +8,7 @@ const Accommodations = () => {
     <div>
       <Typography variant="h4">Accommodations</Typography>
       <Link to="/mrg">
-        <Button usetheme="true">Back</Button>
+        <Button usetheme="contained">Back</Button>
       </Link>
     </div>
   );

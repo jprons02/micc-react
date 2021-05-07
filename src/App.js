@@ -14,6 +14,7 @@ import LoginPage from "views/_demo_LoginPage/LoginPage.js";
 
 // context
 import { AlertContext } from "contexts/AlertContext.js";
+import { ContactFormProvider } from "contexts/ContactFormContext.js";
 
 // Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
@@ -48,6 +49,13 @@ const App = () => {
           </span>
         );
       }
+      if (id === "contactAlertId") {
+        return (
+          <span>
+            <b>Message Sent Successfully!</b>
+          </span>
+        );
+      }
     };
 
     // iterate through all alerts and set id to the one that is true
@@ -77,18 +85,20 @@ const App = () => {
 
   return (
     <LanguageProvider>
-      <Router history={hist}>
-        <Switch>
-          <Route exact path="/landing-page" component={LandingPage} />
-          <Route exact path="/profile-page" component={ProfilePage} />
-          <Route exact path="/login-page" component={LoginPage} />
-          <Route exact path="/components" component={Components} />
-          <Route exact path={"/virtual-event/aid"} component={AID} />
-          <Route path="/mrg" component={MRG} />
-          <Route path="/" component={Miccosukee} />
-        </Switch>
-      </Router>
-      {renderSnackbar()}
+      <ContactFormProvider>
+        <Router history={hist}>
+          <Switch>
+            <Route exact path="/landing-page" component={LandingPage} />
+            <Route exact path="/profile-page" component={ProfilePage} />
+            <Route exact path="/login-page" component={LoginPage} />
+            <Route exact path="/components" component={Components} />
+            <Route exact path={"/virtual-event/aid"} component={AID} />
+            <Route path="/mrg" component={MRG} />
+            <Route path="/" component={Miccosukee} />
+          </Switch>
+        </Router>
+        {renderSnackbar()}
+      </ContactFormProvider>
     </LanguageProvider>
   );
 };

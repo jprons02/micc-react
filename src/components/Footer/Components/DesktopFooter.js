@@ -42,12 +42,23 @@ const DesktopFooter = (props) => {
     const renderDesktopFooterSubMenu = (footerSection) => {
       return footerSection.map((item) => {
         return (
-          <ListItem key={item.linkText} className={classes.listItemDesktop}>
-            <Link to={item.linkTo}>
-              <Typography className={classes.subMenuDesktop}>
-                {item.linkText}
-              </Typography>
-            </Link>
+          <ListItem key={item.linkText}>
+            {item.externalLink ? (
+              <a href={item.linkTo} target="_blank">
+                <Typography className={classes.expansionPanelDetailText}>
+                  {item.linkText}
+                </Typography>
+              </a>
+            ) : (
+              <Link to={item.linkTo}>
+                <Typography
+                  onClick={item.clickFunction ? item.clickFunction : null}
+                  className={classes.expansionPanelDetailText}
+                >
+                  {item.linkText}
+                </Typography>
+              </Link>
+            )}
           </ListItem>
         );
       });
@@ -118,7 +129,7 @@ const DesktopFooter = (props) => {
                   }}
                   fullWidth
                   onClick={props.onSubscribe}
-                  usetheme="true"
+                  usetheme="contained"
                 >
                   SUBSCRIBE
                 </Button>

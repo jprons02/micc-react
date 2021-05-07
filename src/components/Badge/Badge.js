@@ -18,10 +18,7 @@ export default function Badge(props) {
       <span
         onClick={() => props.onClick()}
         className={classes.badge + " " + classes[color]}
-        style={{
-          cursor: "pointer",
-          width: props.widthProp ? props.widthProp : "",
-        }}
+        style={props.styleProp}
       >
         {children}
       </span>

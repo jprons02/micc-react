@@ -28,7 +28,6 @@ const imageArray = [image1, image2, image3];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",
@@ -60,14 +59,14 @@ const CafeHammock = () => {
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/05/CafeHammock_Menu.pdf"
                 target="_blank"
-                usetheme="true"
+                usetheme="contained"
               >
                 Menu
               </Button>{" "}
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/05/CafeHammock_WineMenu.pdf"
                 target="_blank"
-                usetheme="true"
+                usetheme="contained"
               >
                 Wine Menu
               </Button>

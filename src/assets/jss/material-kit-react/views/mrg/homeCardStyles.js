@@ -8,7 +8,8 @@ const homeCardStyle = {
   },
   serviceCards: {
     display: "block",
-    width: "95%",
+    //width: "95%",
+    width: "20rem",
     marginLeft: "auto",
     marginRight: "auto",
     textAlign: "left",

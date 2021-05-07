@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "components/Footer/Footer.js";
 import { mrgColor } from "themes/colors.js";
+import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 const MrgFooter = () => {
+  const [showContact, setShowContact] = useState(false);
+
+  useEffect(() => {
+    closeContactModal();
+  }, []);
+
+  const openContactModal = () => {
+    setShowContact(true);
+  };
+
+  const closeContactModal = () => {
+    setShowContact(false);
+  };
+
   const footerArray = [
     {
       header: "MICCOSUKEE",
@@ -25,8 +40,14 @@ const MrgFooter = () => {
       header: "ADDITIONAL LINKS",
       subMenu: [
         {
-          linkText: "Test",
+          linkText: "Contact",
           linkTo: "#",
+          clickFunction: () => openContactModal(),
+        },
+        {
+          externalLink: true,
+          linkText: "Directions",
+          linkTo: "https://goo.gl/maps/yZ9QCXJ869UqZRxJ9",
         },
       ],
     },
@@ -34,14 +55,17 @@ const MrgFooter = () => {
       header: "FOLLOW US",
       subMenu: [
         {
+          externalLink: true,
           linkText: "Facebook",
           linkTo: "#",
         },
         {
+          externalLink: true,
           linkText: "Instagram",
           linkTo: "#",
         },
         {
+          externalLink: true,
           linkText: "Twitter",
           linkTo: "#",
         },
@@ -54,7 +78,16 @@ const MrgFooter = () => {
     },
   ];
 
-  return <Footer footerMenuItems={footerArray} color={mrgColor} signup="mrg" />;
+  return (
+    <React.Fragment>
+      <Footer footerMenuItems={footerArray} color={mrgColor} signup="mrg" />
+      <CustomContactModal
+        closeModal={closeContactModal}
+        showModal={showContact}
+        entity="mrg"
+      />
+    </React.Fragment>
+  );
 };
 
 export default MrgFooter;

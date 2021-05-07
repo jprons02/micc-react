@@ -23,11 +23,22 @@ export default function SimpleExpansionPanel(props) {
       return props.subMenu.map((item) => {
         return (
           <ListItem key={item.linkText}>
-            <Link to={item.linkTo}>
-              <Typography className={classes.expansionPanelDetailText}>
-                {item.linkText}
-              </Typography>
-            </Link>
+            {item.externalLink ? (
+              <a href={item.linkTo} target="_blank">
+                <Typography className={classes.expansionPanelDetailText}>
+                  {item.linkText}
+                </Typography>
+              </a>
+            ) : (
+              <Link to={item.linkTo}>
+                <Typography
+                  onClick={item.clickFunction ? item.clickFunction : null}
+                  className={classes.expansionPanelDetailText}
+                >
+                  {item.linkText}
+                </Typography>
+              </Link>
+            )}
           </ListItem>
         );
       });

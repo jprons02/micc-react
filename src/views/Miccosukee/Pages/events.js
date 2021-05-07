@@ -1,22 +1,67 @@
-import React, { useEffect } from "react";
-import { Link, withRouter } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, withRouter, useRouteMatch } from "react-router-dom";
+
 // nodejs library that concatenates classes
 import classNames from "classnames";
+
 // @material-ui/core components
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
+
 // Styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
 import { events } from "assets/event/EventData/eventList.js";
+
+// Custom Components
+import Badge from "components/Badge/Badge.js";
 
 // Custom Functions
 import { setEstTime } from "services/setEstTime.js";
 import { urlify } from "services/urlify.js";
 
+// Colors
+import { standardLinkColor, errorColor } from "themes/colors.js";
+
 const useStyles = makeStyles(styles);
 
-const Events = ({ history }) => {
+const Events = ({ history, badgeColor, entityMargin }) => {
   const classes = useStyles();
+
+  const [category, setCategory] = useState("all");
+  const [defaultUpcommingText, setDefaultUpcommingText] = useState(false);
+
+  let match = useRouteMatch();
+
+  useEffect(() => {
+    // Set the default category depending on url.
+    // ex) if url === mrg/events, category default is "Resort & Gaming"
+    switch (history.location.pathname) {
+      case "/mrg/events":
+        setCategory("Resort & Gaming");
+        break;
+      case "/golf/events":
+        setCategory("Golf");
+        break;
+    }
+  }, []);
+
+  // When category changes, insert default upcomming text if needed.
+  useEffect(() => {
+    const renderUpcommingDefault = () => {
+      if (document.getElementById("upcomming")) {
+        if (!document.getElementById("upcomming").innerText) {
+          setDefaultUpcommingText(true);
+        } else {
+          setDefaultUpcommingText(false);
+        }
+      }
+    };
+    renderUpcommingDefault();
+  }, [category]);
+
+  const handleBadgeClick = (category) => {
+    setCategory(category);
+  };
 
   const handleClick = (url) => {
     history.push(url);
@@ -40,27 +85,96 @@ const Events = ({ history }) => {
     }
   };
 
+  const renderBadges = () => {
+    const selectedStyle = {
+      backgroundColor: badgeColor ? badgeColor : errorColor,
+      color: "white",
+      cursor: "pointer",
+      margin: "2px",
+    };
+    const defaultStyle = {
+      backgroundColor: "transparent",
+      color: badgeColor ? badgeColor : errorColor,
+      cursor: "pointer",
+      margin: "2px",
+    };
+
+    return (
+      <div style={{ marginTop: "20px" }}>
+        <Badge
+          styleProp={category === "all" ? selectedStyle : defaultStyle}
+          color="info"
+          onClick={() => handleBadgeClick("all")}
+        >
+          ALL EVENTS
+        </Badge>
+        {events.map((event) => {
+          if (event.category) {
+            return (
+              <Badge
+                key={event.title}
+                margin="2px"
+                styleProp={
+                  event.category === category ? selectedStyle : defaultStyle
+                }
+                color="danger"
+                onClick={() => handleBadgeClick(event.category)}
+              >
+                {event.category}
+              </Badge>
+            );
+          }
+        })}
+      </div>
+    );
+  };
+
   const renderTitle = (title, startDate, type, link) => {
-    const url = `/events/${urlify(title)}${startDate.split("/").join("")}`;
+    const url = `${match.path}/${urlify(title)}${startDate
+      .split("/")
+      .join("")}`;
 
     if (type === "standard") {
       return (
         <a onClick={() => handleClick(url)}>
-          <h4 style={{ cursor: "pointer" }}>{title}</h4>
+          <h4
+            style={{
+              fontWeight: "400",
+              cursor: "pointer",
+              color: standardLinkColor.color,
+            }}
+          >
+            {title}
+          </h4>
         </a>
       );
     }
 
     if (type === "virtual") {
-      return <Link to={link}>{title}</Link>;
+      return (
+        <Link
+          style={{ fontWeight: "400", color: standardLinkColor.color }}
+          to={link}
+        >
+          {title}
+        </Link>
+      );
     }
   };
 
   const renderEvents = () => {
-    return (
-      <React.Fragment>
-        <h3 style={{ marginBottom: "20px" }}>Upcomming Events</h3>
-        {events.map((event) => {
+    //if not category... dont render.
+    const isCategory = (event) => {
+      if (category === "all" || event.category === category) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+
+    const renderUpcommingEvents = () => {
+      return events.map((event) => {
+        if (isCategory(event)) {
           if (isUpcomming(event)) {
             return (
               <div style={{ marginBottom: "22px" }} key={event.title}>
@@ -76,16 +190,16 @@ const Events = ({ history }) => {
               </div>
             );
           }
-        })}
-        <Divider />
-        <h3 style={{ marginBottom: "20px" }}>Past Events</h3>
-        {events.map((event) => {
-          const url = `/events/${urlify(event.title)}${event.startDate
-            .split("/")
-            .join("")}`;
+        }
+      });
+    };
+
+    const renderPastEvents = () => {
+      return events.map((event) => {
+        if (isCategory(event)) {
           if (!isUpcomming(event)) {
             return (
-              <div style={{ marginBottom: "22px" }} key={url}>
+              <div style={{ marginBottom: "22px" }} key={event.title}>
                 {renderTitle(
                   event.title,
                   event.startDate,
@@ -98,19 +212,31 @@ const Events = ({ history }) => {
               </div>
             );
           }
-        })}
+        }
+      });
+    };
+
+    return (
+      <React.Fragment>
+        <h3 style={{ marginBottom: "20px" }}>Upcomming Events</h3>
+        <div id="upcomming">{renderUpcommingEvents()}</div>
+        {defaultUpcommingText ? <p>No upcomming events at this time</p> : ""}
+        <Divider />
+        <h3 style={{ marginBottom: "20px" }}>Past Events</h3>
+        <div id="past">{renderPastEvents()}</div>
       </React.Fragment>
     );
   };
 
   return (
     <div
-      style={{ marginTop: "20px", marginBottom: "20px" }}
+      style={entityMargin ? { marginBottom: "20px" } : { margin: "20px 0px" }}
       className={classNames(classes.main, classes.mainRaised)}
     >
       <div>
         <div className={classes.container} style={{ padding: "15px" }}>
-          {renderEvents()}
+          {renderBadges()}
+          <div>{renderEvents()}</div>
         </div>
       </div>
     </div>

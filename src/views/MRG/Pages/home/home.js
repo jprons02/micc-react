@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -6,6 +6,13 @@ import classNames from "classnames";
 import Button from "components/CustomButtons/Button.js";
 // @material-ui/core components
 import Icon from "@material-ui/core/Icon";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+//import DialogActions from "@material-ui/core/DialogActions";
+import IconButton from "@material-ui/core/IconButton";
+// @material-ui/icons
+import Close from "@material-ui/icons/Close";
 import { Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import CustomButton from "@material-ui/core/Button";
@@ -32,14 +39,15 @@ import cardImage6 from "assets/img/mrg/home/homeCard_banquets.jpg";
 // Styles
 import styles from "assets/jss/material-kit-react/views/mrg/home.js";
 import cardStyles from "assets/jss/material-kit-react/views/mrg/homeCardStyles.js";
+import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
 
 const useStyles = makeStyles(styles);
 const useCardStyles = makeStyles(cardStyles);
+const useModalStyles = makeStyles(modalStyle);
 
 const sliderContent = [
   {
     id: 1,
-    height: "70vh",
     bgImage: heroImg1,
     header: "MONTHLY PROMOTIONS",
     subHeader:
@@ -51,14 +59,12 @@ const sliderContent = [
   },
   {
     id: 2,
-    height: "70vh",
     bgImage: image2,
     header: "AMERICAN INDIAN DAY",
     subHeader: "Itaque earum rerum hic tenetur a sapiente delectus.",
   },
   {
     id: 3,
-    height: "70vh",
     bgImage: image3,
     header: "ARTS & CRAFTS FESTIVAL",
     subHeader:
@@ -66,7 +72,6 @@ const sliderContent = [
   },
   {
     id: 4,
-    height: "70vh",
     bgImage: image1,
     header: "GAMING",
     subHeader: "",
@@ -131,6 +136,7 @@ const cardContent = [
 const Home = () => {
   const classes = useStyles();
   const cardClasses = useCardStyles();
+  const modalClasses = useModalStyles();
 
   let match = useRouteMatch();
 
@@ -169,7 +175,7 @@ const Home = () => {
 
   return (
     <React.Fragment>
-      <HeroSection sliderContent={sliderContent} />
+      <HeroSection large={true} sliderContent={sliderContent} />
       <RaisedContainer>
         <div className={classes.welcomeContainer}>
           <Typography className={classes.welcome} paragraph component="h1">

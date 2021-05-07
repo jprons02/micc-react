@@ -19,6 +19,9 @@ import Slider from "react-slick";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/promotionCardStyles.js";
 
+// Images
+import bgImage from "assets/img/bg3.jpg";
+
 // Card Content
 import cardContent from "views/MRG/Pages/gaming/gamingPromos/cardContent";
 
@@ -29,11 +32,9 @@ const useStyles = makeStyles(styles);
 const sliderContent = [
   {
     id: 1,
-    height: "40vh",
-    bgImage: "",
-    header: "MONTHLY PROMOTIONS",
-    subHeader:
-      "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.",
+    bgImage: bgImage,
+    header: "",
+    subHeader: "",
   },
 ];
 
@@ -117,7 +118,7 @@ const GamingPromos = () => {
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
         <div style={{ textAlign: "center" }}>
-          <h2 style={{ fontSize: "30px" }}>{getMonth()}</h2>
+          <h2 style={{ fontSize: "30px" }}>{`${getMonth()} PROMOTIONS`}</h2>
           <a target="_blank" href={getCalendarPdf()}>
             <span
               style={{

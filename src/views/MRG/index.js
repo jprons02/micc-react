@@ -34,8 +34,8 @@ import Deli from "views/MRG/Pages/diningNightlife/deli/deli.js";
 import CafeHammock from "views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js";
 import CypressLounge from "views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js";
 import MartiniBar from "views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js";
-import Events from "views/MRG/Pages/events/events.js";
-import Contact from "views/MRG/Pages/contact/contact.js";
+import MrgEvents from "views/MRG/Pages/events/mrgEvents.js";
+import MrgEventPage from "views/MRG/Pages/events/mrgEventPage";
 
 const useStyles = makeStyles(styles);
 
@@ -116,8 +116,12 @@ export default function Miccosukee(props) {
             path={`${match.path}/martini-bar`}
             component={MartiniBar}
           />
-          <Route exact path={`${match.path}/events`} component={Events} />
-          <Route exact path={`${match.path}/contact`} component={Contact} />
+          <Route exact path={`${match.path}/events`} component={MrgEvents} />
+          <Route
+            exact
+            path={`${match.path}/events/:eventId`}
+            component={MrgEventPage}
+          />
         </Switch>
         <MrgFooter />
       </div>

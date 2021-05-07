@@ -29,7 +29,6 @@ const imageArray = [image1, image2, image3, image4];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",
@@ -54,7 +53,7 @@ const SalonSpa = () => {
               <p>
                 Call{" "}
                 <a href="tel:+13059252557">
-                  <Typography color="inherit" variant="inherit">
+                  <Typography variant="inherit" color="primary">
                     305-925-2557
                   </Typography>
                 </a>{" "}
@@ -63,7 +62,7 @@ const SalonSpa = () => {
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/11/SpaBrochure_Trifold.pdf"
                 target="_blank"
-                usetheme="true"
+                usetheme="contained"
               >
                 SPA MENU
               </Button>

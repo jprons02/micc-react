@@ -5,7 +5,7 @@ export const events = [
   {
     title: "Virtual Event",
     type: "virtual",
-    link: "virtual-event/aid",
+    link: "/virtual-event/aid",
     startDate: "12/20/2021",
     endDate: "12/20/2021",
     admission: "Not Free",
@@ -17,7 +17,7 @@ export const events = [
     // type can be "standard" or "virtual"
     type: "standard",
     // category is if entity specific... ie: golf event or mrg nightlife event, etc...
-    category: "mrg",
+    category: "Resort & Gaming",
     annual: true,
     admission: "Free",
     startDate: "12/26/2020",
@@ -70,7 +70,7 @@ export const events = [
   {
     title: "Golf Festival",
     type: "standard",
-    category: "mrg",
+    category: "Golf",
     annual: true,
     admission: "Free",
     startDate: "12/26/2020",

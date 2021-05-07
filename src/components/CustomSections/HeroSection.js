@@ -32,12 +32,9 @@ export default function HeroSection(props) {
       return (
         <div key={slide.id}>
           <div
+            className={props.large ? classes.large : classes.standard}
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.bgImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center center",
-              height: slide.height ? slide.height : "30vh",
-              marginTop: "-20px",
             }}
           >
             <div className={classes.sliderContent}>

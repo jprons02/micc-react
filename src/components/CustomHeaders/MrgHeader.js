@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // core components
 import Header from "components/Header/Header.js";
@@ -13,11 +13,28 @@ import { makeStyles } from "@material-ui/core/styles";
 import { mrgColor } from "themes/colors.js";
 import mrgLogo from "assets/img/mrg/MRG_Logo.svg";
 
+import BookRoomModal from "components/CustomModal/CustomBookRoomModal/CustomBookRoomModal.js";
+
 const useStyles = makeStyles(styles);
 
 const MrgHeader = () => {
   //classes needed for social icon
-  const classes = useStyles();
+  //const classes = useStyles();
+  useEffect(() => {
+    //Close bookroom modal
+    closeModal(setShowBookRoomModal);
+  }, []);
+
+  const [showBookRoomModal, setShowBookRoomModal] = useState(false);
+
+  const openModal = (setState) => {
+    setState(true);
+  };
+
+  const closeModal = (setState) => {
+    setState(false);
+  };
+
   const menuLinks = [
     {
       text: "Accommodations",
@@ -147,41 +164,37 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Contact",
-      itemType: "",
-      href: "",
-      target: "",
-      color: "",
-      link: "/contact",
-      //icon: () => <Icon>chevron_right</Icon>,
-    },
-    {
       text: "Book A Room",
       itemType: "action",
       href: "",
       target: "",
       color: "",
-      link: "/gaming",
+      link: "",
+      clickFunction: () => openModal(setShowBookRoomModal),
       //icon: () => <Icon>chevron_right</Icon>,
     },
   ];
 
   return (
-    <Header
-      borderColor={mrgColor[500]}
-      color="white"
-      //color="primary"
-      //brand={<img style={{ width: "175px" }} src={mrgLogo} alt="mrg_logo" />}
-      brand={mrgLogo}
-      brandAlt="mrgLogo"
-      brandLink="/mrg"
-      rightLinks={<HeaderLinks menuItems={menuLinks} />}
-      fixed
-      changeColorOnScroll={{
-        height: 200,
-        color: "white",
-      }}
-    />
+    <React.Fragment>
+      <Header
+        borderColor={mrgColor[500]}
+        color="white"
+        brand={mrgLogo}
+        brandAlt="mrgLogo"
+        brandLink="/mrg"
+        rightLinks={<HeaderLinks menuItems={menuLinks} />}
+        fixed
+        changeColorOnScroll={{
+          height: 200,
+          color: "white",
+        }}
+      />
+      <BookRoomModal
+        showModal={showBookRoomModal}
+        closeModal={() => closeModal(setShowBookRoomModal)}
+      />
+    </React.Fragment>
   );
 };
 

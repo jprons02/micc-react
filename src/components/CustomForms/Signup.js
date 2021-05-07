@@ -197,7 +197,7 @@ export default function SignUpForm(props) {
             }}
             fullWidth
             onClick={submit}
-            usetheme="true"
+            usetheme="contained"
           >
             {props.isDesktop ? "Done" : "Subscribe"}
           </Button>

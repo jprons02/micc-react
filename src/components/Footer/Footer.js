@@ -88,7 +88,11 @@ export default function Footer(props) {
               Copyright &copy; {1900 + new Date().getYear()}
             </div>
             <div style={{ padding: "0px" }} className={classes.right}>
-              <Badge widthProp={"70px"} onClick={toggleLanguage} color="danger">
+              <Badge
+                styleProp={{ cursor: "pointer", width: "70px" }}
+                onClick={toggleLanguage}
+                color="danger"
+              >
                 {language ? "español" : "english"}
               </Badge>
             </div>
@@ -101,7 +105,6 @@ export default function Footer(props) {
   return (
     <SignupFormProvider entity={props.signup}>
       {!props.footerMenuItems ? <DemoFooter /> : renderFooter()}
-      {/*renderSnackbar()*/}
     </SignupFormProvider>
   );
 }

@@ -24,7 +24,7 @@ import image1 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg";
 import image2 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
 import image3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
 
-import image from "views/MRG/Pages/gaming/oneRewards/Web_NewMembersBonus_Tile.jpeg";
+import image from "views/MRG/Pages/gaming/oneRewards/New-Memeber-webbanner.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -39,7 +39,6 @@ const imageArray = [image];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",
@@ -160,7 +159,7 @@ const OneRewards = () => {
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2021/03/BINGO-PROGRAM-APPROVED_WEB.pdf"
                 target="_blank"
-                usetheme="true"
+                usetheme="contained"
               >
                 VIEW PROGRAM
               </Button>

@@ -27,7 +27,6 @@ const imageArray = [image1, image2, image3];
 const sliderContent = [
   {
     id: 1,
-    height: "30vh",
     bgImage: bgImage,
     header: "",
     subHeader: "",
@@ -63,7 +62,7 @@ const Bingo = () => {
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2021/03/BINGO-PROGRAM-APPROVED_WEB.pdf"
                 target="_blank"
-                usetheme="true"
+                usetheme="contained"
               >
                 VIEW PROGRAM
               </Button>

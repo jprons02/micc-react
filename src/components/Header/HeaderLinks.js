@@ -86,7 +86,8 @@ export default function HeaderLinks(props) {
             className={classes.listItemActionButton}
           >
             <Button
-              usetheme="true"
+              onClick={menuItem.clickFunction ? menuItem.clickFunction : null}
+              usetheme="contained"
               className={classes.registerNavLink}
               round={true}
             >
@@ -226,7 +227,7 @@ export default function HeaderLinks(props) {
         </ListItem>
         <ListItem className={classes.listItemActionButton}>
           <Button
-            usetheme="true"
+            usetheme="contained"
             href={props.href || "https://google.com"}
             //color={props.color || "transparent"}
             color={props.color || "primary"}

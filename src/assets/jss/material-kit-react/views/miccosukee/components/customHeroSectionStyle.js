@@ -29,9 +29,27 @@ const customHeroSectionStyle = {
       backgroundColor: "white",
     },
   },
+  standard: {
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    height: "20vh",
+    marginTop: "-20px",
+  },
+  large: {
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    height: "60vh",
+    marginTop: "-20px",
+  },
   //DESKTOP VIEW
   "@media screen and (min-width: 960px)": {
     //sliderContent: {},
+    standard: {
+      height: "30vh",
+    },
+    large: {
+      height: "70vh",
+    },
     header: {
       fontSize: "50px",
     },

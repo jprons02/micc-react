@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useRouteMatch } from "react-router-dom";
+
 import { events } from "assets/event/EventData/eventList.js";
 import { Link } from "react-router-dom";
 import { urlify } from "services/urlify.js";
@@ -15,19 +17,21 @@ import { isTemplateExpression } from "typescript";
 
 const useStyles = makeStyles(styles);
 
-const EventPage = ({ match }) => {
+const EventPage = ({ entityMargin }) => {
   const [event, setEvent] = useState({});
 
   const classes = useStyles();
 
+  let match = useRouteMatch();
+
   // Fetch event that matches url and set as state
   useEffect(() => {
     const matchedEvent = events.find((event) => {
-      const eventUrl = `/events/${urlify(event.title)}${event.startDate
+      const eventUrl = `${urlify(event.title)}${event.startDate
         .split("/")
         .join("")}`;
 
-      return eventUrl === match.url;
+      return eventUrl === match.params.eventId;
     });
 
     setEvent(matchedEvent);
@@ -69,7 +73,7 @@ const EventPage = ({ match }) => {
 
   return (
     <div
-      style={{ marginTop: "20px" }}
+      style={entityMargin ? { marginBottom: "20px" } : { margin: "20px 0px" }}
       className={classNames(classes.main, classes.mainRaised)}
     >
       <div>

@@ -32,6 +32,8 @@ const RegularButton = React.forwardRef((props, ref) => {
     ...rest
   } = props;
 
+  console.log("button props: ", props);
+
   const classes = makeComponentStyles();
 
   const btnClasses = classNames({
@@ -49,11 +51,23 @@ const RegularButton = React.forwardRef((props, ref) => {
   });
 
   const renderButton = () => {
-    if (props.usetheme) {
+    if (props.usetheme === "contained") {
       return (
         <Button
           variant="contained"
-          color={props.usetheme === "true" ? "primary" : "secondary"}
+          color={"primary"}
+          {...rest}
+          ref={ref}
+          className={btnClasses}
+        >
+          {children}
+        </Button>
+      );
+    } else if (props.usetheme === "outlined") {
+      return (
+        <Button
+          variant="outlined"
+          color={"primary"}
           {...rest}
           ref={ref}
           className={btnClasses}

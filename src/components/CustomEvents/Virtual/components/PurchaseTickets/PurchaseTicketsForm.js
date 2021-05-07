@@ -123,7 +123,7 @@ export default function PurchaseTicketsForm(props) {
               margin: "15px 0 0 0",
             }}
             fullWidth
-            usetheme="true"
+            usetheme="contained"
           >
             Log In
           </Button>
