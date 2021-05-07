@@ -89,6 +89,7 @@ const GamingPromos = () => {
           title={card.oneLiner}
           body={""}
           buttonText="SEE DETAILS"
+          buttonVariant="outlined"
           buttonFunction={() => promoClick(card)}
         />
       );

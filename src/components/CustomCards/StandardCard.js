@@ -50,7 +50,7 @@ export default function Cards(props) {
         <Button
           className={props.classes ? props.classes.buttonStyle : {}}
           onClick={props.buttonFunction ? props.buttonFunction : null}
-          usetheme="contained"
+          usetheme={props.buttonVariant || "contained"}
         >
           {props.buttonText}
         </Button>

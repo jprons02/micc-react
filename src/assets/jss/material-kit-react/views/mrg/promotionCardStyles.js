@@ -34,9 +34,9 @@ const promoCardStyle = {
     display: "block",
     margin: "auto",
     marginBottom: "10px",
-    backgroundColor: "transparent !important",
-    border: `1px solid ${mrgColor[500]}`,
-    color: mrgColor[500],
+    //backgroundColor: "transparent !important",
+    //border: `1px solid ${mrgColor[500]}`,
+    //color: mrgColor[500],
     fontWeight: "500",
   },
   dots: {

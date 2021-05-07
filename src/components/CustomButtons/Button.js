@@ -55,7 +55,7 @@ const RegularButton = React.forwardRef((props, ref) => {
       return (
         <Button
           variant="contained"
-          color={"primary"}
+          color="primary"
           {...rest}
           ref={ref}
           className={btnClasses}
@@ -67,7 +67,7 @@ const RegularButton = React.forwardRef((props, ref) => {
       return (
         <Button
           variant="outlined"
-          color={"primary"}
+          color="primary"
           {...rest}
           ref={ref}
           className={btnClasses}
