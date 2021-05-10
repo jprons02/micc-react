@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import { Icon } from "@material-ui/core";
+
+// Context
+import {BookRoomContext} from 'contexts/BookRoomContext.js';
 
 //testing
 import styles from "assets/jss/material-kit-react/views/mrg";
@@ -25,7 +28,7 @@ const MrgHeader = () => {
     closeModal(setShowBookRoomModal);
   }, []);
 
-  const [showBookRoomModal, setShowBookRoomModal] = useState(false);
+  const [showBookRoomModal, setShowBookRoomModal] = useContext(BookRoomContext);
 
   const openModal = (setState) => {
     setState(true);

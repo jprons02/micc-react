@@ -2,10 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
-// context
-import { LanguageProvider } from "./contexts/languageContext.js";
-//import { AlertProvider } from "contexts/AlertContext.js";
-
 // demo pages for this product
 import Components from "views/_demo_Components/Components.js";
 import LandingPage from "views/_demo_LandingPage/LandingPage.js";
@@ -13,6 +9,8 @@ import ProfilePage from "views/_demo_ProfilePage/ProfilePage.js";
 import LoginPage from "views/_demo_LoginPage/LoginPage.js";
 
 // context
+import { LanguageProvider } from "contexts/languageContext.js";
+import {PopupProvider} from 'contexts/PopupContext.js';
 import { AlertContext } from "contexts/AlertContext.js";
 import { ContactFormProvider } from "contexts/ContactFormContext.js";
 
@@ -24,6 +22,9 @@ import Check from "@material-ui/icons/Check";
 import Miccosukee from "views/Miccosukee";
 import MRG from "views/MRG";
 import AID from "views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js";
+
+// my components
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
 
 var hist = createBrowserHistory();
 
@@ -85,6 +86,7 @@ const App = () => {
 
   return (
     <LanguageProvider>
+      <PopupProvider>
       <ContactFormProvider>
         <Router history={hist}>
           <Switch>
@@ -99,6 +101,7 @@ const App = () => {
         </Router>
         {renderSnackbar()}
       </ContactFormProvider>
+      </PopupProvider>
     </LanguageProvider>
   );
 };
