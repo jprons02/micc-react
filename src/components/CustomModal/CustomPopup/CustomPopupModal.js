@@ -18,6 +18,7 @@ import Typography from "@material-ui/core/Typography";
 import Fade from "@material-ui/core/Fade";
 
 import mrgImage from "assets/img/test/MonthlyPayouts_Calendar_April-1.jpg";
+//import testImage from "assets/img/test/MGCC_NowOpen_PopUp_EN.png";
 import miccosukeeImage from "assets/img/bg.jpg";
 
 const useStyles = makeStyles(popupModalStyle);

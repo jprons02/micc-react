@@ -1,4 +1,4 @@
-const virtualLoginModalStyle = {
+const popupModalStyle = {
   modal: {
     borderRadius: "6px",
     width: "100%",
@@ -66,11 +66,7 @@ const virtualLoginModalStyle = {
     marginRight: "auto",
   },
   //DESKTOP VIEW
-  "@media screen and (min-width: 960px)": {
-    modal: {
-      borderRadius: "6px",
-    },
-  },
+  "@media screen and (min-width: 960px)": {},
 };
 
-export default virtualLoginModalStyle;
+export default popupModalStyle;

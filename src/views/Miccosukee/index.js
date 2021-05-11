@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -36,7 +36,7 @@ const useStyles = makeStyles(styles);
 
 const Miccosukee = () => {
   const classes = useStyles();
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
   let location = useLocation();
 
   const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
