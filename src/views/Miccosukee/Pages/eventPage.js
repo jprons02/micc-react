@@ -13,7 +13,6 @@ import Button from "components/CustomButtons/Button.js";
 
 // Styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
-import { isTemplateExpression } from "typescript";
 
 const useStyles = makeStyles(styles);
 

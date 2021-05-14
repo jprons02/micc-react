@@ -7,6 +7,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 //import DialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
+import PhoneIcon from "@material-ui/icons/Phone";
+import MapIcon from "@material-ui/icons/Map";
 // @material-ui/icons
 import Close from "@material-ui/icons/Close";
 // core components
@@ -50,10 +52,37 @@ const ContactModal = (props) => {
         >
           <Close className={classes.modalClose} />
         </IconButton>
-        <div style={{ margin: "10px 0" }}>
-          <Typography variant="h5" component="h2">
+        <div style={{ margin: "10px 0 0 0" }}>
+          <Typography
+            style={{ marginBottom: "10px" }}
+            variant="h5"
+            component="h2"
+          >
             Contact Us
           </Typography>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              marginBottom: "10px",
+            }}
+          >
+            <PhoneIcon />
+            &nbsp;<span style={{ fontSize: "14px" }}>{props.entity.phone}</span>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <MapIcon />
+            <span style={{ fontSize: "14px" }}>
+              &nbsp;{props.entity.address}
+            </span>
+          </div>
         </div>
       </DialogTitle>
       <DialogContent
@@ -63,7 +92,7 @@ const ContactModal = (props) => {
         id="modal-slide-description"
         className={classes.modalBody}
       >
-        <Contact entity={props.entity} closeModal={props.closeModal} />
+        <Contact entity={props.entity.name} closeModal={props.closeModal} />
       </DialogContent>
     </Dialog>
   );

@@ -54,7 +54,7 @@ const sliderContent = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     button: {
       text: "SEE PROMOS",
-      link: "/mrg/events",
+      link: "/mrg/promotions",
     },
   },
   {

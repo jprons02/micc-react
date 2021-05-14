@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Footer from "components/Footer/Footer.js";
 import { mrgColor } from "themes/colors.js";
+import { mrgBusinessInfo } from "assets/business_info/genericInfo.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 const MrgFooter = () => {
@@ -28,7 +29,7 @@ const MrgFooter = () => {
         },
         {
           linkText: "Covid-19",
-          linkTo: "#",
+          linkTo: "/mrg/covid-19",
         },
         {
           linkText: "Careers",
@@ -80,11 +81,15 @@ const MrgFooter = () => {
 
   return (
     <React.Fragment>
-      <Footer footerMenuItems={footerArray} color={mrgColor} signup="mrg" />
+      <Footer
+        footerMenuItems={footerArray}
+        color={mrgColor}
+        signup={mrgBusinessInfo.name}
+      />
       <CustomContactModal
         closeModal={closeContactModal}
         showModal={showContact}
-        entity="mrg"
+        entity={mrgBusinessInfo}
       />
     </React.Fragment>
   );

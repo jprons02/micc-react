@@ -34,6 +34,7 @@ import CypressLounge from "views/MRG/Pages/diningNightlife/cypress-lounge/cypres
 import MartiniBar from "views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js";
 import MrgEvents from "views/MRG/Pages/events/mrgEvents.js";
 import MrgEventPage from "views/MRG/Pages/events/mrgEventPage";
+import MrgCovidPage from "views/MRG/Pages/business_info/mrgCovidPage.js";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();
@@ -126,6 +127,11 @@ export default function Miccosukee(props) {
               exact
               path={`${match.path}/events/:eventId`}
               component={MrgEventPage}
+            />
+            <Route
+              exact
+              path={`${match.path}/covid-19`}
+              component={MrgCovidPage}
             />
           </Switch>
           <MrgFooter />

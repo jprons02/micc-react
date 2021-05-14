@@ -6,7 +6,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import { Icon } from "@material-ui/core";
 
 // Context
-import {BookRoomContext} from 'contexts/BookRoomContext.js';
+import { BookRoomContext } from "contexts/BookRoomContext.js";
 
 //testing
 import styles from "assets/jss/material-kit-react/views/mrg";
@@ -14,7 +14,7 @@ import styles from "assets/jss/material-kit-react/views/mrg";
 import { makeStyles } from "@material-ui/core/styles";
 // theme color
 import { mrgColor } from "themes/colors.js";
-import mrgLogo from "assets/img/mrg/MRG_Logo.svg";
+import mrgLogo from "assets/logos/MiccosukeeResort&Gaming.svg";
 
 import BookRoomModal from "components/CustomModal/CustomBookRoomModal/CustomBookRoomModal.js";
 

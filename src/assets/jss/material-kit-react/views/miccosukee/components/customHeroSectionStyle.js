@@ -15,9 +15,11 @@ const customHeroSectionStyle = {
   },
   subHeader: {
     fontSize: "16px",
+    margin: "auto",
+    width: "100%",
   },
   customButton: {
-    marginTop: "10px",
+    marginTop: "20px",
     width: "70%",
     color: "white",
     borderColor: "white",
@@ -55,6 +57,7 @@ const customHeroSectionStyle = {
     },
     subHeader: {
       fontSize: "20px",
+      width: "60%",
     },
     customButton: {
       marginTop: "20px",

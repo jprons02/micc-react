@@ -62,8 +62,8 @@ const GamingGolf = () => {
       buttonTwo: {
         text: language ? "WEBSITE" : "Página web",
         color: "success",
-        usesRouter: false,
-        link: "https://google.com",
+        usesRouter: true,
+        link: "/golf",
       },
       hours: language
         ? "Today's Hours: 9:00 AM - 5:00 PM"
