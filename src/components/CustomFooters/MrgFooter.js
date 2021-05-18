@@ -1,22 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Footer from "components/Footer/Footer.js";
 import { mrgColor } from "themes/colors.js";
 import { mrgBusinessInfo } from "assets/business_info/genericInfo.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
-const MrgFooter = () => {
-  const [showContact, setShowContact] = useState(false);
+// Context
+import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 
+const MrgFooter = () => {
+  const [showContactModal, setShowContactModal] = useContext(
+    ContactModalContext
+  );
+
+  // close contact modal on mount
   useEffect(() => {
-    closeContactModal();
+    closeModal(setShowContactModal);
   }, []);
 
-  const openContactModal = () => {
-    setShowContact(true);
+  const openModal = (setState) => {
+    setState(true);
   };
 
-  const closeContactModal = () => {
-    setShowContact(false);
+  const closeModal = (setState) => {
+    setState(false);
   };
 
   const footerArray = [
@@ -42,8 +48,8 @@ const MrgFooter = () => {
       subMenu: [
         {
           linkText: "Contact",
-          linkTo: "#",
-          clickFunction: () => openContactModal(),
+          linkTo: "#contact",
+          clickFunction: () => openModal(setShowContactModal),
         },
         {
           externalLink: true,
@@ -85,11 +91,6 @@ const MrgFooter = () => {
         footerMenuItems={footerArray}
         color={mrgColor}
         signup={mrgBusinessInfo.name}
-      />
-      <CustomContactModal
-        closeModal={closeContactModal}
-        showModal={showContact}
-        entity={mrgBusinessInfo}
       />
     </React.Fragment>
   );

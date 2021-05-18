@@ -12,7 +12,7 @@ import MapIcon from "@material-ui/icons/Map";
 // @material-ui/icons
 import Close from "@material-ui/icons/Close";
 // core components
-import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
+import modalStyle from "assets/jss/material-kit-react/contactModal.js";
 // @material-ui/icons
 import Typography from "@material-ui/core/Typography";
 
@@ -69,7 +69,8 @@ const ContactModal = (props) => {
             }}
           >
             <PhoneIcon />
-            &nbsp;<span style={{ fontSize: "14px" }}>{props.entity.phone}</span>
+            &nbsp;
+            <span className={classes.phoneText}>{props.entity.phone}</span>
           </div>
           <div
             style={{
@@ -79,7 +80,7 @@ const ContactModal = (props) => {
             }}
           >
             <MapIcon />
-            <span style={{ fontSize: "14px" }}>
+            <span className={classes.mapText}>
               &nbsp;{props.entity.address}
             </span>
           </div>

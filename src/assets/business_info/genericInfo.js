@@ -13,3 +13,17 @@ export const golfBusinessInfo = {
   email: "",
   address: "6401 Kendale Lakes Dr, Miami, FL 33183",
 };
+
+export const villageBusinessInfo = {
+  name: "village",
+  phone: "305-480-1924",
+  email: "",
+  address: "Mile Marker 36, US-41, Miami, FL 33194",
+};
+
+export const airboatsBusinessInfo = {
+  name: "village",
+  phone: "305-480-1924",
+  email: "",
+  address: "Mile Marker 36, US-41, Miami, FL 33194",
+};

@@ -12,9 +12,14 @@ import Button from "@material-ui/core/Button";
 
 import buttonStyle from "assets/jss/material-kit-react/components/buttonStyle.js";
 
+// Styles
+import miccosukeeCardstyles from "assets/jss/material-kit-react/components/customCardStyle/customMiccosukeeCardStyle.js";
+
 const makeComponentStyles = makeStyles(() => ({
   ...buttonStyle,
 }));
+
+const makeMiccosukeeCardStyles = makeStyles(miccosukeeCardstyles);
 
 const RegularButton = React.forwardRef((props, ref) => {
   const {
@@ -29,10 +34,12 @@ const RegularButton = React.forwardRef((props, ref) => {
     link,
     justIcon,
     className,
+    customClassName,
     ...rest
   } = props;
 
   const classes = makeComponentStyles();
+  const miccosukeeCardClasses = makeMiccosukeeCardStyles();
 
   const btnClasses = classNames({
     [classes.button]: true,
@@ -47,6 +54,30 @@ const RegularButton = React.forwardRef((props, ref) => {
     [classes.justIcon]: justIcon,
     [className]: className,
   });
+
+  // Used to simulate theme for MiccosukeeCard.js
+  const getCustomClass = () => {
+    if (props.customClassName) {
+      switch (props.customClassName) {
+        case "mrg":
+          return miccosukeeCardClasses.mrgButton;
+        case "golf":
+          return miccosukeeCardClasses.golfButton;
+        case "village":
+          return miccosukeeCardClasses.villageButton;
+        case "airboats":
+          return miccosukeeCardClasses.airboatsButton;
+        case "history":
+          return miccosukeeCardClasses.historyButton;
+        case "administration":
+          return miccosukeeCardClasses.administrationButton;
+        default:
+          return "";
+      }
+    } else {
+      return null;
+    }
+  };
 
   const renderButton = () => {
     if (props.usetheme === "contained") {
@@ -75,7 +106,11 @@ const RegularButton = React.forwardRef((props, ref) => {
       );
     } else {
       return (
-        <Button {...rest} ref={ref} className={btnClasses}>
+        <Button
+          {...rest}
+          ref={ref}
+          className={classNames(getCustomClass(), btnClasses)}
+        >
           {children}
         </Button>
       );

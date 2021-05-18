@@ -4,6 +4,7 @@ import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
 // Context
 import { TeeTimeProvider } from "contexts/TeeTimeContext.js";
 import { PopupContext } from "contexts/PopupContext.js";
+import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 
 // Theme
 import { theme } from "../../themes";
@@ -13,6 +14,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import GolfHeader from "components/CustomHeaders/GolfHeader.js";
 import GolfFooter from "components/CustomFooters/GolfFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
+import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 // Pages
 import Home from "views/Golf/Pages/home/home.js";
@@ -22,11 +24,17 @@ import GolfEvents from "views/Golf/Pages/events/golfEvents.js";
 import GolfEventPage from "views/Golf/Pages/events/golfEventPage";
 import GolfCovidPage from "views/Golf/Pages/business_info/golfCovidPage.js";
 
+// Business info
+import { golfBusinessInfo } from "assets/business_info/genericInfo.js";
+
 export default function Miccosukee(props) {
   let match = useRouteMatch();
   let location = useLocation();
 
   const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  const [showContactModal, setShowContactModal] = useContext(
+    ContactModalContext
+  );
 
   // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {
@@ -36,6 +44,19 @@ export default function Miccosukee(props) {
       }, 700);
     }
   }, []);
+
+  // Close contact modal on mount
+  useEffect(() => {
+    closeModal(setShowContactModal);
+  }, []);
+
+  const openModal = (setState) => {
+    setState(true);
+  };
+
+  const closeModal = (setState) => {
+    setState(false);
+  };
 
   return (
     <ThemeProvider theme={theme("golf")}>
@@ -62,7 +83,12 @@ export default function Miccosukee(props) {
           <PopupModal
             website="mrg"
             showModal={showPopupModal}
-            closeModal={() => setShowPopupModal(false)}
+            closeModal={() => closeModal(setShowPopupModal)}
+          />
+          <CustomContactModal
+            showModal={showContactModal}
+            closeModal={() => closeModal(setShowContactModal)}
+            entity={golfBusinessInfo}
           />
         </div>
       </TeeTimeProvider>

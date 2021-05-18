@@ -13,6 +13,7 @@ import { LanguageProvider } from "contexts/languageContext.js";
 import { PopupProvider } from "contexts/PopupContext.js";
 import { AlertContext } from "contexts/AlertContext.js";
 import { ContactFormProvider } from "contexts/ContactFormContext.js";
+import { ContactModalProvider } from "contexts/ContactFormModalContext.js";
 
 // Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
@@ -22,6 +23,7 @@ import Check from "@material-ui/icons/Check";
 import Miccosukee from "views/Miccosukee";
 import MRG from "views/MRG";
 import Golf from "views/Golf";
+import Village from "views/Village";
 import AID from "views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js";
 
 // my components
@@ -88,21 +90,24 @@ const App = () => {
   return (
     <LanguageProvider>
       <PopupProvider>
-        <ContactFormProvider>
-          <Router history={hist}>
-            <Switch>
-              <Route exact path="/landing-page" component={LandingPage} />
-              <Route exact path="/profile-page" component={ProfilePage} />
-              <Route exact path="/login-page" component={LoginPage} />
-              <Route exact path="/components" component={Components} />
-              <Route exact path={"/virtual-event/aid"} component={AID} />
-              <Route path="/mrg" component={MRG} />
-              <Route path="/golf" component={Golf} />
-              <Route path="/" component={Miccosukee} />
-            </Switch>
-          </Router>
-          {renderSnackbar()}
-        </ContactFormProvider>
+        <ContactModalProvider>
+          <ContactFormProvider>
+            <Router history={hist}>
+              <Switch>
+                <Route exact path="/landing-page" component={LandingPage} />
+                <Route exact path="/profile-page" component={ProfilePage} />
+                <Route exact path="/login-page" component={LoginPage} />
+                <Route exact path="/components" component={Components} />
+                <Route exact path={"/virtual-event/aid"} component={AID} />
+                <Route path="/mrg" component={MRG} />
+                <Route path="/golf" component={Golf} />
+                <Route path="/village" component={Village} />
+                <Route path="/" component={Miccosukee} />
+              </Switch>
+            </Router>
+            {renderSnackbar()}
+          </ContactFormProvider>
+        </ContactModalProvider>
       </PopupProvider>
     </LanguageProvider>
   );

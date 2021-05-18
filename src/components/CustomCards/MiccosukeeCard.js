@@ -12,20 +12,32 @@ import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
 import Button from "components/CustomButtons/Button.js";
 
+import { makeStyles } from "@material-ui/core/styles";
+// Styles
+import styles from "assets/jss/material-kit-react/components/customCardStyle/customMiccosukeeCardStyle.js";
+
+import { mrgColor } from "themes/colors.js";
+
+const useStyles = makeStyles(styles);
+
 const MiccosukeeCard = (props) => {
+  const classes = useStyles();
+
   const renderButtonOne = () => {
+    const buttonOneStyle =
+      props.buttonTwo !== "" ? { width: "49%" } : { width: "100%" };
     //if button one is a function, it contains a routing Link component
     if (props.buttonOne.usesRouter) {
       return (
         <Link to={props.buttonOne.link}>
-          <Button style={{ width: "49%" }} color={props.buttonOne.color}>
+          <Button customClassName={props.theme} style={buttonOneStyle}>
             {props.buttonOne.text}
           </Button>
         </Link>
       );
     } else {
       return (
-        <Button style={{ width: "49%" }} color={props.buttonOne.color}>
+        <Button customClassName={props.theme} style={buttonOneStyle}>
           {props.buttonOne.text}
         </Button>
       );
@@ -37,14 +49,18 @@ const MiccosukeeCard = (props) => {
     if (props.buttonTwo.usesRouter) {
       return (
         <Link to={props.buttonTwo.link}>
-          <Button style={{ width: "49%" }} color={props.buttonTwo.color}>
+          <Button
+            customClassName={props.theme}
+            className={classes.button}
+            style={{ width: "49%" }}
+          >
             {props.buttonTwo.text}
           </Button>
         </Link>
       );
     } else {
       return (
-        <Button style={{ width: "49%" }} color={props.buttonTwo.color}>
+        <Button customClassName={props.theme} style={{ width: "49%" }}>
           {props.buttonTwo.text}
         </Button>
       );
@@ -66,9 +82,15 @@ const MiccosukeeCard = (props) => {
       <CardBody>
         <h4 className={cardTitle}>{props.title}</h4>
         <p>{props.description}</p>
-        <div style={{ textAlign: "center" }}>
+        <div
+          style={
+            props.buttonTwo !== ""
+              ? { textAlign: "center" }
+              : { textAlign: "left" }
+          }
+        >
           {renderButtonOne()}
-          {renderButtonTwo()}
+          {props.buttonTwo !== "" ? renderButtonTwo() : null}
         </div>
       </CardBody>
       <CardFooter>

@@ -66,6 +66,12 @@ const InfoPage = ({ history, badgeColor, entityMargin }) => {
       case "/golf/covid-19":
         setCategory("Golf");
         break;
+      case "/village/covid-19":
+        setCategory("Village");
+        break;
+      case "/airboats/covid-19":
+        setCategory("Airboats");
+        break;
     }
   }, []);
 

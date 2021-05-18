@@ -1,13 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import Footer from "components/Footer/Footer.js";
-import { golfColor } from "themes/colors.js";
-import { golfBusinessInfo } from "assets/business_info/genericInfo.js";
+import { villageColor } from "themes/colors.js";
+import { villageBusinessInfo } from "assets/business_info/genericInfo.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 
-const GolfFooter = () => {
+const VillageFooter = () => {
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -35,7 +35,7 @@ const GolfFooter = () => {
         },
         {
           linkText: "Covid-19",
-          linkTo: "/golf/covid-19",
+          linkTo: "/village/covid-19",
         },
         {
           linkText: "Careers",
@@ -48,13 +48,13 @@ const GolfFooter = () => {
       subMenu: [
         {
           linkText: "Contact",
-          linkTo: "#",
+          //linkTo: "#contact",
           clickFunction: () => openModal(setShowContactModal),
         },
         {
           externalLink: true,
           linkText: "Directions",
-          linkTo: "https://goo.gl/maps/SxyAMrs1jSX7MrVK8",
+          linkTo: "https://goo.gl/maps/1qXGBd2L4s9BDe5h7",
         },
       ],
     },
@@ -64,17 +64,17 @@ const GolfFooter = () => {
         {
           externalLink: true,
           linkText: "Facebook",
-          linkTo: "#",
+          linkTo: "https://facebook.com",
         },
         {
           externalLink: true,
           linkText: "Instagram",
-          linkTo: "#",
+          linkTo: "https://instagram.com",
         },
         {
           externalLink: true,
           linkText: "Twitter",
-          linkTo: "#",
+          linkTo: "https://twitter.com",
         },
       ],
     },
@@ -89,11 +89,11 @@ const GolfFooter = () => {
     <React.Fragment>
       <Footer
         footerMenuItems={footerArray}
-        color={golfColor}
-        signup={golfBusinessInfo.name}
+        color={villageColor}
+        signup={villageBusinessInfo.name}
       />
     </React.Fragment>
   );
 };
 
-export default GolfFooter;
+export default VillageFooter;

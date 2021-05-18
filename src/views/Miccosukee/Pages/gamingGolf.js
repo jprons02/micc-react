@@ -24,19 +24,13 @@ const GamingGolf = () => {
     {
       id: 1,
       title: language ? "Resort & Gaming" : "Resort & Gaming",
+      theme: "mrg",
       description: language
         ? "With supporting text below as a natural lead-in to additional content."
         : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
       imgSrc: mrgImg,
       buttonOne: {
-        text: language ? "CONTACT" : "Contacto",
-        color: "primary",
-        usesRouter: false,
-        link: "https://google.com",
-      },
-      buttonTwo: {
         text: language ? "WEBSITE" : "Página web",
-        color: "primary",
         usesRouter: true,
         link: `/mrg`,
       },
@@ -49,19 +43,13 @@ const GamingGolf = () => {
     {
       id: 2,
       title: language ? "Golf & Country Club" : "Golf & Country Club",
+      theme: "golf",
       description: language
         ? "With supporting text below as a natural lead-in to additional content."
         : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
       imgSrc: golfImg,
       buttonOne: {
-        text: language ? "CONTACT" : "Contacto",
-        color: "success",
-        usesRouter: false,
-        link: "https://google.com",
-      },
-      buttonTwo: {
         text: language ? "WEBSITE" : "Página web",
-        color: "success",
         usesRouter: true,
         link: "/golf",
       },
@@ -79,10 +67,11 @@ const GamingGolf = () => {
         <GridItem key={card.id} sm={12} md={6} className={classes.gridItem}>
           <MiccosukeeCard
             title={card.title}
+            theme={card.theme}
             description={card.description}
             imgSrc={card.imgSrc}
             buttonOne={card.buttonOne}
-            buttonTwo={card.buttonTwo}
+            buttonTwo={card.buttonTwo ? card.buttonTwo : ""}
             hours={card.hours}
             phone={card.phone}
             address={card.address}

@@ -21,15 +21,20 @@ export default function SimpleExpansionPanel(props) {
       return <ListItem>Item not available.</ListItem>;
     } else {
       return props.subMenu.map((item) => {
-        return (
-          <ListItem key={item.linkText}>
-            {item.externalLink ? (
+        const submenuHelper = () => {
+          // if link is external, send user to another tab
+          if (item.externalLink) {
+            return (
               <a href={item.linkTo} target="_blank">
                 <Typography className={classes.expansionPanelDetailText}>
                   {item.linkText}
                 </Typography>
               </a>
-            ) : (
+            );
+          }
+          // if link is internal, send user to link
+          if (item.linkTo) {
+            return (
               <Link to={item.linkTo}>
                 <Typography
                   onClick={item.clickFunction ? item.clickFunction : null}
@@ -38,9 +43,22 @@ export default function SimpleExpansionPanel(props) {
                   {item.linkText}
                 </Typography>
               </Link>
-            )}
-          </ListItem>
-        );
+            );
+            // if no linkto, then it is a click function. example) contact modal.
+          } else {
+            return (
+              <Typography
+                onClick={item.clickFunction ? item.clickFunction : null}
+                className={classes.expansionPanelDetailText}
+                style={{ cursor: "pointer" }}
+              >
+                {item.linkText}
+              </Typography>
+            );
+          }
+        };
+
+        return <ListItem key={item.linkText}>{submenuHelper()}</ListItem>;
       });
     }
   };
