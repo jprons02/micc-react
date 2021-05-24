@@ -22,6 +22,12 @@ import image4 from "assets/img/mrg/amenities/salon-spa/Pedicure_1024x642.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3, image4];
@@ -46,10 +52,7 @@ const SalonSpa = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Pa-Hay Okee Salon &amp; Spa</h2>
-              <h6>
-                Monday – Saturday, 10 A.M. – 8 P.M. <br />
-                Sunday, 10 A.M. – 6 P.M.
-              </h6>
+              {renderPoiHours(mrgHours.poi.salon)}
               <p>
                 Call{" "}
                 <a href="tel:+13059252557">

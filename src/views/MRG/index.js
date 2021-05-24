@@ -39,7 +39,7 @@ import MrgEventPage from "views/MRG/Pages/events/mrgEventPage";
 import MrgCovidPage from "views/MRG/Pages/business_info/mrgCovidPage.js";
 
 // Business info
-import { mrgBusinessInfo } from "assets/business_info/genericInfo.js";
+import { mrgBusinessInfo } from "business_info/genericInfo.js";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();

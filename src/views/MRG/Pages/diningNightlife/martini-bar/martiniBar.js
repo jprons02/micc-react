@@ -19,6 +19,12 @@ import image1 from "assets/img/mrg/dining/martini-bar/MartiniBar_01.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1];
@@ -43,13 +49,7 @@ const MartiniBar = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Martini Bar</h2>
-              <h6>
-                Monday – Thursday, 4:00 P.M. - 12:00 A.M.
-                <br />
-                Friday - Saturday, 11:00 A.M. to 2:00 A.M.
-                <br />
-                Sunday: 9:00 A.M. - 12:00 A.M.
-              </h6>
+              {renderPoiHours(mrgHours.poi.martiniBar)}
               <p>
                 Classic cocktails in a tropical setting. Chic and comfortable,
                 the Martini Bar is the perfect place to unwind and enjoy a

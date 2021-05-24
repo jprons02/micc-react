@@ -1,7 +1,118 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+
+// Core Components
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Button from "components/CustomButtons/Button.js";
+
+// My Custom Components
+import RaisedContainer from "components/CustomSections/RaisedContainer.js";
+import HeroSection from "components/CustomSections/HeroSection.js";
+import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import CustomFoodMenuModal from "components/CustomModal/CustomFoodMenuModal/CustomFoodMenuModal.js";
+
+// Images
+import bgImage from "assets/img/bg3.jpg";
+import image1 from "assets/img/village/OurLittleShack1.jpg";
+import image2 from "assets/img/village/OurLittleShack2.jpg";
+import image3 from "assets/img/village/OurLittleShack3.jpg";
+
+// Styling
+import { makeStyles } from "@material-ui/core/styles";
+import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
+// Business info
+import { villageHours } from "business_info/hours.js";
+import { ourLittleShackMenu } from "business_info/foodMenu.js";
+
+// Context
+import { FoodMenuContext } from "contexts/FoodMenuContext.js";
+
+const useStyles = makeStyles(styles);
+
+const imageArray = [image1, image2, image3];
+
+const sliderContent = [
+  {
+    id: 1,
+    bgImage: bgImage,
+    header: "",
+    subHeader: "",
+  },
+];
 
 const OurLittleShack = () => {
-  return <div>Our Little Shack</div>;
+  const classes = useStyles();
+
+  const [showFoodMenu, setShowFoodMenu] = useContext(FoodMenuContext);
+
+  // Close contact modal on mount
+  useEffect(() => {
+    closeModal(setShowFoodMenu);
+  }, []);
+
+  const openModal = (setState) => {
+    setState(true);
+  };
+
+  const closeModal = (setState) => {
+    setState(false);
+  };
+
+  return (
+    <React.Fragment>
+      <HeroSection sliderContent={sliderContent} />
+      <RaisedContainer>
+        <GridContainer>
+          <GridItem md={7}>
+            <div className={classes.leftTextArea}>
+              <h2>Our Little Shack</h2>
+              {renderPoiHours(villageHours.poi.ourLittleShack)}
+              <p>
+                The Village’s casual eatery has something for everybody!
+                Burgers, fries, alligator bites, shakes and more! Our Little
+                Shack is here for you.
+              </p>
+              <div style={{ marginBottom: "5px" }}>
+                <i
+                  style={{ marginRight: "8px" }}
+                  className="fab fa-cc-visa fa-lg"
+                ></i>
+                <i
+                  style={{ marginRight: "8px" }}
+                  className="fab fa-cc-mastercard fa-lg"
+                ></i>
+                <i
+                  style={{ marginRight: "8px" }}
+                  className="fab fa-cc-amex fa-lg"
+                ></i>
+              </div>
+              <Button
+                onClick={() => openModal(setShowFoodMenu)}
+                usetheme="contained"
+              >
+                Menu
+              </Button>
+            </div>
+          </GridItem>
+          <GridItem md={5}>
+            <div className={classes.imageArea}>
+              <CustomImageSlider images={imageArray} />
+            </div>
+          </GridItem>
+        </GridContainer>
+      </RaisedContainer>
+      <CustomFoodMenuModal
+        showModal={showFoodMenu}
+        closeModal={() => closeModal(setShowFoodMenu)}
+        menu={ourLittleShackMenu}
+        title="Our Little Shack Menu"
+      />
+    </React.Fragment>
+  );
 };
 
 export default OurLittleShack;

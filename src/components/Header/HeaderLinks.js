@@ -112,7 +112,20 @@ export default function HeaderLinks(props) {
             />
           </ListItem>
         );
-        // if standard menu item
+        // if standard menu item but has click function
+      } else if (menuItem.link === "") {
+        return (
+          <ListItem key={menuItem.text} className={classes.listItem}>
+            <Button
+              onClick={menuItem.clickFunction ? menuItem.clickFunction : null}
+              className={classes.navLink}
+              color={"transparent" || menuItem.color}
+            >
+              {menuItem.icon ? menuItem.icon() : ""}
+              {menuItem.text}
+            </Button>
+          </ListItem>
+        );
       } else {
         return (
           <ListItem key={menuItem.text} className={classes.listItem}>

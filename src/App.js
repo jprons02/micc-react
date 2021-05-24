@@ -14,6 +14,7 @@ import { PopupProvider } from "contexts/PopupContext.js";
 import { AlertContext } from "contexts/AlertContext.js";
 import { ContactFormProvider } from "contexts/ContactFormContext.js";
 import { ContactModalProvider } from "contexts/ContactFormModalContext.js";
+import { FoodMenuProvider } from "contexts/FoodMenuContext.js";
 
 // Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
@@ -92,20 +93,22 @@ const App = () => {
       <PopupProvider>
         <ContactModalProvider>
           <ContactFormProvider>
-            <Router history={hist}>
-              <Switch>
-                <Route exact path="/landing-page" component={LandingPage} />
-                <Route exact path="/profile-page" component={ProfilePage} />
-                <Route exact path="/login-page" component={LoginPage} />
-                <Route exact path="/components" component={Components} />
-                <Route exact path={"/virtual-event/aid"} component={AID} />
-                <Route path="/mrg" component={MRG} />
-                <Route path="/golf" component={Golf} />
-                <Route path="/village" component={Village} />
-                <Route path="/" component={Miccosukee} />
-              </Switch>
-            </Router>
-            {renderSnackbar()}
+            <FoodMenuProvider>
+              <Router history={hist}>
+                <Switch>
+                  <Route exact path="/landing-page" component={LandingPage} />
+                  <Route exact path="/profile-page" component={ProfilePage} />
+                  <Route exact path="/login-page" component={LoginPage} />
+                  <Route exact path="/components" component={Components} />
+                  <Route exact path={"/virtual-event/aid"} component={AID} />
+                  <Route path="/mrg" component={MRG} />
+                  <Route path="/golf" component={Golf} />
+                  <Route path="/village" component={Village} />
+                  <Route path="/" component={Miccosukee} />
+                </Switch>
+              </Router>
+              {renderSnackbar()}
+            </FoodMenuProvider>
           </ContactFormProvider>
         </ContactModalProvider>
       </PopupProvider>

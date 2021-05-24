@@ -20,10 +20,10 @@ import { setEstTime } from "services/setEstTime.js";
 import { urlify } from "services/urlify.js";
 
 // Covid content
-import MrgCovidInfo from "assets/business_info/covid-19/mrgCovidInfo.js";
-import GolfCovidInfo from "assets/business_info/covid-19/golfCovidInfo.js";
-import AirboatsCovidInfo from "assets/business_info/covid-19/airboatsCovidInfo.js";
-import VillageCovidInfo from "assets/business_info/covid-19/villageCovidInfo.js";
+import MrgCovidInfo from "business_info/covid-19/mrgCovidInfo.js";
+import GolfCovidInfo from "business_info/covid-19/golfCovidInfo.js";
+import AirboatsCovidInfo from "business_info/covid-19/airboatsCovidInfo.js";
+import VillageCovidInfo from "business_info/covid-19/villageCovidInfo.js";
 
 // Colors
 import { standardLinkColor, errorColor } from "themes/colors.js";

@@ -4,11 +4,11 @@ import React, { useState, createContext } from "react";
 export const ContactModalContext = createContext();
 
 export const ContactModalProvider = (props) => {
-  const [showTeeTimeModal, setShowTeeTimeModal] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
 
   return (
     <ContactModalContext.Provider
-      value={[showTeeTimeModal, setShowTeeTimeModal]}
+      value={[showContactModal, setShowContactModal]}
     >
       {props.children}
     </ContactModalContext.Provider>

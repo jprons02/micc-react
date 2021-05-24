@@ -24,7 +24,12 @@ import image3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
-import { mrgColor } from "themes/colors.js";
+
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
 
 const useStyles = makeStyles(styles);
 
@@ -177,11 +182,7 @@ const Poker = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Poker</h2>
-              <h6>
-                Sunday - Thursday, 12 P.M. - 4 A.M.
-                <br />
-                Friday &amp; Saturday, 24 hours
-              </h6>
+              {renderPoiHours(mrgHours.poi.poker)}
               <p>
                 Our new Poker Game Room is now open! With a whole new look and
                 it being a non-smoking room, it’s the perfect place to come and

@@ -5,18 +5,16 @@ import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import { Icon } from "@material-ui/core";
 
-// my custom components
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
-
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { PricingModalContext } from "contexts/PricingModalContext.js";
 
 // theme color
 import { villageColor } from "themes/colors.js";
 import villageLogo from "assets/logos/MiccosukeeVillage&Airboats.svg";
 
-// business info
-import { villageBusinessInfo } from "assets/business_info/genericInfo.js";
+// Modal
+import VillagePricingModal from "components/CustomModal/PricingModal/VillagePricingModal.js";
 
 const VillageHeader = () => {
   //classes needed for social icon
@@ -24,10 +22,13 @@ const VillageHeader = () => {
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
+  const [showPricingModal, setShowPricingModal] = useContext(
+    PricingModalContext
+  );
 
   // Close contact modal on mount
   useEffect(() => {
-    closeModal(setShowContactModal);
+    closeModal(setShowPricingModal);
   }, []);
 
   const openModal = (setState) => {
@@ -76,6 +77,15 @@ const VillageHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
+      text: "Admission",
+      itemType: "",
+      href: "",
+      target: "",
+      color: "",
+      link: "",
+      clickFunction: () => openModal(setShowPricingModal),
+    },
+    {
       text: "Groups",
       itemType: "action",
       href: "",
@@ -101,6 +111,10 @@ const VillageHeader = () => {
           height: 200,
           color: "white",
         }}
+      />
+      <VillagePricingModal
+        showModal={showPricingModal}
+        closeModal={() => closeModal(setShowPricingModal)}
       />
     </React.Fragment>
   );

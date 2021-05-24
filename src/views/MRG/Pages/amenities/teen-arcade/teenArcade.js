@@ -20,6 +20,12 @@ import image3 from "assets/img/mrg/amenities/teen-arcade/arcade_3.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3];
@@ -44,10 +50,7 @@ const TeenArcade = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Teen Arcade</h2>
-              <h6>
-                Sunday – Thursday, 1:00 P.M. - 11:00 P.M. <br />
-                Friday – Saturday, 1:00 P.M. to 12:00 A.M.
-              </h6>
+              {renderPoiHours(mrgHours.poi.teenArcade)}
               <p>
                 Our state-of-the-art Teen Arcade is our cool, “big kids” area
                 featuring the hottest games on the planet. Clean, safe and with

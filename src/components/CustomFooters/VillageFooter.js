@@ -1,8 +1,14 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+
+// Custom Component
 import Footer from "components/Footer/Footer.js";
+
+// Theme
 import { villageColor } from "themes/colors.js";
-import { villageBusinessInfo } from "assets/business_info/genericInfo.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
+
+// Business Info
+import { villageBusinessInfo } from "business_info/genericInfo.js";
+import { villageSocialMedia } from "business_info/socialMedia.js";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
@@ -64,17 +70,17 @@ const VillageFooter = () => {
         {
           externalLink: true,
           linkText: "Facebook",
-          linkTo: "https://facebook.com",
+          linkTo: villageSocialMedia.facebook,
         },
         {
           externalLink: true,
           linkText: "Instagram",
-          linkTo: "https://instagram.com",
+          linkTo: villageSocialMedia.instagram,
         },
         {
           externalLink: true,
           linkText: "Twitter",
-          linkTo: "https://twitter.com",
+          linkTo: villageSocialMedia.twitter,
         },
       ],
     },

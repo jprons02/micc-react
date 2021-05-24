@@ -21,6 +21,12 @@ import image3 from "assets/img/mrg/dining/cafe-hammock/CafeHammock_SteakLobster.
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3];
@@ -45,10 +51,7 @@ const CafeHammock = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Café Hammock</h2>
-              <h6>
-                Sunday – Thursday, 11:00 A.M. - Midnight <br />
-                Friday - Saturday, Noon - 2:00 A.M. <br />
-              </h6>
+              {renderPoiHours(mrgHours.poi.hammock)}
               <p>
                 Home of the world famous Florida Lobster and Steak special, Café
                 Hammock offers local and continental favorites. From Bahamian

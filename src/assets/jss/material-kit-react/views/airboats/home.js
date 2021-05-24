@@ -1,4 +1,4 @@
-import { villageColor } from "themes/colors.js";
+import { airboatsColor } from "themes/colors.js";
 
 const homeStyle = {
   welcomeContainer: {
@@ -14,7 +14,7 @@ const homeStyle = {
     fontSize: "14px",
   },
   hr: {
-    borderColor: villageColor[500],
+    borderColor: airboatsColor[500],
     width: "60px",
     marginTop: "20px",
   },
@@ -25,10 +25,6 @@ const homeStyle = {
     marginRight: "auto",
     textAlign: "left",
   },
-  iconSection: {
-    textAlign: "center",
-    paddingBottom: "30px",
-  },
   icons: {
     fontSize: "60px",
   },
@@ -36,16 +32,6 @@ const homeStyle = {
     fontSize: "18px",
     lineHeight: "1.5",
     padding: "5px 10px",
-  },
-  section: {
-    marginTop: "40px",
-  },
-  sectionHeader: {},
-  poiTitle: {
-    textTransform: "uppercase",
-    fontSize: "12px",
-    fontWeight: "600",
-    marginBottom: "10px",
   },
   //DESKTOP VIEW
   "@media screen and (min-width: 960px)": {
@@ -57,10 +43,6 @@ const homeStyle = {
       width: "900px",
       margin: "auto",
     },
-    section: {
-      marginTop: "40px",
-    },
-    sectionHeader: {},
   },
 };
 

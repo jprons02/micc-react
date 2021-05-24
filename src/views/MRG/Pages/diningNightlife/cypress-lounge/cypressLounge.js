@@ -20,6 +20,12 @@ import image2 from "assets/img/mrg/dining/cypress-lounge/cypress_02.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2];
@@ -44,7 +50,7 @@ const CypressLounge = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Cypress Lounge</h2>
-              <h6>Open 24 hours, seven days a week</h6>
+              {renderPoiHours(mrgHours.poi.cypressLounge)}
               <p>
                 The Cypress Lounge is home to daily beer specials and Monday
                 Night Football, caliente Miami HEAT action and more! Enjoy

@@ -21,6 +21,12 @@ import image5 from "assets/img/mrg/amenities/pool-gym/courtyard.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3, image4, image5];
@@ -45,7 +51,7 @@ const PoolGym = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Pool &amp; Fitness Center</h2>
-              <h6>Daily, 7:00 a.m. – 11:00 p.m.</h6>
+              {renderPoiHours(mrgHours.poi.poolGym)}
               <p>
                 Cool off in our indoor pool or take a relaxing dip in our
                 jacuzzi. Maybe unwind in our sauna. Enjoy South Florida’s

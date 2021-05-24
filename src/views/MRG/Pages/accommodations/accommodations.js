@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 
 // Core Components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -22,8 +22,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
 // Context
-import {BookRoomContext} from 'contexts/BookRoomContext.js';
+import { BookRoomContext } from "contexts/BookRoomContext.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
 
 const useStyles = makeStyles(styles);
 
@@ -43,21 +48,29 @@ const Accommodations = () => {
 
   const [showBookRoomModal, setShowBookRoomModal] = useContext(BookRoomContext);
 
-
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
-      <GridContainer>
+        <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Accommodations</h2>
-              <h6>
-                24 hours, 7 days<br />
-              </h6>
-              <p>Standing at the edge of the magnificent Florida Everglades, the Resort boasts rooms designed with comfort as the number one priority as well as amazing views of the surrounding ecosystem.</p>
-              <p>In addition to specific room amenities, all of our rooms conveniently feature Wi- Fi, premium cable programming, pay-per-view, in-room safe, flat screen TVs and a lot more.</p>
-              <p>Executive and Deluxe-level rooms are available with upgraded amenities and services.</p>
+              {renderPoiHours(mrgHours.poi.accommodations)}
+              <p>
+                Standing at the edge of the magnificent Florida Everglades, the
+                Resort boasts rooms designed with comfort as the number one
+                priority as well as amazing views of the surrounding ecosystem.
+              </p>
+              <p>
+                In addition to specific room amenities, all of our rooms
+                conveniently feature Wi- Fi, premium cable programming,
+                pay-per-view, in-room safe, flat screen TVs and a lot more.
+              </p>
+              <p>
+                Executive and Deluxe-level rooms are available with upgraded
+                amenities and services.
+              </p>
               <Button
                 onClick={() => setShowBookRoomModal(true)}
                 usetheme="contained"
@@ -72,8 +85,8 @@ const Accommodations = () => {
             </div>
           </GridItem>
         </GridContainer>
-        </RaisedContainer>
-        </React.Fragment>
+      </RaisedContainer>
+    </React.Fragment>
   );
 };
 

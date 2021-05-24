@@ -1,8 +1,14 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+
+// Custom Component
 import Footer from "components/Footer/Footer.js";
+
+// Theme
 import { golfColor } from "themes/colors.js";
-import { golfBusinessInfo } from "assets/business_info/genericInfo.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
+
+// Business Info
+import { golfBusinessInfo } from "business_info/genericInfo.js";
+import { golfSocialMedia } from "business_info/socialMedia.js";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
@@ -64,17 +70,17 @@ const GolfFooter = () => {
         {
           externalLink: true,
           linkText: "Facebook",
-          linkTo: "#",
+          linkTo: golfSocialMedia.facebook,
         },
         {
           externalLink: true,
           linkText: "Instagram",
-          linkTo: "#",
+          linkTo: golfSocialMedia.instagram,
         },
         {
           externalLink: true,
           linkText: "Twitter",
-          linkTo: "#",
+          linkTo: golfSocialMedia.twitter,
         },
       ],
     },

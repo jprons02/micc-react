@@ -20,12 +20,14 @@ import Home from "views/Village/Pages/Home/home.js";
 import GiftShop from "views/Village/Pages/GiftShop/giftShop.js";
 import Museum from "views/Village/Pages/Museum/museum.js";
 import AlligatorDemos from "views/Village/Pages/AlligatorDemos/alligatorDemos.js";
-import Groups from "views/Village/Pages/Groups/groups";
 import OurLittleShack from "views/Village/Pages/OurLittleShack/ourLittleShack";
 import VillageCovidPage from "views/Village/Pages/business_info/villageCovidPage.js";
 
 // Business info
-import { villageBusinessInfo } from "assets/business_info/genericInfo.js";
+import { villageBusinessInfo } from "business_info/genericInfo.js";
+
+// Context
+import { PricingModalProvider } from "contexts/PricingModalContext.js";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();
@@ -60,41 +62,46 @@ export default function Miccosukee(props) {
 
   return (
     <ThemeProvider theme={theme("village")}>
-      <div>
-        <VillageHeader />
-        <Switch>
-          <Route exact path={`${match.path}/`} component={Home} />
-          <Route exact path={`${match.path}/gift-shop`} component={GiftShop} />
-          <Route exact path={`${match.path}/museum`} component={Museum} />
-          <Route
-            exact
-            path={`${match.path}/alligator-demonstrations`}
-            component={AlligatorDemos}
+      <PricingModalProvider>
+        <div>
+          <VillageHeader />
+          <Switch>
+            <Route exact path={`${match.path}/`} component={Home} />
+            <Route
+              exact
+              path={`${match.path}/gift-shop`}
+              component={GiftShop}
+            />
+            <Route exact path={`${match.path}/museum`} component={Museum} />
+            <Route
+              exact
+              path={`${match.path}/alligator-demonstrations`}
+              component={AlligatorDemos}
+            />
+            <Route
+              exact
+              path={`${match.path}/our-little-shack`}
+              component={OurLittleShack}
+            />
+            <Route
+              exact
+              path={`${match.path}/covid-19`}
+              component={VillageCovidPage}
+            />
+          </Switch>
+          <VillageFooter />
+          <PopupModal
+            website="mrg"
+            showModal={showPopupModal}
+            closeModal={() => closeModal(setShowPopupModal)}
           />
-          <Route
-            exact
-            path={`${match.path}/our-little-shack`}
-            component={OurLittleShack}
+          <CustomContactModal
+            showModal={showContactModal}
+            closeModal={() => closeModal(setShowContactModal)}
+            entity={villageBusinessInfo}
           />
-          <Route exact path={`${match.path}/groups`} component={Groups} />
-          <Route
-            exact
-            path={`${match.path}/covid-19`}
-            component={VillageCovidPage}
-          />
-        </Switch>
-        <VillageFooter />
-        <PopupModal
-          website="mrg"
-          showModal={showPopupModal}
-          closeModal={() => closeModal(setShowPopupModal)}
-        />
-        <CustomContactModal
-          showModal={showContactModal}
-          closeModal={() => closeModal(setShowContactModal)}
-          entity={villageBusinessInfo}
-        />
-      </div>
+        </div>
+      </PricingModalProvider>
     </ThemeProvider>
   );
 }

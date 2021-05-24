@@ -1,6 +1,7 @@
 import React from "react";
 
-import { villageGiftshopHours } from "assets/business_info/hours.js";
+import { villageHours } from "business_info/hours.js";
+import { villagePricing } from "../admission";
 
 const VillageCovidInfo = () => {
   const sectionStyle = { marginTop: "20px" };
@@ -15,12 +16,10 @@ const VillageCovidInfo = () => {
       <div style={{ marginTop: "10px" }}>
         <h3>Miccosukee Indian Village</h3>
         <p style={paddingLeftStyle}>
-          <b>CLOSED:</b>
+          <b>{villageHours.days === "" ? "CLOSED:" : "OPEN:"}</b>
         </p>
         <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
-          <li style={liStyle}>
-            The Miccosukee Indian Village will NOT reopen until further notice.
-          </li>
+          <li style={liStyle}>{villageHours.details}</li>
         </ul>
         <div style={sectionStyle}>
           <h3 style={{ paddingTop: "20px" }}>Village Gift Shop</h3>
@@ -28,8 +27,9 @@ const VillageCovidInfo = () => {
             <h4 style={sectionHeaderStyle}>Hours of Operation</h4>
             <ul style={ulStyle}>
               <li style={liStyle}>
-                {villageGiftshopHours.days}: {villageGiftshopHours.open} –{" "}
-                {villageGiftshopHours.close}
+                {villageHours.poi.giftShop.days}:{" "}
+                {villageHours.poi.giftShop.open} –{" "}
+                {villageHours.poi.giftShop.close}
               </li>
             </ul>
           </div>

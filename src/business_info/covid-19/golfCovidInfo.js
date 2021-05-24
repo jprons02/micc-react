@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { golfHours } from "assets/business_info/hours.js";
+import { golfHours } from "business_info/hours.js";
 
 const GolfCovidInfo = () => {
   const sectionStyle = { marginTop: "20px" };

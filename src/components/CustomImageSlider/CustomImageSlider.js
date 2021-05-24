@@ -37,7 +37,7 @@ const CustomImageSlider = (props) => {
     });
   };
   return (
-    <div>
+    <div style={{ margin: "5px" }}>
       <Slider {...settings}>{renderSliderImage()}</Slider>
     </div>
   );

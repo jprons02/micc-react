@@ -1,8 +1,14 @@
 import React, { useState, useContext, useEffect } from "react";
+
+// Custom Component
 import Footer from "components/Footer/Footer.js";
+
+// Theme
 import { mrgColor } from "themes/colors.js";
-import { mrgBusinessInfo } from "assets/business_info/genericInfo.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
+
+// Business Info
+import { mrgBusinessInfo } from "business_info/genericInfo.js";
+import { mrgSocialMedia } from "business_info/socialMedia.js";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
@@ -64,17 +70,17 @@ const MrgFooter = () => {
         {
           externalLink: true,
           linkText: "Facebook",
-          linkTo: "#",
+          linkTo: mrgSocialMedia.facebook,
         },
         {
           externalLink: true,
           linkText: "Instagram",
-          linkTo: "#",
+          linkTo: mrgSocialMedia.instagram,
         },
         {
           externalLink: true,
           linkText: "Twitter",
-          linkTo: "#",
+          linkTo: mrgSocialMedia.twitter,
         },
       ],
     },

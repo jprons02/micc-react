@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { mrgHours } from "assets/business_info/hours.js";
-import { mrgStatus } from "assets/business_info/status.js";
+import { mrgHours } from "business_info/hours.js";
+import { mrgStatus } from "business_info/status.js";
 
 import Collapse from "@material-ui/core/Collapse";
 

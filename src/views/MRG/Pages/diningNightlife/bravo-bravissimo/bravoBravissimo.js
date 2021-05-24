@@ -20,6 +20,12 @@ import image2 from "assets/img/mrg/dining/international-buffet/Paella_1024x642.j
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2];
@@ -44,9 +50,7 @@ const Bravo = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Bravo Bravissimo!</h2>
-              <h6>
-                SAMPLE - Monday – Thursday, 12:00 P.M. - 1:00 A.M. <br />
-              </h6>
+              {renderPoiHours(mrgHours.poi.bravo)}
               <p>
                 SAMPLE - With a killer à la carte breakfast menu and an
                 international buffet, you are sure to enjoy different cuisines

@@ -19,6 +19,12 @@ import image1 from "assets/img/mrg/dining/deli/deli-01.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1];
@@ -43,9 +49,7 @@ const Deli = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Empeeke Aya Deli</h2>
-              <h6>
-                Monday – Sunday, 11:00 A.M. - 1:00 A.M. <br />
-              </h6>
+              {renderPoiHours(mrgHours.poi.deli)}
               <p>
                 The Empeeke Aya Deli serves delicatessen favorites and assorted
                 snacks! Conveniently located across from the Gaming floor, the

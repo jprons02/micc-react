@@ -85,6 +85,10 @@ const villageSelectOptions = [
     value: "Indian Village",
     label: "Indian Village",
   },
+  {
+    value: "Indian Village Groups",
+    label: "Indian Village Groups",
+  },
 ];
 
 const golfSelectOptions = [

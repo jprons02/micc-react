@@ -25,7 +25,7 @@ import GolfEventPage from "views/Golf/Pages/events/golfEventPage";
 import GolfCovidPage from "views/Golf/Pages/business_info/golfCovidPage.js";
 
 // Business info
-import { golfBusinessInfo } from "assets/business_info/genericInfo.js";
+import { golfBusinessInfo } from "business_info/genericInfo.js";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();

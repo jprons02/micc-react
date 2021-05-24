@@ -1,6 +1,6 @@
 import React from "react";
 
-import { airboatsHours } from "assets/business_info/hours.js";
+import { airboatsHours } from "business_info/hours.js";
 
 const AirboatsCovidInfo = () => {
   const sectionStyle = { marginTop: "20px" };

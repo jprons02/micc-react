@@ -1,4 +1,8 @@
 import React, { useContext } from "react";
+import classNames from "classnames";
+
+// react components for routing our app without refresh
+import { Link } from "react-router-dom";
 
 // @material core
 import { makeStyles } from "@material-ui/core/styles";
@@ -10,7 +14,9 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
-//<GridItem sm={12} md={6}>
+
+// context
+import { PricingModalContext } from "contexts/PricingModalContext.js";
 
 // My Custom Component
 import HeroSection from "components/CustomSections/HeroSection.js";
@@ -20,9 +26,10 @@ import RaisedContainer from "components/CustomSections/RaisedContainer";
 import villageImage from "assets/img/village/alligator_demo.jpg";
 
 // Icons
-import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
-import TodayIcon from "@material-ui/icons/Today";
-import GolfCourseIcon from "@material-ui/icons/GolfCourse";
+import StorefrontIcon from "@material-ui/icons/Storefront";
+import FastfoodIcon from "@material-ui/icons/Fastfood";
+import MuseumIcon from "@material-ui/icons/Museum";
+import GatorIcon from "components/CustomIcons/Icons/GatorIcon.js";
 
 // Styles
 import styles from "assets/jss/material-kit-react/views/village/home.js";
@@ -32,6 +39,7 @@ import {
   cardSubtitle,
 } from "assets/jss/material-kit-react.js";
 import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
+import { SettingsInputAntennaTwoTone } from "@material-ui/icons";
 
 const cardStyles = {
   cardTitle,
@@ -47,6 +55,14 @@ const Home = () => {
   const classes = useStyles();
   const cardClasses = useCardStyles();
 
+  const [showPricingModal, setShowPricingModal] = useContext(
+    PricingModalContext
+  );
+
+  const openModal = (setState) => {
+    setState(true);
+  };
+
   const sliderContent = [
     {
       id: 1,
@@ -55,13 +71,11 @@ const Home = () => {
       gradient: ".4",
       header: "CHEHANTAMO!",
       subHeader: "(MEANS WELCOME IN OUR MIKASUKI LANGUAGE)",
-      /*
       button: {
-        text: "Book A Tee Time",
+        text: "See Admission",
         link: "",
-        clickFunction: () => setShowTeeTimeModal(true),
+        clickFunction: () => openModal(setShowPricingModal),
       },
-      */
     },
   ];
 
@@ -79,37 +93,53 @@ const Home = () => {
           </Typography>
           <hr className={classes.hr} />
           <GridContainer style={{ marginTop: "60px" }} justify="center">
-            <GridItem
-              style={{ textAlign: "center", paddingBottom: "15px" }}
-              sm={12}
-              md={4}
-            >
-              <MonetizationOnIcon className={classes.icons} color="primary" />
+            <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
+              <Link to="/village/gift-shop">
+                <StorefrontIcon className={classes.icons} color="primary" />
+              </Link>
+              <Typography className={classes.poiTitle} component="h4">
+                Gift Shop
+              </Typography>
               <p className={classes.iconText}>
-                With its competitive prices, our course caters to amateur and
-                professional golfers alike.
+                Visit the Miccosukee Indian Gift Shop to find crafts created by
+                natives around the world.
               </p>
             </GridItem>
-            <GridItem
-              style={{ textAlign: "center", paddingBottom: "15px" }}
-              sm={12}
-              md={4}
-            >
-              <TodayIcon className={classes.icons} color="primary" />
+            <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
+              <Link to="/village/museum">
+                <MuseumIcon className={classes.icons} color="primary" />
+              </Link>
+              <Typography className={classes.poiTitle} component="h4">
+                Museum
+              </Typography>
               <p className={classes.iconText}>
-                Our golf course is open to the public. Browse and book tee times
-                online.
+                Miccosukee history and culture is preserved through historical
+                documents, archival photographs and original artifacts.
               </p>
             </GridItem>
-            <GridItem
-              style={{ textAlign: "center", paddingBottom: "15px" }}
-              sm={12}
-              md={4}
-            >
-              <GolfCourseIcon className={classes.icons} color="primary" />
+            <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
+              <Link to="/village/alligator-demonstrations">
+                <GatorIcon className={classes.icons} color="primary" />
+              </Link>
+              <Typography className={classes.poiTitle} component="h4">
+                Alligator Demonstrations
+              </Typography>
               <p className={classes.iconText}>
-                Located in the heart of Kendall, we are an ideal venue for golf
-                outings and events.
+                We don’t “wrestle” our ‘gators—we love them and hope that you’ll
+                learn about them through our demonstrations!
+              </p>
+            </GridItem>
+            <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
+              <Link to="/village/our-little-shack">
+                <FastfoodIcon className={classes.icons} color="primary" />
+              </Link>
+              <Typography className={classes.poiTitle} component="h4">
+                Our Little Shack
+              </Typography>
+              <p className={classes.iconText}>
+                The Village’s casual eatery has something for everybody!
+                Burgers, fries, alligator bites, shakes and more! Our Little
+                Shack is here for you.
               </p>
             </GridItem>
           </GridContainer>
