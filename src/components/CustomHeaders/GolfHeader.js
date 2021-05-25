@@ -8,6 +8,7 @@ import { Icon } from "@material-ui/core";
 // Context
 import { TeeTimeContext } from "contexts/TeeTimeContext.js";
 import TeeTimeModal from "components/CustomModal/CustomTeeTimeModal/CustomTeeTimeModal.js";
+import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
 // theme color
 import { golfColor } from "themes/colors.js";
@@ -22,8 +23,10 @@ const GolfHeader = () => {
   }, []);
 
   const [showTeeTimeModal, setShowTeeTimeModal] = useContext(TeeTimeContext);
+  const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
 
   const openModal = (setState) => {
+    setMobileOpen(false);
     setState(true);
   };
 

@@ -5,6 +5,7 @@ import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
 import { BookRoomProvider } from "contexts/BookRoomContext.js";
 import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
 // Theme
 import { theme } from "../../themes";
@@ -49,6 +50,11 @@ export default function Miccosukee(props) {
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
+  const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location]);
 
   // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {

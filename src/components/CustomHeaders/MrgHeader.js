@@ -7,6 +7,7 @@ import { Icon } from "@material-ui/core";
 
 // Context
 import { BookRoomContext } from "contexts/BookRoomContext.js";
+import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
 //testing
 import styles from "assets/jss/material-kit-react/views/mrg";
@@ -29,8 +30,10 @@ const MrgHeader = () => {
   }, []);
 
   const [showBookRoomModal, setShowBookRoomModal] = useContext(BookRoomContext);
+  const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
 
   const openModal = (setState) => {
+    setMobileOpen(false);
     setState(true);
   };
 

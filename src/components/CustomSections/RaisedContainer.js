@@ -8,14 +8,17 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/components/cu
 
 const useStyles = makeStyles(styles);
 
-const RaisedContainer = ({ children }) => {
+const RaisedContainer = ({ children, fullWidth }) => {
   const classes = useStyles();
 
   const renderStandard = () => {
     return (
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
-          <div className={classes.container} style={{ padding: "15px" }}>
+          <div
+            className={!fullWidth ? classes.container : ""}
+            style={!fullWidth ? { padding: "15px" } : { padding: "0px" }}
+          >
             {children}
           </div>
         </div>

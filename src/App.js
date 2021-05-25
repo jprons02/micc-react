@@ -15,6 +15,7 @@ import { AlertContext } from "contexts/AlertContext.js";
 import { ContactFormProvider } from "contexts/ContactFormContext.js";
 import { ContactModalProvider } from "contexts/ContactFormModalContext.js";
 import { FoodMenuProvider } from "contexts/FoodMenuContext.js";
+import { MobileMenuDrawerProvider } from "contexts/MobileMenuDrawerContext.js";
 
 // Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
@@ -25,6 +26,7 @@ import Miccosukee from "views/Miccosukee";
 import MRG from "views/MRG";
 import Golf from "views/Golf";
 import Village from "views/Village";
+import Airboats from "views/Airboats";
 import AID from "views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js";
 
 // my components
@@ -90,28 +92,31 @@ const App = () => {
 
   return (
     <LanguageProvider>
-      <PopupProvider>
-        <ContactModalProvider>
-          <ContactFormProvider>
-            <FoodMenuProvider>
-              <Router history={hist}>
-                <Switch>
-                  <Route exact path="/landing-page" component={LandingPage} />
-                  <Route exact path="/profile-page" component={ProfilePage} />
-                  <Route exact path="/login-page" component={LoginPage} />
-                  <Route exact path="/components" component={Components} />
-                  <Route exact path={"/virtual-event/aid"} component={AID} />
-                  <Route path="/mrg" component={MRG} />
-                  <Route path="/golf" component={Golf} />
-                  <Route path="/village" component={Village} />
-                  <Route path="/" component={Miccosukee} />
-                </Switch>
-              </Router>
-              {renderSnackbar()}
-            </FoodMenuProvider>
-          </ContactFormProvider>
-        </ContactModalProvider>
-      </PopupProvider>
+      <MobileMenuDrawerProvider>
+        <PopupProvider>
+          <ContactModalProvider>
+            <ContactFormProvider>
+              <FoodMenuProvider>
+                <Router history={hist}>
+                  <Switch>
+                    <Route exact path="/landing-page" component={LandingPage} />
+                    <Route exact path="/profile-page" component={ProfilePage} />
+                    <Route exact path="/login-page" component={LoginPage} />
+                    <Route exact path="/components" component={Components} />
+                    <Route exact path={"/virtual-event/aid"} component={AID} />
+                    <Route path="/mrg" component={MRG} />
+                    <Route path="/golf" component={Golf} />
+                    <Route path="/village" component={Village} />
+                    <Route path="/airboats" component={Airboats} />
+                    <Route path="/" component={Miccosukee} />
+                  </Switch>
+                </Router>
+                {renderSnackbar()}
+              </FoodMenuProvider>
+            </ContactFormProvider>
+          </ContactModalProvider>
+        </PopupProvider>
+      </MobileMenuDrawerProvider>
     </LanguageProvider>
   );
 };

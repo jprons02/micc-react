@@ -1,6 +1,8 @@
 import { airboatsColor } from "themes/colors.js";
+import { container } from "assets/jss/material-kit-react.js";
 
 const homeStyle = {
+  container,
   welcomeContainer: {
     paddingTop: "30px",
     paddingBottom: "15px",

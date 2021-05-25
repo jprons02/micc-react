@@ -19,6 +19,7 @@ import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 
 // Context
 import { PopupContext } from "contexts/PopupContext.js";
+import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
 //pages
 import Home from "./Pages/home";
@@ -40,6 +41,11 @@ const Miccosukee = () => {
   let location = useLocation();
 
   const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location]);
 
   useEffect(() => {
     if (location.pathname === "/") {

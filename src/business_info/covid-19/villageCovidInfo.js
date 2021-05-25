@@ -1,7 +1,6 @@
 import React from "react";
-
+import { renderPoiHours } from "services/renderPoiHours.js";
 import { villageHours } from "business_info/hours.js";
-import { villagePricing } from "../admission";
 
 const VillageCovidInfo = () => {
   const sectionStyle = { marginTop: "20px" };
@@ -27,9 +26,7 @@ const VillageCovidInfo = () => {
             <h4 style={sectionHeaderStyle}>Hours of Operation</h4>
             <ul style={ulStyle}>
               <li style={liStyle}>
-                {villageHours.poi.giftShop.days}:{" "}
-                {villageHours.poi.giftShop.open} –{" "}
-                {villageHours.poi.giftShop.close}
+                {renderPoiHours(villageHours.poi.giftShop)}
               </li>
             </ul>
           </div>
@@ -81,3 +78,9 @@ const VillageCovidInfo = () => {
 };
 
 export default VillageCovidInfo;
+
+/*
+{villageHours.poi.giftShop.days}:{" "}
+{villageHours.poi.giftShop.open} –{" "}
+{villageHours.poi.giftShop.close}
+*/

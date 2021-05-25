@@ -146,13 +146,26 @@ export default function HeroSection(props) {
         );
       };
       const renderMobile = () => {
+        console.log("slide: ", slide);
+        const getStyle = () => {
+          if (slide.backgroundPlain) {
+            console.log("triggered");
+            return {
+              backgroundImage: `url(${slide.bgImage})`,
+              height: `${slide.height}`,
+            };
+          } else {
+            return {
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.bgImage})`,
+            };
+          }
+        };
+
         return (
           <div key={slide.id}>
             <div
               className={props.large ? classes.large : classes.standard}
-              style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.bgImage})`,
-              }}
+              style={getStyle()}
             >
               <div className={classes.sliderContent}>
                 <Typography className={classes.header} component="h1" paragraph>

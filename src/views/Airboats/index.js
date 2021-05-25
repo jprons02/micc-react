@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
 
 // Context
+import { TeeTimeProvider } from "contexts/TeeTimeContext.js";
 import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
@@ -11,24 +12,19 @@ import { theme } from "../../themes";
 import { ThemeProvider } from "@material-ui/core/styles";
 
 // My components
-import VillageHeader from "components/CustomHeaders/VillageHeader.js";
-import VillageFooter from "components/CustomFooters/VillageFooter.js";
+import AirboatsHeader from "components/CustomHeaders/AirboatsHeader.js";
+import AirboatsFooter from "components/CustomFooters/AirboatsFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 // Pages
-import Home from "views/Village/Pages/Home/home.js";
-import GiftShop from "views/Village/Pages/GiftShop/giftShop.js";
-import Museum from "views/Village/Pages/Museum/museum.js";
-import AlligatorDemos from "views/Village/Pages/AlligatorDemos/alligatorDemos.js";
-import OurLittleShack from "views/Village/Pages/OurLittleShack/ourLittleShack";
-import VillageCovidPage from "views/Village/Pages/business_info/villageCovidPage.js";
+import Home from "views/Airboats/Pages/home/home.js";
+//import Courses from "views/Airboats/Pages/courses/courses.js";
+//import Rates from "views/Airboats/Pages/rates/rates.js";
+import AirboatsCovidPage from "views/Airboats/Pages/business_info/airboatsCovidPage.js";
 
 // Business info
-import { villageBusinessInfo } from "business_info/genericInfo.js";
-
-// Context
-import { PricingModalProvider } from "contexts/PricingModalContext.js";
+import { airboatsBusinessInfo } from "business_info/genericInfo.js";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();
@@ -46,9 +42,9 @@ export default function Miccosukee(props) {
 
   // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {
-    if (location.pathname === "/village") {
+    if (location.pathname === "/mrg") {
       setTimeout(() => {
-        setShowPopupModal(false);
+        setShowPopupModal(true);
       }, 700);
     }
   }, []);
@@ -67,35 +63,19 @@ export default function Miccosukee(props) {
   };
 
   return (
-    <ThemeProvider theme={theme("village")}>
-      <PricingModalProvider>
+    <ThemeProvider theme={theme("airboats")}>
+      <TeeTimeProvider>
         <div>
-          <VillageHeader />
+          <AirboatsHeader />
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route
               exact
-              path={`${match.path}/gift-shop`}
-              component={GiftShop}
-            />
-            <Route exact path={`${match.path}/museum`} component={Museum} />
-            <Route
-              exact
-              path={`${match.path}/alligator-demonstrations`}
-              component={AlligatorDemos}
-            />
-            <Route
-              exact
-              path={`${match.path}/our-little-shack`}
-              component={OurLittleShack}
-            />
-            <Route
-              exact
               path={`${match.path}/covid-19`}
-              component={VillageCovidPage}
+              component={AirboatsCovidPage}
             />
           </Switch>
-          <VillageFooter />
+          <AirboatsFooter />
           <PopupModal
             website="mrg"
             showModal={showPopupModal}
@@ -104,10 +84,10 @@ export default function Miccosukee(props) {
           <CustomContactModal
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}
-            entity={villageBusinessInfo}
+            entity={airboatsBusinessInfo}
           />
         </div>
-      </PricingModalProvider>
+      </TeeTimeProvider>
     </ThemeProvider>
   );
 }

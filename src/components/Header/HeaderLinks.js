@@ -1,9 +1,11 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useContext } from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
 // react components for routing our app without refresh
 import { Link, useRouteMatch } from "react-router-dom";
+// Hashlink used to move to # id within a page
+import { NavHashLink } from "react-router-hash-link";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -24,6 +26,13 @@ const useStyles = makeStyles(styles);
 export default function HeaderLinks(props) {
   let match = useRouteMatch();
   const classes = useStyles();
+
+  // For scrolling to #id, offset
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
 
   //remove trailing slash to avoid double //. such as /mrg//accommodations.
   const getBaseUrl = () => {
@@ -110,6 +119,26 @@ export default function HeaderLinks(props) {
               }}
               dropdownList={renderDropDownItems(menuItem.subMenu)}
             />
+          </ListItem>
+        );
+      } // If you want to link to id
+      else if (menuItem.itemType === "id") {
+        return (
+          <ListItem key={menuItem.text} className={classes.listItem}>
+            <NavHashLink
+              scroll={(el) => scrollWithOffset(el)}
+              smooth
+              style={{ padding: "0px", color: "inherit" }}
+              to={`${getBaseUrl()}${menuItem.link}` || "#"}
+            >
+              <Button
+                className={classes.navLink}
+                color={"transparent" || menuItem.color}
+              >
+                {menuItem.icon ? menuItem.icon() : ""}
+                {menuItem.text}
+              </Button>
+            </NavHashLink>
           </ListItem>
         );
         // if standard menu item but has click function

@@ -8,6 +8,7 @@ import { Icon } from "@material-ui/core";
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { PricingModalContext } from "contexts/PricingModalContext.js";
+import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
 // theme color
 import { villageColor } from "themes/colors.js";
@@ -25,6 +26,7 @@ const VillageHeader = () => {
   const [showPricingModal, setShowPricingModal] = useContext(
     PricingModalContext
   );
+  const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
 
   // Close contact modal on mount
   useEffect(() => {
@@ -32,6 +34,7 @@ const VillageHeader = () => {
   }, []);
 
   const openModal = (setState) => {
+    setMobileOpen(false);
     setState(true);
   };
 

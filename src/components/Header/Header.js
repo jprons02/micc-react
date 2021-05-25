@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -17,11 +17,14 @@ import Menu from "@material-ui/icons/Menu";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
+// custom context
+import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+
 const useStyles = makeStyles(styles);
 
 export default function Header(props) {
   const classes = useStyles();
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
       window.addEventListener("scroll", headerColorChange);

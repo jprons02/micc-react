@@ -158,8 +158,8 @@ button.slick-arrow.slick-next {
   left: 0;
   &::before {
     content: "\f053";
-    font-weight: 600;
-    font-family: Font awesome\5 Free;
+    font-weight: 900;
+    font-family: "Font awesome 5 Free";
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -176,8 +176,8 @@ button.slick-arrow.slick-next {
   right: 0;
   &::before {
     content: "\f054";
-    font-weight: 600;
-    font-family: Font awesome\5 Free;
+    font-weight: 900;
+    font-family: "Font awesome 5 Free";
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: inline-block;
@@ -242,6 +242,7 @@ button.slick-arrow.slick-next {
   margin: 5px;
   padding: 0;
 }
+
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
@@ -258,6 +259,7 @@ button.slick-arrow.slick-next {
     width: 10px;
     height: 10px;
     content: "\2022";
+    //content: "•";
     text-align: center;
     opacity: 1;
     background-color: #fff;
