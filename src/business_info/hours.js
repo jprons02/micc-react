@@ -46,6 +46,15 @@ export const mrgHours = {
     close: `${getMinutes(4).combinedString}`,
     details: "No entry will be allowed after 3:00 A.M.",
   },
+  todaysHours: (dayOfWeek, language) => {
+    if (dayOfWeek > 4) {
+      // return weekend hours
+      return `${mrgHours.weekend.open} - ${mrgHours.weekend.close}`;
+    } else {
+      // return weekday hours
+      return `${mrgHours.weekday.open} - ${mrgHours.weekday.close}`;
+    }
+  },
   poi: {
     salon: [
       {
@@ -178,6 +187,14 @@ export const villageHours = {
   close: "",
   details:
     "The Miccosukee Indian Village will NOT reopen until further notice.",
+  todaysHours: (dayOfWeek, language) => {
+    //`Thursday – Sunday`,
+    if (dayOfWeek === 0 || dayOfWeek > 4) {
+      return `Closed, however, the Gift Shop is open: ${villageHours.poi.giftShop.open} - ${villageHours.poi.giftShop.close}`;
+    } else {
+      return language ? "Closed" : "Cerrado";
+    }
+  },
   poi: {
     //Friday - Sunday from 9 A.M. - 4:30 P.M
     giftShop: [
@@ -212,11 +229,21 @@ export const golfHours = {
   days: `Monday – Sunday`,
   open: `${getMinutes(7).combinedString}`,
   close: `${getMinutes(20, 30).combinedString}`,
+  todaysHours: (dayOfWeek, language) => {
+    return `${golfHours.open} - ${golfHours.close}`;
+  },
 };
 
 export const airboatsHours = {
-  //Thursday - Sunday from 9 AM-5PM
   days: `Thursday – Sunday`,
   open: `${getMinutes(9).combinedString}`,
   close: `${getMinutes(17).combinedString}`,
+  todaysHours: (dayOfWeek, language) => {
+    //`Thursday – Sunday`,
+    if (dayOfWeek === 0 || dayOfWeek > 3) {
+      return `${airboatsHours.open} - ${airboatsHours.close}`;
+    } else {
+      return language ? "Closed" : "Cerrado";
+    }
+  },
 };

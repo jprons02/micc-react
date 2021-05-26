@@ -27,6 +27,8 @@ import MRG from "views/MRG";
 import Golf from "views/Golf";
 import Village from "views/Village";
 import Airboats from "views/Airboats";
+import History from "views/History";
+import Administration from "views/Administration";
 import AID from "views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js";
 
 // my components
@@ -108,6 +110,8 @@ const App = () => {
                     <Route path="/golf" component={Golf} />
                     <Route path="/village" component={Village} />
                     <Route path="/airboats" component={Airboats} />
+                    <Route path="/history" component={History} />
+                    <Route path="/administration" component={Administration} />
                     <Route path="/" component={Miccosukee} />
                   </Switch>
                 </Router>

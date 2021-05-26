@@ -22,7 +22,7 @@ export const villageBusinessInfo = {
 };
 
 export const airboatsBusinessInfo = {
-  name: "village",
+  name: "airboats",
   phone: "305-480-1924",
   email: "",
   address: "Mile Marker 36, US-41, Miami, FL 33194",

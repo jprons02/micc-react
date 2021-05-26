@@ -17,11 +17,22 @@ import { useLanguage } from "contexts/languageContext.js";
 // colors
 import { villageColor, mrgColor } from "themes/colors.js";
 
+// business info
+import { villageHours, airboatsHours } from "business_info/hours.js";
+import {
+  villageBusinessInfo,
+  airboatsBusinessInfo,
+} from "business_info/genericInfo.js";
+
 const useStyles = makeStyles(styles);
 
 const GamingGolf = () => {
   const language = useLanguage();
   const classes = useStyles();
+
+  const d = new Date();
+  // returns 0-6, starts on sunday, sunday = 0
+  const dayOfWeek = d.getDay();
 
   const cards = [
     {
@@ -38,15 +49,15 @@ const GamingGolf = () => {
         link: "/village",
       },
       hours: language
-        ? "Today's Hours: 9:00 AM - 2:00 AM"
-        : "Horario de Hoy: 9:00 AM - 5:00 PM",
+        ? `Today's Hours: ${villageHours.todaysHours(dayOfWeek, language)}`
+        : `Horario de Hoy: ${villageHours.todaysHours(dayOfWeek, language)}`,
       phone: "1-877-242-6464",
       address: "500 SW 177th Ave, Miami, FL 33194",
     },
     {
       id: 2,
       title: language ? "Airboats" : "Golf & Country Club",
-      theme: "airboats",
+      theme: airboatsBusinessInfo.name,
       description: language
         ? "With supporting text below as a natural lead-in to additional content."
         : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
@@ -57,10 +68,10 @@ const GamingGolf = () => {
         link: "/airboats",
       },
       hours: language
-        ? "Today's Hours: 9:00 AM - 5:00 PM"
-        : "Horario de Hoy: 9:00 AM - 5:00 PM",
-      phone: "305-382-3930",
-      address: "6401 Kendale Lakes Dr, Miami, FL 33183",
+        ? `Today's Hours: ${airboatsHours.todaysHours(dayOfWeek, language)}`
+        : `Horario de Hoy: ${airboatsHours.todaysHours(dayOfWeek, language)}`,
+      phone: airboatsBusinessInfo.phone,
+      address: airboatsBusinessInfo.address,
     },
   ];
 

@@ -146,10 +146,8 @@ export default function HeroSection(props) {
         );
       };
       const renderMobile = () => {
-        console.log("slide: ", slide);
         const getStyle = () => {
           if (slide.backgroundPlain) {
-            console.log("triggered");
             return {
               backgroundImage: `url(${slide.bgImage})`,
               height: `${slide.height}`,

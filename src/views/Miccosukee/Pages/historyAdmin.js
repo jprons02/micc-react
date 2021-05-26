@@ -34,11 +34,6 @@ const GamingGolf = () => {
         usesRouter: true,
         link: "/history",
       },
-      hours: language
-        ? "Today's Hours: 9:00 AM - 2:00 AM"
-        : "Horario de Hoy: 9:00 AM - 5:00 PM",
-      phone: "1-877-242-6464",
-      address: "500 SW 177th Ave, Miami, FL 33194",
     },
     {
       id: 2,
@@ -53,11 +48,6 @@ const GamingGolf = () => {
         usesRouter: true,
         link: "/administration",
       },
-      hours: language
-        ? "Today's Hours: 9:00 AM - 5:00 PM"
-        : "Horario de Hoy: 9:00 AM - 5:00 PM",
-      phone: "305-382-3930",
-      address: "6401 Kendale Lakes Dr, Miami, FL 33183",
     },
   ];
 
@@ -72,9 +62,6 @@ const GamingGolf = () => {
             imgSrc={card.imgSrc}
             buttonOne={card.buttonOne}
             buttonTwo={card.buttonTwo ? card.buttonTwo : ""}
-            hours={card.hours}
-            phone={card.phone}
-            address={card.address}
           />
         </GridItem>
       );

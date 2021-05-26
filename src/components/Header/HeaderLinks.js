@@ -55,16 +55,30 @@ export default function HeaderLinks(props) {
     }
     let arrayOfItems = [];
     for (let i = 0; i < originalArr.length; i++) {
-      arrayOfItems.push(
-        <React.Fragment>
-          <Link
-            to={`${getBaseUrl()}${originalArr[i]["link"]}`}
-            className={classes.dropdownLink}
-          >
-            {originalArr[i]["text"]}
-          </Link>
-        </React.Fragment>
-      );
+      if (originalArr[i]["target"] === "_blank") {
+        arrayOfItems.push(
+          <React.Fragment>
+            <a
+              href={originalArr[i]["link"]}
+              target={originalArr[i]["target"]}
+              className={classes.dropdownLink}
+            >
+              {originalArr[i]["text"]}
+            </a>
+          </React.Fragment>
+        );
+      } else {
+        arrayOfItems.push(
+          <React.Fragment>
+            <Link
+              to={`${getBaseUrl()}${originalArr[i]["link"]}`}
+              className={classes.dropdownLink}
+            >
+              {originalArr[i]["text"]}
+            </Link>
+          </React.Fragment>
+        );
+      }
       // add divider after element is pushed to array
       if (originalArr[i]["divider"]) {
         arrayOfItems.push({ divider: originalArr[i]["divider"] });

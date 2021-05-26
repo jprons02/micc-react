@@ -14,17 +14,29 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_
 
 import { useLanguage } from "contexts/languageContext.js";
 
+// Business info
+import { mrgHours, golfHours } from "business_info/hours.js";
+
+import {
+  mrgBusinessInfo,
+  golfBusinessInfo,
+} from "business_info/genericInfo.js";
+
 const useStyles = makeStyles(styles);
 
 const GamingGolf = () => {
   const language = useLanguage();
   const classes = useStyles();
 
+  const d = new Date();
+  // returns 0-6, starts on sunday, sunday = 0
+  const dayOfWeek = d.getDay();
+
   const cards = [
     {
       id: 1,
       title: language ? "Resort & Gaming" : "Resort & Gaming",
-      theme: "mrg",
+      theme: mrgBusinessInfo.name,
       description: language
         ? "With supporting text below as a natural lead-in to additional content."
         : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
@@ -35,15 +47,15 @@ const GamingGolf = () => {
         link: `/mrg`,
       },
       hours: language
-        ? "Today's Hours: 9:00 AM - 2:00 AM"
-        : "Horario de Hoy: 9:00 AM - 5:00 PM",
-      phone: "1-877-242-6464",
-      address: "500 SW 177th Ave, Miami, FL 33194",
+        ? `Today's Hours: ${mrgHours.todaysHours(dayOfWeek)}`
+        : `Horario de Hoy: ${mrgHours.todaysHours(dayOfWeek)}`,
+      phone: mrgBusinessInfo.phone,
+      address: mrgBusinessInfo.address,
     },
     {
       id: 2,
       title: language ? "Golf & Country Club" : "Golf & Country Club",
-      theme: "golf",
+      theme: golfBusinessInfo.name,
       description: language
         ? "With supporting text below as a natural lead-in to additional content."
         : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
@@ -54,10 +66,10 @@ const GamingGolf = () => {
         link: "/golf",
       },
       hours: language
-        ? "Today's Hours: 9:00 AM - 5:00 PM"
-        : "Horario de Hoy: 9:00 AM - 5:00 PM",
-      phone: "305-382-3930",
-      address: "6401 Kendale Lakes Dr, Miami, FL 33183",
+        ? `Today's Hours: ${golfHours.todaysHours(dayOfWeek)}`
+        : `Horario de Hoy: ${golfHours.todaysHours(dayOfWeek)}`,
+      phone: golfBusinessInfo.phone,
+      address: golfBusinessInfo.address,
     },
   ];
 

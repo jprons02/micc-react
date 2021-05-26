@@ -67,6 +67,48 @@ const MiccosukeeCard = (props) => {
     }
   };
 
+  const renderFooter = () => {
+    if (!props.hours && !props.phone && !props.address) {
+      return null;
+    } else {
+      return (
+        <CardFooter>
+          <GridContainer direction="column">
+            <GridItem style={{ marginBottom: "8px" }}>
+              <Icon
+                style={{
+                  color: "#5a5a5a",
+                  verticalAlign: "middle",
+                }}
+              >
+                schedule
+              </Icon>
+              &nbsp;
+              {props.hours}
+            </GridItem>
+            <GridItem style={{ marginBottom: "8px" }}>
+              <Icon
+                style={{
+                  color: "#5a5a5a",
+                  verticalAlign: "middle",
+                }}
+              >
+                phone
+              </Icon>
+              &nbsp; {props.phone}
+            </GridItem>
+            <GridItem>
+              <Icon style={{ color: "#5a5a5a", verticalAlign: "middle" }}>
+                map
+              </Icon>
+              &nbsp; {props.address}
+            </GridItem>
+          </GridContainer>
+        </CardFooter>
+      );
+    }
+  };
+
   return (
     <Card style={{ margin: "0" }}>
       <img
@@ -93,39 +135,7 @@ const MiccosukeeCard = (props) => {
           {props.buttonTwo !== "" ? renderButtonTwo() : null}
         </div>
       </CardBody>
-      <CardFooter>
-        <GridContainer direction="column">
-          <GridItem style={{ marginBottom: "8px" }}>
-            <Icon
-              style={{
-                color: "#5a5a5a",
-                verticalAlign: "middle",
-              }}
-            >
-              schedule
-            </Icon>
-            &nbsp;
-            {props.hours}
-          </GridItem>
-          <GridItem style={{ marginBottom: "8px" }}>
-            <Icon
-              style={{
-                color: "#5a5a5a",
-                verticalAlign: "middle",
-              }}
-            >
-              phone
-            </Icon>
-            &nbsp; {props.phone}
-          </GridItem>
-          <GridItem>
-            <Icon style={{ color: "#5a5a5a", verticalAlign: "middle" }}>
-              map
-            </Icon>
-            &nbsp; {props.address}
-          </GridItem>
-        </GridContainer>
-      </CardFooter>
+      {renderFooter()}
     </Card>
   );
 };
