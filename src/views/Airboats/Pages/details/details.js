@@ -8,9 +8,6 @@ import { Hidden } from "@material-ui/core";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
-// My custom components
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
-
 // images
 import image1 from "assets/img/airboats/Slider_Airboat_1.jpeg";
 import image2 from "assets/img/airboats/Slider_Airboat2.jpeg";

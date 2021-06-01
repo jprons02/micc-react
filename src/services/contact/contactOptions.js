@@ -91,6 +91,17 @@ const villageSelectOptions = [
   },
 ];
 
+const airboatsSelectOptions = [
+  {
+    value: "Airboats",
+    label: "Airboats",
+  },
+  {
+    value: "Airboat Groups",
+    label: "Airboat Groups",
+  },
+];
+
 const golfSelectOptions = [
   {
     value: "Golf",
@@ -106,7 +117,11 @@ export const getOptions = (entity) => {
       return mediaSelectOptions;
     case "village":
       return villageSelectOptions;
+    case "airboats":
+      return airboatsSelectOptions;
     case "golf":
       return golfSelectOptions;
+    default:
+      return MrgSelectOptions;
   }
 };

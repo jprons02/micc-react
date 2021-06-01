@@ -1,13 +1,10 @@
 import React, { useContext } from "react";
 
-import { golfColor } from "themes/colors.js";
-
 // @material core
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 
 // core components
-import InfoArea from "components/InfoArea/InfoArea.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";

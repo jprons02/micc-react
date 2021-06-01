@@ -8,7 +8,7 @@ import { ContactFormContext } from "contexts/ContactFormContext.js";
 
 // Custom functions
 import { validateInput } from "services/validateInput.js";
-import { array } from "prop-types";
+//import { array } from "prop-types";
 
 const CustomTextField = withStyles({
   root: {
@@ -43,6 +43,11 @@ const CustomInput = (props) => {
       },
     });
   };
+
+  /*
+Line 76:6:   React Hook useEffect has missing dependencies: 'formValues', 'props.name', and 'setFormValues'. 
+Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  */
 
   // Only update error state when user inputs something.
   useEffect(() => {

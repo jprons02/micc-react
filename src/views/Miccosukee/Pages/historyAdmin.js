@@ -1,17 +1,23 @@
 import React from "react";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
+
 //images
 import historyImg from "assets/img/miccosukee/pages/history_admin/home-history-1.jpg";
 import administrationImg from "assets/img/miccosukee/pages/glades/airboats_1.jpg";
+
 //Miccosukee Component
 import MiccosukeeCard from "components/CustomCards/MiccosukeeCard.js";
 
+// styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js";
 
+// context
 import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);

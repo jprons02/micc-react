@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useRouteMatch } from "react-router-dom";
 
 import { events } from "assets/event/EventData/eventList.js";
-import { Link } from "react-router-dom";
 import { urlify } from "services/urlify.js";
 import classNames from "classnames";
 // @material-ui/core components

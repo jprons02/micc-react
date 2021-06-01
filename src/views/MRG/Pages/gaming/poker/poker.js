@@ -11,7 +11,6 @@ import GridItem from "components/Grid/GridItem.js";
 import RaisedContainer from "components/CustomSections/RaisedContainer.js";
 import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
-import Button from "components/CustomButtons/Button.js";
 import CustomHorizontalTabs from "components/CustomTabs/CustomHorizontalTabs.js";
 import CustomVerticalTabs from "components/CustomTabs/CustomVerticalTabs.js";
 

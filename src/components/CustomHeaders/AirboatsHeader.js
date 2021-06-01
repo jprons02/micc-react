@@ -10,6 +10,7 @@ import airboatsLogo from "assets/logos/MiccosukeeVillage&Airboats.svg";
 
 // context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { ContactFormContext } from "contexts/ContactFormContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
 const AirboatsHeader = () => {
@@ -20,6 +21,7 @@ const AirboatsHeader = () => {
     ContactModalContext
   );
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
+  const [formValues, setFormValues] = useContext(ContactFormContext);
 
   const openModal = (setState) => {
     setMobileOpen(false);
@@ -28,6 +30,17 @@ const AirboatsHeader = () => {
 
   const closeModal = (setState) => {
     setState(false);
+  };
+
+  const groupsClick = (setState) => {
+    setFormValues({
+      ...formValues,
+      inputValues: {
+        ...formValues.inputValues,
+        ["select"]: "Airboat Groups",
+      },
+    });
+    openModal(setState);
   };
 
   const menuLinks = [
@@ -56,7 +69,7 @@ const AirboatsHeader = () => {
       target: "",
       color: "",
       link: "",
-      clickFunction: () => openModal(setShowContactModal),
+      clickFunction: () => groupsClick(setShowContactModal),
       //icon: () => <Icon>chevron_right</Icon>,
     },
   ];

@@ -3,6 +3,7 @@ import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
 
 // Context
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { PopupContext } from "contexts/PopupContext.js";
 
 // Theme
 import { theme } from "../../themes";
@@ -11,20 +12,30 @@ import { ThemeProvider } from "@material-ui/core/styles";
 // My components
 import HistoryHeader from "components/CustomHeaders/HistoryHeader.js";
 import HistoryFooter from "components/CustomFooters/HistoryFooter.js";
+import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 
 // Pages
 import Home from "views/History/Pages/home/home.js";
 import ProgramsBusiness from "views/History/Pages/programsBusiness/programsBusiness.js";
+
+// services
+import { popupManager } from "services/popups/popupManager";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();
   let location = useLocation();
 
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
+  const [popupState, setPopupState] = useContext(PopupContext);
 
   useEffect(() => {
     setMobileOpen(false);
   }, [location]);
+
+  // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
+  useEffect(() => {
+    popupManager(setPopupState, popupState, location);
+  }, []);
 
   return (
     <ThemeProvider theme={theme("history")}>
@@ -38,6 +49,7 @@ export default function Miccosukee(props) {
             component={ProgramsBusiness}
           />
         </Switch>
+        <PopupModal />
         <HistoryFooter />
       </div>
     </ThemeProvider>

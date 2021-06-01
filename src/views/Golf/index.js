@@ -28,11 +28,14 @@ import GolfCovidPage from "views/Golf/Pages/business_info/golfCovidPage.js";
 // Business info
 import { golfBusinessInfo } from "business_info/genericInfo.js";
 
+// services
+import { popupManager } from "services/popups/popupManager";
+
 export default function Miccosukee(props) {
   let match = useRouteMatch();
   let location = useLocation();
 
-  const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  const [popupState, setPopupState] = useContext(PopupContext);
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -44,11 +47,7 @@ export default function Miccosukee(props) {
 
   // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {
-    if (location.pathname === "/mrg") {
-      setTimeout(() => {
-        setShowPopupModal(true);
-      }, 700);
-    }
+    popupManager(setPopupState, popupState, location);
   }, []);
 
   // Close contact modal on mount
@@ -86,11 +85,7 @@ export default function Miccosukee(props) {
             />
           </Switch>
           <GolfFooter />
-          <PopupModal
-            website="mrg"
-            showModal={showPopupModal}
-            closeModal={() => closeModal(setShowPopupModal)}
-          />
+          <PopupModal />
           <CustomContactModal
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}

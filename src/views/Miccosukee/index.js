@@ -1,11 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useRouteMatch,
-  useLocation,
-} from "react-router-dom";
+import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -31,7 +25,11 @@ import Events from "./Pages/events";
 import EventPage from "./Pages/eventPage";
 import HistoryAdmin from "./Pages/historyAdmin";
 
+// styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
+
+// services
+import { popupManager } from "services/popups/popupManager";
 
 const useStyles = makeStyles(styles);
 
@@ -40,20 +38,16 @@ const Miccosukee = () => {
   let { path } = useRouteMatch();
   let location = useLocation();
 
-  const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  //const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  const [popupState, setPopupState] = useContext(PopupContext);
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
 
   useEffect(() => {
+    // Closes mobile drawer any time location changes
     setMobileOpen(false);
+    // Check if popup should be displayed after location change
+    popupManager(setPopupState, popupState, location);
   }, [location]);
-
-  useEffect(() => {
-    if (location.pathname === "/") {
-      setTimeout(() => {
-        setShowPopupModal(true);
-      }, 700);
-    }
-  }, []);
 
   return (
     <div className={classNames(classes.main)}>
@@ -67,14 +61,35 @@ const Miccosukee = () => {
           <Route exact path={`${path}events/:eventId`} component={EventPage} />
           <Route exact path={`${path}history-admin`} component={HistoryAdmin} />
         </Switch>
-        <PopupModal
-          website="miccosukee"
-          showModal={showPopupModal}
-          closeModal={() => setShowPopupModal(false)}
-        />
+        <PopupModal />
       </div>
     </div>
   );
 };
 
 export default Miccosukee;
+
+/*
+<PopupModal
+  popupState={
+    popupState.miccosukeePopup ? popupState.miccosukeePopup : ""
+  }
+  closeModal={() =>
+    setPopupState({
+      ...popupState,
+      miccosukeePopup: {
+        ...popupState.miccosukeePopup,
+        showPopup: false,
+      },
+    })
+  }
+/>
+*/
+
+/*
+<PopupModal
+  website="miccosukee"
+  showModal={showPopupModal}
+  closeModal={() => setShowPopupModal(false)}
+/>
+*/

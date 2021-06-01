@@ -3,27 +3,27 @@ import React from "react";
 // Core Components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Typography from "@material-ui/core/Typography";
 
 // My Custom Components
 import RaisedContainer from "components/CustomSections/RaisedContainer.js";
 import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import CustomStandardPagination from "components/CustomPagination/CustomStandardPagination.js";
 
 // Images
 import bgImage from "assets/img/bg3.jpg";
-import image1 from "assets/img/golf/courses/Golf_2.jpg";
-import image2 from "assets/img/golf/courses/Golf_3-1.jpg";
-import image3 from "assets/img/golf/courses/Golf_4.jpg";
-import image4 from "assets/img/golf/courses/Golf_5-1.jpg";
+import image1 from "assets/img/administration/NewPoliceCar.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// pages
+import { policePages } from "views/Administration/Pages/Police/policePages.js";
+
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1, image2, image3, image4];
+const imageArray = [image1];
 
 const sliderContent = [
   {
@@ -42,10 +42,14 @@ const PoliceLocations = () => {
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
+        <CustomStandardPagination
+          customStyle={{ marginBottom: "20px" }}
+          pages={policePages}
+        />
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Locations</h2>
+              <h2>Police Locations</h2>
               <p>
                 <span style={style}>Miami-Dade County</span>
                 <br />
@@ -68,7 +72,7 @@ const PoliceLocations = () => {
               </p>
             </div>
           </GridItem>
-          <GridItem md={5}>
+          <GridItem style={{ marginBottom: "30px" }} md={5}>
             <div className={classes.imageArea}>
               <CustomImageSlider images={imageArray} />
             </div>

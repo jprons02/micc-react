@@ -3,7 +3,6 @@ import React from "react";
 // Core Components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Typography from "@material-ui/core/Typography";
 
 // My Custom Components
 import RaisedContainer from "components/CustomSections/RaisedContainer.js";

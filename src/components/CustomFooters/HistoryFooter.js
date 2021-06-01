@@ -22,9 +22,11 @@ const HistoryFooter = () => {
     closeModal(setShowContactModal);
   }, []);
 
+  /*
   const openModal = (setState) => {
     setState(true);
   };
+  */
 
   const closeModal = (setState) => {
     setState(false);

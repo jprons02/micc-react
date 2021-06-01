@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 // Custom Component
 import Footer from "components/Footer/Footer.js";
@@ -44,8 +44,10 @@ const MrgFooter = () => {
           linkTo: "/mrg/covid-19",
         },
         {
+          externalLink: true,
           linkText: "Careers",
-          linkTo: "#",
+          linkTo:
+            "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
         },
       ],
     },
@@ -61,6 +63,10 @@ const MrgFooter = () => {
           externalLink: true,
           linkText: "Directions",
           linkTo: "https://goo.gl/maps/yZ9QCXJ869UqZRxJ9",
+        },
+        {
+          linkText: "Banquets & Catering",
+          linkTo: "/mrg/banquets-catering",
         },
       ],
     },

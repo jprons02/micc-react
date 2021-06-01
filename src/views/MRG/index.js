@@ -35,6 +35,7 @@ import Deli from "views/MRG/Pages/diningNightlife/deli/deli.js";
 import CafeHammock from "views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js";
 import CypressLounge from "views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js";
 import MartiniBar from "views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js";
+import BanquetsCatering from "views/MRG/Pages/banquetsCatering/banquetsCatering.js";
 import MrgEvents from "views/MRG/Pages/events/mrgEvents.js";
 import MrgEventPage from "views/MRG/Pages/events/mrgEventPage";
 import MrgCovidPage from "views/MRG/Pages/business_info/mrgCovidPage.js";
@@ -42,11 +43,14 @@ import MrgCovidPage from "views/MRG/Pages/business_info/mrgCovidPage.js";
 // Business info
 import { mrgBusinessInfo } from "business_info/genericInfo.js";
 
+// services
+import { popupManager } from "services/popups/popupManager";
+
 export default function Miccosukee(props) {
   let match = useRouteMatch();
   let location = useLocation();
 
-  const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  const [popupState, setPopupState] = useContext(PopupContext);
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -58,11 +62,7 @@ export default function Miccosukee(props) {
 
   // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {
-    if (location.pathname === "/mrg") {
-      setTimeout(() => {
-        setShowPopupModal(true);
-      }, 700);
-    }
+    popupManager(setPopupState, popupState, location);
   }, []);
 
   // Close contact modal on mount
@@ -149,6 +149,11 @@ export default function Miccosukee(props) {
               path={`${match.path}/martini-bar`}
               component={MartiniBar}
             />
+            <Route
+              exact
+              path={`${match.path}/banquets-catering`}
+              component={BanquetsCatering}
+            />
             <Route exact path={`${match.path}/events`} component={MrgEvents} />
             <Route
               exact
@@ -162,11 +167,7 @@ export default function Miccosukee(props) {
             />
           </Switch>
           <MrgFooter />
-          <PopupModal
-            website="mrg"
-            showModal={showPopupModal}
-            closeModal={() => closeModal(setShowPopupModal)}
-          />
+          <PopupModal />
           <CustomContactModal
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}

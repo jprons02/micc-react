@@ -7,6 +7,7 @@ import { Icon } from "@material-ui/core";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { ContactFormContext } from "contexts/ContactFormContext.js";
 import { PricingModalContext } from "contexts/PricingModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
@@ -27,6 +28,7 @@ const VillageHeader = () => {
     PricingModalContext
   );
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
+  const [formValues, setFormValues] = useContext(ContactFormContext);
 
   // Close contact modal on mount
   useEffect(() => {
@@ -40,6 +42,17 @@ const VillageHeader = () => {
 
   const closeModal = (setState) => {
     setState(false);
+  };
+
+  const groupsClick = (setState) => {
+    setFormValues({
+      ...formValues,
+      inputValues: {
+        ...formValues.inputValues,
+        ["select"]: "Indian Village Groups",
+      },
+    });
+    openModal(setState);
   };
 
   const menuLinks = [
@@ -95,7 +108,7 @@ const VillageHeader = () => {
       target: "",
       color: "",
       link: "",
-      clickFunction: () => openModal(setShowContactModal),
+      clickFunction: () => groupsClick(setShowContactModal),
       //icon: () => <Icon>chevron_right</Icon>,
     },
   ];

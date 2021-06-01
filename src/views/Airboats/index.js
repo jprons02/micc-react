@@ -19,18 +19,19 @@ import CustomContactModal from "components/CustomModal/CustomContactModals/Custo
 
 // Pages
 import Home from "views/Airboats/Pages/home/home.js";
-//import Courses from "views/Airboats/Pages/courses/courses.js";
-//import Rates from "views/Airboats/Pages/rates/rates.js";
 import AirboatsCovidPage from "views/Airboats/Pages/business_info/airboatsCovidPage.js";
 
 // Business info
 import { airboatsBusinessInfo } from "business_info/genericInfo.js";
 
+// services
+import { popupManager } from "services/popups/popupManager";
+
 export default function Miccosukee(props) {
   let match = useRouteMatch();
   let location = useLocation();
 
-  const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  const [popupState, setPopupState] = useContext(PopupContext);
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -42,11 +43,7 @@ export default function Miccosukee(props) {
 
   // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {
-    if (location.pathname === "/mrg") {
-      setTimeout(() => {
-        setShowPopupModal(true);
-      }, 700);
-    }
+    popupManager(setPopupState, popupState, location);
   }, []);
 
   // Close contact modal on mount
@@ -76,11 +73,7 @@ export default function Miccosukee(props) {
             />
           </Switch>
           <AirboatsFooter />
-          <PopupModal
-            website="mrg"
-            showModal={showPopupModal}
-            closeModal={() => closeModal(setShowPopupModal)}
-          />
+          <PopupModal />
           <CustomContactModal
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}

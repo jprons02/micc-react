@@ -22,9 +22,11 @@ const AdministrationFooter = () => {
     closeModal(setShowContactModal);
   }, []);
 
+  /*
   const openModal = (setState) => {
     setState(true);
   };
+  */
 
   const closeModal = (setState) => {
     setState(false);
@@ -39,8 +41,10 @@ const AdministrationFooter = () => {
           linkTo: "/",
         },
         {
+          externalLink: true,
           linkText: "Careers",
-          linkTo: "#",
+          linkTo:
+            "https://www.indeed.com/cmp/Miccosukee-Tribe-of-Indians-of-Florida/jobs",
         },
       ],
     },

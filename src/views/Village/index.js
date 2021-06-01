@@ -5,6 +5,7 @@ import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
 import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { PricingModalProvider } from "contexts/PricingModalContext.js";
 
 // Theme
 import { theme } from "../../themes";
@@ -27,14 +28,14 @@ import VillageCovidPage from "views/Village/Pages/business_info/villageCovidPage
 // Business info
 import { villageBusinessInfo } from "business_info/genericInfo.js";
 
-// Context
-import { PricingModalProvider } from "contexts/PricingModalContext.js";
+// services
+import { popupManager } from "services/popups/popupManager";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();
   let location = useLocation();
 
-  const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
+  const [popupState, setPopupState] = useContext(PopupContext);
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -46,11 +47,7 @@ export default function Miccosukee(props) {
 
   // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {
-    if (location.pathname === "/village") {
-      setTimeout(() => {
-        setShowPopupModal(false);
-      }, 700);
-    }
+    popupManager(setPopupState, popupState, location);
   }, []);
 
   // Close contact modal on mount
@@ -96,11 +93,7 @@ export default function Miccosukee(props) {
             />
           </Switch>
           <VillageFooter />
-          <PopupModal
-            website="mrg"
-            showModal={showPopupModal}
-            closeModal={() => closeModal(setShowPopupModal)}
-          />
+          <PopupModal />
           <CustomContactModal
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}

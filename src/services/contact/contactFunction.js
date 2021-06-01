@@ -79,6 +79,11 @@ const getEmail = (value) => {
       return ["groups@miccosukeetours.com"];
     case "Indian Village Groups":
       return ["groups@miccosukeetours.com"];
+    // Airboats
+    case "Airboats":
+      return ["groups@miccosukeetours.com"];
+    case "Airboat Groups":
+      return ["groups@miccosukeetours.com"];
     // Golf
     case "Golf":
       return ["alt@miccosukeegolf.com", "ericw@miccosukeegolf.com"];

@@ -44,8 +44,10 @@ const VillageFooter = () => {
           linkTo: "/village/covid-19",
         },
         {
+          externalLink: true,
           linkText: "Careers",
-          linkTo: "#",
+          linkTo:
+            "https://www.indeed.com/cmp/Miccosukee-Tribe-of-Indians-of-Florida/jobs",
         },
       ],
     },

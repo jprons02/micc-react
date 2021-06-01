@@ -1,70 +1,75 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import classNames from "classnames";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-//import DialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
+
 // @material-ui/icons
 import Close from "@material-ui/icons/Close";
-// core components
+
+// style
 import popupModalStyle from "assets/jss/material-kit-react/popupModalStyle.js";
-// @material-ui/icons
-import Typography from "@material-ui/core/Typography";
 
-import Fade from "@material-ui/core/Fade";
-
-import mrgImage from "assets/img/test/MonthlyPayouts_Calendar_April-1.jpg";
-//import testImage from "assets/img/test/MGCC_NowOpen_PopUp_EN.png";
-import miccosukeeImage from "assets/img/bg.jpg";
+// Context
+import { PopupContext } from "contexts/PopupContext.js";
 
 const useStyles = makeStyles(popupModalStyle);
 
-const PopupModal = (props) => {
+const PopupModal = () => {
   const classes = useStyles();
 
-  const getPopupContent = () => {
-    switch (props.website) {
-      case "mrg":
-        return {
-          linkType: "internal",
-          link: "/mrg/promotions",
-          src: mrgImage,
-        };
-      case "miccosukee":
-        return {
-          linkType: "external",
-          link: "https://google.com",
-          src: miccosukeeImage,
-        };
+  const [popupState, setPopupState] = useContext(PopupContext);
+
+  const closeModal = (x) => {
+    for (let i = 0; i < Object.keys(popupState).length; i++) {
+      if (Object.keys(popupState)[i] === x.name) {
+        setPopupState({
+          ...popupState,
+          [Object.keys(popupState)[i]]: {
+            ...popupState[Object.keys(popupState)[i]],
+            ["showPopup"]: false,
+          },
+        });
+      }
     }
   };
 
+  const getPopup = () => {
+    // Active popup will always be the last state created
+    const getObjName = () => {
+      const iteration = Object.keys(popupState).length - 1;
+      return Object.keys(popupState)[iteration];
+    };
+    return popupState[getObjName()];
+  };
+
   const renderPopupContent = () => {
-    if (getPopupContent().linkType === "internal") {
+    if (getPopup().content.linkType === "internal") {
       return (
-        <Link to={getPopupContent().link} onClick={() => props.closeModal()}>
-          <img style={{ width: "100%" }} src={getPopupContent().src} />
+        <Link
+          to={getPopup().content.link}
+          onClick={() => closeModal(getPopup())}
+        >
+          <img style={{ width: "100%" }} src={getPopup().content.image} />
         </Link>
       );
     }
 
-    if (getPopupContent().linkType === "external") {
+    if (getPopup().content.linkType === "external") {
       return (
         <a
           target="_blank"
-          href={getPopupContent().link}
-          onClick={() => props.closeModal()}
+          href={getPopup().content.link}
+          onClick={() => closeModal(getPopup())}
         >
-          <img style={{ width: "100%" }} src={getPopupContent().src} />
+          <img style={{ width: "100%" }} src={getPopup().content.image} />
         </a>
       );
     }
 
-    return <img style={{ width: "100%" }} src={getPopupContent().src} />;
+    return <img style={{ width: "100%" }} src={getPopup().content.image} />;
   };
 
   return (
@@ -74,9 +79,9 @@ const PopupModal = (props) => {
         paper: classes.modal,
       }}
       transitionDuration={1000}
-      open={props.showModal}
+      open={getPopup() ? getPopup().showPopup : false}
       keepMounted
-      onClose={props.closeModal}
+      onClose={() => closeModal(getPopup())}
       aria-labelledby="modal-slide-title"
       aria-describedby="modal-slide-description"
     >
@@ -86,61 +91,74 @@ const PopupModal = (props) => {
           key="close"
           aria-label="Close"
           color="inherit"
-          onClick={props.closeModal}
+          onClick={() => closeModal(getPopup())}
         >
           <Close className={classes.modalClose} />
         </IconButton>
-        {renderPopupContent()}
+        {getPopup() ? renderPopupContent() : "Loading..."}
       </div>
     </Dialog>
   );
+};
 
-  /*
+/*
+  const renderPopupContent = () => {
+    if (props.popupState.content.linkType === "internal") {
+      return (
+        <Link
+          to={props.popupState.content.link}
+          onClick={() => props.closeModal()}
+        >
+          <img style={{ width: "100%" }} src={props.popupState.content.image} />
+        </Link>
+      );
+    }
+
+    if (props.popupState.content.linkType === "external") {
+      return (
+        <a
+          target="_blank"
+          href={props.popupState.content.link}
+          onClick={() => props.closeModal()}
+        >
+          <img style={{ width: "100%" }} src={props.popupState.content.image} />
+        </a>
+      );
+    }
+
+    return (
+      <img style={{ width: "100%" }} src={props.popupState.content.image} />
+    );
+  };
+
   return (
     <Dialog
       classes={{
         root: classes.center,
         paper: classes.modal,
       }}
-      open={props.showModal}
+      transitionDuration={1000}
+      open={props.popupState !== "" ? props.popupState.showPopup : false}
       keepMounted
-      onClose={props.closeModal}
+      onClose={props.popupState !== "" ? props.closeModal : null}
       aria-labelledby="modal-slide-title"
       aria-describedby="modal-slide-description"
     >
-      <DialogTitle
-        id="classic-modal-slide-title"
-        disableTypography
-        className={classes.modalHeader}
-        style={{ width: "100%" }}
-      >
+      <div style={{ position: "relative" }}>
         <IconButton
           className={classes.modalCloseButton}
           key="close"
           aria-label="Close"
           color="inherit"
-          onClick={props.closeModal}
+          onClick={props.popupState !== "" ? props.closeModal : null}
         >
           <Close className={classes.modalClose} />
         </IconButton>
-        <div style={{ margin: "10px 0" }}>
-          <Typography variant="h5" component="h2">
-            {conditionalText}
-          </Typography>
-        </div>
-      </DialogTitle>
-      <DialogContent
-        style={{
-          paddingTop: "0px",
-        }}
-        id="modal-slide-description"
-        className={classes.modalBody}
-      >
-          <h1>Testing.</h1>
-      </DialogContent>
+        {props.popupState !== "" ? renderPopupContent() : ""}
+      </div>
     </Dialog>
   );
-  */
 };
+*/
 
 export default PopupModal;

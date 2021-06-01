@@ -1,6 +1,8 @@
 import React from "react";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -9,6 +11,7 @@ import CardHeader from "components/Card/CardHeader";
 import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/home.js";
+
 //images
 import mrgGolfImg from "assets/img/miccosukee/pages/home/home-mrg.jpg";
 import evergladesImg from "assets/img/miccosukee/pages/home/home-airboats.jpg";

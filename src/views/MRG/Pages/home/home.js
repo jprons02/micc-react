@@ -86,6 +86,10 @@ const cardContent = [
     body:
       "High stakes Bingo, cutting edge gaming and South Florida’s most intuitive rewards program are our specialty!",
     buttonText: "Learn More",
+    linkObj: {
+      type: "internal",
+      link: "/miccosukee-one",
+    },
   },
   {
     id: 2,
@@ -94,6 +98,10 @@ const cardContent = [
     body:
       "Your comfort is our number one priority and the Resort’s 300+ rooms are designed with you in mind.",
     buttonText: "See Details",
+    linkObj: {
+      type: "internal",
+      link: "/accommodations",
+    },
   },
   {
     id: 3,
@@ -102,6 +110,10 @@ const cardContent = [
     body:
       "Foodies rejoice! From deli favorites to phenomenal fine dining, we’ve got delightful flavors for every taste.",
     buttonText: "Learn More",
+    linkObj: {
+      type: "internal",
+      link: "/bravo-bravissimo",
+    },
   },
   {
     id: 4,
@@ -110,6 +122,10 @@ const cardContent = [
     body:
       "Pamper yourself at our European-styled Spa & Salon with our licensed therapists and beauticians.",
     buttonText: "Spa Menu",
+    linkObj: {
+      type: "internal",
+      link: "/salon-spa",
+    },
   },
   {
     id: 5,
@@ -118,6 +134,10 @@ const cardContent = [
     body:
       "Our 1,200-seat Entertainment Dome is the home of live music, cabaret shows and sporting events.",
     buttonText: "Events List",
+    linkObj: {
+      type: "internal",
+      link: "/events",
+    },
   },
   {
     id: 6,
@@ -133,12 +153,20 @@ const cardContent = [
   },
 ];
 
-const Home = () => {
+const Home = (props) => {
   const classes = useStyles();
   const cardClasses = useCardStyles();
   const modalClasses = useModalStyles();
 
   let match = useRouteMatch();
+
+  const cardButtonClick = (card) => {
+    if (card.linkObj.type === "internal") {
+      props.history.push(`/mrg${card.linkObj.link}`);
+    } else {
+      return null;
+    }
+  };
 
   const renderCards = () => {
     return cardContent.map((card) => {
@@ -150,6 +178,7 @@ const Home = () => {
           title={card.title}
           body={card.body}
           buttonText={card.buttonText}
+          buttonFunction={() => cardButtonClick(card)}
         />
       );
     });

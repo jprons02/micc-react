@@ -1,23 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Link, withRouter, useRouteMatch } from "react-router-dom";
+import { withRouter, useRouteMatch } from "react-router-dom";
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
 
 // @material-ui/core components
-import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 
 // Styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
-import { events } from "assets/event/EventData/eventList.js";
 
 // Custom Components
 import Badge from "components/Badge/Badge.js";
-
-// Custom Functions
-import { setEstTime } from "services/setEstTime.js";
-import { urlify } from "services/urlify.js";
 
 // Covid content
 import MrgCovidInfo from "business_info/covid-19/mrgCovidInfo.js";
@@ -26,7 +20,7 @@ import AirboatsCovidInfo from "business_info/covid-19/airboatsCovidInfo.js";
 import VillageCovidInfo from "business_info/covid-19/villageCovidInfo.js";
 
 // Colors
-import { standardLinkColor, errorColor } from "themes/colors.js";
+import { errorColor } from "themes/colors.js";
 
 const businessContent = [
   {
