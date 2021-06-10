@@ -24,6 +24,7 @@ import Everglades from "./Pages/everglades";
 import Events from "./Pages/events";
 import EventPage from "./Pages/eventPage";
 import HistoryAdmin from "./Pages/historyAdmin";
+import MiccosukeeErrorPage from "views/Miccosukee/Pages/error/miccosukeeErrorPage.js";
 
 // styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
@@ -60,6 +61,7 @@ const Miccosukee = () => {
           <Route exact path={`${path}events`} component={Events} />
           <Route exact path={`${path}events/:eventId`} component={EventPage} />
           <Route exact path={`${path}history-admin`} component={HistoryAdmin} />
+          <Route exact path={`*`} component={MiccosukeeErrorPage} />
         </Switch>
         <PopupModal />
       </div>

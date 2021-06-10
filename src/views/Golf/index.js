@@ -24,6 +24,7 @@ import Rates from "views/Golf/Pages/rates/rates.js";
 import GolfEvents from "views/Golf/Pages/events/golfEvents.js";
 import GolfEventPage from "views/Golf/Pages/events/golfEventPage";
 import GolfCovidPage from "views/Golf/Pages/business_info/golfCovidPage.js";
+import GolfErrorPage from "views/Golf/Pages/error/golfErrorPage.js";
 
 // Business info
 import { golfBusinessInfo } from "business_info/genericInfo.js";
@@ -83,6 +84,7 @@ export default function Miccosukee(props) {
               path={`${match.path}/covid-19`}
               component={GolfCovidPage}
             />
+            <Route exact path={`${match.path}/*`} component={GolfErrorPage} />
           </Switch>
           <GolfFooter />
           <PopupModal />

@@ -24,6 +24,7 @@ import Museum from "views/Village/Pages/Museum/museum.js";
 import AlligatorDemos from "views/Village/Pages/AlligatorDemos/alligatorDemos.js";
 import OurLittleShack from "views/Village/Pages/OurLittleShack/ourLittleShack";
 import VillageCovidPage from "views/Village/Pages/business_info/villageCovidPage.js";
+import VillageErrorPage from "views/Village/Pages/error/villageErrorPage.js";
 
 // Business info
 import { villageBusinessInfo } from "business_info/genericInfo.js";
@@ -90,6 +91,11 @@ export default function Miccosukee(props) {
               exact
               path={`${match.path}/covid-19`}
               component={VillageCovidPage}
+            />
+            <Route
+              exact
+              path={`${match.path}/*`}
+              component={VillageErrorPage}
             />
           </Switch>
           <VillageFooter />

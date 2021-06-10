@@ -20,6 +20,7 @@ import CustomContactModal from "components/CustomModal/CustomContactModals/Custo
 // Pages
 import Home from "views/Airboats/Pages/home/home.js";
 import AirboatsCovidPage from "views/Airboats/Pages/business_info/airboatsCovidPage.js";
+import AirboatsErrorPage from "views/Airboats/Pages/error/airboatsErrorPage.js";
 
 // Business info
 import { airboatsBusinessInfo } from "business_info/genericInfo.js";
@@ -70,6 +71,11 @@ export default function Miccosukee(props) {
               exact
               path={`${match.path}/covid-19`}
               component={AirboatsCovidPage}
+            />
+            <Route
+              exact
+              path={`${match.path}/*`}
+              component={AirboatsErrorPage}
             />
           </Switch>
           <AirboatsFooter />

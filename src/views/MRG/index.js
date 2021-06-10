@@ -39,6 +39,7 @@ import BanquetsCatering from "views/MRG/Pages/banquetsCatering/banquetsCatering.
 import MrgEvents from "views/MRG/Pages/events/mrgEvents.js";
 import MrgEventPage from "views/MRG/Pages/events/mrgEventPage";
 import MrgCovidPage from "views/MRG/Pages/business_info/mrgCovidPage.js";
+import MrgErrorPage from "views/MRG/Pages/error/mrgErrorPage.js";
 
 // Business info
 import { mrgBusinessInfo } from "business_info/genericInfo.js";
@@ -165,6 +166,7 @@ export default function Miccosukee(props) {
               path={`${match.path}/covid-19`}
               component={MrgCovidPage}
             />
+            <Route exact path={`${match.path}/*`} component={MrgErrorPage} />
           </Switch>
           <MrgFooter />
           <PopupModal />

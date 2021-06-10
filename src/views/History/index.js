@@ -17,6 +17,7 @@ import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 // Pages
 import Home from "views/History/Pages/home/home.js";
 import ProgramsBusiness from "views/History/Pages/programsBusiness/programsBusiness.js";
+import HistoryErrorPage from "views/History/Pages/error/historyErrorPage.js";
 
 // services
 import { popupManager } from "services/popups/popupManager";
@@ -48,6 +49,7 @@ export default function Miccosukee(props) {
             path={`${match.path}/programs`}
             component={ProgramsBusiness}
           />
+          <Route exact path={`${match.path}/*`} component={HistoryErrorPage} />
         </Switch>
         <PopupModal />
         <HistoryFooter />

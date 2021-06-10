@@ -21,6 +21,7 @@ import Home from "views/Administration/Pages/home/home.js";
 import PoliceHistory from "views/Administration/Pages/Police/policeHistory.js";
 import PoliceLocations from "views/Administration/Pages/Police/policeLocations.js";
 import SpecializedUnits from "views/Administration/Pages/Police/specializedUnits";
+import AdministrationErrorPage from "views/Administration/Pages/error/administrationErrorPage.js";
 
 // services
 import { popupManager } from "services/popups/popupManager";
@@ -79,6 +80,11 @@ export default function Miccosukee(props) {
             exact
             path={`${match.path}/police/specialized-units`}
             component={SpecializedUnits}
+          />
+          <Route
+            exact
+            path={`${match.path}/*`}
+            component={AdministrationErrorPage}
           />
         </Switch>
         <AdministrationFooter />
