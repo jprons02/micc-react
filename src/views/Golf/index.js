@@ -1,5 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  useRouteMatch,
+  useLocation,
+  Link,
+} from "react-router-dom";
 
 // Context
 import { TeeTimeProvider } from "contexts/TeeTimeContext.js";
@@ -16,6 +22,7 @@ import GolfHeader from "components/CustomHeaders/GolfHeader.js";
 import GolfFooter from "components/CustomFooters/GolfFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
+import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
 
 // Pages
 import Home from "views/Golf/Pages/home/home.js";
@@ -69,6 +76,26 @@ export default function Miccosukee(props) {
       <TeeTimeProvider>
         <div>
           <GolfHeader />
+          <StandardAlert
+            message={
+              <div>
+                <b>
+                  Click
+                  <Link
+                    style={{ color: "white", fontWeight: "800" }}
+                    to={`${match.path}/covid-19`}
+                  >
+                    {" "}
+                    HERE{" "}
+                  </Link>
+                  for the Golf &amp; Country Club COVID-19 guidelines.
+                </b>
+              </div>
+            }
+            close
+            color="info"
+            icon="info_outline"
+          />
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route exact path={`${match.path}/courses`} component={Courses} />

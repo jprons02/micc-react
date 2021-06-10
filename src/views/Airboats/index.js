@@ -1,5 +1,11 @@
 import React, { useContext, useEffect } from "react";
-import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  useRouteMatch,
+  useLocation,
+  Link,
+} from "react-router-dom";
 
 // Context
 import { TeeTimeProvider } from "contexts/TeeTimeContext.js";
@@ -16,6 +22,7 @@ import AirboatsHeader from "components/CustomHeaders/AirboatsHeader.js";
 import AirboatsFooter from "components/CustomFooters/AirboatsFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
+import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
 
 // Pages
 import Home from "views/Airboats/Pages/home/home.js";
@@ -27,6 +34,12 @@ import { airboatsBusinessInfo } from "business_info/genericInfo.js";
 
 // services
 import { popupManager } from "services/popups/popupManager";
+
+// Snackbar
+import SnackbarContent from "components/Snackbar/SnackbarContent.js";
+
+// theme colors
+import { standardLinkColor } from "themes/colors.js";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();
@@ -65,6 +78,16 @@ export default function Miccosukee(props) {
       <TeeTimeProvider>
         <div>
           <AirboatsHeader />
+          <StandardAlert
+            message={
+              <span>
+                <b>Airboat rides are suspended until further notice.</b>
+              </span>
+            }
+            close
+            color="danger"
+            icon="info_outline"
+          />
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route
