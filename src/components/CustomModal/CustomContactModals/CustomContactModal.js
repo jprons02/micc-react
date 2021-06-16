@@ -58,7 +58,7 @@ const ContactModal = (props) => {
             variant="h5"
             component="h2"
           >
-            Contact Us
+            {props.language ? "Contact Us" : "Contáctenos"}
           </Typography>
           <div
             style={{
@@ -93,7 +93,11 @@ const ContactModal = (props) => {
         id="modal-slide-description"
         className={classes.modalBody}
       >
-        <Contact entity={props.entity.name} closeModal={props.closeModal} />
+        <Contact
+          language={props.language}
+          entity={props.entity.name}
+          closeModal={props.closeModal}
+        />
       </DialogContent>
     </Dialog>
   );

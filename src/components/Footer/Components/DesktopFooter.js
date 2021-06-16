@@ -21,6 +21,7 @@ import styles from "assets/jss/material-kit-react/components/footerStyle.js";
 
 // Context
 import { SignupFormContext } from "contexts/SignupFormContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // Custom Functions
 import { inputErrorsExist } from "services/validateInput.js";
@@ -28,6 +29,7 @@ import { inputErrorsExist } from "services/validateInput.js";
 const useStyles = makeStyles(styles);
 
 const DesktopFooter = (props) => {
+  const language = useLanguage();
   const [formValues, setFormValues] = useContext(SignupFormContext);
 
   const classes = useStyles();
@@ -104,7 +106,7 @@ const DesktopFooter = (props) => {
                 <CustomInput
                   name="name"
                   id="name-desktop"
-                  label="Name"
+                  label={language ? "Name" : "Nombre"}
                   style={{
                     margin: 8,
                     marginLeft: "0px",
@@ -122,7 +124,7 @@ const DesktopFooter = (props) => {
                 <CustomInput
                   name="email"
                   id="email-desktop"
-                  label="Email"
+                  label={language ? "Email" : "Correo Electrónico"}
                   style={{
                     margin: 8,
                     marginLeft: "0px",
@@ -149,7 +151,7 @@ const DesktopFooter = (props) => {
                   onClick={props.onSubscribe}
                   usetheme="contained"
                 >
-                  SUBSCRIBE
+                  {language ? "SUBSCRIBE" : "SUSCRÍBASE"}
                 </Button>
               </ListItem>
             </GridItem>

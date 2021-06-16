@@ -19,15 +19,10 @@ import image1 from "assets/img/mrg/banquets/Slider_Banquets_1024x642-o27gjfiauxa
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
-// BusinessInfo
-import { mrgHours } from "business_info/hours.js";
-
-// Services
-import { renderPoiHours } from "services/renderPoiHours.js";
-
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { ContactFormContext } from "contexts/ContactFormContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
@@ -43,6 +38,7 @@ const sliderContent = [
 ];
 
 const BanquetsCatering = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const [showContactModal, setShowContactModal] = useContext(
@@ -68,24 +64,22 @@ const BanquetsCatering = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Banquets &amp; Catering</h2>
+              <h2>{language ? "Banquets & Catering" : "español"}</h2>
               <p>
-                Thanks to our top-notch banquet and convention facilities,
-                Miccosukee Resort &amp; Gaming is prepared to create an
-                unforgettable experience for you and your guests. Whether it’s
-                an intimate gathering or a celebration of up-to 1,200 attendees,
-                we accommodate events of all sizes.
+                {language
+                  ? "Thanks to our top-notch banquet and convention facilities, Miccosukee Resort & Gaming is prepared to create an unforgettable experience for you and your guests. Whether it’s an intimate gathering or a celebration of up-to 1,200 attendees, we accommodate events of all sizes."
+                  : "español"}
               </p>
 
               <p>
-                From corporate conferences in our executive meeting rooms to
-                large-scale wedding bashes in our banquet hall, our event
-                specialists and culinary team will ensure every one of your
-                guests receives VIP treatment.
+                {language
+                  ? "From corporate conferences in our executive meeting rooms to large-scale wedding bashes in our banquet hall, our event specialists and culinary team will ensure every one of your guests receives VIP treatment."
+                  : "español"}
               </p>
               <p>
-                Ready to host your next event or meeting at Miccosukee Resort
-                &amp; Gaming? Call us at{" "}
+                {language
+                  ? "Ready to host your next event or meeting at Miccosukee Resort & Gaming? Call us at "
+                  : "español "}
                 <a href="tel:+13059252555">
                   <Typography variant="inherit" color="primary">
                     305-925-2555
@@ -94,7 +88,7 @@ const BanquetsCatering = () => {
                 .
               </p>
               <Button onClick={handleClick} usetheme="contained">
-                CONTACT US
+                {language ? "CONTACT US" : "español"}
               </Button>
             </div>
           </GridItem>

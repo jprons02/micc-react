@@ -35,6 +35,7 @@ import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
 
 // Context
 import { TeeTimeContext } from "contexts/TeeTimeContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const cardStyles = {
   cardTitle,
@@ -47,6 +48,7 @@ const useModalStyles = makeStyles(modalStyle);
 const useCardStyles = makeStyles(cardStyles);
 
 const Home = () => {
+  const language = useLanguage();
   const classes = useStyles();
   const cardClasses = useCardStyles();
 
@@ -59,44 +61,16 @@ const Home = () => {
       bgVideo: golfVid,
       gradient: ".4",
       header: "GOLF & COUNTRY CLUB",
-      subHeader:
-        "Picturesque and challenging, our facility boasts a 27 hole, par 72",
+      subHeader: language
+        ? "Picturesque and challenging, our facility boasts a 27 hole, par 72"
+        : "Esta pintoresca y desafiante obra de arte tiene 27 hoyos con 72 como par del campo.",
       button: {
-        text: "Book A Tee Time",
+        text: language ? "Book A Tee Time" : "Reserve su Horario",
         link: "",
         clickFunction: () => setShowTeeTimeModal(true),
       },
     },
   ];
-
-  const testimonialCards = () => {
-    return (
-      <Card style={{ width: "20rem" }}>
-        <CardBody>
-          <h4 className={cardClasses.cardTitle}>Card Title</h4>
-          <h6 className={cardClasses.cardSubtitle}>Card Subtitle</h6>
-          <p>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a
-            href="#pablo"
-            className={cardClasses.cardLink}
-            onClick={(e) => e.preventDefault()}
-          >
-            Card link
-          </a>
-          <a
-            href="#pablo"
-            className={cardClasses.cardLink}
-            onClick={(e) => e.preventDefault()}
-          >
-            Another link
-          </a>
-        </CardBody>
-      </Card>
-    );
-  };
 
   return (
     <React.Fragment>
@@ -104,13 +78,14 @@ const Home = () => {
       <RaisedContainer>
         <div className={classes.welcomeContainer}>
           <Typography className={classes.welcome} paragraph component="h1">
-            Championship Golf in the Heart of Kendall
+            {language
+              ? "Championship Golf in the Heart of Kendall"
+              : "Torneos de Golf en el Centro de Kendall"}
           </Typography>
           <Typography className={classes.subWelcome} paragraph component="h3">
-            The Miccosukee Golf &amp; Country Club has hosted many LPGA and PGA
-            events, including the Miccosukee Championship. In the heart of
-            Kendall, this Mark Mahannah-designed masterpiece is considered by
-            many to have the best layout in South Florida.
+            {language
+              ? "The Miccosukee Golf &amp; Country Club has hosted many LPGA and PGA events, including the Miccosukee Championship. In the heart of Kendall, this Mark Mahannah-designed masterpiece is considered by many to have the best layout in South Florida."
+              : "El Miccosukee Golf & Country Club ha sido anfitrión de muchos eventos LPGA y PGA, entre los que se incluye el Campeonato Miccosukee. Exclusivamente diseñado por Mark Mahannah, es considerado uno de los mejores campos de golf en el sur de la Florida y está ubicado en la elegante zona de Kendall."}
           </Typography>
           <hr className={classes.hr} />
           <GridContainer style={{ marginTop: "60px" }} justify="center">
@@ -121,8 +96,9 @@ const Home = () => {
             >
               <MonetizationOnIcon className={classes.icons} color="primary" />
               <p className={classes.iconText}>
-                With its competitive prices, our course caters to amateur and
-                professional golfers alike.
+                {language
+                  ? "With its competitive prices, our course caters to amateur and professional golfers alike."
+                  : "Nuestro campo de golf tiene lugar para aficionados y profesionales, por eso podrá encontrar variedad en nuestros precios."}
               </p>
             </GridItem>
             <GridItem
@@ -132,8 +108,9 @@ const Home = () => {
             >
               <TodayIcon className={classes.icons} color="primary" />
               <p className={classes.iconText}>
-                Our golf course is open to the public. Browse and book tee times
-                online.
+                {language
+                  ? "Our golf course is open to the public. Browse and book tee times online."
+                  : "Nuestro campo de golf está abierto al público. Ingrese y reserve el horario por internet."}
               </p>
             </GridItem>
             <GridItem
@@ -143,8 +120,9 @@ const Home = () => {
             >
               <GolfCourseIcon className={classes.icons} color="primary" />
               <p className={classes.iconText}>
-                Located in the heart of Kendall, we are an ideal venue for golf
-                outings and events.
+                {language
+                  ? "Located in the heart of Kendall, we are an ideal venue for golf outings and events."
+                  : "Ubicado en el centro de Kendall, somos el lugar ideal para eventos de golf."}
               </p>
             </GridItem>
           </GridContainer>

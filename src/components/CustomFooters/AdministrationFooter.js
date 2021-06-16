@@ -11,8 +11,10 @@ import { airboatsSocialMedia } from "business_info/socialMedia.js";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const AdministrationFooter = () => {
+  const language = useLanguage();
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );

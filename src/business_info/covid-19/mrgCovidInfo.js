@@ -7,7 +7,7 @@ import Collapse from "@material-ui/core/Collapse";
 
 import mrgCovidVideo from "assets/video/GAMING-SAFE_MRG.mp4";
 
-const MrgCovidInfo = () => {
+const MrgCovidInfo = (props) => {
   const sectionStyle = { marginTop: "20px" };
   const sectionHeaderStyle = { textDecoration: "underline", cursor: "pointer" };
   const ulStyle = { marginTop: "0px" };
@@ -49,10 +49,20 @@ const MrgCovidInfo = () => {
     return (
       <React.Fragment>
         <p style={paddingLeftStyle}>
-          <b>{mrgStatus.accommodations.isOpen ? "OPEN:" : "CLOSED:"}</b>
+          <b>
+            {mrgStatus.accommodations.isOpen
+              ? props.language
+                ? "OPEN:"
+                : "ABIERTO:"
+              : props.language
+              ? "CLOSED:"
+              : "CERRADO"}
+          </b>
         </p>
         <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
-          <li style={liStyle}>{mrgStatus.accommodations.details}</li>
+          <li style={liStyle}>
+            {mrgStatus.accommodations.details(props.language)}
+          </li>
         </ul>
       </React.Fragment>
     );
@@ -64,11 +74,11 @@ const MrgCovidInfo = () => {
       return mrgStatus.gaming.map((item) => {
         if (item.isOpen) {
           return (
-            <React.Fragment key={item.name}>
-              <li style={liStyle}>{item.name}</li>
+            <React.Fragment key={item.name(props.language)}>
+              <li style={liStyle}>{item.name(props.language)}</li>
               {item.details ? (
                 <ul style={innerUlStyle}>
-                  {item.details.map((detailItem) => (
+                  {item.details(props.language).map((detailItem) => (
                     <li key={detailItem} style={liStyle}>
                       {detailItem}
                     </li>
@@ -84,11 +94,11 @@ const MrgCovidInfo = () => {
       return mrgStatus.gaming.map((item) => {
         if (!item.isOpen) {
           return (
-            <React.Fragment key={item.name}>
-              <li style={liStyle}>{item.name}</li>
+            <React.Fragment key={item.name(props.language)}>
+              <li style={liStyle}>{item.name(props.language)}</li>
               {item.details ? (
                 <ul style={innerUlStyle}>
-                  {item.details.map((detailItem) => (
+                  {item.details(props.language).map((detailItem) => (
                     <li key={detailItem} style={liStyle}>
                       {detailItem}
                     </li>
@@ -108,7 +118,7 @@ const MrgCovidInfo = () => {
         ) : (
           <React.Fragment>
             <p style={paddingLeftStyle}>
-              <b>OPEN:</b>
+              <b>{props.language ? "OPEN:" : "ABIERTO:"}</b>
             </p>
             <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
               {renderOpenGaming()}
@@ -121,7 +131,7 @@ const MrgCovidInfo = () => {
         ) : (
           <React.Fragment>
             <p style={paddingLeftStyle}>
-              <b>CLOSED:</b>
+              <b>{props.language ? "CLOSED:" : "CERRADO"}</b>
             </p>
             <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
               {renderClosedGaming()}
@@ -138,11 +148,11 @@ const MrgCovidInfo = () => {
       return mrgStatus.dining.map((item) => {
         if (item.isOpen) {
           return (
-            <React.Fragment key={item.name}>
-              <li style={liStyle}>{item.name}</li>
+            <React.Fragment key={item.name(props.language)}>
+              <li style={liStyle}>{item.name(props.language)}</li>
               {item.details ? (
                 <ul style={innerUlStyle}>
-                  {item.details.map((detailItem) => (
+                  {item.details(props.language).map((detailItem) => (
                     <li key={detailItem} style={liStyle}>
                       {detailItem}
                     </li>
@@ -158,11 +168,11 @@ const MrgCovidInfo = () => {
       return mrgStatus.dining.map((item) => {
         if (!item.isOpen) {
           return (
-            <React.Fragment key={item.name}>
-              <li style={liStyle}>{item.name}</li>
+            <React.Fragment key={item.name(props.language)}>
+              <li style={liStyle}>{item.name(props.language)}</li>
               {item.details ? (
                 <ul style={innerUlStyle}>
-                  {item.details.map((detailItem) => (
+                  {item.details(props.language).map((detailItem) => (
                     <li key={detailItem} style={liStyle}>
                       {detailItem}
                     </li>
@@ -181,7 +191,7 @@ const MrgCovidInfo = () => {
         ) : (
           <React.Fragment>
             <p style={paddingLeftStyle}>
-              <b>OPEN:</b>
+              <b>{props.language ? "OPEN:" : "ABIERTO"}</b>
             </p>
             <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
               {renderOpenDining()}
@@ -193,7 +203,7 @@ const MrgCovidInfo = () => {
         ) : (
           <React.Fragment>
             <p style={paddingLeftStyle}>
-              <b>CLOSED:</b>
+              <b>{props.language ? "CLOSED:" : "CERRADO"}</b>
             </p>
             <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
               {renderClosedDining()}
@@ -209,11 +219,11 @@ const MrgCovidInfo = () => {
       return mrgStatus.amenities.map((item) => {
         if (item.isOpen) {
           return (
-            <React.Fragment key={item.name}>
-              <li style={liStyle}>{item.name}</li>
+            <React.Fragment key={item.name(props.language)}>
+              <li style={liStyle}>{item.name(props.language)}</li>
               {item.details ? (
                 <ul style={innerUlStyle}>
-                  {item.details.map((detailItem) => (
+                  {item.details(props.language).map((detailItem) => (
                     <li key={detailItem} style={liStyle}>
                       {detailItem}
                     </li>
@@ -229,11 +239,11 @@ const MrgCovidInfo = () => {
       return mrgStatus.amenities.map((item) => {
         if (!item.isOpen) {
           return (
-            <React.Fragment key={item.name}>
-              <li style={liStyle}>{item.name}</li>
+            <React.Fragment key={item.name(props.language)}>
+              <li style={liStyle}>{item.name(props.language)}</li>
               {item.details ? (
                 <ul style={innerUlStyle}>
-                  {item.details.map((detailItem) => (
+                  {item.details(props.language).map((detailItem) => (
                     <li key={detailItem} style={liStyle}>
                       {detailItem}
                     </li>
@@ -253,7 +263,7 @@ const MrgCovidInfo = () => {
         ) : (
           <React.Fragment>
             <p style={paddingLeftStyle}>
-              <b>OPEN:</b>
+              <b>{props.language ? "OPEN:" : "ABIERTO"}</b>
             </p>
             <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
               {renderOpenAmenities()}
@@ -265,7 +275,7 @@ const MrgCovidInfo = () => {
         ) : (
           <React.Fragment>
             <p style={paddingLeftStyle}>
-              <b>CLOSED:</b>
+              <b>{props.language ? "CLOSED:" : "CERRADO"}</b>
             </p>
             <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
               {renderClosedAmenities()}
@@ -279,7 +289,11 @@ const MrgCovidInfo = () => {
   return (
     <div style={{ marginBottom: "30px" }}>
       <div style={{ marginTop: "10px" }}>
-        <h3>Miccosukee Resort &amp; Gaming Reopening Details</h3>
+        <h3>
+          {props.language
+            ? "Miccosukee Resort &amp; Gaming Reopening Details"
+            : "Miccosukee Resort & Gaming Detalles de Reapertura"}
+        </h3>
         <video
           style={{ margin: "5px 0 15px 0", width: "100%", maxWidth: "500px" }}
           src={mrgCovidVideo}
@@ -287,27 +301,19 @@ const MrgCovidInfo = () => {
           controlsList="nodownload"
         />
         <p>
-          Miccosukee Resort and Gaming is now increasing the capacity from 1,100
-          to 1,200 patrons (1,500 Thursday – Saturday). We are excited that more
-          of south Florida will be able to come and enjoy our gaming floor while
-          remaining safe. All of our guidelines will remain in effect.
+          {props.language
+            ? "At this time, all employees returning to work have tested negative for COVID-19 and have all been trained on how to properly prevent thespread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee Resort &amp; Gaming asks any employee or patron who is exhibiting symptoms to please remain at home for the safety of all other employees and guests. Miccosukee Resort &amp; Gaming is very proud to be able to serve its South Florida community once again."
+            : "Hemos realizado controles a todos nuestros empleados y todos han dado negativo al COVID-19. Además los hemos capacitado sobre cómo prevenir su contagio. Debido a la pandemia provocada por el brote de COVID-19, Miccosukee Resort & Gaming le pide a todos los empleados y clientes que tengan síntomas que por favor permanezcan en sus casas por la seguridad de todos. Miccosukee Resort & Gaming se enorgullece de volver a colaborar con la comunidad del sur de la Florida."}
         </p>
         <p>
-          At this time, all employees returning to work have tested negative for
-          COVID-19 and have all been trained on how to properly prevent the
-          spread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee
-          Resort &amp; Gaming asks any employee or patron who is exhibiting
-          symptoms to please remain at home for the safety of all other
-          employees and guests. Miccosukee Resort &amp; Gaming is very proud to
-          be able to serve its South Florida community once again.
+          {props.language
+            ? "In addition to existing health and hygiene practices, we will be regularly disinfecting all areas with Electrostatic Sprayers."
+            : "Además de las prácticas de higiene y salud actuales, estaremos desinfectando regularmente todas las áreas con rociadores electroestáticos."}
         </p>
         <p>
-          In addition to existing health and hygiene practices, we will be
-          regularly disinfecting all areas with Electrostatic Sprayers.
-        </p>
-        <p>
-          We thank you for your continued patience as we take these additional
-          measures to ensure a safe environment for everyone.
+          {props.language
+            ? "We thank you for your continued patience as we take these additional measures to ensure a safe environment for everyone."
+            : "Agradecemos su paciencia mientras tomamos estas medidas adicionales para garantizar un ambiente seguro para todos."}
         </p>
       </div>
       <div style={sectionStyle}>
@@ -315,25 +321,29 @@ const MrgCovidInfo = () => {
           onClick={() => setMrg({ ...mrg, hours: !mrg.hours })}
           style={sectionHeaderStyle}
         >
-          Hours of Operation
+          {props.language ? "Hours of Operation" : "Horarios"}
         </h4>
         <Collapse in={mrg.hours}>
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {mrgHours.weekday.days}: {mrgHours.weekday.open} –{" "}
+              {mrgHours.weekday.days(props.language)}: {mrgHours.weekday.open} –{" "}
               {mrgHours.weekday.close}
             </li>
             <ul style={innerUlStyle}>
-              <li style={liStyle}>{mrgHours.weekday.details}</li>
+              <li style={liStyle}>
+                {mrgHours.weekday.details(props.language)}
+              </li>
             </ul>
           </ul>
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {mrgHours.weekend.days}: {mrgHours.weekend.open} –{" "}
+              {mrgHours.weekend.days(props.language)}: {mrgHours.weekend.open} –{" "}
               {mrgHours.weekend.close}
             </li>
             <ul style={innerUlStyle}>
-              <li style={liStyle}>{mrgHours.weekend.details}</li>
+              <li style={liStyle}>
+                {mrgHours.weekend.details(props.language)}
+              </li>
             </ul>
           </ul>
         </Collapse>
@@ -343,46 +353,58 @@ const MrgCovidInfo = () => {
           onClick={() => setMrg({ ...mrg, entryDetails: !mrg.entryDetails })}
           style={sectionHeaderStyle}
         >
-          Entry Details
+          {props.language ? "Entry Details" : "Normas de Acceso"}
         </h4>
         <Collapse in={mrg.entryDetails}>
           <ul style={ulStyle}>
             <li style={liStyle}>
-              1,200 total capacity (1,500 Thursday – Saturday)
+              {props.language
+                ? "All guests must have have a government issued photo ID"
+                : "Todos los clientes deben tener un documento de identidad con fotografía emitido por el gobierno"}
             </li>
             <li style={liStyle}>
-              All guests must have have a government issued photo ID
+              {props.language
+                ? "There will be one designated entrance and one designated exit"
+                : "Encontrará designada una puerta para el ingreso y otra diferente para la salida"}
             </li>
             <li style={liStyle}>
-              There will be one designated entrance and one designated exit
+              {props.language
+                ? "Must be 21 or older"
+                : "Debe ser mayor de 21 años"}
             </li>
-            <li style={liStyle}>Must be 21 or older</li>
-            <li style={liStyle}>Must be subject to a temperature test</li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                If temperature test is too high, guests will not be permitted
-                entry
-              </li>
-            </ul>
-            <li style={liStyle}>Must wear a mask at all times</li>
-            <li style={liStyle}>Must not smoke inside</li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                There will be designated smoking areas outside
-              </li>
-            </ul>
             <li style={liStyle}>
-              There have been disinfecting wipe dispensers installed all around
-              the facility
+              {props.language
+                ? "Must wear a mask at all times"
+                : "En todo momento deberá usar su mascarilla"}
+            </li>
+            <li style={liStyle}>
+              {props.language
+                ? "Must not smoke inside"
+                : "Será prohibido fumar adentro"}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
-                Guests must wipe down each machine after use
+                {props.language
+                  ? "There will be designated smoking areas outside"
+                  : "Se han designado zonas externas exclusivamente para fumadores"}
               </li>
             </ul>
             <li style={liStyle}>
-              No RV’s, eighteen-wheeler rigs or vehicles 10ft or higher are
-              allowed on property
+              {props.language
+                ? "There have been disinfecting wipe dispensers installed all around the facility"
+                : "Se han instalado dispensadores de toallas desinfectantes alrededor de toda la instalación"}
+            </li>
+            <ul style={innerUlStyle}>
+              <li style={liStyle}>
+                {props.language
+                  ? "Guests must wipe down each machine after use"
+                  : "Todas las máquinas deberán ser desinfectadas con una toalla al finalizar su uso"}
+              </li>
+            </ul>
+            <li style={liStyle}>
+              {props.language
+                ? "No RV’s, eighteen-wheeler rigs or vehicles 10ft or higher are allowed on property"
+                : "No se permiten RV’s, camiones de dieciocho ruedas o vehículos de 10 pies o más de altura en la propiedad"}
             </li>
           </ul>
         </Collapse>
@@ -392,79 +414,88 @@ const MrgCovidInfo = () => {
           onClick={() => setMrg({ ...mrg, gaming: !mrg.gaming })}
           style={sectionHeaderStyle}
         >
-          Gaming
+          {props.language ? "Gaming" : "Juegos de Azar"}
         </h4>
         <Collapse in={mrg.gaming}>
           {renderGaming()}
           <p style={paddingLeftStyle}>
-            <b>Miccosukee One Program Covid-19 Impact FAQs:</b>
+            <b>
+              {props.language
+                ? "Miccosukee One Program Covid-19 Impact FAQs:"
+                : "Miccosukee One Program Impacto del COVID-19 Preguntas Frecuentes:"}
+            </b>
           </p>
           <ul style={{ marginTop: "0px", paddingLeft: "50px" }}>
             <li style={liStyle}>
-              Will I lose my card status due to the COVID-19 closure?
+              {props.language
+                ? "Will I lose my card status due to the COVID-19 closure?"
+                : "¿Podría perder el nivel de mi tarjeta debido al cierre por COVID-19?"}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
-                Miccosukee Resort &amp; Gaming will not downgrade any accounts
-                from the impacted January – June 2020 term. All Miccosukee One
-                players will automatically retain their current card tier
-                through December 31, 2020 unless an eligible upgrade is earned.
+                {props.language
+                  ? "Miccosukee Resort & Gaming will not downgrade any accounts from the impacted January – June 2020 term. All Miccosukee One players will automatically retain their current card tier through December 31, 2020 unless an eligible upgrade is earned."
+                  : "Miccosukee Resort & Gaming no rebajará ninguna cuenta debido al impacto del COVID -19 ocurrido entre enero y junio de 2020. Todos los jugadores de Miccosukee One mantendrán su nivel actual hasta el 31 de diciembre del 2020 salvo que hayan ganado un ascenso."}
               </li>
             </ul>
             <li style={liStyle}>
-              Will I receive credit for the points I have earned towards being
-              upgraded?
+              {props.language
+                ? "Will I receive credit for the points I have earned towards being upgraded?"
+                : "¿Recibiré crédito por los puntos que ahorre para ascender?"}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
-                We know you’ve played hard to reach the next tier. Since
-                circumstances beyond our control have resulted in less available
-                play time for you, we are lowering the required point threshold
-                for this impacted January – June 2020 term based on the quantity
-                of days that our doors were closed to you. All tier point
-                earnings will accrue until 11:59 PM on June 30, 2020.
+                {props.language
+                  ? "We know you’ve played hard to reach the next tier. Since circumstances beyond our control have resulted in less available play time for you, we are lowering the required point threshold for this impacted January – June 2020 term based on the quantity of days that our doors were closed to you. All tier point earnings will accrue until 11:59 PM on June 30, 2020."
+                  : "Sabemos que te has esforzado mucho para ascender de nivel. Por ello, debido a las públicas circunstancias de fuerza mayor que provocaron que haya menos tiempo disponible para jugar, realizamos una reducción en el límite de puntos requeridos para el plazo de enero a junio del 2020. Esto implica que, basándonos en la totalidad de los días que estuvimos cerrados todos los puntos ahorrados se acumularán hasta las 11:59 PM del 30 de junio."}
               </li>
             </ul>
             <li style={liStyle}>
-              What if my birthday passed while you were closed?
+              {props.language
+                ? "What if my birthday passed while you were closed?"
+                : "¿Qué pasa si mi cumpleaños paso mientras estaban cerrados?"}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
-                We are so saddened that we were unable to celebrate with you! If
-                you had an existing account and could not visit us on your
-                birthday due to the resort being closed, please visit the
-                Player’s Club before June 30, 2020 to claim a $25 Quarantine
-                Consolation voucher.
+                {props.language
+                  ? "We are so saddened that we were unable to celebrate with you! If you had an existing account and could not visit us on your birthday due to the resort being closed, please visit the Player’s Club before June 30, 2020 to claim a $25 Quarantine Consolation voucher."
+                  : "¡Estamos muy tristes de que no pudimos festejar con usted! Si tenían una cuenta existente y no pudo visitarnos en su cumpleaños por el cierre del hotel, por favor visite el Player’s Club antes del 30 de junio del 2020 para reclamar un cupón de Quarantine Consolation de $25."}
               </li>
             </ul>
             <li style={liStyle}>
-              What if my birthday voucher expires before I can use it?
+              {props.language
+                ? "What if my birthday voucher expires before I can use it?"
+                : "¿Qué pasa si mi cupón de cumpleaños expira antes de que lo pueda usar?"}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
-                All meal vouchers issued on or after March 17 will be valid
-                until 11:59 PM on December 30, 2020.
+                {props.language
+                  ? "All meal vouchers issued on or after March 17 will be valid until 11:59 PM on December 30, 2020."
+                  : "Todos los cupones de comida emitidos en o después del 17 de marzo serán válidos hasta las 11:59 PM del 30 de diciembre de 2020."}
               </li>
             </ul>
             <li style={liStyle}>
-              Will I be able to retrieve the Player’s Club points that expired
-              during the closure period?
+              {props.language
+                ? "Will I be able to retrieve the Player’s Club points that expired during the closure period?"
+                : "¿Voy a poder recuperar los puntos del Player’s Club que expiraron durante el periodo de cierre?"}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
-                If your Miccosukee One account has been dormant for a full
-                calendar year and you experienced a point expiration during the
-                dates that we were closed, please visit the Player’s Club by
-                11:59 PM on July 16, 2020 for a refund of the expired points.
+                {props.language
+                  ? "If your Miccosukee One account has been dormant for a full calendar year and you experienced a point expiration during the dates that we were closed, please visit the Player’s Club by 11:59 PM on July 16, 2020 for a refund of the expired points."
+                  : "Si su cuenta Miccosukee One ha estado inactiva por un año calendario completo y sus puntos expiraron durante los días que estuvimos cerrados, por favor visite el Player’s Club antes de las 11:59 PM el 16 de julio del 2020 para un reembolso de los puntos expirados."}
               </li>
             </ul>
             <li style={liStyle}>
-              What happened to drawing entries earned before Miccosukee closed?
+              {props.language
+                ? "What happened to drawing entries earned before Miccosukee closed?"
+                : "¿Qué pasó con las entradas ahorradas antes que el Miccosukee cerrara?"}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
-                All drawings were cancelled at the discretion of management and
-                thus any accrued entries were discarded.
+                {props.language
+                  ? "All drawings were cancelled at the discretion of management and thus any accrued entries were discarded."
+                  : "Todos los sorteos fueron cancelados a la discreción de la administración y todas las entradas acumuladas fueron descartadas."}
               </li>
             </ul>
           </ul>
@@ -475,13 +506,9 @@ const MrgCovidInfo = () => {
               lineHeight: "10px",
             }}
           >
-            Once disqualification is declared, it is final. Offers are subject
-            to change or cancellation, without notice, at the discretion of
-            management. See a Player’s Club Attendant for details. Any
-            individual that has self-excluded or been trespassed by Miccosukee
-            Resort &amp; Gaming may not be enrolled or participate in the
-            Miccosukee One program without written documentation that such
-            status has been rescinded.
+            {props.language
+              ? "Once disqualification is declared, it is final. Offers are subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation that such status has been rescinded."
+              : "Cualquier individuo que ha sido autoexcluido o ha traspasado en o por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin documentación de que el status ha cambiado. Una vez que han declarado descalificación, es final. La oferta puede cambiar o ser cancelada, sin noticia, a la discreción de la administración. Un asistente del Player’s Club tendrá más detalles."}
           </span>
         </Collapse>
       </div>
@@ -490,7 +517,7 @@ const MrgCovidInfo = () => {
           onClick={() => setMrg({ ...mrg, dining: !mrg.dining })}
           style={sectionHeaderStyle}
         >
-          Dining &amp; Nightlife
+          {props.language ? "Dining & Nightlife" : "Restaurantes & Bares"}
         </h4>
         <Collapse in={mrg.dining}>{renderDining()}</Collapse>
       </div>
@@ -501,7 +528,7 @@ const MrgCovidInfo = () => {
           }
           style={sectionHeaderStyle}
         >
-          Accommodations
+          {props.language ? "Accommodations" : "Alojamiento"}
         </h4>
         <Collapse in={mrg.accommodations}>{renderAccommodations()}</Collapse>
       </div>
@@ -510,7 +537,7 @@ const MrgCovidInfo = () => {
           onClick={() => setMrg({ ...mrg, amenities: !mrg.amenities })}
           style={sectionHeaderStyle}
         >
-          Amenities
+          {props.language ? "Amenities" : "Comodidades"}
         </h4>
         <Collapse in={mrg.amenities}>{renderAmenities()}</Collapse>
       </div>

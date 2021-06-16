@@ -19,36 +19,40 @@ import GolfCovidInfo from "business_info/covid-19/golfCovidInfo.js";
 import AirboatsCovidInfo from "business_info/covid-19/airboatsCovidInfo.js";
 import VillageCovidInfo from "business_info/covid-19/villageCovidInfo.js";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 // Colors
 import { errorColor } from "themes/colors.js";
-
-const businessContent = [
-  {
-    category: "Resort & Gaming",
-    component: <MrgCovidInfo />,
-  },
-  {
-    category: "Golf",
-    component: <GolfCovidInfo />,
-  },
-  {
-    category: "Village",
-    component: <VillageCovidInfo />,
-  },
-  {
-    category: "Airboats",
-    component: <AirboatsCovidInfo />,
-  },
-];
 
 const useStyles = makeStyles(styles);
 
 const InfoPage = ({ history, badgeColor, entityMargin }) => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const [category, setCategory] = useState("all");
 
   let match = useRouteMatch();
+
+  const businessContent = [
+    {
+      category: "Resort & Gaming",
+      component: <MrgCovidInfo language={language} />,
+    },
+    {
+      category: "Golf",
+      component: <GolfCovidInfo language={language} />,
+    },
+    {
+      category: "Village",
+      component: <VillageCovidInfo language={language} />,
+    },
+    {
+      category: "Airboats",
+      component: <AirboatsCovidInfo language={language} />,
+    },
+  ];
 
   useEffect(() => {
     // Set the default category depending on url.

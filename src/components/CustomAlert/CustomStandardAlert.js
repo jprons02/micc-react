@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
@@ -23,6 +23,28 @@ export default function StandardAlert(props) {
   const classes = useStyles();
   const language = useLanguage();
   var action = [];
+
+  // Needed Alert to rerender when language is switched
+  useEffect(() => {
+    setAlert(() => {
+      return (
+        <Snack
+          message={
+            <div>
+              {snackIcon}
+              {message}
+              {close !== undefined ? action : null}
+            </div>
+          }
+          classes={{
+            root: classes.root + " " + classes[color],
+            message: classes.message + " " + classes.container,
+          }}
+          style={{ margin: "0" }}
+        />
+      );
+    });
+  }, [language]);
 
   // CLOSES ALERT
   const closeAlert = () => {

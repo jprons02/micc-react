@@ -20,6 +20,9 @@ import image3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3];
@@ -34,6 +37,7 @@ const sliderContent = [
 ];
 
 const Bingo = () => {
+  const language = useLanguage();
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -44,46 +48,58 @@ const Bingo = () => {
             <div className={classes.leftTextArea}>
               <h2>Bingo</h2>
               <p>
-                A South Florida staple since 1990, Miccosukee Resort &amp;
-                Gaming’s Bingo Hall is the high-stakes bingo room to try your
-                luck in the classic game of chance! With high payouts and plenty
-                of rewards through our Miccosukee One Rewards Program, our High
-                Stakes Bingo pays to play! Regardless of experience, it’s
-                perfect for single players, couples and large groups.
-              </p>
-              <p>
-                The Sawgrass Café is right smack in the middle of the bingo
-                action! Hot entrées, cool salads and delightful finger
-                foods—whether it’s before, during or after the numbers are
-                called—this spot has you covered. Sawgrass Café hours are
-                Sunday-Thursday, 11 AM – 1 AM, and Fridays-Saturdays, 11 AM – 2
-                AM.
+                {language
+                  ? "A South Florida staple since 1990, Miccosukee Resort & Gaming’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance! With high payouts and plenty of rewards through our Miccosukee One Rewards Program, our High Stakes Bingo pays to play! Regardless of experience, it’s perfect for single players, couples and large groups."
+                  : "¡Un establecimiento principal del Sur de la Florida desde 1990, la Sala de Bingo de Miccosukee Resort & Gaming es el lugar ideal para probar su suerte con el bingo de altas apuestas! ¡Con grandes premios y pagos a través de nuestro programa Miccosukee One, nuestro Bingo de Altas Apuestas le recompensa por jugar! Sin importar su nivel de experiencia, es el lugar perfecto para jugadores solos, parejas y grupos grandes."}
               </p>
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2021/03/BINGO-PROGRAM-APPROVED_WEB.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                VIEW PROGRAM
+                {language ? "VIEW PROGRAM" : "DETALLES DEL JUEGO"}
               </Button>
               <div style={{ marginTop: "25px" }}>
-                <h6>Bingo will operate on Thursday, Friday and Saturday</h6>
+                <h6>
+                  {language
+                    ? "Bingo will operate on Thursday, Friday and Saturday"
+                    : "Bingo operará jueves, viernes y sábado"}
+                </h6>
                 <ul>
-                  <li>Warm-ups begin at 6:30pm</li>
-                  <li>Regular session begins at 7:15pm</li>
-                  <li>Sales begin at 4:15pm</li>
-                </ul>
-                <h6>New safety measures:</h6>
-                <ul>
-                  <li>50% capacity</li>
                   <li>
-                    Patrons will be seated one seat apart from each other along
-                    with a shield guard placed directly in the middle of the
-                    table on all tables
+                    {language
+                      ? "Warm-ups begin at 6:30 P.M."
+                      : "Prácticas comienzan a las 6:30 P.M."}
                   </li>
                   <li>
-                    All gaming electronic devices will be sanitized prior to and
-                    after each use
+                    {language
+                      ? "Regular session begins at 7:15 P.M."
+                      : "Sesión regular comienza a las 7:15 P.M."}
+                  </li>
+                  <li>
+                    {language
+                      ? "Sales begin at 4:15 P.M."
+                      : "Ventas comienzan a las 4:15 P.M."}
+                  </li>
+                </ul>
+                <h6>
+                  {language
+                    ? "New safety measures:"
+                    : "Nuevas Medidas de Seguridad"}
+                </h6>
+                <ul>
+                  <li>
+                    {language ? "50% capacity" : "Operando al 50% de capacidad"}
+                  </li>
+                  <li>
+                    {language
+                      ? "Patrons will be seated one seat apart from each other along with a shield guard placed directly in the middle of the table on all tables"
+                      : "Jugadores tendrán una silla entre medio y un protector de seguridad frente a cada jugador colocado en el medio de cada mesa"}
+                  </li>
+                  <li>
+                    {language
+                      ? "All gaming electronic devices will be sanitized prior to and after each use"
+                      : "Todos los equipos electrónicos serán desinfectados antes y después de cada uso"}
                   </li>
                 </ul>
               </div>
@@ -101,23 +117,3 @@ const Bingo = () => {
 };
 
 export default Bingo;
-
-/*
-<h5>Bingo Schedule</h5>
-<ul>
- 	<li>Bingo will operate on Thursday, Friday and Saturday
-<ul>
- 	<li>Warm-ups begin at 6:30pm</li>
- 	<li>Regular session begins at 7:15pm</li>
- 	<li>Sales begin at 4:15pm</li>
-</ul>
-</li>
- 	<li>New safety measures:
-<ul>
- 	<li>50% capacity</li>
- 	<li>Patrons will be seated one seat apart from each other along with a shield guard placed directly in the middle of the table on all tables</li>
- 	<li>All gaming electronic devices will be sanitized prior to and after each use</li>
-</ul>
-</li>
-</ul>
-*/

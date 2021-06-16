@@ -3,8 +3,6 @@ import React from "react";
 // Core Components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Typography from "@material-ui/core/Typography";
-import Button from "components/CustomButtons/Button.js";
 
 // My Custom Components
 import RaisedContainer from "components/CustomSections/RaisedContainer.js";
@@ -26,6 +24,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2];
@@ -40,6 +41,7 @@ const sliderContent = [
 ];
 
 const CypressLounge = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -50,12 +52,11 @@ const CypressLounge = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Cypress Lounge</h2>
-              {renderPoiHours(mrgHours.poi.cypressLounge)}
+              {renderPoiHours(mrgHours.poi.cypressLounge, language)}
               <p>
-                The Cypress Lounge is home to daily beer specials and Monday
-                Night Football, caliente Miami HEAT action and more! Enjoy
-                sporting events year round on our large screen TVs in the middle
-                of South Florida’s hottest gaming action.
+                {language
+                  ? "The Cypress Lounge is home to daily beer specials and Monday Night Football, caliente Miami HEAT action and more! Enjoy sporting events year round on our large screen TVs in the middle of South Florida’s hottest gaming action."
+                  : "¡En Cypress Lounge tenemos especiales de cerveza todos los días, además de Futbol Americano los lunes en la noche, toda la acción caliente de los Miami HEAT, y mucho más! Disfruta de eventos deportivos todo el año en nuestros televisores de pantalla grande justo en el medio de toda la acción del casino."}
               </p>
             </div>
           </GridItem>

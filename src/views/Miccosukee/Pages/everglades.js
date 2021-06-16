@@ -40,7 +40,7 @@ const GamingGolf = () => {
   const cards = [
     {
       id: 1,
-      title: language ? "Indian Village" : "Resort & Gaming",
+      title: language ? "Indian Village" : "Indian Village",
       theme: "village",
       description: language
         ? "With supporting text below as a natural lead-in to additional content."
@@ -59,7 +59,7 @@ const GamingGolf = () => {
     },
     {
       id: 2,
-      title: language ? "Airboats" : "Golf & Country Club",
+      title: language ? "Airboats" : "Airboats",
       theme: airboatsBusinessInfo.name,
       description: language
         ? "With supporting text below as a natural lead-in to additional content."

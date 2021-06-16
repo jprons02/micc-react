@@ -23,6 +23,7 @@ import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
 // Context
 import { BookRoomContext } from "contexts/BookRoomContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // BusinessInfo
 import { mrgHours } from "business_info/hours.js";
@@ -44,6 +45,7 @@ const sliderContent = [
 ];
 
 const Accommodations = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const [showBookRoomModal, setShowBookRoomModal] = useContext(BookRoomContext);
@@ -56,26 +58,27 @@ const Accommodations = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Accommodations</h2>
-              {renderPoiHours(mrgHours.poi.accommodations)}
+              {renderPoiHours(mrgHours.poi.accommodations, language)}
               <p>
-                Standing at the edge of the magnificent Florida Everglades, the
-                Resort boasts rooms designed with comfort as the number one
-                priority as well as amazing views of the surrounding ecosystem.
+                {language
+                  ? "Standing at the edge of the magnificent Florida Everglades, the Resort boasts rooms designed with comfort as the number one priority as well as amazing views of the surrounding ecosystem."
+                  : "español"}
               </p>
               <p>
-                In addition to specific room amenities, all of our rooms
-                conveniently feature Wi- Fi, premium cable programming,
-                pay-per-view, in-room safe, flat screen TVs and a lot more.
+                {language
+                  ? "In addition to specific room amenities, all of our rooms conveniently feature Wi- Fi, premium cable programming, pay-per-view, in-room safe, flat screen TVs and a lot more."
+                  : "español"}
               </p>
               <p>
-                Executive and Deluxe-level rooms are available with upgraded
-                amenities and services.
+                {language
+                  ? "Executive and Deluxe-level rooms are available with upgraded amenities and services."
+                  : "español"}
               </p>
               <Button
                 onClick={() => setShowBookRoomModal(true)}
                 usetheme="contained"
               >
-                Book A Room
+                {language ? "Book A Room" : "español"}
               </Button>
             </div>
           </GridItem>

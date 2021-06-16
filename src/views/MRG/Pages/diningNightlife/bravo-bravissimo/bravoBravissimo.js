@@ -26,6 +26,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2];
@@ -40,6 +43,7 @@ const sliderContent = [
 ];
 
 const Bravo = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -50,27 +54,25 @@ const Bravo = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Bravo Bravissimo!</h2>
-              {renderPoiHours(mrgHours.poi.bravo)}
+              {renderPoiHours(mrgHours.poi.bravo, language)}
               <p>
-                SAMPLE - With a killer à la carte breakfast menu and an
-                international buffet, you are sure to enjoy different cuisines
-                everyday! Let your taste buds travel the world from the comfort
-                of our home. Empeeke Aaweeke is South Florida’s most compelling
-                buffet destination.
+                {language
+                  ? "SAMPLE - With a killer à la carte breakfast menu and an international buffet, you are sure to enjoy different cuisines everyday! Let your taste buds travel the world from the comfort of our home. Empeeke Aaweeke is South Florida’s most compelling buffet destination."
+                  : "español"}
               </p>
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_Menu_11x17.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                MENU
+                {language ? "MENU" : "español"}
               </Button>{" "}
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_DrinksMenu.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                DRINK MENU
+                {language ? "DRINK MENU" : "español"}
               </Button>
             </div>
           </GridItem>

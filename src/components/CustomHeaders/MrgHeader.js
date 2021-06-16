@@ -8,11 +8,14 @@ import { Icon } from "@material-ui/core";
 // Context
 import { BookRoomContext } from "contexts/BookRoomContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 //testing
 import styles from "assets/jss/material-kit-react/views/mrg";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+
 // theme color
 import { mrgColor } from "themes/colors.js";
 import mrgLogo from "assets/logos/MiccosukeeResort&Gaming.svg";
@@ -22,6 +25,7 @@ import BookRoomModal from "components/CustomModal/CustomBookRoomModal/CustomBook
 const useStyles = makeStyles(styles);
 
 const MrgHeader = () => {
+  const language = useLanguage();
   //classes needed for social icon
   //const classes = useStyles();
   useEffect(() => {
@@ -43,7 +47,7 @@ const MrgHeader = () => {
 
   const menuLinks = [
     {
-      text: "Accommodations",
+      text: language ? "Accommodations" : "Habitaciones",
       itemType: "",
       href: "",
       target: "",
@@ -52,7 +56,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Amenities",
+      text: language ? "Amenities" : "Comodidades",
       itemType: "dropdown",
       href: "",
       target: "",
@@ -70,12 +74,12 @@ const MrgHeader = () => {
           target: "",
         },
         {
-          text: "Pool & Gym",
+          text: language ? "Pool & Gym" : "Piscina y Gimnasio",
           link: "/pool-gym",
           target: "",
         },
         {
-          text: "Teen Arcade",
+          text: language ? "Teen Arcade" : "Sala de Juegos",
           link: "/teen-arcade",
           target: "",
         },
@@ -83,7 +87,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Gaming",
+      text: language ? "Gaming" : "Casino",
       itemType: "dropdown",
       href: "",
       target: "",
@@ -91,22 +95,22 @@ const MrgHeader = () => {
       link: "/gaming",
       subMenu: [
         {
-          text: "Promotions",
+          text: language ? "Promotions" : "Promociones",
           link: "/promotions",
           target: "",
         },
         {
-          text: "Miccosukee One Rewards Program",
+          text: "Miccosukee One",
           link: "/miccosukee-one",
           target: "",
         },
         {
-          text: "Gaming Machines",
+          text: language ? "Gaming Machines" : "Máquinas de Juego",
           link: "/gaming-machines",
           target: "",
         },
         {
-          text: "Poker",
+          text: language ? "Poker" : "Póquer",
           link: "/poker",
           target: "",
         },
@@ -119,7 +123,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Dining & Nightlife",
+      text: language ? "Dining & Nightlife" : "Restaurantes y Vida Nocturna",
       itemType: "dropdown",
       href: "",
       target: "",
@@ -161,7 +165,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Events",
+      text: language ? "Events" : "Eventos",
       itemType: "",
       href: "",
       target: "",
@@ -170,7 +174,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Book A Room",
+      text: language ? "Book A Room" : "español",
       itemType: "action",
       href: "",
       target: "",

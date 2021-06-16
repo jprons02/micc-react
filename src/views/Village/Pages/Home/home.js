@@ -17,6 +17,7 @@ import CardBody from "components/Card/CardBody.js";
 
 // context
 import { PricingModalContext } from "contexts/PricingModalContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // My Custom Component
 import HeroSection from "components/CustomSections/HeroSection.js";
@@ -52,6 +53,7 @@ const useModalStyles = makeStyles(modalStyle);
 const useCardStyles = makeStyles(cardStyles);
 
 const Home = () => {
+  const language = useLanguage();
   const classes = useStyles();
   const cardClasses = useCardStyles();
 
@@ -70,7 +72,9 @@ const Home = () => {
       //bgVideo: golfVid,
       gradient: ".4",
       header: "CHEHANTAMO!",
-      subHeader: "(MEANS WELCOME IN OUR MIKASUKI LANGUAGE)",
+      subHeader: language
+        ? "(MEANS WELCOME IN OUR MIKASUKI LANGUAGE)"
+        : "SIGNIFICA BIENVENIDO EN NUESTRO IDIOMA MIKASUKI",
       button: {
         text: "See Admission",
         link: "",
@@ -101,8 +105,9 @@ const Home = () => {
                 Gift Shop
               </Typography>
               <p className={classes.iconText}>
-                Visit the Miccosukee Indian Gift Shop to find crafts created by
-                natives around the world.
+                {language
+                  ? "Visit the Miccosukee Indian Gift Shop to find crafts created by natives around the world."
+                  : "Visite el Miccosukee Indian Gift shop y encuentre artesanías creadas por nativos alrededor del mundo."}
               </p>
             </GridItem>
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
@@ -110,11 +115,12 @@ const Home = () => {
                 <MuseumIcon className={classes.icons} color="primary" />
               </Link>
               <Typography className={classes.poiTitle} component="h4">
-                Museum
+                {language ? "Museum" : "Museo"}
               </Typography>
               <p className={classes.iconText}>
-                Miccosukee history and culture is preserved through historical
-                documents, archival photographs and original artifacts.
+                {language
+                  ? "Miccosukee history and culture is preserved through historical documents, archival photographs and original artifacts."
+                  : "La historia y cultura de los Miccosukee se preserva en documentos históricos, fotografías de archivo y objetos originales."}
               </p>
             </GridItem>
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
@@ -122,11 +128,14 @@ const Home = () => {
                 <GatorIcon className={classes.icons} color="primary" />
               </Link>
               <Typography className={classes.poiTitle} component="h4">
-                Alligator Demonstrations
+                {language
+                  ? "Alligator Demonstrations"
+                  : "Demostraciones de Caimanes"}
               </Typography>
               <p className={classes.iconText}>
-                We don’t “wrestle” our ‘gators—we love them and hope that you’ll
-                learn about them through our demonstrations!
+                {language
+                  ? "We don’t “wrestle” our ‘gators—we love them and hope that you’ll learn about them through our demonstrations!"
+                  : "No “peleamos” con nuestros caimanes – ¡los amamos y esperamos que puedan aprender sobre ellos con nuestras demostraciones!"}
               </p>
             </GridItem>
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
@@ -137,9 +146,9 @@ const Home = () => {
                 Our Little Shack
               </Typography>
               <p className={classes.iconText}>
-                The Village’s casual eatery has something for everybody!
-                Burgers, fries, alligator bites, shakes and more! Our Little
-                Shack is here for you.
+                {language
+                  ? "The Village’s casual eatery has something for everybody! Burgers, fries, alligator bites, shakes and more! Our Little Shack is here for you."
+                  : "¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, Nuggets de caimán, batidos y mucho mas."}
               </p>
             </GridItem>
           </GridContainer>

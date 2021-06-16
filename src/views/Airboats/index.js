@@ -12,6 +12,7 @@ import { TeeTimeProvider } from "contexts/TeeTimeContext.js";
 import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // Theme
 import { theme } from "../../themes";
@@ -42,6 +43,7 @@ import SnackbarContent from "components/Snackbar/SnackbarContent.js";
 import { standardLinkColor } from "themes/colors.js";
 
 export default function Miccosukee(props) {
+  const language = useLanguage();
   let match = useRouteMatch();
   let location = useLocation();
 
@@ -80,9 +82,17 @@ export default function Miccosukee(props) {
           <AirboatsHeader />
           <StandardAlert
             message={
-              <span>
-                <b>Airboat rides are suspended until further notice.</b>
-              </span>
+              language ? (
+                <span>
+                  <b>Airboat rides are suspended until further notice.</b>
+                </span>
+              ) : (
+                <span>
+                  <b>
+                    Los viajes en Airboats quedan suspendidos hasta nuevo aviso.
+                  </b>
+                </span>
+              )
             }
             close
             color="danger"
@@ -104,6 +114,7 @@ export default function Miccosukee(props) {
           <AirboatsFooter />
           <PopupModal />
           <CustomContactModal
+            language={language}
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}
             entity={airboatsBusinessInfo}

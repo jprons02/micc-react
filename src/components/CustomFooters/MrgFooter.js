@@ -12,8 +12,10 @@ import { mrgSocialMedia } from "business_info/socialMedia.js";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const MrgFooter = () => {
+  const language = useLanguage();
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -36,7 +38,7 @@ const MrgFooter = () => {
       header: "MICCOSUKEE",
       subMenu: [
         {
-          linkText: "Main Home",
+          linkText: language ? "Main Home" : "Página Principal",
           linkTo: "/",
         },
         {
@@ -45,33 +47,33 @@ const MrgFooter = () => {
         },
         {
           externalLink: true,
-          linkText: "Careers",
+          linkText: language ? "Careers" : "Empleos",
           linkTo:
             "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
         },
       ],
     },
     {
-      header: "ADDITIONAL LINKS",
+      header: language ? "ADDITIONAL LINKS" : "ENLACES ADICIONALES",
       subMenu: [
         {
-          linkText: "Contact",
+          linkText: language ? "Contact" : "Contacto",
           linkTo: "#contact",
           clickFunction: () => openModal(setShowContactModal),
         },
         {
           externalLink: true,
-          linkText: "Directions",
+          linkText: language ? "Directions" : "Direcciones",
           linkTo: "https://goo.gl/maps/yZ9QCXJ869UqZRxJ9",
         },
         {
-          linkText: "Banquets & Catering",
+          linkText: language ? "Banquets & Catering" : "test",
           linkTo: "/mrg/banquets-catering",
         },
       ],
     },
     {
-      header: "FOLLOW US",
+      header: language ? "FOLLOW US" : "CONÉCTESE CON NOSOTROS",
       subMenu: [
         {
           externalLink: true,
@@ -92,8 +94,10 @@ const MrgFooter = () => {
     },
     {
       action: true,
-      headerDesktop: "SIGN UP FOR OUR PROMOTIONS",
-      headerMobile: "SUBSCRIBE",
+      headerDesktop: language
+        ? "SIGN UP FOR OUR PROMOTIONS"
+        : "INSCRÍBASE A NUESTRAS PROMOCIONES",
+      headerMobile: language ? "SUBSCRIBE" : "SUSCRÍBASE",
     },
   ];
 

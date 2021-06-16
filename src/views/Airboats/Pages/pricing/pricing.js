@@ -9,9 +9,13 @@ import { airboatsPricing } from "business_info/admission.js";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/airboats/pricing.js";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const Pricing = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -21,10 +25,12 @@ const Pricing = () => {
     >
       <GridItem xs={12} style={{ marginBottom: "35px" }}>
         <h1 style={{ fontStyle: "italic", fontWeight: "400" }}>
-          CHOOSE YOUR ADVENTURE!
+          {language ? `CHOOSE YOUR ADVENTURE!` : `ELIGE TU AVENTURA`}
         </h1>
         <p className={classes.disclaimer}>
-          * All tickets need to be purchased from airboat front desk.
+          {language
+            ? `*All tickets need to be purchased from airboat front desk.`
+            : `*Todas las entradas tienen que ser compradas en el mostrador de botes de aire.`}
         </p>
       </GridItem>
       {airboatsPricing.map((item) => {
@@ -41,9 +47,9 @@ const Pricing = () => {
             md={3}
             sm={12}
           >
-            <h5 className={classes.detail}>{item.detail}</h5>
-            <h2 className={classes.title}>{item.title}</h2>
-            <h3 className={classes.price}>{item.price}</h3>
+            <h5 className={classes.detail}>{item.detail(language)}</h5>
+            <h2 className={classes.title}>{item.title(language)}</h2>
+            <h3 className={classes.price}>{item.price(language)}</h3>
           </GridItem>
         );
       })}

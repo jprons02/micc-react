@@ -25,6 +25,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1];
@@ -39,6 +42,7 @@ const sliderContent = [
 ];
 
 const MartiniBar = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -49,11 +53,11 @@ const MartiniBar = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Martini Bar</h2>
-              {renderPoiHours(mrgHours.poi.martiniBar)}
+              {renderPoiHours(mrgHours.poi.martiniBar, language)}
               <p>
-                Classic cocktails in a tropical setting. Chic and comfortable,
-                the Martini Bar is the perfect place to unwind and enjoy a
-                drink, small plates and live entertainment throughout the week.
+                {language
+                  ? "Classic cocktails in a tropical setting. Chic and comfortable, the Martini Bar is the perfect place to unwind and enjoy a drink, small plates and live entertainment throughout the week."
+                  : "Cócteles clásicos en un ambiente tropical. Chic y cómodo, el Martini Bar es el lugar perfecto para relajarte durante la semana y disfrutar de un trago, tapas, y entretenimiento en vivo."}
               </p>
             </div>
           </GridItem>

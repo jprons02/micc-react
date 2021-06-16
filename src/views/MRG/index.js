@@ -12,6 +12,7 @@ import { BookRoomProvider } from "contexts/BookRoomContext.js";
 import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // Theme
 import { theme } from "../../themes";
@@ -55,6 +56,7 @@ import { mrgBusinessInfo } from "business_info/genericInfo.js";
 import { popupManager } from "services/popups/popupManager";
 
 export default function Miccosukee(props) {
+  const language = useLanguage();
   let match = useRouteMatch();
   let location = useLocation();
 
@@ -93,19 +95,36 @@ export default function Miccosukee(props) {
           <MrgHeader />
           <StandardAlert
             message={
-              <div>
-                <b>
-                  Click
-                  <Link
-                    style={{ color: "white", fontWeight: "800" }}
-                    to={`${match.path}/covid-19`}
-                  >
-                    {" "}
-                    HERE{" "}
-                  </Link>
-                  for the Miccosukee Resort &amp; Gaming COVID-19 guidelines.
-                </b>
-              </div>
+              language ? (
+                <div>
+                  <b>
+                    Click
+                    <Link
+                      style={{ color: "white", fontWeight: "800" }}
+                      to={`${match.path}/covid-19`}
+                    >
+                      {" "}
+                      HERE{" "}
+                    </Link>
+                    for the Miccosukee Resort &amp; Gaming COVID-19 guidelines.
+                  </b>
+                </div>
+              ) : (
+                <div>
+                  <b>
+                    Oprima
+                    <Link
+                      style={{ color: "white", fontWeight: "800" }}
+                      to={`${match.path}/covid-19`}
+                    >
+                      {" "}
+                      AQUÍ{" "}
+                    </Link>
+                    para las últimas noticias de COVID-19 relacionadas a
+                    nuestros establecimientos
+                  </b>
+                </div>
+              )
             }
             close
             color="info"
@@ -198,6 +217,7 @@ export default function Miccosukee(props) {
           <MrgFooter />
           <PopupModal />
           <CustomContactModal
+            language={language}
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}
             entity={mrgBusinessInfo}

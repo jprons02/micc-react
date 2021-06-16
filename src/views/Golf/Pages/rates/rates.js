@@ -18,6 +18,9 @@ import Paper from "@material-ui/core/Paper";
 // Images
 import bgImage from "assets/img/bg3.jpg";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const sliderContent = [
   {
     id: 1,
@@ -27,80 +30,231 @@ const sliderContent = [
   },
 ];
 
-function createData(id, day, time, price) {
-  return { id, day, time, price };
-}
-
-const weekdayRows = [
-  createData(1, "Monday", "All Day", "$40.00"),
-  createData(2, "Tuesday – Friday", "Open – 11:59 A.M.", "$50.00"),
-  createData(3, "Tuesday – Friday", "12:00 P.M. – 3:59 P.M", "$40.00"),
-  createData(4, "Tuesday – Friday", "4:00 P.M. – Close", "$35.00"),
-  createData(5, "Junior Golfers (5 – 17 years old)", "", "$20.00"),
-  createData(6, "Member Guest Rate", "", "$40.00"),
-  createData(7, "Nine Hole Rate", "", "$30.00"),
-  createData(8, "Replay", "", "$25.00"),
-];
-
-const weekendRows = [
-  createData(9, "Saturday & Sunday / Holiday", "Open – 11:59 A.M.", "$65.00"),
-  createData(
-    10,
-    "Saturday & Sunday / Holiday",
-    "12:00 P.M. – 3:59 P.M.",
-    "$50.00"
-  ),
-  createData(11, "Saturday & Sunday / Holiday", "4:00 P.M. – Close", "$40.00"),
-  createData(12, "Junior Golfers (5 – 17 years old)", "", "$25.00"),
-  createData(13, "Member Guest Rate", "", "$50.00"),
-  createData(14, "Nine Hole Rate", "", "$35.00"),
-  createData(15, "Replay", "", "$30.00"),
-];
-
-const golfCartRows = [
-  createData(16, "Premier Members", "Included in membership"),
-  createData(17, "Annual Members (Single or Family)", "$25"),
-  createData(18, "9 Holes", "$15"),
-];
-
-const practiceBallsRows = [
-  createData(19, "Premier Members", "Included in membership"),
-  createData(20, "Members", "1 bucket per day"),
-  createData(21, "Non-Members – Small Basket (34 balls)", "$5"),
-  createData(22, "Non-Members – Small Basket (51 balls)", "$7"),
-  createData(23, "Non-Members – Small Basket (102 balls)", "$10"),
-];
-
-const handicapRows = [
-  createData(24, "Members", "Included in membership"),
-  createData(25, "Non-Members", "$25 (Annual fee)"),
-];
-
-const instructionRows = [
-  createData(26, "PGA Certified Professional – 30 Minutes", "$50"),
-  createData(27, "PGA Certified Professional – 1 Hour", "$95"),
-  createData(28, "Teaching Professional – 30 Minutes", "$40"),
-  createData(29, "Teaching Professional – 1 Hour", "$60"),
-];
-
-const clubRentalsRows = [
-  createData(30, "9 Holes", "$25"),
-  createData(31, "18 Holes", "$50"),
-];
-
 const Rates = () => {
+  const language = useLanguage();
   const [showCourseRates, setShowCourseRates] = useState({
     weekday: false,
     weekend_holiday: false,
   });
 
+  function createData(id, day, time, price) {
+    return { id, day, time, price };
+  }
+
+  const weekdayRows = [
+    createData(
+      1,
+      language ? "Monday" : "Lunes",
+      language ? "All Day" : "Todo el dia",
+      "$40.00"
+    ),
+    createData(
+      2,
+      language ? "Tuesday – Friday" : "martes – viernes",
+      language ? "Open – 12:00 P.M." : "Hasta las 12:00 P.M.",
+      "$50.00"
+    ),
+    createData(
+      3,
+      language ? "Tuesday – Friday" : "martes – viernes",
+      "12:00 P.M. – 4:00 P.M.",
+      "$40.00"
+    ),
+    createData(
+      4,
+      language ? "Tuesday – Friday" : "martes – viernes",
+      language ? "4:00 P.M. – Close" : "4:00 P.M. en adelante",
+      "$35.00"
+    ),
+    createData(
+      5,
+      language
+        ? "Junior Golfers (5 – 17 years old)"
+        : "Golfistas Jóvenes (Entre 5 y 17 años)",
+      "",
+      "$20.00"
+    ),
+    createData(
+      6,
+      language ? "Member Guest Rate" : "Tarifa de Miembros",
+      "",
+      "$40.00"
+    ),
+    createData(
+      7,
+      language ? "Nine Hole Rate" : "Tarifa para Nueve Hoyos",
+      "",
+      "$30.00"
+    ),
+    createData(8, language ? "Replay" : "Jugar un segundo juego", "", "$25.00"),
+  ];
+
+  const weekendRows = [
+    createData(
+      9,
+      language ? "Saturday & Sunday / Holiday" : "sábado & domingo / Feriados",
+      language ? "Open – 12:00 P.M." : "Hasta las 12:00 P.M.",
+      "$65.00"
+    ),
+    createData(
+      10,
+      language ? "Saturday & Sunday / Holiday" : "sábado & domingo / Feriados",
+      "12:00 P.M. – 4:00 P.M.",
+      "$50.00"
+    ),
+    createData(
+      11,
+      language ? "Saturday & Sunday / Holiday" : "sábado & domingo / Feriados",
+      language ? "4:00 P.M. – Close" : "4:00 P.M. en adelante",
+      "$40.00"
+    ),
+    createData(
+      12,
+      language
+        ? "Junior Golfers (5 – 17 years old)"
+        : "Golfistas Jóvenes (Entre 5 y 17 años)",
+      "",
+      "$25.00"
+    ),
+    createData(
+      13,
+      language ? "Member Guest Rate" : "Tarifa de Miembros",
+      "",
+      "$50.00"
+    ),
+    createData(
+      14,
+      language ? "Nine Hole Rate" : "Tarifa para Nueve Hoyos",
+      "",
+      "$35.00"
+    ),
+    createData(
+      15,
+      language ? "Replay" : "Jugar un segundo juego",
+      "",
+      "$30.00"
+    ),
+  ];
+
+  const golfCartRows = [
+    createData(
+      16,
+      language ? "Premier Members" : "Miembros Premier",
+      language ? "Included in membership" : "Incluido en membresía"
+    ),
+    createData(
+      17,
+      language
+        ? "Annual Members (Single or Family)"
+        : "Miembros Anuales (Soltero o Familia)",
+      "$25"
+    ),
+    createData(18, language ? "9 Holes" : "9 Hoyos", "$15"),
+  ];
+
+  const practiceBallsRows = [
+    createData(
+      19,
+      language ? "Premier Members" : "Miembros Premier",
+      language ? "Included in membership" : "Incluido en membresía"
+    ),
+    createData(
+      20,
+      language ? "Members" : "Miembros",
+      language ? "1 bucket per day" : "1 canasta por dia"
+    ),
+    createData(
+      21,
+      language
+        ? "Non-Members – Small Basket (34 balls)"
+        : "No Miembros – Canasta Pequeña (34 bolas)",
+      "$5"
+    ),
+    createData(
+      22,
+      language
+        ? "Non-Members – Small Basket (51 balls)"
+        : "No Miembros – Canasta Mediana (51 bolas)",
+      "$7"
+    ),
+    createData(
+      23,
+      language
+        ? "Non-Members – Small Basket (102 balls)"
+        : "No Miembros – Canasta Grande (102 bolas)",
+      "$10"
+    ),
+  ];
+
+  const handicapRows = [
+    createData(
+      24,
+      language ? "Members" : "Miembros",
+      language ? "Included in membership" : "Incluido en membresía"
+    ),
+    createData(
+      25,
+      language ? "Non-Members" : "No Miembros",
+      language ? "$25 (Annual fee)" : "$25 (Pago anual)"
+    ),
+  ];
+
+  const instructionRows = [
+    createData(
+      26,
+      language
+        ? "PGA Certified Professional – 30 Minutes"
+        : "Profesional Certificado por PGA – 30 Minutos",
+      "$50"
+    ),
+    createData(
+      27,
+      language
+        ? "PGA Certified Professional – 1 Hour"
+        : "Profesional Certificado por PGA – 1 Hora",
+      "$95"
+    ),
+    createData(
+      28,
+      language
+        ? "Teaching Professional – 30 Minutes"
+        : "Maestro Profesional – 30 Minutos",
+      "$40"
+    ),
+    createData(
+      29,
+      language
+        ? "Teaching Professional – 1 Hour"
+        : "Maestro Profesional – 1 Hora",
+      "$60"
+    ),
+  ];
+
+  const clubRentalsRows = [
+    createData(30, language ? "9 Holes" : "9 Hoyos", "$25"),
+    createData(31, language ? "18 Holes" : "18 Hoyos", "$50"),
+  ];
+
+  const advanceTeeTimesRows = [
+    createData(
+      32,
+      language ? "Members" : "Miembros",
+      language ? "10 days in advance" : "10 días por adelantado"
+    ),
+    createData(
+      33,
+      "Non-Members",
+      language ? "7 days in advance" : "7 días por adelantado"
+    ),
+  ];
+
   const [showExtraRates, setShowExtraRates] = useState({
-    advanceTeeTimes: false,
     golfCart: false,
     practiceBalls: false,
     handicap: false,
     instructions: false,
     clubRentals: false,
+    advanceTeeTimes: false,
   });
 
   const tableStyle = {
@@ -115,9 +269,11 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Weekday</TableCell>
-              <TableCell align="right">Time</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell>{language ? "Weekday" : "Días de Semana"}</TableCell>
+              <TableCell align="right">{language ? "Time" : "Hora"}</TableCell>
+              <TableCell align="right">
+                {language ? "Price" : "Precio"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -140,9 +296,13 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Weekend &amp; Holiday</TableCell>
-              <TableCell align="right">Time</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell>
+                {language ? "Weekend & Holiday" : "Fines de Semana & Feriados"}
+              </TableCell>
+              <TableCell align="right">{language ? "Time" : "Hora"}</TableCell>
+              <TableCell align="right">
+                {language ? "Price" : "Precio"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -274,26 +434,46 @@ const Rates = () => {
     );
   };
 
+  const renderAdvancedTeeTimesTable = () => {
+    return (
+      <TableContainer style={tableStyle} component={Paper}>
+        <Table aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Customer</TableCell>
+              <TableCell align="right">Details</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {advanceTeeTimesRows.map((row) => (
+              <TableRow key={row.id}>
+                <TableCell align="left">{row.day}</TableCell>
+                <TableCell align="right">{row.time}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    );
+  };
+
   const renderNavPills = () => {
     return (
       <NavPills
         color="primary"
         tabs={[
           {
-            tabButton: "Course Rates",
+            tabButton: language ? "Course Rates" : "Precios de campos de golf",
             tabContent: <span>{renderCourseContent()}</span>,
           },
           {
-            tabButton: "Other Rates",
+            tabButton: language ? "Other Rates" : "Otros precios",
             tabContent: <span>{renderOtherContent()}</span>,
           },
         ]}
       />
     );
   };
-
-  //{() => setShowCourseRates({ ...mrg, hours: !mrg.hours })}
-  //{() => setShowCourseRates({ ...showCourseRates, weekday: !showCourseRates.weekday })}
 
   const renderCourseContent = () => {
     const sectionHeaderStyle = {
@@ -312,7 +492,7 @@ const Rates = () => {
           }
           style={sectionHeaderStyle}
         >
-          Weekday Rates
+          {language ? "Weekday Rates" : "Días de Semana"}
         </h4>
         <Collapse in={showCourseRates.weekday}>{renderWeekdayTable()}</Collapse>
         <h4
@@ -324,7 +504,7 @@ const Rates = () => {
           }
           style={sectionHeaderStyle}
         >
-          Weekend &amp; Holiday Rates
+          {language ? "Weekend & Holiday Rates" : "Fines de Semana & Feriados"}
         </h4>
         <Collapse in={showCourseRates.weekend}>{renderWeekendTable()}</Collapse>
       </div>
@@ -343,12 +523,26 @@ const Rates = () => {
           onClick={() =>
             setShowExtraRates({
               ...showExtraRates,
+              advanceTeeTimes: !showExtraRates.advanceTeeTimes,
+            })
+          }
+          style={sectionHeaderStyle}
+        >
+          {language ? "Advance Tee Times" : "Horarios de Salida Anticipados"}
+        </h4>
+        <Collapse in={showExtraRates.advanceTeeTimes}>
+          {renderAdvancedTeeTimesTable()}
+        </Collapse>
+        <h4
+          onClick={() =>
+            setShowExtraRates({
+              ...showExtraRates,
               golfCart: !showExtraRates.golfCart,
             })
           }
           style={sectionHeaderStyle}
         >
-          Golf Cart Rates
+          {language ? "Golf Cart Rates" : "Precios para Carros de Golf"}
         </h4>
         <Collapse in={showExtraRates.golfCart}>
           {renderGolfCartTable()}
@@ -362,7 +556,7 @@ const Rates = () => {
           }
           style={sectionHeaderStyle}
         >
-          Practice Balls
+          {language ? "Practice Balls" : "Bolas de Práctica"}
         </h4>
         <Collapse in={showExtraRates.practiceBalls}>
           {renderPracticeBallsTable()}
@@ -376,7 +570,7 @@ const Rates = () => {
           }
           style={sectionHeaderStyle}
         >
-          Golf Handicap Fees
+          {language ? "Golf Handicap Fees" : "Precios para Discapacitados"}
         </h4>
         <Collapse in={showExtraRates.handicap}>
           {renderHandicapTable()}
@@ -390,7 +584,7 @@ const Rates = () => {
           }
           style={sectionHeaderStyle}
         >
-          Golf Instructions
+          {language ? "Golf Instructions" : "Clases de Golf"}
         </h4>
         <Collapse in={showExtraRates.instructions}>
           {renderInstructionsTable()}
@@ -404,7 +598,7 @@ const Rates = () => {
           }
           style={sectionHeaderStyle}
         >
-          Golf Club Rentals
+          {language ? "Golf Club Rentals" : "Alquiler de Palos de Golf"}
         </h4>
         <Collapse in={showExtraRates.clubRentals}>
           {renderClubRentalsTable()}
@@ -417,8 +611,13 @@ const Rates = () => {
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
-        <h2>Rates &amp; Pricing</h2>
+        <h2>{language ? "Rates & Pricing" : "Tarifas y Precios"}</h2>
         {renderNavPills()}
+        <p style={{ fontStyle: "italic", fontSize: "12px" }}>
+          {language
+            ? `*No rain checks unless course closed and/or is declared unplayable.Group rates available upon request. All fees are per player. Rates subject to change or cancellation at the discretion of management.`
+            : `*No se realizarán devoluciones o cambios de entradas salvo que los cursos se cierren u ocurran acontecimientos que impidan continuar con el juego. Consulte por tarifas de grupo. Los precios son por jugador. Las tarifas están sujetas a cambio y podrían ser canceladas a discreción de la gerencia.`}
+        </p>
       </RaisedContainer>
     </React.Fragment>
   );

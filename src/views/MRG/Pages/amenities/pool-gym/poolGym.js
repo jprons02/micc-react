@@ -27,6 +27,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3, image4, image5];
@@ -41,6 +44,7 @@ const sliderContent = [
 ];
 
 const PoolGym = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -50,15 +54,12 @@ const PoolGym = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Pool &amp; Fitness Center</h2>
-              {renderPoiHours(mrgHours.poi.poolGym)}
+              <h2>{language ? "Pool & Fitness Center" : "español"}</h2>
+              {renderPoiHours(mrgHours.poi.poolGym, language)}
               <p>
-                Cool off in our indoor pool or take a relaxing dip in our
-                jacuzzi. Maybe unwind in our sauna. Enjoy South Florida’s
-                gorgeous weather on our outdoor patio. Whether you’re soaking up
-                the sun or cooling off under the serene shadow of one of our
-                chickees, our outdoor patio is the perfect place to relax all
-                year round.
+                {language
+                  ? "Cool off in our indoor pool or take a relaxing dip in our jacuzzi. Maybe unwind in our sauna. Enjoy South Florida’s gorgeous weather on our outdoor patio. Whether you’re soaking up the sun or cooling off under the serene shadow of one of our chickees, our outdoor patio is the perfect place to relax all year round."
+                  : "español"}
               </p>
             </div>
           </GridItem>

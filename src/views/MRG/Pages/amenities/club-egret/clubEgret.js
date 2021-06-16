@@ -26,6 +26,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3];
@@ -40,6 +43,7 @@ const sliderContent = [
 ];
 
 const ClubEgret = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -50,10 +54,13 @@ const ClubEgret = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Club Egret</h2>
-              {renderPoiHours(mrgHours.poi.clubEgret)}
+              {renderPoiHours(mrgHours.poi.clubEgret, language)}
               <p>
-                Club Egret is reserved for children ages 12 and under. <br />
-                For more information, please call{" "}
+                {language
+                  ? "Club Egret is reserved for children ages 12 and under."
+                  : "español"}{" "}
+                <br />
+                {language ? "For more information, please call " : "español "}
                 <a href="tel:+13059252555">
                   <Typography variant="inherit" color="primary">
                     305-925-2555
@@ -63,7 +70,9 @@ const ClubEgret = () => {
               </p>
               <p>
                 <span style={{ fontSize: "80%", fontStyle: "italic" }}>
-                  *Hourly rates apply. Minimum one hour.
+                  {language
+                    ? "*Hourly rates apply. Minimum one hour."
+                    : "español"}
                 </span>
               </p>
             </div>

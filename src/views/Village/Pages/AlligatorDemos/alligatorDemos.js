@@ -30,6 +30,9 @@ import { renderPoiHours } from "services/renderPoiHours.js";
 // Business info
 import { villageHours } from "business_info/hours.js";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3];
@@ -44,6 +47,7 @@ const sliderContent = [
 ];
 
 const AlligatorDemos = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -54,26 +58,43 @@ const AlligatorDemos = () => {
           <GridItem md={6}>
             <div className={classes.leftTextArea}>
               <h2>Alligator Demonstrations</h2>
-              {renderPoiHours(villageHours.poi.alligator)}
-              <p>
-                Alligator demonstrations daily schedule:
-                <br />
-                11:00 a.m., 12:00 p.m., 1:00 p.m., 2:00 p.m., 3:00 p.m., 4:00
-                p.m.
-              </p>
-              <p>
-                We don’t “wrestle” our ‘gators—we love them and hope that you’ll
-                learn about them through our demonstrations! Watch in awe as a
-                brave demonstrator explains centuries-old traditions and rituals
-                that have been handed down by generations of Miccosukee with
-                their bare hands!
-              </p>
-              <p>
-                The Miccosukee learned early on how to capture them for food and
-                commodities like their tough skin. The times have changed and
-                the Tribe’s relationship has moved towards conservation and
-                education about the alligator’s role in this unique environment.
-              </p>
+              {renderPoiHours(villageHours.poi.alligator, language)}
+              {language ? (
+                <React.Fragment>
+                  <p>
+                    We don’t “wrestle” our ‘gators—we love them and hope that
+                    you’ll learn about them through our demonstrations! Watch in
+                    awe as a brave demonstrator explains centuries-old
+                    traditions and rituals that have been handed down by
+                    generations of Miccosukee with their bare hands!
+                  </p>
+                  <p>
+                    The Miccosukee learned early on how to capture them for food
+                    and commodities like their tough skin. The times have
+                    changed and the Tribe’s relationship has moved towards
+                    conservation and education about the alligator’s role in
+                    this unique environment.
+                  </p>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <p>
+                    No “peleamos” con nuestros caimanes – ¡los amamos y
+                    esperamos que puedan aprender sobre ellos con nuestras
+                    demostraciones! Se asombrarán al ver a nuestros luchadores
+                    valientes explicar las tradiciones y los rituales que los
+                    Miccosukee han pasado a través de generaciones.
+                  </p>
+                  <p>
+                    Los Miccosukee aprendieron hace mucho como capturarlos para
+                    alimentación y productos como su piel dura. Desde entonces,
+                    la relación de la Tribu con los caimanes ha cambiado. Ahora,
+                    ellos están mas preocupados de conservarlos y de educar a la
+                    gente del rol que tienen los caimanes en este ambiente
+                    particular.
+                  </p>
+                </React.Fragment>
+              )}
             </div>
           </GridItem>
           <GridItem md={6}>

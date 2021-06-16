@@ -35,16 +35,22 @@ const getMinutes = (hours, minutes) => {
 
 export const mrgHours = {
   weekday: {
-    days: `Sunday – Thursday`,
+    days: (language) => (language ? `Sunday – Thursday` : `domingo – jueves`),
     open: `${getMinutes(9).combinedString}`,
     close: `${getMinutes(2).combinedString}`,
-    details: "No entry will be allowed after 1:00 A.M.",
+    details: (language) =>
+      language
+        ? "No entry will be allowed after 1:00 A.M."
+        : "No se permitirá la entrada después de las 1 A.M.",
   },
   weekend: {
-    days: "Friday & Saturday",
+    days: (language) => (language ? "Friday & Saturday" : "viernes y sábado"),
     open: `${getMinutes(9).combinedString}`,
     close: `${getMinutes(4).combinedString}`,
-    details: "No entry will be allowed after 3:00 A.M.",
+    details: (language) =>
+      language
+        ? "No entry will be allowed after 3:00 A.M."
+        : "No se permitirá la entrada después de las 3 A.M.",
   },
   todaysHours: (dayOfWeek, language) => {
     if (dayOfWeek > 4) {
@@ -58,122 +64,131 @@ export const mrgHours = {
   poi: {
     salon: [
       {
-        days: "Monday – Saturday",
+        days: (language) => (language ? "Monday – Saturday" : "lunes – sábado"),
         open: `${getMinutes(10).combinedString}`,
         close: `${getMinutes(20).combinedString}`,
       },
       {
-        days: "Sunday",
+        days: (language) => (language ? "Sunday" : "domingo"),
         open: `${getMinutes(10).combinedString}`,
         close: `${getMinutes(18).combinedString}`,
       },
     ],
     clubEgret: [
       {
-        days: "Monday – Thursday",
+        days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
       },
       {
-        days: "Friday",
+        days: (language) => (language ? "Friday" : "viernes"),
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(2).combinedString}`,
       },
       {
-        days: "Saturday",
+        days: (language) => (language ? "Saturday" : "sábado"),
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(2).combinedString}`,
       },
       {
-        days: "Sunday",
+        days: (language) => (language ? "Sunday" : "domingo"),
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
       },
     ],
     poolGym: [
       {
-        days: "Daily",
+        days: (language) => (language ? "Daily" : "Diariamente"),
         open: `${getMinutes(7).combinedString}`,
         close: `${getMinutes(23).combinedString}`,
       },
     ],
     teenArcade: [
       {
-        days: "Sunday – Thursday",
+        days: (language) =>
+          language ? "Sunday – Thursday" : "domingo – jueves",
         open: `${getMinutes(13).combinedString}`,
         close: `${getMinutes(23).combinedString}`,
       },
       {
-        days: "Friday & Saturday",
+        days: (language) =>
+          language ? "Friday & Saturday" : "viernes & sábado",
         open: `${getMinutes(13).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
     ],
     poker: [
       {
-        days: "Sunday – Thursday",
+        days: (language) =>
+          language ? "Sunday – Thursday" : "domingo – jueves",
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(4).combinedString}`,
       },
       {
-        days: "Friday & Saturday",
+        days: (language) =>
+          language ? "Friday & Saturday" : "viernes & sábado",
         open: `${getMinutes(0).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
     ],
     bravo: [
       {
-        days: "SAMPLE: Monday – Thursday",
+        days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
       },
     ],
     deli: [
       {
-        days: "Monday – Sunday",
+        days: (language) => (language ? "Monday – Sunday" : "lunes – domingo"),
         open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
       },
     ],
     hammock: [
       {
-        days: "Sunday – Thursday",
+        days: (language) =>
+          language ? "Sunday – Thursday" : "domingo – jueves",
         open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
       {
-        days: "Friday & Saturday",
+        days: (language) =>
+          language ? "Friday & Saturday" : "viernes & sábado",
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(2).combinedString}`,
       },
     ],
     cypressLounge: [
       {
-        days: "Seven days a week",
+        days: (language) =>
+          language ? "Seven days a week" : "Seite días a la semana",
         open: `${getMinutes(0).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
     ],
     martiniBar: [
       {
-        days: "Monday – Thursday",
+        days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
         open: `${getMinutes(4).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
       {
-        days: "Friday & Saturday",
+        days: (language) =>
+          language ? "Friday & Saturday" : "viernes & sábado",
         open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(2).combinedString}`,
       },
       {
-        days: "Sunday",
+        days: (language) => (language ? "Sunday" : "domingo"),
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
     ],
     accommodations: [
       {
-        days: "Seven days a week",
+        days: (language) =>
+          language ? "Seven days a week" : "Seite días a la semana",
         open: `${getMinutes(0).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
@@ -182,15 +197,17 @@ export const mrgHours = {
 };
 
 export const villageHours = {
-  days: "",
+  days: (language) => "",
   open: "",
   close: "",
-  details:
-    "The Miccosukee Indian Village will NOT reopen until further notice.",
+  details: (language) =>
+    language
+      ? "The Miccosukee Indian Village will NOT reopen until further notice."
+      : "El Village permanecerá cerrado hasta nuevo aviso.",
   todaysHours: (dayOfWeek, language) => {
     //`Thursday – Sunday`,
     if (dayOfWeek === 0 || dayOfWeek > 4) {
-      return `Closed, however, the Gift Shop is open: ${villageHours.poi.giftShop.open} - ${villageHours.poi.giftShop.close}`;
+      return `Closed, however, the Gift Shop is open: ${villageHours.poi.giftShop[0].open} - ${villageHours.poi.giftShop[0].close}`;
     } else {
       return language ? "Closed" : "Cerrado";
     }
@@ -199,34 +216,39 @@ export const villageHours = {
     //Friday - Sunday from 9 A.M. - 4:30 P.M
     giftShop: [
       {
-        days: `Friday – Sunday`,
+        days: (language) =>
+          language ? `Friday – Sunday` : "viernes – domingo",
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(16, 30).combinedString}`,
       },
     ],
     alligator: [
       {
-        days: "",
+        days: (language) => "",
         open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(5).combinedString}`,
-        details:
-          "The Miccosukee Indian Village will NOT reopen until further notice.",
+        details: (language) =>
+          language
+            ? "The Miccosukee Indian Village will NOT reopen until further notice."
+            : "El Village permanecerá cerrado hasta nuevo aviso.",
       },
     ],
     ourLittleShack: [
       {
-        days: "",
+        days: (language) => "",
         open: `${getMinutes(8).combinedString}`,
         close: `${getMinutes(15, 30).combinedString}`,
-        details:
-          "The Miccosukee Indian Village will NOT reopen until further notice.",
+        details: (language) =>
+          language
+            ? "The Miccosukee Indian Village will NOT reopen until further notice."
+            : "El Village permanecerá cerrado hasta nuevo aviso.",
       },
     ],
   },
 };
 
 export const golfHours = {
-  days: `Monday – Sunday`,
+  days: (language) => (language ? `Monday – Sunday` : "lunes – domingo"),
   open: `${getMinutes(7).combinedString}`,
   close: `${getMinutes(20, 30).combinedString}`,
   todaysHours: (dayOfWeek, language) => {
@@ -235,7 +257,7 @@ export const golfHours = {
 };
 
 export const airboatsHours = {
-  days: `Thursday – Sunday`,
+  days: (language) => (language ? `Thursday – Sunday` : "jueves – domingo"),
   open: `${getMinutes(9).combinedString}`,
   close: `${getMinutes(17).combinedString}`,
   todaysHours: (dayOfWeek, language) => {

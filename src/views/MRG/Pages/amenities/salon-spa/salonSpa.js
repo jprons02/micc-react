@@ -28,6 +28,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3, image4];
@@ -42,6 +45,7 @@ const sliderContent = [
 ];
 
 const SalonSpa = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -52,22 +56,22 @@ const SalonSpa = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Pa-Hay Okee Salon &amp; Spa</h2>
-              {renderPoiHours(mrgHours.poi.salon)}
+              {renderPoiHours(mrgHours.poi.salon, language)}
               <p>
-                Call{" "}
+                {language ? "Call " : "español "}
                 <a href="tel:+13059252557">
                   <Typography variant="inherit" color="primary">
                     305-925-2557
                   </Typography>
-                </a>{" "}
-                and book your appointment today!
+                </a>
+                {language ? " and book your appointment today!" : " español"}
               </p>
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/11/SpaBrochure_Trifold.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                SPA MENU
+                {language ? "SPA MENU" : "español"}
               </Button>
             </div>
           </GridItem>

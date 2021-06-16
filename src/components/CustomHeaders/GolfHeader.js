@@ -9,12 +9,14 @@ import { Icon } from "@material-ui/core";
 import { TeeTimeContext } from "contexts/TeeTimeContext.js";
 import TeeTimeModal from "components/CustomModal/CustomTeeTimeModal/CustomTeeTimeModal.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // theme color
 import { golfColor } from "themes/colors.js";
 import golfLogo from "assets/logos/MiccosukeeGolf&CountryClub.svg";
 
 const GolfHeader = () => {
+  const language = useLanguage();
   //classes needed for social icon
   //const classes = useStyles();
   useEffect(() => {
@@ -36,7 +38,7 @@ const GolfHeader = () => {
 
   const menuLinks = [
     {
-      text: "Courses",
+      text: language ? "Courses" : "Campos de Golf",
       itemType: "",
       href: "",
       target: "",
@@ -45,7 +47,7 @@ const GolfHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Rates",
+      text: language ? "Rates" : "Tarifas",
       itemType: "",
       href: "",
       target: "",
@@ -54,7 +56,7 @@ const GolfHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Events",
+      text: language ? "Events" : "Eventos",
       itemType: "",
       href: "",
       target: "",
@@ -63,7 +65,7 @@ const GolfHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Book A Tee Time",
+      text: language ? "Book A Tee Time" : "Reserve su Horario",
       itemType: "action",
       href: "",
       target: "",

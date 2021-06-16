@@ -10,6 +10,7 @@ import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { ContactFormContext } from "contexts/ContactFormContext.js";
 import { PricingModalContext } from "contexts/PricingModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // theme color
 import { villageColor } from "themes/colors.js";
@@ -19,6 +20,7 @@ import villageLogo from "assets/logos/MiccosukeeVillage&Airboats.svg";
 import VillagePricingModal from "components/CustomModal/PricingModal/VillagePricingModal.js";
 
 const VillageHeader = () => {
+  const language = useLanguage();
   //classes needed for social icon
   //const classes = useStyles();
   const [showContactModal, setShowContactModal] = useContext(
@@ -66,7 +68,7 @@ const VillageHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Village Museum",
+      text: language ? "Village Museum" : "Museo",
       itemType: "",
       href: "",
       target: "",
@@ -75,7 +77,9 @@ const VillageHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Alligator Demonstrations",
+      text: language
+        ? "Alligator Demonstrations"
+        : "Demostraciones de Caimanes",
       itemType: "",
       href: "",
       target: "",

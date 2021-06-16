@@ -25,6 +25,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1];
@@ -39,6 +42,7 @@ const sliderContent = [
 ];
 
 const Deli = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -49,12 +53,11 @@ const Deli = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Empeeke Aya Deli</h2>
-              {renderPoiHours(mrgHours.poi.deli)}
+              {renderPoiHours(mrgHours.poi.deli, language)}
               <p>
-                The Empeeke Aya Deli serves delicatessen favorites and assorted
-                snacks! Conveniently located across from the Gaming floor, the
-                deli is the perfect spot to refuel or maybe grab a quick bite
-                while enjoying the Resort’s many amenities.
+                {language
+                  ? "The Empeeke Aya Deli serves delicatessen favorites and assorted snacks! Conveniently located across from the Gaming floor, the deli is the perfect spot to refuel or maybe grab a quick bite while enjoying the Resort’s many amenities."
+                  : "Convenientemente localizado al cruzar la sala de juegos del casino, el deli es el lugar perfecto para comerte algo ligero mientras disfrutas de todas las amenidades que ofrece el Resort."}
               </p>
             </div>
           </GridItem>

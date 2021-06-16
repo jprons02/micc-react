@@ -21,12 +21,16 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 import sliderStyles from "assets/jss/material-kit-react/components/customImageSlider.js";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 const useSliderStyles = makeStyles(sliderStyles);
 
 const imageArray = [image1, image2, image3, image4, image5, image6];
 
 const Details = () => {
+  const language = useLanguage();
   const classes = useStyles();
   const sliderClasses = useSliderStyles();
 
@@ -90,16 +94,19 @@ const Details = () => {
     <GridContainer style={{ marginTop: "0px" }} justify="center">
       <GridItem xs={12}>
         <h1 style={{ fontStyle: "italic", fontWeight: "400" }}>
-          ADVENTURE AWAITS!
+          {language ? "ADVENTURE AWAITS!" : "¡LA AVENTURA TE ESPERA!"}
         </h1>
         <p>
-          Miccosukee Airboats are the best way to glide the ‘Glades and
+          {language
+            ? `Miccosukee Airboats are the best way to glide the ‘Glades and
           experience the magnificent “River of Grass.” Feel the breeze and
           listen to the sawgrass whizz by. Get a glimpse into traditional
           Miccosukee life and discover a typical hammock-style camp that has
           been owned by the same family for more than 100 years! Let our expert
           guides show you a side of the beautiful Everglades you can’t see
-          anywhere else.
+          anywhere else.`
+            : `Los Airboats (hidrodeslizadores) de los Miccosukee son la mejor manera de conocer y pasear por los Everglades y disfrutar del “Rio de Césped”. Podrás sentir la hermosa brisa y el ruido de la vegetación acuática mientras navegas. Tendrás una idea cierta de cómo era la vida tradicional de los Miccosukee y descubrirás la isla usada como campamento, que ha pertenecido a la misma familia por más
+          de 100 años. Permite que nuestros expertos te guíen y muestren lo más bello de los Everglades que no podrás ver en otro lado.`}
         </p>
         <div style={{ marginBottom: "50px" }} className={classes.imageArea}>
           <Hidden mdUp>{renderMobileSlider()}</Hidden>

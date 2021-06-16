@@ -3,86 +3,100 @@
 export const mrgStatus = {
   gaming: [
     {
-      name: "General Gaming Floor",
+      name: (language) =>
+        language ? "General Gaming Floor" : "Área de máquinas",
       isOpen: true,
-      details: [
-        "Every other machine will be available for play in order to abide by social distancing standards",
+      details: (language) => [
+        language
+          ? "Every other machine will be available for play in order to abide by social distancing standards"
+          : "De acuerdo a las normas de distanciamiento social, habrá una máquina vacía entre cada máquina de juego",
       ],
     },
     {
-      name: "Bingo",
+      name: (language) => "Bingo",
       isOpen: true,
     },
     {
-      name: "Poker Room",
+      name: (language) => (language ? "Poker Room" : "Sala de Póker"),
       isOpen: false,
     },
   ],
   dining: [
     {
-      name: "Gift Shop",
+      name: (language) => "Gift Shop",
       isOpen: true,
-      details: [
-        "New hours of operation starting Monday, December 14 are as follows: Monday – Sunday: 12 PM – 8 PM",
-        "Will have masks and gloves available for sale",
+      details: (language) => [
+        language
+          ? "New hours of operation starting Monday, December 14 are as follows: Monday – Sunday: 12 PM – 8 PM"
+          : "Nuevo horario de operaciones comenzando el lunes, 14 de diciembre: lunes-domingo: 12 PM – 8 PM",
+        language
+          ? "Will have masks and gloves available for sale"
+          : "Tendrá mascarillas y guantes a la venta",
       ],
     },
     {
-      name: "Empeeke Aya Deli",
+      name: (language) => "Sawgrass Café",
       isOpen: true,
     },
     {
-      name: "Hot Dog Cart",
+      name: (language) => "Empeeke Aya Deli",
+      isOpen: false,
+    },
+    {
+      name: (language) => "Hot Dog Cart",
       isOpen: true,
     },
     {
-      name: "Service Bars",
+      name: (language) => "Service Bars",
       isOpen: true,
     },
     {
-      name: "Empeeke Aaweeke International Buffet",
+      name: (language) => "Empeeke Aaweeke International Buffet",
       isOpen: false,
     },
     {
-      name: "Bravo Bravissimo",
+      name: (language) => "Bravo Bravissimo",
       isOpen: false,
     },
     {
-      name: "Café Hammock",
+      name: (language) => "Café Hammock",
       isOpen: false,
     },
     {
-      name: "Cypress Lounge",
+      name: (language) => "Cypress Lounge",
       isOpen: false,
     },
     {
-      name: "Martini Bar",
+      name: (language) => "Martini Bar",
       isOpen: false,
     },
     {
-      name: "Cafeteria",
+      name: (language) => "Cafeteria",
       isOpen: false,
     },
   ],
   accommodations: {
     isOpen: false,
-    details: "The hotel will remain closed until further notice",
+    details: (language) =>
+      language
+        ? "The hotel will remain closed until further notice"
+        : "El hotel permanecerá cerrado hasta nuevo aviso",
   },
   amenities: [
     {
-      name: "Salon & Spa",
+      name: (language) => "Salon & Spa",
       isOpen: false,
     },
     {
-      name: "Club Egret",
+      name: (language) => "Club Egret",
       isOpen: false,
     },
     {
-      name: "Pool & Gym",
+      name: (language) => "Pool & Gym",
       isOpen: false,
     },
     {
-      name: "Teen Arcade",
+      name: (language) => "Teen Arcade",
       isOpen: false,
     },
   ],

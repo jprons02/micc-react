@@ -26,6 +26,9 @@ import { mrgHours } from "business_info/hours.js";
 // Services
 import { renderPoiHours } from "services/renderPoiHours.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3];
@@ -40,6 +43,7 @@ const sliderContent = [
 ];
 
 const TeenArcade = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -49,19 +53,18 @@ const TeenArcade = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Teen Arcade</h2>
-              {renderPoiHours(mrgHours.poi.teenArcade)}
+              <h2>{language ? "Teen Arcade" : "español"}</h2>
+              {renderPoiHours(mrgHours.poi.teenArcade, language)}
               <p>
-                Our state-of-the-art Teen Arcade is our cool, “big kids” area
-                featuring the hottest games on the planet. Clean, safe and with
-                an environment that says excitement, the arcade has been a hit
-                with all guests! One visit here, and your teenager/s will want
-                to come back again and again!
+                {language
+                  ? "Our state-of-the-art Teen Arcade is our cool, “big kids” area featuring the hottest games on the planet. Clean, safe and with an environment that says excitement, the arcade has been a hit with all guests! One visit here, and your teenager/s will want to come back again and again!"
+                  : "español"}
               </p>
               <p>
                 <span style={{ fontSize: "80%", fontStyle: "italic" }}>
-                  *13+, if under, must be accompanied by an adult over 18 years
-                  of age.
+                  {language
+                    ? "*13+, if under, must be accompanied by an adult over 18 years of age."
+                    : "español"}
                 </span>
               </p>
             </div>

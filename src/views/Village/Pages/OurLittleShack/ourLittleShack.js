@@ -30,6 +30,7 @@ import { ourLittleShackMenu } from "business_info/foodMenu.js";
 
 // Context
 import { FoodMenuContext } from "contexts/FoodMenuContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
@@ -45,6 +46,7 @@ const sliderContent = [
 ];
 
 const OurLittleShack = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const [showFoodMenu, setShowFoodMenu] = useContext(FoodMenuContext);
@@ -70,12 +72,20 @@ const OurLittleShack = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Our Little Shack</h2>
-              {renderPoiHours(villageHours.poi.ourLittleShack)}
-              <p>
-                The Village’s casual eatery has something for everybody!
-                Burgers, fries, alligator bites, shakes and more! Our Little
-                Shack is here for you.
-              </p>
+              {renderPoiHours(villageHours.poi.ourLittleShack, language)}
+              {language ? (
+                <p>
+                  The Village’s casual eatery has something for everybody!
+                  Burgers, fries, alligator bites, shakes and more! Our Little
+                  Shack is here for you.
+                </p>
+              ) : (
+                <p>
+                  ¡El lugar en el Pueblo que tiene algo para todos!
+                  Hamburguesas, papas fritas, Nuggets de caimán, batidos y mucho
+                  mas.
+                </p>
+              )}
               <div style={{ marginBottom: "5px" }}>
                 <i
                   style={{ marginRight: "8px" }}

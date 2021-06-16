@@ -12,8 +12,10 @@ import { golfSocialMedia } from "business_info/socialMedia.js";
 
 // Context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 const GolfFooter = () => {
+  const language = useLanguage();
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -36,7 +38,7 @@ const GolfFooter = () => {
       header: "MICCOSUKEE",
       subMenu: [
         {
-          linkText: "Main Home",
+          linkText: language ? "Main Home" : "Página Principal",
           linkTo: "/",
         },
         {
@@ -45,29 +47,29 @@ const GolfFooter = () => {
         },
         {
           externalLink: true,
-          linkText: "Careers",
+          linkText: language ? "Careers" : "Empleos",
           linkTo:
             "https://www.indeed.com/cmp/Miccosukee-Tribe-of-Indians-of-Florida/jobs",
         },
       ],
     },
     {
-      header: "ADDITIONAL LINKS",
+      header: language ? "ADDITIONAL LINKS" : "ENLACES ADICIONALES ",
       subMenu: [
         {
-          linkText: "Contact",
+          linkText: language ? "Contact" : "Contacto",
           linkTo: "#",
           clickFunction: () => openModal(setShowContactModal),
         },
         {
           externalLink: true,
-          linkText: "Directions",
+          linkText: language ? "Directions" : "Direcciones",
           linkTo: "https://goo.gl/maps/SxyAMrs1jSX7MrVK8",
         },
       ],
     },
     {
-      header: "FOLLOW US",
+      header: language ? "FOLLOW US" : "CONÉCTESE CON NOSOTROS",
       subMenu: [
         {
           externalLink: true,
@@ -88,8 +90,10 @@ const GolfFooter = () => {
     },
     {
       action: true,
-      headerDesktop: "SIGN UP FOR OUR PROMOTIONS",
-      headerMobile: "SUBSCRIBE",
+      headerDesktop: language
+        ? "SIGN UP FOR OUR PROMOTIONS"
+        : "INSCRÍBASE A NUESTRAS PROMOCIONES",
+      headerMobile: language ? "SUBSCRIBE" : "SUSCRÍBASE",
     },
   ];
 

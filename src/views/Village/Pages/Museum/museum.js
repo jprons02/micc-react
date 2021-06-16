@@ -26,6 +26,9 @@ import { renderPoiHours } from "services/renderPoiHours.js";
 // Business info
 import { villageHours } from "business_info/hours.js";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2, image3];
@@ -39,7 +42,8 @@ const sliderContent = [
   },
 ];
 
-const GiftShop = () => {
+const Museum = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -50,19 +54,41 @@ const GiftShop = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Village Museum</h2>
-              {renderPoiHours(villageHours)}
-              <p>
-                Opened in 1983, our Museum offers visitors a glimpse into the
-                Tribe’s unique way of life. Miccosukee history and culture is
-                preserved through historical documents, archival photographs and
-                original artifacts.
-              </p>
-              <p>
-                Alongside permanent exhibits showcasing the early life of the
-                Tribe as they adapted to the Everglades, the museum hosts
-                rotating exhibits highlighting historical and contemporary
-                Native American, First Nations and Aboriginal life.
-              </p>
+              {renderPoiHours(villageHours, language)}
+              {language ? (
+                <React.Fragment>
+                  <p>
+                    Opened in 1983, our Museum offers visitors a glimpse into
+                    the Tribe’s unique way of life. Miccosukee history and
+                    culture is preserved through historical documents, archival
+                    photographs and original artifacts.
+                  </p>
+                  <p>
+                    Alongside permanent exhibits showcasing the early life of
+                    the Tribe as they adapted to the Everglades, the museum
+                    hosts rotating exhibits highlighting historical and
+                    contemporary Native American, First Nations and Aboriginal
+                    life.
+                  </p>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <p>
+                    Inaugurado en 1983 el museo brinda a sus visitantes la
+                    oportunidad de apreciar la vida de la tribu. La historia y
+                    cultura de los Miccosukee se preserva en documentos
+                    históricos, fotografías de archivo y objetos originales.
+                  </p>
+                  <p>
+                    Cuenta con exhibiciones que ilustran la vida de los
+                    Miccosukee en su proceso de adaptación a la vida en los
+                    Everglades, además de otras presentaciones en forma rotativa
+                    mostrando como fue y como es la vida contemporánea de los
+                    Americanos nativos, de los pueblos originarios y los
+                    aborígenes.
+                  </p>
+                </React.Fragment>
+              )}
             </div>
           </GridItem>
           <GridItem md={5}>
@@ -76,4 +102,4 @@ const GiftShop = () => {
   );
 };
 
-export default GiftShop;
+export default Museum;

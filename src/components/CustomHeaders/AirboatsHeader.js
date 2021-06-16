@@ -13,7 +13,11 @@ import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { ContactFormContext } from "contexts/ContactFormContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 const AirboatsHeader = () => {
+  const language = useLanguage();
   //classes needed for social icon
   //const classes = useStyles();
 
@@ -45,7 +49,7 @@ const AirboatsHeader = () => {
 
   const menuLinks = [
     {
-      text: "Details",
+      text: language ? "Details" : "Detalles",
       itemType: "id",
       href: "",
       target: "",
@@ -54,7 +58,7 @@ const AirboatsHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Pricing",
+      text: language ? "Pricing" : "Precios",
       itemType: "id",
       href: "",
       target: "",
@@ -63,7 +67,7 @@ const AirboatsHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Groups",
+      text: language ? "Groups" : "Grupos",
       itemType: "action",
       href: "",
       target: "",

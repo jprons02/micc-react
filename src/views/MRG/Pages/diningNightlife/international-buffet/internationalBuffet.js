@@ -24,7 +24,9 @@ import image2 from "assets/img/mrg/dining/international-buffet/Paella_1024x642.j
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
-import { mrgColor } from "themes/colors.js";
+
+// Context
+import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
@@ -40,6 +42,7 @@ const sliderContent = [
 ];
 
 const InternationalBuffet = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const tabContent = [
@@ -279,32 +282,41 @@ const InternationalBuffet = () => {
             <div className={classes.leftTextArea}>
               <h2>Empeeke Aaweeke International Buffet</h2>
               <p>
-                With a killer à la carte breakfast menu and an international
-                buffet, you are sure to enjoy different cuisines everyday! Let
-                your taste buds travel the world from the comfort of our home.
-                Empeeke Aaweeke is South Florida’s most compelling buffet
-                destination.
+                {language
+                  ? "With a killer à la carte breakfast menu and an international buffet, you are sure to enjoy different cuisines everyday! Let your taste buds travel the world from the comfort of our home. Empeeke Aaweeke is South Florida’s most compelling buffet destination."
+                  : "¡Con un excelente menú de desayuno a la carta y un bufé internacional, disfrutarás la cocina de distintas culturas, ya que todos los días tenemos algo nuevo! Deleita tu paladar con sabores internacionales. Empeeke Aaweeke es el bufé más impresionante del Sur de la Florida."}
               </p>
               <p>
                 <span style={{ fontSize: "80%", fontStyle: "italic" }}>
-                  *Prices do not include gratuity and taxes.
+                  {language
+                    ? "*Prices do not include gratuity and taxes."
+                    : "*Precios no incluyen propinas e impuestos."}
                 </span>
               </p>
-              <div style={{ marginTop: "30px", marginBottom: "20px" }}>
-                <Hidden mdUp>
+
+              <Hidden mdUp>
+                <div style={{ marginTop: "30px", marginBottom: "20px" }}>
                   <CustomHorizontalTabs tabContent={tabContent} />
-                </Hidden>
-                <Hidden smDown>
+                </div>
+              </Hidden>
+              <Hidden smDown>
+                <div
+                  style={{
+                    height: "400px",
+                    marginTop: "30px",
+                    marginBottom: "20px",
+                  }}
+                >
                   <CustomVerticalTabs
                     customboxstyle={{
                       paddingTop: "0px",
-                      height: "224px",
+                      height: "400px",
                       overflow: "auto",
                     }}
                     tabContent={tabContent}
                   />
-                </Hidden>
-              </div>
+                </div>
+              </Hidden>
             </div>
           </GridItem>
           <GridItem md={5}>

@@ -25,6 +25,7 @@ import { signupFunction } from "services/signupFucntion.js";
 import { SignupFormContext } from "contexts/SignupFormContext.js";
 import { interests } from "contexts/SignupFormContext.js";
 import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // Custom functions
 import { inputErrorsExist } from "services/validateInput.js";
@@ -33,6 +34,7 @@ import { inputErrorsExist } from "services/validateInput.js";
 const useCheckboxStyles = makeStyles(checkboxStyles);
 
 export default function SignUpForm(props) {
+  const language = useLanguage();
   const [formValues, setFormValues] = useContext(SignupFormContext);
   const [alerts, setAlerts] = useContext(AlertContext);
   const [loading, setLoading] = useState(false);
@@ -155,8 +157,18 @@ export default function SignUpForm(props) {
   const renderFullForm = () => {
     return (
       <div style={{ paddingTop: "15px" }}>
-        <CustomInput name="name" id="name" label={"Name"} fullWidth={true} />
-        <CustomInput name="email" id="email" label={"Email"} fullWidth={true} />
+        <CustomInput
+          name="name"
+          id="name"
+          label={language ? "Name" : "Nombre"}
+          fullWidth={true}
+        />
+        <CustomInput
+          name="email"
+          id="email"
+          label={language ? "Email" : "Correo Electrónico"}
+          fullWidth={true}
+        />
         <div
           style={{
             paddingTop: "30px",
@@ -168,7 +180,7 @@ export default function SignUpForm(props) {
               fontWeight: "300",
             }}
           >
-            Confirm Your Interests:
+            {language ? "Confirm Your Interests:" : "Confirme sus intereses:"}
           </Typography>
         </div>
         {renderCheckboxSection()}
@@ -199,7 +211,13 @@ export default function SignUpForm(props) {
             onClick={submit}
             usetheme="contained"
           >
-            {props.isDesktop ? "Done" : "Subscribe"}
+            {props.isDesktop
+              ? language
+                ? "Done"
+                : "Terminar"
+              : language
+              ? "Subscribe"
+              : "Suscríbase"}
           </Button>
           {loading && (
             <CircularProgress

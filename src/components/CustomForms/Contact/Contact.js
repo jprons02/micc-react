@@ -77,20 +77,41 @@ const Contact = (props) => {
   const renderFullForm = () => {
     return (
       <div style={{ paddingTop: "15px" }}>
-        <CustomInput name="name" id="name" label={"Name"} fullWidth={true} />
-        <CustomInput name="phone" id="phone" label={"Phone"} fullWidth={true} />
-        <CustomInput name="email" id="email" label={"Email"} fullWidth={true} />
+        <CustomInput
+          name="name"
+          id="name"
+          label={props.language ? "Name" : "Nombre"}
+          fullWidth={true}
+        />
+        <CustomInput
+          name="phone"
+          id="phone"
+          label={props.language ? "Phone" : "Teléfono"}
+          fullWidth={true}
+        />
+        <CustomInput
+          name="email"
+          id="email"
+          label={props.language ? "Email" : "Correo Electrónico"}
+          fullWidth={true}
+        />
         <CustomInput
           name="select"
           id="select"
-          label={props.selectLabel ? props.selectLabel : "Select option"}
+          label={
+            props.selectLabel
+              ? props.selectLabel
+              : props.language
+              ? "Select option"
+              : "Seleccione una opción"
+          }
           options={getOptions(props.entity)}
           fullWidth={true}
         />
         <CustomInput
           name="message"
           id="message"
-          label={"Message"}
+          label={props.language ? "Message" : "Mensaje"}
           fullWidth={true}
         />
       </div>
@@ -123,7 +144,7 @@ const Contact = (props) => {
             onClick={submit}
             usetheme="contained"
           >
-            Send Message
+            {props.language ? "Send Message" : "Envíe Mensaje "}
           </Button>
           {loading && (
             <CircularProgress

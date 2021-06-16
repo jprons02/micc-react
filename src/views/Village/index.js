@@ -12,6 +12,7 @@ import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 import { PricingModalProvider } from "contexts/PricingModalContext.js";
+import { useLanguage } from "contexts/languageContext.js";
 
 // Theme
 import { theme } from "../../themes";
@@ -38,14 +39,13 @@ import VillageErrorPage from "views/Village/Pages/error/villageErrorPage.js";
 
 // Business info
 import { villageBusinessInfo } from "business_info/genericInfo.js";
+import { villageHours } from "business_info/hours.js";
 
 // services
 import { popupManager } from "services/popups/popupManager";
 
-// theme color
-import { standardLinkColor } from "themes/colors.js";
-
 export default function Miccosukee(props) {
+  const language = useLanguage();
   let match = useRouteMatch();
   let location = useLocation();
 
@@ -84,13 +84,27 @@ export default function Miccosukee(props) {
           <VillageHeader />
           <StandardAlert
             message={
-              <div>
-                <b>
-                  Miccosukee Indian Village is temporarily closed due to the
-                  COVID-19 pandemic, but the Gift Shop will remain open Friday -
-                  Sunday from 9 A.M. - 4:30 P.M.
-                </b>
-              </div>
+              language ? (
+                <div>
+                  <b>
+                    Miccosukee Indian Village is temporarily closed due to the
+                    COVID-19 pandemic, but the Gift Shop will remain open{" "}
+                    {villageHours.poi.giftShop[0].days(language)} from{" "}
+                    {villageHours.poi.giftShop[0].open} -{" "}
+                    {villageHours.poi.giftShop[0].close}
+                  </b>
+                </div>
+              ) : (
+                <div>
+                  <b>
+                    El Miccosukee Indian Village permanecerá cerrado debido a la
+                    pandemia del COVID-19, pero el Gift Shop estará abierto los{" "}
+                    {villageHours.poi.giftShop[0].days(language)} de{" "}
+                    {villageHours.poi.giftShop[0].open} -{" "}
+                    {villageHours.poi.giftShop[0].close}
+                  </b>
+                </div>
+              )
             }
             close
             color="warning"
@@ -98,19 +112,36 @@ export default function Miccosukee(props) {
           />
           <StandardAlert
             message={
-              <div>
-                <b>
-                  Click
-                  <Link
-                    style={{ color: "white", fontWeight: "800" }}
-                    to={`${match.path}/covid-19`}
-                  >
-                    {" "}
-                    HERE{" "}
-                  </Link>
-                  for the Indian Village COVID-19 guidelines.
-                </b>
-              </div>
+              language ? (
+                <div>
+                  <b>
+                    Click
+                    <Link
+                      style={{ color: "white", fontWeight: "800" }}
+                      to={`${match.path}/covid-19`}
+                    >
+                      {" "}
+                      HERE{" "}
+                    </Link>
+                    for the Indian Village COVID-19 guidelines.
+                  </b>
+                </div>
+              ) : (
+                <div>
+                  <b>
+                    Oprima
+                    <Link
+                      style={{ color: "white", fontWeight: "800" }}
+                      to={`${match.path}/covid-19`}
+                    >
+                      {" "}
+                      AQUÍ{" "}
+                    </Link>
+                    para las últimas noticias de COVID-19 relacionadas a
+                    nuestros establecimientos
+                  </b>
+                </div>
+              )
             }
             close
             color="info"
@@ -148,6 +179,7 @@ export default function Miccosukee(props) {
           <VillageFooter />
           <PopupModal />
           <CustomContactModal
+            language={language}
             showModal={showContactModal}
             closeModal={() => closeModal(setShowContactModal)}
             entity={villageBusinessInfo}

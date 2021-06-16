@@ -24,9 +24,13 @@ import style from "assets/jss/material-kit-react/pricingModalStyle.js";
 // business info
 import { villagePricing } from "business_info/admission.js";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(style);
 
 const PricingModal = (props) => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const renderPricingTable = () => {
@@ -35,12 +39,14 @@ const PricingModal = (props) => {
         <Table className={classes.table} aria-label="simple table">
           <TableBody style={{ backgroundColor: "#f7f7f7" }}>
             {villagePricing.map((row) => (
-              <TableRow key={row.price}>
+              <TableRow key={row.price()}>
                 <TableCell component="th" scope="row">
-                  {row.title}{" "}
-                  <span style={{ fontWeight: "300" }}>({row.detail})</span>
+                  {row.title(language)}{" "}
+                  <span style={{ fontWeight: "300" }}>
+                    ({row.detail(language)})
+                  </span>
                 </TableCell>
-                <TableCell align="right">{row.price}</TableCell>
+                <TableCell align="right">{row.price(language)}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -103,11 +109,19 @@ const PricingModal = (props) => {
           >
             {renderPricingTable()}
           </div>
-          <Typography variant="body2" className={classes.disclaimer}>
-            *Tickets must be purchased at Village front office
-            <br />
-            *No pets, no weapons
-          </Typography>
+          {language ? (
+            <Typography variant="body2" className={classes.disclaimer}>
+              *Tickets must be purchased at Village front office
+              <br />
+              *No pets, no weapons
+            </Typography>
+          ) : (
+            <Typography variant="body2" className={classes.disclaimer}>
+              *Entradas tienen que ser compradas en la oficina del Pueblo
+              <br />
+              *No se permiten mascotas o armas
+            </Typography>
+          )}
         </div>
       </DialogContent>
     </Dialog>
