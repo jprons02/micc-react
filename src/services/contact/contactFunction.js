@@ -1,3 +1,6 @@
+import axios from "axios";
+import { keys } from "keys.js";
+
 const getEmail = (value) => {
   switch (value) {
     // MRG CASES
@@ -90,10 +93,11 @@ const getEmail = (value) => {
   }
 };
 
-export const contactFunction = (valuesObj, callback) => {
+export const contactFunction = async (valuesObj, callback) => {
   console.log("form submitted");
   const toEmail = getEmail(valuesObj.select);
   const valuesToSend = {
+    toEmail: toEmail,
     name: valuesObj.name,
     email: valuesObj.email,
     phone: valuesObj.phone,
@@ -102,7 +106,24 @@ export const contactFunction = (valuesObj, callback) => {
   };
   console.log("values: ", valuesToSend);
   console.log("to email: ", toEmail);
-  setTimeout(() => {
-    callback();
-  }, 5000);
+
+  // Send a POST request
+  try {
+    const response = await axios({
+      method: "POST",
+      url: "https://4hrpj3nvw6.execute-api.us-east-1.amazonaws.com/prod",
+      data: JSON.stringify(valuesToSend),
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": keys.internalEmailAPI,
+      },
+    });
+    if (response.data) {
+      console.log("works: ", response.data);
+      callback();
+    }
+  } catch (error) {
+    console.log("error: ", error);
+    callback(error);
+  }
 };

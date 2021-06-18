@@ -62,12 +62,14 @@ const Contact = (props) => {
     setLoading(true);
 
     // callback function after values have been successfully uploaded
-    const uploaded = () => {
+    const uploaded = (e) => {
       setLoading(false);
       resetState();
       props.closeModal();
       // Set state of the snackbar and pass the id to create a unique snackbar state - this allows for multiple snackbars handled independently
-      setAlerts({ ...alerts, [contactAlertId]: true });
+      if (!e) {
+        setAlerts({ ...alerts, [contactAlertId]: true });
+      }
     };
 
     // send allvalues array to backend service function along with callback function.
