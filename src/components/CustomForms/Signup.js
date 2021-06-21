@@ -102,12 +102,14 @@ export default function SignUpForm(props) {
     buildValuesObj();
 
     // callback function after values have been successfully uploaded
-    const uploaded = () => {
+    const uploaded = (error) => {
       setLoading(false);
       resetState();
       props.closeModal();
       // Set state of the snackbar and pass the id to create a unique snackbar state - this allows for multiple snackbars handled independently
-      setAlerts({ ...alerts, [signupAlertId]: true });
+      if (!error) {
+        setAlerts({ ...alerts, [signupAlertId]: true });
+      }
     };
 
     // send allvalues array to backend service function along with callback function.

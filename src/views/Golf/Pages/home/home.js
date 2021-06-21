@@ -84,7 +84,7 @@ const Home = () => {
           </Typography>
           <Typography className={classes.subWelcome} paragraph component="h3">
             {language
-              ? "The Miccosukee Golf &amp; Country Club has hosted many LPGA and PGA events, including the Miccosukee Championship. In the heart of Kendall, this Mark Mahannah-designed masterpiece is considered by many to have the best layout in South Florida."
+              ? "The Miccosukee Golf & Country Club has hosted many LPGA and PGA events, including the Miccosukee Championship. In the heart of Kendall, this Mark Mahannah-designed masterpiece is considered by many to have the best layout in South Florida."
               : "El Miccosukee Golf & Country Club ha sido anfitrión de muchos eventos LPGA y PGA, entre los que se incluye el Campeonato Miccosukee. Exclusivamente diseñado por Mark Mahannah, es considerado uno de los mejores campos de golf en el sur de la Florida y está ubicado en la elegante zona de Kendall."}
           </Typography>
           <hr className={classes.hr} />

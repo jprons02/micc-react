@@ -1,4 +1,7 @@
 import axios from "axios";
+import { keys } from "keys.js";
+
+//keys.internalMailchimpFunctionAPI
 
 export const signupFunction = (valuesObj, callback) => {
   const postObj = {
@@ -20,16 +23,21 @@ export const signupFunction = (valuesObj, callback) => {
 };
 
 const sendToAWS = async (data, callback) => {
-  const url = "https://va4m9xl0te.execute-api.us-east-1.amazonaws.com/Test";
+  const url = "https://d2xvv4pyv0.execute-api.us-east-1.amazonaws.com/prod";
 
-  const response = await axios({
-    method: "POST",
-    url,
-    data: data,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  console.log(response.data);
-  callback();
+  try {
+    const response = await axios({
+      method: "POST",
+      url,
+      data: data,
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": keys.lambdaMailchimpFunctionAPI,
+      },
+    });
+    console.log(response.data);
+    callback();
+  } catch (error) {
+    callback(error);
+  }
 };

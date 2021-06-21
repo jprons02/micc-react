@@ -96,6 +96,7 @@ const getEmail = (value) => {
 export const contactFunction = async (valuesObj, callback) => {
   console.log("form submitted");
   const toEmail = getEmail(valuesObj.select);
+
   const valuesToSend = {
     toEmail: toEmail,
     name: valuesObj.name,
@@ -104,22 +105,20 @@ export const contactFunction = async (valuesObj, callback) => {
     select: valuesObj.select,
     message: valuesObj.message,
   };
-  console.log("values: ", valuesToSend);
-  console.log("to email: ", toEmail);
 
   // Send a POST request
   try {
     const response = await axios({
       method: "POST",
       url: "https://4hrpj3nvw6.execute-api.us-east-1.amazonaws.com/prod",
-      data: JSON.stringify(valuesToSend),
+      data: valuesToSend,
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": keys.internalEmailAPI,
+        "x-api-key": keys.lambdaEmailAPI,
       },
     });
     if (response.data) {
-      console.log("works: ", response.data);
+      console.log("internal email api response: ", response.data);
       callback();
     }
   } catch (error) {

@@ -291,7 +291,7 @@ const MrgCovidInfo = (props) => {
       <div style={{ marginTop: "10px" }}>
         <h3>
           {props.language
-            ? "Miccosukee Resort &amp; Gaming Reopening Details"
+            ? "Miccosukee Resort & Gaming Reopening Details"
             : "Miccosukee Resort & Gaming Detalles de Reapertura"}
         </h3>
         <video
@@ -302,7 +302,7 @@ const MrgCovidInfo = (props) => {
         />
         <p>
           {props.language
-            ? "At this time, all employees returning to work have tested negative for COVID-19 and have all been trained on how to properly prevent thespread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee Resort &amp; Gaming asks any employee or patron who is exhibiting symptoms to please remain at home for the safety of all other employees and guests. Miccosukee Resort &amp; Gaming is very proud to be able to serve its South Florida community once again."
+            ? "At this time, all employees returning to work have tested negative for COVID-19 and have all been trained on how to properly prevent thespread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee Resort & Gaming asks any employee or patron who is exhibiting symptoms to please remain at home for the safety of all other employees and guests. Miccosukee Resort & Gaming is very proud to be able to serve its South Florida community once again."
             : "Hemos realizado controles a todos nuestros empleados y todos han dado negativo al COVID-19. Además los hemos capacitado sobre cómo prevenir su contagio. Debido a la pandemia provocada por el brote de COVID-19, Miccosukee Resort & Gaming le pide a todos los empleados y clientes que tengan síntomas que por favor permanezcan en sus casas por la seguridad de todos. Miccosukee Resort & Gaming se enorgullece de volver a colaborar con la comunidad del sur de la Florida."}
         </p>
         <p>
