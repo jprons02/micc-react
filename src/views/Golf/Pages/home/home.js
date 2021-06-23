@@ -9,7 +9,6 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
-//<GridItem sm={12} md={6}>
 
 // My Custom Component
 import HeroSection from "components/CustomSections/HeroSection.js";

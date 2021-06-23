@@ -1,48 +1,35 @@
 import axios from "axios";
+import { keys } from "keys.js";
 
-export const virtualEventLoginFunction = (email, callback) => {
-  console.log(email);
-  setTimeout(() => {
-    if (email === "jronselli@miccosukee.com") {
-      callback(true);
-    } else {
-      callback(false);
-    }
-  }, 5000);
-};
-
-/*
-export const signupFunction = (valuesObj, callback) => {
-  const postObj = {
-    members: [
-      {
-        email_address: valuesObj.formInputValues.email,
-        status: "subscribed",
-        merge_fields: {
-          FNAME: valuesObj.formInputValues.name,
-        },
-        interests: valuesObj.formCheckedValues,
-      },
-    ],
-    update_existing: true,
-  };
-  const postObjJson = JSON.stringify(postObj);
-
-  sendToAWS(postObjJson, callback);
-};
-
-const sendToAWS = async (data, callback) => {
-  const url = "https://va4m9xl0te.execute-api.us-east-1.amazonaws.com/Test";
-
-  const response = await axios({
-    method: "POST",
-    url,
-    data: data,
-    headers: {
-      "Content-Type": "application/json",
-    },
+export const virtualEventLoginFunction = async (eventID, email, callback) => {
+  const dataString = JSON.stringify({
+    email: email,
+    eventID: eventID,
   });
-  console.log(response.data);
-  callback();
+
+  try {
+    const response = await axios({
+      method: "POST",
+      url: "https://g2r90bduue.execute-api.us-east-1.amazonaws.com/prod",
+      data: dataString,
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": keys.lambdaEventbriteAPI,
+      },
+    });
+    if (response.data) {
+      // check if user inputted email is in response.data here... and send to callback.
+      for (let i = 0; i < response.data.length; i++) {
+        if (response.data[i].email === email) {
+          callback("matched");
+          break;
+        } else {
+          callback("not matched");
+        }
+      }
+    }
+  } catch (error) {
+    console.log("error: ", error);
+    callback(error);
+  }
 };
-*/

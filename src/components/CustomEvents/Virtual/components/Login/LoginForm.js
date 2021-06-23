@@ -44,6 +44,7 @@ export default function LoginForm(props) {
         email: "",
       },
     });
+    setSubmitErrorMessage(false);
   };
 
   const submit = (e) => {
@@ -53,21 +54,26 @@ export default function LoginForm(props) {
     // callback function after values have been successfully uploaded
     const uploaded = (value) => {
       setLoading(false);
+      resetState();
 
       // If value === true, this means user entered in a valid email and is now logged in.
-      if (value) {
+      if (value === "matched") {
         // Set state of the snackbar and pass the id to create a unique snackbar state - this allows for multiple snackbars handled independently
         setAlerts({ ...alerts, [virtualEventLoginId]: true });
         props.closeModal();
-        resetState();
-      } else {
+        setSubmitErrorMessage(false);
+        props.setLoginStatus(true);
+      } else if (value === "not matched") {
         setSubmitErrorMessage(true);
       }
-      props.setLoginStatus(value);
     };
 
     // Send input values to backend service function along with callback function.
-    virtualEventLoginFunction(inputValues.inputValues.email, uploaded);
+    virtualEventLoginFunction(
+      props.eventbriteID,
+      inputValues.inputValues.email,
+      uploaded
+    );
   };
 
   const renderForm = () => {
@@ -102,40 +108,42 @@ export default function LoginForm(props) {
     <React.Fragment>
       <form onSubmit={submit}>
         {renderForm()}
-        <div
-          style={{
-            position: "relative",
-          }}
-        >
-          <Button
-            type="submit"
-            disabled={
-              inputErrorsExistVirtualEvent(
-                inputValues.inputValues.emailError
-              ) || loading
-            }
+        <div>
+          <div
             style={{
-              margin: "15px 0 0 0",
+              position: "relative",
             }}
-            fullWidth
-            usetheme="contained"
           >
-            Log In
-          </Button>
-          {loading && (
-            <CircularProgress
+            <Button
+              type="submit"
+              disabled={
+                inputErrorsExistVirtualEvent(
+                  inputValues.inputValues.emailError
+                ) || loading
+              }
               style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                marginTop: "-5px",
-                marginLeft: "-12px",
+                margin: "15px 0 0 0",
               }}
-              size={24}
-              color="primary"
-            />
-          )}
-          {submitErrorMessage ? renderSubmitErrorMessage() : null}
+              fullWidth
+              usetheme="contained"
+            >
+              Log In
+            </Button>
+            {loading && (
+              <CircularProgress
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  marginTop: "-5px",
+                  marginLeft: "-12px",
+                }}
+                size={24}
+                color="primary"
+              />
+            )}
+          </div>
+          {submitErrorMessage ? renderSubmitErrorMessage() : ""}
         </div>
       </form>
     </React.Fragment>

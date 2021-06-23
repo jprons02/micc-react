@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import VirtualEvent from "components/CustomEvents/Virtual";
 
 // My content
@@ -7,12 +7,10 @@ import birdsVid from "assets/event/birds.mp4";
 import weatherVid from "assets/event/weather.mp4";
 import image1 from "assets/img/bg.jpg";
 
-const AID = () => {
-  //Eventbrite embed here...?
+const AID = (props) => {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
   useEffect(() => {
-    console.log("AID EVENTBRITE useefffect load.");
-    /*
-    I gain access to the EBWidget variables below from the <script> added in public/index.js.
     var exampleCallback = function () {
       console.log("Order complete!");
     };
@@ -21,10 +19,9 @@ const AID = () => {
       widgetType: "checkout",
       eventId: "144427499539",
       modal: true,
-      modalTriggerElementId: "eventbrite-widget-modal-trigger-144427499539",
+      modalTriggerElementId: "example-widget-trigger",
       onOrderComplete: exampleCallback,
     });
-    */
   }, []);
 
   // Title area
@@ -118,6 +115,14 @@ const AID = () => {
       events={events}
       vendors={vendors}
       extras={extras}
+      eventbriteButton={() => (
+        <button id="example-widget-trigger" type="button">
+          Buy Tickets
+        </button>
+      )}
+      eventbriteID="144427499539"
+      isLoggedIn={isLoggedIn}
+      setLoggedIn={setLoggedIn}
     />
   );
 };

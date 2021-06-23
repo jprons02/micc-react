@@ -21,7 +21,6 @@ const CustomGamingPromoModal = (props) => {
   const rulesClasses = rulesUseStyles();
 
   const renderRules = () => {
-    //console.log("from renderRules(): ", props.selectedPromo.rules.subSections);
     if (props.selectedPromo.rules) {
       return props.selectedPromo.rules.subSections.map((subSection) => {
         return (

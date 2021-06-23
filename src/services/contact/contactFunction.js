@@ -118,7 +118,7 @@ export const contactFunction = async (valuesObj, callback) => {
       },
     });
     if (response.data) {
-      console.log("internal email api response: ", response.data);
+      console.log(response.data);
       callback();
     }
   } catch (error) {

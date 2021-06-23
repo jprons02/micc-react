@@ -20,7 +20,6 @@ import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import EventVideo from "components/CustomEvents/Virtual/components/EventVideo.js";
 import Schedule from "components/CustomEvents/Virtual/components/Schedule.js";
 import LoginModal from "components/CustomEvents/Virtual/components/Login/LoginModal.js";
-import PurchaseTicketsModal from "components/CustomEvents/Virtual/components/PurchaseTickets/PurchaseTicketsModal.js";
 
 // Context
 import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";
@@ -37,17 +36,13 @@ const VirtualEvent = (props) => {
   const classes = useStyles();
   const [alerts, setAlerts] = useContext(AlertContext);
 
-  const [isLoggedIn, setLogIn] = useState(false);
+  //const [isLoggedIn, setLogIn] = useState(false);
   // loginClick state used for Login component. If user clicks login they should go to email input render.
   const [loginButtonClicked, setLoginButtonClicked] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showTicketsModal, setShowTicketsModal] = useState(false);
-
-  console.log("show Login Modal: ", showLoginModal);
-  console.log("show Tickets Modal: ", showTicketsModal);
 
   useEffect(() => {
-    if (!isLoggedIn) {
+    if (!props.isLoggedIn) {
       setShowLoginModal(true);
     }
   }, []);
@@ -66,14 +61,6 @@ const VirtualEvent = (props) => {
     setShowLoginModal(false);
   };
 
-  const closeTicketsModal = () => {
-    setShowTicketsModal(false);
-  };
-
-  const openTicketsModal = () => {
-    setShowTicketsModal(true);
-  };
-
   const renderWelcome = () => {
     return (
       <div className={classes.welcomeSection}>
@@ -88,7 +75,10 @@ const VirtualEvent = (props) => {
     return (
       <div className={classes.buttonSection}>
         <Button
-          onClick={openTicketsModal}
+          id="example-widget-trigger"
+          type="button"
+          dataautomation="ticket-modal-btn"
+          datatrackinglabel="Tickets"
           className={classes.button}
           variant="contained"
         >
@@ -101,10 +91,9 @@ const VirtualEvent = (props) => {
   const loginClick = () => {
     setShowLoginModal(true);
     setLoginButtonClicked(true);
-    console.log("clicked login.");
   };
   const renderLoginButton = () => {
-    if (!isLoggedIn) {
+    if (!props.isLoggedIn) {
       return (
         <div className={classes.loginButtonSection}>
           <MuiButton onClick={loginClick} className={classes.loginButton}>
@@ -302,14 +291,11 @@ const VirtualEvent = (props) => {
     <React.Fragment>
       <VirtualEventLoginFormProvider>
         <LoginModal
-          setLoginStatus={setLogIn}
+          setLoginStatus={props.setLoggedIn}
           loginClicked={loginButtonClicked}
           closeModal={closeLoginModal}
           showLoginModal={showLoginModal}
-        />
-        <PurchaseTicketsModal
-          closeTicketsModal={closeTicketsModal}
-          showTicketsModal={showTicketsModal}
+          eventbriteID={props.eventbriteID}
         />
         <HeroSection sliderContent={props.sliderContent} />
         <Hidden mdUp>{renderMobileView()}</Hidden>

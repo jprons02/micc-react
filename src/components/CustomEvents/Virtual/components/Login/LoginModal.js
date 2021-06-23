@@ -25,12 +25,10 @@ export default function LoginModal(props) {
   const [showForm, setShowForm] = useState(null);
 
   const clickedYes = () => {
-    console.log("clicked yes.");
     setShowForm(true);
   };
 
   const clickedNo = () => {
-    console.log("clicked no.");
     setShowForm(false);
     props.closeModal();
   };
@@ -43,6 +41,7 @@ export default function LoginModal(props) {
         <LoginForm
           setLoginStatus={props.setLoginStatus}
           closeModal={props.closeModal}
+          eventbriteID={props.eventbriteID}
         />
       );
     } else if (showForm === null) {

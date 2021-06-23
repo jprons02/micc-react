@@ -35,7 +35,6 @@ const sendToAWS = async (data, callback) => {
         "x-api-key": keys.lambdaMailchimpFunctionAPI,
       },
     });
-    console.log(response.data);
     callback();
   } catch (error) {
     callback(error);

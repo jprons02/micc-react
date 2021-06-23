@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { Link, useHistory } from "react-router-dom";
 // react component for creating beautiful carousel
 import Slider from "react-slick";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";

@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 // @material-ui/core components
 import { Icon } from "@material-ui/core";
 import { cardTitle } from "assets/jss/material-kit-react.js";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -12,11 +14,9 @@ import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
 import Button from "components/CustomButtons/Button.js";
 
-import { makeStyles } from "@material-ui/core/styles";
 // Styles
 import styles from "assets/jss/material-kit-react/components/customCardStyle/customMiccosukeeCardStyle.js";
-
-import { mrgColor } from "themes/colors.js";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(styles);
 

@@ -70,7 +70,6 @@ const GamingPromos = () => {
   };
 
   const promoClick = (promo) => {
-    console.log("promo has been clicked!");
     setSelectedPromo(promo);
     setShowModal(true);
   };
