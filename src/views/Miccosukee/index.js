@@ -39,6 +39,24 @@ const Miccosukee = () => {
   let { path } = useRouteMatch();
   let location = useLocation();
 
+  useEffect(() => {
+    let host = window.location.host;
+    let protocol = window.location.protocol;
+    let parts = host.split(".");
+    let subdomain = parts[0];
+    // If we get more than 3 parts, then we have a subdomain
+    // INFO: This could be 4, if you have a co.uk TLD or something like that.
+    if (parts.length >= 3) {
+      subdomain = parts[0];
+      // Remove the subdomain from the parts list
+      parts.splice(0, 1);
+      // Set the location to the new url
+      window.location =
+        protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
+    }
+    console.log("location pathname: ", location.pathname);
+  }, []);
+
   //const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
   const [popupState, setPopupState] = useContext(PopupContext);
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
@@ -49,6 +67,25 @@ const Miccosukee = () => {
     // Check if popup should be displayed after location change
     popupManager(setPopupState, popupState, location);
   }, [location]);
+
+  //TESTING
+  /*
+  let host = window.location.host;
+  let protocol = window.location.protocol;
+  let parts = host.split(".");
+  let subdomain = parts[0];
+  // If we get more than 3 parts, then we have a subdomain
+  // INFO: This could be 4, if you have a co.uk TLD or something like that.
+  if (parts.length >= 3) {
+    subdomain = parts[0];
+    // Remove the subdomain from the parts list
+    parts.splice(0, 1);
+    // Set the location to the new url
+    window.location =
+      protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
+  }
+  console.log("location pathname: ", location.pathname);
+  */
 
   return (
     <div className={classNames(classes.main)}>
