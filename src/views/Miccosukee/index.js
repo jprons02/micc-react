@@ -46,14 +46,36 @@ const Miccosukee = () => {
     let subdomain = parts[0];
     // If we get more than 3 parts, then we have a subdomain
     // INFO: This could be 4, if you have a co.uk TLD or something like that.
-    if (parts.length >= 3) {
-      subdomain = parts[0];
-      // Remove the subdomain from the parts list
-      parts.splice(0, 1);
-      // Set the location to the new url
-      window.location =
-        protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
+    if (host === "d3hg4fe289wfe1.cloudfront.net") {
+      if (parts.length >= 4) {
+        subdomain = parts[0];
+        // Remove the subdomain from the parts list
+        parts.splice(0, 1);
+        // Set the location to the new url
+        window.location =
+          protocol +
+          "//" +
+          parts.join(".") +
+          "/" +
+          subdomain +
+          location.pathname;
+      }
+    } else {
+      if (parts.length >= 3) {
+        subdomain = parts[0];
+        // Remove the subdomain from the parts list
+        parts.splice(0, 1);
+        // Set the location to the new url
+        window.location =
+          protocol +
+          "//" +
+          parts.join(".") +
+          "/" +
+          subdomain +
+          location.pathname;
+      }
     }
+
     console.log("location pathname: ", location.pathname);
   }, []);
 
