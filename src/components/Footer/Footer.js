@@ -88,13 +88,17 @@ export default function Footer(props) {
               Copyright &copy; {1900 + new Date().getYear()}
             </div>
             <div style={{ padding: "0px" }} className={classes.right}>
-              <Badge
-                styleProp={{ cursor: "pointer", width: "70px" }}
-                onClick={toggleLanguage}
-                color="danger"
-              >
-                {language ? "español" : "english"}
-              </Badge>
+              {props.noLanguage ? (
+                ""
+              ) : (
+                <Badge
+                  styleProp={{ cursor: "pointer", width: "70px" }}
+                  onClick={toggleLanguage}
+                  color="danger"
+                >
+                  {language ? "español" : "english"}
+                </Badge>
+              )}
             </div>
           </div>
         </div>

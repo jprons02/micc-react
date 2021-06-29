@@ -34,7 +34,7 @@ export const renderPoiHours = (hours, language) => {
             } else if (item.open === item.close) {
               return (
                 <React.Fragment key={item.days(language)}>
-                  {item.days(language)}, 24 Hours <br />
+                  {item.days(language)}{language ? ", 24 Hours" : ", 24 Horas"} <br />
                 </React.Fragment>
               );
             } else {

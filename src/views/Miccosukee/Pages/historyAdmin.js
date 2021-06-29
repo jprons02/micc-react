@@ -32,8 +32,8 @@ const GamingGolf = () => {
       title: language ? "History" : "Historia",
       theme: "history",
       description: language
-        ? "With supporting text below as a natural lead-in to additional content."
-        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
+        ? "Discover the history of the Everglades’ first inhabitants. "
+        : "Descubra la historia de los primeros habitantes de los Everglades.",
       imgSrc: historyImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",

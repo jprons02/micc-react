@@ -83,7 +83,7 @@ const Museum = () => {
                     Cuenta con exhibiciones que ilustran la vida de los
                     Miccosukee en su proceso de adaptación a la vida en los
                     Everglades, además de otras presentaciones en forma rotativa
-                    mostrando como fue y como es la vida contemporánea de los
+                    mostrando cómo fue y cómo es la vida contemporánea de los
                     Americanos nativos, de los pueblos originarios y los
                     aborígenes.
                   </p>

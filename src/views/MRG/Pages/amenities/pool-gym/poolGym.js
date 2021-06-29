@@ -54,12 +54,12 @@ const PoolGym = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Pool & Fitness Center" : "español"}</h2>
+              <h2>{language ? "Pool & Fitness Center" : "Piscina y Gimnasio"}</h2>
               {renderPoiHours(mrgHours.poi.poolGym, language)}
               <p>
                 {language
                   ? "Cool off in our indoor pool or take a relaxing dip in our jacuzzi. Maybe unwind in our sauna. Enjoy South Florida’s gorgeous weather on our outdoor patio. Whether you’re soaking up the sun or cooling off under the serene shadow of one of our chickees, our outdoor patio is the perfect place to relax all year round."
-                  : "español"}
+                  : "Refrésquese en nuestra pisicina interior o relájese en nuestro jacuzzi o sauna. Disfrute el clima espectacular del Sur de la Florida en nuestro patio al aire libre, ya sea tomando sol durante el día o disfrutando de la sombra serena de uno de nuestros chickees; este lugar es perfecto para relajarse durante todo el año."}
               </p>
             </div>
           </GridItem>

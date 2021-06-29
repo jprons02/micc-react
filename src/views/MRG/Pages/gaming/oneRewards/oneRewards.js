@@ -60,11 +60,11 @@ const OneRewards = () => {
             <p>
               {language
                 ? "It’s simple; all you have to do is play with your Miccosukee One card and start earning valuable points! Video players, insert your card into any gaming machine while playing. Bingo players, present your card when purchasing your bingo cards."
-                : "Es sencillo. ¡Lo único que tienes que hacer es jugar con tu tarjeta Miccosukee One para comenzar a ganar puntos! Inserta tu tarjeta en cualquier máquina mientras juegas. Jugadores de bingo, presenten su tarjeta cuando compren sus cartones de bingo."}
+                : "Es sencillo. ¡Lo único que tiene que hacer es jugar con su tarjeta Miccosukee One para comenzar a ganar puntos! Inserte su tarjeta en cualquier máquina mientras juega. Jugadores de bingo, presenten su tarjeta cuando compren sus cartones de bingo."}
             </p>
             <ul>
               <li>
-                {language ? "Gaming Machine: " : "Máquinas de Juego: "}$10 = 1pt
+                {language ? "Gaming Machine: " : "Máquina de juego: "}$10 = 1pt
               </li>
               <li>Bingo: $2.50 = 1pt</li>
             </ul>
@@ -101,15 +101,15 @@ const OneRewards = () => {
               ) : (
                 <React.Fragment>
                   <li>Premios Free Play</li>
-                  <li>Bufé Internacional Empeeke Aaweeke</li>
-                  <li>Empeek-Cheke</li>
-                  <li>Restaurantes de alta cocina</li>
+                  <li>Bufé Internacional Empeeke Aaweeke</li> 
+                  <li>Empeek-Cheke</li> 
+                  <li>Restaurantes  de alta cocina</li>
                   <li>Café Hammock</li>
                   <li>Bar de entremeses Bingo</li>
                   <li>Deli Empeeke Aya</li>
-                  <li>Habitaciones de hotel </li>
+                  <li>Habitaciones de hotel</li> 
                   <li>Spa &amp; Salón</li>
-                  <li>Gift Shop</li>
+                  <li>Gift Shop</li> 
                 </React.Fragment>
               )}
             </ul>
@@ -120,14 +120,14 @@ const OneRewards = () => {
     {
       question: language
         ? "What other benefits do I have?"
-        : "¿Qué otros beneficios tengo? ",
+        : "¿Qué otros beneficios tengo?",
       answer: () => {
         return (
           <div>
             <p>
               {language
                 ? "Miccosukee One card holders are currently entitled to discounts on Resort Standard Room Rates as well as admission to Miccosukee Indian Village & Airboat Rides. The Miccosukee One card has four levels of card benefits based on rated play that they may include free valet parking, exclusive drawings and events, VIP giveaways and birthday meal vouchers."
-                : "Titulares de la tarjeta Miccosukee One son elegibles para recibir descuentos en las tarifas de habitaciones standard del Resort y entradas para el Miccosukee Indian Village & Airboats. La tarjeta Miccosukee One tiene cuatro niveles de beneficios basados en frecuencia de juego que incluyen estacionamiento valet gratis, sorteos exclusivos y eventos, regalos VIP, y cupones para cenar en tu cumpleaños."}
+                : "Titulares de la tarjeta Miccosukee One son elegibles para recibir descuentos en las tarifas de habitaciones standard del Resort y entradas para el Miccosukee Indian Village & Airboats. La tarjeta Miccosukee One tiene cuatro niveles de beneficios basados en frecuencia de juego que incluyen estacionamiento valet gratis, sorteos exclusivos y eventos, regalos VIP, y cupones para cenar en su cumpleaños."}
             </p>
           </div>
         );
@@ -177,17 +177,17 @@ const OneRewards = () => {
               <p>
                 {language
                   ? "PLAY MORE, GET MORE! The only program that rewards you for your style of play."
-                  : "¡JUEGA MÁS, GANA MÁS! El único programa que te premia por tu estilo de juego."}
+                  : "¡JUEGUE MÁS, GANE MÁS! El único programa que le premia por su estilo de juego."}
               </p>
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2021/03/BINGO-PROGRAM-APPROVED_WEB.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                {language ? "VIEW PROGRAM" : "español"}
+                {language ? "VIEW PROGRAM" : "VER PROGRAMA"}
               </Button>
               <div style={{ marginTop: "25px" }}>
-                <h4>{language ? "FAQs" : "Preguntas Frecuentes"}</h4>
+                <h4>{language ? "FAQs" : "PREGUNTAS FRECUENTES (FAQs)"}</h4>
                 <div style={{ width: "100%" }}>{renderExpansionPanel()}</div>
               </div>
             </div>

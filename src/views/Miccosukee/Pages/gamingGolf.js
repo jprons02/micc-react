@@ -38,8 +38,8 @@ const GamingGolf = () => {
       title: language ? "Resort & Gaming" : "Resort & Gaming",
       theme: mrgBusinessInfo.name,
       description: language
-        ? "With supporting text below as a natural lead-in to additional content."
-        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
+        ? "Come for the gaming, stay for the fun!"
+        : "Venga a jugar, ¡quédese a divertirse!",
       imgSrc: mrgImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",
@@ -57,8 +57,8 @@ const GamingGolf = () => {
       title: language ? "Golf & Country Club" : "Golf & Country Club",
       theme: golfBusinessInfo.name,
       description: language
-        ? "With supporting text below as a natural lead-in to additional content."
-        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
+        ? "This Mark Mahannah-designed masterpiece is considered by many to have the best layout in South Florida."
+        : "Exclusivamente diseñado por Mark Mahannah, es considerado uno de los mejores campos de golf del Sur de la Florida.",
       imgSrc: golfImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",

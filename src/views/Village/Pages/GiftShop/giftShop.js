@@ -62,19 +62,13 @@ const GiftShop = () => {
                 <p>
                   Visit the Miccosukee Indian Gift Shop to find crafts created
                   by natives around the world, and special gifts made by our
-                  Miccosukee Tribe members. Check out this video to find out
-                  what we have in store for you, and how we’re following all
-                  safety guidelines to keep you protected while you shop native!
+                  Miccosukee Tribe members.
                 </p>
               ) : (
                 <p>
                   Visite el Miccosukee Indian Gift shop y encuentre artesanías
                   creadas por nativos alrededor del mundo, y regalos especiales
-                  hechos por miembros de nuestra Tribu Miccosukee. ¡Mire este
-                  video dónde le mostramos lo que tenemos para ofrecerle en
-                  nuestra tienda, y cómo estamos siguiendo todas las directrices
-                  de seguridad para mantenerlo protegido mientras compra regalos
-                  nativos!
+                  hechos por miembros de nuestra Tribu Miccosukee.
                 </p>
               )}
               <Button
@@ -82,7 +76,7 @@ const GiftShop = () => {
                 target="_blank"
                 usetheme="contained"
               >
-                Online Store
+                {language ? "Online Store" : "Tienda Virtual"}
               </Button>
             </div>
           </GridItem>

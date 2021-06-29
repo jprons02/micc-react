@@ -94,7 +94,7 @@ const Details = () => {
     <GridContainer style={{ marginTop: "0px" }} justify="center">
       <GridItem xs={12}>
         <h1 style={{ fontStyle: "italic", fontWeight: "400" }}>
-          {language ? "ADVENTURE AWAITS!" : "¡LA AVENTURA TE ESPERA!"}
+          {language ? "ADVENTURE AWAITS!" : "¡LA AVENTURA LE ESPERA!"}
         </h1>
         <p>
           {language
@@ -105,8 +105,7 @@ const Details = () => {
           been owned by the same family for more than 100 years! Let our expert
           guides show you a side of the beautiful Everglades you can’t see
           anywhere else.`
-            : `Los Airboats (hidrodeslizadores) de los Miccosukee son la mejor manera de conocer y pasear por los Everglades y disfrutar del “Rio de Césped”. Podrás sentir la hermosa brisa y el ruido de la vegetación acuática mientras navegas. Tendrás una idea cierta de cómo era la vida tradicional de los Miccosukee y descubrirás la isla usada como campamento, que ha pertenecido a la misma familia por más
-          de 100 años. Permite que nuestros expertos te guíen y muestren lo más bello de los Everglades que no podrás ver en otro lado.`}
+            : `Los Airboats (hidrodeslizadores) de los Miccosukee son la mejor manera de conocer y pasear por los Everglades y disfrutar del “Río de Césped”. Sienta la brisa y el ruido de la vegetación acuática mientras navega. Tendrá una idea clara de cómo era la vida tradicional de los Miccosukee y descubrirá la isla usada como campamento que ha pertenecido a la misma familia por más de 100 años. Permita que nuestros expertos le guíen y muestren lo más bello de los Everglades que no podrá ver en otro lugar.`}
         </p>
         <div style={{ marginBottom: "50px" }} className={classes.imageArea}>
           <Hidden mdUp>{renderMobileSlider()}</Hidden>

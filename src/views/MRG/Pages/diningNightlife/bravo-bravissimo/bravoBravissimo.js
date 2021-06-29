@@ -57,22 +57,22 @@ const Bravo = () => {
               {renderPoiHours(mrgHours.poi.bravo, language)}
               <p>
                 {language
-                  ? "SAMPLE - With a killer à la carte breakfast menu and an international buffet, you are sure to enjoy different cuisines everyday! Let your taste buds travel the world from the comfort of our home. Empeeke Aaweeke is South Florida’s most compelling buffet destination."
-                  : "español"}
+                  ? "Enjoy traditional Italian dishes and an extensive wine selection in a casual, cozy setting perfect for couples and families alike."
+                  : "Disfrute platos tradicionales de la cocina Italiana y una extensa selección de vinos en un ambiente casual y acogedor perfecto para parejas y familias."}
               </p>
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_Menu_11x17.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                {language ? "MENU" : "español"}
+                {language ? "MENU" : "MENÚ"}
               </Button>{" "}
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_DrinksMenu.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                {language ? "DRINK MENU" : "español"}
+                {language ? "DRINK MENU" : "CARTA DE VINOS Y BEBIDAS"}
               </Button>
             </div>
           </GridItem>

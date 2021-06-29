@@ -97,7 +97,7 @@ const VillageHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Admission",
+      text: language ? "Admission" : "Admisión ",
       itemType: "",
       href: "",
       target: "",
@@ -106,7 +106,7 @@ const VillageHeader = () => {
       clickFunction: () => openModal(setShowPricingModal),
     },
     {
-      text: "Groups",
+      text: language ? "Groups" : "Grupos",
       itemType: "action",
       href: "",
       target: "",

@@ -58,9 +58,9 @@ const ClubEgret = () => {
               <p>
                 {language
                   ? "Club Egret is reserved for children ages 12 and under."
-                  : "español"}{" "}
+                  : "Club Egret está reservado para niños de 12 años o menos."}
                 <br />
-                {language ? "For more information, please call " : "español "}
+                {language ? "For more information, please call " : "Para más información, por favor llame al "}
                 <a href="tel:+13059252555">
                   <Typography variant="inherit" color="primary">
                     305-925-2555
@@ -72,7 +72,7 @@ const ClubEgret = () => {
                 <span style={{ fontSize: "80%", fontStyle: "italic" }}>
                   {language
                     ? "*Hourly rates apply. Minimum one hour."
-                    : "español"}
+                    : "*Se aplican tarifas por hora. Mínimo una hora."}
                 </span>
               </p>
             </div>

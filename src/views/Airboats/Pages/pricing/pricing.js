@@ -25,12 +25,12 @@ const Pricing = () => {
     >
       <GridItem xs={12} style={{ marginBottom: "35px" }}>
         <h1 style={{ fontStyle: "italic", fontWeight: "400" }}>
-          {language ? `CHOOSE YOUR ADVENTURE!` : `ELIGE TU AVENTURA`}
+          {language ? `CHOOSE YOUR ADVENTURE!` : `ELIJA SU AVENTURA`}
         </h1>
         <p className={classes.disclaimer}>
           {language
             ? `*All tickets need to be purchased from airboat front desk.`
-            : `*Todas las entradas tienen que ser compradas en el mostrador de botes de aire.`}
+            : `*Todas las entradas deben ser compradas en el mostrador de botes de aire.`}
         </p>
       </GridItem>
       {airboatsPricing.map((item) => {

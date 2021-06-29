@@ -616,7 +616,7 @@ const Rates = () => {
         <p style={{ fontStyle: "italic", fontSize: "12px" }}>
           {language
             ? `*No rain checks unless course closed and/or is declared unplayable.Group rates available upon request. All fees are per player. Rates subject to change or cancellation at the discretion of management.`
-            : `*No se realizarán devoluciones o cambios de entradas salvo que los cursos se cierren u ocurran acontecimientos que impidan continuar con el juego. Consulte por tarifas de grupo. Los precios son por jugador. Las tarifas están sujetas a cambio y podrían ser canceladas a discreción de la gerencia.`}
+            : `*No se realizarán devoluciones o cambios de entradas salvo que los campos estén cerrados u ocurran acontecimientos que impidan continuar con el juego. Consulte por tarifas de grupo. Los precios son por jugador. Las tarifas están sujetas a cambio y podrían ser canceladas a discreción de la gerencia.`}
         </p>
       </RaisedContainer>
     </React.Fragment>

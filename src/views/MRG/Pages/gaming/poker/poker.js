@@ -52,7 +52,7 @@ const Poker = () => {
 
   const tabContent = [
     {
-      title: "Monday",
+      title: language ? "Monday" : "lunes",
       text: () => {
         return (
           <div>
@@ -64,7 +64,7 @@ const Poker = () => {
       },
     },
     {
-      title: "Tuesday",
+      title: language ? "Tuesday" : "martes",
       text: () => {
         return (
           <div>
@@ -84,7 +84,7 @@ const Poker = () => {
       },
     },
     {
-      title: "Wednesday",
+      title: language ? "Wednesday" : "miércoloes",
       text: () => {
         return (
           <div>
@@ -98,7 +98,7 @@ const Poker = () => {
       },
     },
     {
-      title: "Thursday",
+      title: language ? "Thursday" : "jueves",
       text: () => {
         return (
           <div>
@@ -119,7 +119,7 @@ const Poker = () => {
       },
     },
     {
-      title: "Friday",
+      title: language ? "Friday" : "viernes",
       text: () => {
         return (
           <div>
@@ -142,7 +142,7 @@ const Poker = () => {
       },
     },
     {
-      title: "Saturday",
+      title: language ? "Saturday" : "sábado",
       text: () => {
         return (
           <div>
@@ -157,7 +157,7 @@ const Poker = () => {
       },
     },
     {
-      title: "Sunday",
+      title: language ? "Sunday" : "domingo",
       text: () => {
         return (
           <div>
@@ -186,17 +186,17 @@ const Poker = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Poker" : "Póquer"}</h2>
+              <h2>{language ? "Poker" : "Póker"}</h2>
               {renderPoiHours(mrgHours.poi.poker)}
               <p>
                 {language
                   ? "Our new Poker Game Room is now open! With a whole new look and it being a non-smoking room, it’s the perfect place to come and play."
-                  : "español"}
+                  : "¡Nuestra nueva Sala de Póker ya está abierta! Con un nuevo look y libre de humo, es el lugar perfecto para venir a jugar."}
               </p>
               <p>
                 {language
                   ? "All we’re missing is you, we can’t wait to see you there!"
-                  : "español"}
+                  : "Lo único que nos falta es usted, ¡y estamos ansiosos de que nos visite!"}
               </p>
               <div style={{ marginTop: "30px", marginBottom: "20px" }}>
                 <Hidden mdUp>

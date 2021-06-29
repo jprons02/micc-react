@@ -56,7 +56,7 @@ const CypressLounge = () => {
               <p>
                 {language
                   ? "The Cypress Lounge is home to daily beer specials and Monday Night Football, caliente Miami HEAT action and more! Enjoy sporting events year round on our large screen TVs in the middle of South Florida’s hottest gaming action."
-                  : "¡En Cypress Lounge tenemos especiales de cerveza todos los días, además de Futbol Americano los lunes en la noche, toda la acción caliente de los Miami HEAT, y mucho más! Disfruta de eventos deportivos todo el año en nuestros televisores de pantalla grande justo en el medio de toda la acción del casino."}
+                  : "En Cypress Lounge tenemos especiales de cerveza todos los días, además de Fútbol Americano los lunes en la noche, toda la acción caliente de los Miami HEAT, ¡y mucho más! Disfrute de eventos deportivos todo el año en nuestros televisores de pantalla grande justo en el medio de toda la acción del casino."}
               </p>
             </div>
           </GridItem>

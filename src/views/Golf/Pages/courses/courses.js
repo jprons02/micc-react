@@ -47,7 +47,7 @@ const Courses = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Courses</h2>
+              <h2>{language ? "Courses" : "Campos de Golf"}</h2>
               <p>
                 {language
                   ? `Golfers looking for breathtaking views and fast fairways will indulge in the beauty of the Miccosukee Golf & Country Club, which boast three beautiful courses: Dolphin, Marlin and Barracuda; the crown jewels of Mark Mahannah’s course-design career.`

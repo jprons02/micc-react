@@ -98,7 +98,7 @@ export const mrgHours = {
     ],
     poolGym: [
       {
-        days: (language) => (language ? "Daily" : "Diariamente"),
+        days: (language) => (language ? "Daily" : "Diario"),
         open: `${getMinutes(7).combinedString}`,
         close: `${getMinutes(23).combinedString}`,
       },

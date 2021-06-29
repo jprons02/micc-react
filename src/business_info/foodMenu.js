@@ -39,7 +39,7 @@ export const ourLittleShackMenu = [
           { name: "Chicken Wings (7 pc)", price: "$8.00" },
           { name: "Grilled Cheese Sandwich", price: "$5.00" },
           { name: "Chili Dog", price: "$5.00" },
-          { name: "Chicken Nuggets (5pc)", price: "$5.00" },
+          { name: "Chicken nuggets (5pc)", price: "$5.00" },
           { name: "Club Sandwich (Sandwich only, $5)", price: "$9.00" },
           { name: "BLT Sandwich (Sandwich only, $4)", price: "$8.00" },
           { name: "Steak Sandwich", price: "$7.00" },

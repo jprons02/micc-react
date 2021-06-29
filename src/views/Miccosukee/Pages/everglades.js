@@ -40,11 +40,11 @@ const GamingGolf = () => {
   const cards = [
     {
       id: 1,
-      title: language ? "Indian Village" : "Indian Village",
+      title: language ? "Indian Village" : "Indian Village (Aldea Indígena)",
       theme: "village",
       description: language
-        ? "With supporting text below as a natural lead-in to additional content."
-        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
+        ? "Step into the native habitat of the Miccosukee Tribe and learn about their culture, lifestyle and history. Experiences include a museum, airboat rides, alligator wrestling demonstrations, a gift shop, and more."
+        : "Entre al hábitat nativo de la Tribu Miccosukee y aprenda sobre su cultura, estilo de vida e historia. Experiencias incluyen un museo, airboat rides (paseos en hidrodeslizador), demostraciones de luchas con caimanes, una tienda, y más.",
       imgSrc: villageImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",
@@ -59,11 +59,11 @@ const GamingGolf = () => {
     },
     {
       id: 2,
-      title: language ? "Airboats" : "Airboats",
+      title: language ? "Airboats" : "Airboats (Paseos en Hidrodeslizador)",
       theme: airboatsBusinessInfo.name,
       description: language
-        ? "With supporting text below as a natural lead-in to additional content."
-        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
+        ? "Take an exhilarating ride and discover the Everglades like never before!"
+        : "¡Tome un paseo emocionante y descrubra los Everglades como nunca antes!",
       imgSrc: airboatsImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",

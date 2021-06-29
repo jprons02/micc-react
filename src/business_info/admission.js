@@ -1,56 +1,56 @@
 export const villagePricing = [
   {
-    title: (language) => (language ? "Adult Admission" : "Adultos"),
+    title: (language) => (language ? "Adult admission" : "Adultos"),
     detail: (language) => "13+",
     price: (language) => "$15.00",
   },
   {
-    title: (language) => (language ? "Child Admission" : "Entrada para niños"),
+    title: (language) => (language ? "Child admission" : "Entrada para niños"),
     detail: (language) => "6 — 12",
     price: (language) => "$8.00",
   },
   {
-    title: (language) => (language ? "Child Admission" : "Entrada para niños"),
-    detail: (language) => (language ? "5 & Under" : "Menores de 5"),
+    title: (language) => (language ? "Child admission" : "Entrada para niños"),
+    detail: (language) => (language ? "5 & under" : "Menores de 5"),
     price: (language) => (language ? "Free" : "Gratis"),
   },
 ];
 
 export const airboatsPricing = [
   {
-    title: (language) => (language ? "Adult Admission" : "Adultos"),
-    detail: (language) => (language ? "12 Years Old and Up" : "12 Años Y Mas"),
+    title: (language) => (language ? "Adult admission" : "Adultos"),
+    detail: (language) => (language ? "12 years old and up" : "12 años y mas"),
     price: (language) => "$15",
   },
   {
-    title: (language) => (language ? "Child Admission" : "Niños"),
-    detail: (language) => (language ? "6 — 12 Years Old" : "6 – 12 Años"),
+    title: (language) => (language ? "Child admission" : "Niños"),
+    detail: (language) => (language ? "6 — 12 years old" : "6 – 12 años"),
     price: (language) => "$8",
   },
   {
-    title: (language) => (language ? "Child Admission" : "Niños"),
+    title: (language) => (language ? "Child admission" : "Niños"),
     detail: (language) =>
-      language ? "Under 6 Years Old" : "Menores De 6 Años",
+      language ? "Under 6 Years Old" : "Menores de 6 años",
     price: (language) => (language ? "Free" : "Gratis"),
   },
   {
     title: (language) =>
       language
-        ? "Private Tour, 30 Minutes"
-        : `Tour de Grupo Privado – 30 minutos`,
+        ? "Private tour, 30 minutes"
+        : `Tour de grupo privado – 30 minutos`,
     detail: (language) =>
       language
-        ? "Minimum Six People Per Boat"
-        : "Mínimo De 6 Pasajeros Por Bote",
+        ? "Minimum six people per boat"
+        : "Mínimo 6 pasajeros por bote",
     price: (language) => "$150",
   },
   {
     title: (language) =>
-      language ? "Private Tour, One Hour" : "Tour de Grupo Privado – Una Hora",
+      language ? "Private tour, one hour" : "Tour de grupo privado – una hora",
     detail: (language) =>
       language
-        ? "Minimum Eight People Per Boat"
-        : "Mínimo De 8 Pasajeros Por Bote",
+        ? "Minimum eight people per boat"
+        : "Mínimo 8 pasajeros por bote",
     price: (language) => "$300",
   },
 ];

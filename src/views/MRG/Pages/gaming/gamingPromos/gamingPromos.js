@@ -15,6 +15,9 @@ import { urlify } from "services/urlify.js";
 // React component for creating beautiful carousel
 import Slider from "react-slick";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/promotionCardStyles.js";
@@ -23,8 +26,7 @@ import styles from "assets/jss/material-kit-react/views/mrg/promotionCardStyles.
 import bgImage from "assets/img/bg3.jpg";
 
 // Card Content
-import cardContent from "views/MRG/Pages/gaming/gamingPromos/cardContent";
-
+import { cardContent } from "views/MRG/Pages/gaming/gamingPromos/cardContent";
 import { standardLinkColor } from "themes/colors.js";
 
 const useStyles = makeStyles(styles);
@@ -39,6 +41,7 @@ const sliderContent = [
 ];
 
 const GamingPromos = () => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const [showModal, setShowModal] = useState(false);
@@ -46,7 +49,7 @@ const GamingPromos = () => {
 
   useEffect(() => {
     // link to specific promo - check current url and if x then open x promo modal
-    cardContent.map((promo) => {
+    cardContent(language).map((promo) => {
       //Purpose is ability to link to specific promos from url
       // example using urlify service) "Anniversary Gift" will become "anniversary-gift"
       if (
@@ -79,7 +82,7 @@ const GamingPromos = () => {
   };
 
   const renderCards = () => {
-    return cardContent.map((card) => {
+    return cardContent(language).map((card) => {
       return (
         <StandardCard
           classes={classes}

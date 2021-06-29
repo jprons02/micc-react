@@ -64,22 +64,22 @@ const BanquetsCatering = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Banquets & Catering" : "español"}</h2>
+              <h2>{language ? "Banquets & Catering" : "Banquetes y Catering"}</h2>
               <p>
                 {language
                   ? "Thanks to our top-notch banquet and convention facilities, Miccosukee Resort & Gaming is prepared to create an unforgettable experience for you and your guests. Whether it’s an intimate gathering or a celebration of up-to 1,200 attendees, we accommodate events of all sizes."
-                  : "español"}
+                  : "En Miccosukee Resort & Gaming tenemos facilidades para banquetes y convenciones de primera categoría, y por eso estamos listos para crear una experiencia inolvidable para usted y sus invitados. Ya sea un encuentro íntimo o una celebración de hasta 1,200 invitados, nosotros nos adaptamos a eventos de cualquier tamaño."}
               </p>
 
               <p>
                 {language
                   ? "From corporate conferences in our executive meeting rooms to large-scale wedding bashes in our banquet hall, our event specialists and culinary team will ensure every one of your guests receives VIP treatment."
-                  : "español"}
+                  : "Desde conferencias de empresa en nuestros salones de reunión para ejecutivos hasta fiestas de boda masivas en nuestro salón de banquetes, nuestros especialistas en eventos y equipo culinario se encargarán de que cada uno de sus invitados se lleve un trato VIP."}
               </p>
               <p>
                 {language
                   ? "Ready to host your next event or meeting at Miccosukee Resort & Gaming? Call us at "
-                  : "español "}
+                  : "¿Está listo para organizar su próximo evento o reunión en Miccosukee Resort & Gaming? Llámenos al "}
                 <a href="tel:+13059252555">
                   <Typography variant="inherit" color="primary">
                     305-925-2555
@@ -88,7 +88,7 @@ const BanquetsCatering = () => {
                 .
               </p>
               <Button onClick={handleClick} usetheme="contained">
-                {language ? "CONTACT US" : "español"}
+                {language ? "CONTACT US" : "CONTÁCTENOS"}
               </Button>
             </div>
           </GridItem>

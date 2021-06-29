@@ -45,6 +45,98 @@ const InternationalBuffet = () => {
   const language = useLanguage();
   const classes = useStyles();
 
+  const weekdayContent = () => {
+    return (
+      <React.Fragment>
+        <div>
+          <h6>
+            {language ? "À la carte Breakfast: " : "Desayuna a la carta: "}6:00
+            A.M. – 11:00 A.M.
+          </h6>
+        </div>
+        <div>
+          <h6>{language ? "Lunch: " : "Almuerzo: "}12:00 P.M. – 4:00 P.M.</h6>
+          <ul style={{ fontSize: "12px" }}>
+            <li>{language ? "Adults " : "Adultos "}$16.16</li>
+            <li>
+              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.08
+            </li>
+            <li>
+              {language
+                ? "Kids 5 and under FREE"
+                : "Niños menores de 5 años o menos comen GRATIS"}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6>{language ? "Dinner: " : "Cena: "}6:00 P.M. – 10:00 P.M.</h6>
+          <ul style={{ fontSize: "12px" }}>
+            <li>{language ? "Adults " : "Adultos "}$17.78</li>
+            <li>
+              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.89
+            </li>
+            <li>
+              {language
+                ? "Kids 5 and under FREE"
+                : "Niños menores de 5 años o menos comen GRATIS"}
+            </li>
+          </ul>
+        </div>
+      </React.Fragment>
+    );
+  };
+
+  const weekendContent = () => {
+    return (
+      <React.Fragment>
+        <div>
+          <h6>
+            {language ? "Breakfast: " : "Desayuna: "}6:00 A.M. – 10:00 A.M
+          </h6>
+          <ul style={{ fontSize: "12px" }}>
+            <li>{language ? "Adults " : "Adultos "}$14.55</li>
+            <li>
+              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$7.28
+            </li>
+            <li>
+              {language
+                ? "Kids 5 and under FREE"
+                : "Niños menores de 5 años o menos comen GRATIS"}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6>{language ? "Lunch: " : "Almuerzo: "}12:00 P.M. – 4:00 P.M</h6>
+          <ul style={{ fontSize: "12px" }}>
+            <li>{language ? "Adults " : "Adultos "}$16.16</li>
+            <li>
+              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.08
+            </li>
+            <li>
+              {language
+                ? "Kids 5 and under FREE"
+                : "Niños menores de 5 años o menos comen GRATIS"}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6>{language ? "Dinner: " : "Cena: "}6:00 P.M. – 10:00 P.M.</h6>
+          <ul style={{ fontSize: "12px" }}>
+            <li>{language ? "Adults " : "Adultos "}$17.78</li>
+            <li>
+              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.89
+            </li>
+            <li>
+              {language
+                ? "Kids 5 and under FREE"
+                : "Niños menores de 5 años o menos comen GRATIS"}
+            </li>
+          </ul>
+        </div>
+      </React.Fragment>
+    );
+  };
+
   const tabContent = [
     {
       title: "Monday",
@@ -53,25 +145,7 @@ const InternationalBuffet = () => {
           <div>
             <h4>Latin</h4>
             <hr />
-            <div>
-              <h6>À la carte Breakfast: 6:00 A.M. – 11:00 A.M.</h6>
-            </div>
-            <div>
-              <h6>Lunch: 12:00 P.M. – 4:00 P.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $16.16</li>
-                <li>Kids (ages 6 – 12) $8.08</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Dinner: 6:00 P.M. – 10:00 P.M. </h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $17.78</li>
-                <li>Kids (ages 6 – 12) $8.89</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
+            {weekdayContent()}
           </div>
         );
       },
@@ -83,25 +157,7 @@ const InternationalBuffet = () => {
           <div>
             <h4>Mexican</h4>
             <hr />
-            <div>
-              <h6>À la carte Breakfast: 6:00 A.M. – 11:00 A.M.</h6>
-            </div>
-            <div>
-              <h6>Lunch: 12:00 P.M. – 4:00 P.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $16.16</li>
-                <li>Kids (ages 6 – 12) $8.08</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Dinner: 6:00 P.M. – 10:00 P.M. </h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $17.78</li>
-                <li>Kids (ages 6 – 12) $8.89</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
+            {weekdayContent()}
           </div>
         );
       },
@@ -113,25 +169,7 @@ const InternationalBuffet = () => {
           <div>
             <h4>Havana Nights</h4>
             <hr />
-            <div>
-              <h6>À la carte Breakfast: 6:00 A.M. – 11:00 A.M.</h6>
-            </div>
-            <div>
-              <h6>Lunch: 12:00 P.M. – 4:00 P.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $16.16</li>
-                <li>Kids (ages 6 – 12) $8.08</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Dinner: 6:00 P.M. – 10:00 P.M. </h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $17.78</li>
-                <li>Kids (ages 6 – 12) $8.89</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
+            {weekdayContent()}
           </div>
         );
       },
@@ -143,25 +181,7 @@ const InternationalBuffet = () => {
           <div>
             <h4>Italian</h4>
             <hr />
-            <div>
-              <h6>À la carte Breakfast: 6:00 A.M. – 11:00 A.M.</h6>
-            </div>
-            <div>
-              <h6>Lunch: 12:00 P.M. – 4:00 P.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $16.16</li>
-                <li>Kids (ages 6 – 12) $8.08</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Dinner: 6:00 P.M. – 10:00 P.M. </h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $17.78</li>
-                <li>Kids (ages 6 – 12) $8.89</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
+            {weekdayContent()}
           </div>
         );
       },
@@ -173,30 +193,7 @@ const InternationalBuffet = () => {
           <div>
             <h4>Spanish Fiesta</h4>
             <hr />
-            <div>
-              <h6>Breakfast 6:00 A.M. – 10:00 A.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $14.55</li>
-                <li>Kids (ages 6 – 12) $7.28</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Lunch: 12:00 P.M. – 4:00 P.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $16.16</li>
-                <li>Kids (ages 6 – 12) $8.08</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Dinner: 6:00 P.M. – 10:00 P.M. </h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $17.78</li>
-                <li>Kids (ages 6 – 12) $8.89</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
+            {weekendContent()}
           </div>
         );
       },
@@ -208,30 +205,7 @@ const InternationalBuffet = () => {
           <div>
             <h4>B.B.Q.</h4>
             <hr />
-            <div>
-              <h6>Breakfast 6:00 A.M. – 11:00 A.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $14.55</li>
-                <li>Kids (ages 6 – 12) $7.28</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Lunch: 12:00 P.M. – 4:00 P.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $16.16</li>
-                <li>Kids (ages 6 – 12) $8.08</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Dinner: 6:00 P.M. – 10:00 P.M. </h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $17.78</li>
-                <li>Kids (ages 6 – 12) $8.89</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
+            {weekendContent()}
           </div>
         );
       },
@@ -243,30 +217,7 @@ const InternationalBuffet = () => {
           <div>
             <h4>Buffet Across America</h4>
             <hr />
-            <div>
-              <h6>Breakfast 6:00 A.M. – 11:00 A.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $14.55</li>
-                <li>Kids (ages 6 – 12) $7.28</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Lunch: 12:00 P.M. – 4:00 P.M.</h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $16.16</li>
-                <li>Kids (ages 6 – 12) $8.08</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
-            <div>
-              <h6>Dinner: 6:00 P.M. – 10:00 P.M. </h6>
-              <ul style={{ fontSize: "12px" }}>
-                <li>Adults $17.78</li>
-                <li>Kids (ages 6 – 12) $8.89</li>
-                <li>Kids 5 and under FREE</li>
-              </ul>
-            </div>
+            {weekendContent()}
           </div>
         );
       },
@@ -284,7 +235,7 @@ const InternationalBuffet = () => {
               <p>
                 {language
                   ? "With a killer à la carte breakfast menu and an international buffet, you are sure to enjoy different cuisines everyday! Let your taste buds travel the world from the comfort of our home. Empeeke Aaweeke is South Florida’s most compelling buffet destination."
-                  : "¡Con un excelente menú de desayuno a la carta y un bufé internacional, disfrutarás la cocina de distintas culturas, ya que todos los días tenemos algo nuevo! Deleita tu paladar con sabores internacionales. Empeeke Aaweeke es el bufé más impresionante del Sur de la Florida."}
+                  : "Con un excelente menú de desayuno a la carta y un bufé internacional, disfrutará la cocina de distintas culturas, ¡ya que todos los días tenemos algo nuevo! Deleite su paladar con sabores internacionales. Empeeke Aaweeke es el bufé más impresionante del Sur de la Florida."}
               </p>
               <p>
                 <span style={{ fontSize: "80%", fontStyle: "italic" }}>

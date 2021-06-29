@@ -82,7 +82,7 @@ const OurLittleShack = () => {
               ) : (
                 <p>
                   ¡El lugar en el Pueblo que tiene algo para todos!
-                  Hamburguesas, papas fritas, Nuggets de caimán, batidos y mucho
+                  Hamburguesas, papas fritas, nuggets de caimán, batidos y mucho
                   mas.
                 </p>
               )}
@@ -104,7 +104,7 @@ const OurLittleShack = () => {
                 onClick={() => openModal(setShowFoodMenu)}
                 usetheme="contained"
               >
-                Menu
+                {language ? "Menu" : "Menú"}
               </Button>
             </div>
           </GridItem>

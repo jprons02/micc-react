@@ -20,6 +20,7 @@ import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import EventVideo from "components/CustomEvents/Virtual/components/EventVideo.js";
 import Schedule from "components/CustomEvents/Virtual/components/Schedule.js";
 import LoginModal from "components/CustomEvents/Virtual/components/Login/LoginModal.js";
+import VirtualEventFooter from "components/CustomFooters/VirtualEventFooter.js";
 
 // Context
 import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";
@@ -275,7 +276,6 @@ const VirtualEvent = (props) => {
               {renderPurchaseButton()}
               {renderLoginButton()}
             </Grid>
-
             <Grid md={4} item>
               {renderSchedule()}
               {renderVendors()}
@@ -300,6 +300,7 @@ const VirtualEvent = (props) => {
         <HeroSection sliderContent={props.sliderContent} />
         <Hidden mdUp>{renderMobileView()}</Hidden>
         <Hidden smDown>{renderDesktopView()}</Hidden>
+        <VirtualEventFooter />
       </VirtualEventLoginFormProvider>
     </React.Fragment>
   );

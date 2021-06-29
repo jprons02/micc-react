@@ -53,18 +53,18 @@ const TeenArcade = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Teen Arcade" : "español"}</h2>
+              <h2>{language ? "Teen Arcade" : "Sala de Juegos para Adolescentes"}</h2>
               {renderPoiHours(mrgHours.poi.teenArcade, language)}
               <p>
                 {language
                   ? "Our state-of-the-art Teen Arcade is our cool, “big kids” area featuring the hottest games on the planet. Clean, safe and with an environment that says excitement, the arcade has been a hit with all guests! One visit here, and your teenager/s will want to come back again and again!"
-                  : "español"}
+                  : "Nuestra moderna Sala de Juegos para Adolescentes es nuestra área para “niños grandes” y tiene los mejores juegos del planeta. Limpia, segura y con un ambiente que grita diversión, ¡la sala de juegos ha sido un éxito con todos nuestros huéspedes! Después de una visita, ¡sus hijos querrán regresar todos los días!"}
               </p>
               <p>
                 <span style={{ fontSize: "80%", fontStyle: "italic" }}>
                   {language
                     ? "*13+, if under, must be accompanied by an adult over 18 years of age."
-                    : "español"}
+                    : "*13+, si es menor, debe estar acompañado por un adulto mayor de 18 años."}
                 </span>
               </p>
             </div>

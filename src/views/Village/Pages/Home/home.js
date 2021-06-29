@@ -148,7 +148,7 @@ const Home = () => {
               <p className={classes.iconText}>
                 {language
                   ? "The Village’s casual eatery has something for everybody! Burgers, fries, alligator bites, shakes and more! Our Little Shack is here for you."
-                  : "¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, Nuggets de caimán, batidos y mucho mas."}
+                  : "¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, nuggets de caimán, batidos y mucho más."}
               </p>
             </GridItem>
           </GridContainer>

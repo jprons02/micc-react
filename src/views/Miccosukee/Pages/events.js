@@ -22,9 +22,13 @@ import { urlify } from "services/urlify.js";
 // Colors
 import { standardLinkColor, errorColor } from "themes/colors.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext";
+
 const useStyles = makeStyles(styles);
 
 const Events = ({ history, badgeColor, entityMargin }) => {
+  const language = useLanguage();
   const classes = useStyles();
 
   const [category, setCategory] = useState("all");
@@ -106,7 +110,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
           color="info"
           onClick={() => handleBadgeClick("all")}
         >
-          ALL EVENTS
+          {language ? "ALL EVENTS" : "TODOS LOS EVENTOS"}
         </Badge>
         {events.map((event) => {
           if (event.category) {
@@ -218,11 +222,11 @@ const Events = ({ history, badgeColor, entityMargin }) => {
 
     return (
       <React.Fragment>
-        <h3 style={{ marginBottom: "20px" }}>Upcomming Events</h3>
+        <h3 style={{ marginBottom: "20px" }}>{language ? "Upcomming Events" : "Próximos Eventos"}</h3>
         <div id="upcomming">{renderUpcommingEvents()}</div>
-        {defaultUpcommingText ? <p>No upcomming events at this time</p> : ""}
+        {defaultUpcommingText ? <p>{language ? "No upcomming events at this time" : "No hay eventos programados por el momento."}</p> : ""}
         <Divider />
-        <h3 style={{ marginBottom: "20px" }}>Past Events</h3>
+        <h3 style={{ marginBottom: "20px" }}>{language ? "Past Events" : "Eventos Pasados"}</h3>
         <div id="past">{renderPastEvents()}</div>
       </React.Fragment>
     );

@@ -58,20 +58,20 @@ const SalonSpa = () => {
               <h2>Pa-Hay Okee Salon &amp; Spa</h2>
               {renderPoiHours(mrgHours.poi.salon, language)}
               <p>
-                {language ? "Call " : "español "}
+                {language ? "Call " : "¡Llame al "}
                 <a href="tel:+13059252557">
                   <Typography variant="inherit" color="primary">
                     305-925-2557
                   </Typography>
                 </a>
-                {language ? " and book your appointment today!" : " español"}
+                {language ? " and book your appointment today!" : " y reserve su cita hoy!"}
               </p>
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/11/SpaBrochure_Trifold.pdf"
                 target="_blank"
                 usetheme="contained"
               >
-                {language ? "SPA MENU" : "español"}
+                {language ? "SPA MENU" : "SERVICIOS DEL SPA"}
               </Button>
             </div>
           </GridItem>

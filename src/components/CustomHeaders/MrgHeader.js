@@ -110,7 +110,7 @@ const MrgHeader = () => {
           target: "",
         },
         {
-          text: language ? "Poker" : "Póquer",
+          text: language ? "Poker" : "Póker",
           link: "/poker",
           target: "",
         },
@@ -174,7 +174,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: language ? "Book A Room" : "español",
+      text: language ? "Book A Room" : "Reserve una Habitación",
       itemType: "action",
       href: "",
       target: "",
