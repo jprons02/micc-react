@@ -5,7 +5,7 @@ import HeroSection from "components/CustomSections/HeroSection";
 import EventPage from "views/Miccosukee/Pages/eventPage.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/golf/Golf_Header.jpg";
 
 const sliderContent = [
   {

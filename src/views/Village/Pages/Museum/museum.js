@@ -11,7 +11,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/village/Village_Header1.jpg";
 import image1 from "assets/img/village/1024x642_Slider_L-e1551456221969.jpg";
 import image2 from "assets/img/village/1024x642_Slider_D-e1551456149892.jpg";
 import image3 from "assets/img/village/1024x642_Slider_M-e1551456229527.jpg";

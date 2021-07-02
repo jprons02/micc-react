@@ -10,7 +10,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/amenities/pool-gym/pool.jpg";
 import image2 from "assets/img/mrg/amenities/pool-gym/pool_2.jpg";
 import image3 from "assets/img/mrg/amenities/pool-gym/gym2.jpg";
@@ -54,7 +54,9 @@ const PoolGym = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Pool & Fitness Center" : "Piscina y Gimnasio"}</h2>
+              <h2>
+                {language ? "Pool & Fitness Center" : "Piscina y Gimnasio"}
+              </h2>
               {renderPoiHours(mrgHours.poi.poolGym, language)}
               <p>
                 {language

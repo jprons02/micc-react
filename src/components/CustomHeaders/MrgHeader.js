@@ -174,7 +174,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: language ? "Book A Room" : "Reserve una Habitación",
+      text: language ? "Book A Room" : "Reservar una Habitación",
       itemType: "action",
       href: "",
       target: "",

@@ -15,7 +15,7 @@ import CustomHorizontalTabs from "components/CustomTabs/CustomHorizontalTabs.js"
 import CustomVerticalTabs from "components/CustomTabs/CustomVerticalTabs.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg";
 import image2 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
 import image3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";

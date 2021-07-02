@@ -10,7 +10,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/golf/Golf_Header.jpg";
 import image1 from "assets/img/golf/courses/Golf_2.jpg";
 import image2 from "assets/img/golf/courses/Golf_3-1.jpg";
 import image3 from "assets/img/golf/courses/Golf_4.jpg";

@@ -11,7 +11,7 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import CustomStandardPagination from "components/CustomPagination/CustomStandardPagination.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/administration/Everglades_Header.jpg";
 import image1 from "assets/img/administration/NewPoliceCar.jpg";
 
 // Styling

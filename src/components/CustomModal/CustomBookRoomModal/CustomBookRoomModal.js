@@ -17,9 +17,13 @@ import Typography from "@material-ui/core/Typography";
 // My custom components
 import BookRoomForm from "components/CustomForms/BookRoom/BookRoom.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext";
+
 const useStyles = makeStyles(modalStyle);
 
 const BookRoomModal = (props) => {
+  const language = useLanguage();
   const classes = useStyles();
 
   return (
@@ -51,7 +55,7 @@ const BookRoomModal = (props) => {
         </IconButton>
         <div style={{ margin: "10px 0" }}>
           <Typography variant="h5" component="h2">
-            Book A Room
+            {language ? "Book A Room" : "Reservar Una Habitación"}
           </Typography>
         </div>
       </DialogTitle>

@@ -33,10 +33,17 @@ import { contactOptions } from "services/contact/contactOptions.js";
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage";
 import { getOptions } from "services/contact/contactOptions";
 
+// recaptcha
+import ReCaptchaV2 from "react-google-recaptcha";
+
+// service
+import { reCaptchaService } from "services/recaptchaService";
+
 const Contact = (props) => {
   const [formValues, setFormValues] = useContext(ContactFormContext);
   const [alerts, setAlerts] = useContext(AlertContext);
   const [loading, setLoading] = useState(false);
+  const [ReCaptchaToken, setReCaptchaToken] = useState(null);
 
   const resetState = () => {
     setFormValues({
@@ -48,6 +55,21 @@ const Contact = (props) => {
         message: "",
       },
     });
+  };
+
+  const onChange = (value) => {
+    const isSuccess = (value) => {
+      if (isSuccess === "success") {
+        alert("Failed bot test. Please retry.");
+      } else {
+        // The send message button is disabled until this value is set
+        setReCaptchaToken(value);
+      }
+    };
+    reCaptchaService(value, isSuccess);
+  };
+  const handleExpire = () => {
+    setReCaptchaToken(null);
   };
 
   // Sets snackbar to close on component mount
@@ -129,6 +151,12 @@ const Contact = (props) => {
             position: "relative",
           }}
         >
+          <ReCaptchaV2
+            onChange={onChange}
+            onExpired={handleExpire}
+            sitekey={process.env.REACT_APP_SITE_KEY}
+            style={{ paddingTop: "30px" }}
+          />
           <Button
             disabled={
               inputErrorsExistContact(
@@ -137,7 +165,9 @@ const Contact = (props) => {
                 formValues.inputValues.phoneError,
                 formValues.inputValues.selectError,
                 formValues.inputValues.messageError
-              ) || loading
+              ) ||
+              loading ||
+              ReCaptchaToken === null
             }
             style={{
               margin: "15px 0 0 0",
@@ -152,7 +182,7 @@ const Contact = (props) => {
             <CircularProgress
               style={{
                 position: "absolute",
-                top: "50%",
+                top: "83%",
                 left: "50%",
                 marginTop: "-5px",
                 marginLeft: "-12px",

@@ -21,6 +21,9 @@ import {
 } from "components/CustomForms/BookRoom/validateBookRoom.js";
 import { setEstTime } from "services/setEstTime.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext";
+
 const CustomTextField = withStyles({
   root: {
     "& .MuiFilledInput-root": {
@@ -30,6 +33,7 @@ const CustomTextField = withStyles({
 })(TextField);
 
 const BookRoomForm = (props) => {
+  const language = useLanguage();
   // Use function to get tomorrow variable
   Date.prototype.addDays = function (days) {
     const date = new Date(this.valueOf());
@@ -126,7 +130,9 @@ const BookRoomForm = (props) => {
               label={
                 validateCheckIn(checkInDate).error
                   ? validateCheckIn(checkInDate).errorMessage
-                  : "Check In"
+                  : language
+                  ? "Check In"
+                  : "Llegada"
               }
               fullWidth={true}
               value={checkInDate}
@@ -143,7 +149,9 @@ const BookRoomForm = (props) => {
               label={
                 validateCheckOut(checkOutDate, checkInDate).error
                   ? validateCheckOut(checkOutDate, checkInDate).errorMessage
-                  : "Check Out"
+                  : language
+                  ? "Check Out"
+                  : "Salida"
               }
               fullWidth={true}
               value={checkOutDate}
@@ -165,7 +173,7 @@ const BookRoomForm = (props) => {
             error={false}
             name="adults"
             id="adults"
-            label="Adults"
+            label={language ? "Adults" : "Adultos"}
             fullWidth={true}
             variant="filled"
             select
@@ -183,7 +191,7 @@ const BookRoomForm = (props) => {
             error={false}
             name="children"
             id="children"
-            label="Children"
+            label={language ? "Children" : "Niños"}
             fullWidth={true}
             variant="filled"
             select
@@ -218,7 +226,7 @@ const BookRoomForm = (props) => {
             onClick={submit}
             usetheme="contained"
           >
-            Submit
+            {language ? "Submit" : "Enviar"}
           </Button>
         </div>
       </form>

@@ -16,7 +16,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/golf/Golf_Header.jpg";
 
 // Context
 import { useLanguage } from "contexts/languageContext.js";
@@ -243,7 +243,7 @@ const Rates = () => {
     ),
     createData(
       33,
-      "Non-Members",
+      language ? "Non-Members" : "No Miembros",
       language ? "7 days in advance" : "7 días por adelantado"
     ),
   ];
@@ -272,7 +272,7 @@ const Rates = () => {
               <TableCell>{language ? "Weekday" : "Días de Semana"}</TableCell>
               <TableCell align="right">{language ? "Time" : "Hora"}</TableCell>
               <TableCell align="right">
-                {language ? "Price" : "Precio"}
+                {language ? "Price" : "Precios"}
               </TableCell>
             </TableRow>
           </TableHead>
@@ -301,7 +301,7 @@ const Rates = () => {
               </TableCell>
               <TableCell align="right">{language ? "Time" : "Hora"}</TableCell>
               <TableCell align="right">
-                {language ? "Price" : "Precio"}
+                {language ? "Price" : "Precios"}
               </TableCell>
             </TableRow>
           </TableHead>
@@ -325,8 +325,10 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Customer</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell>{language ? "Customer" : "Cliente"}</TableCell>
+              <TableCell align="right">
+                {language ? "Price" : "Precios"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -348,8 +350,10 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Customer</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell>{language ? "Customer" : "Cliente"}</TableCell>
+              <TableCell align="right">
+                {language ? "Price" : "Precios"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -371,8 +375,10 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Customer</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell>{language ? "Customer" : "Cliente"}</TableCell>
+              <TableCell align="right">
+                {language ? "Price" : "Precios"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -394,8 +400,10 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Type</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell>{language ? "Instructor" : "Instructor"}</TableCell>
+              <TableCell align="right">
+                {language ? "Price" : "Precios"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -417,8 +425,12 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Course Type</TableCell>
-              <TableCell align="right">Price</TableCell>
+              <TableCell>
+                {language ? "Course Type" : "Tipo de Campo"}
+              </TableCell>
+              <TableCell align="right">
+                {language ? "Price" : "Precios"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -440,8 +452,10 @@ const Rates = () => {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Customer</TableCell>
-              <TableCell align="right">Details</TableCell>
+              <TableCell>{language ? "Customer" : "Cliente"}</TableCell>
+              <TableCell align="right">
+                {language ? "Details" : "Detalles"}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

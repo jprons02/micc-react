@@ -5,10 +5,13 @@ import RaisedContainer from "components/CustomSections/RaisedContainer.js";
 import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomStandard404Page from "components/Custom404Page/CustomStandard404.js";
 
+// Images
+import bgImage from "assets/img/golf/Golf_Header.jpg";
+
 const sliderContent = [
   {
     id: 1,
-    bgImage: "",
+    bgImage: bgImage,
     header: "",
     subHeader: "",
   },

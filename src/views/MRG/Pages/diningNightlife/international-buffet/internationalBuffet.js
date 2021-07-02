@@ -17,7 +17,7 @@ import CustomHorizontalTabs from "components/CustomTabs/CustomHorizontalTabs.js"
 import CustomVerticalTabs from "components/CustomTabs/CustomVerticalTabs.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/dining/international-buffet/HotDish_1024x642.jpeg";
 import image2 from "assets/img/mrg/dining/international-buffet/Paella_1024x642.jpeg";
 

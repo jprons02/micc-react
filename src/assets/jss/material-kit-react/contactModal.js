@@ -4,6 +4,7 @@ const contactModalStyle = {
   modal: {
     borderRadius: "6px",
     width: "100%",
+    margin: "16px",
   },
   modalHeader: {
     borderBottom: "none",

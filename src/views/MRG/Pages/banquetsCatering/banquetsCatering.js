@@ -12,7 +12,7 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import Button from "components/CustomButtons/Button.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/banquets/Slider_Banquets_1024x642-o27gjfiauxaw8adlauqeuc3m7aorgdyy8killjv7zu.jpg";
 
 // Styling
@@ -64,7 +64,9 @@ const BanquetsCatering = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Banquets & Catering" : "Banquetes y Catering"}</h2>
+              <h2>
+                {language ? "Banquets & Catering" : "Banquetes y Catering"}
+              </h2>
               <p>
                 {language
                   ? "Thanks to our top-notch banquet and convention facilities, Miccosukee Resort & Gaming is prepared to create an unforgettable experience for you and your guests. Whether it’s an intimate gathering or a celebration of up-to 1,200 attendees, we accommodate events of all sizes."

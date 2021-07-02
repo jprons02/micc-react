@@ -10,10 +10,10 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
-import image1 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg";
-import image2 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
-import image3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/img/mrg/gaming/machines/MRG_Gaming1.jpg";
+import image2 from "assets/img/mrg/gaming/machines/MRG_Gaming2.jpg";
+import image3 from "assets/img/mrg/gaming/machines/MRG_Gaming3.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

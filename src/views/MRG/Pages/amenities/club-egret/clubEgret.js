@@ -11,7 +11,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/amenities/club-egret/club_egret_01.jpg";
 import image2 from "assets/img/mrg/amenities/club-egret/club_egret_02.jpg";
 import image3 from "assets/img/mrg/amenities/club-egret/club_egret_03.jpg";
@@ -60,7 +60,9 @@ const ClubEgret = () => {
                   ? "Club Egret is reserved for children ages 12 and under."
                   : "Club Egret está reservado para niños de 12 años o menos."}
                 <br />
-                {language ? "For more information, please call " : "Para más información, por favor llame al "}
+                {language
+                  ? "For more information, please call "
+                  : "Para más información, por favor llame al "}
                 <a href="tel:+13059252555">
                   <Typography variant="inherit" color="primary">
                     305-925-2555

@@ -12,7 +12,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/accommodations/IMG_9145.jpg";
 import image2 from "assets/img/mrg/accommodations/IMG_5796.jpg";
 import image3 from "assets/img/mrg/accommodations/IMG_9241.jpg";
@@ -78,7 +78,7 @@ const Accommodations = () => {
                 onClick={() => setShowBookRoomModal(true)}
                 usetheme="contained"
               >
-                {language ? "Book A Room" : "Reserve una Habitación"}
+                {language ? "Book A Room" : "Reservar una Habitación"}
               </Button>
             </div>
           </GridItem>

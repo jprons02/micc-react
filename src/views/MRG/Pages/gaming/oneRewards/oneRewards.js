@@ -18,9 +18,9 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import Button from "components/CustomButtons/Button.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 
-import image from "views/MRG/Pages/gaming/oneRewards/New-Memeber-webbanner.jpg";
+import image from "views/MRG/Pages/gaming/oneRewards/MiccosukeeOne_3Cards.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -101,15 +101,15 @@ const OneRewards = () => {
               ) : (
                 <React.Fragment>
                   <li>Premios Free Play</li>
-                  <li>Bufé Internacional Empeeke Aaweeke</li> 
-                  <li>Empeek-Cheke</li> 
-                  <li>Restaurantes  de alta cocina</li>
+                  <li>Bufé Internacional Empeeke Aaweeke</li>
+                  <li>Empeek-Cheke</li>
+                  <li>Restaurantes de alta cocina</li>
                   <li>Café Hammock</li>
                   <li>Bar de entremeses Bingo</li>
                   <li>Deli Empeeke Aya</li>
-                  <li>Habitaciones de hotel</li> 
+                  <li>Habitaciones de hotel</li>
                   <li>Spa &amp; Salón</li>
-                  <li>Gift Shop</li> 
+                  <li>Gift Shop</li>
                 </React.Fragment>
               )}
             </ul>

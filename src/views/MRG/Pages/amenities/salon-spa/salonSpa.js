@@ -12,7 +12,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/amenities/salon-spa/Aromatherapy_1024x642.jpeg";
 import image2 from "assets/img/mrg/amenities/salon-spa/Facial_1024x642.jpeg";
 import image3 from "assets/img/mrg/amenities/salon-spa/HairCare_1024x642.jpeg";
@@ -64,7 +64,9 @@ const SalonSpa = () => {
                     305-925-2557
                   </Typography>
                 </a>
-                {language ? " and book your appointment today!" : " y reserve su cita hoy!"}
+                {language
+                  ? " and book your appointment today!"
+                  : " y reserve su cita hoy!"}
               </p>
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2019/11/SpaBrochure_Trifold.pdf"

@@ -58,7 +58,7 @@ const MrgFooter = () => {
       subMenu: [
         {
           linkText: language ? "Contact" : "Contacto",
-          linkTo: "#contact",
+          //linkTo: "#contact",
           clickFunction: () => openModal(setShowContactModal),
         },
         {

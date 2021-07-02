@@ -11,7 +11,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/img/mrg/amenities/teen-arcade/arcade_1.jpeg";
 import image2 from "assets/img/mrg/amenities/teen-arcade/arcade_2.jpeg";
 import image3 from "assets/img/mrg/amenities/teen-arcade/arcade_3.jpeg";
@@ -53,7 +53,9 @@ const TeenArcade = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Teen Arcade" : "Sala de Juegos para Adolescentes"}</h2>
+              <h2>
+                {language ? "Teen Arcade" : "Sala de Juegos para Adolescentes"}
+              </h2>
               {renderPoiHours(mrgHours.poi.teenArcade, language)}
               <p>
                 {language
