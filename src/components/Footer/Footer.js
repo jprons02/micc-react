@@ -79,9 +79,16 @@ export default function Footer(props) {
             />
           </Hidden>
           <div style={{ paddingBottom: "10px" }}>
-            <div style={{ fontSize: "10px" }} className={classes.left}>
+            <div
+              style={{
+                fontSize: "10px",
+                display: "flex",
+                alignItems: "center",
+              }}
+              className={classes.left}
+            >
               <img
-                style={{ width: "16px" }}
+                style={{ width: "16px", marginRight: "2px" }}
                 alt="miccosukee emblem"
                 src={emblem}
               />{" "}

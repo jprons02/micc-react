@@ -48,11 +48,11 @@ const Home = (props) => {
     {
       id: 1,
       img: cardImage1,
-      title: language ? "Police" : "x",
+      title: language ? "Police" : "Policía",
       body: language
         ? "The Miccosukee Police Department was established in 1976."
-        : "x",
-      buttonText: language ? "View Pages" : "x",
+        : "Departamento de Policía Miccosukee se estableció en 1976.",
+      buttonText: language ? "View Pages" : "Ver Páginas",
       linkObj: {
         type: "internal",
         link: "/police",
@@ -115,7 +115,7 @@ const Home = (props) => {
           <Typography className={classes.subWelcome} paragraph component="h3">
             {language
               ? "Here you will find our administration and business related entities."
-              : "x"}
+              : "Aquí encontrará información sobre nuestra administración y entidades relacionadas con el negocio."}
           </Typography>
           <hr className={classes.hr} />
         </div>
