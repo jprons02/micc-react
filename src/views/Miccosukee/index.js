@@ -48,6 +48,7 @@ const Miccosukee = () => {
     let subdomain = parts[0];
     // If we get more than 3 parts, then we have a subdomain
     // INFO: This could be 4, if you have a co.uk or something like that.
+    /*
     if (parts.length > 2) {
       subdomain = parts[0];
       // Remove the subdomain from the parts list
@@ -56,6 +57,7 @@ const Miccosukee = () => {
       window.location =
         protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
     }
+    */
     console.log("parts: ", parts);
     console.log("location pathname: ", location.pathname);
   }, []);

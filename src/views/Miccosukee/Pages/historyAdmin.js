@@ -46,8 +46,8 @@ const GamingGolf = () => {
       title: language ? "Administration" : "Administración",
       theme: "administration",
       description: language
-        ? "With supporting text below as a natural lead-in to additional content."
-        : "Con texto de apoyo debajo dirigiendo a contenido adicional.",
+        ? "Information about the current administration and the Miccosukee Police specialized units."
+        : "Información sobre la administración actual y las unidades especializadas de la Policía Miccosukee.",
       imgSrc: administrationImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",
