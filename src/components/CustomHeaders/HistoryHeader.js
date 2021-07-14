@@ -49,6 +49,15 @@ const HistoryHeader = () => {
       link: "/programs",
       //icon: () => <Icon>chevron_right</Icon>,
     },
+    {
+      text: "Tribal Leaders",
+      itemType: "",
+      href: "",
+      target: "",
+      color: "",
+      link: "/tribal-leaders",
+      //icon: () => <Icon>chevron_right</Icon>,
+    },
   ];
 
   return (

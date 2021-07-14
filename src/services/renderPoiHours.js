@@ -24,7 +24,11 @@ export const renderPoiHours = (hours, language) => {
             if (item.days(language) === "") {
               return (
                 <React.Fragment key={item.days(language)}>
-                  {language ? "CLOSED" : "CERRADO"}
+                  {language ? (
+                    <span style={{ color: "red" }}>CLOSED</span>
+                  ) : (
+                    "CERRADO"
+                  )}
                   {item.details(language) ? ": " : ""}
                   <span style={{ fontWeight: "400", textTransform: "none" }}>
                     {item.details(language) ? `${item.details(language)}` : ""}
@@ -34,7 +38,8 @@ export const renderPoiHours = (hours, language) => {
             } else if (item.open === item.close) {
               return (
                 <React.Fragment key={item.days(language)}>
-                  {item.days(language)}{language ? ", 24 Hours" : ", 24 Horas"} <br />
+                  {item.days(language)}
+                  {language ? ", 24 Hours" : ", 24 Horas"} <br />
                 </React.Fragment>
               );
             } else {

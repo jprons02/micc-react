@@ -17,6 +17,7 @@ import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 // Pages
 import Home from "views/History/Pages/home/home.js";
 import ProgramsBusiness from "views/History/Pages/programsBusiness/programsBusiness.js";
+import TribalLeaders from "views/History/Pages/leaders/tribalLeaders.js";
 import HistoryErrorPage from "views/History/Pages/error/historyErrorPage.js";
 
 // services
@@ -48,6 +49,11 @@ export default function Miccosukee(props) {
             exact
             path={`${match.path}/programs`}
             component={ProgramsBusiness}
+          />
+          <Route
+            exact
+            path={`${match.path}/tribal-leaders`}
+            component={TribalLeaders}
           />
           <Route exact path={`${match.path}/*`} component={HistoryErrorPage} />
         </Switch>

@@ -25,6 +25,9 @@ import { standardLinkColor, errorColor } from "themes/colors.js";
 // Context
 import { useLanguage } from "contexts/languageContext";
 
+// Services
+import { prerenderService } from "services/prerenderService.js";
+
 const useStyles = makeStyles(styles);
 
 const Events = ({ history, badgeColor, entityMargin }) => {
@@ -222,11 +225,23 @@ const Events = ({ history, badgeColor, entityMargin }) => {
 
     return (
       <React.Fragment>
-        <h3 style={{ marginBottom: "20px" }}>{language ? "Upcomming Events" : "Próximos Eventos"}</h3>
+        <h3 style={{ marginBottom: "20px" }}>
+          {language ? "Upcomming Events" : "Próximos Eventos"}
+        </h3>
         <div id="upcomming">{renderUpcommingEvents()}</div>
-        {defaultUpcommingText ? <p>{language ? "No upcomming events at this time" : "No hay eventos programados por el momento."}</p> : ""}
+        {defaultUpcommingText ? (
+          <p>
+            {language
+              ? "No upcomming events at this time"
+              : "No hay eventos programados por el momento."}
+          </p>
+        ) : (
+          ""
+        )}
         <Divider />
-        <h3 style={{ marginBottom: "20px" }}>{language ? "Past Events" : "Eventos Pasados"}</h3>
+        <h3 style={{ marginBottom: "20px" }}>
+          {language ? "Past Events" : "Eventos Pasados"}
+        </h3>
         <div id="past">{renderPastEvents()}</div>
       </React.Fragment>
     );

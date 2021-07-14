@@ -28,6 +28,12 @@ import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 // Context
 import { useLanguage } from "contexts/languageContext.js";
 
+// BusinessInfo
+import { mrgHours } from "business_info/hours.js";
+
+// Services
+import { renderPoiHours } from "services/renderPoiHours.js";
+
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2];
@@ -232,6 +238,7 @@ const InternationalBuffet = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Empeeke Aaweeke International Buffet</h2>
+              {renderPoiHours(mrgHours.poi.internationalBuffet, language)}
               <p>
                 {language
                   ? "With a killer à la carte breakfast menu and an international buffet, you are sure to enjoy different cuisines everyday! Let your taste buds travel the world from the comfort of our home. Empeeke Aaweeke is South Florida’s most compelling buffet destination."
@@ -244,7 +251,7 @@ const InternationalBuffet = () => {
                     : "*Precios no incluyen propinas e impuestos."}
                 </span>
               </p>
-
+              {/*
               <Hidden mdUp>
                 <div style={{ marginTop: "30px", marginBottom: "20px" }}>
                   <CustomHorizontalTabs tabContent={tabContent} />
@@ -268,6 +275,7 @@ const InternationalBuffet = () => {
                   />
                 </div>
               </Hidden>
+              */}
             </div>
           </GridItem>
           <GridItem md={5}>

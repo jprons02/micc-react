@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -9,6 +9,9 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/mrg.js";
+
+// Services
+import { prerenderService } from "services/prerenderService.js";
 
 const useStyles = makeStyles(styles);
 

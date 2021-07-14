@@ -187,7 +187,7 @@ const Poker = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>{language ? "Poker" : "Póker"}</h2>
-              {renderPoiHours(mrgHours.poi.poker)}
+              {renderPoiHours(mrgHours.poi.poker, language)}
               <p>
                 {language
                   ? "Our new Poker Game Room is now open! With a whole new look and it being a non-smoking room, it’s the perfect place to come and play."
@@ -198,6 +198,7 @@ const Poker = () => {
                   ? "All we’re missing is you, we can’t wait to see you there!"
                   : "Lo único que nos falta es usted, ¡y estamos ansiosos de que nos visite!"}
               </p>
+              {/*
               <div style={{ marginTop: "30px", marginBottom: "20px" }}>
                 <Hidden mdUp>
                   <CustomHorizontalTabs
@@ -213,6 +214,7 @@ const Poker = () => {
                   />
                 </Hidden>
               </div>
+              */}
             </div>
           </GridItem>
           <GridItem md={5}>

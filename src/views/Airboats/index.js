@@ -80,6 +80,7 @@ export default function Miccosukee(props) {
       <TeeTimeProvider>
         <div>
           <AirboatsHeader />
+          {/*
           <StandardAlert
             message={
               language ? (
@@ -98,6 +99,7 @@ export default function Miccosukee(props) {
             color="danger"
             icon="info_outline"
           />
+          */}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route

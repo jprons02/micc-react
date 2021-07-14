@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components
@@ -13,6 +13,9 @@ import MiccosukeeCard from "components/CustomCards/MiccosukeeCard.js";
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js";
 
 import { useLanguage } from "contexts/languageContext.js";
+
+// Services
+import { prerenderService } from "services/prerenderService.js";
 
 // Business info
 import { mrgHours, golfHours } from "business_info/hours.js";

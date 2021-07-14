@@ -37,6 +37,7 @@ import GamingPromos from "views/MRG/Pages/gaming/gamingPromos/gamingPromos.js";
 import OneRewards from "views/MRG/Pages/gaming/oneRewards/oneRewards.js";
 import Bingo from "views/MRG/Pages/gaming/bingo/bingo.js";
 import Poker from "views/MRG/Pages/gaming/poker/poker.js";
+import SawgrassCafe from "views/MRG/Pages/diningNightlife/sawgrass-cafe/sawgrassCafe.js";
 import InternationalBuffet from "views/MRG/Pages/diningNightlife/international-buffet/internationalBuffet.js";
 import Bravo from "views/MRG/Pages/diningNightlife/bravo-bravissimo/bravoBravissimo.js";
 import Deli from "views/MRG/Pages/diningNightlife/deli/deli.js";
@@ -167,8 +168,18 @@ export default function Miccosukee(props) {
             />
             <Route
               exact
+              path={`${match.path}/promotions/es`}
+              component={GamingPromos}
+            />
+            <Route
+              exact
               path={`${match.path}/miccosukee-one`}
               component={OneRewards}
+            />
+            <Route
+              exact
+              path={`${match.path}/sawgrass-cafe`}
+              component={SawgrassCafe}
             />
             <Route
               exact

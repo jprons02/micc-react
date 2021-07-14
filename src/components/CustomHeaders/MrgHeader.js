@@ -141,6 +141,11 @@ const MrgHeader = () => {
           target: "",
         },
         {
+          text: "Sawgrass Cafe",
+          link: "/sawgrass-cafe",
+          target: "",
+        },
+        {
           text: "Empeeke Aya Deli",
           link: "/deli",
           target: "",

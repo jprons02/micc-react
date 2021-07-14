@@ -10,6 +10,9 @@ import CustomStandard404Page from "components/Custom404Page/CustomStandard404.js
 // Styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
 
+// Services
+import { prerenderService } from "services/prerenderService.js";
+
 const useStyles = makeStyles(styles);
 
 const MiccosukeeErrorPage = (props) => {

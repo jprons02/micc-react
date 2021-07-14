@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import { useRouteMatch, useLocation } from "react-router-dom";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,7 +19,11 @@ import evergladesImg from "assets/img/miccosukee/pages/home/home-airboats.jpg";
 import historyImg from "assets/img/miccosukee/pages/home/home-history.jpg";
 import eventsImg from "assets/img/miccosukee/pages/home/home-admin.jpg";
 
+// Context
 import { useLanguage } from "contexts/languageContext.js";
+
+// Services
+import { prerenderService } from "services/prerenderService.js";
 
 const useStyles = makeStyles(styles);
 

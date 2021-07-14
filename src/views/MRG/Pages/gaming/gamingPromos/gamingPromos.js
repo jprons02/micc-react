@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouteMatch, useLocation } from "react-router-dom";
 
 //My Custom Component
 import HeroSection from "components/CustomSections/HeroSection.js";
@@ -16,7 +17,7 @@ import { urlify } from "services/urlify.js";
 import Slider from "react-slick";
 
 // Context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -43,20 +44,43 @@ const sliderContent = [
 const GamingPromos = () => {
   const language = useLanguage();
   const classes = useStyles();
+  const toggleLanguage = useLanguageUpdate();
 
   const [showModal, setShowModal] = useState(false);
   const [selectedPromo, setSelectedPromo] = useState({});
 
+  let { path } = useRouteMatch();
+  let location = useLocation();
+
+  // On page load, determine language per url
   useEffect(() => {
-    // link to specific promo - check current url and if x then open x promo modal
-    cardContent(language).map((promo) => {
+    // regex ends with /es = /\/es$/gm
+    const pattern = new RegExp(/\/es$/gm);
+    // ex) domain.com/mrg/es
+    const pathTest = pattern.test(path);
+    // ex) domain.com/mrg#thing1/es
+    const hashTest = pattern.test(location.hash);
+
+    // this is used to pass to cardContent because the language toggle state will not be updated until re-render.
+    let languageBool = true;
+
+    if (pathTest || hashTest) {
+      if (language) {
+        toggleLanguage();
+        languageBool = false;
+      }
+    }
+
+    cardContent(languageBool).map((promo) => {
       //Purpose is ability to link to specific promos from url
-      // example using urlify service) "Anniversary Gift" will become "anniversary-gift"
+      // example using urlify service) "Anniversary Gift" will become "anniversary-gift" -
+      // full example ENGLISH: http://localhost:3000/mrg/promotions#new-member-bonus
+      // full example SPANISH: http://localhost:3000/mrg/promotions#bono-para-nuevos-miembros/es
       if (
         window.location.href ===
-          `http://localhost:3000/mrg/promotions#${urlify(promo.title)}` ||
+          `https://localhost:3000/mrg/promotions#${urlify(promo.title)}` ||
         window.location.href ===
-          `https://miccosukee.com/mrg/promotions#${urlify(promo.title)}`
+          `https://localhost:3000/mrg/promotions#${urlify(promo.title)}/es`
       ) {
         setSelectedPromo(promo);
         setShowModal(true);
@@ -68,8 +92,16 @@ const GamingPromos = () => {
     return "April".toUpperCase();
   };
 
-  const getCalendarPdf = () => {
-    return "https://mrg.miccosukee.com/wp-content/uploads/2021/04/April_Calendar_Flyer_EN_SP.pdf";
+  const getCalendarPdf = (language) => {
+    const englishCalendar =
+      "https://mrg.miccosukee.com/wp-content/uploads/2021/04/April_Calendar_Flyer_EN_SP.pdf";
+    const spanishCalendar = "";
+
+    if (language) {
+      return englishCalendar;
+    } else {
+      return spanishCalendar;
+    }
   };
 
   const promoClick = (promo) => {

@@ -13,6 +13,9 @@ import Button from "components/CustomButtons/Button.js";
 // Styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
 
+// Services
+import { prerenderService } from "services/prerenderService.js";
+
 const useStyles = makeStyles(styles);
 
 const EventPage = ({ entityMargin }) => {

@@ -14,7 +14,12 @@ const CustomImageSlider = (props) => {
     customPaging: function (i) {
       return (
         <a>
-          <img className={classes.customSliderThumbs} src={props.images[i]} />
+          <img
+            className={classes.customSliderThumbs}
+            src={
+              props.customImages ? props.customImages[i].src : props.images[i]
+            }
+          />
         </a>
       );
     },
@@ -28,13 +33,34 @@ const CustomImageSlider = (props) => {
   };
 
   const renderSliderImage = () => {
-    return props.images.map((image) => {
-      return (
-        <div key={image}>
-          <img className={classes.featuredImage} src={image} />
-        </div>
-      );
-    });
+    if (props.customImages) {
+      return props.customImages.map((item) => {
+        return (
+          <div key={item.caption}>
+            <img
+              style={props.customStyle}
+              className={classes.featuredImage}
+              src={item.src}
+            />
+            <figcaption style={{ marginBottom: "5px", textAlign: "center" }}>
+              {item.caption}
+            </figcaption>
+          </div>
+        );
+      });
+    } else {
+      return props.images.map((image) => {
+        return (
+          <div key={image}>
+            <img
+              style={props.customStyle}
+              className={classes.featuredImage}
+              src={image}
+            />
+          </div>
+        );
+      });
+    }
   };
   return (
     <div style={{ margin: "5px" }}>

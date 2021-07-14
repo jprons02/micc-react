@@ -64,6 +64,13 @@ export const mrgHours = {
   poi: {
     salon: [
       {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(10).combinedString}`,
+        close: `${getMinutes(20).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
+      {
         days: (language) => (language ? "Monday – Saturday" : "lunes – sábado"),
         open: `${getMinutes(10).combinedString}`,
         close: `${getMinutes(20).combinedString}`,
@@ -73,8 +80,16 @@ export const mrgHours = {
         open: `${getMinutes(10).combinedString}`,
         close: `${getMinutes(18).combinedString}`,
       },
+      */
     ],
     clubEgret: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(12).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
         open: `${getMinutes(12).combinedString}`,
@@ -95,15 +110,31 @@ export const mrgHours = {
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
       },
+      */
     ],
     poolGym: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(7).combinedString}`,
+        close: `${getMinutes(23).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) => (language ? "Daily" : "Diario"),
         open: `${getMinutes(7).combinedString}`,
         close: `${getMinutes(23).combinedString}`,
       },
+      */
     ],
     teenArcade: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(13).combinedString}`,
+        close: `${getMinutes(23).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) =>
           language ? "Sunday – Thursday" : "domingo – jueves",
@@ -116,36 +147,77 @@ export const mrgHours = {
         open: `${getMinutes(13).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
+      */
     ],
     poker: [
       {
-        days: (language) =>
-          language ? "Sunday – Thursday" : "domingo – jueves",
+        days: (language) => (language ? "" : ""),
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(4).combinedString}`,
-      },
-      {
-        days: (language) =>
-          language ? "Friday & Saturday" : "viernes & sábado",
-        open: `${getMinutes(0).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? "" : ""),
       },
     ],
     bravo: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(12).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
       },
+      */
     ],
-    deli: [
+    internationalBuffet: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(11).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) => (language ? "Monday – Sunday" : "lunes – domingo"),
         open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
       },
+      */
+    ],
+    sawgrassCafe: [
+      {
+        days: (language) => (language ? "Monday – Sunday" : "lunes – domingo"),
+        open: `${getMinutes(12).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+    ],
+    deli: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(11).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
+      {
+        days: (language) => (language ? "Monday – Sunday" : "lunes – domingo"),
+        open: `${getMinutes(11).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+      },
+      */
     ],
     hammock: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(11).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) =>
           language ? "Sunday – Thursday" : "domingo – jueves",
@@ -158,16 +230,32 @@ export const mrgHours = {
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(2).combinedString}`,
       },
+      */
     ],
     cypressLounge: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(0).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) =>
           language ? "Seven days a week" : "Seite días a la semana",
         open: `${getMinutes(0).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
+      */
     ],
     martiniBar: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(4).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
         open: `${getMinutes(4).combinedString}`,
@@ -184,14 +272,23 @@ export const mrgHours = {
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
+      */
     ],
     accommodations: [
+      {
+        days: (language) => (language ? "" : ""),
+        open: `${getMinutes(0).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      /*
       {
         days: (language) =>
           language ? "Seven days a week" : "Seite días a la semana",
         open: `${getMinutes(0).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
+      */
     ],
   },
 };
