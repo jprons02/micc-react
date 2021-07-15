@@ -179,6 +179,7 @@ const OneRewards = () => {
                   ? "PLAY MORE, GET MORE! The only program that rewards you for your style of play."
                   : "¡JUEGUE MÁS, GANE MÁS! El único programa que le premia por su estilo de juego."}
               </p>
+              {/*
               <Button
                 href="https://mrg.miccosukee.com/wp-content/uploads/2021/03/BINGO-PROGRAM-APPROVED_WEB.pdf"
                 target="_blank"
@@ -186,6 +187,7 @@ const OneRewards = () => {
               >
                 {language ? "VIEW PROGRAM" : "VER PROGRAMA"}
               </Button>
+              */}
               <div style={{ marginTop: "25px" }}>
                 <h4>{language ? "FAQs" : "PREGUNTAS FRECUENTES (FAQs)"}</h4>
                 <div style={{ width: "100%" }}>{renderExpansionPanel()}</div>

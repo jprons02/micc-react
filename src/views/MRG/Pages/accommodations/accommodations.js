@@ -74,12 +74,14 @@ const Accommodations = () => {
                   ? "Executive and Deluxe-level rooms are available with upgraded amenities and services."
                   : "Habitaciones Ejecutivas y de nivel Deluxe están disponibles con comodidades y servicios adicionales."}
               </p>
+              {/*
               <Button
                 onClick={() => setShowBookRoomModal(true)}
                 usetheme="contained"
               >
                 {language ? "Book A Room" : "Reservar una Habitación"}
               </Button>
+              */}
             </div>
           </GridItem>
           <GridItem md={5}>

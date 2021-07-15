@@ -27,7 +27,7 @@ export const renderPoiHours = (hours, language) => {
                   {language ? (
                     <span style={{ color: "red" }}>CLOSED</span>
                   ) : (
-                    "CERRADO"
+                    <span style={{ color: "red" }}>CERRADO</span>
                   )}
                   {item.details(language) ? ": " : ""}
                   <span style={{ fontWeight: "400", textTransform: "none" }}>

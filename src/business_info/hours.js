@@ -189,8 +189,9 @@ export const mrgHours = {
     ],
     sawgrassCafe: [
       {
-        days: (language) => (language ? "Monday – Sunday" : "lunes – domingo"),
-        open: `${getMinutes(12).combinedString}`,
+        days: (language) =>
+          language ? "Sunday – Thursday" : "domingo – jueves",
+        open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
         details: (language) => (language ? "" : ""),
       },
