@@ -39,7 +39,7 @@ const MiccosukeeFooter = () => {
       ...formValues,
       inputValues: {
         ...formValues.inputValues,
-        ["select"]: "Media",
+        ["select"]: "Media Inquiry",
       },
     });
     openModal(setState);
