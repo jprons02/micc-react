@@ -34,11 +34,23 @@ import { popupManager } from "services/popups/popupManager";
 
 const useStyles = makeStyles(styles);
 
-const Miccosukee = () => {
+const Miccosukee = (props) => {
   const classes = useStyles();
   let { path } = useRouteMatch();
   let location = useLocation();
 
+  // Route /win to promo page.
+  useEffect(() => {
+    if (window.location.pathname === "/win") {
+      props.history.push("/mrg/promotions");
+    }
+    if (window.location.pathname === "/win/es") {
+      props.history.push("/mrg/promotions/es");
+    }
+  });
+
+  // GODADDY HANDLES ALL THE FORWARDING
+  /*
   useEffect(() => {
     //TEST THIS ON MICCOSUKEE.IO
     //PROBABLY NEED TO POINT ALL SUBDOMAINS TO THE WEBSITE
@@ -48,7 +60,7 @@ const Miccosukee = () => {
     let subdomain = parts[0];
     // If we get more than 3 parts, then we have a subdomain
     // INFO: This could be 4, if you have a co.uk or something like that.
-    if (parts.length > 2) {
+    if (parts.length > 3) {
       subdomain = parts[0];
       // Remove the subdomain from the parts list
       parts.splice(0, 1);
@@ -59,6 +71,7 @@ const Miccosukee = () => {
     console.log("parts: ", parts);
     console.log("location pathname: ", location.pathname);
   }, []);
+  */
 
   //const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
   const [popupState, setPopupState] = useContext(PopupContext);
@@ -70,25 +83,6 @@ const Miccosukee = () => {
     // Check if popup should be displayed after location change
     popupManager(setPopupState, popupState, location);
   }, [location]);
-
-  //TESTING
-  /*
-  let host = window.location.host;
-  let protocol = window.location.protocol;
-  let parts = host.split(".");
-  let subdomain = parts[0];
-  // If we get more than 3 parts, then we have a subdomain
-  // INFO: This could be 4, if you have a co.uk TLD or something like that.
-  if (parts.length >= 3) {
-    subdomain = parts[0];
-    // Remove the subdomain from the parts list
-    parts.splice(0, 1);
-    // Set the location to the new url
-    window.location =
-      protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
-  }
-  console.log("location pathname: ", location.pathname);
-  */
 
   return (
     <div className={classNames(classes.main)}>
