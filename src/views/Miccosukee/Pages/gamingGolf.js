@@ -60,8 +60,8 @@ const GamingGolf = () => {
       title: language ? "Golf & Country Club" : "Golf & Country Club",
       theme: golfBusinessInfo.name,
       description: language
-        ? "This Mark Mahannah-designed masterpiece is considered by many to have the best layout in South Florida."
-        : "Exclusivamente diseñado por Mark Mahannah, es considerado uno de los mejores campos de golf del Sur de la Florida.",
+        ? "Enjoy breathtaking views and three challenging courses."
+        : "Disfrute vistas impresionantes y tres campos desafiantes.",
       imgSrc: golfImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",

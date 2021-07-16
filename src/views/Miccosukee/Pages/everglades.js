@@ -46,8 +46,8 @@ const GamingGolf = () => {
       title: language ? "Indian Village" : "Indian Village (Aldea Indígena)",
       theme: "village",
       description: language
-        ? "Step into the native habitat of the Miccosukee Tribe and learn about their culture, lifestyle and history. Experiences include a museum, airboat rides, alligator wrestling demonstrations, a gift shop, and more."
-        : "Entre al hábitat nativo de la Tribu Miccosukee y aprenda sobre su cultura, estilo de vida e historia. Experiencias incluyen un museo, airboat rides (paseos en hidrodeslizador), demostraciones de luchas con caimanes, una tienda, y más.",
+        ? "Adventure into the native habitat of the Miccosukee Tribe and learn about their culture, lifestyle and history."
+        : "Descubra el hábitat nativo de la Tribu Miccosukee y aprenda sobre su cultura, estilo de vida e historia.",
       imgSrc: villageImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",

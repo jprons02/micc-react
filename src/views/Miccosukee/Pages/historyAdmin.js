@@ -35,8 +35,8 @@ const GamingGolf = () => {
       title: language ? "History" : "Historia",
       theme: "history",
       description: language
-        ? "Discover the history of the Everglades’ first inhabitants. "
-        : "Descubra la historia de los primeros habitantes de los Everglades.",
+        ? "Discover the history of the Everglades’ first inhabitants and how they became a sovereign nation."
+        : "Descubra la historia de los primeros habitantes de los Everglades y cómo se convirtieron en nación soberana.​",
       imgSrc: historyImg,
       buttonOne: {
         text: language ? "WEBSITE" : "Página web",

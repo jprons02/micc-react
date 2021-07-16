@@ -89,7 +89,7 @@ const GamingPromos = () => {
   }, []);
 
   const getMonth = () => {
-    return "April".toUpperCase();
+    return "August".toUpperCase();
   };
 
   const getCalendarPdf = (language) => {
