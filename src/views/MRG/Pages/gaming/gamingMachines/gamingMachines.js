@@ -55,7 +55,7 @@ const GamingMachines = () => {
               <p>
                 {language
                   ? "Exclusive, 24/7 game rooms, like Hidden Gems or our swanky High Limit Room, are waiting to enhance your gaming experience. Miccosukee Resort & Gaming is a smoking facility with numerous non-smoking rooms. Regardless of how you enjoy yourself, you can play in the comfort of your individual style."
-                  : "Nuestros salones exclusivos, como Hidden Gems o el lujoso High Limit Room, están abiertos las 24 horas, los 7 días de la semana, para resaltar tu experiencia. En Miccosukee Resort & Gaming está permitido fumar, y además contamos con varios salones libres de humo. Cualquiera que sea tu preferencia, aquí puedes jugar en la comodidad de tu estilo individual."}
+                  : "Nuestros salones exclusivos, como Hidden Gems o el lujoso High Limit Room, están abiertos las 24 horas, los 7 días de la semana, para resaltar su experiencia. En Miccosukee Resort & Gaming está permitido fumar, y además contamos con varios salones libres de humo. Cualquiera que sea su preferencia, aquí puedes jugar en la comodidad de su estilo individual."}
               </p>
             </div>
           </GridItem>

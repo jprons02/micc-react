@@ -6,7 +6,7 @@ export const renderPoiHours = (hours, language) => {
     if (hours.days() === "") {
       return (
         <React.Fragment>
-          <h6>
+          <h6 style={{ color: "red" }}>
             {language ? "CLOSED" : "CERRADO"}
             {hours.details() ? ": " : ""}
             <span style={{ fontWeight: "400", textTransform: "none" }}>
@@ -19,38 +19,32 @@ export const renderPoiHours = (hours, language) => {
   } else {
     return (
       <React.Fragment>
-        <h6>
-          {hours.map((item) => {
-            if (item.days(language) === "") {
-              return (
-                <React.Fragment key={item.days(language)}>
-                  {language ? (
-                    <span style={{ color: "red" }}>CLOSED</span>
-                  ) : (
-                    <span style={{ color: "red" }}>CERRADO</span>
-                  )}
-                  {item.details(language) ? ": " : ""}
-                  <span style={{ fontWeight: "400", textTransform: "none" }}>
-                    {item.details(language) ? `${item.details(language)}` : ""}
-                  </span>
-                </React.Fragment>
-              );
-            } else if (item.open === item.close) {
-              return (
-                <React.Fragment key={item.days(language)}>
-                  {item.days(language)}
-                  {language ? ", 24 Hours" : ", 24 Horas"} <br />
-                </React.Fragment>
-              );
-            } else {
-              return (
-                <React.Fragment key={item.days(language)}>
-                  {item.days(language)}, {item.open} – {item.close} <br />
-                </React.Fragment>
-              );
-            }
-          })}
-        </h6>
+        {hours.map((item) => {
+          if (item.days(language) === "") {
+            return (
+              <h6 style={{ color: "red" }} key={item.days(language)}>
+                {language ? "CLOSED" : "CERRADO"}
+                {item.details(language) ? ": " : ""}
+                <span style={{ fontWeight: "400", textTransform: "none" }}>
+                  {item.details(language) ? `${item.details(language)}` : ""}
+                </span>
+              </h6>
+            );
+          } else if (item.open === item.close) {
+            return (
+              <h6 key={item.days(language)}>
+                {item.days(language)}
+                {language ? ", 24 Hours" : ", 24 Horas"} <br />
+              </h6>
+            );
+          } else {
+            return (
+              <h6 key={item.days(language)}>
+                {item.days(language)}, {item.open} – {item.close} <br />
+              </h6>
+            );
+          }
+        })}
       </React.Fragment>
     );
   }

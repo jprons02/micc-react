@@ -4,6 +4,8 @@
 // Convert hours to minutes in case of ex) 9:30 open
 // Use numbers only for open/close
 
+import React from "react";
+
 const getMinutes = (hours, minutes) => {
   const h = hours * 60;
   const m = minutes ? minutes : 0;
@@ -191,6 +193,13 @@ export const mrgHours = {
       {
         days: (language) =>
           language ? "Sunday – Thursday" : "domingo – jueves",
+        open: `${getMinutes(11).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      {
+        days: (language) =>
+          language ? "Friday & Saturday" : "viernes y sábados",
         open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
         details: (language) => (language ? "" : ""),

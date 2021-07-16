@@ -60,30 +60,36 @@ const ContactModal = (props) => {
           >
             {props.language ? "Contact Us" : "Contáctenos"}
           </Typography>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              flexWrap: "wrap",
-              marginBottom: "10px",
-            }}
-          >
-            <PhoneIcon />
-            &nbsp;
-            <span className={classes.phoneText}>{props.entity.phone}</span>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              flexWrap: "wrap",
-            }}
-          >
-            <MapIcon />
-            <span className={classes.mapText}>
-              &nbsp;{props.entity.address}
-            </span>
-          </div>
+          {props.entity.name === "media" ? (
+            "Please include the media affiliate in your message."
+          ) : (
+            <React.Fragment>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexWrap: "wrap",
+                  marginBottom: "10px",
+                }}
+              >
+                <PhoneIcon />
+                &nbsp;
+                <span className={classes.phoneText}>{props.entity.phone}</span>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                <MapIcon />
+                <span className={classes.mapText}>
+                  &nbsp;{props.entity.address}
+                </span>
+              </div>
+            </React.Fragment>
+          )}
         </div>
       </DialogTitle>
       <DialogContent

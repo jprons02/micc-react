@@ -51,7 +51,7 @@ const Home = (props) => {
       title: language ? "Police" : "Policía",
       body: language
         ? "The Miccosukee Police Department was established in 1976."
-        : "Departamento de Policía Miccosukee se estableció en 1976.",
+        : "El departamento de Policía Miccosukee se estableció en 1976.",
       buttonText: language ? "View Pages" : "Ver Páginas",
       linkObj: {
         type: "internal",
@@ -110,7 +110,7 @@ const Home = (props) => {
           <Typography className={classes.welcome} paragraph component="h1">
             {language
               ? "Welcome to Miccosukee Administration"
-              : "Bienvenido a Miccosukee Administración"}
+              : "Bienvenido a la Administración Miccosukee"}
           </Typography>
           <Typography className={classes.subWelcome} paragraph component="h3">
             {language

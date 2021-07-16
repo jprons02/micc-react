@@ -359,53 +359,90 @@ const MrgCovidInfo = (props) => {
           <ul style={ulStyle}>
             <li style={liStyle}>
               {props.language
-                ? "All guests must have have a government issued photo ID"
-                : "Todos los clientes deben tener un documento de identidad con fotografía emitido por el gobierno"}
+                ? "We are operating at full capacity."
+                : "Estamos operando a máxima capacidad."}
             </li>
             <li style={liStyle}>
               {props.language
-                ? "There will be one designated entrance and one designated exit"
-                : "Encontrará designada una puerta para el ingreso y otra diferente para la salida"}
+                ? "Temperature screenings are no longer required when entering the building."
+                : "No se requiere controles de temperatura para entrar al edificio."}
             </li>
             <li style={liStyle}>
               {props.language
-                ? "Must be 21 or older"
-                : "Debe ser mayor de 21 años"}
+                ? "All guests must have have a government issued photo ID."
+                : "Todos los clientes deben tener un documento de identidad con fotografía emitido por el gobierno."}
             </li>
             <li style={liStyle}>
               {props.language
-                ? "Must wear a mask at all times"
-                : "En todo momento deberá usar su mascarilla"}
+                ? "There will be one designated entrance and one designated exit."
+                : "Encontrará designada una puerta para el ingreso y otra diferente para la salida."}
             </li>
             <li style={liStyle}>
               {props.language
-                ? "Must not smoke inside"
-                : "Será prohibido fumar adentro"}
+                ? "Must be 21 or older."
+                : "Debe ser mayor de 21 años."}
+            </li>
+            <li style={liStyle}>
+              {props.language
+                ? "Face masks are optional for our guests."
+                : "El uso de mascarillas es opcional para nuestros clientes."}
+            </li>
+            <li style={liStyle}>
+              {props.language
+                ? "All employees are still required to wear masks."
+                : "Todos los empleados deben continuar usando mascarillas."}
+            </li>
+            <li style={liStyle}>
+              {props.language
+                ? "We remain a non-smoking facility."
+                : "Está prohibido fumar adentro del edificio."}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
                 {props.language
-                  ? "There will be designated smoking areas outside"
-                  : "Se han designado zonas externas exclusivamente para fumadores"}
+                  ? "There will be designated smoking areas outside."
+                  : "Se han designado zonas externas exclusivamente para fumadores."}
               </li>
             </ul>
             <li style={liStyle}>
               {props.language
-                ? "There have been disinfecting wipe dispensers installed all around the facility"
-                : "Se han instalado dispensadores de toallas desinfectantes alrededor de toda la instalación"}
+                ? "There have been disinfecting wipe dispensers installed all around the facility."
+                : "Se han instalado dispensadores de toallas desinfectantes alrededor de toda la instalación."}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>
                 {props.language
-                  ? "Guests must wipe down each machine after use"
-                  : "Todas las máquinas deberán ser desinfectadas con una toalla al finalizar su uso"}
+                  ? "Guests must wipe down each machine after use."
+                  : "Todas las máquinas deberán ser desinfectadas con una toalla al finalizar su uso."}
               </li>
             </ul>
             <li style={liStyle}>
               {props.language
-                ? "No RV’s, eighteen-wheeler rigs or vehicles 10ft or higher are allowed on property"
-                : "No se permiten RV’s, camiones de dieciocho ruedas o vehículos de 10 pies o más de altura en la propiedad"}
+                ? "No eighteen-wheeler rigs are allowed on property."
+                : "No se permiten camiones de dieciocho ruedas en nuestro local."}
             </li>
+            <li style={liStyle}>
+              {props.language
+                ? "RVs are allowed on property."
+                : "Los RVs (casas rodantes) están permitidos en nuestro establecimiento."}
+            </li>
+            <ul style={innerUlStyle}>
+              <li style={liStyle}>
+                {props.language
+                  ? "RVs are allowed to park in the Raccoon Parking Lot but must register first with the Hotel Security Dispatch."
+                  : "Los RVs deben parquearse en el Estacionamiento Raccoon pero antes deben registrarse con el Despacho de Seguridad del hotel."}
+              </li>
+              <li style={liStyle}>
+                {props.language
+                  ? "No RV overnight parking is allowed, and all RVs must vacate the premises by 2 AM. Failure to do so will result in towing."
+                  : "No se permite que los RVs permanezcan estacionados durante la noche, y todos los RVs deben desocupar el local a las 2 AM. No hacerlo resultará en un remolque."}
+              </li>
+              <li style={liStyle}>
+                {props.language
+                  ? "Everyone in the RV must be 21 years of age and over in order to enter the property."
+                  : "Todos en el RV deben tener 21 años o más para poder entrar al establecimiento."}
+              </li>
+            </ul>
           </ul>
         </Collapse>
       </div>

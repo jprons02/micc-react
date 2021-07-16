@@ -183,6 +183,11 @@ export default function Miccosukee(props) {
             />
             <Route
               exact
+              path={`${match.path}/sawgrass-cafe-menu`}
+              component={SawgrassCafe}
+            />
+            <Route
+              exact
               path={`${match.path}/bravo-bravissimo`}
               component={Bravo}
             />

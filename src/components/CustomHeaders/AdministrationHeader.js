@@ -11,10 +11,12 @@ import administrationLogo from "assets/logos/MiccosukeeTribeOfIndiansOfFlorida.s
 // context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { useLanguage } from "contexts/languageContext";
 
 const AdministrationHeader = () => {
   //classes needed for social icon
   //const classes = useStyles();
+  const language = useLanguage();
 
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
@@ -32,7 +34,7 @@ const AdministrationHeader = () => {
 
   const menuLinks = [
     {
-      text: "Police",
+      text: language ? "Police" : "Policía",
       itemType: "dropdown",
       href: "",
       target: "",
@@ -40,17 +42,17 @@ const AdministrationHeader = () => {
       link: "",
       subMenu: [
         {
-          text: "History",
+          text: language ? "History" : "Historia",
           link: "/police",
           target: "",
         },
         {
-          text: "Locations",
+          text: language ? "Locations" : "Ubicaciones",
           link: "/police/locations",
           target: "",
         },
         {
-          text: "Specialized Units",
+          text: language ? "Specialized Units" : "Unidades Especializadas",
           link: "/police/specialized-units",
           target: "",
         },

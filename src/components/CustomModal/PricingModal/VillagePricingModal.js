@@ -95,10 +95,9 @@ const PricingModal = (props) => {
             Miccosukee Village Admission
           </Typography>
           <p className={classes.detail}>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+            {language
+              ? "Tickets must be purchased at the Village front office. No pets or weapons allowed."
+              : "Entradas deben ser compradas en el mostrador de la Aldea. No se permiten mascotas o armas."}
           </p>
           <div
             style={{
@@ -109,7 +108,8 @@ const PricingModal = (props) => {
           >
             {renderPricingTable()}
           </div>
-          {language ? (
+          {/*
+          language ? (
             <Typography variant="body2" className={classes.disclaimer}>
               *Tickets must be purchased at Village front office
               <br />
@@ -121,7 +121,8 @@ const PricingModal = (props) => {
               <br />
               *No se permiten mascotas o armas
             </Typography>
-          )}
+          )
+          */}
         </div>
       </DialogContent>
     </Dialog>

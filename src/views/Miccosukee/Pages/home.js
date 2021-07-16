@@ -25,6 +25,8 @@ import { useLanguage } from "contexts/languageContext.js";
 // Services
 import { prerenderService } from "services/prerenderService.js";
 
+import MiccosukeeFooter from "components/CustomFooters/MiccosukeeFooter.js";
+
 const useStyles = makeStyles(styles);
 
 //<Link to="/about">About</Link>
@@ -42,8 +44,8 @@ const Home = ({ history }) => {
         ? "Miccosukee Resort & Gaming"
         : "Miccosukee Resort & Gaming",
       description: language
-        ? "Over 2,000 slot machines with the highest payouts in Miami, 300+ rooms designed with your comfort in mind, and a variety of dining and entertainment options for your enjoyment, MRG has it all. Come for the gaming, stay for the fun!"
-        : "Más de 2,000 máquinas de juego con los mejores premios de Miami, 300+ habitaciones diseñadas con su comodidad en mente, y una variedad de restaurantes y opciones de entretenimiento para su disfrute, MRG lo tiene todo. Venga a jugar, ¡quédese a divertirse!",
+        ? "Come for the gaming, stay for the fun!"
+        : "Venga a jugar, ¡quédese a divertirse!",
       cardBackground: {
         background: `linear-gradient(
                 rgba(156, 39, 176, 0.45), 
@@ -65,8 +67,8 @@ const Home = ({ history }) => {
         ? "Everglades Experiences"
         : "Experiencias en los Everglades",
       description: language
-        ? "Adventure into the Everglades to learn about the Miccosukee Tribe’s culture and traditions, and discover nature at its finest while gliding through the untamed “River of Grass”."
-        : "Aventure a los Everglades para aprender sobre la cultura y tradiciones de la Tribu Miccosukee, y descubra la naturaleza en todo su esplendor al deslizarse a través del salvaje “Río de Césped”. ",
+        ? "Enjoy the Miccosukee Indian Village and airboat rides."
+        : "Disfrute la Aldea Indígena de los Miccosukee y tome un paseo en los airboats.",
       cardBackground: {
         background: `linear-gradient(
                 rgba(67, 169, 70, 0.45), 
@@ -88,8 +90,8 @@ const Home = ({ history }) => {
       url: "events",
       title: language ? "Events" : "Eventos",
       description: language
-        ? "Our 1,200-seat Entertainment Dome is home to live music, cabaret shows and sporting events."
-        : "Nuestro Domo de Entretenimiento tiene capacidad para 1,200 invitados y es el lugar ideal para escuchar música en vivo, presenciar espectáculos de cabaré y ver eventos deportivos.",
+        ? "Home to live music, cabaret shows and sporting events."
+        : "Lugar ideal para musica en vivo, espectáculos de cabaré y eventos deportivos.",
       cardBackground: {
         background: `linear-gradient(
                 rgba(197, 78, 69, 0.45), 
@@ -114,7 +116,7 @@ const Home = ({ history }) => {
         : "Historia y Administración",
       description: language
         ? "Learn about the Miccosukee Tribe’s history and current Tribal leaders."
-        : "Aprenda acerca de la historia de la Tribu Miccosukee y los líderes de la Tribu.",
+        : "Aprenda acerca de la Tribu Miccosukee y sus líderes.",
       cardBackground: {
         background: `linear-gradient(
                 rgba(224, 206, 0, 0.45), 
@@ -167,6 +169,9 @@ const Home = ({ history }) => {
       style={{ position: "static" }}
     >
       {renderMiccCards()}
+      <GridItem style={{ paddingBottom: "8px" }} md={12}>
+        <MiccosukeeFooter />
+      </GridItem>
     </GridContainer>
   );
 };

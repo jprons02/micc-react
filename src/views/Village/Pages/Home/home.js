@@ -89,11 +89,14 @@ const Home = () => {
       <RaisedContainer>
         <div className={classes.welcomeContainer}>
           <Typography className={classes.welcome} paragraph component="h1">
-            Welcome to Miccosukee Indian Village
+            {language
+              ? "Welcome to Miccosukee Indian Village"
+              : "Bienvenido a Miccosukee Indian Village"}
           </Typography>
           <Typography className={classes.subWelcome} paragraph component="h3">
-            Showcasing Miccosukee tribal arts &amp; culture, with crafts,
-            airboat rides &amp; alligators.
+            {language
+              ? "Showcasing Miccosukee tribal arts & culture, with crafts, airboat rides & alligators."
+              : "Mostrando la cultura y arte tribal de los Miccosukee con artesanías, paseos en airboat (hidrodeslizador) y caimanes."}
           </Typography>
           <hr className={classes.hr} />
           <GridContainer style={{ marginTop: "60px" }} justify="center">

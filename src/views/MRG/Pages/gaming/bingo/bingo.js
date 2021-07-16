@@ -68,6 +68,11 @@ const Bingo = () => {
                 <ul>
                   <li>
                     {language
+                      ? "Sales begin at 4:15 P.M."
+                      : "Ventas comienzan a las 4:15 P.M."}
+                  </li>
+                  <li>
+                    {language
                       ? "Warm-ups begin at 6:30 P.M."
                       : "Prácticas comienzan a las 6:30 P.M."}
                   </li>
@@ -75,11 +80,6 @@ const Bingo = () => {
                     {language
                       ? "Regular session begins at 7:15 P.M."
                       : "Sesión regular comienza a las 7:15 P.M."}
-                  </li>
-                  <li>
-                    {language
-                      ? "Sales begin at 4:15 P.M."
-                      : "Ventas comienzan a las 4:15 P.M."}
                   </li>
                 </ul>
                 <h6>

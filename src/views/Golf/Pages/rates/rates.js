@@ -45,7 +45,7 @@ const Rates = () => {
     createData(
       1,
       language ? "Monday" : "Lunes",
-      language ? "All Day" : "Todo el dia",
+      language ? "All Day" : "Todo el día",
       "$40.00"
     ),
     createData(
@@ -161,7 +161,7 @@ const Rates = () => {
     createData(
       20,
       language ? "Members" : "Miembros",
-      language ? "1 bucket per day" : "1 canasta por dia"
+      language ? "1 bucket per day" : "1 canasta por día"
     ),
     createData(
       21,

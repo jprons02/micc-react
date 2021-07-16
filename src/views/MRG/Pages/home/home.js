@@ -65,9 +65,10 @@ const Home = (props) => {
     {
       id: 1,
       bgImage: heroImg1,
-      header: "MONTHLY PROMOTIONS",
-      subHeader:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      header: language ? "MONTHLY PROMOTIONS" : "PROMOCIONES MENSUALES",
+      subHeader: language
+        ? "Miccosukee One Members, enter our drawings for chances to win thousands in cash and plenty of Free Play!"
+        : "¡Miembros de Miccosukee One, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho Free Play!​",
       button: {
         text: "SEE PROMOS",
         link: "/mrg/promotions",
@@ -100,7 +101,7 @@ const Home = (props) => {
     {
       id: 1,
       img: cardImage1,
-      title: language ? "Gaming Machines" : "Casino",
+      title: language ? "Gaming Machines" : "Máquinas de Juego",
       body: language
         ? "Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor!"
         : "¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas de nuestro casino!",
@@ -115,8 +116,8 @@ const Home = (props) => {
       img: cardImage2,
       title: language ? "Sawgrass Cafe" : "Sawgrass Cafe",
       body: language
-        ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-        : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        ? "Sawgrass Cafe serves tasty sandwiches, soups, salads, and Latino favorites like pastelitos."
+        : "Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos.",
       buttonText: language ? "See Details" : "Más Detalles",
       linkObj: {
         type: "internal",

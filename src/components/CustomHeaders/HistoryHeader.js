@@ -9,12 +9,14 @@ import { historyColor } from "themes/colors.js";
 import historyLogo from "assets/logos/MiccosukeeTribeOfIndiansOfFlorida.svg";
 
 // context
+import { useLanguage } from "contexts/languageContext";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
 
 const HistoryHeader = () => {
   //classes needed for social icon
   //const classes = useStyles();
+  const language = useLanguage();
 
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
@@ -32,7 +34,7 @@ const HistoryHeader = () => {
 
   const menuLinks = [
     {
-      text: "History",
+      text: language ? "History" : "Historia",
       itemType: "",
       href: "",
       target: "",
@@ -41,7 +43,7 @@ const HistoryHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Programs & Business",
+      text: language ? "Programs & Business" : "Programas y Empresas",
       itemType: "",
       href: "",
       target: "",
@@ -50,7 +52,7 @@ const HistoryHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: "Tribal Leaders",
+      text: language ? "Tribal Leaders" : "Líderes Tribales",
       itemType: "",
       href: "",
       target: "",

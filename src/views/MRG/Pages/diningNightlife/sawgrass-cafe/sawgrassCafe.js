@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 // Core Components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -47,12 +48,21 @@ const sliderContent = [
 const SawgrassCafe = () => {
   const language = useLanguage();
   const classes = useStyles();
+  let location = useLocation();
 
   const [showFoodMenu, setShowFoodMenu] = useContext(FoodMenuContext);
 
-  // Close contact modal on mount
+  // show food menu on load if url matches.
+  // close contact modal on mount if url does not match menu url.
   useEffect(() => {
-    closeModal(setShowFoodMenu);
+    if (
+      location.pathname === "/mrg/sawgrass-cafe-menu" ||
+      location.pathname === "/mrg/sawgrass-cafe-menu/"
+    ) {
+      setShowFoodMenu(true);
+    } else {
+      closeModal(setShowFoodMenu);
+    }
   }, []);
 
   const closeModal = (setState) => {
@@ -70,8 +80,8 @@ const SawgrassCafe = () => {
               {renderPoiHours(mrgHours.poi.sawgrassCafe, language)}
               <p>
                 {language
-                  ? "The Cypress Lounge is home to daily beer specials and Monday Night Football, caliente Miami HEAT action and more! Enjoy sporting events year round on our large screen TVs in the middle of South Florida’s hottest gaming action."
-                  : "En Cypress Lounge tenemos especiales de cerveza todos los días, además de Fútbol Americano los lunes en la noche, toda la acción caliente de los Miami HEAT, ¡y mucho más! Disfrute de eventos deportivos todo el año en nuestros televisores de pantalla grande justo en el medio de toda la acción del casino."}
+                  ? "Our laid-back cafe is home to the $8 Combo providing all the fuel you need to get back to the gaming action. Serving tasty sandwiches, soups, salads, and Latino favorites like pastelitos, we know you'll enjoy our appetizing dishes and generous portions."
+                  : "Nuestro café relajado es el lugar del Combo de $8 que provee todo el combustible que necesita para volver a la acción del juego. Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos, sabemos que disfrutará de nuestros apetitosos platos y generosas porciones."}
               </p>
               <Button
                 onClick={() => setShowFoodMenu(true)}
