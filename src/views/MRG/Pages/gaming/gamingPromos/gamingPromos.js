@@ -73,14 +73,11 @@ const GamingPromos = () => {
 
     cardContent(languageBool).map((promo) => {
       //Purpose is ability to link to specific promos from url
-      // example using urlify service) "Anniversary Gift" will become "anniversary-gift" -
-      // full example ENGLISH: http://localhost:3000/mrg/promotions#new-member-bonus
-      // full example SPANISH: http://localhost:3000/mrg/promotions#bono-para-nuevos-miembros/es
+      // full example ENGLISH: http://localhost:3000/mrg/promotions#0
+      // full example SPANISH: http://localhost:3000/mrg/promotions#0/es
       if (
-        window.location.href ===
-          `https://localhost:3000/mrg/promotions#${urlify(promo.title)}` ||
-        window.location.href ===
-          `https://localhost:3000/mrg/promotions#${urlify(promo.title)}/es`
+        window.location.hash === `#${promo.id}` ||
+        window.location.hash === `#${promo.id}/es`
       ) {
         setSelectedPromo(promo);
         setShowModal(true);

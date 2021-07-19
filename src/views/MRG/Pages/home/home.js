@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
 
+import ReactGA from "react-ga";
+
 // nodejs library that concatenates classes
 import classNames from "classnames";
 
@@ -50,6 +52,11 @@ import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
 
 // context
 import { useLanguage } from "contexts/languageContext.js";
+
+function initializeReactGA() {
+  ReactGA.initialize("UA-123791717-1");
+  ReactGA.pageview("/mrg/");
+}
 
 const useStyles = makeStyles(styles);
 const useCardStyles = makeStyles(cardStyles);

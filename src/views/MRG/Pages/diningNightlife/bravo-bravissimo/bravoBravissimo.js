@@ -1,5 +1,7 @@
 import React from "react";
 
+import ReactGA from "react-ga";
+
 // Core Components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -28,6 +30,11 @@ import { renderPoiHours } from "services/renderPoiHours.js";
 
 // Context
 import { useLanguage } from "contexts/languageContext.js";
+
+function initializeReactGA() {
+  ReactGA.initialize("UA-123791717-1");
+  ReactGA.pageview("/mrg/");
+}
 
 const useStyles = makeStyles(styles);
 
