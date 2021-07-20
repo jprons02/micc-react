@@ -16,9 +16,7 @@ import CustomVerticalTabs from "components/CustomTabs/CustomVerticalTabs.js";
 
 // Images
 import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg";
-import image2 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
-import image3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
+import image1 from "assets/img/mrg/poker/poker1.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -35,7 +33,7 @@ import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1, image2, image3];
+const imageArray = [image1];
 
 const sliderContent = [
   {
@@ -190,8 +188,8 @@ const Poker = () => {
               {renderPoiHours(mrgHours.poi.poker, language)}
               <p>
                 {language
-                  ? "Our new Poker Game Room is now open! With a whole new look and it being a non-smoking room, it’s the perfect place to come and play."
-                  : "¡Nuestra nueva Sala de Póker ya está abierta! Con un nuevo look y libre de humo, es el lugar perfecto para venir a jugar."}
+                  ? "With a whole new look and it being a non-smoking room, it’s the perfect place to come and play."
+                  : "Con un nuevo look y libre de humo, es el lugar perfecto para venir a jugar."}
               </p>
               <p>
                 {language
