@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useRouteMatch } from "react-router-dom";
-
-import ReactGA from "react-ga";
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -39,7 +37,7 @@ import image3 from "assets/img/bg3.jpg";
 import heroImg1 from "assets/img/mrg/home/mrg_hero.jpg";
 
 import cardImage1 from "assets/img/mrg/gaming/machines/MRG_Gaming1.jpg";
-import cardImage2 from "assets/img/mrg/home/homeCard_accommodations.jpg";
+import cardImage2 from "assets/img/mrg/home/burgerfries.jpg";
 import cardImage3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
 import cardImage4 from "assets/img/mrg/home/homeCard_spa.jpg";
 import cardImage5 from "assets/img/mrg/home/homeCard_events.jpg";
@@ -52,11 +50,6 @@ import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
 
 // context
 import { useLanguage } from "contexts/languageContext.js";
-
-function initializeReactGA() {
-  ReactGA.initialize("UA-123791717-1");
-  ReactGA.pageview("/mrg/");
-}
 
 const useStyles = makeStyles(styles);
 const useCardStyles = makeStyles(cardStyles);

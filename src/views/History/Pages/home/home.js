@@ -13,8 +13,7 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import bgImage from "assets/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
 import image1 from "assets/img/history/history1.jpeg";
 import image2 from "assets/img/history/car01.jpg";
-import image3 from "assets/img/history/imgHistoryBoy1.jpeg";
-import image4 from "assets/img/history/imgHistoryCanoe1.jpeg";
+import image3 from "assets/img/history/imgHistoryCanoe1.jpeg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -25,7 +24,7 @@ import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1, image2, image3, image4];
+const imageArray = [image1, image2, image3];
 
 const sliderContent = [
   {

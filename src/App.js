@@ -2,6 +2,9 @@ import React, { useContext, useEffect } from "react";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
+// google analytics
+import GA4React from "ga-4-react";
+
 // demo pages for this product
 import Components from "views/_demo_Components/Components.js";
 import LandingPage from "views/_demo_LandingPage/LandingPage.js";
@@ -38,6 +41,22 @@ var hist = createBrowserHistory();
 
 const App = () => {
   const [alerts, setAlerts] = useContext(AlertContext);
+
+  //https://www.npmjs.com/package/ga-4-react
+  const trackingId = "G-7PV911VYR0"; // Replace with your Google Analytics tracking ID
+  const history = createBrowserHistory();
+  const ga4react = new GA4React(trackingId);
+  ga4react.initialize().then(
+    (ga4) => {
+      history.listen((location) => {
+        ga4.pageview(window.location.pathname);
+        ga4.gtag("event", "pageview", window.location.pathname);
+      });
+    },
+    (err) => {
+      console.error(err);
+    }
+  );
 
   // Snackbar unmounting is placed in the Footer.js and VirtualEvent.js components. Footer will handle all website unmounts with exception to the virtual events.
   const renderSnackbar = () => {
