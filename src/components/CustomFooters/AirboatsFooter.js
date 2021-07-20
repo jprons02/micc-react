@@ -69,7 +69,7 @@ const AirboatsFooter = () => {
       ],
     },
     {
-      header: language ? "FOLLOW US" : "CONÉCTESE CON NOSOTROS ",
+      header: language ? "FOLLOW US" : "CONÉCTESE CON NOSOTROS",
       subMenu: [
         {
           externalLink: true,

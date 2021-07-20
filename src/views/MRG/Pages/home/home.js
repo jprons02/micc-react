@@ -70,7 +70,7 @@ const Home = (props) => {
         ? "Miccosukee One Members, enter our drawings for chances to win thousands in cash and plenty of Free Play!"
         : "¡Miembros de Miccosukee One, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho Free Play!​",
       button: {
-        text: "SEE PROMOS",
+        text: language ? "SEE PROMOS" : "VER PROMOCIONES",
         link: "/mrg/promotions",
       },
     },
@@ -104,7 +104,7 @@ const Home = (props) => {
       title: language ? "Gaming Machines" : "Máquinas de Juego",
       body: language
         ? "Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor!"
-        : "¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas de nuestro casino!",
+        : "¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas!",
       buttonText: language ? "Learn More" : "Conozca Más",
       linkObj: {
         type: "internal",

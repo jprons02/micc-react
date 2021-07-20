@@ -54,7 +54,9 @@ const SpecializedUnits = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Specialized Units</h2>
+              <h2>
+                {language ? "Specialized Units" : "Unidades Especializadas"}
+              </h2>
               {language ? (
                 <React.Fragment>
                   <p>

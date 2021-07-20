@@ -30,7 +30,7 @@ const Pricing = () => {
         <p className={classes.disclaimer}>
           {language
             ? `*All tickets need to be purchased from airboat front desk.`
-            : `*Todas las entradas deben ser compradas en el mostrador de botes de aire.`}
+            : `*Todas las entradas deben ser compradas en el mostrador de airboats.`}
         </p>
       </GridItem>
       {airboatsPricing.map((item) => {

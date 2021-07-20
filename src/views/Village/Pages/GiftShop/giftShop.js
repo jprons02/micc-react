@@ -71,6 +71,7 @@ const GiftShop = () => {
                   hechos por miembros de nuestra Tribu Miccosukee.
                 </p>
               )}
+              {/*
               <Button
                 href="https://google.com"
                 target="_blank"
@@ -78,6 +79,7 @@ const GiftShop = () => {
               >
                 {language ? "Online Store" : "Tienda Virtual"}
               </Button>
+              */}
             </div>
           </GridItem>
           <GridItem md={5}>

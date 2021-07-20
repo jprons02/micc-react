@@ -68,7 +68,7 @@ const Home = ({ history }) => {
         : "Experiencias en los Everglades",
       description: language
         ? "Enjoy the Miccosukee Indian Village and airboat rides."
-        : "Disfrute la Aldea Indígena de los Miccosukee y tome un paseo en los airboats.",
+        : "Disfrute la Aldea Indígena y tome un paseo en los airboats.",
       cardBackground: {
         background: `linear-gradient(
                 rgba(67, 169, 70, 0.45), 
@@ -91,7 +91,7 @@ const Home = ({ history }) => {
       title: language ? "Events" : "Eventos",
       description: language
         ? "Home to live music, cabaret shows and sporting events."
-        : "Lugar ideal para musica en vivo, espectáculos de cabaré y eventos deportivos.",
+        : "Lugar ideal para música en vivo, espectáculos y eventos deportivos.",
       cardBackground: {
         background: `linear-gradient(
                 rgba(197, 78, 69, 0.45), 

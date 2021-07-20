@@ -44,7 +44,7 @@ const Rates = () => {
   const weekdayRows = [
     createData(
       1,
-      language ? "Monday" : "Lunes",
+      language ? "Monday" : "lunes",
       language ? "All Day" : "Todo el día",
       "$40.00"
     ),
@@ -92,19 +92,19 @@ const Rates = () => {
   const weekendRows = [
     createData(
       9,
-      language ? "Saturday & Sunday / Holiday" : "sábado & domingo / Feriados",
+      language ? "Saturday & Sunday / Holiday" : "sábado y domingo / Feriados",
       language ? "Open – 12:00 P.M." : "Hasta las 12:00 P.M.",
       "$65.00"
     ),
     createData(
       10,
-      language ? "Saturday & Sunday / Holiday" : "sábado & domingo / Feriados",
+      language ? "Saturday & Sunday / Holiday" : "sábado y domingo / Feriados",
       "12:00 P.M. – 4:00 P.M.",
       "$50.00"
     ),
     createData(
       11,
-      language ? "Saturday & Sunday / Holiday" : "sábado & domingo / Feriados",
+      language ? "Saturday & Sunday / Holiday" : "sábado y domingo / Feriados",
       language ? "4:00 P.M. – Close" : "4:00 P.M. en adelante",
       "$40.00"
     ),
@@ -297,7 +297,7 @@ const Rates = () => {
           <TableHead>
             <TableRow>
               <TableCell>
-                {language ? "Weekend & Holiday" : "Fines de Semana & Feriados"}
+                {language ? "Weekend & Holiday" : "Fines de Semana y Feriados"}
               </TableCell>
               <TableCell align="right">{language ? "Time" : "Hora"}</TableCell>
               <TableCell align="right">
@@ -518,7 +518,7 @@ const Rates = () => {
           }
           style={sectionHeaderStyle}
         >
-          {language ? "Weekend & Holiday Rates" : "Fines de Semana & Feriados"}
+          {language ? "Weekend & Holiday Rates" : "Fines de Semana y Feriados"}
         </h4>
         <Collapse in={showCourseRates.weekend}>{renderWeekendTable()}</Collapse>
       </div>

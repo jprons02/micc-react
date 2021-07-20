@@ -39,13 +39,13 @@ const HistoryFooter = () => {
       header: "MICCOSUKEE",
       subMenu: [
         {
-          linkText: "Main Home",
+          linkText: language ? "Main Home" : "Página Principal",
           linkTo: "/",
         },
       ],
     },
     {
-      header: "GAMING & GOLF",
+      header: language ? "GAMING & GOLF" : "CASINO Y GOLF",
       subMenu: [
         {
           linkText: "Resort & Gaming",
@@ -58,10 +58,10 @@ const HistoryFooter = () => {
       ],
     },
     {
-      header: "EXPERIENCES",
+      header: language ? "EXPERIENCES" : "EXPERIENCIAS",
       subMenu: [
         {
-          linkText: "Indian Village",
+          linkText: language ? "Indian Village" : "Aldea Indígena",
           linkTo: "/village",
         },
         {
@@ -71,7 +71,7 @@ const HistoryFooter = () => {
       ],
     },
     {
-      header: "FOLLOW US",
+      header: language ? "FOLLOW US" : "CONÉCTESE CON NOSOTROS",
       subMenu: [
         {
           externalLink: true,

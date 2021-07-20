@@ -86,7 +86,9 @@ const GamingPromos = () => {
   }, []);
 
   const getMonth = () => {
-    return "August".toUpperCase();
+    return language
+      ? `${"August".toUpperCase()} PROMOTIONS`
+      : `PROMOCIONES DE ${"Agosto".toUpperCase()}`;
   };
 
   const getCalendarPdf = (language) => {
@@ -119,7 +121,7 @@ const GamingPromos = () => {
           img={card.img}
           title={card.oneLiner}
           body={""}
-          buttonText="SEE DETAILS"
+          buttonText={language ? "SEE DETAILS" : "VER DETALLES"}
           buttonVariant="outlined"
           buttonFunction={() => promoClick(card)}
         />
@@ -150,7 +152,7 @@ const GamingPromos = () => {
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
         <div style={{ textAlign: "center" }}>
-          <h2 style={{ fontSize: "30px" }}>{`${getMonth()} PROMOTIONS`}</h2>
+          <h2 style={{ fontSize: "30px" }}>{getMonth()}</h2>
           <a target="_blank" href={getCalendarPdf()}>
             <span
               style={{
@@ -161,7 +163,7 @@ const GamingPromos = () => {
                 marginTop: "-5px",
               }}
             >
-              CALENDAR VIEW
+              {language ? "CALENDAR VIEW" : "VER CALENDARIO"}
             </span>
           </a>
         </div>

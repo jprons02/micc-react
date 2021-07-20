@@ -64,7 +64,7 @@ const MrgHeader = () => {
       link: "",
       subMenu: [
         {
-          text: "Salon & Spa",
+          text: language ? "Salon & Spa" : "Salón y Spa",
           link: "/salon-spa",
           target: "",
         },

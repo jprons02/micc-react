@@ -57,7 +57,11 @@ const AlligatorDemos = () => {
         <GridContainer>
           <GridItem md={6}>
             <div className={classes.leftTextArea}>
-              <h2>Alligator Demonstrations</h2>
+              <h2>
+                {language
+                  ? "Alligator Demonstrations"
+                  : "Demostraciones de Caimanes"}
+              </h2>
               {renderPoiHours(villageHours.poi.alligator, language)}
               {language ? (
                 <React.Fragment>
