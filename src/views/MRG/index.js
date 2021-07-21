@@ -97,32 +97,27 @@ export default function Miccosukee(props) {
           <StandardAlert
             message={
               language ? (
-                <div>
+                <div id="test">
                   <b>
-                    Click
                     <Link
                       style={{ color: "white", fontWeight: "800" }}
                       to={`${match.path}/covid-19`}
                     >
-                      {" "}
-                      HERE{" "}
+                      Click HERE for the Miccosukee Resort &amp; Gaming COVID-19
+                      guidelines.
                     </Link>
-                    for the Miccosukee Resort &amp; Gaming COVID-19 guidelines.
                   </b>
                 </div>
               ) : (
                 <div>
                   <b>
-                    Oprima
                     <Link
                       style={{ color: "white", fontWeight: "800" }}
                       to={`${match.path}/covid-19`}
                     >
-                      {" "}
-                      AQUÍ{" "}
+                      Oprima AQUÍ para las últimas noticias de COVID-19
+                      relacionadas a nuestros establecimientos
                     </Link>
-                    para las últimas noticias de COVID-19 relacionadas a
-                    nuestros establecimientos
                   </b>
                 </div>
               )

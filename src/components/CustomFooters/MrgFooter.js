@@ -67,7 +67,7 @@ const MrgFooter = () => {
           linkTo: "https://goo.gl/maps/yZ9QCXJ869UqZRxJ9",
         },
         {
-          linkText: language ? "Banquets & Catering" : "test",
+          linkText: language ? "Banquets & Catering" : "Banquetes y Catering",
           linkTo: "/mrg/banquets-catering",
         },
       ],

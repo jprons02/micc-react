@@ -91,7 +91,7 @@ const GamingPromos = () => {
       : `PROMOCIONES DE ${"Agosto".toUpperCase()}`;
   };
 
-  const getCalendarPdf = (language) => {
+  const getCalendarPdf = () => {
     const englishCalendar =
       "https://mrg.miccosukee.com/wp-content/uploads/2021/04/April_Calendar_Flyer_EN_SP.pdf";
     const spanishCalendar = "";

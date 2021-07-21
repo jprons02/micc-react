@@ -16,7 +16,7 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/pages/home.js
 //images
 import mrgGolfImg from "assets/img/miccosukee/pages/home/home-mrg.jpg";
 import evergladesImg from "assets/img/miccosukee/pages/home/home-airboats.jpg";
-import historyImg from "assets/img/miccosukee/pages/home/home-history.jpg";
+import historyImg from "assets/img/miccosukee/pages/home/Mic_family.jpg";
 import eventsImg from "assets/img/miccosukee/pages/home/home-admin.jpg";
 
 // Context
