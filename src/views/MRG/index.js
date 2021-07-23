@@ -44,6 +44,7 @@ import Deli from "views/MRG/Pages/diningNightlife/deli/deli.js";
 import CafeHammock from "views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js";
 import CypressLounge from "views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js";
 import MartiniBar from "views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js";
+import Maxs from "views/MRG/Pages/diningNightlife/maxs/maxs.js";
 import BanquetsCatering from "views/MRG/Pages/banquetsCatering/banquetsCatering.js";
 import MrgEvents from "views/MRG/Pages/events/mrgEvents.js";
 import MrgEventPage from "views/MRG/Pages/events/mrgEventPage";
@@ -181,6 +182,7 @@ export default function Miccosukee(props) {
               path={`${match.path}/sawgrass-cafe-menu`}
               component={SawgrassCafe}
             />
+            <Route exact path={`${match.path}/maxs`} component={Maxs} />
             <Route
               exact
               path={`${match.path}/bravo-bravissimo`}

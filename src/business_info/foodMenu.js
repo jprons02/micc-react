@@ -138,7 +138,8 @@ export const sawgrassCafeMenu = [
     name: "Combos",
     subMenu: [
       {
-        name: "Include 6 oz. French Fries and 16 oz. Fountain Soda ",
+        name:
+          "$8 Combo includes: 6 oz. Soup & Half Sandwich with a side of 6 oz. Fries and a 16 oz. Drink.",
         items: [
           { name: "Soup, Ham & Cheese Sandwich", price: "$8.00" },
           { name: "Soup, BLT Sandwich", price: "$8.00" },
@@ -161,11 +162,17 @@ export const sawgrassCafeMenu = [
   },
   {
     name: "Salad",
-    items: [
-      { name: "Mac Salad Scoop", price: "$3.85" },
-      { name: "Chicken Salad Scoop", price: "$5.75" },
-      { name: "Tuna Salad Scoop", price: "$6.00" },
-      { name: "Garden Salad", price: "$7.00" },
+    subMenu: [
+      {
+        name:
+          "$8 Combo includes: 16 oz. Soup and Garden Salad with a 16 oz. Drink (no Fries included)",
+        items: [
+          { name: "Mac Salad Scoop", price: "$3.85" },
+          { name: "Chicken Salad Scoop", price: "$5.75" },
+          { name: "Tuna Salad Scoop", price: "$6.00" },
+          { name: "Garden Salad", price: "$7.00" },
+        ],
+      },
     ],
   },
   {

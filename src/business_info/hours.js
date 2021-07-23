@@ -189,6 +189,22 @@ export const mrgHours = {
       },
       */
     ],
+    maxs: [
+      {
+        days: (language) =>
+          language ? "Sunday – Thursday" : "domingo – jueves",
+        open: `${getMinutes(9).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      {
+        days: (language) =>
+          language ? "Friday & Saturday" : "viernes y sábados",
+        open: `${getMinutes(9).combinedString}`,
+        close: `${getMinutes(2).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+    ],
     sawgrassCafe: [
       {
         days: (language) =>

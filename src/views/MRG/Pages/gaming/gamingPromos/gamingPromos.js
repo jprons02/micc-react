@@ -7,6 +7,8 @@ import RaisedContainer from "components/CustomSections/RaisedContainer.js";
 import StandardCard from "components/CustomCards/StandardCard.js";
 import CustomGamingPromoModal from "components/CustomModal/CustomPromosModal/CustomGamingPromoModal.js";
 
+//import englishCalendar from "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/july_en.pdf";
+
 // @material-ui/core components
 import { Hidden } from "@material-ui/core";
 
@@ -93,8 +95,9 @@ const GamingPromos = () => {
 
   const getCalendarPdf = () => {
     const englishCalendar =
-      "https://mrg.miccosukee.com/wp-content/uploads/2021/04/April_Calendar_Flyer_EN_SP.pdf";
-    const spanishCalendar = "";
+      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/august_en.pdf";
+    const spanishCalendar =
+      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/august_sp.pdf";
 
     if (language) {
       return englishCalendar;

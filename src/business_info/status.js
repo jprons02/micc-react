@@ -43,7 +43,7 @@ export const mrgStatus = {
       isOpen: false,
     },
     {
-      name: (language) => "Hot Dog Cart",
+      name: (language) => "Max's",
       isOpen: true,
     },
     {
