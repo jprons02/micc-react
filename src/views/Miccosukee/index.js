@@ -39,7 +39,7 @@ const Miccosukee = (props) => {
   let { path } = useRouteMatch();
   let location = useLocation();
 
-  // Route /win to promo page.
+  // rerouting
   useEffect(() => {
     if (window.location.pathname === "/win") {
       props.history.push("/mrg/promotions");

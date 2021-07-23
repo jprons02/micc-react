@@ -15,6 +15,12 @@ import { events } from "assets/event/EventData/eventList.js";
 // Custom Components
 import Badge from "components/Badge/Badge.js";
 
+// @material-ui/icons
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+
+// Core components
+import Button from "components/CustomButtons/Button.js";
+
 // Custom Functions
 import { setEstTime } from "services/setEstTime.js";
 import { urlify } from "services/urlify.js";
@@ -65,6 +71,26 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     };
     renderUpcommingDefault();
   }, [category]);
+
+  // Eventbrite - create widget for each id
+  useEffect(() => {
+    events.map((event) => {
+      if (event.buttons) {
+        var exampleCallback = function () {
+          console.log("Order complete!");
+        };
+
+        window.EBWidgets.createWidget({
+          widgetType: "checkout",
+          eventId: event.buttons[0].eventbrite.eventId,
+          modal: true,
+          modalTriggerElementId:
+            event.buttons[0].eventbrite.modalTriggerElementId,
+          onOrderComplete: exampleCallback,
+        });
+      }
+    });
+  });
 
   const handleBadgeClick = (category) => {
     setCategory(category);
@@ -194,6 +220,19 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                 <h6>{`${event.startDate} - ${event.endDate}`}</h6>
                 <h6>{`Admission: ${event.admission}`}</h6>
                 <p>{event.excerpt}</p>
+                {event.buttons ? (
+                  <Button
+                    color="success"
+                    id={event.buttons[0].eventbrite.modalTriggerElementId}
+                    type="button"
+                    dataautomation="ticket-modal-btn"
+                    datatrackinglabel="Tickets"
+                    className={classes.button}
+                    variant="contained"
+                  >
+                    <ShoppingCartIcon /> PURCHASE TICKETS
+                  </Button>
+                ) : null}
               </div>
             );
           }

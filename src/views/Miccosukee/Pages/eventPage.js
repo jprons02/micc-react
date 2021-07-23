@@ -4,8 +4,12 @@ import { useRouteMatch } from "react-router-dom";
 import { events } from "assets/event/EventData/eventList.js";
 import { urlify } from "services/urlify.js";
 import classNames from "classnames";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+
+// @material-ui/icons
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 // Core components
 import Button from "components/CustomButtons/Button.js";
@@ -38,6 +42,23 @@ const EventPage = ({ entityMargin }) => {
     setEvent(matchedEvent);
   }, []);
 
+  useEffect(() => {
+    if (event.buttons) {
+      var exampleCallback = function () {
+        console.log("Order complete!");
+      };
+
+      window.EBWidgets.createWidget({
+        widgetType: "checkout",
+        eventId: event.buttons[0].eventbrite.eventId,
+        modal: true,
+        modalTriggerElementId:
+          event.buttons[0].eventbrite.modalTriggerElementId,
+        onOrderComplete: exampleCallback,
+      });
+    }
+  }, [event]);
+
   const eventDate =
     event.startDate === event.endDate
       ? event.endDate
@@ -55,6 +76,21 @@ const EventPage = ({ entityMargin }) => {
 
   const renderButtons = () => {
     if (event.buttons) {
+      if (event.buttons) {
+        return (
+          <Button
+            color="success"
+            id={event.buttons[0].eventbrite.modalTriggerElementId}
+            type="button"
+            dataautomation="ticket-modal-btn"
+            datatrackinglabel="Tickets"
+            className={classes.button}
+            variant="contained"
+          >
+            <ShoppingCartIcon /> PURCHASE TICKETS
+          </Button>
+        );
+      }
       return event.buttons.map((item) => {
         return (
           <Button
@@ -84,10 +120,12 @@ const EventPage = ({ entityMargin }) => {
             <span style={{ fontWeight: "400" }}>Date: </span>
             {eventDate}
           </p>
-          <p>
-            <span style={{ fontWeight: "400" }}>Time: </span>
-            {`${event.startTime} - ${event.endTime}`}
-          </p>
+          {event.startTime ? (
+            <p>
+              <span style={{ fontWeight: "400" }}>Time: </span>{" "}
+              {`${event.startTime} - ${event.endTime}`}
+            </p>
+          ) : null}
           <div style={{ marginTop: "25px" }}>{renderFullDescription()}</div>
           <div style={{ marginTop: "20px" }}>{renderButtons()}</div>
         </div>
