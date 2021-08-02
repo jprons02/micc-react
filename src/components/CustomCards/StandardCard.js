@@ -47,13 +47,15 @@ export default function Cards(props) {
         <p className={props.classes ? props.classes.cardBodyText : ""}>
           {props.body}
         </p>
-        <Button
-          className={props.classes ? props.classes.buttonStyle : {}}
-          onClick={props.buttonFunction ? props.buttonFunction : null}
-          usetheme={props.buttonVariant || "contained"}
-        >
-          {props.buttonText}
-        </Button>
+        {props.buttonText ? (
+          <Button
+            className={props.classes ? props.classes.buttonStyle : {}}
+            onClick={props.buttonFunction ? props.buttonFunction : null}
+            usetheme={props.buttonVariant || "contained"}
+          >
+            {props.buttonText}
+          </Button>
+        ) : null}
       </CardBody>
     </Card>
   );

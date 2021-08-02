@@ -14,37 +14,19 @@ export const events = [
       "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
   },
   */
+  /*
   {
     title: "American Indian Day",
-    // type can be "standard" or "virtual"
     type: "standard",
-    // category is if entity specific... ie: golf event or mrg nightlife event, etc...
     category: "",
     annual: true,
     admission: "$?",
     startDate: "9/20/2021",
     endDate: "9/25/2021",
-    //startTime: "10:00 A.M.",
-    //endTime: "5:00 P.M.",
     excerpt:
-      "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
+      "Join the Miccosukee Tribe’s American Indian Day VIRTUAL week-long celebration of Indigenous Nations. Discover the art, music and culture of modern-day Natives across the globe through presentations, performances and activities for the kids.",
     fullDescription: [
-      "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
-      "Everyone will be able to enjoy the FREE concert starting at 5:30 p.m. with Miami-based folk singer Keith Johns and Grammy Award winning artist, LeAnn Rimes! Don’t miss out on the 4th of July event everyone will be talking about!",
-    ],
-    schedule: [
-      {
-        area: "Festival Grounds",
-        description: "Doors Open",
-        startTime: "10:00 A.M.",
-        endTime: "",
-      },
-      {
-        area: "Festival Grounds",
-        description: "Airboat Rides",
-        startTime: "10:00 A.M.",
-        endTime: "",
-      },
+      "Join the Miccosukee Tribe’s American Indian Day VIRTUAL week-long celebration of Indigenous Nations. Discover the art, music and culture of modern-day Natives across the globe through presentations, performances and activities for the kids.",
     ],
     buttons: [
       {
@@ -58,6 +40,7 @@ export const events = [
       },
     ],
   },
+  */
   /*
   {
     title: "Freedom Festival",

@@ -16,6 +16,12 @@ export const standardLinkColor = {
   hover: "#2c387e",
 };
 
+export const aid21Colors = {
+  red: "#ff0036",
+  yellow: "#fff100",
+  rgbRedNumbers: "255 0 55",
+};
+
 //MRG Color
 export const mrgColor = purple;
 

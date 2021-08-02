@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 // nodejs library that concatenates classes
 import classNames from "classnames";

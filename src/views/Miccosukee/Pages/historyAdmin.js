@@ -20,9 +20,6 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_
 // context
 import { useLanguage } from "contexts/languageContext.js";
 
-// Services
-import { prerenderService } from "services/prerenderService.js";
-
 const useStyles = makeStyles(styles);
 
 const TribeAdmin = () => {

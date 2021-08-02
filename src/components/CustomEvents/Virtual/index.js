@@ -14,33 +14,29 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import DownloadIcon from "@material-ui/icons/GetApp";
 
 // My Custom Components
-import HeroSection from "components/CustomSections/HeroSection.js";
+import VirtualEventHeroSection from "components/CustomSections/VirtualEventHeroSection.js";
 import RaisedContainer from "components/CustomSections/RaisedContainer";
 import CustomTabs from "components/CustomTabs/CustomTabs.js";
 import EventVideo from "components/CustomEvents/Virtual/components/EventVideo.js";
-import Schedule from "components/CustomEvents/Virtual/components/Schedule.js";
+import Schedule from "components/CustomEvents/Virtual/components/Schedule/Schedule.js";
+import ScheduleModal from "components/CustomEvents/Virtual/components/Schedule/ScheduleModal.js";
 import LoginModal from "components/CustomEvents/Virtual/components/Login/LoginModal.js";
 import VirtualEventFooter from "components/CustomFooters/VirtualEventFooter.js";
+import EventCards from "components/CustomEvents/Virtual/components/EventCards";
 
 // Context
 import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";
-
-// My styles
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/miccosukee/events/virtualEventsStyle.js";
-
 import { VirtualEventLoginFormProvider } from "contexts/VirtualEventLoginFormContext.js";
 
-const useStyles = makeStyles(styles);
-
 const VirtualEvent = (props) => {
-  const classes = useStyles();
+  const classes = props.classes;
   const [alerts, setAlerts] = useContext(AlertContext);
 
   //const [isLoggedIn, setLogIn] = useState(false);
   // loginClick state used for Login component. If user clicks login they should go to email input render.
   const [loginButtonClicked, setLoginButtonClicked] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showScheduleModal, setShowScheduleModal] = useState(false);
 
   useEffect(() => {
     if (!props.isLoggedIn) {
@@ -58,16 +54,51 @@ const VirtualEvent = (props) => {
     };
   }, []);
 
+  const closeScheduleModal = () => {
+    setShowScheduleModal(false);
+  };
+
+  const scheduleClick = () => {
+    setShowScheduleModal(true);
+  };
+
   const closeLoginModal = () => {
     setShowLoginModal(false);
   };
 
-  const renderWelcome = () => {
-    return (
+  const renderWelcome = (device) => {
+    return device === "desktop" ? (
       <div className={classes.welcomeSection}>
-        <Typography component={"h2"} className={classes.welcome}>
-          {props.welcomeMessage}
-        </Typography>
+        <div>
+          <img
+            style={{ width: "100%" }}
+            alt="native american people"
+            src={props.welcome.banner}
+          />
+        </div>
+        <div style={{ paddingTop: "10px" }}>
+          <Typography component={"h2"} className={classes.welcomeHeader}>
+            {props.welcome.title}
+          </Typography>
+        </div>
+        <div style={{ paddingTop: "10px" }}>
+          <Typography component={"h2"} className={classes.welcomeBody}>
+            {props.welcome.body()}
+          </Typography>
+        </div>
+      </div>
+    ) : (
+      <div className={classes.welcomeSection}>
+        <div>
+          <Typography component={"h2"} className={classes.welcomeHeader}>
+            {props.welcome.title}
+          </Typography>
+        </div>
+        <div style={{ paddingTop: "10px" }}>
+          <Typography component={"h2"} className={classes.welcomeBody}>
+            {props.welcome.body()}
+          </Typography>
+        </div>
       </div>
     );
   };
@@ -114,17 +145,31 @@ const VirtualEvent = (props) => {
           variant="h5"
           component="h3"
         >
-          SCHEDULE
+          EVENT SCHEDULE
         </Typography>
         <Schedule events={props.events} />
       </div>
     );
   };
 
-  const renderEvent = () => {
+  const renderEventLinks = () => {
     return (
-      <div className={classes.videoSection}>
-        <EventVideo videos={props.events} />
+      <div className={classes.subsection}>
+        <Typography
+          className={classes.subHeaderRedLinks}
+          paragraph
+          variant="h5"
+          component="h3"
+        >
+          EVENT VIDEO LINKS
+        </Typography>
+        {props.events.map((event) => {
+          return (
+            <div key={event.key} style={{ marginBottom: "5px" }}>
+              <a href={event.link}>{event.key}</a>
+            </div>
+          );
+        })}
       </div>
     );
   };
@@ -209,72 +254,90 @@ const VirtualEvent = (props) => {
       );
     };
     return (
-      <div style={{ marginTop: "50px" }}>
-        <CustomTabs
-          headerColor="primary"
-          variant="fullWidth"
-          cardBodyStyle={{
-            padding: "10px 15px 36px 15px",
+      <React.Fragment>
+        {renderWelcome("mobile")}
+        {props.isLoggedIn ? null : renderPurchaseButton()}
+        <div
+          style={
+            props.isLoggedIn ? { textAlign: "left" } : { textAlign: "center" }
+          }
+        >
+          <div className={classes.loginButtonSection}>
+            <MuiButton onClick={scheduleClick} className={classes.loginButton}>
+              Event Schedule
+            </MuiButton>
+          </div>
+          {props.isLoggedIn ? null : renderLoginButton()}
+        </div>
+        {props.isLoggedIn ? (
+          <div className={classes.eventLinkSection}>{renderEventLinks()}</div>
+        ) : null}
+        <div
+          style={{
+            width: "150px",
+            margin: "auto",
+            textAlign: "center",
+            padding: "10px",
           }}
-          tabs={[
-            {
-              tabName: "Event",
-              //tabIcon: Face,
-              tabContent: (
-                <React.Fragment>
-                  {renderWelcome()}
-                  {renderEvent()}
-                  {renderPurchaseButton()}
-                  {renderLoginButton()}
-                  {renderHorizontalrule()}
-                  {renderSchedule()}
-                </React.Fragment>
-              ),
-            },
-            {
-              tabName: "Vendors",
-              //tabIcon: Chat,
-              tabContent: (
-                <React.Fragment>
-                  {renderWelcome()}
-                  {renderVendors()}
-                  {renderPurchaseButton()}
-                  {renderLoginButton()}
-                  {renderHorizontalrule()}
-                  {renderSchedule()}
-                </React.Fragment>
-              ),
-            },
-            {
-              tabName: "Extras",
-              //tabIcon: Build,
-              tabContent: (
-                <React.Fragment>
-                  {renderWelcome()}
-                  {renderExtras()}
-                  {renderPurchaseButton()}
-                  {renderLoginButton()}
-                  {renderHorizontalrule()}
-                  {renderSchedule()}
-                </React.Fragment>
-              ),
-            },
-          ]}
-        />
-      </div>
+        >
+          <img alt="american-indian-day-logo" width="100%" src={props.logo} />
+        </div>
+        <div style={{ marginTop: "50px" }}>
+          <CustomTabs
+            headerColor="primary"
+            customprimarycolor={props.customprimarycolor}
+            variant="fullWidth"
+            cardBodyStyle={{
+              padding: "20px 15px 0px",
+            }}
+            tabs={[
+              {
+                tabName: "Event",
+                //tabIcon: Face,
+                tabContent: (
+                  <div style={{ marginTop: "15px" }}>
+                    <EventCards
+                      content={props.eventCards}
+                      class={classes.subHeaderRed}
+                      device={"mobile"}
+                    />
+                  </div>
+                ),
+              },
+              {
+                tabName: "Vendors",
+                //tabIcon: Chat,
+                tabContent: <React.Fragment>{renderVendors()}</React.Fragment>,
+              },
+              {
+                tabName: "Extras",
+                //tabIcon: Build,
+                tabContent: <React.Fragment>{renderExtras()}</React.Fragment>,
+              },
+            ]}
+          />
+        </div>
+      </React.Fragment>
     );
   };
 
   const renderDesktopView = () => {
     return (
-      <RaisedContainer style={{ border: "1px solid pink" }}>
+      <RaisedContainer>
         <div style={{ padding: "40px 0" }}>
-          {renderWelcome()}
+          {renderWelcome("desktop")}
+          {props.isLoggedIn ? null : renderPurchaseButton()}
+          {renderLoginButton()}
+          <hr className={classes.hr} />
           <Grid spacing={5} container>
             <Grid md={8} item>
-              <EventVideo videos={props.events} />
-              {renderPurchaseButton()}
-              {renderLoginButton()}
+              {/*<EventVideo videos={props.events} />*/}
+              {props.isLoggedIn ? renderEventLinks() : null}
+              <EventCards
+                content={props.eventCards}
+                class={classes.subHeaderRed}
+                device={"desktop"}
+              />
             </Grid>
             <Grid md={4} item>
               {renderSchedule()}
@@ -297,7 +360,17 @@ const VirtualEvent = (props) => {
           showLoginModal={showLoginModal}
           eventbriteID={props.eventbriteID}
         />
-        <HeroSection sliderContent={props.sliderContent} />
+        <ScheduleModal
+          scheduleClicked={scheduleClick}
+          closeModal={closeScheduleModal}
+          showModal={showScheduleModal}
+          events={props.events}
+          titleClass={classes.subHeader}
+        />
+        <VirtualEventHeroSection
+          classes={classes}
+          sliderContent={props.sliderContent}
+        />
         <Hidden mdUp>{renderMobileView()}</Hidden>
         <Hidden smDown>{renderDesktopView()}</Hidden>
         <VirtualEventFooter />
@@ -307,3 +380,95 @@ const VirtualEvent = (props) => {
 };
 
 export default VirtualEvent;
+
+/*
+const renderEvent = () => {
+  return (
+    <div className={classes.videoSection}>
+      <EventVideo videos={props.events} />
+    </div>
+  );
+};
+*/
+
+/*
+const renderMobileView = () => {
+  const renderHorizontalrule = () => {
+    return (
+      <hr
+        style={{
+          border: "none",
+          color: "rgb(196, 196, 196)",
+          backgroundColor: "rgb(196, 196, 196)",
+          width: "40px",
+
+          height: "1px",
+          marginTop: "45px",
+          marginBottom: "30px",
+        }}
+      />
+    );
+  };
+  return (
+    <div style={{ marginTop: "50px" }}>
+      <CustomTabs
+        headerColor="primary"
+        variant="fullWidth"
+        cardBodyStyle={{
+          padding: "10px 15px 36px 15px",
+        }}
+        tabs={[
+          {
+            tabName: "Event",
+            //tabIcon: Face,
+            tabContent: (
+              <React.Fragment>
+                {renderWelcome()}
+                <EventCards
+                  content={props.eventCards}
+                  class={classes.subHeaderRed}
+                  device={"mobile"}
+                />
+                <div style={{ marginTop: "-20px" }}>
+                  {renderPurchaseButton()}
+                  {renderLoginButton()}
+                </div>
+                {renderHorizontalrule()}
+                {renderSchedule()}
+              </React.Fragment>
+            ),
+          },
+          {
+            tabName: "Vendors",
+            //tabIcon: Chat,
+            tabContent: (
+              <React.Fragment>
+                {renderWelcome()}
+                {renderVendors()}
+                {renderPurchaseButton()}
+                {renderLoginButton()}
+                {renderHorizontalrule()}
+                {renderSchedule()}
+              </React.Fragment>
+            ),
+          },
+          {
+            tabName: "Extras",
+            //tabIcon: Build,
+            tabContent: (
+              <React.Fragment>
+                {renderWelcome()}
+                {renderExtras()}
+                {renderPurchaseButton()}
+                {renderLoginButton()}
+                {renderHorizontalrule()}
+                {renderSchedule()}
+              </React.Fragment>
+            ),
+          },
+        ]}
+      />
+    </div>
+  );
+};
+*/

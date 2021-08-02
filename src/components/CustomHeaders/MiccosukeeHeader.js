@@ -42,7 +42,9 @@ const Header = (props) => {
             }
             className={classes.backButton}
             color="white"
-            onClick={() => props.history.goBack()}
+            onClick={() =>
+              props.history.goBack ? props.history.goBack() : null
+            }
           >
             <Icon style={{ fontSize: "16px", marginLeft: "2px" }}>
               arrow_back_ios

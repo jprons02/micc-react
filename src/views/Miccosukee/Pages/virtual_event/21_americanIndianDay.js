@@ -6,8 +6,20 @@ import beesVid from "assets/event/bees.mp4";
 import birdsVid from "assets/event/birds.mp4";
 import weatherVid from "assets/event/weather.mp4";
 import image1 from "assets/img/bg.jpg";
+import welcomeImage from "assets/img/events/aid/micco_webeventAIDbanner.jpg";
+import logo from "assets/img/events/aid/AID-LOGO.png";
+
+// Colors
+import { aid21Colors } from "themes/colors.js";
+
+// My styles
+import { makeStyles } from "@material-ui/core/styles";
+import styles from "assets/jss/material-kit-react/views/miccosukee/events/aid2021Styles.js";
+const useStyles = makeStyles(styles);
 
 const AID = (props) => {
+  const classes = useStyles();
+
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -30,9 +42,84 @@ const AID = (props) => {
       id: 1,
       height: "40vh",
       bgImage: "",
-      header: "AMERICAN INDIAN DAY",
-      subHeader:
-        "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.",
+      bgColor: aid21Colors.red,
+      header: () => (
+        <span>
+          MICCOSUKEE CELEBRATES
+          <br />
+          AMERICAN INDIAN DAY
+        </span>
+      ),
+      subHeader: () => (
+        <span>
+          VIRTUAL EVENT
+          <br />
+          SEPTEMBER 20 - 25
+        </span>
+      ),
+    },
+  ];
+
+  const eventCardsContent = [
+    {
+      title: "Featured Performers",
+      content: [
+        {
+          cardTitle: "1",
+          image: image1,
+          cardBody: () => <span>test01</span>,
+        },
+        {
+          cardTitle: "2",
+          image: image1,
+          cardBody: () => <span>test02</span>,
+        },
+        {
+          cardTitle: "3",
+          image: image1,
+          cardBody: () => <span>test03</span>,
+        },
+      ],
+    },
+    {
+      title: "Fashion Show",
+      content: [
+        {
+          cardTitle: "1",
+          image: image1,
+          cardBody: () => <span>test11</span>,
+        },
+        {
+          cardTitle: "2",
+          image: image1,
+          cardBody: () => <span>test12</span>,
+        },
+        {
+          cardTitle: "3",
+          image: image1,
+          cardBody: () => <span>test13</span>,
+        },
+      ],
+    },
+    {
+      title: "3",
+      content: [
+        {
+          cardTitle: "1",
+          image: image1,
+          cardBody: () => <span>test21</span>,
+        },
+        {
+          cardTitle: "2",
+          image: image1,
+          cardBody: () => <span>test22</span>,
+        },
+        {
+          cardTitle: "3",
+          image: image1,
+          cardBody: () => <span>test23</span>,
+        },
+      ],
     },
   ];
 
@@ -42,6 +129,7 @@ const AID = (props) => {
       key: "bees",
       poster: image1,
       source: beesVid,
+      link: "https://google.com",
       releaseTime: {
         year: 2021,
         month: 3,
@@ -54,6 +142,7 @@ const AID = (props) => {
       key: "birds",
       poster: image1,
       source: birdsVid,
+      link: "https://yahoo.com",
       releaseTime: {
         year: 2021,
         month: 3,
@@ -66,6 +155,7 @@ const AID = (props) => {
       key: "weather",
       poster: image1,
       source: weatherVid,
+      link: "https://youtube.com",
       releaseTime: {
         year: 2021,
         month: 3,
@@ -106,13 +196,30 @@ const AID = (props) => {
     },
   ];
 
+  const welcomeSectionContent = {
+    banner: welcomeImage,
+    title: "A CELEBRATION OF INDIGENOUS NATIONS",
+    body: () => (
+      <span>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt.
+      </span>
+    ),
+  };
+
   return (
     <VirtualEvent
+      customprimarycolor={aid21Colors}
+      logo={logo}
       sliderContent={sliderContent}
-      welcomeMessage={
-        "Welcome to American Indian Day, we hope you enjoy your visit!"
-      }
+      classes={classes}
+      welcome={welcomeSectionContent}
       events={events}
+      eventCards={eventCardsContent}
       vendors={vendors}
       extras={extras}
       eventbriteButton={() => (
