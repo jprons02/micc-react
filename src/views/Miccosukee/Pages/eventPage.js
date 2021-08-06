@@ -54,6 +54,7 @@ const EventPage = ({ entityMargin }) => {
         modal: true,
         modalTriggerElementId:
           event.buttons[0].eventbrite.modalTriggerElementId,
+        iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
         onOrderComplete: exampleCallback,
       });
     }

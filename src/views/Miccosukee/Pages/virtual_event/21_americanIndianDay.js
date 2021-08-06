@@ -10,6 +10,9 @@ import logo from "assets/img/events/aid/AID-LOGO.png";
 import bannerbg from "assets/img/events/aid/bannerbg.jpg";
 import nativeLogo from "assets/img/events/aid/native_logo.png";
 
+// Event id
+import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs.js";
+
 // Colors
 import { aid21Colors } from "themes/colors.js";
 
@@ -20,7 +23,7 @@ const useStyles = makeStyles(styles);
 
 const AID = (props) => {
   const classes = useStyles();
-  const eventbriteID = "165141162663";
+  const eventbriteID = eventbriteIDs.aid2021;
   //Eventbrite TestID: 144427499539
 
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -35,6 +38,7 @@ const AID = (props) => {
       eventId: eventbriteID,
       modal: true,
       modalTriggerElementId: "example-widget-trigger",
+      iframeContainerId: `eventbrite-widget-container-${eventbriteID}`,
       onOrderComplete: exampleCallback,
     });
   }, []);

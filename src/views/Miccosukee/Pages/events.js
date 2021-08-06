@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter, useRouteMatch } from "react-router-dom";
 
+import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs";
+
 // nodejs library that concatenates classes
 import classNames from "classnames";
 
@@ -86,6 +88,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
           modal: true,
           modalTriggerElementId:
             event.buttons[0].eventbrite.modalTriggerElementId,
+          iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
           onOrderComplete: exampleCallback,
         });
       }
