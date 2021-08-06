@@ -1522,7 +1522,7 @@ export const cardContent = (language) => {
         id: 10,
         title: "Ricochet para Nuevos Miembros",
         img: cardImage11,
-        oneLiner: "¡Nuevos miembros ganan hasta $5,000!", //
+        oneLiner: "¡Nuevos miembros pueden ganar una parte de $5,000!", //
         rules: {
           subSections: [
             { id: "100", title: "Día", body: "martes, 31 de agosto de 2021" },

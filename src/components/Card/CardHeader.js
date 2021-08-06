@@ -31,7 +31,7 @@ export default function CardHeader(props) {
 
     const customStyle = {
       color: "#fff",
-      background: `linear-gradient(60deg, rgb(${props.customprimarycolor.rgbRedNumbers} / 84%), rgb(${props.customprimarycolor.rgbRedNumbers}))`,
+      background: `linear-gradient(60deg, rgb(${props.customprimarycolor.rgbRedNumbers}), rgb(${props.customprimarycolor.rgbRedNumbers}))`,
       boxShadow: `0 12px 20px -10px rgb(${props.customprimarycolor.rgbRedNumbers} / 28%), 0 4px 20px 0px rgb(0 0 0 / 12%), 0 7px 8px -5px rgb(${props.customprimarycolor.rgbRedNumbers} / 20%)`,
     };
 

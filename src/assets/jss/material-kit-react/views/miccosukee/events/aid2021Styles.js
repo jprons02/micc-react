@@ -18,12 +18,13 @@ const virtualEventsStyle = {
   welcomeBody: {},
   subsection: {
     paddingTop: "15px",
-    paddingBottom: "0px",
+    paddingBottom: "10px",
   },
   buttonSection: {
-    margin: "auto",
-    width: "90%",
-    paddingTop: "5px",
+    marginTop: "10px",
+    paddingLeft: "15px",
+    marginBottom: "6px",
+    paddingRight: "15px",
   },
   button: {
     width: "100%",
@@ -58,13 +59,14 @@ const virtualEventsStyle = {
     fontSize: "50px",
   },
   subHeader: {
-    fontSize: "14px",
+    fontSize: "18px",
   },
   subHeaderRed: {
     fontSize: "22px",
     fontFamily: "Phosphate-Solid",
     color: aid21Colors.red,
     marginBottom: "-20px",
+    textAlign: "center",
   },
   subHeaderRedLinks: {
     fontSize: "22px",
@@ -179,6 +181,7 @@ const virtualEventsStyle = {
     subHeaderRed: {
       fontSize: "26px",
       marginBottom: "16px",
+      textAlign: "left",
     },
     subHeaderRedLinks: {
       fontSize: "26px",

@@ -6,8 +6,9 @@ import beesVid from "assets/event/bees.mp4";
 import birdsVid from "assets/event/birds.mp4";
 import weatherVid from "assets/event/weather.mp4";
 import image1 from "assets/img/bg.jpg";
-import welcomeImage from "assets/img/events/aid/micco_webeventAIDbanner.jpg";
 import logo from "assets/img/events/aid/AID-LOGO.png";
+import bannerbg from "assets/img/events/aid/bannerbg.jpg";
+import nativeLogo from "assets/img/events/aid/native_logo.png";
 
 // Colors
 import { aid21Colors } from "themes/colors.js";
@@ -197,7 +198,8 @@ const AID = (props) => {
   ];
 
   const welcomeSectionContent = {
-    banner: welcomeImage,
+    bgBanner: bannerbg,
+    pngImage: nativeLogo,
     title: "A CELEBRATION OF INDIGENOUS NATIONS",
     body: () => (
       <span>

@@ -69,11 +69,22 @@ const VirtualEvent = (props) => {
   const renderWelcome = (device) => {
     return device === "desktop" ? (
       <div className={classes.welcomeSection}>
-        <div>
+        <div
+          style={{
+            marginTop: "-8px",
+            backgroundImage: `url(${props.welcome.bgBanner})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            textAlign: "center",
+          }}
+        >
           <img
-            style={{ width: "100%" }}
-            alt="native american people"
-            src={props.welcome.banner}
+            style={{
+              marginLeft: "10px",
+              maxHeight: "200px",
+              display: "inline-block",
+            }}
+            src={props.welcome.pngImage}
           />
         </div>
         <div style={{ paddingTop: "10px" }}>
@@ -166,7 +177,9 @@ const VirtualEvent = (props) => {
         {props.events.map((event) => {
           return (
             <div key={event.key} style={{ marginBottom: "5px" }}>
-              <a href={event.link}>{event.key}</a>
+              <a target="_blank" href={event.link}>
+                {event.key}
+              </a>
             </div>
           );
         })}
@@ -244,17 +257,34 @@ const VirtualEvent = (props) => {
             border: "none",
             color: "rgb(196, 196, 196)",
             backgroundColor: "rgb(196, 196, 196)",
-            width: "40px",
+            width: "80%",
 
             height: "1px",
-            marginTop: "45px",
-            marginBottom: "30px",
           }}
         />
       );
     };
     return (
       <React.Fragment>
+        <div
+          style={{
+            marginTop: "-8px",
+            backgroundImage: `url(${props.welcome.bgBanner})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            textAlign: "center",
+          }}
+        >
+          <img
+            style={{
+              marginLeft: "10px",
+              width: "100%",
+              maxWidth: "500px",
+              display: "inline-block",
+            }}
+            src={props.welcome.pngImage}
+          />
+        </div>
         {renderWelcome("mobile")}
         {props.isLoggedIn ? null : renderPurchaseButton()}
         <div
@@ -272,17 +302,10 @@ const VirtualEvent = (props) => {
         {props.isLoggedIn ? (
           <div className={classes.eventLinkSection}>{renderEventLinks()}</div>
         ) : null}
-        <div
-          style={{
-            width: "150px",
-            margin: "auto",
-            textAlign: "center",
-            padding: "10px",
-          }}
-        >
-          <img alt="american-indian-day-logo" width="100%" src={props.logo} />
+        <div style={{ marginTop: "30px", marginBottom: "80px" }}>
+          {renderHorizontalrule()}
         </div>
-        <div style={{ marginTop: "50px" }}>
+        <div>
           <CustomTabs
             headerColor="primary"
             customprimarycolor={props.customprimarycolor}

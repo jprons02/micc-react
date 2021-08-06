@@ -126,8 +126,8 @@ const OneRewards = () => {
           <div>
             <p>
               {language
-                ? "Miccosukee One card holders are currently entitled to discounts on Resort Standard Room Rates as well as admission to Miccosukee Indian Village & Airboat Rides. The Miccosukee One card has four levels of card benefits based on rated play that they may include free valet parking, exclusive drawings and events, VIP giveaways and birthday meal vouchers."
-                : "Titulares de la tarjeta Miccosukee One son elegibles para recibir descuentos en las tarifas de habitaciones standard del Resort y entradas para el Miccosukee Indian Village & Airboats. La tarjeta Miccosukee One tiene cuatro niveles de beneficios basados en frecuencia de juego que incluyen estacionamiento valet gratis, sorteos exclusivos y eventos, regalos VIP, y cupones para cenar en su cumpleaños."}
+                ? "Miccosukee One card holders are currently entitled to discounts on admission to Miccosukee Indian Village & Airboat Rides. The Miccosukee One card has four levels of card benefits based on rated play that they may include free valet parking, exclusive drawings and events, VIP giveaways, birthday meal vouchers and room discounts."
+                : "Titulares de la tarjeta Miccosukee One son elegibles para recibir descuentos en las entradas para el Miccosukee Indian Village & Airboats. La tarjeta Miccosukee One tiene cuatro niveles de beneficios basados en frecuencia de juego que pueden incluir estacionamiento valet gratis, sorteos exclusivos y eventos, regalos VIP, y cupones para cenar en su cumpleaños y descuentos en habitaciones."}
             </p>
           </div>
         );
