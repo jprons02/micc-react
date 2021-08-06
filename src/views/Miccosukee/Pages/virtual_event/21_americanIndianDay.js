@@ -20,6 +20,8 @@ const useStyles = makeStyles(styles);
 
 const AID = (props) => {
   const classes = useStyles();
+  const eventbriteID = "165141162663";
+  //Eventbrite TestID: 144427499539
 
   const [isLoggedIn, setLoggedIn] = useState(false);
 
@@ -30,7 +32,7 @@ const AID = (props) => {
 
     window.EBWidgets.createWidget({
       widgetType: "checkout",
-      eventId: "144427499539",
+      eventId: eventbriteID,
       modal: true,
       modalTriggerElementId: "example-widget-trigger",
       onOrderComplete: exampleCallback,
@@ -229,7 +231,7 @@ const AID = (props) => {
           Buy Tickets
         </button>
       )}
-      eventbriteID="144427499539"
+      eventbriteID={eventbriteID}
       isLoggedIn={isLoggedIn}
       setLoggedIn={setLoggedIn}
     />

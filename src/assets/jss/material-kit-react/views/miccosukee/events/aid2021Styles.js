@@ -12,7 +12,7 @@ const virtualEventsStyle = {
   welcomeHeader: {
     textAlign: "left",
     fontSize: "22px",
-    fontFamily: "Phosphate-Solid",
+    fontFamily: "Phosphate-Solid, Roboto",
     color: aid21Colors.red,
   },
   welcomeBody: {},
@@ -63,14 +63,14 @@ const virtualEventsStyle = {
   },
   subHeaderRed: {
     fontSize: "22px",
-    fontFamily: "Phosphate-Solid",
+    fontFamily: "Phosphate-Solid, Roboto",
     color: aid21Colors.red,
     marginBottom: "-20px",
     textAlign: "center",
   },
   subHeaderRedLinks: {
     fontSize: "22px",
-    fontFamily: "Phosphate-Solid",
+    fontFamily: "Phosphate-Solid, Roboto",
     color: aid21Colors.red,
   },
   videoSection: {
