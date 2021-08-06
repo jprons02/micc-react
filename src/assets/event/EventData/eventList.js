@@ -15,6 +15,7 @@ export const events = [
       "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
   },
   */
+  /*
   {
     title: "American Indian Day",
     type: "standard",
@@ -40,6 +41,7 @@ export const events = [
       },
     ],
   },
+  */
   /*
   {
     title: "Freedom Festival",
