@@ -72,8 +72,7 @@ const App = () => {
       if (id === "signupAlertId") {
         return (
           <span>
-            <b>Message Sent Successfully:</b> Now P$ gonna send you some cool
-            stuff.
+            <b>Signup Successful!</b>
           </span>
         );
       }
