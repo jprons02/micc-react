@@ -96,6 +96,7 @@ const Miccosukee = (props) => {
           <Route exact path={`${path}events`} component={Events} />
           <Route exact path={`${path}events/:eventId`} component={EventPage} />
           <Route exact path={`${path}history-admin`} component={HistoryAdmin} />
+          <Route exact path={`/404`} component={MiccosukeeErrorPage} />
           <Route exact path={`*`} component={MiccosukeeErrorPage} />
         </Switch>
         <PopupModal />

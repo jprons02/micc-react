@@ -225,6 +225,7 @@ export default function Miccosukee(props) {
               path={`${match.path}/covid-19`}
               component={MrgCovidPage}
             />
+            <Route exact path={`/404`} component={MrgErrorPage} />
             <Route exact path={`${match.path}/*`} component={MrgErrorPage} />
           </Switch>
           <MrgFooter />

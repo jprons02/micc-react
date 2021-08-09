@@ -20,7 +20,7 @@ const GolfEventPage = () => {
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
-      <EventPage entityMargin={true} />
+      <EventPage entity={"golf"} entityMargin={true} />
     </React.Fragment>
   );
 };

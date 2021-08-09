@@ -20,7 +20,7 @@ const MrgEventPage = () => {
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
-      <EventPage entityMargin={true} />
+      <EventPage entity={"mrg"} entityMargin={true} />
     </React.Fragment>
   );
 };
