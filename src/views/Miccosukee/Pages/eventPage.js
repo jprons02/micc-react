@@ -38,7 +38,14 @@ const EventPage = ({ entityMargin, entity }) => {
     });
     setEvent(matchedEvent);
     if (!matchedEvent) {
-      history.push(`/${entity ? entity : ""}/404`);
+      const url = () => {
+        if (entity) {
+          return `/${entity}/404`;
+        } else {
+          return "/404";
+        }
+      };
+      history.push(url());
     }
   }, []);
 
