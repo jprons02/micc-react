@@ -119,47 +119,4 @@ export default function LoginModal(props) {
       </DialogContent>
     </Dialog>
   );
-
-  /*
-  return (
-    <Dialog
-      classes={{
-        root: classes.center,
-        paper: classes.modal,
-      }}
-      open={props.showLoginModal}
-      keepMounted
-      onClose={props.closeModal}
-      aria-labelledby="modal-slide-title"
-      aria-describedby="modal-slide-description"
-    >
-      <DialogTitle
-        id="classic-modal-slide-title"
-        disableTypography
-        className={classes.modalHeader}
-        style={{ width: "100%" }}
-      >
-        <IconButton
-          className={classes.modalCloseButton}
-          key="close"
-          aria-label="Close"
-          color="inherit"
-          onClick={props.closeModal}
-        >
-          <Close className={classes.modalClose} />
-        </IconButton>
-        {renderWelcome()}
-      </DialogTitle>
-      <DialogContent
-        style={{
-          paddingTop: "0px",
-        }}
-        id="modal-slide-description"
-        className={classes.modalBody}
-      >
-        {renderLoginContent()}
-      </DialogContent>
-    </Dialog>
-  );
-  */
 }

@@ -31,6 +31,7 @@ const AID = (props) => {
   useEffect(() => {
     var exampleCallback = function () {
       console.log("Order complete!");
+      window.location.replace("https://www.miccosukee.io/virtual-event/aid");
     };
 
     window.EBWidgets.createWidget({
@@ -39,7 +40,7 @@ const AID = (props) => {
       modal: true,
       modalTriggerElementId: "example-widget-trigger",
       iframeContainerId: `eventbrite-widget-container-${eventbriteID}`,
-      //onOrderComplete: exampleCallback,
+      onOrderComplete: exampleCallback,
     });
   }, []);
 
@@ -335,11 +336,6 @@ const AID = (props) => {
       eventCards={eventCardsContent}
       vendors={vendors}
       extras={extras}
-      eventbriteButton={() => (
-        <button id="example-widget-trigger" type="button">
-          Buy Tickets
-        </button>
-      )}
       eventbriteID={eventbriteID}
       isLoggedIn={isLoggedIn}
       setLoggedIn={setLoggedIn}

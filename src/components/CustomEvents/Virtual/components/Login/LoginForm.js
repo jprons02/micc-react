@@ -1,9 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 
+import { standardLinkColor } from "themes/colors.js";
+
 // material-ui core components
 import Button from "components/CustomButtons/Button.js";
 import Typography from "@material-ui/core/Typography";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import MuiButton from "@material-ui/core/Button";
 
 // My Custom Colors
 import { errorColor } from "themes/colors.js";
@@ -148,6 +151,23 @@ export default function LoginForm(props) {
                 color="primary"
               />
             )}
+          </div>
+          <div>
+            <MuiButton
+              style={{
+                marginTop: "10px",
+                fontSize: "12px",
+                color: standardLinkColor.color,
+                "&:hover,&:focus": {
+                  color: standardLinkColor.hover,
+                },
+              }}
+              href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-165141162663?aff=website"
+              target="_blank"
+              fullWidth
+            >
+              NOT SIGNED UP? REGISTER HERE!
+            </MuiButton>
           </div>
           {submitErrorMessage ? renderSubmitErrorMessage() : ""}
         </div>

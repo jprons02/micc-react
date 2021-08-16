@@ -333,7 +333,7 @@ const VirtualEvent = (props) => {
               Event Schedule
             </MuiButton>
           </div>
-          {props.isLoggedIn === "not matched" ? null : renderLoginButton()}
+          {/*props.isLoggedIn === "not matched" ? null : renderLoginButton()*/}
         </div>
         {props.isLoggedIn === "purchased" ? (
           <div className={classes.purchasedLinkSection}>
@@ -389,7 +389,7 @@ const VirtualEvent = (props) => {
         <div style={{ padding: "40px 0" }}>
           {renderWelcome("desktop")}
           {props.isLoggedIn === "purchased" ? null : renderPurchaseButton()}
-          {renderLoginButton()}
+          {/*renderLoginButton()*/}
           <hr className={classes.hr} />
           <Grid spacing={5} container>
             <Grid md={8} item>
@@ -447,95 +447,3 @@ const VirtualEvent = (props) => {
 };
 
 export default VirtualEvent;
-
-/*
-const renderEvent = () => {
-  return (
-    <div className={classes.videoSection}>
-      <EventVideo videos={props.events} />
-    </div>
-  );
-};
-*/
-
-/*
-const renderMobileView = () => {
-  const renderHorizontalrule = () => {
-    return (
-      <hr
-        style={{
-          border: "none",
-          color: "rgb(196, 196, 196)",
-          backgroundColor: "rgb(196, 196, 196)",
-          width: "40px",
-
-          height: "1px",
-          marginTop: "45px",
-          marginBottom: "30px",
-        }}
-      />
-    );
-  };
-  return (
-    <div style={{ marginTop: "50px" }}>
-      <CustomTabs
-        headerColor="primary"
-        variant="fullWidth"
-        cardBodyStyle={{
-          padding: "10px 15px 36px 15px",
-        }}
-        tabs={[
-          {
-            tabName: "Event",
-            //tabIcon: Face,
-            tabContent: (
-              <React.Fragment>
-                {renderWelcome()}
-                <EventCards
-                  content={props.eventCards}
-                  class={classes.subHeaderRed}
-                  device={"mobile"}
-                />
-                <div style={{ marginTop: "-20px" }}>
-                  {renderPurchaseButton()}
-                  {renderLoginButton()}
-                </div>
-                {renderHorizontalrule()}
-                {renderSchedule()}
-              </React.Fragment>
-            ),
-          },
-          {
-            tabName: "Vendors",
-            //tabIcon: Chat,
-            tabContent: (
-              <React.Fragment>
-                {renderWelcome()}
-                {renderVendors()}
-                {renderPurchaseButton()}
-                {renderLoginButton()}
-                {renderHorizontalrule()}
-                {renderSchedule()}
-              </React.Fragment>
-            ),
-          },
-          {
-            tabName: "Extras",
-            //tabIcon: Build,
-            tabContent: (
-              <React.Fragment>
-                {renderWelcome()}
-                {renderExtras()}
-                {renderPurchaseButton()}
-                {renderLoginButton()}
-                {renderHorizontalrule()}
-                {renderSchedule()}
-              </React.Fragment>
-            ),
-          },
-        ]}
-      />
-    </div>
-  );
-};
-*/

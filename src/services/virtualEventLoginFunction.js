@@ -19,19 +19,21 @@ export const virtualEventLoginFunction = async (eventID, email, callback) => {
     });
     if (response.data) {
       // check if user inputted email is in response.data here... and send to callback.
-      for (let i = 0; i < response.data.length; i++) {
-        if (
-          response.data[i].email === email &&
-          response.data[i].ticketName === "6 Days Pass"
-        ) {
-          callback("purchased");
-          break;
-        } else if (response.data[i].email === email) {
-          callback("free");
-          break;
-        } else {
-          callback("not matched");
-        }
+
+      // using find method because multiple entries is possible, some paid, some free. need to prioritize paid.
+      const matchedPurchased = response.data.find(
+        (item) =>
+          item.email === email && item.ticketName === "Full Virtual Event Pass"
+      );
+
+      const matchedFree = response.data.find((item) => item.email === email);
+
+      if (matchedPurchased) {
+        callback("purchased");
+      } else if (matchedFree) {
+        callback("free");
+      } else {
+        callback("not matched");
       }
     }
   } catch (error) {

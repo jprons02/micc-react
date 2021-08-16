@@ -52,7 +52,7 @@ const EventPage = ({ entityMargin, entity }) => {
   useEffect(() => {
     if (event) {
       if (event.buttons) {
-        var exampleCallback = function () {
+        var exampleCallbackEventPage = function () {
           console.log("Order complete!");
         };
 
@@ -62,7 +62,7 @@ const EventPage = ({ entityMargin, entity }) => {
           modal: true,
           modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`,
           iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
-          //onOrderComplete: exampleCallback,
+          //onOrderComplete: exampleCallbackEventPage,
         });
       }
     }

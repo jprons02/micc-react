@@ -78,7 +78,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   useEffect(() => {
     events.map((event) => {
       if (event.buttons) {
-        var exampleCallback = function () {
+        var exampleCallbackEvents = function () {
           console.log("Order complete!");
         };
 
@@ -88,7 +88,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
           modal: true,
           modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}events`,
           iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
-          //onOrderComplete: exampleCallback,
+          //onOrderComplete: exampleCallbackEvents,
         });
       }
     });
