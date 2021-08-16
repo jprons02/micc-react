@@ -23,11 +23,11 @@ export const events = [
     type: "standard",
     category: "",
     annual: true,
-    admission: "$10",
+    admission: "Free - $10",
     startDate: "9/20/2021",
     endDate: "9/25/2021",
     excerpt:
-      "“A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes around the globe.",
+      "“A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes...",
     fullDescription: [
       "Celebrate American Indian Day from September 20 - 25 alongside the Miccosukee Tribe of Indians of Florida. “A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes around the globe. Enjoy this virtual event with the whole family from the comfort of your home and learn about the art, lifestyle and customs of modern-day Natives.",
     ],

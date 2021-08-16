@@ -39,7 +39,7 @@ const AID = (props) => {
       modal: true,
       modalTriggerElementId: "example-widget-trigger",
       iframeContainerId: `eventbrite-widget-container-${eventbriteID}`,
-      onOrderComplete: exampleCallback,
+      //onOrderComplete: exampleCallback,
     });
   }, []);
 

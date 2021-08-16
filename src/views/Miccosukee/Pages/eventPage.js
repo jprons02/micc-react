@@ -60,10 +60,9 @@ const EventPage = ({ entityMargin, entity }) => {
           widgetType: "checkout",
           eventId: event.buttons[0].eventbrite.eventId,
           modal: true,
-          modalTriggerElementId:
-            event.buttons[0].eventbrite.modalTriggerElementId,
+          modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`,
           iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
-          onOrderComplete: exampleCallback,
+          //onOrderComplete: exampleCallback,
         });
       }
     }
@@ -148,14 +147,14 @@ const EventPage = ({ entityMargin, entity }) => {
           return (
             <Button
               color="success"
-              id={event.buttons[0].eventbrite.modalTriggerElementId}
+              id={`${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`}
               type="button"
               dataautomation="ticket-modal-btn"
               datatrackinglabel="Tickets"
               className={classes.button}
               variant="contained"
             >
-              <ShoppingCartIcon /> PURCHASE TICKETS
+              REGISTER HERE
             </Button>
           );
         }
