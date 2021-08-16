@@ -17,7 +17,7 @@ const headerClasses = {
     marginBottom: "5px",
   },
   logo: {
-    width: "50px",
+    width: "100px",
     cursor: "pointer",
   },
   languageTrue: {

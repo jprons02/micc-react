@@ -1,6 +1,7 @@
 import green from "@material-ui/core/colors/green";
 import { standardLinkColor } from "themes/colors.js";
 import { aid21Colors } from "themes/colors";
+import { isWhiteSpaceLike } from "typescript";
 
 const virtualEventsStyle = {
   welcomeSection: {
@@ -12,7 +13,7 @@ const virtualEventsStyle = {
   welcomeHeader: {
     textAlign: "left",
     fontSize: "22px",
-    fontFamily: "Phosphate-Solid, Roboto",
+    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
     color: aid21Colors.red,
   },
   welcomeBody: {},
@@ -48,6 +49,13 @@ const virtualEventsStyle = {
     paddingLeft: "15px",
     paddingRight: "15px",
   },
+  purchasedLinkSection: {
+    marginTop: "10px",
+    marginBottom: "6px",
+    paddingLeft: "15px",
+    paddingRight: "15px",
+    backgroundColor: aid21Colors.red,
+  },
   loginButton: {
     fontSize: "12px",
     color: standardLinkColor.color,
@@ -63,15 +71,20 @@ const virtualEventsStyle = {
   },
   subHeaderRed: {
     fontSize: "22px",
-    fontFamily: "Phosphate-Solid, Roboto",
+    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
     color: aid21Colors.red,
     marginBottom: "-20px",
     textAlign: "center",
   },
   subHeaderRedLinks: {
     fontSize: "22px",
-    fontFamily: "Phosphate-Solid, Roboto",
+    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
     color: aid21Colors.red,
+  },
+  subHeaderRedLinksPurchased: {
+    fontSize: "22px",
+    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
+    color: "white",
   },
   videoSection: {
     margin: "30px 0",
@@ -106,14 +119,14 @@ const virtualEventsStyle = {
     fontSize: "28px",
     lineHeight: "1",
     fontWeight: "500",
-    fontFamily: "Phosphate-Solid",
+    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
     marginBottom: "5px",
   },
   heroSubHeader: {
     fontSize: "26px",
     margin: "auto",
     width: "100%",
-    fontFamily: "Phosphate-Solid",
+    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
     color: aid21Colors.yellow,
     lineHeight: "0.9",
   },
@@ -217,6 +230,10 @@ const virtualEventsStyle = {
     customButton: {
       marginTop: "20px",
       width: "30%",
+    },
+    purchasedLinkSection: {
+      padding: "34px 34px 0 34px",
+      margin: "0 40px 34px 0",
     },
   },
 };

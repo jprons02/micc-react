@@ -39,7 +39,7 @@ const VirtualEvent = (props) => {
   const [showScheduleModal, setShowScheduleModal] = useState(false);
 
   useEffect(() => {
-    if (!props.isLoggedIn) {
+    if (props.isLoggedIn === "not matched") {
       setShowLoginModal(true);
     }
   }, []);
@@ -80,7 +80,6 @@ const VirtualEvent = (props) => {
         >
           <img
             style={{
-              marginLeft: "10px",
               maxHeight: "200px",
               display: "inline-block",
             }}
@@ -136,7 +135,7 @@ const VirtualEvent = (props) => {
     setLoginButtonClicked(true);
   };
   const renderLoginButton = () => {
-    if (!props.isLoggedIn) {
+    if (props.isLoggedIn === "not matched") {
       return (
         <div className={classes.loginButtonSection}>
           <MuiButton onClick={loginClick} className={classes.loginButton}>
@@ -167,21 +166,57 @@ const VirtualEvent = (props) => {
     return (
       <div className={classes.subsection}>
         <Typography
+          className={classes.subHeaderRedLinksPurchased}
+          paragraph
+          variant="h5"
+          component="h3"
+        >
+          PURCHASED EVENT VIDEO LINKS
+        </Typography>
+        {props.events.map((event) => {
+          if (event.purchased) {
+            return (
+              <div key={event.key} style={{ marginBottom: "5px" }}>
+                <a
+                  style={{
+                    color: "white",
+                    fontSize: "18px",
+                    fontWeight: "500",
+                  }}
+                  target="_blank"
+                  href={event.link}
+                >
+                  {event.key}
+                </a>
+              </div>
+            );
+          }
+        })}
+      </div>
+    );
+  };
+
+  const renderPreviewLinks = () => {
+    return (
+      <div className={classes.subsection}>
+        <Typography
           className={classes.subHeaderRedLinks}
           paragraph
           variant="h5"
           component="h3"
         >
-          EVENT VIDEO LINKS
+          FREE PREVIEW VIDEO LINKS
         </Typography>
         {props.events.map((event) => {
-          return (
-            <div key={event.key} style={{ marginBottom: "5px" }}>
-              <a target="_blank" href={event.link}>
-                {event.key}
-              </a>
-            </div>
-          );
+          if (!event.purchased) {
+            return (
+              <div key={event.key} style={{ marginBottom: "5px" }}>
+                <a target="_blank" href={event.link}>
+                  {event.key}
+                </a>
+              </div>
+            );
+          }
         })}
       </div>
     );
@@ -277,7 +312,6 @@ const VirtualEvent = (props) => {
         >
           <img
             style={{
-              marginLeft: "10px",
               width: "100%",
               maxWidth: "500px",
               display: "inline-block",
@@ -286,10 +320,12 @@ const VirtualEvent = (props) => {
           />
         </div>
         {renderWelcome("mobile")}
-        {props.isLoggedIn ? null : renderPurchaseButton()}
+        {props.isLoggedIn === "purchased" ? null : renderPurchaseButton()}
         <div
           style={
-            props.isLoggedIn ? { textAlign: "left" } : { textAlign: "center" }
+            props.isLoggedIn !== "not matched"
+              ? { textAlign: "left" }
+              : { textAlign: "center" }
           }
         >
           <div className={classes.loginButtonSection}>
@@ -297,11 +333,14 @@ const VirtualEvent = (props) => {
               Event Schedule
             </MuiButton>
           </div>
-          {props.isLoggedIn ? null : renderLoginButton()}
+          {props.isLoggedIn === "not matched" ? null : renderLoginButton()}
         </div>
-        {props.isLoggedIn ? (
-          <div className={classes.eventLinkSection}>{renderEventLinks()}</div>
+        {props.isLoggedIn === "purchased" ? (
+          <div className={classes.purchasedLinkSection}>
+            {renderEventLinks()}
+          </div>
         ) : null}
+        <div className={classes.eventLinkSection}>{renderPreviewLinks()}</div>
         <div style={{ marginTop: "30px", marginBottom: "80px" }}>
           {renderHorizontalrule()}
         </div>
@@ -349,13 +388,18 @@ const VirtualEvent = (props) => {
       <RaisedContainer>
         <div style={{ padding: "40px 0" }}>
           {renderWelcome("desktop")}
-          {props.isLoggedIn ? null : renderPurchaseButton()}
+          {props.isLoggedIn === "purchased" ? null : renderPurchaseButton()}
           {renderLoginButton()}
           <hr className={classes.hr} />
           <Grid spacing={5} container>
             <Grid md={8} item>
               {/*<EventVideo videos={props.events} />*/}
-              {props.isLoggedIn ? renderEventLinks() : null}
+              {props.isLoggedIn === "purchased" ? (
+                <div className={classes.purchasedLinkSection}>
+                  {renderEventLinks()}
+                </div>
+              ) : null}
+              {renderPreviewLinks()}
               <EventCards
                 content={props.eventCards}
                 class={classes.subHeaderRed}

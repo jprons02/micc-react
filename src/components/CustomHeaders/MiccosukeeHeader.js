@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/header.js";
 import { Icon } from "@material-ui/core";
-import logo from "assets/img/miccosukee/emblem_logo.png";
+import logo from "assets/img/miccosukee/Emblem.svg";
 import Button from "components/CustomButtons/Button.js";
 
 import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";

@@ -118,7 +118,6 @@ export const contactFunction = async (valuesObj, callback) => {
       },
     });
     if (response.data) {
-      console.log(response.data);
       callback();
     }
   } catch (error) {

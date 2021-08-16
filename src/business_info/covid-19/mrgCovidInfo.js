@@ -384,13 +384,8 @@ const MrgCovidInfo = (props) => {
             </li>
             <li style={liStyle}>
               {props.language
-                ? "Face masks are optional for our guests."
-                : "El uso de mascarillas es opcional para nuestros clientes."}
-            </li>
-            <li style={liStyle}>
-              {props.language
-                ? "All employees are still required to wear masks."
-                : "Todos los empleados deben continuar usando mascarillas."}
+                ? "Masks are mandatory for all patrons entering the facility, as well as for all employees."
+                : "El uso de mascarillas es obligatorio para todos los clientes que ingresen al edificio, así como para todos los empleados."}
             </li>
             <li style={liStyle}>
               {props.language

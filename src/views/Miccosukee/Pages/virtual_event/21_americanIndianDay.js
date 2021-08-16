@@ -26,7 +26,7 @@ const AID = (props) => {
   const eventbriteID = eventbriteIDs.aid2021;
   //Eventbrite TestID: 144427499539
 
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState("not matched");
 
   useEffect(() => {
     var exampleCallback = function () {
@@ -72,22 +72,53 @@ const AID = (props) => {
       title: "Featured Performers",
       content: [
         {
-          cardTitle: "1",
+          cardTitle: "Yellow Bird Indian Dancers",
           image: image1,
-          cardBody: () => <span>test01</span>,
+          cardBody: () => (
+            <span>
+              Members of the San Carlos Apache Tribe from Phoenix, Arizona, the
+              Duncan Family has traveled the world presenting their unique
+              repertoire of songs, dances and stories that entertain and educate
+              audiences of all ages.
+            </span>
+          ),
         },
         {
-          cardTitle: "2",
+          cardTitle: "Frank Waln",
           image: image1,
-          cardBody: () => <span>test02</span>,
+          cardBody: () => (
+            <span>
+              The award-winning Sicangu Lakota Hip-Hop artist and producer from
+              the Rosebud Reservation in South Dakota shares his native roots by
+              performing across the United States.
+            </span>
+          ),
         },
         {
-          cardTitle: "3",
+          cardTitle: "James Jones",
           image: image1,
-          cardBody: () => <span>test03</span>,
+          cardBody: () => (
+            <span>
+              Known in the online world as @notoriouscree, he's an influencer
+              and native content creator that has gained over 3.1 million
+              followers on Tik Tok.
+            </span>
+          ),
+        },
+        {
+          cardTitle: "Marika Sila",
+          image: image1,
+          cardBody: () => (
+            <span>
+              Known as "The Hoop Ninja", she puts a modern spin on the native
+              hoop dancing tradition, integrating elements such as smoke, fire
+              and lights in her mesmerizing routines.
+            </span>
+          ),
         },
       ],
     },
+    /*
     {
       title: "Fashion Show",
       content: [
@@ -128,12 +159,14 @@ const AID = (props) => {
         },
       ],
     },
+    */
   ];
 
   // Set order of videos young to old for logic to work
   const events = [
     {
       key: "bees",
+      purchased: true,
       poster: image1,
       source: beesVid,
       link: "https://google.com",
@@ -147,6 +180,7 @@ const AID = (props) => {
     },
     {
       key: "birds",
+      purchased: true,
       poster: image1,
       source: birdsVid,
       link: "https://yahoo.com",
@@ -160,6 +194,77 @@ const AID = (props) => {
     },
     {
       key: "weather",
+      purchased: true,
+      poster: image1,
+      source: weatherVid,
+      link: "https://youtube.com",
+      releaseTime: {
+        year: 2021,
+        month: 3,
+        day: 18,
+        hour: 11,
+        minutes: 24,
+      },
+    },
+    {
+      key: "Free Preview 1",
+      purchased: false,
+      poster: image1,
+      source: weatherVid,
+      link: "https://youtube.com",
+      releaseTime: {
+        year: 2021,
+        month: 3,
+        day: 18,
+        hour: 11,
+        minutes: 24,
+      },
+    },
+    {
+      key: "Free Preview 2",
+      purchased: false,
+      poster: image1,
+      source: weatherVid,
+      link: "https://youtube.com",
+      releaseTime: {
+        year: 2021,
+        month: 3,
+        day: 18,
+        hour: 11,
+        minutes: 24,
+      },
+    },
+    {
+      key: "Free Preview 3",
+      purchased: false,
+      poster: image1,
+      source: weatherVid,
+      link: "https://youtube.com",
+      releaseTime: {
+        year: 2021,
+        month: 3,
+        day: 18,
+        hour: 11,
+        minutes: 24,
+      },
+    },
+    {
+      key: "Free Preview 4",
+      purchased: false,
+      poster: image1,
+      source: weatherVid,
+      link: "https://youtube.com",
+      releaseTime: {
+        year: 2021,
+        month: 3,
+        day: 18,
+        hour: 11,
+        minutes: 24,
+      },
+    },
+    {
+      key: "Free Preview 5",
+      purchased: false,
       poster: image1,
       source: weatherVid,
       link: "https://youtube.com",

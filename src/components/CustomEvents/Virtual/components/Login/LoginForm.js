@@ -57,13 +57,19 @@ export default function LoginForm(props) {
       resetState();
 
       // If value === true, this means user entered in a valid email and is now logged in.
-      if (value === "matched") {
+      if (value === "purchased") {
         // Set state of the snackbar and pass the id to create a unique snackbar state - this allows for multiple snackbars handled independently
         setAlerts({ ...alerts, [virtualEventLoginId]: true });
         props.closeModal();
         setSubmitErrorMessage(false);
-        props.setLoginStatus(true);
-      } else if (value === "not matched") {
+        props.setLoginStatus("purchased");
+      } else if (value === "free") {
+        // Set state of the snackbar and pass the id to create a unique snackbar state - this allows for multiple snackbars handled independently
+        setAlerts({ ...alerts, [virtualEventLoginId]: true });
+        props.closeModal();
+        setSubmitErrorMessage(false);
+        props.setLoginStatus("free");
+      } else {
         setSubmitErrorMessage(true);
       }
     };
@@ -86,7 +92,7 @@ export default function LoginForm(props) {
             marginBottom: "10px",
           }}
         >
-          Enter in your email:
+          Please login with your eventbrite registered email:
         </Typography>
         <CustomInput name="email" id="email" label={"Email"} fullWidth={true} />
       </div>

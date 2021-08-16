@@ -34,7 +34,15 @@ export default function LoginModal(props) {
   };
 
   const renderLoginContent = () => {
+    return (
+      <LoginForm
+        setLoginStatus={props.setLoginStatus}
+        closeModal={props.closeModal}
+        eventbriteID={props.eventbriteID}
+      />
+    );
     // If user closes yes/no modal and then clicks Login button, take them straight to entering in email.
+    /*
     if (showForm === true || props.loginClicked === true) {
       // show the form
       return (
@@ -61,12 +69,13 @@ export default function LoginModal(props) {
               style={{ marginLeft: "5px", width: "45%" }}
               onClick={clickedNo}
             >
-              NO
+              NO (Take me to the free stuff)
             </Button>
           </div>
         </div>
       );
     }
+    */
   };
 
   const renderWelcome = () => {
@@ -79,6 +88,39 @@ export default function LoginModal(props) {
     );
   };
 
+  return (
+    <Dialog
+      classes={{
+        root: classes.center,
+        paper: classes.modal,
+      }}
+      open={props.showLoginModal}
+      keepMounted
+      //onClose={props.closeModal}
+      aria-labelledby="modal-slide-title"
+      aria-describedby="modal-slide-description"
+    >
+      <DialogTitle
+        id="classic-modal-slide-title"
+        disableTypography
+        className={classes.modalHeader}
+        style={{ width: "100%" }}
+      >
+        {renderWelcome()}
+      </DialogTitle>
+      <DialogContent
+        style={{
+          paddingTop: "0px",
+        }}
+        id="modal-slide-description"
+        className={classes.modalBody}
+      >
+        {renderLoginContent()}
+      </DialogContent>
+    </Dialog>
+  );
+
+  /*
   return (
     <Dialog
       classes={{
@@ -119,4 +161,5 @@ export default function LoginModal(props) {
       </DialogContent>
     </Dialog>
   );
+  */
 }

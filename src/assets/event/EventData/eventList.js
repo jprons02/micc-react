@@ -1,6 +1,8 @@
 import ffMap from "assets/event/FreedomFestival_Map.svg";
 import React from "react";
 import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs.js";
+import aid2021 from "assets/video/AID_savethedate_spot_30sec.mp4";
+import aid2021poster from "assets/img/events/aid/savethedatePoster.jpg";
 
 export const events = [
   /*
@@ -15,20 +17,26 @@ export const events = [
       "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
   },
   */
-  /*
+
   {
-    title: "American Indian Day",
+    title: "American Indian Day (Virtual Event)",
     type: "standard",
     category: "",
     annual: true,
-    admission: "$?",
+    admission: "$10",
     startDate: "9/20/2021",
     endDate: "9/25/2021",
     excerpt:
-      "Join the Miccosukee Tribe’s American Indian Day VIRTUAL week-long celebration of Indigenous Nations. Discover the art, music and culture of modern-day Natives across the globe through presentations, performances and activities for the kids.",
+      "“A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes around the globe.",
     fullDescription: [
-      "Join the Miccosukee Tribe’s American Indian Day VIRTUAL week-long celebration of Indigenous Nations. Discover the art, music and culture of modern-day Natives across the globe through presentations, performances and activities for the kids.",
+      "Celebrate American Indian Day from September 20 - 25 alongside the Miccosukee Tribe of Indians of Florida. “A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes around the globe. Enjoy this virtual event with the whole family from the comfort of your home and learn about the art, lifestyle and customs of modern-day Natives.",
     ],
+    // format is html or youtube
+    video: {
+      format: "html",
+      src: aid2021,
+      poster: aid2021poster,
+    },
     buttons: [
       {
         name: "Get Tickets",
@@ -41,7 +49,6 @@ export const events = [
       },
     ],
   },
-  */
   /*
   {
     title: "Freedom Festival",

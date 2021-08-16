@@ -20,8 +20,14 @@ export const virtualEventLoginFunction = async (eventID, email, callback) => {
     if (response.data) {
       // check if user inputted email is in response.data here... and send to callback.
       for (let i = 0; i < response.data.length; i++) {
-        if (response.data[i].email === email) {
-          callback("matched");
+        if (
+          response.data[i].email === email &&
+          response.data[i].ticketName === "6 Days Pass"
+        ) {
+          callback("purchased");
+          break;
+        } else if (response.data[i].email === email) {
+          callback("free");
           break;
         } else {
           callback("not matched");

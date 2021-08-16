@@ -87,6 +87,61 @@ const EventPage = ({ entityMargin, entity }) => {
       }
     };
 
+    const renderPromoVideo = () => {
+      if (event.video) {
+        if (event.video.format === "youtube") {
+          return (
+            //https://css-tricks.com/fluid-width-video/
+            <div style={{ maxWidth: "560px" }}>
+              <div
+                style={{
+                  position: "relative",
+                  paddingBottom: "56.25%" /* 16:9 */,
+                  height: "0",
+                }}
+              >
+                <iframe
+                  style={{
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  width="560"
+                  height="315"
+                  src={event.video}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          );
+        } else {
+          return (
+            <div style={{ maxWidth: "560px", paddingTop: "10px" }}>
+              <video
+                style={{
+                  boxShadow:
+                    "0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)",
+                }}
+                width="100%"
+                controls
+                poster={event.video.poster}
+              >
+                <source src={event.video.src} type="video/mp4" />
+                Your browser does not support HTML video.
+              </video>
+            </div>
+          );
+        }
+      } else {
+        return "";
+      }
+    };
+
     const renderButtons = () => {
       if (event.buttons) {
         if (event.buttons) {
@@ -127,7 +182,10 @@ const EventPage = ({ entityMargin, entity }) => {
         className={classNames(classes.main, classes.mainRaised)}
       >
         <div>
-          <div className={classes.container} style={{ padding: "15px" }}>
+          <div
+            className={classes.container}
+            style={{ padding: "15px", paddingBottom: "40px" }}
+          >
             <h3>{event.title}</h3>
             <p>
               <span style={{ fontWeight: "400" }}>Date: </span>
@@ -139,6 +197,7 @@ const EventPage = ({ entityMargin, entity }) => {
                 {`${event.startTime} - ${event.endTime}`}
               </p>
             ) : null}
+            {renderPromoVideo()}
             <div style={{ marginTop: "25px" }}>{renderFullDescription()}</div>
             <div style={{ marginTop: "20px" }}>{renderButtons()}</div>
           </div>

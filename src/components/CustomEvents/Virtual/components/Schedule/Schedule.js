@@ -56,14 +56,16 @@ export default function CustomVirtualEventSchedule(props) {
 
   const renderTableBody = () => {
     if (props.events) {
-      return props.events.map((event) => (
-        <StyledTableRow key={event.key}>
-          <StyledTableCell component="th" scope="row">
-            {formatTime(event.releaseTime.hour, event.releaseTime.minutes)}
-          </StyledTableCell>
-          <StyledTableCell align="left">{event.key}</StyledTableCell>
-        </StyledTableRow>
-      ));
+      return props.events.map((event) =>
+        event.purchased ? (
+          <StyledTableRow key={event.key}>
+            <StyledTableCell component="th" scope="row">
+              {formatTime(event.releaseTime.hour, event.releaseTime.minutes)}
+            </StyledTableCell>
+            <StyledTableCell align="left">{event.key}</StyledTableCell>
+          </StyledTableRow>
+        ) : null
+      );
     } else {
       return (
         <StyledTableRow>
