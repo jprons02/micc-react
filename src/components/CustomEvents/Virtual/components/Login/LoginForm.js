@@ -95,7 +95,7 @@ export default function LoginForm(props) {
             marginBottom: "10px",
           }}
         >
-          Please login with your eventbrite registered email:
+          Please login with your Eventbrite registered email:
         </Typography>
         <CustomInput name="email" id="email" label={"Email"} fullWidth={true} />
       </div>
@@ -106,8 +106,8 @@ export default function LoginForm(props) {
     return (
       <div style={{ marginTop: "15px" }}>
         <Typography style={{ color: errorColor }}>
-          Email is incorrect. Please use the same email used to purchase the
-          tickets from Eventbrite.
+          Email is incorrect. Please use the same email used to register on
+          Eventbrite.
         </Typography>
       </div>
     );

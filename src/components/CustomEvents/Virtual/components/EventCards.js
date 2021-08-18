@@ -64,10 +64,10 @@ const EventCards = (props) => {
       ? content.map((card) => {
           return (
             <StandardHorizontalCard
-              width="90%"
+              width="99.5%"
               classes={cardClasses}
               key={card.cardTitle}
-              img={card.image}
+              img={card.dkImage}
               title={card.cardTitle}
               body={card.cardBody()}
             />

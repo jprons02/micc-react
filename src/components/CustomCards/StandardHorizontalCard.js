@@ -20,12 +20,24 @@ const useStyles = makeStyles(styles);
 const StandardHorizontalCard = (props) => {
   const classes = useStyles();
 
+  /*
   const cardStyle = {
     boxShadow:
       "0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%)",
     borderRadius: "6px",
     width: props.width || "100%",
     margin: "2px",
+  };
+  */
+
+  const cardStyle = {
+    boxShadow:
+      "0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%)",
+    borderRadius: "6px",
+    margin: "2px",
+    display: "flex",
+    flexWrap: "nowrap",
+    width: props.width || "100%",
   };
 
   return (
@@ -43,10 +55,10 @@ const StandardHorizontalCard = (props) => {
         />
         <div
           style={{
-            margin: "20px",
+            marginLeft: "20px",
+            marginRight: "10px",
             display: "inline-block",
             verticalAlign: "top",
-            maxWidth: "430px",
           }}
         >
           <h4

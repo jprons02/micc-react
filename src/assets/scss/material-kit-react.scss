@@ -27,3 +27,17 @@
 @import "plugins/plugin-nouislider";
 @import "plugins/plugin-react-datetime";
 @import "plugins/plugin-react-slick";
+
+// Custom font from designers
+@font-face {
+  font-family: "PhosphateSolid";
+  src: url("../../fonts/Phosphate/phosphate-solid-02-webfont.woff2")
+      format("woff2"),
+    url("../../fonts/Phosphate/phosphate-solid-02-webfont.woff") format("woff"),
+    url("../../fonts/Phosphate/phosphate-solid-02-webfont.ttf")
+      format("truetype"),
+    url("../../fonts/Phosphate/phosphate-solid-02-webfont.svg") format("svg"),
+    url("../../fonts/Phosphate/phosphate-solid-02-webfont.eot");
+  font-weight: normal;
+  font-style: normal;
+}

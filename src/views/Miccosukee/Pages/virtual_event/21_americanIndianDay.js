@@ -9,6 +9,13 @@ import image1 from "assets/img/bg.jpg";
 import logo from "assets/img/events/aid/AID-LOGO.png";
 import bannerbg from "assets/img/events/aid/bannerbg.jpg";
 import nativeLogo from "assets/img/events/aid/native_logo.png";
+//import yellowBirdDancersDesktop from "assets/event/aid21/FamilySedona1x1.jpg";
+import yellowBirdDancersDesktop from "assets/event/aid21/FamilySedona1x1-1.5.jpg";
+import yellowBirdDancersMobile from "assets/event/aid21/FamilySedona.jpg";
+import frankDesktop from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_desktop.jpg";
+import frankMobile from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_mobile.jpg";
+import jamesDesktop from "assets/event/aid21/JamesJones_desktop.jpg";
+import jamesMobile from "assets/event/aid21/JamesJones_mobile.jpg";
 
 // Event id
 import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs.js";
@@ -74,7 +81,8 @@ const AID = (props) => {
       content: [
         {
           cardTitle: "Yellow Bird Indian Dancers",
-          image: image1,
+          image: yellowBirdDancersMobile,
+          dkImage: yellowBirdDancersDesktop,
           cardBody: () => (
             <span>
               Members of the San Carlos Apache Tribe from Phoenix, Arizona, the
@@ -86,7 +94,8 @@ const AID = (props) => {
         },
         {
           cardTitle: "Frank Waln",
-          image: image1,
+          image: frankMobile,
+          dkImage: frankDesktop,
           cardBody: () => (
             <span>
               The award-winning Sicangu Lakota Hip-Hop artist and producer from
@@ -97,7 +106,8 @@ const AID = (props) => {
         },
         {
           cardTitle: "James Jones",
-          image: image1,
+          image: jamesMobile,
+          dkImage: jamesDesktop,
           cardBody: () => (
             <span>
               Known in the online world as @notoriouscree, he's an influencer
@@ -109,6 +119,7 @@ const AID = (props) => {
         {
           cardTitle: "Marika Sila",
           image: image1,
+          dkImage: yellowBirdDancersDesktop,
           cardBody: () => (
             <span>
               Known as "The Hoop Ninja", she puts a modern spin on the native
@@ -166,7 +177,7 @@ const AID = (props) => {
   // Set order of videos young to old for logic to work
   const events = [
     {
-      key: "bees",
+      key: "Yellow Bird Indian Dancers",
       purchased: true,
       poster: image1,
       source: beesVid,
@@ -180,7 +191,7 @@ const AID = (props) => {
       },
     },
     {
-      key: "birds",
+      key: "Frank Waln",
       purchased: true,
       poster: image1,
       source: birdsVid,
@@ -194,7 +205,21 @@ const AID = (props) => {
       },
     },
     {
-      key: "weather",
+      key: "James Jones",
+      purchased: true,
+      poster: image1,
+      source: weatherVid,
+      link: "https://youtube.com",
+      releaseTime: {
+        year: 2021,
+        month: 3,
+        day: 18,
+        hour: 11,
+        minutes: 24,
+      },
+    },
+    {
+      key: "Marika Sila",
       purchased: true,
       poster: image1,
       source: weatherVid,

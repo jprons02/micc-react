@@ -23,10 +23,13 @@ export const virtualEventLoginFunction = async (eventID, email, callback) => {
       // using find method because multiple entries is possible, some paid, some free. need to prioritize paid.
       const matchedPurchased = response.data.find(
         (item) =>
-          item.email === email && item.ticketName === "Full Virtual Event Pass"
+          item.email.toLowerCase() === email.toLowerCase() &&
+          item.ticketName === "Full Virtual Event Pass"
       );
 
-      const matchedFree = response.data.find((item) => item.email === email);
+      const matchedFree = response.data.find(
+        (item) => item.email.toLowerCase() === email.toLowerCase()
+      );
 
       if (matchedPurchased) {
         callback("purchased");

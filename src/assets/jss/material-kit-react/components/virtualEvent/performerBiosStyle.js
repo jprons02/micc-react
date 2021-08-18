@@ -38,7 +38,7 @@ const homeCardStyle = {
     serviceCards: {
       display: "inline-block",
       //margin: "15px",
-      width: "90%",
+      width: "100%",
     },
     cardTitle: {
       //fontSize: "40px",

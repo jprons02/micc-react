@@ -13,7 +13,7 @@ const virtualEventsStyle = {
   welcomeHeader: {
     textAlign: "left",
     fontSize: "22px",
-    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
     color: aid21Colors.red,
   },
   welcomeBody: {},
@@ -71,19 +71,19 @@ const virtualEventsStyle = {
   },
   subHeaderRed: {
     fontSize: "22px",
-    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
     color: aid21Colors.red,
     marginBottom: "-20px",
     textAlign: "center",
   },
   subHeaderRedLinks: {
     fontSize: "22px",
-    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
     color: aid21Colors.red,
   },
   subHeaderRedLinksPurchased: {
     fontSize: "22px",
-    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
     color: "white",
   },
   videoSection: {
@@ -119,14 +119,14 @@ const virtualEventsStyle = {
     fontSize: "28px",
     lineHeight: "1",
     fontWeight: "500",
-    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
     marginBottom: "5px",
   },
   heroSubHeader: {
     fontSize: "26px",
     margin: "auto",
     width: "100%",
-    fontFamily: "'phosphatesolid', 'phosphate-solid', 'Roboto'",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
     color: aid21Colors.yellow,
     lineHeight: "0.9",
   },
@@ -200,6 +200,9 @@ const virtualEventsStyle = {
       fontSize: "26px",
       marginBottom: "16px",
     },
+    subHeaderRedLinksPurchased: {
+      fontSize: "26px",
+    },
     button: {
       paddingTop: "14px",
       paddingBottom: "14px",
@@ -233,7 +236,7 @@ const virtualEventsStyle = {
     },
     purchasedLinkSection: {
       padding: "34px 34px 0 34px",
-      margin: "0 40px 34px 0",
+      marginBottom: "34px",
     },
   },
 };

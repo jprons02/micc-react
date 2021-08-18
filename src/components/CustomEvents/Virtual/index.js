@@ -391,8 +391,8 @@ const VirtualEvent = (props) => {
           {props.isLoggedIn === "purchased" ? null : renderPurchaseButton()}
           {/*renderLoginButton()*/}
           <hr className={classes.hr} />
-          <Grid spacing={5} container>
-            <Grid md={8} item>
+          <Grid justify="space-evenly" spacing={5} container>
+            <Grid md={7} item>
               {/*<EventVideo videos={props.events} />*/}
               {props.isLoggedIn === "purchased" ? (
                 <div className={classes.purchasedLinkSection}>
