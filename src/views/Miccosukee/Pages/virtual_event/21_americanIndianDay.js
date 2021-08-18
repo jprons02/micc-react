@@ -340,12 +340,13 @@ const AID = (props) => {
     title: "A CELEBRATION OF INDIGENOUS NATIONS",
     body: () => (
       <span>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-        voluptatem sequi nesciunt.
+        Celebrate American Indian Day from September 20 - 25 alongside the
+        Miccosukee Tribe of Indians of Florida. “A Celebration of Indigenous
+        Nations” is a week-long virtual festival including performances and
+        presentations showcasing the culture and traditions of Native American
+        Tribes around the globe. Enjoy this virtual event with the whole family
+        from the comfort of your home and learn about the art, lifestyle and
+        customs of modern-day Natives.
       </span>
     ),
   };

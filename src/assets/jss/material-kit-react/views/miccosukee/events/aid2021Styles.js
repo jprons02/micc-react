@@ -6,7 +6,7 @@ import { isWhiteSpaceLike } from "typescript";
 const virtualEventsStyle = {
   welcomeSection: {
     marginTop: "10px",
-    marginBottom: "6px",
+    marginBottom: "10px",
     paddingLeft: "15px",
     paddingRight: "15px",
   },
@@ -176,6 +176,7 @@ const virtualEventsStyle = {
     },
     welcomeSection: {
       marginTop: "16px",
+      marginBottom: "20px",
       //marginBottom: "55px",
     },
     welcomeHeader: {
