@@ -24,7 +24,7 @@ export const virtualEventLoginFunction = async (eventID, email, callback) => {
       const matchedPurchased = response.data.find(
         (item) =>
           item.email.toLowerCase() === email.toLowerCase() &&
-          item.ticketName === "Full Virtual Event Pass"
+          item.ticketName === "Full Virtual Event PASS"
       );
 
       const matchedFree = response.data.find(
