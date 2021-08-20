@@ -27,6 +27,9 @@ import EventPage from "./Pages/eventPage";
 import HistoryAdmin from "./Pages/historyAdmin";
 import MiccosukeeErrorPage from "views/Miccosukee/Pages/error/miccosukeeErrorPage.js";
 
+// business variables
+import { mrgBusinessInfo } from "business_info/genericInfo.js";
+
 // styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
 
@@ -47,6 +50,10 @@ const Miccosukee = (props) => {
     }
     if (window.location.pathname === "/win/es") {
       props.history.push("/mrg/promotions/es");
+    }
+    if (window.location.pathname === "/careers") {
+      props.history.push("/mrg");
+      window.location.href = mrgBusinessInfo.careersLink;
     }
   });
 

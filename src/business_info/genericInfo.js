@@ -5,6 +5,8 @@ export const mrgBusinessInfo = {
   phone: "305-222-4600",
   email: "",
   address: "500 SW 177th Ave, Miami, FL 33194",
+  careersLink:
+    "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
 };
 
 export const golfBusinessInfo = {
