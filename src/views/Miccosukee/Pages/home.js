@@ -164,7 +164,7 @@ const Home = ({ history }) => {
   return (
     <GridContainer
       className={classes.gridContainer}
-      justifyContent="center"
+      justifycontent="center"
       alignItems="center"
       style={{ position: "static" }}
     >
