@@ -5,6 +5,7 @@ const miccosukeeHomePageStyle = {
   container,
   gridContainer: {
     height: "100vh",
+    maxHeight: "900px",
     paddingBottom: "30px",
     position: "absolute",
     width: "100%",
