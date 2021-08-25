@@ -92,7 +92,6 @@ export default function LoginForm(props) {
           style={{
             fontSize: "16px",
             fontWeight: "300",
-            marginBottom: "10px",
           }}
         >
           Please login with your Eventbrite registered email:
@@ -152,23 +151,7 @@ export default function LoginForm(props) {
               />
             )}
           </div>
-          <div>
-            <MuiButton
-              style={{
-                marginTop: "10px",
-                fontSize: "12px",
-                color: standardLinkColor.color,
-                "&:hover,&:focus": {
-                  color: standardLinkColor.hover,
-                },
-              }}
-              href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-165141162663?aff=website"
-              target="_blank"
-              fullWidth
-            >
-              NOT SIGNED UP? REGISTER HERE!
-            </MuiButton>
-          </div>
+
           {submitErrorMessage ? renderSubmitErrorMessage() : ""}
         </div>
       </form>

@@ -56,6 +56,7 @@ const virtualLoginModalStyle = {
     modal: {
       borderRadius: "6px",
       minWidth: "500px",
+      maxWidth: "800px",
     },
   },
 };

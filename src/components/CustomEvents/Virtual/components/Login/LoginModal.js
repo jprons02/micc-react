@@ -7,6 +7,8 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 //import DialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
+import MuiButton from "@material-ui/core/Button";
+import { standardLinkColor } from "themes/colors.js";
 // @material-ui/icons
 import Close from "@material-ui/icons/Close";
 // core components
@@ -21,6 +23,7 @@ const useStyles = makeStyles(modalStyle);
 
 export default function LoginModal(props) {
   const classes = useStyles();
+  const customClasses = props.classes;
 
   const [showForm, setShowForm] = useState(null);
 
@@ -81,8 +84,12 @@ export default function LoginModal(props) {
   const renderWelcome = () => {
     return (
       <div style={{ margin: "10px 0" }}>
-        <Typography variant="h5" component="h2">
-          Welcome to the American Indian Day Event Page!
+        <Typography
+          className={customClasses.loginWelcomeHeader}
+          variant="h5"
+          component="h2"
+        >
+          {props.loginModalContent.welcome}
         </Typography>
       </div>
     );
@@ -116,6 +123,9 @@ export default function LoginModal(props) {
         className={classes.modalBody}
       >
         {renderLoginContent()}
+        <div style={{ marginTop: "40px", marginBottom: "10px" }}>
+          {props.loginModalContent.notSignedUpDetails()}
+        </div>
       </DialogContent>
     </Dialog>
   );

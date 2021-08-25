@@ -258,27 +258,37 @@ const VirtualEvent = (props) => {
     return (
       <div className={classes.extrasSection}>
         {props.extras.map((extra) => {
-          return (
-            <div key={extra.title} className={classes.subsection}>
-              <Typography
-                className={classes.subHeader}
-                paragraph
-                variant="h5"
-                component="h3"
-              >
-                {extra.title}
-              </Typography>
-              <p>{extra.text}</p>
-              <MuiButton
-                target="_blank"
-                href={extra.link}
-                className={classes.extrasButton}
-              >
-                <DownloadIcon className={classes.extrasButtonIcon} />{" "}
-                {extra.linkText}
-              </MuiButton>
-            </div>
-          );
+          if (extra.bannerAd) {
+            return (
+              <div key={extra.title} className={classes.subsection}>
+                <a href={extra.link} target="_blank">
+                  <img style={{ width: "100%" }} src={extra.bannerSrc} />
+                </a>
+              </div>
+            );
+          } else {
+            return (
+              <div key={extra.title} className={classes.subsection}>
+                <Typography
+                  className={classes.subHeader}
+                  paragraph
+                  variant="h5"
+                  component="h3"
+                >
+                  {extra.title}
+                </Typography>
+                <p>{extra.text}</p>
+                <MuiButton
+                  target="_blank"
+                  href={extra.link}
+                  className={classes.extrasButton}
+                >
+                  <DownloadIcon className={classes.extrasButtonIcon} />{" "}
+                  {extra.linkText}
+                </MuiButton>
+              </div>
+            );
+          }
         })}
       </div>
     );
@@ -421,6 +431,8 @@ const VirtualEvent = (props) => {
     <React.Fragment>
       <VirtualEventLoginFormProvider>
         <LoginModal
+          loginModalContent={props.loginModalContent}
+          classes={classes}
           setLoginStatus={props.setLoggedIn}
           loginClicked={loginButtonClicked}
           closeModal={closeLoginModal}

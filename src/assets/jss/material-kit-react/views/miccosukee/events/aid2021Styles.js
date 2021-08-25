@@ -16,6 +16,12 @@ const virtualEventsStyle = {
     fontFamily: "'PhosphateSolid', 'Roboto'",
     color: aid21Colors.red,
   },
+  loginWelcomeHeader: {
+    textAlign: "left",
+    fontSize: "22px",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
+    color: aid21Colors.red,
+  },
   welcomeBody: {},
   subsection: {
     paddingTop: "15px",

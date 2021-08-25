@@ -17,6 +17,14 @@ import frankMobile from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempon
 import jamesDesktop from "assets/event/aid21/JamesJones_desktop.jpg";
 import jamesMobile from "assets/event/aid21/JamesJones_mobile.jpg";
 
+// @material-ui/icons
+import Typography from "@material-ui/core/Typography";
+
+import MuiButton from "@material-ui/core/Button";
+import { standardLinkColor } from "themes/colors.js";
+
+import coloringBook from "assets/event/aid21/sample.png";
+
 // Event id
 import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs.js";
 
@@ -323,7 +331,9 @@ const AID = (props) => {
       text:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut lorem ex. Quisque varius nisi eu nunc malesuada, consequat elementum ante aliquet.",
       linkText: "DOWNLOAD COLORING BOOK",
-      link: "https://www.google.com",
+      bannerAd: true,
+      bannerSrc: coloringBook,
+      link: "https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook.pdf",
     },
     {
       title: "RAFFLE",
@@ -351,8 +361,71 @@ const AID = (props) => {
     ),
   };
 
+  // This info is passed to login modal component
+  const renderNotSignedInCopy = () => {
+    return (
+      <React.Fragment>
+        <Typography
+          style={{
+            fontSize: "16px",
+            fontWeight: "300",
+            marginBottom: "10px",
+          }}
+        >
+          Not signed up? Please choose one of the ticket options below:
+        </Typography>
+        <Typography
+          style={{
+            fontSize: "16px",
+            fontWeight: "300",
+            marginBottom: "10px",
+            marginLeft: "10px",
+          }}
+        >
+          1) Register for FREE and receive previews to this Saturday's
+          performances, as well as coloring pages for the kids.
+        </Typography>
+        <Typography
+          style={{
+            fontSize: "16px",
+            fontWeight: "300",
+            marginBottom: "10px",
+            marginLeft: "10px",
+          }}
+        >
+          2) $10 ticket includes event previews, coloring pages for the kids,
+          access to Saturday's show and a goodie bag with art supplies for the
+          first 50 people who purchase tickets.
+        </Typography>
+        <div>
+          <MuiButton
+            style={{
+              fontSize: "14px",
+              color: standardLinkColor.color,
+              "&:hover,&:focus": {
+                color: standardLinkColor.hover,
+              },
+            }}
+            href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-165141162663?aff=website"
+            target="_blank"
+          >
+            REGISTER HERE!
+          </MuiButton>
+        </div>
+      </React.Fragment>
+    );
+  };
+
+  const loginModalContent = {
+    welcome: "Welcome to the Miccosukee American Indian Day Event Page!",
+    notSignedUpDetails: renderNotSignedInCopy,
+    registerLink:
+      "https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-165141162663?aff=website",
+  };
+
   return (
     <VirtualEvent
+      loginModalContent={loginModalContent}
       customprimarycolor={aid21Colors}
       logo={logo}
       sliderContent={sliderContent}
