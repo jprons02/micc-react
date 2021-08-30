@@ -4,6 +4,9 @@ import { aid21Colors } from "themes/colors";
 import { isWhiteSpaceLike } from "typescript";
 
 const virtualEventsStyle = {
+  eventFont: {
+    fontFamily: "'PhosphateSolid', 'Roboto'",
+  },
   welcomeSection: {
     marginTop: "10px",
     marginBottom: "10px",

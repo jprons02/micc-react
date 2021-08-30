@@ -258,12 +258,10 @@ const VirtualEvent = (props) => {
     return (
       <div className={classes.extrasSection}>
         {props.extras.map((extra) => {
-          if (extra.bannerAd) {
+          if (extra.banner) {
             return (
-              <div key={extra.title} className={classes.subsection}>
-                <a href={extra.link} target="_blank">
-                  <img style={{ width: "100%" }} src={extra.bannerSrc} />
-                </a>
+              <div className={classes.subsection} key={extra.title}>
+                {extra.banner()}
               </div>
             );
           } else {

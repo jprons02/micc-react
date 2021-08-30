@@ -23,7 +23,9 @@ import Typography from "@material-ui/core/Typography";
 import MuiButton from "@material-ui/core/Button";
 import { standardLinkColor } from "themes/colors.js";
 
-import coloringBook from "assets/event/aid21/sample.png";
+//import coloringBook from "assets/event/aid21/sample.png";
+import coloringBook from "assets/img/events/aid/ColoringBook_bg.jpg";
+import coloringPng from "assets/img/events/aid/ColoringPages_image.png";
 
 // Event id
 import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs.js";
@@ -58,6 +60,11 @@ const AID = (props) => {
       onOrderComplete: exampleCallback,
     });
   }, []);
+
+  const getBannerContent = () => {
+    //if date is sept 20 return 1 li with book 1 link
+    //if date is sept 21 return 2 lis with book 1 and book 2 link...
+  };
 
   // Title area
   const sliderContent = [
@@ -331,8 +338,114 @@ const AID = (props) => {
       text:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut lorem ex. Quisque varius nisi eu nunc malesuada, consequat elementum ante aliquet.",
       linkText: "DOWNLOAD COLORING BOOK",
-      bannerAd: true,
-      bannerSrc: coloringBook,
+      banner: () => {
+        return (
+          <div
+            style={{
+              backgroundImage: `url("${coloringBook}")`,
+              borderRadius: "6px",
+              backgroundPosition: "center",
+              width: "100%",
+            }}
+          >
+            <div style={{ padding: "10px" }}>
+              <Typography
+                component={"h2"}
+                className={classes.eventFont}
+                style={{
+                  color: aid21Colors.yellow,
+                  textAlign: "center",
+                  fontSize: "32px",
+                  marginBottom: "10px",
+                  lineHeight: "1.1",
+                }}
+              >
+                <span style={{ fontSize: "46px" }}>FREE</span>
+                <br />
+                COLORING BOOKS
+              </Typography>
+              <img style={{ width: "100%" }} src={coloringPng} />
+              <div style={{ padding: "10px" }}>
+                <Typography
+                  component={"h3"}
+                  className={classes.eventFont}
+                  style={{
+                    color: aid21Colors.red,
+                    textAlign: "center",
+                    fontSize: "22px",
+                    marginBottom: "10px",
+                    lineHeight: "1.1",
+                  }}
+                >
+                  CHECK BACK EVERYDAY THIS
+                  <br /> WEEK TO COLLECT ALL 5 BOOKS
+                </Typography>
+                <Typography
+                  component={"h4"}
+                  className={classes.eventFont}
+                  style={{
+                    color: aid21Colors.red,
+                    textAlign: "left",
+                    fontSize: "18px",
+                    marginBottom: "10px",
+                  }}
+                >
+                  <ul
+                    style={{
+                      listStyle: "none",
+                      padding: "5px 0 0 0",
+                      margin: "0",
+                      textAlign: "center",
+                    }}
+                  >
+                    <li>
+                      <a target="_blank" href="https://google.com">
+                        Coloring Book 1
+                      </a>
+                    </li>
+                  </ul>
+                </Typography>
+                <div style={{ marginTop: "20px" }}>
+                  <Typography
+                    component={"h5"}
+                    style={{
+                      color: "#454545",
+                      textAlign: "left",
+                      fontSize: "14px",
+                      paddingTop: "10px",
+                      marginBottom: "0px",
+                    }}
+                  >
+                    <span style={{ color: aid21Colors.red }}>
+                      Share your work with us!
+                    </span>
+                    <br />
+                    Tag us at #americanindianday
+                    <br />
+                    Facebook:{" "}
+                    <a
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      target="_blank"
+                      href="https://www.facebook.com/Miccosukee-Tribe-of-Indians-of-Florida-107623718263285/"
+                    >
+                      miccosukeetribeofindiansofflorida
+                    </a>
+                    <br />
+                    Instagram:{" "}
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/miccosukeetribeofindians/"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      miccosukeetribeofindians
+                    </a>
+                  </Typography>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      },
       link: "https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook.pdf",
     },
     {
