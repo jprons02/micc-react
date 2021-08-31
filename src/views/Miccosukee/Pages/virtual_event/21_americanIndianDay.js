@@ -61,9 +61,147 @@ const AID = (props) => {
     });
   }, []);
 
-  const getBannerContent = () => {
+  const getColoringBookLinks = () => {
     //if date is sept 20 return 1 li with book 1 link
     //if date is sept 21 return 2 lis with book 1 and book 2 link...
+
+    const d = new Date();
+    const currentDateObj = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    const lastDayOfEvent = new Date(2021, 8, 25);
+
+    const coloringBook1 = () => {
+      return (
+        <li>
+          <a
+            target="_blank"
+            href="https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook1.pdf"
+          >
+            Coloring Book 1
+          </a>
+        </li>
+      );
+    };
+    const coloringBook2 = () => {
+      return (
+        <li>
+          <a
+            target="_blank"
+            href="https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook2.pdf"
+          >
+            Coloring Book 2
+          </a>
+        </li>
+      );
+    };
+    const coloringBook3 = () => {
+      return (
+        <li>
+          <a
+            target="_blank"
+            href="https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook3.pdf"
+          >
+            Coloring Book 3
+          </a>
+        </li>
+      );
+    };
+    const coloringBook4 = () => {
+      return (
+        <li>
+          <a
+            target="_blank"
+            href="https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook4.pdf"
+          >
+            Coloring Book 4
+          </a>
+        </li>
+      );
+    };
+    const coloringBook5 = () => {
+      return (
+        <li>
+          <a
+            target="_blank"
+            href="https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook5.pdf"
+          >
+            Coloring Book 5
+          </a>
+        </li>
+      );
+    };
+
+    if (currentDateObj >= lastDayOfEvent) {
+      return {
+        title: "",
+        listItems: () => {
+          return (
+            <React.Fragment>
+              {coloringBook1()}
+              {coloringBook2()}
+              {coloringBook3()}
+              {coloringBook4()}
+              {coloringBook5()}
+            </React.Fragment>
+          );
+        },
+      };
+    } else if (currentDateObj >= new Date(2021, 8, 24)) {
+      return {
+        listItems: () => {
+          return (
+            <React.Fragment>
+              {coloringBook1()}
+              {coloringBook2()}
+              {coloringBook3()}
+              {coloringBook4()}
+              {coloringBook5()}
+            </React.Fragment>
+          );
+        },
+      };
+    } else if (currentDateObj >= new Date(2021, 8, 23)) {
+      return {
+        listItems: () => {
+          return (
+            <React.Fragment>
+              {coloringBook1()}
+              {coloringBook2()}
+              {coloringBook3()}
+              {coloringBook4()}
+            </React.Fragment>
+          );
+        },
+      };
+    } else if (currentDateObj >= new Date(2021, 8, 22)) {
+      return {
+        listItems: () => {
+          return (
+            <React.Fragment>
+              {coloringBook1()}
+              {coloringBook2()}
+              {coloringBook3()}
+            </React.Fragment>
+          );
+        },
+      };
+    } else if (currentDateObj >= new Date(2021, 8, 21)) {
+      return {
+        listItems: () => {
+          return (
+            <React.Fragment>
+              {coloringBook1()}
+              {coloringBook2()}
+            </React.Fragment>
+          );
+        },
+      };
+    } else {
+      return {
+        listItems: () => {
+          return <React.Fragment>{coloringBook1()}</React.Fragment>;
+        },
+      };
+    }
   };
 
   // Title area
@@ -364,7 +502,9 @@ const AID = (props) => {
                 <br />
                 COLORING BOOKS
               </Typography>
-              <img style={{ width: "100%" }} src={coloringPng} />
+              <div style={{ paddingBottom: "30px" }}>
+                <img style={{ width: "100%" }} src={coloringPng} />
+              </div>
               <div style={{ padding: "10px" }}>
                 <Typography
                   component={"h3"}
@@ -398,11 +538,7 @@ const AID = (props) => {
                       textAlign: "center",
                     }}
                   >
-                    <li>
-                      <a target="_blank" href="https://google.com">
-                        Coloring Book 1
-                      </a>
-                    </li>
+                    {getColoringBookLinks().listItems()}
                   </ul>
                 </Typography>
                 <div style={{ marginTop: "20px" }}>
