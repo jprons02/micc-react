@@ -65,6 +65,8 @@ const App = () => {
     const host = window.location.host;
     const protocol = window.location.protocol;
     const parts = host.split(".");
+    const path = window.location.pathname;
+
     const getSubdomain = () => {
       if (parts[1] === "localhost:3000") {
         return parts[0];
@@ -82,13 +84,15 @@ const App = () => {
         // Remove the subdomain from the parts list
         const mainDomain = parts.slice(1);
         // Set the location to the new url
-        window.location = protocol + "//" + mainDomain + "/" + getSubdomain();
+        window.location =
+          protocol + "//" + mainDomain + "/" + getSubdomain() + path;
       } else {
         if (parts.length > 2) {
           // Remove the subdomain from the parts list
           const mainDomain = parts.slice(1);
           // Set the location to the new url
-          window.location = protocol + "//" + mainDomain + "/" + getSubdomain();
+          window.location =
+            protocol + "//" + mainDomain + "/" + getSubdomain() + path;
         }
       }
     }
@@ -97,6 +101,7 @@ const App = () => {
     console.log("protocol: ", protocol);
     console.log("parts: ", parts);
     console.log("subdomain: ", getSubdomain());
+    console.log("path: ", path);
   }, []);
 
   // Snackbar unmounting is placed in the Footer.js and VirtualEvent.js components. Footer will handle all website unmounts with exception to the virtual events.
