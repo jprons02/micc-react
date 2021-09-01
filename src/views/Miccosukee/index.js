@@ -47,6 +47,7 @@ const Miccosukee = (props) => {
   // rerouting
   useEffect(() => {
     //All subdomains are pointed to miccosukee.com or .io
+    /*
     let host = window.location.host;
     let protocol = window.location.protocol;
     let parts = host.split(".");
@@ -63,8 +64,7 @@ const Miccosukee = (props) => {
       window.location =
         protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
     }
-
-    //DO I NEED TO ADD A CATCH IF WWW IS INVOLVED?
+    */
 
     if (window.location.pathname === "/win") {
       props.history.push("/mrg/promotions");
