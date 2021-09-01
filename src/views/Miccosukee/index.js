@@ -35,6 +35,7 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
 
 // services
 import { popupManager } from "services/popups/popupManager";
+import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -45,6 +46,20 @@ const Miccosukee = (props) => {
 
   // rerouting
   useEffect(() => {
+    //All subdomains are pointed to miccosukee.com or .io
+    let host = window.location.host;
+    let protocol = window.location.protocol;
+    let parts = host.split(".");
+    let subdomain = parts.length > 2 ? parts[0] : null;
+    // If we get more than 2 parts, then we have a subdomain
+    if (parts.length > 2) {
+      // Remove the subdomain from the parts list
+      parts.splice(0, 1);
+      // Set the location to the new url
+      window.location =
+        protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
+    }
+
     if (window.location.pathname === "/win") {
       props.history.push("/mrg/promotions");
     }
@@ -55,31 +70,7 @@ const Miccosukee = (props) => {
       props.history.push("/mrg");
       window.location.href = mrgBusinessInfo.careersLink;
     }
-  });
-
-  // GODADDY HANDLES ALL THE FORWARDING
-  /*
-  useEffect(() => {
-    //TEST THIS ON MICCOSUKEE.IO
-    //PROBABLY NEED TO POINT ALL SUBDOMAINS TO THE WEBSITE
-    let host = window.location.host;
-    let protocol = window.location.protocol;
-    let parts = host.split(".");
-    let subdomain = parts[0];
-    // If we get more than 3 parts, then we have a subdomain
-    // INFO: This could be 4, if you have a co.uk or something like that.
-    if (parts.length > 3) {
-      subdomain = parts[0];
-      // Remove the subdomain from the parts list
-      parts.splice(0, 1);
-      // Set the location to the new url
-      window.location =
-        protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
-    }
-    console.log("parts: ", parts);
-    console.log("location pathname: ", location.pathname);
   }, []);
-  */
 
   //const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
   const [popupState, setPopupState] = useContext(PopupContext);
