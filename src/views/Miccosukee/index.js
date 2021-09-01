@@ -51,6 +51,10 @@ const Miccosukee = (props) => {
     let protocol = window.location.protocol;
     let parts = host.split(".");
     let subdomain = parts.length > 2 ? parts[0] : null;
+
+    if (parts[0] === "www") {
+      parts.splice(0, 1);
+    }
     // If we get more than 2 parts, then we have a subdomain
     if (parts.length > 2) {
       // Remove the subdomain from the parts list
@@ -59,6 +63,8 @@ const Miccosukee = (props) => {
       window.location =
         protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
     }
+
+    //DO I NEED TO ADD A CATCH IF WWW IS INVOLVED?
 
     if (window.location.pathname === "/win") {
       props.history.push("/mrg/promotions");
