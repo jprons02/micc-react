@@ -48,7 +48,7 @@ const AID = (props) => {
   useEffect(() => {
     var exampleCallback = function () {
       console.log("Order complete!");
-      window.location.replace("https://www.miccosukee.io/virtual-event/aid");
+      window.location.replace("https://www.miccosukee.com/virtual-event/aid");
     };
 
     window.EBWidgets.createWidget({

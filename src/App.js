@@ -60,7 +60,7 @@ const App = () => {
 
   //let { path } = useRouteMatch();
   //let location = useLocation();
-
+  /*
   useEffect(() => {
     const host = window.location.host;
     const protocol = window.location.protocol;
@@ -103,6 +103,7 @@ const App = () => {
     console.log("subdomain: ", getSubdomain());
     console.log("path: ", path);
   }, []);
+  */
 
   // Snackbar unmounting is placed in the Footer.js and VirtualEvent.js components. Footer will handle all website unmounts with exception to the virtual events.
   const renderSnackbar = () => {

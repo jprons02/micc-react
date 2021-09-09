@@ -13,7 +13,7 @@ export const reCaptchaService = async (clientResponse, callback) => {
       data: dataString,
       headers: {
         "Content-Type": "application/json",
-        "x-api-key": keys.lambdaEventbriteAPI,
+        "x-api-key": keys.lambdaReCaptchaAPI,
       },
     });
     if (response.data.success != true) {
