@@ -3,6 +3,7 @@
 
 import mrgImage from "assets/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import miccosukeeImage from "assets/img/bg.jpg";
+import aidImage from "assets/img/events/aid/aid_2021_popup_min.jpg";
 
 const d = new Date();
 
@@ -48,23 +49,23 @@ const miccosukeePopup = {
   id: "01",
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
+      year: "21",
+      month: "September",
+      day: "10",
       time: "",
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
+      year: "21",
+      month: "September",
+      day: "21",
       time: "",
     },
   }),
   viewCount: 1,
   content: {
-    image: miccosukeeImage,
+    image: aidImage,
     linkType: "internal",
-    link: "/golf",
+    link: "/events/american-indian-day-(virtual-event)9202021",
   },
 };
 const mrgPopup = {
