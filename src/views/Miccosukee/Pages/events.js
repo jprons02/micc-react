@@ -42,7 +42,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   const language = useLanguage();
   const classes = useStyles();
 
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useState("All");
   const [defaultUpcommingText, setDefaultUpcommingText] = useState(false);
 
   let match = useRouteMatch();
@@ -55,7 +55,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         setCategory("Resort & Gaming");
         break;
       case "/golf/events":
-        setCategory("Golf");
+        setCategory("Golf & Country Club");
         break;
     }
   }, []);
@@ -137,9 +137,9 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     return (
       <div style={{ marginTop: "20px" }}>
         <Badge
-          styleProp={category === "all" ? selectedStyle : defaultStyle}
+          styleProp={category === "All" ? selectedStyle : defaultStyle}
           color="info"
-          onClick={() => handleBadgeClick("all")}
+          onClick={() => handleBadgeClick("All")}
         >
           {language ? "ALL EVENTS" : "TODOS LOS EVENTOS"}
         </Badge>
@@ -200,7 +200,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   const renderEvents = () => {
     //if not category... dont render.
     const isCategory = (event) => {
-      if (category === "all" || event.category === category) {
+      if (category === "All" || event.category === category) {
         return true;
       } else {
         return false;
@@ -267,13 +267,15 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     return (
       <React.Fragment>
         <h3 style={{ marginBottom: "20px" }}>
-          {language ? "Upcomming Events" : "Próximos Eventos"}
+          {language
+            ? category + " Upcoming Events"
+            : category + " Próximos Eventos"}
         </h3>
         <div id="upcomming">{renderUpcommingEvents()}</div>
         {defaultUpcommingText ? (
           <p>
             {language
-              ? "No upcomming events at this time"
+              ? "No upcoming events at this time"
               : "No hay eventos programados por el momento."}
           </p>
         ) : (

@@ -47,7 +47,6 @@ const Miccosukee = (props) => {
   // rerouting
   useEffect(() => {
     //All subdomains are pointed to miccosukee.com or .io
-    /*
     let host = window.location.host;
     let protocol = window.location.protocol;
     let parts = host.split(".");
@@ -62,12 +61,20 @@ const Miccosukee = (props) => {
       parts.splice(0, 1);
       // Set the location to the new url
       window.location =
-        protocol + "//" + parts.join(".") + "/" + subdomain + location.pathname;
+        protocol +
+        "//" +
+        "www." +
+        parts.join(".") +
+        "/" +
+        subdomain +
+        location.pathname;
     }
-    */
 
     if (window.location.pathname === "/win") {
       props.history.push("/mrg/promotions");
+    }
+    if (window.location.pathname === "/tribe") {
+      props.history.push("/history");
     }
     if (window.location.pathname === "/win/es") {
       props.history.push("/mrg/promotions/es");
