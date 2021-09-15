@@ -2,6 +2,7 @@
 
 # Large files
 /assets/event/
+/src/assets/video
 
 # dependencies
 /node_modules
@@ -18,7 +19,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
-
+.env
 package-lock.json
 
 npm-debug.log*
@@ -27,13 +28,9 @@ yarn-error.log*
 
 # package
 /dist
+
 # compiled css
 *.css
 
 notes.js
 keys.js
-
-/src/assets/video
-
-keys.js
-.env

@@ -83,15 +83,13 @@ export default function Miccosukee(props) {
               language ? (
                 <div>
                   <b>
-                    Click
                     <Link
                       style={{ color: "white", fontWeight: "800" }}
                       to={`${match.path}/covid-19`}
                     >
-                      {" "}
-                      HERE{" "}
+                      Click HERE for the Golf &amp; Country Club COVID-19
+                      guidelines.
                     </Link>
-                    for the Golf &amp; Country Club COVID-19 guidelines.
                   </b>
                 </div>
               ) : (
