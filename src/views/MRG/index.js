@@ -82,6 +82,41 @@ export default function Miccosukee(props) {
     closeModal(setShowContactModal);
   }, []);
 
+  //reroute
+  useEffect(() => {
+    if (
+      window.location.pathname === "/mrg/dining-nightlife" ||
+      window.location.pathname === "/mrg/dining-nightlife/"
+    ) {
+      props.history.push("/mrg");
+    }
+    if (
+      window.location.pathname === "/mrg/gaming" ||
+      window.location.pathname === "/mrg/gaming/"
+    ) {
+      props.history.push("/mrg");
+    }
+    if (
+      window.location.pathname === "/mrg/upcoming-events" ||
+      window.location.pathname === "/mrg/upcoming-events/"
+    ) {
+      props.history.push("/mrg/events");
+    }
+    if (
+      location.pathname === "/mrg/contact" ||
+      location.pathname === "/mrg/contact/"
+    ) {
+      props.history.push("/mrg");
+      setShowContactModal(true);
+    } else {
+      closeModal(setShowContactModal);
+    }
+  }, []);
+
+  // show food menu on load if url matches.
+  // close contact modal on mount if url does not match menu url.
+  useEffect(() => {}, []);
+
   const openModal = (setState) => {
     setState(true);
   };

@@ -60,8 +60,8 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     }
   }, []);
 
-  // When category changes, insert default upcomming text if needed.
   useEffect(() => {
+    // When category changes, insert default upcomming text if needed.
     const renderUpcommingDefault = () => {
       if (document.getElementById("upcomming")) {
         if (!document.getElementById("upcomming").innerText) {
@@ -76,7 +76,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
 
   // Eventbrite - create widget for each id
   useEffect(() => {
-    events.map((event) => {
+    events(language).map((event) => {
       if (event.buttons) {
         var exampleCallbackEvents = function () {
           console.log("Order complete!");
@@ -92,7 +92,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         });
       }
     });
-  });
+  }, []);
 
   const handleBadgeClick = (category) => {
     setCategory(category);
@@ -143,7 +143,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         >
           {language ? "ALL EVENTS" : "TODOS LOS EVENTOS"}
         </Badge>
-        {events.map((event) => {
+        {events(language).map((event) => {
           if (event.category) {
             return (
               <Badge
@@ -208,7 +208,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     };
 
     const renderUpcommingEvents = () => {
-      return events.map((event) => {
+      return events(language).map((event) => {
         if (isCategory(event)) {
           if (isUpcomming(event)) {
             return (
@@ -220,9 +220,11 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                   event.link
                 )}
                 <h6>{`${event.startDate} - ${event.endDate}`}</h6>
-                <h6>{`Admission: ${event.admission}`}</h6>
+                <h6>{`${language ? "Admission: " : "Admisión: "}${
+                  event.admission
+                }`}</h6>
                 <p>{event.excerpt}</p>
-                {event.buttons ? (
+                {event.buttons[0] ? (
                   <Button
                     color="success"
                     id={`${event.buttons[0].eventbrite.modalTriggerElementId}events`}
@@ -232,7 +234,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                     className={classes.button}
                     variant="contained"
                   >
-                    REGISTER HERE
+                    {event.buttons[0].name}
                   </Button>
                 ) : null}
               </div>
@@ -243,7 +245,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     };
 
     const renderPastEvents = () => {
-      return events.map((event) => {
+      return events(language).map((event) => {
         if (isCategory(event)) {
           if (!isUpcomming(event)) {
             return (

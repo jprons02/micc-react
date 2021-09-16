@@ -44,7 +44,7 @@ const Miccosukee = (props) => {
   let { path } = useRouteMatch();
   let location = useLocation();
 
-  // rerouting
+  //rerouting
   useEffect(() => {
     //All subdomains are pointed to miccosukee.com or .io
     let host = window.location.host;
@@ -70,16 +70,34 @@ const Miccosukee = (props) => {
         location.pathname;
     }
 
-    if (window.location.pathname === "/win") {
+    if (
+      window.location.pathname === "/win" ||
+      window.location.pathname === "/win/"
+    ) {
       props.history.push("/mrg/promotions");
     }
-    if (window.location.pathname === "/tribe") {
-      props.history.push("/history");
-    }
-    if (window.location.pathname === "/win/es") {
+    if (
+      window.location.pathname === "/win/es" ||
+      window.location.pathname === "/win/es/"
+    ) {
       props.history.push("/mrg/promotions/es");
     }
-    if (window.location.pathname === "/careers") {
+    if (
+      window.location.pathname === "/tribe" ||
+      window.location.pathname === "/tribe/"
+    ) {
+      props.history.push("/history");
+    }
+    if (
+      window.location.pathname === "/adp-job-board" ||
+      window.location.pathname === "/adp-job-board/"
+    ) {
+      props.history.push("/careers");
+    }
+    if (
+      window.location.pathname === "/careers" ||
+      window.location.pathname === "/careers/"
+    ) {
       props.history.push("/mrg");
       window.location.href = mrgBusinessInfo.careersLink;
     }

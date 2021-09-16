@@ -17,6 +17,9 @@ import Button from "components/CustomButtons/Button.js";
 // Styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
 
+// Context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const EventPage = ({ entityMargin, entity }) => {
@@ -26,10 +29,11 @@ const EventPage = ({ entityMargin, entity }) => {
   const classes = useStyles();
 
   let match = useRouteMatch();
+  const language = useLanguage();
 
   // Fetch event that matches url and set as state
   useEffect(() => {
-    const matchedEvent = events.find((event) => {
+    const matchedEvent = events(language).find((event) => {
       const eventUrl = `${urlify(event.title)}${event.startDate
         .split("/")
         .join("")}`;
@@ -47,7 +51,7 @@ const EventPage = ({ entityMargin, entity }) => {
       };
       history.push(url());
     }
-  }, []);
+  }, [language]);
 
   useEffect(() => {
     if (event) {
@@ -154,7 +158,7 @@ const EventPage = ({ entityMargin, entity }) => {
               className={classes.button}
               variant="contained"
             >
-              REGISTER HERE
+              {event.buttons[0].name}
             </Button>
           );
         }

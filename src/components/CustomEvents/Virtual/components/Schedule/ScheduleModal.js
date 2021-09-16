@@ -20,7 +20,7 @@ import Schedule from "components/CustomEvents/Virtual/components/Schedule/Schedu
 
 const useStyles = makeStyles(modalStyle);
 
-export default function LoginModal(props) {
+export default function ScheduleModal(props) {
   const classes = useStyles();
 
   return (
