@@ -362,7 +362,7 @@ const VirtualEvent = (props) => {
             }}
             tabs={[
               {
-                tabName: "Event",
+                tabName: "Artist Info",
                 //tabIcon: Face,
                 tabContent: (
                   <div style={{ marginTop: "15px" }}>
@@ -374,11 +374,13 @@ const VirtualEvent = (props) => {
                   </div>
                 ),
               },
+              /*
               {
                 tabName: "Vendors",
                 //tabIcon: Chat,
                 tabContent: <React.Fragment>{renderVendors()}</React.Fragment>,
               },
+              */
               {
                 tabName: "Extras",
                 //tabIcon: Build,
@@ -416,7 +418,7 @@ const VirtualEvent = (props) => {
             </Grid>
             <Grid md={4} item>
               {renderSchedule()}
-              {renderVendors()}
+              {/*renderVendors()*/}
               {renderExtras()}
             </Grid>
           </Grid>

@@ -16,6 +16,10 @@ import frankDesktop from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempo
 import frankMobile from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_mobile.jpg";
 import jamesDesktop from "assets/event/aid21/JamesJones_desktop.jpg";
 import jamesMobile from "assets/event/aid21/JamesJones_mobile.jpg";
+import marikaDesktop from "assets/event/aid21/Marika_desktop.jpg";
+import marikaMobile from "assets/event/aid21/Marika_mobile.jpg";
+import cristinaDesktop from "assets/event/aid21/Cristina_desktop.jpg";
+import cristinaMobile from "assets/event/aid21/Cristina_mobile.jpg";
 
 // @material-ui/icons
 import Typography from "@material-ui/core/Typography";
@@ -230,7 +234,7 @@ const AID = (props) => {
 
   const eventCardsContent = [
     {
-      title: "Featured Performers",
+      title: "Featured Artists",
       content: [
         {
           cardTitle: "Yellow Bird Indian Dancers",
@@ -271,13 +275,28 @@ const AID = (props) => {
         },
         {
           cardTitle: "Marika Sila",
-          image: image1,
-          dkImage: yellowBirdDancersDesktop,
+          image: marikaMobile,
+          dkImage: marikaDesktop,
           cardBody: () => (
             <span>
-              Known as "The Hoop Ninja", she puts a modern spin on the native
-              hoop dancing tradition, integrating elements such as smoke, fire
-              and lights in her mesmerizing routines.
+              Known as "The Hoop Ninja", Marika is an actress, influencer and
+              entertainer from the Inuit Tribe who puts a modern spin on the
+              native hoop dancing tradition, integrating elements such as smoke,
+              fire and lights in her mesmerizing routines. As an actress, she is
+              best known for her work in the popular TV series “The Twilight
+              Zone”.
+            </span>
+          ),
+        },
+        {
+          cardTitle: "Cristina Osceola",
+          image: cristinaMobile,
+          dkImage: cristinaDesktop,
+          cardBody: () => (
+            <span>
+              As a proud Miccosukee tribal member, Cristina shares her culture
+              with the world through various art forms, including painting,
+              drawing, sewing and jewelry-making.
             </span>
           ),
         },
@@ -373,6 +392,20 @@ const AID = (props) => {
     },
     {
       key: "Marika Sila",
+      purchased: true,
+      poster: image1,
+      source: weatherVid,
+      link: "https://youtube.com",
+      releaseTime: {
+        year: 2021,
+        month: 3,
+        day: 18,
+        hour: 11,
+        minutes: 24,
+      },
+    },
+    {
+      key: "Cristina Osceola",
       purchased: true,
       poster: image1,
       source: weatherVid,
@@ -584,6 +617,7 @@ const AID = (props) => {
       },
       link: "https://mapa-media.s3.amazonaws.com/events/AID_ColoringBook.pdf",
     },
+    /*
     {
       title: "RAFFLE",
       text:
@@ -591,6 +625,7 @@ const AID = (props) => {
       linkText: "DOWNLOAD RULES",
       link: "https://www.yahoo.com",
     },
+    */
   ];
 
   const welcomeSectionContent = {
