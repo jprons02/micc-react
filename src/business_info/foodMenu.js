@@ -128,7 +128,7 @@ export const sawgrassCafeMenu = [
       { name: "Toast", price: "$1.84" },
       { name: "Pan de Bono", price: "$2.07" },
       { name: "Cuban Toast", price: "$2.49" },
-      { name: "Pastelitos", price: "$2.20" },
+      { name: "Pastelitos", price: "$2.30" },
       { name: "Papa Rellena", price: "$2.53" },
       { name: "Tequeño", price: "$2.53" },
       { name: "Empanadas", price: "$2.76" },
@@ -180,7 +180,7 @@ export const sawgrassCafeMenu = [
     items: [
       { name: "Grilled Cheese", price: "$6.67" },
       { name: "Chicken Salad Sandwich", price: "$8.51" },
-      { name: "BLT Sandwich", price: "$8.00" },
+      { name: "BLT Sandwich", price: "$8.23" },
       { name: "Ham & Cheese Sandwich", price: "$8.28" },
       { name: "Turkey & Provolone Sandwich", price: "$8.23" },
       { name: "Croqueta Preparada", price: "$8.74" },
@@ -201,7 +201,7 @@ export const sawgrassCafeMenu = [
     name: "Soup",
     items: [
       { name: "Miccosukee Chicken Soup", price: "$5.52" },
-      { name: "Soup of the Day", price: "$5.50" },
+      { name: "Soup of the Day", price: "$5.52" },
     ],
   },
   {
