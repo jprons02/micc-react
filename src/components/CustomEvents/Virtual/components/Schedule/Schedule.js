@@ -44,7 +44,7 @@ export default function CustomVirtualEventSchedule(props) {
   // Formating away from military time and adding AM/PM
   const formatTime = (hour, minute) => {
     if (hour === 0 && minute === 0) {
-      return "TBD";
+      return "TBA";
     }
     if (hour == 12) {
       return `${hour}:${minute} PM`;
