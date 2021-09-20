@@ -565,7 +565,7 @@ const AID = (props) => {
                     lineHeight: "1.1",
                   }}
                 >
-                  CHECK BACK EVERYDAY THIS
+                  CHECK BACK EVERY DAY THIS
                   <br /> WEEK TO COLLECT ALL 5 BOOKS
                 </Typography>
                 <Typography
