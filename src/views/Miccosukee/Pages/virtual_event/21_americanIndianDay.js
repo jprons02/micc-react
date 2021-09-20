@@ -14,6 +14,7 @@ import yellowBirdDancersDesktop from "assets/event/aid21/FamilySedona1x1-1.5.jpg
 import yellowBirdDancersMobile from "assets/event/aid21/FamilySedona.jpg";
 import frankDesktop from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_desktop.jpg";
 import frankMobile from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_mobile.jpg";
+import frankPreview from "assets/event/aid21/FrankWalnPreview.jpg";
 import jamesDesktop from "assets/event/aid21/JamesJones_desktop.jpg";
 import jamesMobile from "assets/event/aid21/JamesJones_mobile.jpg";
 import marikaDesktop from "assets/event/aid21/Marika_desktop.jpg";
@@ -347,19 +348,25 @@ const AID = (props) => {
   ];
 
   // Set order of videos young to old for logic to work
+  /* example of times
+    month: 3,
+    day: 18,
+    hour: 23,
+    minutes: 28,
+  */
   const events = [
     {
       key: "Yellow Bird Indian Dancers",
       purchased: true,
       poster: image1,
       source: beesVid,
-      link: "https://google.com",
+      //link: "https://google.com",
       releaseTime: {
         year: 2021,
-        month: 3,
-        day: 18,
-        hour: 23,
-        minutes: 28,
+        month: 10,
+        day: 25,
+        hour: 0,
+        minutes: 0,
       },
     },
     {
@@ -370,10 +377,10 @@ const AID = (props) => {
       link: "https://yahoo.com",
       releaseTime: {
         year: 2021,
-        month: 3,
-        day: 18,
-        hour: 12,
-        minutes: 27,
+        month: 10,
+        day: 25,
+        hour: 0,
+        minutes: 0,
       },
     },
     {
@@ -384,10 +391,10 @@ const AID = (props) => {
       link: "https://youtube.com",
       releaseTime: {
         year: 2021,
-        month: 3,
-        day: 18,
-        hour: 11,
-        minutes: 24,
+        month: 10,
+        day: 25,
+        hour: 0,
+        minutes: 0,
       },
     },
     {
@@ -398,10 +405,10 @@ const AID = (props) => {
       link: "https://youtube.com",
       releaseTime: {
         year: 2021,
-        month: 3,
-        day: 18,
-        hour: 11,
-        minutes: 24,
+        month: 10,
+        day: 25,
+        hour: 0,
+        minutes: 0,
       },
     },
     {
@@ -412,26 +419,33 @@ const AID = (props) => {
       link: "https://youtube.com",
       releaseTime: {
         year: 2021,
-        month: 3,
-        day: 18,
-        hour: 11,
-        minutes: 24,
+        month: 10,
+        day: 25,
+        hour: 0,
+        minutes: 0,
       },
     },
     {
-      key: "Free Preview 1",
+      key: "FRANK WALN - Event Preview",
       purchased: false,
-      poster: image1,
+      poster: frankPreview,
       source: weatherVid,
-      link: "https://youtube.com",
-      releaseTime: {
-        year: 2021,
-        month: 3,
-        day: 18,
-        hour: 11,
-        minutes: 24,
-      },
+      link: "https://youtu.be/ORs_MyiUPUA",
+      /*
+      embed: () => (
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ORs_MyiUPUA"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      ),
+      */
     },
+    /*
     {
       key: "Free Preview 2",
       purchased: false,
@@ -488,6 +502,7 @@ const AID = (props) => {
         minutes: 24,
       },
     },
+    */
   ];
 
   const vendors = [

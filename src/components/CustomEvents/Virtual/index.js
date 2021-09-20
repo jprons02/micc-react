@@ -173,7 +173,17 @@ const VirtualEvent = (props) => {
         >
           PURCHASED EVENT VIDEO LINKS
         </Typography>
-        {props.events.map((event) => {
+        <p
+          style={{
+            color: "white",
+            fontSize: "18px",
+            fontWeight: "500",
+          }}
+        >
+          Coming Soon!
+        </p>
+
+        {/*props.events.map((event) => {
           if (event.purchased) {
             return (
               <div key={event.key} style={{ marginBottom: "5px" }}>
@@ -191,10 +201,13 @@ const VirtualEvent = (props) => {
               </div>
             );
           }
-        })}
+        })*/}
       </div>
     );
   };
+
+  const boxShadow =
+    "rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 12%) 0px 1px 5px 0px";
 
   const renderPreviewLinks = () => {
     return (
@@ -209,13 +222,25 @@ const VirtualEvent = (props) => {
         </Typography>
         {props.events.map((event) => {
           if (!event.purchased) {
-            return (
-              <div key={event.key} style={{ marginBottom: "5px" }}>
-                <a target="_blank" href={event.link}>
-                  {event.key}
-                </a>
-              </div>
-            );
+            if (event.embed) {
+              //console.log(event.embed());
+              return <div key={event.key}>{event.embed()}</div>;
+            } else {
+              return (
+                <div key={event.key} style={{ marginBottom: "5px" }}>
+                  <a target="_blank" href={event.link}>
+                    <img
+                      src={event.poster}
+                      style={{
+                        boxShadow: boxShadow,
+                        width: "100%",
+                        maxWidth: "350px",
+                      }}
+                    />
+                  </a>
+                </div>
+              );
+            }
           }
         })}
       </div>
