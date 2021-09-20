@@ -402,7 +402,7 @@ const MrgCovidInfo = (props) => {
             <li style={liStyle}>
               {props.language
                 ? "There have been disinfecting wipe dispensers installed all around the facility."
-                : "Se han instalado dispensadores de toallas desinfectantes alrededor de toda la instalación."}
+                : "Se han instalado dispensadores de toallas desinfectantes alrededor de toda la edificio."}
             </li>
             <ul style={innerUlStyle}>
               <li style={liStyle}>

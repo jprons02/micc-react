@@ -48,7 +48,7 @@ const AID = (props) => {
   const eventbriteID = eventbriteIDs.aid2021;
   //Eventbrite TestID: 144427499539
 
-  const [isLoggedIn, setLoggedIn] = useState("not matched");
+  const [isLoggedIn, setLoggedIn] = useState("free");
 
   useEffect(() => {
     var exampleCallback = function () {
