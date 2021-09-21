@@ -21,7 +21,8 @@ export const events = (language) => {
 
     {
       title: "American Indian Day (Virtual Event)",
-      type: "standard",
+      type: "virtual",
+      link: "/virtual-event/aid",
       category: "",
       annual: true,
       admission: language ? "Free - $10" : "Gratis - $10",

@@ -441,6 +441,7 @@ const MrgCovidInfo = (props) => {
           </ul>
         </Collapse>
       </div>
+
       <div style={sectionStyle}>
         <h4
           onClick={() => setMrg({ ...mrg, gaming: !mrg.gaming })}
@@ -450,6 +451,7 @@ const MrgCovidInfo = (props) => {
         </h4>
         <Collapse in={mrg.gaming}>
           {renderGaming()}
+          {/*
           <p style={paddingLeftStyle}>
             <b>
               {props.language
@@ -531,6 +533,7 @@ const MrgCovidInfo = (props) => {
               </li>
             </ul>
           </ul>
+          */}
           <span
             style={{
               fontSize: "10px",
@@ -540,7 +543,7 @@ const MrgCovidInfo = (props) => {
           >
             {props.language
               ? "Once disqualification is declared, it is final. Offers are subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation that such status has been rescinded."
-              : "Cualquier individuo que ha sido autoexcluido o ha traspasado en o por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin documentación de que el status ha cambiado. Una vez que han declarado descalificación, es final. La oferta puede cambiar o ser cancelada, sin noticia, a la discreción de la administración. Un asistente del Player’s Club tendrá más detalles."}
+              : "Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles."}
           </span>
         </Collapse>
       </div>

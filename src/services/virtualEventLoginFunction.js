@@ -1,10 +1,13 @@
 import axios from "axios";
 import { keys } from "keys.js";
 
+let url = "https://www.eventbriteapi.com/v3/events/165141162663/attendees/";
+
 export const virtualEventLoginFunction = async (eventID, email, callback) => {
   const dataString = JSON.stringify({
     email: email,
     eventID: eventID,
+    url: url,
   });
 
   try {
@@ -21,13 +24,13 @@ export const virtualEventLoginFunction = async (eventID, email, callback) => {
       // check if user inputted email is in response.data here... and send to callback.
 
       // using find method because multiple entries is possible, some paid, some free. need to prioritize paid.
-      const matchedPurchased = response.data.find(
+      const matchedPurchased = response.data[1].find(
         (item) =>
           item.email.toLowerCase() === email.toLowerCase() &&
           item.ticketName === "Full Virtual Event PASS"
       );
 
-      const matchedFree = response.data.find(
+      const matchedFree = response.data[1].find(
         (item) => item.email.toLowerCase() === email.toLowerCase()
       );
 
@@ -35,6 +38,9 @@ export const virtualEventLoginFunction = async (eventID, email, callback) => {
         callback("purchased");
       } else if (matchedFree) {
         callback("free");
+      } else if (response.data[0].has_more_items) {
+        url = `https://www.eventbriteapi.com/v3/events/165141162663/attendees/?continuation=${response.data[0].continuation}`;
+        virtualEventLoginFunction(eventID, email, callback);
       } else {
         callback("not matched");
       }

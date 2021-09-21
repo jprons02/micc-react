@@ -27,8 +27,8 @@ export const mrgStatus = {
       isOpen: true,
       details: (language) => [
         language
-          ? "New hours of operation starting Monday, December 14 are as follows: Monday – Sunday: 12 PM – 8 PM"
-          : "Nuevo horario de operaciones comenzando el lunes, 14 de diciembre: lunes-domingo: 12 PM – 8 PM",
+          ? "Hours of Operation: Monday – Sunday: 12 PM – 8 PM"
+          : "Horio de Operaciones: lunes - domingo: 12 PM - 8 PM",
         language
           ? "Will have masks and gloves available for sale"
           : "Tendrá mascarillas y guantes a la venta",
