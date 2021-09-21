@@ -95,6 +95,11 @@ const virtualEventsStyle = {
     fontFamily: "'PhosphateSolid', 'Roboto'",
     color: "white",
   },
+  subHeaderRedLinksPurchasedHeader: {
+    fontSize: "26px",
+    fontFamily: "'PhosphateSolid', 'Roboto'",
+    color: "white",
+  },
   videoSection: {
     margin: "30px 0",
   },
@@ -212,6 +217,9 @@ const virtualEventsStyle = {
     },
     subHeaderRedLinksPurchased: {
       fontSize: "26px",
+    },
+    subHeaderRedLinksPurchasedHeader: {
+      fontSize: "32px",
     },
     button: {
       paddingTop: "14px",

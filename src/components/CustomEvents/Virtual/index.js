@@ -162,6 +162,7 @@ const VirtualEvent = (props) => {
     );
   };
 
+  /*
   const renderEventLinks = () => {
     return (
       <div className={classes.subsection}>
@@ -183,7 +184,61 @@ const VirtualEvent = (props) => {
           Coming Soon!
         </p>
 
-        {/*props.events.map((event) => {
+        {props.events.map((event) => {
+          if (event.purchased) {
+            return (
+              <div key={event.key} style={{ marginBottom: "5px" }}>
+                <a
+                  style={{
+                    color: "white",
+                    fontSize: "18px",
+                    fontWeight: "500",
+                  }}
+                  target="_blank"
+                  href={event.link}
+                >
+                  {event.key}
+                </a>
+              </div>
+            );
+          }
+        })}
+      </div>
+    );
+  };
+  */
+
+  const renderEventLinks = () => {
+    return (
+      <div className={classes.subsection}>
+        <Typography
+          className={classes.subHeaderRedLinksPurchasedHeader}
+          paragraph
+          variant="h5"
+          component="h3"
+        >
+          PURCHASED CONTENT
+        </Typography>
+        <div style={{ marginTop: "28px" }}>
+          <Typography
+            className={classes.subHeaderRedLinksPurchased}
+            paragraph
+            variant="h6"
+            component="h4"
+          >
+            Performers:
+          </Typography>
+          <p
+            style={{
+              color: "white",
+              fontSize: "18px",
+              fontWeight: "500",
+            }}
+          >
+            Coming Soon!
+          </p>
+
+          {/*props.events.map((event) => {
           if (event.purchased) {
             return (
               <div key={event.key} style={{ marginBottom: "5px" }}>
@@ -202,6 +257,19 @@ const VirtualEvent = (props) => {
             );
           }
         })*/}
+        </div>
+        {/*
+        <div style={{ marginTop: "20px" }}>
+          <Typography
+            className={classes.subHeaderRedLinksPurchased}
+            paragraph
+            variant="h6"
+            component="h4"
+          >
+            Painting:
+          </Typography>
+        </div>
+        */}
       </div>
     );
   };
@@ -227,7 +295,7 @@ const VirtualEvent = (props) => {
               return <div key={event.key}>{event.embed()}</div>;
             } else {
               return (
-                <div key={event.key} style={{ marginBottom: "5px" }}>
+                <div key={event.key} style={{ marginBottom: "20px" }}>
                   <a target="_blank" href={event.link}>
                     <img
                       src={event.poster}

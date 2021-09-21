@@ -12,6 +12,7 @@ import nativeLogo from "assets/img/events/aid/native_logo.png";
 //import yellowBirdDancersDesktop from "assets/event/aid21/FamilySedona1x1.jpg";
 import yellowBirdDancersDesktop from "assets/event/aid21/FamilySedona1x1-1.5.jpg";
 import yellowBirdDancersMobile from "assets/event/aid21/FamilySedona.jpg";
+import yellowBirdPreview from "assets/event/aid21/yellowBirdPreview.jpg";
 import frankDesktop from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_desktop.jpg";
 import frankMobile from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_mobile.jpg";
 import frankPreview from "assets/event/aid21/FrankWalnPreview.jpg";
@@ -445,21 +446,14 @@ const AID = (props) => {
       ),
       */
     },
-    /*
     {
-      key: "Free Preview 2",
+      key: "YELLOW BIRD - Event Preview",
       purchased: false,
-      poster: image1,
+      poster: yellowBirdPreview,
       source: weatherVid,
-      link: "https://youtube.com",
-      releaseTime: {
-        year: 2021,
-        month: 3,
-        day: 18,
-        hour: 11,
-        minutes: 24,
-      },
+      link: "https://www.youtube.com/watch?v=a1PI23qY2II",
     },
+    /*
     {
       key: "Free Preview 3",
       purchased: false,
