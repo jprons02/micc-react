@@ -43,6 +43,7 @@ export const virtualEventLoginFunction = async (eventID, email, callback) => {
         virtualEventLoginFunction(eventID, email, callback);
       } else {
         callback("not matched");
+        url = "https://www.eventbriteapi.com/v3/events/165141162663/attendees/";
       }
     }
   } catch (error) {
