@@ -170,7 +170,7 @@ const SpecializedUnits = () => {
                   <p>
                     <span style={style}>Equipo de Buceo</span>
                     <br />
-                    El equipo de buceo Miccosukee sirve al departamento de
+                    El equipo de buceo Miccosukee sirve al Departamento de
                     policía y a la comunidad realizando operaciones de rescate y
                     registrando las vías fluviales dentro de la jurisdicción de
                     la Tribu para recuperar vehículos, armas, personas y pruebas

@@ -22,6 +22,7 @@ import marikaDesktop from "assets/event/aid21/Marika_desktop.jpg";
 import marikaMobile from "assets/event/aid21/Marika_mobile.jpg";
 import cristinaDesktop from "assets/event/aid21/Cristina_desktop.jpg";
 import cristinaMobile from "assets/event/aid21/Cristina_mobile.jpg";
+import cristinaPreview from "assets/event/aid21/cristinaPreview.jpg";
 
 // @material-ui/icons
 import Typography from "@material-ui/core/Typography";
@@ -452,6 +453,13 @@ const AID = (props) => {
       poster: yellowBirdPreview,
       source: weatherVid,
       link: "https://www.youtube.com/watch?v=a1PI23qY2II",
+    },
+    {
+      key: "Cristina Osceola - Event Preview",
+      purchased: false,
+      poster: cristinaPreview,
+      source: weatherVid,
+      link: "https://www.youtube.com/watch?v=QyyKJiv4Ec0",
     },
     /*
     {

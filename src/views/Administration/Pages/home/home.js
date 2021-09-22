@@ -51,7 +51,7 @@ const Home = (props) => {
       title: language ? "Police" : "Policía",
       body: language
         ? "The Miccosukee Police Department was established in 1976."
-        : "El departamento de Policía Miccosukee se estableció en 1976.",
+        : "El Departamento de Policía Miccosukee se estableció en 1976.",
       buttonText: language ? "View Pages" : "Ver Páginas",
       linkObj: {
         type: "internal",

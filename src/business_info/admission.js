@@ -19,7 +19,7 @@ export const villagePricing = [
 export const airboatsPricing = [
   {
     title: (language) => (language ? "Adult admission" : "Adultos"),
-    detail: (language) => (language ? "12 years old and up" : "12 años y mas"),
+    detail: (language) => (language ? "12 years old and up" : "12 años y más"),
     price: (language) => "$15",
   },
   {
@@ -39,9 +39,7 @@ export const airboatsPricing = [
         ? "Private tour, 30 minutes"
         : `Tour de grupo privado – 30 minutos`,
     detail: (language) =>
-      language
-        ? "Minimum six people per boat"
-        : "Mínimo 6 pasajeros por bote",
+      language ? "Minimum six people per boat" : "Mínimo 6 pasajeros por bote",
     price: (language) => "$150",
   },
   {

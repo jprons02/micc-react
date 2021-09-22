@@ -92,7 +92,9 @@ const PricingModal = (props) => {
       >
         <div className={classes.priceSection}>
           <Typography paragraph className={classes.pricingTitle} component="h3">
-            Miccosukee Village Admission
+            {language
+              ? "Miccosukee Village Admission"
+              : "Entradas para el Village"}
           </Typography>
           <p className={classes.detail}>
             {language

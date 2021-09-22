@@ -24,6 +24,10 @@ import LoginModal from "components/CustomEvents/Virtual/components/Login/LoginMo
 import VirtualEventFooter from "components/CustomFooters/VirtualEventFooter.js";
 import EventCards from "components/CustomEvents/Virtual/components/EventCards";
 
+import painting1 from "assets/event/aid21/Painting1.png";
+import painting2 from "assets/event/aid21/Painting2.png";
+import painting3 from "assets/event/aid21/Painting3.png";
+
 // Context
 import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";
 import { VirtualEventLoginFormProvider } from "contexts/VirtualEventLoginFormContext.js";
@@ -266,8 +270,80 @@ const VirtualEvent = (props) => {
             variant="h6"
             component="h4"
           >
-            Painting:
+            Painting classes with Cristina Osceola:
           </Typography>
+          <div
+            style={{
+              display: "inline-block",
+              paddingBottom: "10px",
+              paddingRight: "15px",
+            }}
+          >
+            <figure style={{ margin: "0" }}>
+              <img
+                style={{
+                  height: "185px",
+                  marginLeft: "-14px",
+                  marginRight: "8px",
+                }}
+                src={painting1}
+                alt="panther"
+              />
+              <figcaption
+                style={{ fontWeight: "500", marginTop: "-5px", color: "white" }}
+              >
+                Time: TBA
+              </figcaption>
+            </figure>
+          </div>
+          <div
+            style={{
+              display: "inline-block",
+              paddingBottom: "10px",
+              paddingRight: "15px",
+            }}
+          >
+            <figure style={{ margin: "0" }}>
+              <img
+                style={{
+                  height: "185px",
+                  marginLeft: "-18px",
+                  marginRight: "8px",
+                }}
+                src={painting2}
+                alt="panther"
+              />
+              <figcaption
+                style={{ fontWeight: "500", marginTop: "-5px", color: "white" }}
+              >
+                Time: TBA
+              </figcaption>
+            </figure>
+          </div>
+          <div
+            style={{
+              display: "inline-block",
+              paddingBottom: "10px",
+              paddingRight: "15px",
+            }}
+          >
+            <figure style={{ margin: "0" }}>
+              <img
+                style={{
+                  height: "185px",
+                  marginLeft: "-14px",
+                  marginRight: "8px",
+                }}
+                src={painting3}
+                alt="panther"
+              />
+              <figcaption
+                style={{ fontWeight: "500", marginTop: "-5px", color: "white" }}
+              >
+                Time: TBA
+              </figcaption>
+            </figure>
+          </div>
         </div>
         */}
       </div>

@@ -89,7 +89,7 @@ export default function CustomVirtualEventSchedule(props) {
         <TableHead>
           <TableRow>
             <StyledTableCell>TIME</StyledTableCell>
-            <StyledTableCell align="left">ACTIVITY</StyledTableCell>
+            <StyledTableCell align="left">ARTIST</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>{renderTableBody()}</TableBody>
