@@ -8,16 +8,21 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
+// Service
+import { formatTime } from "services/formatTime";
+
 const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: theme.palette.common.white,
     color: theme.palette.common.black,
+    paddingLeft: "3px",
     paddingRight: 0,
     minWidth: "70px",
   },
   body: {
     fontSize: 12,
-    paddingRight: 0,
+    paddingRight: "3px",
+    paddingLeft: "3px",
     minWidth: "70px",
   },
 }))(TableCell);
@@ -40,22 +45,6 @@ const useStyles = makeStyles({
 
 export default function CustomVirtualEventSchedule(props) {
   const classes = useStyles();
-
-  // Formating away from military time and adding AM/PM
-  const formatTime = (hour, minute) => {
-    if (hour === 0 && minute === 0) {
-      return "TBA";
-    }
-    if (hour == 12) {
-      return `${hour}:${minute} PM`;
-    }
-    if (hour > 12) {
-      return `${hour - 12}:${minute} PM`;
-    }
-    if (hour < 12) {
-      return `${hour}:${minute} AM`;
-    }
-  };
 
   const renderTableBody = () => {
     if (props.events) {

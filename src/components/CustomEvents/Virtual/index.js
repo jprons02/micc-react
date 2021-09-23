@@ -28,6 +28,9 @@ import painting1 from "assets/event/aid21/Painting1.png";
 import painting2 from "assets/event/aid21/Painting2.png";
 import painting3 from "assets/event/aid21/Painting3.png";
 
+// Service
+import { formatTime } from "services/formatTime";
+
 // Context
 import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";
 import { VirtualEventLoginFormProvider } from "contexts/VirtualEventLoginFormContext.js";
@@ -230,7 +233,7 @@ const VirtualEvent = (props) => {
             variant="h6"
             component="h4"
           >
-            Performers:
+            Event Video Links:
           </Typography>
           <p
             style={{
@@ -243,27 +246,30 @@ const VirtualEvent = (props) => {
           </p>
 
           {/*props.events.map((event) => {
-          if (event.purchased) {
-            return (
-              <div key={event.key} style={{ marginBottom: "5px" }}>
-                <a
-                  style={{
-                    color: "white",
-                    fontSize: "18px",
-                    fontWeight: "500",
-                  }}
-                  target="_blank"
-                  href={event.link}
-                >
-                  {event.key}
-                </a>
-              </div>
-            );
-          }
-        })*/}
+            if (event.purchased) {
+              return (
+                <div key={event.key} style={{ marginBottom: "12px" }}>
+                  <a
+                    style={{
+                      color: "white",
+                      fontSize: "18px",
+                      fontWeight: "500",
+                      textDecoration: "underline",
+                    }}
+                    target="_blank"
+                    href={event.link}
+                  >
+                    {`${event.key}, ${formatTime(
+                      event.releaseTime.hour,
+                      event.releaseTime.minutes
+                    )}`}
+                  </a>
+                </div>
+              );
+            }
+          })*/}
         </div>
-        {/*
-        <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "30px" }}>
           <Typography
             className={classes.subHeaderRedLinksPurchased}
             paragraph
@@ -272,6 +278,16 @@ const VirtualEvent = (props) => {
           >
             Painting classes with Cristina Osceola:
           </Typography>
+          <p
+            style={{
+              color: "white",
+              fontSize: "18px",
+              fontWeight: "500",
+            }}
+          >
+            Before the art class on Saturday, download, print and sketch out the
+            images
+          </p>
           <div
             style={{
               display: "inline-block",
@@ -279,22 +295,32 @@ const VirtualEvent = (props) => {
               paddingRight: "15px",
             }}
           >
-            <figure style={{ margin: "0" }}>
-              <img
-                style={{
-                  height: "185px",
-                  marginLeft: "-14px",
-                  marginRight: "8px",
-                }}
-                src={painting1}
-                alt="panther"
-              />
-              <figcaption
-                style={{ fontWeight: "500", marginTop: "-5px", color: "white" }}
-              >
-                Time: TBA
-              </figcaption>
-            </figure>
+            <a
+              target="_blank"
+              href="https://mapa-media.s3.amazonaws.com/events/Painting1.pdf"
+            >
+              <figure style={{ margin: "0" }}>
+                <img
+                  style={{
+                    height: "185px",
+                    marginLeft: "-14px",
+                    marginRight: "8px",
+                  }}
+                  src={painting1}
+                  alt="panther"
+                />
+
+                <figcaption
+                  style={{
+                    fontWeight: "500",
+                    marginTop: "-5px",
+                    color: "white",
+                  }}
+                >
+                  Panther
+                </figcaption>
+              </figure>
+            </a>
           </div>
           <div
             style={{
@@ -303,22 +329,31 @@ const VirtualEvent = (props) => {
               paddingRight: "15px",
             }}
           >
-            <figure style={{ margin: "0" }}>
-              <img
-                style={{
-                  height: "185px",
-                  marginLeft: "-18px",
-                  marginRight: "8px",
-                }}
-                src={painting2}
-                alt="panther"
-              />
-              <figcaption
-                style={{ fontWeight: "500", marginTop: "-5px", color: "white" }}
-              >
-                Time: TBA
-              </figcaption>
-            </figure>
+            <a
+              target="_blank"
+              href="https://mapa-media.s3.amazonaws.com/events/Painting2.pdf"
+            >
+              <figure style={{ margin: "0" }}>
+                <img
+                  style={{
+                    height: "185px",
+                    marginLeft: "-18px",
+                    marginRight: "8px",
+                  }}
+                  src={painting2}
+                  alt="panther"
+                />
+                <figcaption
+                  style={{
+                    fontWeight: "500",
+                    marginTop: "-5px",
+                    color: "white",
+                  }}
+                >
+                  Turtle
+                </figcaption>
+              </figure>
+            </a>
           </div>
           <div
             style={{
@@ -327,25 +362,33 @@ const VirtualEvent = (props) => {
               paddingRight: "15px",
             }}
           >
-            <figure style={{ margin: "0" }}>
-              <img
-                style={{
-                  height: "185px",
-                  marginLeft: "-14px",
-                  marginRight: "8px",
-                }}
-                src={painting3}
-                alt="panther"
-              />
-              <figcaption
-                style={{ fontWeight: "500", marginTop: "-5px", color: "white" }}
-              >
-                Time: TBA
-              </figcaption>
-            </figure>
+            <a
+              target="blank"
+              href="https://mapa-media.s3.amazonaws.com/events/Painting3.pdf"
+            >
+              <figure style={{ margin: "0" }}>
+                <img
+                  style={{
+                    height: "185px",
+                    marginLeft: "-14px",
+                    marginRight: "8px",
+                  }}
+                  src={painting3}
+                  alt="panther"
+                />
+                <figcaption
+                  style={{
+                    fontWeight: "500",
+                    marginTop: "-5px",
+                    color: "white",
+                  }}
+                >
+                  Panther &amp; Turtle
+                </figcaption>
+              </figure>
+            </a>
           </div>
         </div>
-        */}
       </div>
     );
   };
@@ -371,14 +414,21 @@ const VirtualEvent = (props) => {
               return <div key={event.key}>{event.embed()}</div>;
             } else {
               return (
-                <div key={event.key} style={{ marginBottom: "20px" }}>
+                <div
+                  key={event.key}
+                  style={{
+                    marginBottom: "20px",
+                    paddingRight: "20px",
+                    display: "inline-block",
+                  }}
+                >
                   <a target="_blank" href={event.link}>
                     <img
                       src={event.poster}
                       style={{
                         boxShadow: boxShadow,
                         width: "100%",
-                        maxWidth: "350px",
+                        maxWidth: "300px",
                       }}
                     />
                   </a>
