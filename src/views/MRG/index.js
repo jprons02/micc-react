@@ -103,6 +103,13 @@ export default function Miccosukee(props) {
       props.history.push("/mrg/events");
     }
     if (
+      window.location.pathname ===
+        "/mrg/event/american-indian-day-2020-09-28" ||
+      window.location.pathname === "/mrg/event/american-indian-day-2020-09-28/"
+    ) {
+      props.history.push("/virtual-event/aid");
+    }
+    if (
       location.pathname === "/mrg/contact" ||
       location.pathname === "/mrg/contact/"
     ) {
