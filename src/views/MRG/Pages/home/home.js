@@ -31,9 +31,6 @@ import StandardCard from "components/CustomCards/StandardCard.js";
 import Slider from "react-slick";
 
 // Images
-import image1 from "assets/img/bg.jpg";
-import image2 from "assets/img/bg2.jpg";
-import image3 from "assets/img/bg3.jpg";
 import heroImg1 from "assets/img/mrg/home/mrg_hero.jpg";
 
 import cardImage1 from "assets/img/mrg/gaming/machines/MRG_Gaming1.jpg";

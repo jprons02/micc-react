@@ -2,7 +2,6 @@
 // Stop showing popup after 1 time load... may need to change how state works
 
 import mrgImage from "assets/img/test/MonthlyPayouts_Calendar_April-1.jpg";
-import miccosukeeImage from "assets/img/bg.jpg";
 import aidImage from "assets/img/events/aid/aid_2021_popup_min.jpg";
 
 const d = new Date();

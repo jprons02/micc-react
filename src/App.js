@@ -5,12 +5,6 @@ import { Router, Route, Switch } from "react-router-dom";
 // google analytics
 import GA4React from "ga-4-react";
 
-// demo pages for this product
-import Components from "views/_demo_Components/Components.js";
-import LandingPage from "views/_demo_LandingPage/LandingPage.js";
-import ProfilePage from "views/_demo_ProfilePage/ProfilePage.js";
-import LoginPage from "views/_demo_LoginPage/LoginPage.js";
-
 // context
 import { LanguageProvider } from "contexts/languageContext.js";
 import { PopupProvider } from "contexts/PopupContext.js";
@@ -166,10 +160,6 @@ const App = () => {
               <FoodMenuProvider>
                 <Router history={hist}>
                   <Switch>
-                    <Route exact path="/landing-page" component={LandingPage} />
-                    <Route exact path="/profile-page" component={ProfilePage} />
-                    <Route exact path="/login-page" component={LoginPage} />
-                    <Route exact path="/components" component={Components} />
                     <Route exact path={"/virtual-event/aid"} component={AID} />
                     <Route path="/mrg" component={MRG} />
                     <Route path="/golf" component={Golf} />

@@ -6,7 +6,7 @@ import CovidPage from "views/Miccosukee/Pages/covidPage.js";
 import { airboatsColor } from "themes/colors.js";
 
 // Images
-import bgImage from "assets/img/bg3.jpg";
+import bgImage from "assets/img/village/Village_Header1.jpg";
 
 const sliderContent = [
   {
