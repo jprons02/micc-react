@@ -18,7 +18,7 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import Button from "components/CustomButtons/Button.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
 
 import image from "views/MRG/Pages/gaming/oneRewards/MiccosukeeOne_3Cards.jpg";
 

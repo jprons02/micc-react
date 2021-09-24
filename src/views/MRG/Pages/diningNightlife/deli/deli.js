@@ -12,8 +12,8 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/dining/deli/deli-01.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/dining/deli/deli-01.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

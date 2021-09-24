@@ -2,26 +2,23 @@ import React, { useEffect, useState } from "react";
 import VirtualEvent from "components/CustomEvents/Virtual";
 
 // My content
-import beesVid from "assets/event/bees.mp4";
-import birdsVid from "assets/event/birds.mp4";
-import weatherVid from "assets/event/weather.mp4";
-import logo from "assets/img/events/aid/AID-LOGO.png";
-import bannerbg from "assets/img/events/aid/bannerbg.jpg";
-import nativeLogo from "assets/img/events/aid/native_logo.png";
-//import yellowBirdDancersDesktop from "assets/event/aid21/FamilySedona1x1.jpg";
-import yellowBirdDancersDesktop from "assets/event/aid21/FamilySedona1x1-1.5.jpg";
-import yellowBirdDancersMobile from "assets/event/aid21/FamilySedona.jpg";
-import yellowBirdPreview from "assets/event/aid21/yellowBirdPreview.jpg";
-import frankDesktop from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_desktop.jpg";
-import frankMobile from "assets/event/aid21/Frank-11_Photo-Credit-Leslie-Frempong_mobile.jpg";
-import frankPreview from "assets/event/aid21/FrankWalnPreview.jpg";
-import jamesDesktop from "assets/event/aid21/JamesJones_desktop.jpg";
-import jamesMobile from "assets/event/aid21/JamesJones_mobile.jpg";
-import marikaDesktop from "assets/event/aid21/Marika_desktop.jpg";
-import marikaMobile from "assets/event/aid21/Marika_mobile.jpg";
-import cristinaDesktop from "assets/event/aid21/Cristina_desktop.jpg";
-import cristinaMobile from "assets/event/aid21/Cristina_mobile.jpg";
-import cristinaPreview from "assets/event/aid21/cristinaPreview.jpg";
+import logo from "assets/media/img/events/aid/21/AID-LOGO.png";
+import bannerbg from "assets/media/img/events/aid/21/bannerbg.jpg";
+import nativeLogo from "assets/media/img/events/aid/21/native_logo.png";
+//import yellowBirdDancersDesktop from "assets/media/img/events/aid/21/FamilySedona1x1.jpg";
+import yellowBirdDancersDesktop from "assets/media/img/events/aid/21/FamilySedona1x1-1.5.jpg";
+import yellowBirdDancersMobile from "assets/media/img/events/aid/21/FamilySedona.jpg";
+import yellowBirdPreview from "assets/media/img/events/aid/21/yellowBirdPreview.jpg";
+import frankDesktop from "assets/media/img/events/aid/21/Frank-11_Photo-Credit-Leslie-Frempong_desktop.jpg";
+import frankMobile from "assets/media/img/events/aid/21/Frank-11_Photo-Credit-Leslie-Frempong_mobile.jpg";
+import frankPreview from "assets/media/img/events/aid/21/FrankWalnPreview.jpg";
+import jamesDesktop from "assets/media/img/events/aid/21/JamesJones_desktop.jpg";
+import jamesMobile from "assets/media/img/events/aid/21/JamesJones_mobile.jpg";
+import marikaDesktop from "assets/media/img/events/aid/21/Marika_desktop.jpg";
+import marikaMobile from "assets/media/img/events/aid/21/Marika_mobile.jpg";
+import cristinaDesktop from "assets/media/img/events/aid/21/Cristina_desktop.jpg";
+import cristinaMobile from "assets/media/img/events/aid/21/Cristina_mobile.jpg";
+import cristinaPreview from "assets/media/img/events/aid/21/cristinaPreview.jpg";
 
 // @material-ui/icons
 import Typography from "@material-ui/core/Typography";
@@ -29,12 +26,12 @@ import Typography from "@material-ui/core/Typography";
 import MuiButton from "@material-ui/core/Button";
 import { standardLinkColor } from "themes/colors.js";
 
-//import coloringBook from "assets/event/aid21/sample.png";
-import coloringBook from "assets/img/events/aid/ColoringBook_bg.jpg";
-import coloringPng from "assets/img/events/aid/ColoringPages_image.png";
+//import coloringBook from "assets/media/img/events/aid/21/sample.png";
+import coloringBook from "assets/media/img/events/aid/21/ColoringBook_bg.jpg";
+import coloringPng from "assets/media/img/events/aid/21/ColoringPages_image.png";
 
 // Event id
-import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs.js";
+import { eventbriteIDs } from "assets/data/events/eventbriteIDs.js";
 
 // Colors
 import { aid21Colors } from "themes/colors.js";
@@ -430,7 +427,7 @@ const AID = (props) => {
       key: "FRANK WALN - Event Preview",
       purchased: false,
       poster: frankPreview,
-      source: weatherVid,
+      //source: weatherVid,
       link: "https://youtu.be/ORs_MyiUPUA",
       /*
       embed: () => (
@@ -450,14 +447,14 @@ const AID = (props) => {
       key: "YELLOW BIRD - Event Preview",
       purchased: false,
       poster: yellowBirdPreview,
-      source: weatherVid,
+      //source: weatherVid,
       link: "https://www.youtube.com/watch?v=a1PI23qY2II",
     },
     {
       key: "Cristina Osceola - Event Preview",
       purchased: false,
       poster: cristinaPreview,
-      source: weatherVid,
+      //source: weatherVid,
       link: "https://www.youtube.com/watch?v=QyyKJiv4Ec0",
     },
     /*

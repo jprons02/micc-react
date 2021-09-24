@@ -14,7 +14,7 @@ import { useLanguage } from "contexts/languageContext.js";
 
 // theme color
 import { villageColor } from "themes/colors.js";
-import villageLogo from "assets/logos/MiccosukeeVillage&Airboats.svg";
+import villageLogo from "assets/media/logos/MiccosukeeVillage&Airboats.svg";
 
 // Modal
 import VillagePricingModal from "components/CustomModal/PricingModal/VillagePricingModal.js";

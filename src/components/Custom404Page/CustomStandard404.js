@@ -4,7 +4,7 @@ import React from "react";
 import Divider from "@material-ui/core/Divider";
 
 // images
-import Roxy from "assets/img/404/Chachi_404.png";
+import Roxy from "assets/media/img/404/Chachi_404.png";
 
 // My Custom Components
 import Button from "@material-ui/core/Button";

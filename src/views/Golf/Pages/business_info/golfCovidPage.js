@@ -6,7 +6,7 @@ import CovidPage from "views/Miccosukee/Pages/covidPage.js";
 import { golfColor } from "themes/colors.js";
 
 // Images
-import bgImage from "assets/img/golf/Golf_Header.jpg";
+import bgImage from "assets/media/img/golf/Golf_Header.jpg";
 
 const sliderContent = [
   {

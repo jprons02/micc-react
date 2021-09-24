@@ -6,7 +6,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomStandard404Page from "components/Custom404Page/CustomStandard404.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
 
 const sliderContent = [
   {

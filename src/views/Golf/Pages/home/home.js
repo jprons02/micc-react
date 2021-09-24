@@ -15,8 +15,8 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import RaisedContainer from "components/CustomSections/RaisedContainer";
 
 // media
-import golfVidImage from "assets/img/golf/GOLF-COURSE-DRONE-residence.jpg";
-import golfVid from "assets/img/golf/GOLF-COURSE-DRONE-residence.mp4";
+import golfVidImage from "assets/media/img/golf/GOLF-COURSE-DRONE-residence.jpg";
+import golfVid from "assets/media/img/golf/GOLF-COURSE-DRONE-residence.mp4";
 
 // Icons
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";

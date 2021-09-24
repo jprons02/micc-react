@@ -17,9 +17,9 @@ import CustomHorizontalTabs from "components/CustomTabs/CustomHorizontalTabs.js"
 import CustomVerticalTabs from "components/CustomTabs/CustomVerticalTabs.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/dining/international-buffet/HotDish_1024x642.jpeg";
-import image2 from "assets/img/mrg/dining/international-buffet/Paella_1024x642.jpeg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/dining/international-buffet/HotDish_1024x642.jpeg";
+import image2 from "assets/media/img/mrg/dining/international-buffet/Paella_1024x642.jpeg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

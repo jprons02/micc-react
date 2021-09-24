@@ -13,7 +13,7 @@ import { useLanguage } from "contexts/languageContext.js";
 
 // theme color
 import { golfColor } from "themes/colors.js";
-import golfLogo from "assets/logos/MiccosukeeGolf&CountryClub.svg";
+import golfLogo from "assets/media/logos/MiccosukeeGolf&CountryClub.svg";
 
 const GolfHeader = () => {
   const language = useLanguage();

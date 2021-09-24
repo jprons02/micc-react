@@ -16,8 +16,8 @@ import StandardCard from "components/CustomCards/StandardCard.js";
 import Slider from "react-slick";
 
 // Images
-import bgImage from "assets/img/administration/Everglades_Header.jpg";
-import cardImage1 from "assets/img/administration/NewPoliceCar.jpg";
+import bgImage from "assets/media/img/administration/Everglades_Header.jpg";
+import cardImage1 from "assets/media/img/administration/NewPoliceCar.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

@@ -12,10 +12,10 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/dining/cafe-hammock/CafeHammock_Interior.jpeg";
-import image2 from "assets/img/mrg/dining/cafe-hammock/CafeHammock_Drinks.jpeg";
-import image3 from "assets/img/mrg/dining/cafe-hammock/CafeHammock_SteakLobster.jpeg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/dining/cafe-hammock/CafeHammock_Interior.jpeg";
+import image2 from "assets/media/img/mrg/dining/cafe-hammock/CafeHammock_Drinks.jpeg";
+import image3 from "assets/media/img/mrg/dining/cafe-hammock/CafeHammock_SteakLobster.jpeg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

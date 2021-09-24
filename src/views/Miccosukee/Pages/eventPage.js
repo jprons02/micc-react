@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouteMatch, useHistory } from "react-router-dom";
 
-import { events } from "assets/event/EventData/eventList.js";
+import { events } from "assets/data/events/eventList.js";
 import { urlify } from "services/urlify.js";
 import classNames from "classnames";
 

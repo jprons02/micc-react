@@ -11,10 +11,10 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import Button from "components/CustomButtons/Button.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg";
-import image2 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
-import image3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg";
+import image2 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
+import image3 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

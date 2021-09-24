@@ -1,16 +1,16 @@
 // Images
-import cardImage1 from "assets/img/mrg/monthly_promos/NewMemberBonus_Logo-768x768.png";
-import cardImage2 from "assets/img/mrg/monthly_promos/MiccosukeeOneStatusMatch_Logo-768x768.png";
-import cardImage3 from "assets/img/mrg/monthly_promos/VIPGiveawayBlack_Logo-768x768.png";
-import cardImage4 from "assets/img/mrg/monthly_promos/september/HighLowDuel_logo.png";
-import cardImage5 from "assets/img/mrg/monthly_promos/august/FiftyFifty_Logo.png";
-import cardImage6 from "assets/img/mrg/monthly_promos/RedCardRicochet_Logo-768x768.png";
-import cardImage7 from "assets/img/mrg/monthly_promos/VIPGiveaway_White-768x768.png";
-import cardImage8 from "assets/img/mrg/monthly_promos/september/SunnySundayPayouts_logo.png";
-import cardImage9 from "assets/img/mrg/monthly_promos/september/JustInCase_logo.png";
-import cardImage10 from "assets/img/mrg/monthly_promos/BirthdayBonanza_Logo-768x768.png";
-import cardImage11 from "assets/img/mrg/monthly_promos/august/NewMemberRicochet_Logo.png";
-import cardImage12 from "assets/img/mrg/monthly_promos/august/ReferralRicochet_Logo.png";
+import cardImage1 from "assets/media/img/mrg/monthly_promos/NewMemberBonus_Logo-768x768.png";
+import cardImage2 from "assets/media/img/mrg/monthly_promos/MiccosukeeOneStatusMatch_Logo-768x768.png";
+import cardImage3 from "assets/media/img/mrg/monthly_promos/VIPGiveawayBlack_Logo-768x768.png";
+import cardImage4 from "assets/media/img/mrg/monthly_promos/september/HighLowDuel_logo.png";
+import cardImage5 from "assets/media/img/mrg/monthly_promos/august/FiftyFifty_Logo.png";
+import cardImage6 from "assets/media/img/mrg/monthly_promos/RedCardRicochet_Logo-768x768.png";
+import cardImage7 from "assets/media/img/mrg/monthly_promos/VIPGiveaway_White-768x768.png";
+import cardImage8 from "assets/media/img/mrg/monthly_promos/september/SunnySundayPayouts_logo.png";
+import cardImage9 from "assets/media/img/mrg/monthly_promos/september/JustInCase_logo.png";
+import cardImage10 from "assets/media/img/mrg/monthly_promos/BirthdayBonanza_Logo-768x768.png";
+import cardImage11 from "assets/media/img/mrg/monthly_promos/august/NewMemberRicochet_Logo.png";
+import cardImage12 from "assets/media/img/mrg/monthly_promos/august/ReferralRicochet_Logo.png";
 
 // NEED A SCHEDULER SOLUTION AS WELL
 

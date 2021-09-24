@@ -18,7 +18,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // theme color
 import { mrgColor } from "themes/colors.js";
-import mrgLogo from "assets/logos/MiccosukeeResort&Gaming.svg";
+import mrgLogo from "assets/media/logos/MiccosukeeResort&Gaming.svg";
 
 import BookRoomModal from "components/CustomModal/CustomBookRoomModal/CustomBookRoomModal.js";
 

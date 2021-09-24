@@ -24,7 +24,7 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import RaisedContainer from "components/CustomSections/RaisedContainer";
 
 // media
-import villageImage from "assets/img/village/alligator_demo.jpg";
+import villageImage from "assets/media/img/village/alligator_demo.jpg";
 
 // Icons
 import StorefrontIcon from "@material-ui/icons/Storefront";

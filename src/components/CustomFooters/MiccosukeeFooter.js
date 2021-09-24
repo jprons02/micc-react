@@ -9,7 +9,7 @@ import { ContactFormContext } from "contexts/ContactFormContext";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 // Images
-import emblem from "assets/img/miccosukee/MiccosukeeEmblem_Color.svg";
+import emblem from "assets/media/img/miccosukee/MiccosukeeEmblem_Color.svg";
 
 // Styles
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";

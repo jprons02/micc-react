@@ -24,9 +24,9 @@ import LoginModal from "components/CustomEvents/Virtual/components/Login/LoginMo
 import VirtualEventFooter from "components/CustomFooters/VirtualEventFooter.js";
 import EventCards from "components/CustomEvents/Virtual/components/EventCards";
 
-import painting1 from "assets/event/aid21/Painting1.png";
-import painting2 from "assets/event/aid21/Painting2.png";
-import painting3 from "assets/event/aid21/Painting3.png";
+import painting1 from "assets/media/img/events/aid/21/Painting1.png";
+import painting2 from "assets/media/img/events/aid/21/Painting2.png";
+import painting3 from "assets/media/img/events/aid/21/Painting3.png";
 
 // Service
 import { formatTime } from "services/formatTime";

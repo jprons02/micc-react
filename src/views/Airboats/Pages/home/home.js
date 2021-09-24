@@ -11,9 +11,9 @@ import Details from "views/Airboats/Pages/details/details.js";
 import Pricing from "views/Airboats/Pages/pricing/pricing.js";
 
 // media
-import airboatsVidImage from "assets/img/airboats/Parallax_Airboat.jpg";
-import airboatsVid from "assets/img/airboats/AIRBOAT-RIDES-TOUR_rev.mp4";
-import parallaxImg from "assets/img/airboats/Parallax_Aerial.jpg";
+import airboatsVidImage from "assets/media/img/airboats/Parallax_Airboat.jpg";
+import airboatsVid from "assets/media/img/airboats/AIRBOAT-RIDES-TOUR_rev.mp4";
+import parallaxImg from "assets/media/img/airboats/Parallax_Aerial.jpg";
 
 // Styles
 import styles from "assets/jss/material-kit-react/views/airboats/home.js";

@@ -10,12 +10,12 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/amenities/pool-gym/pool.jpg";
-import image2 from "assets/img/mrg/amenities/pool-gym/pool_2.jpg";
-import image3 from "assets/img/mrg/amenities/pool-gym/gym2.jpg";
-import image4 from "assets/img/mrg/amenities/pool-gym/gym.jpg";
-import image5 from "assets/img/mrg/amenities/pool-gym/courtyard.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/amenities/pool-gym/pool.jpg";
+import image2 from "assets/media/img/mrg/amenities/pool-gym/pool_2.jpg";
+import image3 from "assets/media/img/mrg/amenities/pool-gym/gym2.jpg";
+import image4 from "assets/media/img/mrg/amenities/pool-gym/gym.jpg";
+import image5 from "assets/media/img/mrg/amenities/pool-gym/courtyard.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

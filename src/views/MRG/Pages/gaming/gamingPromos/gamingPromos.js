@@ -26,7 +26,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/promotionCardStyles.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
 
 // Card Content
 import { cardContent } from "views/MRG/Pages/gaming/gamingPromos/cardContent";

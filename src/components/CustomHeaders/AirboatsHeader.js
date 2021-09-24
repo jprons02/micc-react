@@ -6,7 +6,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 
 // theme color
 import { airboatsColor } from "themes/colors.js";
-import airboatsLogo from "assets/logos/MiccosukeeVillage&Airboats.svg";
+import airboatsLogo from "assets/media/logos/MiccosukeeVillage&Airboats.svg";
 
 // context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";

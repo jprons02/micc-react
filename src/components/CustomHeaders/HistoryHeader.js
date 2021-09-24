@@ -6,7 +6,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 
 // theme color
 import { historyColor } from "themes/colors.js";
-import historyLogo from "assets/logos/MiccosukeeTribeOfIndiansOfFlorida.svg";
+import historyLogo from "assets/media/logos/MiccosukeeTribeOfIndiansOfFlorida.svg";
 
 // context
 import { useLanguage } from "contexts/languageContext";

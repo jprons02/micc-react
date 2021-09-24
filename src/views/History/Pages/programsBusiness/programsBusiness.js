@@ -10,9 +10,9 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
-import image1 from "assets/img/miccosukee/pages/history_admin/Screen-Shot-2021-07-20-at-8.49.47-AM.jpg";
-import image2 from "assets/img/administration/plaza.jpg";
+import bgImage from "assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
+import image1 from "assets/media/img/miccosukee/pages/history_admin/Screen-Shot-2021-07-20-at-8.49.47-AM.jpg";
+import image2 from "assets/media/img/administration/plaza.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

@@ -10,9 +10,9 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/dining/cypress-lounge/cypress_01.jpeg";
-import image2 from "assets/img/mrg/dining/cypress-lounge/cypress_02.jpeg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/dining/cypress-lounge/cypress_01.jpeg";
+import image2 from "assets/media/img/mrg/dining/cypress-lounge/cypress_02.jpeg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

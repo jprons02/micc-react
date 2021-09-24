@@ -8,8 +8,8 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 //images
-import villageImg from "assets/img/miccosukee/pages/glades/alligator_demo.jpg";
-import airboatsImg from "assets/img/miccosukee/pages/glades/airboats_1.jpg";
+import villageImg from "assets/media/img/miccosukee/pages/glades/alligator_demo.jpg";
+import airboatsImg from "assets/media/img/miccosukee/pages/glades/airboats_1.jpg";
 
 //Miccosukee Component
 import MiccosukeeCard from "components/CustomCards/MiccosukeeCard.js";

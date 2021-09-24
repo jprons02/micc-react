@@ -1,8 +1,8 @@
 // Show popups on certain pages
 // Stop showing popup after 1 time load... may need to change how state works
 
-import mrgImage from "assets/img/test/MonthlyPayouts_Calendar_April-1.jpg";
-import aidImage from "assets/img/events/aid/aid_2021_popup_min.jpg";
+//import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
+import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
 
 const d = new Date();
 
@@ -86,7 +86,7 @@ const mrgPopup = {
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
+    image: aidImage,
     linkType: "internal",
     link: "/test1",
   },
@@ -110,7 +110,7 @@ const golfPopup = {
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
+    image: aidImage,
     linkType: "internal",
     link: "/test2",
   },
@@ -134,7 +134,7 @@ const villagePopup = {
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
+    image: aidImage,
     linkType: "internal",
     link: "/test1",
   },
@@ -158,7 +158,7 @@ const airboatsPopup = {
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
+    image: aidImage,
     linkType: "internal",
     link: "/test1",
   },
@@ -182,7 +182,7 @@ const miccosukeeEventsPopup = {
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
+    image: aidImage,
     linkType: "internal",
     link: "/test1",
   },
@@ -206,7 +206,7 @@ const historyPopup = {
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
+    image: aidImage,
     linkType: "internal",
     link: "/test1",
   },
@@ -230,7 +230,7 @@ const administrationPopup = {
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
+    image: aidImage,
     linkType: "internal",
     link: "/test1",
   },

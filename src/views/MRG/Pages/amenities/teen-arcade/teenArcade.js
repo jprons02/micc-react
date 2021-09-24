@@ -11,10 +11,10 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/amenities/teen-arcade/arcade_1.jpeg";
-import image2 from "assets/img/mrg/amenities/teen-arcade/arcade_2.jpeg";
-import image3 from "assets/img/mrg/amenities/teen-arcade/arcade_3.jpeg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/amenities/teen-arcade/arcade_1.jpeg";
+import image2 from "assets/media/img/mrg/amenities/teen-arcade/arcade_2.jpeg";
+import image3 from "assets/media/img/mrg/amenities/teen-arcade/arcade_3.jpeg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

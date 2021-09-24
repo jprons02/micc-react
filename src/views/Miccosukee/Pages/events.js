@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, withRouter, useRouteMatch } from "react-router-dom";
 
-import { eventbriteIDs } from "assets/event/EventData/eventbriteIDs";
+import { eventbriteIDs } from "assets/data/events/eventbriteIDs";
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -12,7 +12,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // Styles
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
-import { events } from "assets/event/EventData/eventList.js";
+import { events } from "assets/data/events/eventList.js";
 
 // Custom Components
 import Badge from "components/Badge/Badge.js";

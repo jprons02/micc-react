@@ -10,12 +10,12 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
-import image1 from "assets/img/history/ImgLeadersBillyCypress-no6similp2b6jehl4s2ut96cx29wk5zhovimowr540.jpg";
-import image2 from "assets/img/history/AsstChairman_LucasOsceola.jpg";
-import image3 from "assets/img/history/Treasurer_KennyCypress.jpg";
-import image4 from "assets/img/history/imgLeadersTalbert-no6sixsnz2qmeq17awydn6bw1oqb4j89qfcgg8af1c.jpg";
-import image5 from "assets/img/history/imgLeadersPetties-no6sis5mu2iwh29e7uim87r4hdi3uclvpnfjkkis2o.jpg";
+import bgImage from "assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
+import image1 from "assets/media/img/history/ImgLeadersBillyCypress-no6similp2b6jehl4s2ut96cx29wk5zhovimowr540.jpg";
+import image2 from "assets/media/img/history/AsstChairman_LucasOsceola.jpg";
+import image3 from "assets/media/img/history/Treasurer_KennyCypress.jpg";
+import image4 from "assets/media/img/history/imgLeadersTalbert-no6sixsnz2qmeq17awydn6bw1oqb4j89qfcgg8af1c.jpg";
+import image5 from "assets/media/img/history/imgLeadersPetties-no6sis5mu2iwh29e7uim87r4hdi3uclvpnfjkkis2o.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

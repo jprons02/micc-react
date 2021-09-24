@@ -10,10 +10,10 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
-import image1 from "assets/img/history/history1.jpeg";
-import image2 from "assets/img/history/car01.jpg";
-import image3 from "assets/img/history/imgHistoryCanoe1.jpeg";
+import bgImage from "assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
+import image1 from "assets/media/img/history/history1.jpeg";
+import image2 from "assets/media/img/history/car01.jpg";
+import image3 from "assets/media/img/history/imgHistoryCanoe1.jpeg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

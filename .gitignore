@@ -1,9 +1,5 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# Large files
-/assets/event/
-/src/assets/video
-
 # dependencies
 /node_modules
 
@@ -32,5 +28,13 @@ yarn-error.log*
 # compiled css
 *.css
 
+
+
+## my igores ##
+
+# Sensitive info
 notes.js
 keys.js
+
+# Large files
+/src/assets/media/video/

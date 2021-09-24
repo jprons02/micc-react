@@ -12,10 +12,10 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import CustomFoodMenuModal from "components/CustomModal/CustomFoodMenuModal/CustomFoodMenuModal.js";
 
 // Images
-import bgImage from "assets/img/village/Village_Header1.jpg";
-import image1 from "assets/img/village/OurLittleShack1.jpg";
-import image2 from "assets/img/village/OurLittleShack2.jpg";
-import image3 from "assets/img/village/OurLittleShack3.jpg";
+import bgImage from "assets/media/img/village/Village_Header1.jpg";
+import image1 from "assets/media/img/village/OurLittleShack1.jpg";
+import image2 from "assets/media/img/village/OurLittleShack2.jpg";
+import image3 from "assets/media/img/village/OurLittleShack3.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

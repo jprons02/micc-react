@@ -18,7 +18,7 @@ import DemoFooter from "components/Footer/Components/DemoFooter.js";
 
 // Styles
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
-import emblem from "assets/img/miccosukee/MiccosukeeEmblem_Color.svg";
+import emblem from "assets/media/img/miccosukee/MiccosukeeEmblem_Color.svg";
 
 // Contexts
 import { SignupFormProvider } from "contexts/SignupFormContext.js";

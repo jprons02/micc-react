@@ -9,12 +9,12 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 // images
-import image1 from "assets/img/airboats/Slider_Airboat_1.jpeg";
-import image2 from "assets/img/airboats/Slider_Airboat2.jpeg";
-import image3 from "assets/img/airboats/Slider_AirboatTurn.jpeg";
-import image4 from "assets/img/airboats/Slider_Dock_1.jpeg";
-import image5 from "assets/img/airboats/Slider_Hammock_1.jpeg";
-import image6 from "assets/img/airboats/Slider_Kids_1.jpeg";
+import image1 from "assets/media/img/airboats/Slider_Airboat_1.jpeg";
+import image2 from "assets/media/img/airboats/Slider_Airboat2.jpeg";
+import image3 from "assets/media/img/airboats/Slider_AirboatTurn.jpeg";
+import image4 from "assets/media/img/airboats/Slider_Dock_1.jpeg";
+import image5 from "assets/media/img/airboats/Slider_Hammock_1.jpeg";
+import image6 from "assets/media/img/airboats/Slider_Kids_1.jpeg";
 
 // styles
 import { makeStyles } from "@material-ui/core/styles";

@@ -8,8 +8,8 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 //images
-import historyImg from "assets/img/miccosukee/pages/history_admin/home-history-1.jpg";
-import administrationImg from "assets/img/miccosukee/pages/history_admin/Screen-Shot-2021-07-20-at-8.49.47-AM.jpg";
+import historyImg from "assets/media/img/miccosukee/pages/history_admin/home-history-1.jpg";
+import administrationImg from "assets/media/img/miccosukee/pages/history_admin/Screen-Shot-2021-07-20-at-8.49.47-AM.jpg";
 
 //Miccosukee Component
 import MiccosukeeCard from "components/CustomCards/MiccosukeeCard.js";

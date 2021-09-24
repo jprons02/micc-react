@@ -13,9 +13,9 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import CustomFoodMenuModal from "components/CustomModal/CustomFoodMenuModal/CustomFoodMenuModal.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/home/burgerfries.jpg";
-import image2 from "assets/img/mrg/home/fresh-tasty-hot-dog-with-fried-potatoes.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/home/burgerfries.jpg";
+import image2 from "assets/media/img/mrg/home/fresh-tasty-hot-dog-with-fried-potatoes.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

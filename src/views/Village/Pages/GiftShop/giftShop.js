@@ -11,11 +11,11 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/village/Village_Header1.jpg";
-import image1 from "assets/img/village/GiftShop1.jpg";
-import image2 from "assets/img/village/GiftShop2.jpg";
-import image3 from "assets/img/village/GiftShop3.jpg";
-import image4 from "assets/img/village/GiftShop4.jpg";
+import bgImage from "assets/media/img/village/Village_Header1.jpg";
+import image1 from "assets/media/img/village/GiftShop1.jpg";
+import image2 from "assets/media/img/village/GiftShop2.jpg";
+import image3 from "assets/media/img/village/GiftShop3.jpg";
+import image4 from "assets/media/img/village/GiftShop4.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

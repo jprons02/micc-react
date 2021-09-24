@@ -12,8 +12,8 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 import Button from "components/CustomButtons/Button.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/banquets/Slider_Banquets_1024x642-o27gjfiauxaw8adlauqeuc3m7aorgdyy8killjv7zu.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/banquets/Slider_Banquets_1024x642-o27gjfiauxaw8adlauqeuc3m7aorgdyy8killjv7zu.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

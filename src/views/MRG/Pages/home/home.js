@@ -31,14 +31,14 @@ import StandardCard from "components/CustomCards/StandardCard.js";
 import Slider from "react-slick";
 
 // Images
-import heroImg1 from "assets/img/mrg/home/mrg_hero.jpg";
+import heroImg1 from "assets/media/img/mrg/home/mrg_hero.jpg";
 
-import cardImage1 from "assets/img/mrg/gaming/machines/MRG_Gaming1.jpg";
-import cardImage2 from "assets/img/mrg/home/burgerfries.jpg";
-import cardImage3 from "assets/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
-import cardImage4 from "assets/img/mrg/home/homeCard_spa.jpg";
-import cardImage5 from "assets/img/mrg/home/homeCard_events.jpg";
-import cardImage6 from "assets/img/mrg/home/homeCard_banquets.jpg";
+import cardImage1 from "assets/media/img/mrg/gaming/machines/MRG_Gaming1.jpg";
+import cardImage2 from "assets/media/img/mrg/home/burgerfries.jpg";
+import cardImage3 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
+import cardImage4 from "assets/media/img/mrg/home/homeCard_spa.jpg";
+import cardImage5 from "assets/media/img/mrg/home/homeCard_events.jpg";
+import cardImage6 from "assets/media/img/mrg/home/homeCard_banquets.jpg";
 
 // Styles
 import styles from "assets/jss/material-kit-react/views/mrg/home.js";

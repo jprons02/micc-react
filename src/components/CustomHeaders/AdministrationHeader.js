@@ -6,7 +6,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 
 // theme color
 import { administrationColor } from "themes/colors.js";
-import administrationLogo from "assets/logos/MiccosukeeTribeOfIndiansOfFlorida.svg";
+import administrationLogo from "assets/media/logos/MiccosukeeTribeOfIndiansOfFlorida.svg";
 
 // context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";

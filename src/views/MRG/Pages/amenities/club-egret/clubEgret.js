@@ -11,10 +11,10 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/img/mrg/amenities/club-egret/club_egret_01.jpg";
-import image2 from "assets/img/mrg/amenities/club-egret/club_egret_02.jpg";
-import image3 from "assets/img/mrg/amenities/club-egret/club_egret_03.jpg";
+import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import image1 from "assets/media/img/mrg/amenities/club-egret/club_egret_01.jpg";
+import image2 from "assets/media/img/mrg/amenities/club-egret/club_egret_02.jpg";
+import image3 from "assets/media/img/mrg/amenities/club-egret/club_egret_03.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

@@ -5,8 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 //images
-import mrgImg from "assets/img/miccosukee/pages/mrg_golf/mrg-card.jpg";
-import golfImg from "assets/img/miccosukee/pages/mrg_golf/golf-card.jpg";
+import mrgImg from "assets/media/img/miccosukee/pages/mrg_golf/mrg-card.jpg";
+import golfImg from "assets/media/img/miccosukee/pages/mrg_golf/golf-card.jpg";
 //Miccosukee Component
 import MiccosukeeCard from "components/CustomCards/MiccosukeeCard.js";
 

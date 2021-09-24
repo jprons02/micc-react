@@ -11,14 +11,14 @@ import HeroSection from "components/CustomSections/HeroSection.js";
 import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
 
 // Images
-import bgImage from "assets/img/village/Village_Header1.jpg";
-import image1 from "assets/img/village/1024x642_Slider_L-e1551456221969.jpg";
-import image2 from "assets/img/village/1024x642_Slider_D-e1551456149892.jpg";
-import image3 from "assets/img/village/1024x642_Slider_M-e1551456229527.jpg";
+import bgImage from "assets/media/img/village/Village_Header1.jpg";
+import image1 from "assets/media/img/village/1024x642_Slider_L-e1551456221969.jpg";
+import image2 from "assets/media/img/village/1024x642_Slider_D-e1551456149892.jpg";
+import image3 from "assets/media/img/village/1024x642_Slider_M-e1551456229527.jpg";
 
 // Video
-import gatorVid from "assets/img/village/alligator-wrestling-1080P.mov";
-import gatorVidImage from "assets/img/village/alligator-wrestling-1080P-img-e1551460924638.jpg";
+import gatorVid from "assets/media/img/village/alligator-wrestling-1080P.mov";
+import gatorVidImage from "assets/media/img/village/alligator-wrestling-1080P-img-e1551460924638.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";

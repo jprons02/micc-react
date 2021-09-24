@@ -7,7 +7,7 @@ import StandardHorizontalCard from "components/CustomCards/StandardHorizontalCar
 import Typography from "@material-ui/core/Typography";
 
 // Card Images
-import cardImage1 from "assets/img/mrg/gaming/machines/MRG_Gaming1.jpg";
+import cardImage1 from "assets/media/img/mrg/gaming/machines/MRG_Gaming1.jpg";
 
 // react component for creating beautiful carousel
 import Slider from "react-slick";

@@ -16,7 +16,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
 // Images
-import bgImage from "assets/img/golf/Golf_Header.jpg";
+import bgImage from "assets/media/img/golf/Golf_Header.jpg";
 
 // Context
 import { useLanguage } from "contexts/languageContext.js";
