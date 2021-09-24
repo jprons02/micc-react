@@ -169,52 +169,6 @@ const VirtualEvent = (props) => {
     );
   };
 
-  /*
-  const renderEventLinks = () => {
-    return (
-      <div className={classes.subsection}>
-        <Typography
-          className={classes.subHeaderRedLinksPurchased}
-          paragraph
-          variant="h5"
-          component="h3"
-        >
-          PURCHASED EVENT VIDEO LINKS
-        </Typography>
-        <p
-          style={{
-            color: "white",
-            fontSize: "18px",
-            fontWeight: "500",
-          }}
-        >
-          Coming Soon!
-        </p>
-
-        {props.events.map((event) => {
-          if (event.purchased) {
-            return (
-              <div key={event.key} style={{ marginBottom: "5px" }}>
-                <a
-                  style={{
-                    color: "white",
-                    fontSize: "18px",
-                    fontWeight: "500",
-                  }}
-                  target="_blank"
-                  href={event.link}
-                >
-                  {event.key}
-                </a>
-              </div>
-            );
-          }
-        })}
-      </div>
-    );
-  };
-  */
-
   const renderEventLinks = () => {
     return (
       <div className={classes.subsection}>

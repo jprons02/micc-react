@@ -15,7 +15,7 @@ const StyledTableCell = withStyles((theme) => ({
   head: {
     backgroundColor: theme.palette.common.white,
     color: theme.palette.common.black,
-    paddingLeft: "3px",
+    paddingLeft: "8px",
     paddingRight: 0,
     minWidth: "70px",
   },
@@ -51,7 +51,11 @@ export default function CustomVirtualEventSchedule(props) {
       return props.events.map((event) =>
         event.purchased ? (
           <StyledTableRow key={event.key}>
-            <StyledTableCell component="th" scope="row">
+            <StyledTableCell
+              component="th"
+              scope="row"
+              style={{ paddingLeft: "8px" }}
+            >
               {formatTime(event.releaseTime.hour, event.releaseTime.minutes)}
             </StyledTableCell>
             <StyledTableCell align="left">{event.key}</StyledTableCell>
