@@ -22,7 +22,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 // @material-ui/icons
 import Check from "@material-ui/icons/Check";
-import { signupFunction } from "services/signupFucntion.js";
+import { signupFunction } from "services/functions/signupFucntion.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles(modalStyle);

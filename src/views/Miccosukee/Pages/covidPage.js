@@ -14,7 +14,7 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/components/cu
 import Badge from "components/Badge/Badge.js";
 
 // Services
-import { prerenderService } from "services/prerenderService.js";
+import { prerenderService } from "services/functions/prerenderService.js";
 
 // Covid content
 import MrgCovidInfo from "business_info/covid-19/mrgCovidInfo.js";

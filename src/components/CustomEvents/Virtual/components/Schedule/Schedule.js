@@ -9,7 +9,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
 // Service
-import { formatTime } from "services/formatTime";
+import { formatTime } from "services/functions/formatTime";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {

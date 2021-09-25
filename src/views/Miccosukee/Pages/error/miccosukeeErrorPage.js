@@ -11,7 +11,7 @@ import CustomStandard404Page from "components/Custom404Page/CustomStandard404.js
 import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
 
 // Services
-import { prerenderService } from "services/prerenderService.js";
+import { prerenderService } from "services/functions/prerenderService.js";
 
 const useStyles = makeStyles(styles);
 

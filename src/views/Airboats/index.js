@@ -34,7 +34,7 @@ import AirboatsErrorPage from "views/Airboats/Pages/error/airboatsErrorPage.js";
 import { airboatsBusinessInfo } from "business_info/genericInfo.js";
 
 // services
-import { popupManager } from "services/popups/popupManager";
+import { popupManager } from "services/functions/popups/popupManager";
 
 // Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouteMatch, useHistory } from "react-router-dom";
 
 import { events } from "assets/data/events/eventList.js";
-import { urlify } from "services/urlify.js";
+import { urlify } from "services/functions/urlify.js";
 import classNames from "classnames";
 
 // @material-ui/core components

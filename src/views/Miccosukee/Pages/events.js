@@ -24,8 +24,8 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import Button from "components/CustomButtons/Button.js";
 
 // Custom Functions
-import { setEstTime } from "services/setEstTime.js";
-import { urlify } from "services/urlify.js";
+import { setEstTime } from "services/functions/setEstTime.js";
+import { urlify } from "services/functions/urlify.js";
 
 // Colors
 import { standardLinkColor, errorColor } from "themes/colors.js";
@@ -34,7 +34,7 @@ import { standardLinkColor, errorColor } from "themes/colors.js";
 import { useLanguage } from "contexts/languageContext";
 
 // Services
-import { prerenderService } from "services/prerenderService.js";
+import { prerenderService } from "services/functions/prerenderService.js";
 
 const useStyles = makeStyles(styles);
 

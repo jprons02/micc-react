@@ -11,7 +11,7 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/views/miccosukee/pages/mrg.js";
 
 // Services
-import { prerenderService } from "services/prerenderService.js";
+import { prerenderService } from "services/functions/prerenderService.js";
 
 const useStyles = makeStyles(styles);
 

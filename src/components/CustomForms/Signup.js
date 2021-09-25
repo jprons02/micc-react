@@ -19,7 +19,7 @@ import checkboxStyles from "assets/jss/material-kit-react/customCheckboxRadioSwi
 import CustomInput from "components/Footer/Components/CustomTextField.js";
 
 // Custom Functions
-import { signupFunction } from "services/signupFucntion.js";
+import { signupFunction } from "services/functions/signupFucntion.js";
 
 // Context
 import { SignupFormContext } from "contexts/SignupFormContext.js";
@@ -28,7 +28,7 @@ import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
 import { useLanguage } from "contexts/languageContext.js";
 
 // Custom functions
-import { inputErrorsExist } from "services/validateInput.js";
+import { inputErrorsExist } from "services/functions/validateInput.js";
 
 // validate as you type, snackbar, mailchimp api
 const useCheckboxStyles = makeStyles(checkboxStyles);

@@ -42,7 +42,7 @@ import { villageBusinessInfo } from "business_info/genericInfo.js";
 import { villageHours } from "business_info/hours.js";
 
 // services
-import { popupManager } from "services/popups/popupManager";
+import { popupManager } from "services/functions/popups/popupManager";
 
 export default function Miccosukee(props) {
   const language = useLanguage();

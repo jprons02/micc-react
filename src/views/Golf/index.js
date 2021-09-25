@@ -38,7 +38,7 @@ import GolfErrorPage from "views/Golf/Pages/error/golfErrorPage.js";
 import { golfBusinessInfo } from "business_info/genericInfo.js";
 
 // services
-import { popupManager } from "services/popups/popupManager";
+import { popupManager } from "services/functions/popups/popupManager";
 
 export default function Miccosukee(props) {
   const language = useLanguage();

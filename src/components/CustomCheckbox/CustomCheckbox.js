@@ -9,7 +9,7 @@ import Check from "@material-ui/icons/Check";
 
 import styles from "assets/jss/material-kit-react/customCheckboxRadioSwitch.js";
 
-import { signupFunction } from "services/signupFucntion.js";
+import { signupFunction } from "services/functions/signupFucntion.js";
 
 const useStyles = makeStyles(styles);
 

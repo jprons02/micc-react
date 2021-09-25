@@ -7,7 +7,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import { ContactFormContext } from "contexts/ContactFormContext.js";
 
 // Custom functions
-import { validateInput } from "services/validateInput.js";
+import { validateInput } from "services/functions/validateInput.js";
 //import { array } from "prop-types";
 
 const CustomTextField = withStyles({

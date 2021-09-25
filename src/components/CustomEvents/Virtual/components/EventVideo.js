@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // My Custom Functions
-import { setEstTime } from "services/setEstTime.js";
+import { setEstTime } from "services/functions/setEstTime.js";
 
 const CustomEventVideo = (props) => {
   const [video, setVideo] = useState({});

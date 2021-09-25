@@ -15,14 +15,14 @@ import { errorColor } from "themes/colors.js";
 import CustomInput from "components/CustomEvents/Virtual/components/CustomTextField";
 
 // Custom Functions
-import { virtualEventLoginFunction } from "services/virtualEventLoginFunction.js";
+import { virtualEventLoginFunction } from "services/functions/virtualEventLoginFunction.js";
 
 // Context
 import { VirtualEventLoginFormContext } from "contexts/VirtualEventLoginFormContext.js";
 import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";
 
 // Custom functions
-import { inputErrorsExistVirtualEvent } from "services/validateInput.js";
+import { inputErrorsExistVirtualEvent } from "services/functions/validateInput.js";
 
 export default function LoginForm(props) {
   const [inputValues, setInputValues] = useContext(

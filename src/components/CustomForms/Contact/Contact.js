@@ -19,8 +19,8 @@ import checkboxStyles from "assets/jss/material-kit-react/customCheckboxRadioSwi
 import CustomInput from "components/CustomForms/Contact/ContactInput.js";
 
 // Custom Functions
-import { signupFunction } from "services/signupFucntion.js";
-import { contactFunction } from "services/contact/contactFunction.js";
+import { signupFunction } from "services/functions/signupFucntion.js";
+import { contactFunction } from "services/functions/contact/contactFunction.js";
 
 // Context
 import { ContactFormContext } from "contexts/ContactFormContext.js";
@@ -28,16 +28,16 @@ import { interests } from "contexts/SignupFormContext.js";
 import { AlertContext, contactAlertId } from "contexts/AlertContext.js";
 
 // Custom functions
-import { inputErrorsExistContact } from "services/validateInput.js";
-import { contactOptions } from "services/contact/contactOptions.js";
+import { inputErrorsExistContact } from "services/functions/validateInput.js";
+import { contactOptions } from "services/functions/contact/contactOptions.js";
 import profilePageStyle from "assets/jss/material-kit-react/views/profilePage";
-import { getOptions } from "services/contact/contactOptions";
+import { getOptions } from "services/functions/contact/contactOptions";
 
 // recaptcha
 import ReCaptchaV2 from "react-google-recaptcha";
 
 // service
-import { reCaptchaService } from "services/recaptchaService";
+import { reCaptchaService } from "services/functions/recaptchaService";
 
 const Contact = (props) => {
   const [formValues, setFormValues] = useContext(ContactFormContext);

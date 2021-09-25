@@ -22,7 +22,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
 // Services
-import { renderPoiHours } from "services/renderPoiHours.js";
+import { renderPoiHours } from "services/functions/renderPoiHours.js";
 
 // Business info
 import { villageHours } from "business_info/hours.js";

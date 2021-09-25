@@ -29,7 +29,7 @@ import painting2 from "assets/media/img/events/aid/21/Painting2.png";
 import painting3 from "assets/media/img/events/aid/21/Painting3.png";
 
 // Service
-import { formatTime } from "services/formatTime";
+import { formatTime } from "services/functions/formatTime";
 
 // Context
 import { AlertContext, virtualEventLoginId } from "contexts/AlertContext.js";

@@ -24,7 +24,7 @@ import { SignupFormContext } from "contexts/SignupFormContext.js";
 import { useLanguage } from "contexts/languageContext.js";
 
 // Custom Functions
-import { inputErrorsExist } from "services/validateInput.js";
+import { inputErrorsExist } from "services/functions/validateInput.js";
 
 const useStyles = makeStyles(styles);
 

@@ -26,7 +26,7 @@ import { mrgHours } from "business_info/hours.js";
 import { sawgrassCafeMenu } from "business_info/foodMenu.js";
 
 // Services
-import { renderPoiHours } from "services/renderPoiHours.js";
+import { renderPoiHours } from "services/functions/renderPoiHours.js";
 
 // Context
 import { useLanguage } from "contexts/languageContext.js";

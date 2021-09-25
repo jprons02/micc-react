@@ -15,7 +15,7 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_
 import { useLanguage } from "contexts/languageContext.js";
 
 // Services
-import { prerenderService } from "services/prerenderService.js";
+import { prerenderService } from "services/functions/prerenderService.js";
 
 // Business info
 import { mrgHours, golfHours } from "business_info/hours.js";

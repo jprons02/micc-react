@@ -21,7 +21,7 @@ import TribalLeaders from "views/History/Pages/leaders/tribalLeaders.js";
 import HistoryErrorPage from "views/History/Pages/error/historyErrorPage.js";
 
 // services
-import { popupManager } from "services/popups/popupManager";
+import { popupManager } from "services/functions/popups/popupManager";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();

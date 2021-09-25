@@ -24,7 +24,7 @@ import SpecializedUnits from "views/Administration/Pages/Police/specializedUnits
 import AdministrationErrorPage from "views/Administration/Pages/error/administrationErrorPage.js";
 
 // services
-import { popupManager } from "services/popups/popupManager";
+import { popupManager } from "services/functions/popups/popupManager";
 
 export default function Miccosukee(props) {
   let match = useRouteMatch();

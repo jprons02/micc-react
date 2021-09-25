@@ -23,7 +23,7 @@ import eventsImg from "assets/media/img/miccosukee/pages/home/home-admin.jpg";
 import { useLanguage } from "contexts/languageContext.js";
 
 // Services
-import { prerenderService } from "services/prerenderService.js";
+import { prerenderService } from "services/functions/prerenderService.js";
 
 import MiccosukeeFooter from "components/CustomFooters/MiccosukeeFooter.js";
 

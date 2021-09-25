@@ -23,7 +23,7 @@ import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 import { mrgHours } from "business_info/hours.js";
 
 // Services
-import { renderPoiHours } from "services/renderPoiHours.js";
+import { renderPoiHours } from "services/functions/renderPoiHours.js";
 
 // Context
 import { useLanguage } from "contexts/languageContext.js";

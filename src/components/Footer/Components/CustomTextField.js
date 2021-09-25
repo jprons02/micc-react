@@ -6,7 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { SignupFormContext } from "contexts/SignupFormContext.js";
 
 // Custom functions
-import { validateInput } from "services/validateInput.js";
+import { validateInput } from "services/functions/validateInput.js";
 
 const CustomTextField = withStyles({
   root: {

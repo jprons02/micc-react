@@ -4,7 +4,7 @@
 //check out: allow same day reservations
 //check out: 'Check out date can not be before check in date.'
 
-import { setEstTime } from "services/setEstTime.js";
+import { setEstTime } from "services/functions/setEstTime.js";
 
 export const validateCheckIn = (selectedDate) => {
   // Set hours of date to 0. We do not want to compare selected times, only dates.

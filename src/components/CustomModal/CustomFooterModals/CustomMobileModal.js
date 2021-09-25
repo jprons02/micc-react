@@ -22,7 +22,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 // @material-ui/icons
 import Check from "@material-ui/icons/Check";
-import { signupFunction } from "services/signupFucntion.js";
+import { signupFunction } from "services/functions/signupFucntion.js";
 import SignUp from "components/CustomForms/Signup.js";
 import Typography from "@material-ui/core/Typography";
 

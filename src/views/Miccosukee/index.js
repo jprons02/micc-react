@@ -34,7 +34,7 @@ import { mrgBusinessInfo } from "business_info/genericInfo.js";
 import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
 
 // services
-import { popupManager } from "services/popups/popupManager";
+import { popupManager } from "services/functions/popups/popupManager";
 import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);

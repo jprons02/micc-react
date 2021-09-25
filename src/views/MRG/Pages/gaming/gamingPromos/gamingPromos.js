@@ -13,7 +13,7 @@ import CustomGamingPromoModal from "components/CustomModal/CustomPromosModal/Cus
 import { Hidden } from "@material-ui/core";
 
 // Custom function
-import { urlify } from "services/urlify.js";
+import { urlify } from "services/functions/urlify.js";
 
 // React component for creating beautiful carousel
 import Slider from "react-slick";

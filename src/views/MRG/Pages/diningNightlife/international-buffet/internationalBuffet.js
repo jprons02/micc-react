@@ -32,7 +32,7 @@ import { useLanguage } from "contexts/languageContext.js";
 import { mrgHours } from "business_info/hours.js";
 
 // Services
-import { renderPoiHours } from "services/renderPoiHours.js";
+import { renderPoiHours } from "services/functions/renderPoiHours.js";
 
 const useStyles = makeStyles(styles);
 

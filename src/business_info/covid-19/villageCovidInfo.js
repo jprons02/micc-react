@@ -1,5 +1,5 @@
 import React from "react";
-import { renderPoiHours } from "services/renderPoiHours.js";
+import { renderPoiHours } from "services/functions/renderPoiHours.js";
 import { villageHours } from "business_info/hours.js";
 
 const VillageCovidInfo = (props) => {

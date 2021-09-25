@@ -19,7 +19,7 @@ import {
   validateCheckIn,
   validateCheckOut,
 } from "components/CustomForms/BookRoom/validateBookRoom.js";
-import { setEstTime } from "services/setEstTime.js";
+import { setEstTime } from "services/functions/setEstTime.js";
 
 // Context
 import { useLanguage } from "contexts/languageContext";
