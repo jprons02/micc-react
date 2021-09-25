@@ -242,17 +242,19 @@ const VirtualEvent = (props) => {
           >
             Event Video Links:
           </Typography>
-          {renderLinks()}
           <p
             style={{
               color: "white",
-              fontSize: "14px",
+              fontSize: "16px",
               fontWeight: "500",
+              marginTop: "-15px",
+              marginBottom: "20px",
             }}
           >
             Don't see the links? Try refreshing your browser after the scheduled
             time.
           </p>
+          {renderLinks()}
         </div>
         <div style={{ marginTop: "30px" }}>
           <Typography
