@@ -48,7 +48,9 @@ export default function CustomVirtualEventSchedule(props) {
 
   const renderTableBody = () => {
     if (props.events) {
-      return props.events.map((event) =>
+      const arrayClone = [...props.events];
+      const reverseArray = arrayClone.reverse();
+      return reverseArray.map((event) =>
         event.purchased ? (
           <StyledTableRow key={event.key}>
             <StyledTableCell

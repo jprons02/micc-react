@@ -276,7 +276,6 @@ const AID = (props) => {
             </span>
           ),
         },
-        /*
         {
           cardTitle: "James Jones",
           image: jamesMobile,
@@ -289,7 +288,6 @@ const AID = (props) => {
             </span>
           ),
         },
-        */
         {
           cardTitle: "Marika Sila",
           image: marikaMobile,
@@ -364,7 +362,7 @@ const AID = (props) => {
       purchased: true,
       //poster: image1,
       //source: weatherVid,
-      link: "https://youtube.com",
+      link: "https://youtu.be/rxH41PlA7LE",
       releaseTime: {
         year: 2021,
         month: 8,
@@ -374,11 +372,11 @@ const AID = (props) => {
       },
     },
     {
-      key: "Artisan Circle Saundra & Cristina- Artist",
+      key: "James Jones Influencer and Native Content Creator",
       purchased: true,
       //poster: image1,
       //source: weatherVid,
-      link: "https://youtube.com",
+      link: "https://youtu.be/g2miRVB1uJ4",
       releaseTime: {
         year: 2021,
         month: 8,
@@ -392,7 +390,7 @@ const AID = (props) => {
       purchased: true,
       //poster: image1,
       //source: weatherVid,
-      link: "https://youtube.com",
+      link: "https://youtu.be/BX30sWG8I44",
       releaseTime: {
         year: 2021,
         month: 8,

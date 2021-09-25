@@ -243,6 +243,16 @@ const VirtualEvent = (props) => {
             Event Video Links:
           </Typography>
           {renderLinks()}
+          <p
+            style={{
+              color: "white",
+              fontSize: "14px",
+              fontWeight: "500",
+            }}
+          >
+            Don't see the links? Try refreshing your browser after the scheduled
+            time.
+          </p>
         </div>
         <div style={{ marginTop: "30px" }}>
           <Typography
@@ -260,8 +270,7 @@ const VirtualEvent = (props) => {
               fontWeight: "500",
             }}
           >
-            Before the art class on Saturday, download, print and sketch out the
-            images
+            Download, print, sketch out the images and follow along!
           </p>
           <div
             style={{
