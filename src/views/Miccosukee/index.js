@@ -52,7 +52,7 @@ const Miccosukee = (props) => {
     let parts = host.split(".");
     let subdomain = parts.length > 2 ? parts[0] : null;
 
-    if (parseInt(parts[0]) !== NaN) {
+    if (parseInt(parts[0]) === NaN) {
       if (parts[0] === "www") {
         parts.splice(0, 1);
       }
