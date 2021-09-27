@@ -249,6 +249,18 @@ const AID = (props) => {
           ),
         },
         {
+          cardTitle: "Cristina Osceola",
+          image: cristinaMobile,
+          dkImage: cristinaDesktop,
+          cardBody: () => (
+            <span>
+              As a proud Miccosukee tribal member, Cristina shares her culture
+              with the world through various art forms, including painting,
+              drawing, sewing and jewelry-making.
+            </span>
+          ),
+        },
+        {
           cardTitle: "Frank Waln",
           image: frankMobile,
           dkImage: frankDesktop,
@@ -284,18 +296,6 @@ const AID = (props) => {
               fire and lights in her mesmerizing routines. As an actress, she is
               best known for her work in the popular TV series “The Twilight
               Zone”.
-            </span>
-          ),
-        },
-        {
-          cardTitle: "Cristina Osceola",
-          image: cristinaMobile,
-          dkImage: cristinaDesktop,
-          cardBody: () => (
-            <span>
-              As a proud Miccosukee tribal member, Cristina shares her culture
-              with the world through various art forms, including painting,
-              drawing, sewing and jewelry-making.
             </span>
           ),
         },
@@ -354,30 +354,30 @@ const AID = (props) => {
   */
   const events = [
     {
-      key: "Artisan Circle Blaze ﻿﻿& YellowBird Indian Dancers",
+      key: "Artisan Circle Gator Steve & Marika Sila",
       purchased: true,
       //poster: image1,
-      //source: beesVid,
-      link: "https://google.com",
+      //source: weatherVid,
+      link: "https://youtu.be/rxH41PlA7LE",
       releaseTime: {
         year: 2021,
-        month: 10,
+        month: 8,
         day: 25,
-        hour: 10,
+        hour: 14,
         minutes: 0,
       },
     },
     {
-      key: "Aritsan Circle Bunky Echo-Hawk & Cristina- Artist",
+      key: "James Jones Influencer and Native Content Creator",
       purchased: true,
       //poster: image1,
-      //source: birdsVid,
-      link: "https://yahoo.com",
+      //source: weatherVid,
+      link: "https://youtu.be/g2miRVB1uJ4",
       releaseTime: {
         year: 2021,
-        month: 10,
+        month: 8,
         day: 25,
-        hour: 11,
+        hour: 13,
         minutes: 0,
       },
     },
@@ -386,40 +386,40 @@ const AID = (props) => {
       purchased: true,
       //poster: image1,
       //source: weatherVid,
-      link: "https://youtube.com",
+      link: "https://youtu.be/BX30sWG8I44",
       releaseTime: {
         year: 2021,
-        month: 10,
+        month: 8,
         day: 25,
         hour: 12,
         minutes: 0,
       },
     },
     {
-      key: "Artisan Circle Saundra & James Jones",
+      key: "Aritsan Circle Bunky Echo-Hawk & Cristina- Artist",
       purchased: true,
       //poster: image1,
-      //source: weatherVid,
-      link: "https://youtube.com",
+      //source: birdsVid,
+      link: "https://www.youtube.com/watch?v=XXlGDj2R6A4",
       releaseTime: {
         year: 2021,
-        month: 10,
+        month: 8,
         day: 25,
-        hour: 13,
+        hour: 11,
         minutes: 0,
       },
     },
     {
-      key: "Artisan Circle Gator Steve & Marika Sila",
+      key: "Artisan Circle Blaze & YellowBird Indian Dancers",
       purchased: true,
       //poster: image1,
-      //source: weatherVid,
-      link: "https://youtube.com",
+      //source: beesVid,
+      link: "https://youtu.be/wKLP9VhzVLg",
       releaseTime: {
         year: 2021,
-        month: 10,
+        month: 8,
         day: 25,
-        hour: 14,
+        hour: 10,
         minutes: 0,
       },
     },
@@ -459,35 +459,7 @@ const AID = (props) => {
     },
     /*
     {
-      key: "Free Preview 3",
-      purchased: false,
-      poster: image1,
-      source: weatherVid,
-      link: "https://youtube.com",
-      releaseTime: {
-        year: 2021,
-        month: 3,
-        day: 18,
-        hour: 11,
-        minutes: 24,
-      },
-    },
-    {
-      key: "Free Preview 4",
-      purchased: false,
-      poster: image1,
-      source: weatherVid,
-      link: "https://youtube.com",
-      releaseTime: {
-        year: 2021,
-        month: 3,
-        day: 18,
-        hour: 11,
-        minutes: 24,
-      },
-    },
-    {
-      key: "Free Preview 5",
+      key: "Free Preview x",
       purchased: false,
       poster: image1,
       source: weatherVid,

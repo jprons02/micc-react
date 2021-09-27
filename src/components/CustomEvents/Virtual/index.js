@@ -170,6 +170,218 @@ const VirtualEvent = (props) => {
   };
 
   const renderEventLinks = () => {
+    const renderLinks = () => {
+      const d = new Date();
+      const s = new Date(2021, 8, 25, 10);
+      if (d >= s) {
+        return props.events.map((event) => {
+          if (event.purchased) {
+            const linkTime = new Date(
+              event.releaseTime.year,
+              event.releaseTime.month,
+              event.releaseTime.day,
+              event.releaseTime.hour,
+              event.releaseTime.minutes
+            );
+            if (d > linkTime) {
+              return (
+                <div key={event.key} style={{ marginBottom: "12px" }}>
+                  <a
+                    style={{
+                      color: "white",
+                      fontSize: "18px",
+                      fontWeight: "500",
+                      textDecoration: "underline",
+                    }}
+                    target="_blank"
+                    href={event.link}
+                  >
+                    {`${event.key}, ${formatTime(
+                      event.releaseTime.hour,
+                      event.releaseTime.minutes
+                    )}`}
+                  </a>
+                </div>
+              );
+            } else {
+              return;
+            }
+          }
+        });
+      } else {
+        return (
+          <p
+            style={{
+              color: "white",
+              fontSize: "18px",
+              fontWeight: "500",
+            }}
+          >
+            Coming Soon!
+          </p>
+        );
+      }
+    };
+
+    return (
+      <div className={classes.subsection}>
+        <Typography
+          className={classes.subHeaderRedLinksPurchasedHeader}
+          paragraph
+          variant="h5"
+          component="h3"
+        >
+          PURCHASED CONTENT
+        </Typography>
+        <div style={{ marginTop: "28px" }}>
+          <Typography
+            className={classes.subHeaderRedLinksPurchased}
+            paragraph
+            variant="h6"
+            component="h4"
+          >
+            Event Video Links:
+          </Typography>
+          <p
+            style={{
+              color: "white",
+              fontSize: "16px",
+              fontWeight: "500",
+              marginTop: "-15px",
+              marginBottom: "20px",
+            }}
+          >
+            Don't see the links? Try refreshing your browser after the scheduled
+            time.
+          </p>
+          {renderLinks()}
+        </div>
+        <div style={{ marginTop: "30px" }}>
+          <Typography
+            className={classes.subHeaderRedLinksPurchased}
+            paragraph
+            variant="h6"
+            component="h4"
+          >
+            Painting classes with Cristina Osceola:
+          </Typography>
+          <p
+            style={{
+              color: "white",
+              fontSize: "18px",
+              fontWeight: "500",
+            }}
+          >
+            Download, print, sketch out the images and follow along!
+          </p>
+          <div
+            style={{
+              display: "inline-block",
+              paddingBottom: "10px",
+              paddingRight: "15px",
+            }}
+          >
+            <a
+              target="_blank"
+              href="https://mapa-media.s3.amazonaws.com/events/Painting1.pdf"
+            >
+              <figure style={{ margin: "0" }}>
+                <img
+                  style={{
+                    height: "185px",
+                    marginLeft: "-14px",
+                    marginRight: "8px",
+                  }}
+                  src={painting1}
+                  alt="panther"
+                />
+
+                <figcaption
+                  style={{
+                    fontWeight: "500",
+                    marginTop: "-5px",
+                    color: "white",
+                  }}
+                >
+                  Panther
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+          <div
+            style={{
+              display: "inline-block",
+              paddingBottom: "10px",
+              paddingRight: "15px",
+            }}
+          >
+            <a
+              target="_blank"
+              href="https://mapa-media.s3.amazonaws.com/events/Painting2.pdf"
+            >
+              <figure style={{ margin: "0" }}>
+                <img
+                  style={{
+                    height: "185px",
+                    marginLeft: "-18px",
+                    marginRight: "8px",
+                  }}
+                  src={painting2}
+                  alt="panther"
+                />
+                <figcaption
+                  style={{
+                    fontWeight: "500",
+                    marginTop: "-5px",
+                    color: "white",
+                  }}
+                >
+                  Turtle
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+          <div
+            style={{
+              display: "inline-block",
+              paddingBottom: "10px",
+              paddingRight: "15px",
+            }}
+          >
+            <a
+              target="blank"
+              href="https://mapa-media.s3.amazonaws.com/events/Painting3.pdf"
+            >
+              <figure style={{ margin: "0" }}>
+                <img
+                  style={{
+                    height: "185px",
+                    marginLeft: "-14px",
+                    marginRight: "8px",
+                  }}
+                  src={painting3}
+                  alt="panther"
+                />
+                <figcaption
+                  style={{
+                    fontWeight: "500",
+                    marginTop: "-5px",
+                    color: "white",
+                  }}
+                >
+                  Panther &amp; Turtle
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  /*
+  const renderEventLinks = () => {
+
     return (
       <div className={classes.subsection}>
         <Typography
@@ -199,7 +411,7 @@ const VirtualEvent = (props) => {
             Coming Soon!
           </p>
 
-          {/*props.events.map((event) => {
+          {props.events.map((event) => {
             if (event.purchased) {
               return (
                 <div key={event.key} style={{ marginBottom: "12px" }}>
@@ -221,7 +433,7 @@ const VirtualEvent = (props) => {
                 </div>
               );
             }
-          })*/}
+          })}
         </div>
         <div style={{ marginTop: "30px" }}>
           <Typography
@@ -346,6 +558,7 @@ const VirtualEvent = (props) => {
       </div>
     );
   };
+  */
 
   const boxShadow =
     "rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 12%) 0px 1px 5px 0px";
