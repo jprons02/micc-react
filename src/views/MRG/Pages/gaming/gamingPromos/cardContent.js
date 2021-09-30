@@ -1,16 +1,16 @@
 // Images
 import cardImage1 from "assets/media/img/mrg/monthly_promos/NewMemberBonus_Logo-768x768.png";
 import cardImage2 from "assets/media/img/mrg/monthly_promos/MiccosukeeOneStatusMatch_Logo-768x768.png";
-import cardImage3 from "assets/media/img/mrg/monthly_promos/VIPGiveawayBlack_Logo-768x768.png";
-import cardImage4 from "assets/media/img/mrg/monthly_promos/september/HighLowDuel_logo.png";
-import cardImage5 from "assets/media/img/mrg/monthly_promos/august/FiftyFifty_Logo.png";
-import cardImage6 from "assets/media/img/mrg/monthly_promos/RedCardRicochet_Logo-768x768.png";
+import cardImage3 from "assets/media/img/mrg/monthly_promos/october/JackpotJackOLanterns_Logo.png";
+import cardImage4 from "assets/media/img/mrg/monthly_promos/VIPGiveawayBlack_Logo-768x768.png";
+import cardImage5 from "assets/media/img/mrg/monthly_promos/RedCardRicochet_Logo-768x768.png";
+import cardImage6 from "assets/media/img/mrg/monthly_promos/october/CreepyCash_Logo.png";
 import cardImage7 from "assets/media/img/mrg/monthly_promos/VIPGiveaway_White-768x768.png";
-import cardImage8 from "assets/media/img/mrg/monthly_promos/september/SunnySundayPayouts_logo.png";
-import cardImage9 from "assets/media/img/mrg/monthly_promos/september/JustInCase_logo.png";
-import cardImage10 from "assets/media/img/mrg/monthly_promos/BirthdayBonanza_Logo-768x768.png";
-import cardImage11 from "assets/media/img/mrg/monthly_promos/august/NewMemberRicochet_Logo.png";
-import cardImage12 from "assets/media/img/mrg/monthly_promos/august/ReferralRicochet_Logo.png";
+import cardImage8 from "assets/media/img/mrg/monthly_promos/october/MonsterMoney_Logo.png";
+import cardImage9 from "assets/media/img/mrg/monthly_promos/BirthdayBonanza_Logo-768x768.png";
+import cardImage10 from "assets/media/img/mrg/monthly_promos/august/NewMemberRicochet_Logo.png";
+import cardImage11 from "assets/media/img/mrg/monthly_promos/august/ReferralRicochet_Logo.png";
+import cardImage12 from "assets/media/img/mrg/monthly_promos/october/HalloweenHotSeat_Logo.png";
 
 // NEED A SCHEDULER SOLUTION AS WELL
 
@@ -21,10 +21,10 @@ export const cardContent = (language) => {
         id: 0,
         title: "New Member Bonus",
         img: cardImage1,
-        oneLiner: "Sign up and earn $15-$515 Free Play!",
+        oneLiner: "Join and earn up to $500 more Free Play!",
         rules: {
           subSections: [
-            { id: "00", title: "Day", body: "All month of September" },
+            { id: "00", title: "Day", body: "All month of October" },
             { id: "01", title: "Promotion Type", body: "Play and Win" },
             {
               id: "02",
@@ -41,7 +41,7 @@ export const cardContent = (language) => {
             {
               id: "04",
               title: "Dates and Times",
-              body: "All month of September",
+              body: "All month of October",
             },
             {
               id: "05",
@@ -78,7 +78,7 @@ export const cardContent = (language) => {
               id: "010",
               title: "General Rule Disclaimers",
               body:
-                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Bounce Back Free Play valid for 7 days and on select machines only. Play and Get Free Play is available for thirty (30) days once earned during the valid 7 day offer window. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Bounce Back Free Play valid for 7 days and on select machines only. Play and Get Free Play is available for thirty (30) days once earned during the valid 7 day offer window. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
@@ -87,10 +87,10 @@ export const cardContent = (language) => {
         id: 1,
         title: "Miccosukee One Status Match",
         img: cardImage2,
-        oneLiner: "Sign-on bonus plus upgraded status!",
+        oneLiner: "Receive upgraded status + Free Play bonus!",
         rules: {
           subSections: [
-            { id: "10", title: "Day", body: "All month of September" },
+            { id: "10", title: "Day", body: "All month of October" },
             { id: "11", title: "Promotion Type", body: "Tier/Status Match" },
             {
               id: "12",
@@ -122,40 +122,40 @@ export const cardContent = (language) => {
               id: "16",
               title: "GENERAL RULES",
               body:
-                "Player name on valid photo ID must match the name on the Players Card. Players must provide address and email and/or phone to be eligible for tier match program. Card and ID must not be damaged, altered or otherwise illegible. Limit one upgrade per person. Offer only available to new players or players 12 months inactive at Miccosukee Resort and Gaming. New player Tier Match status must occur upon initial enrollment. No exceptions. Inactive players must visit the Player’s Club within 24 hours of first completed reactivation session to claim Tier Match status. Must be 21 years of age or older. Must have valid, government issued, gaming approved ID and be physically present with the original ID to register. Free Play valid on select machines only. Players will have until 1:59 AM on October 1 to redeem Free Play credits. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details.",
+                "Player name on valid photo ID must match the name on the Players Card. Players must provide address and email and/or phone to be eligible for tier match program. Card and ID must not be damaged, altered or otherwise illegible. Limit one upgrade per person. Offer only available to new players or players 12 months inactive at Miccosukee Resort and Gaming. New player Tier Match status must occur upon initial enrollment. No exceptions. Inactive players must visit the Player’s Club within 24 hours of first completed reactivation session to claim Tier Match status. Must be 18 years of age or older to qualify. Must have valid, government issued, gaming approved ID and be physically present with the original ID to register. Free Play valid on select machines only. Players will have until 1:59 AM on November 1 to redeem Free Play credits. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details.",
             },
           ],
         },
       },
       {
         id: 2,
-        title: "Black Card VIP Giveaway",
+        title: "Jackpot Jack-O-Lanterns",
         img: cardImage3,
-        oneLiner: "Black Cards, win $2,500 cash!",
+        oneLiner: "Scary big jackpot worth $30,000!",
         rules: {
           subSections: [
             {
               id: "20",
               title: "Day",
-              body: "Thursday, September 2 & 16, 2021",
+              body: "Monday, October 4, 11 & 18, 2021",
             },
             { id: "21", title: "Promotion Type", body: "Drawing" },
             {
               id: "22",
               title: "Rules",
               body:
-                "Calling all Black Cards, we are giving away $7,500 in cash to welcome in the fall. Thursday, September 2 & 16 at 7 PM, 8 PM & 9 PM, one Miccosukee One Black Card member will win $2,500 in cash!",
+                "This Jack-O-Lantern jackpot is so big, it’s scary!!! On Monday, October 4, 11 & 18 at 7 PM, 8 PM & 9 PM, a lucky Miccosukee One member will win their share of $30,000 in cash!",
             },
             {
               id: "23",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One Black Card members must earn 200 points on their Miccosukee One card for each drawing ticket. Points can be earned from August 26 at 9 AM to September 16 at 8:45 PM.",
+                "Miccosukee One members must earn 100 points on their Miccosukee One card for each drawing ticket. Points can be earned from September 27 at 9 AM to October 18 at 8:45 PM.",
             },
             {
               id: "24",
               title: "Dates and Times",
-              body: "September 2 & 16 at 7 PM, 8 PM & 9 PM",
+              body: "October 4, 11 & 18 at 7 PM, 8 PM & 9 PM",
             },
             {
               id: "25",
@@ -176,7 +176,7 @@ export const cardContent = (language) => {
             {
               id: "28",
               title: "Prize Type and Amounts",
-              body: "One (1) $2,500 cash prize at 7 PM 8 PM & 9 PM",
+              body: "Cash prizes available to be won are $1,000 - $7,500.",
             },
             {
               id: "29",
@@ -192,53 +192,55 @@ export const cardContent = (language) => {
             },
             {
               id: "211",
-              title: "Drawing Ticket / Barrel Rules",
+              title: "Game Rules",
               body:
-                "Barrel will be available September 1 – 2 for the 9/2 drawing and September 10 – 16 for the 9/16 drawing. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “Black Card VIP Giveaway”. Drum will be cleared after the last drawing of the night. Player must have retained smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
+                "If present, winners will pick a single prize vehicle. A total of 9 prize vehicles will start the month. Prize vehicles will not be replaced after they have been picked throughout the month. The prize vehicles picked by the winners will be worth the following amounts [1 - $1,000] [1 - $1,500] [1 - $2,000] [3 - $3,000] [1 - $4,000] [1 - $5,000] [1 - $7,500].",
             },
             {
               id: "212",
+              title: "Drawing Ticket / Barrel Rules",
+              body:
+                "Barrel will be available October 1. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “Jackpot Jack-O-Lanterns”. Drum will be cleared after the last drawing of the night. Player must have retained smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
+            },
+            {
+              id: "213",
               title: "General Rule Disclaimers",
               body:
-                "Eligibility for tiered promotion based on September 1 status. Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 3,
-        title: "High Low Duel",
+        title: "Black Card VIP Giveaway",
         img: cardImage4,
-        oneLiner: "Cards pay up to $6K!",
+        oneLiner: "Black Cards, win $2,500 cash!",
         rules: {
           subSections: [
-            {
-              id: "30",
-              title: "Day",
-              body: "Monday, September 6, 13 & 20, 2021",
-            },
+            { id: "30", title: "Day", body: "Thursday, October 7 & 21, 2021" },
             { id: "31", title: "Promotion Type", body: "Drawing" },
             {
               id: "32",
               title: "Rules",
               body:
-                "Your next card might be low but your pay-out will be high!!! On Monday, September 6, 13 & 20 at 7 PM & 9 PM, two Miccosukee One members will win up to $6,000 in cash!",
+                "It's all treats & no tricks Thursday, October 7 & 21 at 7 PM, 8 PM & 9 PM when one Miccosukee One Black Card member will win $2,500 in cash!",
             },
             {
               id: "33",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One members must earn 100 points on their Miccosukee One card for each drawing ticket. Points can be earned from September 1 at 9 AM to September 20 at 8:45 PM.",
+                "Miccosukee One Black Card members must earn 200 points on their Miccosukee One card for each drawing ticket. Points can be earned from October 1 at 9 AM to October 21 at 8:45 PM.",
             },
             {
               id: "34",
               title: "Dates and Times",
-              body: "September 6, 13 & 20 at 7 PM & 9 PM",
+              body: "October 7 & 21 at 7 PM, 8 PM & 9 PM",
             },
             {
               id: "35",
               title: "Number of Winners Per Drawing",
-              body: "Two (2) winners at 7 PM & 9 PM",
+              body: "One (1) winner at 7 PM, 8 PM & 9 PM",
             },
             {
               id: "36",
@@ -254,7 +256,7 @@ export const cardContent = (language) => {
             {
               id: "38",
               title: "Prize Type and Amounts",
-              body: "Cash prizes available to be won are $1,000 - $6,000.",
+              body: "One (1) $2,500 cash prize at 7 PM, 8 PM & 9 PM",
             },
             {
               id: "39",
@@ -270,141 +272,147 @@ export const cardContent = (language) => {
             },
             {
               id: "311",
-              title: "Game Rules",
+              title: "Drawing Ticket / Barrel Rules",
               body:
-                "If present, winners will play High Low against each other. The player that was picked out of the barrel first will play High Low first. A deck of cards will be shuffled, once shuffling is complete the player will cut the deck. The first card in the deck will be revealed to the player. Once the card is revealed, the player will then decide whether the next card will be higher or lower than the card revealed. If the player is right, another card will be revealed, if the player is wrong their turn is over. A total of 6 cards will be revealed, including the first show card. A tie in cards will be considered a correct guess. The guest with more correct guesses wins. A tie will be settled by both guests drawing a card from the deck, higher card wins, ties will result in a redraw. A 2 is considered the lowest card and an Ace is considered the highest card. The prize vehicles picked by the winner of the high low duel will be worth the following amounts [2 - $1,500] [2 - $2,500] [2 - $3,000] [2 - $4,000] [1 - $5,000] [1 - $6,000]. The consolation prize will be $1,000 for 2nd place.",
+                "Barrel will be available October 1 - 7 for the 10/7 drawing and October 15 - 21 for 10/21 drawing. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “Black Card VIP Giveaway”. Drum will be cleared after the last drawing of the night. Player must have retained smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
             },
             {
               id: "312",
-              title: "Drawing Ticket / Barrel Rules",
-              body:
-                "Barrel will be available September 1. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “High Low Duel”. Drum will be cleared after the last drawing of the night. Player must have retained smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
-            },
-            {
-              id: "313",
               title: "General Rule Disclaimers",
               body:
-                "Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Eligibility for tiered promotion based on October 1 status. Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 4,
-        title: "Fifty Fifty",
+        title: "Red Card VIP Giveaway",
         img: cardImage5,
-        oneLiner: "Win $50 Free Play!",
+        oneLiner: "Ricochet Hot Seats pay up to $150 Free Play!",
         rules: {
           subSections: [
-            { id: "40", title: "Day", body: "Sunday, September 5 & 19, 2021" },
-            { id: "41", title: "Promotion Type", body: "Play and Win" },
+            { id: "40", title: "Day", body: "Wednesday, October 6 & 20, 2021" },
+            { id: "41", title: "Promotion Type", body: "Ricochet Rewards" },
             {
               id: "42",
               title: "Rules",
               body:
-                "On Sunday, September 5 & 19, 2021, the first 50 Miccosukee One Card members who earn 50 points on their Miccosukee One Card will receive $50 in Free Play one time from 9 AM until 11:59 PM.",
+                "Calling all Red Card members! On Wednesday, October 6 & 20 between 6 PM and 9 PM up to 24 Red Tier Miccosukee One members will win $100 or $150 Free Play via Ricochet hot seat.",
             },
             {
               id: "43",
               title: "TO QUALIFY",
               body:
-                "Insert your Miccosukee One Card in any gaming machine from 9 AM to 11:59 PM to earn Free Play allotment. Free Play will be automatically downloaded to the first fifty guest accounts once corresponding Play & Earn criteria has been reached.",
+                "Miccosukee One RED Tier members actively gaming on their Miccosukee One Player's card.",
             },
             {
               id: "44",
               title: "Dates and Times",
-              body: "September 5 & 19 from 9 AM - 11:59 PM",
+              body: "October 6 & 20 from 6 PM - 9 PM",
             },
             {
               id: "45",
               title: "Winners",
               body:
-                "The first 50 Miccosukee One Card Members who meet the play requirements",
+                "Miccosukee One RED Tier member who triggers the Ricochet Prize through their play will win $150 Free Play and one (1) additional random Red Tier winner playing with their Miccosukee One card at the time the prize is triggered will win $100 Free Play.",
             },
             {
               id: "46",
               title: "Promotion Location",
-              body:
-                "Promotion will take place at any video machine that accepts Miccosukee One Player Cards. Free Play credits will be downloaded to Winners’ Miccosukee One Card account automatically.",
+              body: "Gaming devices that accept Miccosukee One cards",
             },
             {
               id: "47",
-              title: "Prize Type and Amounts",
+              title: "Prize Type and amounts",
               body:
-                "Miccosukee One members who earn 50 points will receive $50 in Free Play.",
+                "The player who triggers the prize and 1 additional random winner in up to twelve (12) occurrences will receive $100 or $150 in Free Play.",
             },
             {
               id: "48",
               title: "Prize Restrictions",
-              body:
-                "Play & Earn is redeemable only one time per promotional day for the first 50 Miccosukee One members that reach the point requirement.",
+              body: "Players can win multiple times.",
             },
             {
               id: "49",
               title: "General Rule Disclaimers",
               body:
-                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Malfunction void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Eligibility for tiered promotion based on October 1 status. Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 5,
-        title: "Red Card VIP Giveaway",
+        title: "Creepy Cash",
         img: cardImage6,
-        oneLiner: "Red Cards, win up to $150 Free Play!",
+        oneLiner: "Win a share of $7,500 cash!",
         rules: {
           subSections: [
-            {
-              id: "50",
-              title: "Day",
-              body: "Wednesday, September 8 & 22, 2021",
-            },
-            { id: "51", title: "Promotion Type", body: "Ricochet Rewards" },
+            { id: "50", title: "Day", body: "Sunday, October 10 & 24, 2021" },
+            { id: "51", title: "Promotion Type", body: "Drawing" },
             {
               id: "52",
               title: "Rules",
               body:
-                "Calling all Red Card members! On Wednesday, September 8 & 22 between 6 PM and 9 PM up to 24 Red Tier Miccosukee One members will win $100 or $150 Free Play via Ricochet hot seat.",
+                "Cash prizes so good, they're CREEPY!!! On Sunday, October 10 & 24 one Miccosukee One member will win their share of $7,500 in cash at 1 PM, 3 PM & 5 PM!",
             },
             {
               id: "53",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One RED Tier members actively gaming on their Miccosukee One Player's card.",
+                "Miccosukee One members must earn 100 points on their Miccosukee One card for each drawing ticket. Points can be earned from October 1 at 9 AM to October 24 at 4:45 PM.",
             },
             {
               id: "54",
               title: "Dates and Times",
-              body: "September 8 & 22 from 6 PM - 9 PM",
+              body: "October 10 & 24 at 1 PM, 3 PM & 5 PM",
             },
             {
               id: "55",
-              title: "Winners",
-              body:
-                "Miccosukee One RED Tier member who triggers the Ricochet Prize through their play will win $150 Free Play and one (1) additional random Red Tier winner playing with their Miccosukee One card at the time the prize is triggered will win $100 Free Play.",
+              title: "Number of Winners Per Drawing",
+              body: "One (1) winner at 1 PM, 3 PM & 5 PM",
             },
             {
               id: "56",
-              title: "Promotion Location",
-              body: "Gaming devices that accept Miccosukee One cards",
+              title: "Drawing Location / Prize Giveaway Location",
+              body:
+                "Drawings and prize giveaways will take place at the Player's Club.",
             },
             {
               id: "57",
-              title: "Prize Type and amounts",
-              body:
-                "The player who triggers the prize and 1 additional random winner in up to twelve (12) occurrences will receive $100 or $150 in Free Play.",
+              title: "Max Number of Entries",
+              body: "Players can earn an unlimited amount of entries.",
             },
             {
               id: "58",
-              title: "Prize Restrictions",
-              body: "Players can win multiple times.",
+              title: "Prize Type and Amounts",
+              body:
+                "If present, winners may claim the following cash prizes [1 PM - $1,500] [3 PM - $1,000] [5 PM - $5,000].",
             },
             {
               id: "59",
+              title: "Amount of Wins Permitted Per Guest",
+              body:
+                "Players can only win once in any single drawing with multiple winners.",
+            },
+            {
+              id: "510",
+              title: "No Show Rules / Roll Over Rules",
+              body:
+                "Must be present to win. Prize will automatically be forfeited if the player fails to independently produce the winning ticket stub, valid identification and Player’s Card within ten (10) minutes of being announced and another name will be drawn until the prize is claimed. Player must locate and identify corresponding drawing stub on their own accord. Miccosukee Resort & Gaming employees are not permitted to handle player retained drawing stubs once issued.",
+            },
+            {
+              id: "511",
+              title: "Drawing Ticket / Barrel Rules",
+              body:
+                "Barrel will be available on October 1 at 9 AM. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “Creepy Cash”. Drum will be cleared after the last drawing of the day. Player must have retained the smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
+            },
+            {
+              id: "512",
               title: "General Rule Disclaimers",
               body:
-                "Eligibility for tiered promotion based on September 1 status. Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
@@ -416,28 +424,24 @@ export const cardContent = (language) => {
         oneLiner: "White Cards, win $5,000 cash!",
         rules: {
           subSections: [
-            {
-              id: "60",
-              title: "Day",
-              body: "Thursday, September 9 & 23, 2021",
-            },
+            { id: "60", title: "Day", body: "Thursday, October 14 & 28, 2021" },
             { id: "61", title: "Promotion Type", body: "Drawing" },
             {
               id: "62",
               title: "Rules",
               body:
-                "Calling all White Cards, we are giving away $15,000 in cash to welcome in the fall. Thursday, September 9 & 23 at 7 PM, 8 PM & 9 PM, one Miccosukee One White Card member will win $5,000 in cash!",
+                "It's all treats & no tricks Thursday, October 14 & 28 at 7 PM, 8 PM & 9 PM when one Miccosukee One White Card member will win $5,000 in cash!",
             },
             {
               id: "63",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One White Card members must earn 200 points on their Miccosukee One card for each drawing ticket. Points can be earned from September 1 at 9 AM to September 23 at 8:45 PM.",
+                "Miccosukee One White Card members must earn 200 points on their Miccosukee One card for each drawing ticket. Points can be earned from October 1 at 9 AM to October 28 at 8:45 PM.",
             },
             {
               id: "64",
               title: "Dates and Times",
-              body: "September 9 & 23 at 7 PM, 8 PM & 9 PM",
+              body: "October 14 & 28 at 7 PM, 8 PM & 9 PM",
             },
             {
               id: "65",
@@ -476,53 +480,58 @@ export const cardContent = (language) => {
               id: "611",
               title: "Drawing Ticket / Barrel Rules",
               body:
-                "Barrel will be available September 3 – 9 for the 9/9 drawing and September 17 – 23 for the 9/23 drawing. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “White Card VIP Giveaway”. Drum will be cleared after the last drawing of the night. Player must have retained smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
+                "Barrel will be available October 8 - 14 for the 10/14 drawing and October 22 - 28 for 10/28 drawing. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “White Card VIP Giveaway”. Drum will be cleared after the last drawing of the night. Player must have retained smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
             },
             {
               id: "612",
               title: "General Rule Disclaimers",
               body:
-                "Eligibility for tiered promotion based on September 1 status. Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Eligibility for tiered promotion based on October 1 status. Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 7,
-        title: "Sunny Sunday Pay-outs",
+        title: "Monster Money",
         img: cardImage8,
-        oneLiner: "Win a share of $7,500!",
+        oneLiner: "2 days, 5 drawings, $1,000-$10,000 cash!",
         rules: {
           subSections: [
-            { id: "70", title: "Day", body: "Sunday, September 12 & 26, 2021" },
+            {
+              id: "70",
+              title: "Day",
+              body: "Friday, October 29 & Saturday, October 30, 2021",
+            },
             { id: "71", title: "Promotion Type", body: "Drawing" },
             {
               id: "72",
               title: "Rules",
               body:
-                "Sunny Days will make it pay!!! On Sunday, September 12 & 26 one Miccosukee One member will win their share of $7,500 in cash at 1 PM, 3 PM & 5 PM!",
+                "We are giving away a monstrous amount of money to celebrate Halloween!! On October 29 & 30 we'll have 5 drawings each day starting at 5 PM where Miccosukee One members will be called every two hours to win $1,000 to $10,000. If winners do not claim their prize, it will roll over to the 1 AM drawing on October 31. The last drawing on October 31 must have a winner, and that winner could be YOU!",
             },
             {
               id: "73",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One members must earn 100 points on their Miccosukee One card for each drawing ticket. Points can be earned from September 1 at 9 AM to September 26 at 4:45 PM.",
+                "Earn 200 points on your Miccosukee One card for each drawing ticket. Points can be earned between October 1 at 9 AM and October 31 at 12:45 AM. This promotion will feature a bonus entry multiplier every Friday and Saturday that players are allowed to earn entries. Guests will receive one bonus entry for every 200 points they earn from 9 AM – close and through 12:45 AM on October 31.",
             },
             {
               id: "74",
-              title: "Dates and Times",
-              body: "September 12 & 26 at 1 PM, 3 PM & 5 PM",
+              title: "Dates & Times",
+              body:
+                "Drawings will occur at 5 PM, 7 PM, 9 PM, 11 PM on October 29, 30 & 1 AM on October 30, 31.",
             },
             {
               id: "75",
               title: "Number of Winners Per Drawing",
-              body: "One (1) winner at 1 PM, 3 PM & 5 PM",
+              body: "One (1) winner will be drawn per drawing.",
             },
             {
               id: "76",
               title: "Drawing Location / Prize Giveaway Location",
               body:
-                "Drawings and prize giveaways will take place at the Player's Club.",
+                "The drawings and prize payments will occur at the Player's Club.",
             },
             {
               id: "77",
@@ -533,154 +542,129 @@ export const cardContent = (language) => {
               id: "78",
               title: "Prize Type and Amounts",
               body:
-                "If present, winners may claim the following cash prizes [1 PM - $1,500] [3 PM -  $1,000] [5 PM - $5,000].",
+                "If present, winners may claim the following cash prizes [5 PM - $1,000] [7 PM - $4,000] [9 PM - $3,000] [11 PM - $2,000] [1 AM - $10,000]. The 1 AM winner on October 31 will win $10,000 cash and any unclaimed cash roll over prizes from both drawing days.",
             },
             {
               id: "79",
+              title: "No Show Rules / Roll Over Rules",
+              body:
+                "Must be present to win. Prize will automatically be forfeited if the player selected is not present within ten (10) minutes of being announced with their ticket stub. If the winners from the any drawing result in a no show, the prize money will roll over to the 1 AM drawing on October 31. Drawing officials will keep drawing names at the final drawing until a winner is found.",
+            },
+            {
+              id: "710",
+              title: "Bonus Entry Rules",
+              body:
+                "On October 1, 2, 8, 9, 15, 16, 22, 23 & 29 from 9 AM – close and October 30 through 12:45 AM on October 31, players can earn one bonus entry for every 200 points they earn. Players must collect their bonus entries on the same day and within the time frame they have to earn them. Any entries not claimed during the appropriate time frame will be forfeited and cannot be printed at a later date.",
+            },
+            {
+              id: "711",
               title: "Amount of Wins Permitted Per Guest",
               body:
                 "Players can only win once in any single drawing with multiple winners.",
             },
             {
-              id: "710",
-              title: "No Show Rules / Roll Over Rules",
-              body:
-                "Must be present to win. Prize will automatically be forfeited if the player fails to independently produce the winning ticket stub, valid identification and Player’s Card within ten (10) minutes of being announced and another name will be drawn until the prize is claimed. Player must locate and identify corresponding drawing stub on their own accord. Miccosukee Resort & Gaming employees are not permitted to handle player retained drawing stubs once issued.",
-            },
-            {
-              id: "711",
+              id: "712",
               title: "Drawing Ticket / Barrel Rules",
               body:
-                "Barrel will be available on September 1 at 9 AM. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub’s larger perforated portion into the appropriate drum of the respective raffle “Sunny Sunday Pay-outs”. Drum will be cleared after the last drawing of the day. Player must have retained the smaller portion of perforated ticket present in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued. Entries may not be entered into the drum during the drawing.",
+                "Barrel will be available on October 1 at 9 AM. Drum will be emptied after the last drawing at 1AM on October 31. Entries may not be entered into the drum during the drawing. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub's larger perforated portion into the appropriate drum of the respective raffle, \"Monster Money\". Player must have retained the smaller portion of perforated ticket in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued.",
             },
             {
-              id: "712",
+              id: "713",
               title: "General Rule Disclaimers",
               body:
-                "Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final.  Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 8,
-        title: "Just in Case",
+        title: "Birthday Bonanza Hot Seats",
         img: cardImage9,
-        oneLiner: "Win up to $25K!",
+        oneLiner: "Win a share of $1,200 Free Play!",
         rules: {
           subSections: [
-            { id: "80", title: "Day", body: "Saturday, September 25, 2021" },
-            { id: "81", title: "Promotion Type", body: "Drawing" },
+            { id: "80", title: "Day", body: "Monday, October 25, 2021" },
+            { id: "81", title: "Promotion Type", body: "Ricochet Rewards" },
             {
               id: "82",
               title: "Rules",
               body:
-                "We're giving away a lot of money… Just In Case you're interested!!! On September 25, we'll call a winner at 7 PM, 9 PM & 11 PM to play the Just In Case Gameshow for a chance to win up to $25,000. Plus, if our contestants don't win a combined total of $30K, we will hold a bonus drawing to reach that amount at 12 AM.",
+                "On Monday, October 25 between the hours of 6 PM and 10 PM, October birthday guests who are actively gaming with their Miccosukee One card will be eligible for a chance to win $25-$100 in Free Play. Up to $1,200 may be awarded in up to 8 occurrences.",
             },
             {
               id: "83",
               title: "TO QUALIFY",
               body:
-                "Earn 200 points on your Miccosukee One card for each drawing ticket. Points can be earned between September 1 at 9 AM and September 25 at 10:45 PM. This promotion will feature a bonus entry multiplier every Friday and Saturday that players are allowed to earn entries. Guests will receive one bonus entry for every 200 points they earn from 9 AM – close and through 10:45 PM on September 25.",
+                "Miccosukee One members must have a birthday during the month of October and be actively playing gaming machines on their Miccosukee One card.",
             },
             {
               id: "84",
-              title: "Dates & Times",
-              body:
-                "Drawings will occur at 7 PM, 9 PM & 11 PM on September 25. Bonus drawing may occur at 12 AM on September 26 if total funds awarded in game shows equal less than $30,000.",
+              title: "Dates and Times",
+              body: "October 25 from 6 PM - 10 PM",
             },
             {
               id: "85",
-              title: "Number of Winners Per Drawing",
-              body: "One (1) winner will be drawn per drawing.",
+              title: "Winners",
+              body:
+                "Miccosukee One members who trigger the Ricochet prize through their play and various random winners who are playing with their Miccosukee One card at the time the prize is triggered. All guests must have an October birthday to be eligible to win.",
             },
             {
               id: "86",
-              title: "Drawing Location / Prize Giveaway Location",
-              body:
-                "The drawings and prize payments will occur at the Player's Club.",
+              title: "Promotion Location",
+              body: "Gaming devices that accept Miccosukee One cards",
             },
             {
               id: "87",
-              title: "Max Number of Entries",
-              body: "Players can earn an unlimited amount of entries.",
+              title: "Prize Type and Amounts",
+              body:
+                "The player who triggers the Ricochet will receive $100 and two (2) others will win $25 during each occurrence. A total of $1,200 in Free Play may be awarded in up to 8 occurrences. Up to 24 winners may be awarded prizes.",
             },
             {
               id: "88",
-              title: "Prize Type and Amounts",
-              body:
-                "If present, winners will play Just In Case and win the following cash prizes if they choose to reveal a case at the end of the game, [$1] [$200] [$500] [$800] [$1,000] [$1,500] [$2,000] [$2,500] [$3,000] [$4,000] [$5,000] [$6,000] [$7,000] [$8,000] [$9,000] [$10,000] [$12,500] [$15,000] [$20,000] [$25,000]. Contestants may also choose to take a pay-out offer between $100 - $22,500.",
+              title: "Prize Restrictions",
+              body: "Players can win multiple times.",
             },
             {
               id: "89",
-              title: "No Show Rules / Roll Over Rules",
-              body:
-                "Must be present to win. Prize will automatically be forfeited if the player fails to independently produce the winning ticket stub, valid identification and Player’s Card within ten (10) minutes of being announced and another name will be drawn until the prize is claimed. Player must locate and identify corresponding drawing stub on their own accord. Miccosukee Resort & Gaming employees are not permitted to handle player retained drawing stubs once issued.",
-            },
-            {
-              id: "810",
-              title: "Game Rules",
-              body:
-                "The game is based off of elimination and offers. The object of the game is to pick the highest value case in the beginning of the game and to eliminate cases in low to high order to keep offers as high as possible. Contestants will start with 20 cases. The cash values in these cases are located in the Prize Type and Amounts section of the rules. To begin the game, contestants will choose one of the 20 cases that will not be eligible for elimination. Once contestants have chosen their case and it is set to the side, the elimination rounds will begin. The first three rounds of the game will consist of 5 cases being eliminated, whenever a player chooses a case to eliminate, the amount inside will be revealed. After each round of elimination, the banker will provide a cash offer to the contestant. The amount of the cash offer will depend on the total sum of money in the cases that have not been eliminated. The higher the sum of the cases, the higher the offer amount will be. If the contestant takes the cash offer, the game will be over and the contestant will be paid the offer. The next three rounds will consist of the contestant eliminating one case at a time and receiving an offer after each case. If contestants refuse every offer, they will be left with two cases. One case will be the case that was chosen by the contestant at the beginning of the game and the other case will be the last one standing after all rounds of elimination. The contestant will then choose a case to open; the prize inside that case is what will be awarded. If the total pay-outs of the 7 PM, 9 PM and 11 PM game show do not equal $30,000, another name will be drawn to award the variance at 12 AM on September 26.",
-            },
-            {
-              id: "811",
-              title: "Bonus Entry Rules",
-              body:
-                "On September 3, 4, 10, 11, 17, 18 & 24 from 9 AM – close, September 25 from 9 AM to until 10:45 PM, players can earn one bonus entry for every 200 points they earn. Players must collect their bonus entries on the same day and within the time frame they have to earn them. Any entries not claimed during the appropriate time frame will be forfeited and cannot be printed at a later date.",
-            },
-            {
-              id: "812",
-              title: "Amount of Wins Permitted Per Guest",
-              body:
-                "Players can only win once in any single drawing with multiple winners.",
-            },
-            {
-              id: "813",
-              title: "Drawing Ticket / Barrel Rules",
-              body:
-                "Barrel will be available on September 1 at 9 AM. Drum will be emptied after the last drawing of the promotion. Entries may not be entered into the drum during the drawing. Upon receiving drawing ticket from the Player's Club, it is the sole duty of the player to place the ticket stub's larger perforated portion into the appropriate drum of the respective raffle, \"Just In Case\". Player must have retained the smaller portion of perforated ticket in order to redeem prize. Lost, stolen, or damaged tickets will not be replaced. Tickets placed in the wrong drum will be disqualified and will not be reissued.",
-            },
-            {
-              id: "814",
               title: "General Rule Disclaimers",
               body:
-                "Must have valid, government issued, gaming approved ID to claim the prize. Prizes will be retained for thirty (30) days if valid, government issued, gaming approved ID is not provided at time of win. Any retained prize not claimed within thirty (30) days will be forfeited. Promotions are only available for Miccosukee One members. Points accumulated in any Bonus Point Multiplier promotion do not apply towards additional raffle entries or towards card level tier advancement. Prizes are not transferable. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final.  Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days on select machines only. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 9,
-        title: "Birthday Bonanza Hot Seats",
+        title: "New Member Ricochet",
         img: cardImage10,
-        oneLiner: "Score $25-$100 Free Play!",
+        oneLiner: "New Members, win a share of $5,000!",
         rules: {
           subSections: [
-            { id: "90", title: "Day", body: "Monday, September 27, 2021" },
+            { id: "90", title: "Day", body: "Sunday, October 31, 2021" },
             { id: "91", title: "Promotion Type", body: "Ricochet Rewards" },
             {
               id: "92",
               title: "Rules",
               body:
-                "On Monday, September 27 between the hours of 6 PM and 10 PM, September birthday guests who are actively gaming with their Miccosukee One card will be eligible for a chance to win $25-$100 in Free Play. Up to $1,200 may be awarded in up to 8 occurrences.",
+                "New members deserve new money! On Sunday, October 31 between the hours of 8 PM and 10 PM, October new members who are actively gaming with their Miccosukee One card will be eligible for a chance to win $100 - $500 in Free Play. Up to $5,000 may be awarded in a max of 5 occurrences.",
             },
             {
               id: "93",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One members must have a birthday during the month of September and be actively playing gaming machines on their Miccosukee One card.",
+                "Miccosukee One members must have signed up for a Miccosukee One card during the month of October and be actively playing gaming machines on their Miccosukee One card.",
             },
             {
               id: "94",
               title: "Dates and Times",
-              body: "September 27 from 6 PM - 10 PM",
+              body: "October 31 from 8 PM - 10 PM",
             },
             {
               id: "95",
               title: "Winners",
               body:
-                "Miccosukee One members who trigger the Ricochet prize through their play and various random winners who are playing with their Miccosukee One card at the time the prize is triggered. All guests must have a September birthday to be eligible to win.",
+                "Miccosukee One members who trigger the Ricochet prize through their play and various random winners who are playing with their Miccosukee One card at the time the prize is triggered. All guests must have signed up in October to be eligible to win.",
             },
             {
               id: "96",
@@ -691,7 +675,7 @@ export const cardContent = (language) => {
               id: "97",
               title: "Prize Type and Amounts",
               body:
-                "The player who triggers the Ricochet will receive $100 and two (2) others will win $25 during each occurrence. A total of $1,200 in Free Play may be awarded in up to 8 occurrences. Up to 24 winners may be awarded prizes.",
+                "The player who triggers the Ricochet will receive $500 and five (5) others will win $100 during each occurrence. A total of $5,000 in Free Play may be awarded in up to 5 occurrences. Up to 30 winners may be awarded prizes.",
             },
             {
               id: "98",
@@ -702,42 +686,42 @@ export const cardContent = (language) => {
               id: "99",
               title: "General Rule Disclaimers",
               body:
-                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days on select machines only. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 10,
-        title: "New Member Ricochet",
+        title: "Referral Ricochet",
         img: cardImage11,
-        oneLiner: "New Members can win a share of $5,000!",
+        oneLiner: "Refer and win up to $100 Free Play!",
         rules: {
           subSections: [
-            { id: "100", title: "Day", body: "Thursday, September 30, 2021" },
+            { id: "100", title: "Day", body: "Sunday, October 31, 2021" },
             { id: "101", title: "Promotion Type", body: "Ricochet Rewards" },
             {
               id: "102",
               title: "Rules",
               body:
-                "New members deserve new money! On Thursday, September 30 between the hours of 8 PM and 10 PM, September new members who are actively gaming with their Miccosukee One card will be eligible for a chance to win $100 - $500 in Free Play. Up to $5,000 may be awarded in a max of 5 occurrences.",
+                "You refer us a friend, we can refer you some Free Play! On Sunday, October 31 between the hours of 6 PM and 8 PM, October Referrals who are actively gaming with their Miccosukee One card will be eligible for a chance to win $50 or $100 in Free Play. Up to $1,000 may be awarded in a max of 5 occurrences.",
             },
             {
               id: "103",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One members must have signed up for a Miccosukee One card during the month of September and be actively playing gaming machines on their Miccosukee One card.",
+                "Miccosukee One members must have referred a new Miccosukee One member during the month of October and be actively playing gaming machines on their Miccosukee One card.",
             },
             {
               id: "104",
               title: "Dates and Times",
-              body: "September 30 from 8 PM - 10 PM",
+              body: "October 31 from 6 PM - 8 PM",
             },
             {
               id: "105",
               title: "Winners",
               body:
-                "Miccosukee One members who trigger the Ricochet prize through their play and various random winners who are playing with their Miccosukee One card at the time the prize is triggered. All guests must have signed up in September to be eligible to win.",
+                "Miccosukee One members who trigger the Ricochet prize through their play and various random winners who are playing with their Miccosukee One card at the time the prize is triggered. All guests must have referred a new member and been present at time of enrollment in October to be eligible to win.",
             },
             {
               id: "106",
@@ -748,7 +732,7 @@ export const cardContent = (language) => {
               id: "107",
               title: "Prize Type and Amounts",
               body:
-                "The player who triggers the Ricochet will receive $500 and five (5) others will win $100 during each occurrence. A total of $5,000 in Free Play may be awarded in up to 5 occurrences. Up to 30 winners may be awarded prizes.",
+                "The player who triggers the Ricochet will receive $100 and two (2) others will win $50 during each occurrence. A total of $1,000 in Free Play may be awarded in up to 5 occurrences. Up to 15 winners may be awarded prizes.",
             },
             {
               id: "108",
@@ -759,42 +743,42 @@ export const cardContent = (language) => {
               id: "109",
               title: "General Rule Disclaimers",
               body:
-                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
       },
       {
         id: 11,
-        title: "Referral Ricochet",
+        title: "Halloween Hot Seat",
         img: cardImage12,
-        oneLiner: "Refer and win up to $100 Free Play!",
+        oneLiner: "Celebrate Halloween with $50 or $250 Free Play!",
         rules: {
           subSections: [
-            { id: "110", title: "Day", body: "Thursday, September 30, 2021" },
+            { id: "110", title: "Day", body: "Sunday, October 31, 2021" },
             { id: "111", title: "Promotion Type", body: "Ricochet Rewards" },
             {
               id: "112",
               title: "Rules",
               body:
-                "You refer us a friend, we can refer you some Free Play! On Thursday, September 30 between the hours of 6 PM and 8 PM, September Referrals who are actively gaming with their Miccosukee One card will be eligible for a chance to win $50 or $100 in Free Play. Up to $1,000 may be awarded in a max of 5 occurrences.",
+                "We have sweet Free Play treats to help you celebrate Halloween! On Sunday, October 31 between 6 PM and 10 PM up to 60 Miccosukee One members will win $50 or $250 Free Play via ricochet hot seat.",
             },
             {
               id: "113",
               title: "TO QUALIFY",
               body:
-                "Miccosukee One members must have referred a new Miccosukee One member during the month of September and be actively playing gaming machines on their Miccosukee One card.",
+                "Miccosukee One members actively gaming on their Miccosukee One Player's card.",
             },
             {
               id: "114",
               title: "Dates and Times",
-              body: "September 30 from 6 PM - 8 PM",
+              body: "October 31 from 6 PM - 10 PM",
             },
             {
               id: "115",
               title: "Winners",
               body:
-                "Miccosukee One members who trigger the Ricochet prize through their play and various random winners who are playing with their Miccosukee One card at the time the prize is triggered. All guests must have referred a new member and been present at time of enrollment in September to be eligible to win.",
+                "Miccosukee One member who triggers the ricochet prize through their play will win $250 Free Play and five (5) additional random winners playing with their Miccosukee One card at the time the prize is triggered will win $50 Free Play.",
             },
             {
               id: "116",
@@ -803,9 +787,9 @@ export const cardContent = (language) => {
             },
             {
               id: "117",
-              title: "Prize Type and Amounts",
+              title: "Prize Type and amounts",
               body:
-                "The player who triggers the Ricochet will receive $100 and two (2) others will win $50 during each occurrence. A total of $1,000 in Free Play may be awarded in up to 5 occurrences. Up to 15 winners may be awarded prizes.",
+                "The player who triggers the prize and 5 additional random winner in up to ten (10) occurrences will receive $50 or $250 in free play.",
             },
             {
               id: "118",
@@ -816,7 +800,7 @@ export const cardContent = (language) => {
               id: "119",
               title: "General Rule Disclaimers",
               body:
-                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 21 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
+                "Promotions are only available for Miccosukee One members. Prizes are not transferable. Free Play valid for 30 days and on select machines only. Must be 18 years of age or older to qualify. Once disqualification is declared, it is final. Malfunctions void all plays and pays. Offer is subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation of such status being rescinded.",
             },
           ],
         },
@@ -849,10 +833,10 @@ export const cardContent = (language) => {
         id: 0,
         title: "Bono para Nuevos Miembros",
         img: cardImage1,
-        oneLiner: "¡Inscríbase y gane $15-$515 Free Play!",
+        oneLiner: "¡Únase y gane hasta $500 más de Free Play!\u200b",
         rules: {
           subSections: [
-            { id: "00", title: "Día", body: "Todo el mes de septiembre" },
+            { id: "00", title: "Día", body: "Todo el mes de octubre" },
             { id: "01", title: "Tipo de Promoción", body: "Juegue y Gane" },
             {
               id: "02",
@@ -869,7 +853,7 @@ export const cardContent = (language) => {
             {
               id: "04",
               title: "Fechas y Horario",
-              body: "Todo el mes de septiembre",
+              body: "Todo el mes de octubre",
             },
             {
               id: "05",
@@ -906,7 +890,7 @@ export const cardContent = (language) => {
               id: "010",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Premios no son transferibles. Bounce Back Free Play es válido por 7 días y sólo en máquinas seleccionadas. Juegue y Gane Free. Juegue y Gane Free Play estará disponible por treinta (30) días al ganarse durante el periodo de oferta estipulado. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Premios no son transferibles. Bounce Back Free Play es válido por 7 días y sólo en máquinas seleccionadas. Juegue y Gane Free. Juegue y Gane Free Play estará disponible por treinta (30) días al ganarse durante el periodo de oferta estipulado. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
@@ -915,10 +899,10 @@ export const cardContent = (language) => {
         id: 1,
         title: "Igualamos su Nivel",
         img: cardImage2,
-        oneLiner: "¡Reciba un bono y promoción de nivel!",
+        oneLiner: "¡Reciba promoción de nivel + bono Free Play!",
         rules: {
           subSections: [
-            { id: "10", title: "Día", body: "Todo el mes de septiembre" },
+            { id: "10", title: "Día", body: "Todo el mes de octubre" },
             { id: "11", title: "Tipo de Promoción", body: "Tier/Status Match" },
             {
               id: "12",
@@ -950,45 +934,45 @@ export const cardContent = (language) => {
               id: "16",
               title: "REGLAS GENERALES",
               body:
-                "El nombre que el jugador muestre en su ID debe igualar el nombre que muestre en su Player’s Card. Jugadores deberán proveer dirección, correo electrónico y/o número de teléfono para ser elegibles para el programa de tier match. El Player’s Card y la ID no deben estar dañadas, alteradas o ilegibles. Límite una promoción de nivel por persona. Oferta válida sólo para nuevos jugadores o jugadores que lleven 12 meses inactivos en Miccosukee Resort & Gaming. El Tier Match para nuevos jugadores debe ocurrir en el momento de la inscripción inicial. Sin excepciones. Los jugadores inactivos deben visitar el Player’s Club dentro de las 24 horas posteriores a la primera sesión de reactivación completada para reclamar su Tier Match. Deben tener 21 años o más para calificar. Los jugadores sólo pueden participar en la promoción una vez. Deben tener identificación válida, emitida por el gobierno, aprobada para jugar, y estar físicamente presente con la identificación original al momento de registrarse. Free Play es válido sólo en máquinas seleccionadas. Jugadores tendrán hasta las 1:59 AM del 1 de octubre para redimir sus créditos de Free Play. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles.",
+                "El nombre que el jugador muestre en su ID debe igualar el nombre que muestre en su Player’s Card. Jugadores deberán proveer dirección, correo electrónico y/o número de teléfono para ser elegibles para el programa de tier match. El Player’s Card y la ID no deben estar dañadas, alteradas o ilegibles. Límite una promoción de nivel por persona. Oferta válida sólo para nuevos jugadores o jugadores que lleven 12 meses inactivos en Miccosukee Resort & Gaming. El Tier Match para nuevos jugadores debe ocurrir en el momento de la inscripción inicial. Sin excepciones. Los jugadores inactivos deben visitar el Player’s Club dentro de las 24 horas posteriores a la primera sesión de reactivación completada para reclamar su Tier Match. Deben tener 18 años de edad o más para calificar. Los jugadores sólo pueden participar en la promoción una vez. Deben tener identificación válida, emitida por el gobierno, aprobada para jugar, y estar físicamente presente con la identificación original al momento de registrarse. Free Play es válido sólo en máquinas seleccionadas. Jugadores tendrán hasta las 1:59 AM del 1 de noviembre para redimir sus créditos de Free Play. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles.",
             },
           ],
         },
       },
       {
         id: 2,
-        title: "Sorteo VIP para Tarjeta Negra",
+        title: "Linternas de Calabaza Premiadas",
         img: cardImage3,
-        oneLiner: "¡Tarjetas Negras, ganen $2,500 en efectivo!",
+        oneLiner: "¡Premio gordo aterrador valorado en $30,000!",
         rules: {
           subSections: [
             {
               id: "20",
               title: "Día",
-              body: "jueves, 2 y 16 de septiembre de 2021",
+              body: "lunes 4, 11 y 18 de octubre de 2021",
             },
             { id: "21", title: "Tipo de Promoción", body: "Sorteo" },
             {
               id: "22",
               title: "Reglas",
               body:
-                "Llamando a los miembros de tarjeta Negra, estamos regalando $7,500 en efectivo para darle la bienvenida al otoño. El jueves, 2 y 16 de septiembre a las 7 PM, 8 PM y 9 PM, ¡un miembro de la tarjeta Miccosukee One de nivel Negro ganará $2,500 en efectivo!",
+                "¡Estas Linternas de Calabaza tienen tantos premios que da miedo! El lunes 4, 11 y 18 de octubre a las 7 PM, 8 PM y 9 PM, ¡un afortunado miembro de Miccosukee One ganará su parte de $ 30,000 en efectivo!",
             },
             {
               id: "23",
               title: "PARA CALIFICAR",
               body:
-                "Miembros de la tarjeta Miccosukee One de nivel Negro deberán ganar 200 puntos en su tarjeta Miccosukee One por cada boleto de sorteo. Los puntos se pueden ganar desde el 26 de agosto a las 9 AM hasta el 16 de septiembre a las 8:45 PM.",
+                "Miembros de la tarjeta Miccosukee One deben ganar 100 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar desde el 27 de septiembre a las 9 AM hasta el 18 de octubre a las 8:45 PM.",
             },
             {
               id: "24",
               title: "Fecha y Horario de Sorteos",
-              body: "2 y 16 de septiembre a las 7 PM, 8 PM y 9 PM",
+              body: "4, 11 y 18 de octubre a las 7 PM, 8 PM & 9 PM",
             },
             {
               id: "25",
               title: "Cantidad de Ganadores por Sorteo",
-              body: "Un (1) ganador será elegido a las 7 PM, 8 PM y 9 PM.",
+              body: "Un (1) ganador será elegido a las 7 PM, 8 PM y 9 PM",
             },
             {
               id: "26",
@@ -1005,7 +989,7 @@ export const cardContent = (language) => {
               id: "28",
               title: "Tipo de Premio y Cantidades",
               body:
-                "Un (1) premio en efectivo de $2,500 a las 7 PM, 8 PM y 9 PM.",
+                "Los premios en efectivo disponibles para ganar son de $ 1,000 a $ 7,500.",
             },
             {
               id: "29",
@@ -1021,53 +1005,59 @@ export const cardContent = (language) => {
             },
             {
               id: "211",
-              title: "Reglas de Boletos de Sorteo / Tómbola",
+              title: "Reglas del Juego",
               body:
-                "La tómbola estará disponible del 1 – 2 de septiembre para el sorteo del 2 de septiembre, y del 10 – 16 de septiembre para el sorteo del 16 de septiembre. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “Black Card VIP Giveaway”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
+                "Si están presentes, los ganadores elegirán un sólo vehículo de premio. Comenzaremos el mes con un total de 9 vehículos premiados. Los vehículos premiados no serán reemplazados después de que hayan sido elegidos durante el mes. Los vehículos premiados valdrán las siguientes cantidades [1 - $ 1,000] [1 - $ 1,500] [1 - $ 2,000] [3 - $ 3,000] [1 - $ 4,000] [1 - $ 5,000] [1 - $ 7,500].",
             },
             {
               id: "212",
+              title: "Reglas de Boletos de Sorteo / Tómbola",
+              body:
+                "La tómbola estará disponible el 1 de octubre. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “Jackpot Jack-O-Lanterns”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
+            },
+            {
+              id: "213",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Elegibilidad para promoción por niveles basada en el estatus de juego del 1 de septiembre. Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 3,
-        title: "Duelo Alto Bajo",
+        title: "Sorteo VIP para Tarjeta Negra",
         img: cardImage4,
-        oneLiner: "¡Cartas pagan hasta $6K!",
+        oneLiner: "¡Tarjetas Negras, ganen $2,500 en efectivo!",
         rules: {
           subSections: [
             {
               id: "30",
               title: "Día",
-              body: "lunes, 6, 13 y 20 de septiembre de 2021",
+              body: "jueves, 7 y 21 de octubre de 2021",
             },
             { id: "31", title: "Tipo de Promoción", body: "Sorteo" },
             {
               id: "32",
               title: "Reglas",
               body:
-                "¡Su próxima tarjeta puede ser baja, pero su pago será alto! ¡El lunes 6, 13 y 20 de septiembre a las 7 PM y 9 PM, dos miembros de la tarjeta Miccosukee One ganarán hasta $ 6,000 en efectivo!",
+                "¡Son todo premios y cero trucos el jueves 7 y 21 de octubre a las 7 PM, 8 PM y 9 PM cuando un miembro de la tarjeta Miccosukee One de nivel Negro gane $ 2,500 en efectivo!",
             },
             {
               id: "33",
               title: "PARA CALIFICAR",
               body:
-                "Miembros de la tarjeta Miccosukee One deberán ganar 100 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar del 1 de septiembre a las 9 AM hasta el 20 de septiembre a las 8:45 PM.",
+                "Miembros de la tarjeta Miccosukee One de nivel Negro deberán ganar 200 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar desde el 1 de octubre a las 9 AM hasta el 21 de octubre a las 8:45 PM.",
             },
             {
               id: "34",
               title: "Fecha y Horario de Sorteos",
-              body: "6, 13 y 20 de septiembre a las 7 PM y 9 PM",
+              body: "7 y 21 de octubre a las 7 PM, 8 PM y 9 PM",
             },
             {
               id: "35",
               title: "Cantidad de Ganadores por Sorteo",
-              body: "Dos (2) ganadores a las 7 PM y 9 PM",
+              body: "Un (1) ganador será elegido a las 7 PM, 8 PM y 9 PM.",
             },
             {
               id: "36",
@@ -1084,7 +1074,7 @@ export const cardContent = (language) => {
               id: "38",
               title: "Tipo de Premio y Cantidades",
               body:
-                "Los premios en efectivo disponibles a ser ganados son de $1,000 - $6,000.",
+                "Un (1) premio en efectivo de $2,500 a las 7 PM, 8 PM y 9 PM.",
             },
             {
               id: "39",
@@ -1100,145 +1090,155 @@ export const cardContent = (language) => {
             },
             {
               id: "311",
-              title: "Reglas del Juego",
+              title: "Reglas de Boletos de Sorteo / Tómbola",
               body:
-                "Si están presentes, los ganadores jugarán High Low (Alto Bajo) entre sí. El primer jugador que haya sido elegido de la tómbola jugará High Low primero. Se mezclará una baraja de cartas, una vez que se termine de barajar, el jugador cortará el mazo. La primera carta del mazo le será revelada al jugador. Una vez que se revele la carta, el jugador decidirá si la siguiente carta será más alta o más baja que la carta revelada. Si el jugador acierta, se revelará otra carta; si el jugador se equivoca, se terminará su turno. Se revelarán un total de 6 cartas, incluida la primera carta presentada. Un empate en las cartas se considerará si adivina correctamente. El invitado con más aciertos gana. El empate será resuelto por ambos invitados sacando una carta de la baraja, la carta más alta gana; los empates resultarán en un nuevo sorteo. Un 2 se considera la carta más baja y un AS se considera la carta más alta. Los módulos de premio elegidos por el ganador del duelo Alto Bajo tendrán las siguientes denominaciones [2 - $ 1,500] [2 - $ 2,500] [2 - $ 3,000] [2 - $ 4,000] [1 - $ 5,000] [1 - $ 6,000]. El premio de consolación será de $ 1,000 para el segundo lugar.",
+                "La tómbola estará disponible del 1 – 7 de octubre para el sorteo del 7 de octubre, y del 15 – 21 de octubre para el sorteo del 21 de octubre. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “Black Card VIP Giveaway”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
             },
             {
               id: "312",
-              title: "Reglas de Boletos de Sorteo / Tómbola",
-              body:
-                "La tómbola estará disponible el 1 de septiembre. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “High Low Duel”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
-            },
-            {
-              id: "313",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Elegibilidad para promoción por niveles basada en el estatus de juego del 1 de octubre. Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 4,
-        title: "Cincuenta y Cincuenta",
+        title: "Sorteo VIP para Tarjeta Roja",
         img: cardImage5,
-        oneLiner: "¡Gane $50 Free Play!",
+        oneLiner: "¡Ricochet Hot Seats pagan hasta $150 Free Play!",
         rules: {
           subSections: [
             {
               id: "40",
               title: "Día",
-              body: "domingo, 5 y 19 de septiembre de 2021",
+              body: "miércoles, 6 y 20 de octubre de 2021",
             },
-            { id: "41", title: "Tipo de Promoción", body: "Juegue y Gane" },
+            { id: "41", title: "Tipo de Promoción", body: "Premios Ricochet" },
             {
               id: "42",
               title: "Reglas",
               body:
-                "El domingo, 5 y 19 de septiembre, los primeros 50 miembros de la tarjeta Miccosukee One que ganen 50 puntos en su tarjeta Miccosukee One recibirán $50 Free Play una vez de 9 AM hasta 11:59 PM.",
+                "¡Llamando a todos los miembros de nivel Rojo! El miércoles, 6 y 20 de octubre entre las 6 PM y 9 PM hasta 24 miembros de la tarjeta Miccosukee One de nivel Rojo ganarán $100 o $150 Free Play vía Ricochet hot seat.",
             },
             {
               id: "43",
               title: "PARA CALIFICAR",
               body:
-                "Inserte su tarjeta Miccosukee One en cualquier máquina de juego entre las 9 AM y 11:59 PM para ganar Free Play. Los créditos de Free Play serán descargados automáticamente a la cuenta de los primeros cincuenta invitados que cumplan los requisitos de Juegue y Gane.",
+                "Miembros de la tarjeta Miccosukee One de nivel ROJO que están jugando activamente con su tarjeta Miccosuke One.",
             },
             {
               id: "44",
-              title: "Fecha y Horario de Sorteos",
-              body: "5 y 19 de septiembre de 9 AM – 11:59 PM",
+              title: "Fecha y Horarios de Sorteo",
+              body: "6 y 20 de octubre de 6 PM – 9 PM",
             },
             {
               id: "45",
               title: "Ganadores",
               body:
-                "Los primeros 50 miembros de la tarjeta Miccosukee One que llenen los requisitos de juego.",
+                "Un miembro de la tarjeta Miccosukee One de nivel Rojo que active el premio Ricochet mientras juega ganará $150 Free Play y un (1) jugador adicional de nivel Rojo que está jugando con su tarjeta Miccosukee One y que sea elegido al azar cuando el premio sea activado ganará $100 Free Play.",
             },
             {
               id: "46",
               title: "Ubicación de Promoción",
-              body:
-                "La promoción tomará lugar en cualquier máquina que acepte las tarjetas Miccosukee One. Los créditos de Free Play serán descargados automáticamente a la cuenta Miccosukee One del ganador.",
+              body: "Máquinas de juego que acepten la tarjeta Miccosukee One.",
             },
             {
               id: "47",
               title: "Tipo de Premio y Cantidades",
               body:
-                "Miembros de la tarjeta Miccosukee One que ganen 50 puntos recibirán $50 Free Play.",
+                "El jugador que active el premio y 1 ganador al azar durante una de hasta doce (12) oportunidades recibirán $100 o $150 Free Play.",
             },
             {
               id: "48",
               title: "Restricciones de Premio",
-              body:
-                "Juegue y Gane sólo es redimible una vez por día de promoción para los primeros 50 miembros de la tarjeta Miccosukee One que alcancen los puntos requeridos.",
+              body: "Los jugadores pueden ganar múltiples veces.",
             },
             {
               id: "49",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Premios no son transferibles. Free Play es válido por 30 días y sólo en máquinas seleccionadas. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Elegibilidad para promoción por niveles basada en el estatus de juego del 1 de octubre. Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Premios no son transferibles. Free Play válido por treinta días y en máquinas seleccionadas. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 5,
-        title: "Sorteo VIP para Tarjeta Roja",
+        title: "Efectivo Espeluznante",
         img: cardImage6,
-        oneLiner: "¡Tarjetas Rojas, ganen hasta $150 Free Play!",
+        oneLiner: "¡Gane una parte de $7,500 en efectivo!",
         rules: {
           subSections: [
             {
               id: "50",
               title: "Día",
-              body: "miércoles, 8 y 22 de septiembre de 2021",
+              body: "domingo, 10 y 24 de octubre de 2021",
             },
-            { id: "51", title: "Tipo de Promoción", body: "Premios Ricochet" },
+            { id: "51", title: "Tipo de Promoción", body: "Sorteo" },
             {
               id: "52",
               title: "Reglas",
               body:
-                "¡Llamando a todos los miembros de nivel Rojo! El miércoles, 8 y 22 de septiembre entre las 6 PM y 9 PM hasta 24 miembros de la tarjeta Miccosukee One de nivel Rojo ganarán $100 o $150 Free Play vía Ricochet hot seat.",
+                "¡¡¡Los premios en efectivo son tan buenos que dan MIEDO!!! ¡El domingo 10 y 24 de octubre, un miembro de tarjeta Miccosukee One ganará su parte de $7,500 en efectivo a las 1 PM, 3 PM y 5 PM!",
             },
             {
               id: "53",
               title: "PARA CALIFICAR",
               body:
-                "Miembros de la tarjeta Miccosukee One de nivel ROJO que están jugando activamente con su tarjeta Miccosuke One.",
+                "Miembros de la tarjeta Miccosukee One deben ganar 100 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar desde el 1 de octubre a las 9 AM hasta el 24 de octubre a las 4:45 PM.",
             },
             {
               id: "54",
-              title: "Fecha y Horarios",
-              body: "8 y 22 de septiembre de 6 PM – 9 PM",
+              title: "Fecha y Horario de Sorteos",
+              body: "10 y 24 de octubre a las 1 PM, 3 PM y 5 PM",
             },
             {
               id: "55",
-              title: "Ganadores",
-              body:
-                "Un miembro de la tarjeta Miccosukee One de nivel Rojo que active el premio Ricochet mientras juega ganará $150 Free Play y un (1) jugador adicional de nivel Rojo que está jugando con su tarjeta Miccosukee One y que sea elegido al azar cuando el premio sea activado ganará $100 Free Play.",
+              title: "Cantidad de Ganadores por Sorteo",
+              body: "Un (1) ganador será elegido a las 1 PM, 3 PM y 5 PM.",
             },
             {
               id: "56",
-              title: "Ubicación de Promoción",
-              body: "Máquinas de juego que acepten la tarjeta Miccosukee One.",
+              title: "Ubicación de Sorteo",
+              body:
+                "Los sorteos y la entrega de premios serán en el Player’s Club.",
             },
             {
               id: "57",
-              title: "Tipo de Premio y Cantidades",
-              body:
-                "El jugador que active el premio y 1 ganador al azar durante una de hasta doce (12) oportunidades recibirán $100 o $150 Free Play.",
+              title: "Cantidad de Entradas Permitidas por Persona",
+              body: "Los jugadores pueden acumular entradas ilimitadas.",
             },
             {
               id: "58",
-              title: "Restricciones de Premio",
-              body: "Los jugadores pueden ganar múltiples veces.",
+              title: "Tipo de Premio y Cantidades",
+              body:
+                "Si están presentes, los ganadores pueden reclamar los siguientes premios  [1 PM -  $1,500] [3 PM -  $1,000] [5 PM - $5,000].",
             },
             {
               id: "59",
+              title: "Cantidad de Ganancias Permitidas por Persona",
+              body:
+                "Jugadores sólo pueden ganar una vez en cualquier sorteo con múltiples ganadores.",
+            },
+            {
+              id: "510",
+              title: "Reglas de “No Asistencia”",
+              body:
+                "Deben estar presentes para ganar. El premio se perderá automáticamente si el jugador seleccionado no logra encontrar su boleto ganador por cuenta propia, y no logra presentar identificación válida y su tarjeta del Player’s Club a los diez (10) minutos de haber sido anunciado; otro nombre será seleccionado hasta que se reclame el premio. El jugador debe localizar e identificar el boleto de sorteo correspondiente por cuenta propia. No está permitido que empleados de Miccosukee Resort & Gaming manejen los boletos de sorteo retenidos por el jugador una vez hayan sido emitidos.",
+            },
+            {
+              id: "511",
+              title: "Reglas de Boletos de Sorteo / Tómbola",
+              body:
+                "La tómbola estará disponible el 1 de octubre a las 9 AM. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “Creepy Cash”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
+            },
+            {
+              id: "512",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Elegibilidad para promoción por niveles basada en el estatus de juego del 1 de septiembre. Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Premios no son transferibles. Free Play válido por treinta días y en máquinas seleccionadas. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
@@ -1253,25 +1253,25 @@ export const cardContent = (language) => {
             {
               id: "60",
               title: "Día",
-              body: "jueves, 9 y 23 de septiembre de 2021",
+              body: "jueves, 14 y 28 de octubre de 2021",
             },
             { id: "61", title: "Tipo de Promoción", body: "Sorteo" },
             {
               id: "62",
               title: "Reglas",
               body:
-                "Llamando a los miembros de tarjeta Blanca, estamos regalando $15,000 en efectivo para darle la bienvenida al otoño. El jueves, 9 y 23 de septiembre a las 7 PM, 8 PM y 9 PM, ¡un miembro de la tarjeta Miccosukee One de nivel Blanco ganará $5,000 en efectivo!",
+                "¡Son todo premios y cero trucos el jueves 14 y 28 de octubre a las 7 PM, 8 PM y 9 PM cuando un miembro de la tarjeta Miccosukee One de nivel Blanco gane $5,000 en efectivo!",
             },
             {
               id: "63",
               title: "PARA CALIFICAR",
               body:
-                "Miembros de la tarjeta Miccosukee One de nivel Blanco deberán ganar 200 puntos en su tarjeta Miccosukee One por cada boleto de sorteo. Los puntos se pueden ganar desde el 1 de septiembre a las 9 AM hasta el 23 de septiembre a las 8:45 PM.",
+                "Miembros de la tarjeta Miccosukee One de nivel Blanco deberán ganar 200 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar desde el 1 de octubre a las 9 AM hasta el 28 de octubre a las 8:45 PM.",
             },
             {
               id: "64",
               title: "Fecha y Horario de Sorteos",
-              body: "9 y 23 de septiembre a las 7 PM, 8 PM y 9 PM",
+              body: "14 y 28 de octubre a las 7 PM, 8 PM y 9 PM",
             },
             {
               id: "65",
@@ -1311,51 +1311,52 @@ export const cardContent = (language) => {
               id: "611",
               title: "Reglas de Boletos de Sorteo / Tómbola",
               body:
-                "La tómbola estará disponible del 3 – 9 de septiembre para el sorteo del 9 de septiembre, y del 17 – 23 de septiembre para el sorteo del 23 de septiembre. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “White Card VIP Giveaway”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
+                "La tómbola estará disponible del 8 – 14 de octubre para el sorteo del 14 de octubre, y del 22 – 28 de octubre para el sorteo del 28 de octubre. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “White Card VIP Giveaway”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
             },
             {
               id: "612",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Elegibilidad para promoción por niveles basada en el estatus de juego del 1 de septiembre. Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Elegibilidad para promoción por niveles basada en el estatus de juego del 1 de octubre. Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 7,
-        title: "Domingo Soleado Bien Pagado",
+        title: "Dinero Monstruoso",
         img: cardImage8,
-        oneLiner: "¡Gane su parte de $7,500!",
+        oneLiner: "2 días, 5 sorteos, $1,000- $10,000 en efectivo!",
         rules: {
           subSections: [
             {
               id: "70",
               title: "Día",
-              body: "domingo, 12 y 26 de septiembre de 2021",
+              body: "viernes, 29 de octubre y sábado, 30 de octubre de 2021",
             },
             { id: "71", title: "Tipo de Promoción", body: "Sorteo" },
             {
               id: "72",
               title: "Reglas",
               body:
-                "¡Los días soleados pagarán bien! El domingo 12 y 26 de septiembre, ¡un miembro de la tarjeta Miccosukee One ganará su parte de $7,500 en efectivo a las 1 PM, 3 PM y 5 PM!",
+                "¡¡Estamos regalando una monstruosa cantidad de dinero para celebrar Halloween!! El 29 y 30 de octubre tendremos 5 sorteos cada día a partir de las 5 PM, donde se llamará a los miembros de Miccosukee One cada dos horas para ganar de $ 1,000 a $ 10,000. Si los ganadores no reclaman su premio, se transferirá al sorteo de la 1 AM del 31 de octubre. El último sorteo del 31 de octubre debe tener un ganador, ¡y ese ganador podría ser USTED!",
             },
             {
               id: "73",
               title: "PARA CALIFICAR",
               body:
-                "Miembros de la tarjeta Miccosukee One deberán ganar 100 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar desde el 1 de septiembre a las 9 AM hasta el 26 de septiembre a las 4:45 PM.",
+                "Gane 200 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar entre el 1 de octubre a las 9 AM al 31 de octubre a las 12:45 AM. Esta promoción contará con un multiplicador de entradas de bono todos los viernes y sábados que los jugadores puedan ganar entradas. Los invitados recibirán una entrada de bono por cada 200 puntos que ganen desde las 9 AM hasta la hora de cierre y hasta las 12:45 AM del 31 de octubre.",
             },
             {
               id: "74",
               title: "Fecha y Horario de Sorteos",
-              body: "12 y 26 de septiembre a las 1 PM, 3 PM y 5 PM",
+              body:
+                "Los sorteos se realizarán a las 5 PM, 7 PM, 9 PM, 11 PM el 29, 30 de octubre y 1 AM el 30 y 31 de octubre.",
             },
             {
               id: "75",
               title: "Cantidad de Ganadores por Sorteo",
-              body: "Un (1) ganador será elegido a las 1 PM, 3 PM y 5 PM.",
+              body: "Un (1) ganador será elegido por sorteo.",
             },
             {
               id: "76",
@@ -1372,169 +1373,134 @@ export const cardContent = (language) => {
               id: "78",
               title: "Tipo de Premio y Cantidades",
               body:
-                "Si están presentes, los ganadores podrán reclamar los siguientes premios en efectivo [1 PM - $1,500] [3 PM - $1,000] [5 PM - $5,000].",
+                "Si están presentes, los ganadores pueden reclamar los siguientes premios en efectivo [5 PM - $ 1,000] [7 PM - $ 4,000] [9 PM - $ 3,000] [11 PM - $ 2,000] [1 AM - $ 10,000]. El ganador de la 1 AM del 31 de octubre ganará $ 10,000 en efectivo más cualquier premio en efectivo no reclamado de los sorteos anteriores.",
             },
             {
               id: "79",
+              title: "Reglas de “No Asistencia”",
+              body:
+                "Deben estar presentes para ganar. El premio se perderá automáticamente si el jugador seleccionado no está presente con el talonario de su boleto dentro de los diez (10) minutos de haber sido anunciado. Si los ganadores de cualquier sorteo no se presentan, el dinero del premio se transferirá al sorteo de la 1 AM del 31 de octubre. Los funcionarios del sorteo seguirán sorteando nombres en el sorteo final hasta que se encuentre un ganador.",
+            },
+            {
+              id: "710",
               title: "Cantidad de Ganancias Permitidas por Persona",
               body:
                 "Jugadores sólo pueden ganar una vez en cualquier sorteo con múltiples ganadores.",
             },
             {
-              id: "710",
-              title: "Reglas de “No Asistencia”",
-              body:
-                "Deben estar presentes para ganar. El premio se perderá automáticamente si el jugador seleccionado no logra encontrar su boleto ganador por cuenta propia, y no logra presentar identificación válida y su tarjeta del Player’s Club a los diez (10) minutos de haber sido anunciado; otro nombre será seleccionado hasta que se reclame el premio. El jugador debe localizar e identificar el boleto de sorteo correspondiente por cuenta propia. No está permitido que empleados de Miccosukee Resort & Gaming manejen los boletos de sorteo retenidos por el jugador una vez hayan sido emitidos.",
-            },
-            {
               id: "711",
               title: "Reglas de Boletos de Sorteo / Tómbola",
               body:
-                "La tómbola estará disponible el 1 de septiembre a las 9 AM. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “Sunny Sunday Pay-outs”. La tómbola se vaciará después del último sorteo de la noche. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir. Los boletos no podrán ser depositados en la tómbola durante el sorteo.",
+                'La tómbola estará disponible el 1 de octubre a las 9 AM. La tómbola se vaciará después del último sorteo a la 1 AM del 31 de octubre. Los boletos no podrán ser depositados en la tómbola durante el sorteo. Al recibir el boleto de sorteo del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, "Monster Money". El jugador debe haber retenido la porción más pequeña del boleto perforado para poder obtener el premio. Los boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir.',
             },
             {
               id: "712",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 8,
-        title: "Maletín Premiado",
+        title: "Bonanza de Cumpleaños",
         img: cardImage9,
-        oneLiner: "¡Gane hasta $25K!",
+        oneLiner: "¡Gane una parte de $1,200 Free Play! \u200b",
         rules: {
           subSections: [
-            {
-              id: "80",
-              title: "Día",
-              body: "sábado, 25 de septiembre de 2021",
-            },
-            { id: "81", title: "Tipo de Promoción", body: "Sorteo" },
+            { id: "80", title: "Día", body: "lunes, 25 de octubre de 2021" },
+            { id: "81", title: "Tipo de Promoción", body: "Premios Ricochet" },
             {
               id: "82",
               title: "Reglas",
               body:
-                "Estamos regalando mucho dinero… ¡¡¡por si acaso le interesa!!! El 25 de septiembre, llamaremos a un ganador a las 7 PM, 9 PM y 11 PM para concursar en el juego del Maletín Premiado (Just In Case) y tener la oportunidad de ganar hasta $25,000. Además, si nuestros concursantes no ganan un total de $30K, tendremos un sorteo de bono para alcanzar esa cantidad a las 12 AM.",
+                "El lunes, 25 de octubre entre las 6 PM y 10 PM, miembros que cumplan años en octubre y estén jugando ativamente con sus tarjetas Miccosukee One serán elegibles para la oportunidad de ganar $25-$100 Free Play. Hasta $1,200 podrían ser otorgados en 8 oportunidades.",
             },
             {
               id: "83",
               title: "PARA CALIFICAR",
               body:
-                "Gane 200 puntos en su tarjeta Miccosukee One para cada boleto de sorteo. Los puntos se pueden ganar entre el 1 de septiembre a las 9 AM hasta el 25 de septiembre a las 10:45 PM. Esta promoción incluye un multiplicador de entradas de bono cada viernes y sábado que los jugadores puedan ganar entradas. Los invitados recibirán una entrada de bono por cada 200 puntos que ganen de 9 AM – hora de cierre y hasta las 10:45 PM del 25 de septiembre.",
+                "Miembros de la tarjeta Miccosukee One deben cumplir años en octubre y estar jugando activamente en las máquinas con su tarjeta Miccosukee One.",
             },
             {
               id: "84",
-              title: "Fecha y Horario de Sorteos",
-              body:
-                "Los sorteos serán a las 7 PM, 9 PM y 11 PM el 25 de septiembre. Un sorteo de bono se llevará a cabo a las 12 AM el 26 de septiembre si los fondos totales otorgados en los sorteos anteriores equivalen a menos de $30,000.",
+              title: "Fecha y Horarios",
+              body: "25 de octubre de 6 PM – 10 PM",
             },
             {
               id: "85",
-              title: "Cantidad de Ganadores por Sorteo",
-              body: "Un (1) ganador será elegido por sorteo.",
+              title: "Ganadores",
+              body:
+                "Miembros de la tarjeta Miccosukee One que activen el premio Ricochet mientras juegan y varios ganadores al azar que estén jugando con su tarjeta Miccosukee One cuando el premio sea activado. Todos los jugadores deberán cumplir años en octubre para ser elegibles para ganar.",
             },
             {
               id: "86",
-              title: "Ubicación de Sorteo",
-              body:
-                "Los sorteos y la entrega de premios serán en el Player’s Club.",
+              title: "Ubicacion de Promoción",
+              body: "Máquinas de juego que acepten la tarjeta Miccosukee One",
             },
             {
               id: "87",
-              title: "Cantidad de Entradas Permitidas por Persona",
-              body: "Los jugadores pueden acumular entradas ilimitadas.",
+              title: "Tipo de Premio y Cantidades",
+              body:
+                "El jugador que active el premio Ricochet recibirá $100 y otros dos (2) ganadores recibirán $25 en cada oportunidad. Un total de $1,200 Free Play será otorgado durante 8 oportunidades. Hasta 24 ganadores recibirán premios.",
             },
             {
               id: "88",
-              title: "Tipo de Premio y Cantidades",
-              body:
-                "Si están presentes, los ganadores jugarán el Maletín Premiado (Just In Case) y ganarán los siguientes premios en efectivo si eligen revelar un maletín al final del juego, [$1] [$200] [$500] [$800] [$1,000] [$1,500] [$2,000] [$2,500] [$3,000] [$4,000] [$5,000] [$6,000] [$7,000] [$8,000] [$9,000] [$10,000] [$12,500] [$15,000] [$20,000] [$25,000]. Los concursantes también pueden optar por aceptar una oferta de pago de entre $100 y $22,500.",
+              title: "Restricciones de Premio",
+              body: "Los jugadores pueden ganar múltiples veces.",
             },
             {
               id: "89",
-              title: "Reglas de “No Asistencia”",
-              body:
-                "Deben estar presentes para ganar. El premio se perderá automáticamente si el jugador seleccionado no logra encontrar su boleto ganador por cuenta propia, y no logra presentar identificación válida y su tarjeta del Player’s Club a los diez (10) minutos de haber sido anunciado; otro nombre será seleccionado hasta que se reclame el premio. El jugador debe localizar e identificar el boleto de sorteo correspondiente por cuenta propia. No está permitido que empleados de Miccosukee Resort & Gaming manejen los boletos de sorteo retenidos por el jugador una vez hayan sido emitidos.",
-            },
-            {
-              id: "810",
-              title: "Reglas del Juego",
-              body:
-                "El juego se basa en eliminaciones y ofertas. El objetivo del juego es elegir el maletín de mayor valor al comienzo del juego y eliminar los maletines en orden de menor a mayor para mantener las ofertas lo más altas posible. Los concursantes comenzarán con 20 maletines. Los valores en efectivo en estos maletines se encuentran en la sección Tipo de Premio y Cantidades de las reglas. Para comenzar el juego, los concursantes elegirán uno de los 20 maletines que no serán elegibles para eliminación. Una vez que los concursantes hayan elegido su maletín y se haya dejado a un lado, comenzarán las rondas eliminatorias. Las primeras tres rondas del juego consistirán en la eliminación de 5 maletines; siempre que un jugador elija un maletín para eliminar, se revelará la cantidad que hay adentro. Después de cada ronda de eliminación, el banquero proporcionará una oferta en efectivo al concursante. El monto de la oferta en efectivo dependerá de la suma total de dinero en los maletines que no hayan sido eliminados. Cuanto mayor sea la suma de los maletines, mayor será el monto de la oferta. Si el concursante acepta la oferta en efectivo, el juego terminará y se le pagará la oferta. Las siguientes tres rondas consistirán en que el concursante elimine un maletín a la vez y reciba una oferta después de cada maletín. Si los concursantes rechazan todas las ofertas, se quedarán con dos maletines. Un maletín será el que fue elegido por el concursante al comienzo del juego y el otro maletín será el último que quede después de todas las rondas de eliminación. El concursante elegirá entonces un maletín para abrir; el premio dentro de ese maletín es lo que se otorgará. Si los pagos totales de los sorteos de las 7 PM, 9 PM y 11 PM no equivalen a $30,000, se sorteará otro nombre para otorgar la variación a las 12 AM del 26 de septiembre.",
-            },
-            {
-              id: "811",
-              title: "Reglas de Entradas de Bono",
-              body:
-                "El 3, 4, 10, 11, 17, 18 y 24 de septiembre de 9 AM – hora de cierre, y el 25 de septiembre de 9 AM hasta las 10:45 PM, los jugadores pueden ganar entradas de bono por cada 200 puntos que acumulen. Jugadores deben recolectar sus entradas de bono el mismo día y durante los horarios establecidos. Cualquier entrada no reclamada durante el tiempo estipulado será perdida y no se podrá utilizar en otra fecha.",
-            },
-            {
-              id: "812",
-              title: "Cantidad de Ganancias Permitidas por Persona",
-              body:
-                "Jugadores sólo pueden ganar una vez en cualquier sorteo con múltiples ganadores.",
-            },
-            {
-              id: "813",
-              title: "Reglas de Boletos de Sorteo / Tómbola",
-              body:
-                "La tómbola estará disponible el 1 de septiembre a las 9 AM. La tómbola se vaciará después del último sorteo de la noche. Al recibir el boleto del Player’s Club, es responsabilidad exclusiva del jugador colocar la porción perforada más grande del boleto en la tómbola correspondiente al sorteo, “Just in Case”. El jugador debe haber retenido la porción más pequeña del boleto perforado para obtener el premio. Boletos perdidos, robados o dañados no serán reemplazados. Los boletos colocados en la tómbola incorrecta serán descalificados y no se volverán a emitir.",
-            },
-            {
-              id: "814",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Para reclamar el premio, deben tener identificación válida emitida por el gobierno y aprobada para jugar. Los premios serán retenidos por 30 días si una identificación válida emitida por el gobierno no se provee al momento de ganar. Cualquier premio retenido que no se reclame en treinta (30) días se perderá. Promociones están disponibles sólo para miembros de la tarjeta Miccosukee One. Puntos acumulados en cualquier promoción de Bonus Point Multiplier no aplican para boletos de sorteo adicionales o para avanzar de nivel en la tarjeta. Premios no son transferibles. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Los premios no son transferibles. Free Play es válido durante 30 días y sólo en máquinas seleccionadas. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 9,
-        title: "Bonanza de Cumpleaños",
+        title: "Ricochet para Nuevos Miembros",
         img: cardImage10,
-        oneLiner: "¡Llévese $25-$100 Free Play! \u200b",
+        oneLiner: "¡Nuevos miembros, ganen una parte de $5,000!",
         rules: {
           subSections: [
-            { id: "90", title: "Día", body: "lunes, 27 de septiembre de 2021" },
+            { id: "90", title: "Día", body: "domingo, 31 de octubre de 2021" },
             { id: "91", title: "Tipo de Promoción", body: "Premios Ricochet" },
             {
               id: "92",
               title: "Reglas",
               body:
-                "El lunes, 27 de septiembre entre las 6 PM y 10 PM, miembros que cumplan años en septiembre y estén jugando ativamente con sus tarjetas Miccosukee One serán elegibles para la oportunidad de ganar $25-$100 Free Play. Hasta $1,200 podrían ser otorgados en 8 oportunidades.",
+                "¡Nuevos miembros merecen dinero nuevo! El domingo, 31 de octubre entre las 8 PM y 10 PM, nuevos miembros que se inscriban en octubre y que estén jugando activamente con su tarjeta Miccosukee One serán elegibles para la oportunidad de ganar $100 - $500 Free Play. Hasta $5,000 podrían ser otorgados en un máximo de 5 oportunidades.",
             },
             {
               id: "93",
               title: "PARA CALIFICAR",
               body:
-                "Miembros de la tarjeta Miccosukee One deben cumplir años en septiembre y estar jugando activamente en las máquinas con su tarjeta Miccosukee One.",
+                "Los miembros de Miccosukee One deben haberse registrado para obtener la tarjeta Miccosukee One durante el mes de octubre y deben estar jugando activamente en las máquinas de juego con su tarjeta Miccosukee One.",
             },
             {
               id: "94",
               title: "Fecha y Horarios",
-              body: "27 de septiembre de 6 PM – 10 PM",
+              body: "31 de octubre de 8 PM – 10 PM",
             },
             {
               id: "95",
               title: "Ganadores",
               body:
-                "Miembros de la tarjeta Miccosukee One que activen el premio Ricochet mientras juegan y varios ganadores al azar que estén jugando con su tarjeta Miccosukee One cuando el premio sea activado. Todos los jugadores deberán cumplir años en septiembre para ser elegibles para ganar.",
+                "Miembros de la Tarjeta Miccosukee One que activen el premio Ricochet mientras juegan y varios jugadores seleccionados al azar mientras juegan con su tarjeta Miccosukee One cuando el premio se active. Todos los invitados deben haberse registrado en octubre para poder ganar.",
             },
             {
               id: "96",
-              title: "Ubicacion de Promoción",
-              body: "Máquinas de juego que acepten la tarjeta Miccosukee One",
+              title: "Ubicación de Promoción",
+              body: "Máquinas de juego que acepten tarjetas de Miccosukee One",
             },
             {
               id: "97",
               title: "Tipo de Premio y Cantidades",
               body:
-                "El jugador que active el premio Ricochet recibirá $100 y otros dos (2) ganadores recibirán $25 en cada oportunidad. Un total de $1,200 Free Play será otorgado durante 8 oportunidades. Hasta 24 ganadores recibirán premios.",
+                "El jugador que active el premio Ricochet recibirá $500 y otros cinco (5) jugadores ganarán $100 durante cada oportunidad. Un total de $5,000 Free Play será otorgado en hasta 5 oportundiades. Hasta 30 ganadores recibirán premios.",
             },
             {
               id: "98",
@@ -1545,46 +1511,42 @@ export const cardContent = (language) => {
               id: "99",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Los premios no son transferibles. Free Play es válido durante 30 días y sólo en máquinas seleccionadas. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Los premios no son transferibles. Free Play es válido durante 30 días y sólo en máquinas seleccionadas. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 10,
-        title: "Ricochet para Nuevos Miembros",
+        title: "Ricochet por Referidos",
         img: cardImage11,
-        oneLiner: "¡Nuevos miembros pueden ganar su parte de $5,000!",
+        oneLiner: "¡Refiera y gane hasta $100 Free Play!",
         rules: {
           subSections: [
-            {
-              id: "100",
-              title: "Día",
-              body: "jueves, 30 de septiembre de 2021",
-            },
+            { id: "100", title: "Día", body: "domingo, 31 de octubre de 2021" },
             { id: "101", title: "Tipo de Promoción", body: "Premios Ricochet" },
             {
               id: "102",
               title: "Reglas",
               body:
-                "¡Nuevos miembros merecen dinero nuevo! El jueves, 30 de septiembre entre las 8 PM y 10 PM, nuevos miembros que se inscriban en septiembre y que estén jugando activamente con su tarjeta Miccosukee One serán elegibles para la oportunidad de ganar $100 - $500 Free Play. Hasta $5,000 podrían ser otorgados en un máximo de 5 oportunidades.",
+                "¡Si usted nos refiere un amigo, le regalamos Free Play! El domingo, 31 de octubre entre las 6 PM y 8 PM, miembros que hayan hecho un referido en octubre y que estén jugando activamente con su tarjeta Miccosukee One serán elegibles para la oportunidad de ganar $50 o $100 Free Play. Hasta $1,000 podrían ser otorgados en un máximo de 5 oportunidades.",
             },
             {
               id: "103",
               title: "PARA CALIFICAR",
               body:
-                "Los miembros de Miccosukee One deben haberse registrado para obtener la tarjeta Miccosukee One durante el mes de septiembre y deben estar jugando activamente en las máquinas de juego con su tarjeta Miccosukee One.",
+                "Miembros de la tarjeta Miccosukee One deben haber referido a un nuevo miembro de Miccosukee One durante el mes de octubre y deben estar jugando activamente en las máquinas con su tarjeta Miccosukee One.",
             },
             {
               id: "104",
               title: "Fecha y Horarios",
-              body: "30 de septiembre de 8 PM – 10 PM",
+              body: "31 de octubre de 6 PM – 8 PM",
             },
             {
               id: "105",
               title: "Ganadores",
               body:
-                "Miembros de la Tarjeta Miccosukee One que activen el premio Ricochet mientras juegan y varios jugadores seleccionados al azar mientras juegan con su tarjeta Miccosukee One cuando el premio se active. Todos los invitados deben haberse registrado en septiembre para poder ganar.",
+                "Miembros de la tarjeta Miccosukee One que activen el premio Ricochet mientras juegan y varios ganadores seleccionados al azar mientras juegan con su tarjeta Miccosukee One cuando el premio se active. Todos los invitados deben haber referido a un nuevo miembro y deben estar presentes en el momento de inscripción en octubre para ser elegibles a ganar.",
             },
             {
               id: "106",
@@ -1595,7 +1557,7 @@ export const cardContent = (language) => {
               id: "107",
               title: "Tipo de Premio y Cantidades",
               body:
-                "El jugador que active el premio Ricochet recibirá $500 y otros cinco (5) jugadores ganarán $100 durante cada oportunidad. Un total de $5,000 Free Play será otorgado en hasta 5 oportundiades. Hasta 30 ganadores recibirán premios.",
+                "El jugador que active el premio Ricochet recibirá $100 y otros dos (2) jugadores ganarán $50 durante cada oportunidad. Un total de $1,000 Free Play será otorgado en hasta 5 oportundiades. Hasta 15 ganadores serán premiados.",
             },
             {
               id: "108",
@@ -1606,57 +1568,53 @@ export const cardContent = (language) => {
               id: "109",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Los premios no son transferibles. Free Play es válido durante 30 días y sólo en máquinas seleccionadas. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Los premios no son transferibles. Free Play es válido durante 30 días y sólo en máquinas seleccionadas. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },
       },
       {
         id: 11,
-        title: "Ricochet por Referidos",
+        title: "Silla Caliente de Halloween",
         img: cardImage12,
-        oneLiner: "¡Refiera y gane hasta $100 Free Play!",
+        oneLiner: "¡Celebre Halloween con $50 o $250 Free Play!",
         rules: {
           subSections: [
-            {
-              id: "110",
-              title: "Día",
-              body: "jueves, 30 de septiembre de 2021",
-            },
+            { id: "110", title: "Día", body: "domingo, 31 de octubre de 2021" },
             { id: "111", title: "Tipo de Promoción", body: "Premios Ricochet" },
             {
               id: "112",
               title: "Reglas",
               body:
-                "¡Si usted nos refiere un amigo, le regalamos Free Play! El jueves, 30 de septiembre entre las 6 PM y 8 PM, miembros que hayan hecho un referido en septiembre y que estén jugando activamente con su tarjeta Miccosukee One serán elegibles para la oportunidad de ganar $50 o $100 Free Play. Hasta $1,000 podrían ser otorgados en un máximo de 5 oportunidades.",
+                "¡Tenemos dulces sorpresas de Free Play para ayudarle a celebrar Halloween! El domingo, 31 de octubre entre las 6 PM Y las 10 PM, hasta 60 miembros de Miccosukee One ganarán $50 o $250 Free Play vía premio ricochet.",
             },
             {
               id: "113",
               title: "PARA CALIFICAR",
               body:
-                "Miembros de la tarjeta Miccosukee One deben haber referido a un nuevo miembro de Miccosukee One durante el mes de septiembre y deben estar jugando activamente en las máquinas con su tarjeta Miccosukee One.",
+                "Miembros de la tarjeta Miccosukee One que estén jugando activamente con sus tarjetas de Miccosukee One.",
             },
             {
               id: "114",
               title: "Fecha y Horarios",
-              body: "30 de septiembre de 6 PM – 8 PM",
+              body: "31 de octubre de 6 PM – 10 PM",
             },
             {
               id: "115",
               title: "Ganadores",
               body:
-                "Miembros de la tarjeta Miccosukee One que activen el premio Ricochet mientras juegan y varios ganadores seleccionados al azar mientras juegan con su tarjeta Miccosukee One cuando el premio se active. Todos los invitados deben haber referido a un nuevo miembro y deben estar presentes en el momento de inscripción en septiembre para ser elegibles a ganar.",
+                "Un miembro de la tarjeta Miccosukee One que active el premio ricochet mientras juega ganará $250 Free Play y cinco (5) jugadores adicionales que estén jugando con su tarjeta Miccosukee One serán elegidos al azar cuando el premio sea activado para ganar $50 Free Play.",
             },
             {
               id: "116",
               title: "Ubicación de Promoción",
-              body: "Máquinas de juego que acepten tarjetas de Miccosukee One",
+              body: "Máquinas de juego que acepten la tarjeta Miccosukee One.",
             },
             {
               id: "117",
               title: "Tipo de Premio y Cantidades",
               body:
-                "El jugador que active el premio Ricochet recibirá $100 y otros dos (2) jugadores ganarán $50 durante cada oportunidad. Un total de $1,000 Free Play será otorgado en hasta 5 oportundiades. Hasta 15 ganadores serán premiados.",
+                "El jugador que active el premio y 5 ganadores adicionales elegidos al azar en hasta diez (10) oportunidades recibirán $50 o $250 Free Play.",
             },
             {
               id: "118",
@@ -1667,7 +1625,7 @@ export const cardContent = (language) => {
               id: "119",
               title: "Reglas Generales / Relevo de Responsabilidad",
               body:
-                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Los premios no son transferibles. Free Play es válido durante 30 días y sólo en máquinas seleccionadas. Deben tener 21 años o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
+                "Promociones sólo están disponibles para miembros de la tarjeta Miccosukee One. Premios no son transferibles. Free Play válido por treinta días y en máquinas seleccionadas. Deben tener 18 años de edad o más para calificar. Una vez declarada la descalificación, es definitiva. El mal funcionamiento anula todas las jugadas y los pagos. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles. Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido.",
             },
           ],
         },

@@ -89,15 +89,15 @@ const GamingPromos = () => {
 
   const getMonth = () => {
     return language
-      ? `${"September".toUpperCase()} PROMOTIONS`
-      : `PROMOCIONES DE ${"septiembre".toUpperCase()}`;
+      ? `${"October".toUpperCase()} PROMOTIONS`
+      : `PROMOCIONES DE ${"octubre".toUpperCase()}`;
   };
 
   const getCalendarPdf = () => {
     const englishCalendar =
-      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/september_en.pdf";
+      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/october_en.pdf";
     const spanishCalendar =
-      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/september_sp.pdf";
+      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/october_sp.pdf";
 
     if (language) {
       return englishCalendar;

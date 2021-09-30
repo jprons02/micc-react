@@ -52,6 +52,7 @@ const Miccosukee = (props) => {
     let parts = host.split(".");
     let subdomain = parts.length > 2 ? parts[0] : null;
 
+    // the NaN if statement is for testing the website as ip, without domain name
     if (parseInt(parts[0]) === NaN) {
       if (parts[0] === "www") {
         parts.splice(0, 1);
