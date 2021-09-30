@@ -53,55 +53,53 @@ const Miccosukee = (props) => {
     let subdomain = parts.length > 2 ? parts[0] : null;
 
     // the NaN if statement is for testing the website as ip, without domain name
-    if (parseInt(parts[0]) === NaN) {
-      if (parts[0] === "www") {
-        parts.splice(0, 1);
-      }
-      // If we get more than 2 parts, then we have a subdomain
-      if (parts.length > 2) {
-        // Remove the subdomain from the parts list
-        parts.splice(0, 1);
-        // Set the location to the new url
-        window.location =
-          protocol +
-          "//" +
-          "www." +
-          parts.join(".") +
-          "/" +
-          subdomain +
-          location.pathname;
-      }
-      if (
-        window.location.pathname === "/win" ||
-        window.location.pathname === "/win/"
-      ) {
-        props.history.push("/mrg/promotions");
-      }
-      if (
-        window.location.pathname === "/win/es" ||
-        window.location.pathname === "/win/es/"
-      ) {
-        props.history.push("/mrg/promotions/es");
-      }
-      if (
-        window.location.pathname === "/tribe" ||
-        window.location.pathname === "/tribe/"
-      ) {
-        props.history.push("/history");
-      }
-      if (
-        window.location.pathname === "/adp-job-board" ||
-        window.location.pathname === "/adp-job-board/"
-      ) {
-        props.history.push("/careers");
-      }
-      if (
-        window.location.pathname === "/careers" ||
-        window.location.pathname === "/careers/"
-      ) {
-        props.history.push("/mrg");
-        window.location.href = mrgBusinessInfo.careersLink;
-      }
+    if (parts[0] === "www") {
+      parts.splice(0, 1);
+    }
+    // If we get more than 2 parts, then we have a subdomain
+    if (parts.length > 2) {
+      // Remove the subdomain from the parts list
+      parts.splice(0, 1);
+      // Set the location to the new url
+      window.location =
+        protocol +
+        "//" +
+        "www." +
+        parts.join(".") +
+        "/" +
+        subdomain +
+        location.pathname;
+    }
+    if (
+      window.location.pathname === "/win" ||
+      window.location.pathname === "/win/"
+    ) {
+      props.history.push("/mrg/promotions");
+    }
+    if (
+      window.location.pathname === "/win/es" ||
+      window.location.pathname === "/win/es/"
+    ) {
+      props.history.push("/mrg/promotions/es");
+    }
+    if (
+      window.location.pathname === "/tribe" ||
+      window.location.pathname === "/tribe/"
+    ) {
+      props.history.push("/history");
+    }
+    if (
+      window.location.pathname === "/adp-job-board" ||
+      window.location.pathname === "/adp-job-board/"
+    ) {
+      props.history.push("/careers");
+    }
+    if (
+      window.location.pathname === "/careers" ||
+      window.location.pathname === "/careers/"
+    ) {
+      props.history.push("/mrg");
+      window.location.href = mrgBusinessInfo.careersLink;
     }
   }, []);
 
