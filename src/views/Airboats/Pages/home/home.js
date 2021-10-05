@@ -15,6 +15,15 @@ import airboatsVidImage from "assets/media/img/airboats/Parallax_Airboat.jpg";
 import airboatsVid from "assets/media/img/airboats/AIRBOAT-RIDES-TOUR_rev.mp4";
 import parallaxImg from "assets/media/img/airboats/Parallax_Aerial.jpg";
 
+// Services
+import { renderPoiHours } from "services/functions/renderPoiHours.js";
+
+// Business info
+import { airboatsHours } from "business_info/hours.js";
+
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 // Styles
 import styles from "assets/jss/material-kit-react/views/airboats/home.js";
 
@@ -22,6 +31,7 @@ const useStyles = makeStyles(styles);
 
 const Home = () => {
   const classes = useStyles();
+  const language = useLanguage();
 
   const sliderContent = [
     {
@@ -73,6 +83,9 @@ const Home = () => {
           style={{ paddingTop: "45px" }}
           className={classes.container}
         >
+          <div style={{ margin: "-30px 0 30px 0" }}>
+            {renderPoiHours(airboatsHours, language)}
+          </div>
           <Details />
         </div>
         <Hidden smDown>

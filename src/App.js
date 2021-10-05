@@ -52,53 +52,6 @@ const App = () => {
     }
   );
 
-  //let { path } = useRouteMatch();
-  //let location = useLocation();
-  /*
-  useEffect(() => {
-    const host = window.location.host;
-    const protocol = window.location.protocol;
-    const parts = host.split(".");
-    const path = window.location.pathname;
-
-    const getSubdomain = () => {
-      if (parts[1] === "localhost:3000") {
-        return parts[0];
-      }
-      if (parts.length > 2 && parts[0] !== "www") {
-        return parts[0];
-      }
-    };
-
-    if (parts[0] === "www") {
-      return;
-    } else {
-      // If we get more than 2 parts, then we have a subdomain
-      if (parts[1] === "localhost:3000") {
-        // Remove the subdomain from the parts list
-        const mainDomain = parts.slice(1);
-        // Set the location to the new url
-        window.location =
-          protocol + "//" + mainDomain + "/" + getSubdomain() + path;
-      } else {
-        if (parts.length > 2) {
-          // Remove the subdomain from the parts list
-          const mainDomain = parts.slice(1);
-          // Set the location to the new url
-          window.location =
-            protocol + "//" + mainDomain + "/" + getSubdomain() + path;
-        }
-      }
-    }
-
-    console.log("host: ", host);
-    console.log("protocol: ", protocol);
-    console.log("parts: ", parts);
-    console.log("subdomain: ", getSubdomain());
-    console.log("path: ", path);
-  }, []);
-  */
-
   // Snackbar unmounting is placed in the Footer.js and VirtualEvent.js components. Footer will handle all website unmounts with exception to the virtual events.
   const renderSnackbar = () => {
     // snackbar message determined by alert

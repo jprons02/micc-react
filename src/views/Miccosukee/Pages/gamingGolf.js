@@ -69,8 +69,8 @@ const GamingGolf = () => {
         link: "/golf",
       },
       hours: language
-        ? `Today's Hours: ${golfHours.todaysHours(dayOfWeek)}`
-        : `Horario de Hoy: ${golfHours.todaysHours(dayOfWeek)}`,
+        ? `Today's Hours: ${golfHours[0].todaysHours(dayOfWeek)}`
+        : `Horario de Hoy: ${golfHours[0].todaysHours(dayOfWeek)}`,
       phone: golfBusinessInfo.phone,
       address: golfBusinessInfo.address,
     },

@@ -3,6 +3,7 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
+import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_September.jpeg";
 
 const d = new Date();
 
@@ -72,23 +73,23 @@ const mrgPopup = {
   id: "02",
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
+      year: "21",
+      month: "October",
+      day: "1",
       time: "",
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
+      year: "21",
+      month: "October",
+      day: "15",
       time: "",
     },
   }),
   viewCount: 1,
   content: {
-    image: aidImage,
-    linkType: "internal",
-    link: "/test1",
+    image: mrgImage,
+    linkType: "",
+    link: "",
   },
 };
 const golfPopup = {

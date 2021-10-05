@@ -44,7 +44,8 @@ const Miccosukee = (props) => {
   let { path } = useRouteMatch();
   let location = useLocation();
 
-  //rerouting
+  //rerouting is all done server level with nginx
+  /*
   useEffect(() => {
     //All subdomains are pointed to miccosukee.com or .io
     let host = window.location.host;
@@ -52,7 +53,6 @@ const Miccosukee = (props) => {
     let parts = host.split(".");
     let subdomain = parts.length > 2 ? parts[0] : null;
 
-    // the NaN if statement is for testing the website as ip, without domain name
     if (parts[0] === "www") {
       parts.splice(0, 1);
     }
@@ -70,6 +70,7 @@ const Miccosukee = (props) => {
         subdomain +
         location.pathname;
     }
+
     if (
       window.location.pathname === "/win" ||
       window.location.pathname === "/win/"
@@ -102,6 +103,7 @@ const Miccosukee = (props) => {
       window.location.href = mrgBusinessInfo.careersLink;
     }
   }, []);
+  */
 
   //const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
   const [popupState, setPopupState] = useContext(PopupContext);

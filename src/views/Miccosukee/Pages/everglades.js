@@ -74,8 +74,11 @@ const GamingGolf = () => {
         link: "/airboats",
       },
       hours: language
-        ? `Today's Hours: ${airboatsHours.todaysHours(dayOfWeek, language)}`
-        : `Horario de Hoy: ${airboatsHours.todaysHours(dayOfWeek, language)}`,
+        ? `Today's Hours: ${airboatsHours[0].todaysHours(dayOfWeek, language)}`
+        : `Horario de Hoy: ${airboatsHours[0].todaysHours(
+            dayOfWeek,
+            language
+          )}`,
       phone: airboatsBusinessInfo.phone,
       address: airboatsBusinessInfo.address,
     },

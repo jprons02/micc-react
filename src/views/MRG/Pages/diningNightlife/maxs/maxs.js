@@ -59,6 +59,13 @@ const Maxs = () => {
                   ? "Our hotdog stand is conveniently located near our gaming floor. You can enjoy food to-go, coffee, soft drinks and more. ​It's the perfect place to grab a quick bite and head back to your favorite gaming machine in time to hit the jackpot!"
                   : "Nuestro puesto de perros calientes está convenientemente localizado cerca de nuestro sala de juegos. Puede disfrutar de comida para llevar, café, refrescos y más. ¡Es el lugar perfecto para tomar un bocado rápido y regresar a su máquina de juego favorita a tiempo para ganar el premio mayor!"}
               </p>
+              <Button
+                target="_blank"
+                href="https://mapa-media.s3.amazonaws.com/website/Max's_DigitalMenu.pdf"
+                usetheme="contained"
+              >
+                {language ? "MENU" : "MENÚ"}
+              </Button>{" "}
             </div>
           </GridItem>
           <GridItem md={5}>

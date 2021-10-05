@@ -370,25 +370,29 @@ export const villageHours = {
   },
 };
 
-export const golfHours = {
-  days: (language) => (language ? `Monday – Sunday` : "lunes – domingo"),
-  open: `${getMinutes(7).combinedString}`,
-  close: `${getMinutes(20, 30).combinedString}`,
-  todaysHours: (dayOfWeek, language) => {
-    return `${golfHours.open} - ${golfHours.close}`;
+export const golfHours = [
+  {
+    days: (language) => (language ? `Monday – Sunday` : "lunes – domingo"),
+    open: `${getMinutes(7).combinedString}`,
+    close: `${getMinutes(20, 30).combinedString}`,
+    todaysHours: (dayOfWeek, language) => {
+      return `${golfHours[0].open} - ${golfHours[0].close}`;
+    },
   },
-};
+];
 
-export const airboatsHours = {
-  days: (language) => (language ? `Thursday – Sunday` : "jueves – domingo"),
-  open: `${getMinutes(9).combinedString}`,
-  close: `${getMinutes(17).combinedString}`,
-  todaysHours: (dayOfWeek, language) => {
-    //`Thursday – Sunday`,
-    if (dayOfWeek === 0 || dayOfWeek > 3) {
-      return `${airboatsHours.open} - ${airboatsHours.close}`;
-    } else {
-      return language ? "Closed" : "Cerrado";
-    }
+export const airboatsHours = [
+  {
+    days: (language) => (language ? `Thursday – Sunday` : "jueves – domingo"),
+    open: `${getMinutes(9).combinedString}`,
+    close: `${getMinutes(17).combinedString}`,
+    todaysHours: (dayOfWeek, language) => {
+      //`Thursday – Sunday`,
+      if (dayOfWeek === 0 || dayOfWeek > 3) {
+        return `${airboatsHours[0].open} - ${airboatsHours[0].close}`;
+      } else {
+        return language ? "Closed" : "Cerrado";
+      }
+    },
   },
-};
+];

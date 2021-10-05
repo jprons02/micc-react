@@ -36,6 +36,12 @@ import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
 import { TeeTimeContext } from "contexts/TeeTimeContext.js";
 import { useLanguage } from "contexts/languageContext.js";
 
+// Services
+import { renderPoiHours } from "services/functions/renderPoiHours.js";
+
+// Business info
+import { golfHours } from "business_info/hours.js";
+
 const cardStyles = {
   cardTitle,
   cardLink,
@@ -76,6 +82,9 @@ const Home = () => {
       <HeroSection large={true} sliderContent={sliderContent} />
       <RaisedContainer>
         <div className={classes.welcomeContainer}>
+          <div style={{ margin: "-30px 0 30px 0" }}>
+            {renderPoiHours(golfHours, language)}
+          </div>
           <Typography className={classes.welcome} paragraph component="h1">
             {language
               ? "Championship Golf in the Heart of Kendall"

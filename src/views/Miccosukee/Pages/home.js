@@ -29,9 +29,6 @@ import MiccosukeeFooter from "components/CustomFooters/MiccosukeeFooter.js";
 
 const useStyles = makeStyles(styles);
 
-//<Link to="/about">About</Link>
-//"https://miccosukee.com/wp-content/uploads/2019/12/gaming-scaled.jpg"
-
 const Home = ({ history }) => {
   const language = useLanguage();
   const classes = useStyles();

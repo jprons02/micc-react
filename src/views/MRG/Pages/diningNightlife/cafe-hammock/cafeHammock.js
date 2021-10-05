@@ -62,14 +62,14 @@ const CafeHammock = () => {
                   : "Hogar del mundialmente reconocido especial de langosta y churrasco, Café Hammock ofrece los platos favoritos locales y continentales. Desde los buñuelos de caracol de las Bahamas y medallones de cocodrilo salteados, hasta ensaladas, filete mignon, pastas, y platos típicos latinos como el bistec de palomilla; este restaurante casual está justo en el centro de la acción del casino."}
               </p>
               <Button
-                href="https://mrg.miccosukee.com/wp-content/uploads/2019/05/CafeHammock_Menu.pdf"
+                href="https://mapa-media.s3.amazonaws.com/website/CafeHammock_Menu.pdf"
                 target="_blank"
                 usetheme="contained"
               >
                 {language ? "Menu" : "Menú"}
               </Button>{" "}
               <Button
-                href="https://mrg.miccosukee.com/wp-content/uploads/2019/05/CafeHammock_WineMenu.pdf"
+                href="https://mapa-media.s3.amazonaws.com/website/CafeHammock_DrinksMenu.pdf"
                 target="_blank"
                 usetheme="contained"
               >

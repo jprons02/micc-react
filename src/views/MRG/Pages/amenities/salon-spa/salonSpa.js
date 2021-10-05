@@ -69,7 +69,7 @@ const SalonSpa = () => {
                   : " y reserve su cita hoy!"}
               </p>
               <Button
-                href="https://mrg.miccosukee.com/wp-content/uploads/2019/11/SpaBrochure_Trifold.pdf"
+                href="https://mapa-media.s3.amazonaws.com/website/SpaBrochure_Trifold.pdf"
                 target="_blank"
                 usetheme="contained"
               >

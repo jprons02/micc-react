@@ -379,8 +379,8 @@ const MrgCovidInfo = (props) => {
             </li>
             <li style={liStyle}>
               {props.language
-                ? "Must be 21 or older."
-                : "Debe ser mayor de 21 años."}
+                ? "Must be 18 or older."
+                : "Debe ser mayor de 18 años."}
             </li>
             <li style={liStyle}>
               {props.language
@@ -434,8 +434,8 @@ const MrgCovidInfo = (props) => {
               </li>
               <li style={liStyle}>
                 {props.language
-                  ? "Everyone in the RV must be 21 years of age and over in order to enter the property."
-                  : "Todos en el RV deben tener 21 años o más para poder entrar al establecimiento."}
+                  ? "Everyone in the RV must be 18 years of age and over in order to enter the property."
+                  : "Todos en el RV deben tener 18 años o más para poder entrar al establecimiento."}
               </li>
             </ul>
           </ul>

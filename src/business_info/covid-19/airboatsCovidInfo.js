@@ -20,8 +20,8 @@ const AirboatsCovidInfo = (props) => {
           </h4>
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {airboatsHours.days(props.language)}: {airboatsHours.open} –{" "}
-              {airboatsHours.close}
+              {airboatsHours[0].days(props.language)}: {airboatsHours[0].open} –{" "}
+              {airboatsHours[0].close}
             </li>
           </ul>
         </div>

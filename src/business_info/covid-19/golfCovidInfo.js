@@ -18,8 +18,8 @@ const GolfCovidInfo = (props) => {
           <h4 style={sectionHeaderStyle}>Hours of Operation</h4>
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {golfHours.days(props.language)}: {golfHours.open} –{" "}
-              {golfHours.close}
+              {golfHours[0].days(props.language)}: {golfHours[0].open} –{" "}
+              {golfHours[0].close}
             </li>
           </ul>
         </div>
