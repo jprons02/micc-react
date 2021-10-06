@@ -78,7 +78,7 @@ const PopupModal = () => {
         root: classes.center,
         paper: classes.modal,
       }}
-      transitionDuration={1000}
+      transitionDuration={{ enter: 600, exit: 200 }}
       open={getPopup() ? getPopup().showPopup : false}
       keepMounted
       onClose={() => closeModal(getPopup())}

@@ -142,15 +142,15 @@ export default function Miccosukee(props) {
               language ? (
                 <div id="test1">
                   <b>
-                    Effective October 1, anyone 18 years of age or older can
-                    enter our gaming facility.
+                    Adults 18 years of age and over are welcomed on our gaming
+                    floor.
                   </b>
                 </div>
               ) : (
                 <div>
                   <b>
-                    Efectivo a partir del 1 de octubre, cualquier persona de 18
-                    años o más puede ingresar a nuestras salas de juego.
+                    Adultos de 18 años o más son bienvenidos a nuestra sala de
+                    juegos.
                   </b>
                 </div>
               )
