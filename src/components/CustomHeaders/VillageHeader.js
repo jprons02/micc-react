@@ -52,6 +52,8 @@ const VillageHeader = () => {
       inputValues: {
         ...formValues.inputValues,
         ["select"]: "Indian Village Groups",
+        ["selectError"]: false,
+        ["selectTouched"]: true,
       },
     });
     openModal(setState);

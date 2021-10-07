@@ -40,10 +40,14 @@ const MiccosukeeFooter = () => {
       inputValues: {
         ...formValues.inputValues,
         ["select"]: "Media Inquiry",
+        ["selectError"]: false,
+        ["selectTouched"]: true,
       },
     });
     openModal(setState);
   };
+
+  console.log("form values: \n", formValues);
 
   return (
     <div>
@@ -70,12 +74,14 @@ const MiccosukeeFooter = () => {
           MEDIA INQUIRIES
         </span>
       </div>
+      {/*
       <CustomContactModal
         language={true}
         showModal={showContactModal}
         closeModal={() => closeModal(setShowContactModal)}
         entity={{ name: "media" }}
       />
+      */}
     </div>
   );
 };

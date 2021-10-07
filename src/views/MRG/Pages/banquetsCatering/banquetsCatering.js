@@ -52,6 +52,8 @@ const BanquetsCatering = () => {
       inputValues: {
         ...formValues.inputValues,
         ["select"]: "Banquet/Catering",
+        ["selectError"]: false,
+        ["selectTouched"]: true,
       },
     });
     setShowContactModal(true);

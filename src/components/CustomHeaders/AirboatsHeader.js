@@ -42,6 +42,8 @@ const AirboatsHeader = () => {
       inputValues: {
         ...formValues.inputValues,
         ["select"]: "Airboat Groups",
+        ["selectError"]: false,
+        ["selectTouched"]: true,
       },
     });
     openModal(setState);

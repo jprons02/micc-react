@@ -11,6 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 //components
 import Header from "components/CustomHeaders/MiccosukeeHeader.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
+import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 // Context
 import { PopupContext } from "contexts/PopupContext.js";
@@ -37,10 +38,16 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
 import { popupManager } from "services/functions/popups/popupManager";
 import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
 
+// context
+import { ContactModalContext } from "contexts/ContactFormModalContext.js";
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const Miccosukee = (props) => {
   const classes = useStyles();
+  const language = useLanguage();
+
   let { path } = useRouteMatch();
   let location = useLocation();
 
@@ -108,6 +115,9 @@ const Miccosukee = (props) => {
   //const [showPopupModal, setShowPopupModal] = useContext(PopupContext);
   const [popupState, setPopupState] = useContext(PopupContext);
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
+  const [showContactModal, setShowContactModal] = useContext(
+    ContactModalContext
+  );
 
   useEffect(() => {
     // Closes mobile drawer any time location changes
@@ -115,6 +125,10 @@ const Miccosukee = (props) => {
     // Check if popup should be displayed after location change
     popupManager(setPopupState, popupState, location);
   }, [location]);
+
+  const closeModal = (setState) => {
+    setState(false);
+  };
 
   return (
     <div className={classNames(classes.main)}>
@@ -131,6 +145,12 @@ const Miccosukee = (props) => {
           <Route exact path={`*`} component={MiccosukeeErrorPage} />
         </Switch>
         <PopupModal />
+        <CustomContactModal
+          language={language}
+          showModal={showContactModal}
+          closeModal={() => closeModal(setShowContactModal)}
+          entity={{ name: "media" }}
+        />
       </div>
     </div>
   );

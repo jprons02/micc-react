@@ -5,7 +5,8 @@ import { mrgStatus } from "business_info/status.js";
 
 import Collapse from "@material-ui/core/Collapse";
 
-import mrgCovidVideo from "assets/media/video/GAMING-SAFE_MRG.mp4";
+//import mrgCovidVideo from "assets/media/video/GAMING-SAFE_MRG.mp4";
+import winItAll from "assets/media/video/mrg_win_it_all.mp4";
 
 const MrgCovidInfo = (props) => {
   const sectionStyle = { marginTop: "20px" };
@@ -296,7 +297,7 @@ const MrgCovidInfo = (props) => {
         </h3>
         <video
           style={{ margin: "5px 0 15px 0", width: "100%", maxWidth: "500px" }}
-          src={mrgCovidVideo}
+          src={winItAll}
           controls={true}
           controlsList="nodownload"
         />

@@ -142,6 +142,10 @@ const Contact = (props) => {
     );
   };
 
+  console.log("form values: \n", formValues);
+  console.log("loading: ", loading);
+  console.log("RecaptchaTocken: ", ReCaptchaToken);
+
   return (
     <React.Fragment>
       <form>
