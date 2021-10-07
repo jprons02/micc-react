@@ -37,7 +37,7 @@ const App = () => {
   const [alerts, setAlerts] = useContext(AlertContext);
 
   //https://www.npmjs.com/package/ga-4-react
-  const trackingId = "G-1VPNVTPSJ7"; // Replace with your Google Analytics tracking ID
+  const trackingId = "UA-81355839-8"; // Replace with your Google Analytics tracking ID
   const history = createBrowserHistory();
   const ga4react = new GA4React(trackingId);
   ga4react.initialize().then(

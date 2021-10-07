@@ -47,8 +47,6 @@ const MiccosukeeFooter = () => {
     openModal(setState);
   };
 
-  console.log("form values: \n", formValues);
-
   return (
     <div>
       <div
