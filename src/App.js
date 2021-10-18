@@ -115,7 +115,7 @@ const App = () => {
               <FoodMenuProvider>
                 <Router history={hist}>
                   <Switch>
-                    <Route exact path={"/virtual-event/aid"} component={AID} />
+                    {/*<Route exact path={"/virtual-event/aid"} component={AID} />*/}
                     <Route path="/mrg" component={MRG} />
                     <Route path="/golf" component={Golf} />
                     <Route path="/village" component={Village} />

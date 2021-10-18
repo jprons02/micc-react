@@ -54,20 +54,23 @@ const EventPage = ({ entityMargin, entity }) => {
   }, [language]);
 
   useEffect(() => {
-    if (event) {
+    // if event object is not empty
+    if (Object.keys(event).length !== 0) {
       if (event.buttons) {
-        var exampleCallbackEventPage = function () {
-          console.log("Order complete!");
-        };
+        if (event.buttons[0].eventbrite) {
+          var exampleCallbackEventPage = function () {
+            console.log("Order complete!");
+          };
 
-        window.EBWidgets.createWidget({
-          widgetType: "checkout",
-          eventId: event.buttons[0].eventbrite.eventId,
-          modal: true,
-          modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`,
-          iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
-          //onOrderComplete: exampleCallbackEventPage,
-        });
+          window.EBWidgets.createWidget({
+            widgetType: "checkout",
+            eventId: event.buttons[0].eventbrite.eventId,
+            modal: true,
+            modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`,
+            iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
+            //onOrderComplete: exampleCallbackEventPage,
+          });
+        }
       }
     }
   }, [event]);
@@ -147,18 +150,22 @@ const EventPage = ({ entityMargin, entity }) => {
 
     const renderButtons = () => {
       if (event.buttons) {
-        if (event.buttons) {
+        if (event.buttons[0].eventbrite) {
           return (
             <Button
               color="success"
-              id={`${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`}
+              id={
+                event.buttons[0]
+                  ? `${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`
+                  : "no-button"
+              }
               type="button"
               dataautomation="ticket-modal-btn"
               datatrackinglabel="Tickets"
               className={classes.button}
               variant="contained"
             >
-              {event.buttons[0].name}
+              {event.buttons[0] ? event.buttons[0].name : "Null"}
             </Button>
           );
         }
@@ -175,7 +182,7 @@ const EventPage = ({ entityMargin, entity }) => {
           );
         });
       } else {
-        return "Loading...";
+        return "";
       }
     };
 
