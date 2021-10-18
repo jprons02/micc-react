@@ -3,7 +3,7 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
-import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_September.jpeg";
+import mrgImage from "assets/media/img/popups/large-MonthlyPayouts_Calendar_Oct.jpg";
 
 const d = new Date();
 
@@ -81,7 +81,7 @@ const mrgPopup = {
     end: {
       year: "21",
       month: "October",
-      day: "15",
+      day: "31",
       time: "",
     },
   }),
