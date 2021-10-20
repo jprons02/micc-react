@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 
 // Context
-import { TeeTimeProvider } from "contexts/TeeTimeContext.js";
 import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
 import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
@@ -24,6 +23,7 @@ import AirboatsFooter from "components/CustomFooters/AirboatsFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
 
 // Pages
 import Home from "views/Airboats/Pages/home/home.js";
@@ -77,10 +77,10 @@ export default function Miccosukee(props) {
 
   return (
     <ThemeProvider theme={theme("airboats")}>
-      <TeeTimeProvider>
-        <div>
-          <AirboatsHeader />
-          {/*
+      <div>
+        <AirboatsHeader />
+        <ReactHelmetComponent url={window.location.pathname} />
+        {/*
           <StandardAlert
             message={
               language ? (
@@ -100,29 +100,24 @@ export default function Miccosukee(props) {
             icon="info_outline"
           />
           */}
-          <Switch>
-            <Route exact path={`${match.path}/`} component={Home} />
-            <Route
-              exact
-              path={`${match.path}/covid-19`}
-              component={AirboatsCovidPage}
-            />
-            <Route
-              exact
-              path={`${match.path}/*`}
-              component={AirboatsErrorPage}
-            />
-          </Switch>
-          <AirboatsFooter />
-          <PopupModal />
-          <CustomContactModal
-            language={language}
-            showModal={showContactModal}
-            closeModal={() => closeModal(setShowContactModal)}
-            entity={airboatsBusinessInfo}
+        <Switch>
+          <Route exact path={`${match.path}/`} component={Home} />
+          <Route
+            exact
+            path={`${match.path}/covid-19`}
+            component={AirboatsCovidPage}
           />
-        </div>
-      </TeeTimeProvider>
+          <Route exact path={`${match.path}/*`} component={AirboatsErrorPage} />
+        </Switch>
+        <AirboatsFooter />
+        <PopupModal />
+        <CustomContactModal
+          language={language}
+          showModal={showContactModal}
+          closeModal={() => closeModal(setShowContactModal)}
+          entity={airboatsBusinessInfo}
+        />
+      </div>
     </ThemeProvider>
   );
 }

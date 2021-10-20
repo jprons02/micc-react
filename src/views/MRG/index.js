@@ -24,6 +24,7 @@ import MrgFooter from "components/CustomFooters/MrgFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
 
 // Pages
 import Home from "views/MRG/Pages/home/home.js";
@@ -137,6 +138,7 @@ export default function Miccosukee(props) {
       <BookRoomProvider>
         <div>
           <MrgHeader />
+          <ReactHelmetComponent url={window.location.pathname} />
           <StandardAlert
             message={
               language ? (

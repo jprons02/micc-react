@@ -27,6 +27,7 @@ import VillageFooter from "components/CustomFooters/VillageFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
 
 // Pages
 import Home from "views/Village/Pages/Home/home.js";
@@ -82,6 +83,7 @@ export default function Miccosukee(props) {
       <PricingModalProvider>
         <div>
           <VillageHeader />
+          <ReactHelmetComponent url={window.location.pathname} />
           <StandardAlert
             message={
               language ? (

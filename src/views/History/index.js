@@ -13,6 +13,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import HistoryHeader from "components/CustomHeaders/HistoryHeader.js";
 import HistoryFooter from "components/CustomFooters/HistoryFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
 
 // Pages
 import Home from "views/History/Pages/home/home.js";
@@ -43,6 +44,7 @@ export default function Miccosukee(props) {
     <ThemeProvider theme={theme("history")}>
       <div>
         <HistoryHeader />
+        <ReactHelmetComponent url={window.location.pathname} />
         <Switch>
           <Route exact path={`${match.path}/`} component={Home} />
           <Route

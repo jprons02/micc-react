@@ -24,6 +24,7 @@ import GolfFooter from "components/CustomFooters/GolfFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
 
 // Pages
 import Home from "views/Golf/Pages/home/home.js";
@@ -78,6 +79,7 @@ export default function Miccosukee(props) {
       <TeeTimeProvider>
         <div>
           <GolfHeader />
+          <ReactHelmetComponent url={window.location.pathname} />
           <StandardAlert
             message={
               language ? (

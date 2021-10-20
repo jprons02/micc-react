@@ -14,6 +14,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import AdministrationHeader from "components/CustomHeaders/AdministrationHeader.js";
 import AdministrationFooter from "components/CustomFooters/AdministrationFooter.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
 //import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
 
 // Pages
@@ -64,6 +65,7 @@ export default function Miccosukee(props) {
     <ThemeProvider theme={theme("administration")}>
       <div>
         <AdministrationHeader />
+        <ReactHelmetComponent url={window.location.pathname} />
         <Switch>
           <Route exact path={`${match.path}/`} component={Home} />
           <Route

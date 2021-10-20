@@ -12,6 +12,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Header from "components/CustomHeaders/MiccosukeeHeader.js";
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
 import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
 
 // Context
 import { PopupContext } from "contexts/PopupContext.js";
@@ -37,6 +38,7 @@ import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
 // services
 import { popupManager } from "services/functions/popups/popupManager";
 import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
+import { getMetaData } from "services/functions/getMetaData.js";
 
 // context
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
@@ -134,6 +136,7 @@ const Miccosukee = (props) => {
     <div className={classNames(classes.main)}>
       <div className={classes.container}>
         <Header />
+        <ReactHelmetComponent url={window.location.pathname} />
         <Switch>
           <Route exact path={"/"} component={Home} />
           <Route exact path={`${path}gaming-golf`} component={GamingGolf} />
