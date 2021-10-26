@@ -5,6 +5,9 @@ import { Router, Route, Switch } from "react-router-dom";
 // google analytics
 import GA4React from "ga-4-react";
 
+// metatag component
+import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
+
 // context
 import { LanguageProvider } from "contexts/languageContext.js";
 import { PopupProvider } from "contexts/PopupContext.js";
@@ -114,6 +117,7 @@ const App = () => {
             <ContactFormProvider>
               <FoodMenuProvider>
                 <Router history={hist}>
+                  <ReactHelmetComponent url={window.location.pathname} />
                   <Switch>
                     {/*<Route exact path={"/virtual-event/aid"} component={AID} />*/}
                     <Route path="/mrg" component={MRG} />

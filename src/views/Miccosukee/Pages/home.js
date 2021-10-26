@@ -22,9 +22,6 @@ import eventsImg from "assets/media/img/miccosukee/pages/home/home-admin.jpg";
 // Context
 import { useLanguage } from "contexts/languageContext.js";
 
-// Services
-import { prerenderService } from "services/functions/prerenderService.js";
-
 import MiccosukeeFooter from "components/CustomFooters/MiccosukeeFooter.js";
 
 const useStyles = makeStyles(styles);

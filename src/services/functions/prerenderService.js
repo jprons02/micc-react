@@ -1,3 +1,4 @@
+/*
 import axios from "axios";
 import { keys } from "keys.js";
 
@@ -17,3 +18,4 @@ export const prerenderService = async (callback) => {
     console.log("error: ", error);
   }
 };
+*/

@@ -33,9 +33,6 @@ import { standardLinkColor, errorColor } from "themes/colors.js";
 // Context
 import { useLanguage } from "contexts/languageContext";
 
-// Services
-import { prerenderService } from "services/functions/prerenderService.js";
-
 const useStyles = makeStyles(styles);
 
 const Events = ({ history, badgeColor, entityMargin }) => {
