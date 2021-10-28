@@ -89,8 +89,8 @@ export default function Miccosukee(props) {
               language ? (
                 <div>
                   <b>
-                    Miccosukee Indian Village is temporarily closed due to the
-                    COVID-19 pandemic, but the Gift Shop will remain open{" "}
+                    Miccosukee Indian Village is temporarily closed due to
+                    COVID-19, but the Gift Shop will remain open{" "}
                     {villageHours.poi.giftShop[0].days(language)} from{" "}
                     {villageHours.poi.giftShop[0].open} -{" "}
                     {villageHours.poi.giftShop[0].close}
