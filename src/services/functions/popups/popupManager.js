@@ -98,13 +98,13 @@ const mrgGamingPromotionsPopup = {
   id: "02",
   showPopup: scheduler({
     start: {
-      year: "21",
+      year: "20",
       month: "October",
       day: "1",
       time: "",
     },
     end: {
-      year: "21",
+      year: "20",
       month: "November",
       day: "30",
       time: "",
