@@ -4,6 +4,7 @@
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
 import mrgImage from "assets/media/img/popups/large-MonthlyPayouts_Calendar_Oct.jpg";
+import promoImage1 from "assets/media/img/mrg/monthly_promos/november/luggage bag image offer.jpg";
 
 const d = new Date();
 
@@ -88,6 +89,30 @@ const mrgPopup = {
   viewCount: 1,
   content: {
     image: mrgImage,
+    linkType: "",
+    link: "",
+  },
+};
+const mrgGamingPromotionsPopup = {
+  name: "mrgGamingPromotions",
+  id: "02",
+  showPopup: scheduler({
+    start: {
+      year: "21",
+      month: "October",
+      day: "1",
+      time: "",
+    },
+    end: {
+      year: "21",
+      month: "November",
+      day: "30",
+      time: "",
+    },
+  }),
+  viewCount: 1,
+  content: {
+    image: promoImage1,
     linkType: "",
     link: "",
   },
@@ -280,6 +305,13 @@ export const popupManager = (setState, state, location) => {
     if (location.pathname === "/mrg") {
       setTimeout(() => {
         setPopup(setState, state, mrgPopup);
+      }, 700);
+    }
+  }
+  if (mrgGamingPromotionsPopup.showPopup) {
+    if (location.pathname === "/mrg/promotions") {
+      setTimeout(() => {
+        setPopup(setState, state, mrgGamingPromotionsPopup);
       }, 700);
     }
   }
