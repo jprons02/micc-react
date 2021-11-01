@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useRouteMatch, useLocation } from "react-router-dom";
 
 //My Custom Component
@@ -32,6 +32,12 @@ import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
 import { cardContent } from "views/MRG/Pages/gaming/gamingPromos/cardContent";
 import { standardLinkColor } from "themes/colors.js";
 
+import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
+import { PopupContext } from "contexts/PopupContext.js";
+
+// services
+import { popupManager } from "services/functions/popups/popupManager";
+
 const useStyles = makeStyles(styles);
 
 const sliderContent = [
@@ -50,6 +56,12 @@ const GamingPromos = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [selectedPromo, setSelectedPromo] = useState({});
+
+  const [popupState, setPopupState] = useContext(PopupContext);
+
+  useEffect(() => {
+    popupManager(setPopupState, popupState, location);
+  }, []);
 
   let { path } = useRouteMatch();
   let location = useLocation();
@@ -180,6 +192,7 @@ const GamingPromos = () => {
         closeModal={closeModal}
         showModal={showModal}
       />
+      <PopupModal />
     </React.Fragment>
   );
 };
