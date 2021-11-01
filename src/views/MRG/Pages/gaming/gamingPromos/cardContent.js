@@ -8,8 +8,8 @@ import cardImage6 from "assets/media/img/mrg/monthly_promos/VIPGiveawayBlack_Log
 import cardImage7 from "assets/media/img/mrg/monthly_promos/VIPGiveaway_White-768x768.png";
 import cardImage8 from "assets/media/img/mrg/monthly_promos/november/ShopTillYouDrop_Logo.png";
 import cardImage9 from "assets/media/img/mrg/monthly_promos/BirthdayBonanza_Logo-768x768.png";
-import cardImage10 from "assets/media/img/mrg/monthly_promos/august/NewMemberRicochet_Logo.png";
-import cardImage11 from "assets/media/img/mrg/monthly_promos/august/ReferralRicochet_Logo.png";
+import cardImage10 from "assets/media/img/mrg/monthly_promos/New-Members-Win-Big.png";
+import cardImage11 from "assets/media/img/mrg/monthly_promos/Referral-WinBig.png";
 
 // NEED A SCHEDULER SOLUTION AS WELL
 
