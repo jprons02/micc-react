@@ -170,9 +170,9 @@ export default function Miccosukee(props) {
                       style={{ color: "white", fontWeight: "800" }}
                       to={`${match.path}/covid-19`}
                     >
-                      Masks are optional for all guests inside the facility.
-                      Click HERE for the Miccosukee Resort &amp; Gaming COVID-19
-                      guidelines.
+                      Masks are optional for vaccinated patrons. Masks are
+                      mandatory for unvaccinated patrons. Click HERE for the
+                      Miccosukee Resort &amp; Gaming COVID-19 guidelines.
                     </Link>
                   </b>
                 </div>
@@ -183,9 +183,11 @@ export default function Miccosukee(props) {
                       style={{ color: "white", fontWeight: "800" }}
                       to={`${match.path}/covid-19`}
                     >
-                      El uso de mascarillas es opcional para los clientes que
-                      entren al edificio. Oprima AQUÍ para las últimas noticias
-                      de COVID-19 relacionadas a nuestros establecimientos.
+                      El uso de mascarillas es opcional para los clientes
+                      vacunados. El uso de mascarillas es obligatorio para los
+                      clientes no vacunados. Oprima AQUÍ para las últimas
+                      noticias de COVID-19 relacionadas a nuestros
+                      establecimientos.
                     </Link>
                   </b>
                 </div>
