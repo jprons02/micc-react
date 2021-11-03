@@ -183,9 +183,10 @@ export default function Miccosukee(props) {
                       style={{ color: "white", fontWeight: "800" }}
                       to={`${match.path}/covid-19`}
                     >
-                      El uso de mascarillas es opcional para los clientes dentro
-                      del edificio. Oprima AQUÍ para las últimas noticias de
-                      COVID-19 relacionadas a nuestros establecimientos
+                      El uso de mascarillas es opcional El uso de mascarillas es
+                      opcional para los clientes que entren al edificio. Oprima
+                      AQUÍ para las últimas noticias de COVID-19 relacionadas a
+                      nuestros establecimientos
                     </Link>
                   </b>
                 </div>
