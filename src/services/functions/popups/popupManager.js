@@ -5,6 +5,7 @@
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
 import mrgImage from "assets/media/img/popups/big-MonthlyPayouts_Calendar_OCT.jpg";
 import promoImage1 from "assets/media/img/mrg/monthly_promos/november/luggage bag image offer.jpg";
+import jobfair from "assets/media/img/popups/CareerFair2019_WebSlider.jpg";
 
 const d = new Date();
 
@@ -51,22 +52,23 @@ const miccosukeePopup = {
   showPopup: scheduler({
     start: {
       year: "21",
-      month: "September",
-      day: "10",
+      month: "November",
+      day: "1",
       time: "",
     },
     end: {
       year: "21",
-      month: "September",
-      day: "21",
+      month: "November",
+      day: "13",
       time: "",
     },
   }),
   viewCount: 1,
   content: {
-    image: aidImage,
-    linkType: "internal",
-    link: "/events/american-indian-day-(virtual-event)9202021",
+    image: jobfair,
+    linkType: "external",
+    link:
+      "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
   },
 };
 const mrgPopup = {
@@ -75,22 +77,23 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: "21",
-      month: "October",
+      month: "November",
       day: "1",
       time: "",
     },
     end: {
       year: "21",
-      month: "October",
-      day: "15",
+      month: "November",
+      day: "13",
       time: "",
     },
   }),
   viewCount: 1,
   content: {
-    image: mrgImage,
-    linkType: "",
-    link: "",
+    image: jobfair,
+    linkType: "external",
+    link:
+      "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
   },
 };
 const mrgGamingPromotionsPopup = {
