@@ -17,7 +17,14 @@ const CustomImageSlider = (props) => {
           <img
             className={classes.customSliderThumbs}
             src={
-              props.customImages ? props.customImages[i].src : props.images[i]
+              props.customImages
+                ? props.customImages[i].src
+                : props.images[i].src
+            }
+            alt={
+              props.customImages
+                ? props.customImages[i].alt
+                : props.images[i].alt
             }
           />
         </a>
@@ -33,6 +40,7 @@ const CustomImageSlider = (props) => {
   };
 
   const renderSliderImage = () => {
+    // If these images have captions - example is history section, tribal leaders
     if (props.customImages) {
       return props.customImages.map((item) => {
         return (
@@ -41,6 +49,7 @@ const CustomImageSlider = (props) => {
               style={props.customStyle}
               className={classes.featuredImage}
               src={item.src}
+              alt={`${item.caption}`}
             />
             <figcaption style={{ marginBottom: "5px", textAlign: "center" }}>
               {item.caption}
@@ -49,13 +58,15 @@ const CustomImageSlider = (props) => {
         );
       });
     } else {
+      // Standard images, such as mrg restaurants
       return props.images.map((image) => {
         return (
-          <div key={image}>
+          <div key={image.src}>
             <img
               style={props.customStyle}
               className={classes.featuredImage}
-              src={image}
+              src={image.src}
+              alt={image.alt}
             />
           </div>
         );

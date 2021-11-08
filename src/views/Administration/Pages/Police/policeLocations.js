@@ -26,7 +26,8 @@ import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1];
+//const imageArray = [image1];
+const imageObj = [{ src: image1, alt: "police car" }];
 
 const sliderContent = [
   {
@@ -89,7 +90,7 @@ const PoliceLocations = () => {
           </GridItem>
           <GridItem style={{ marginBottom: "30px" }} md={5}>
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageArray} />
+              <CustomImageSlider images={imageObj} />
             </div>
           </GridItem>
         </GridContainer>

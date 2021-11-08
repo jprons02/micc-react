@@ -49,7 +49,11 @@ const Details = () => {
       return imageArray.map((image) => {
         return (
           <div key={image}>
-            <img className={sliderClasses.featuredImage} src={image} />
+            <img
+              alt="airboats"
+              className={sliderClasses.featuredImage}
+              src={image}
+            />
           </div>
         );
       });
@@ -77,7 +81,11 @@ const Details = () => {
       return imageArray.map((image) => {
         return (
           <div key={image}>
-            <img className={sliderClasses.featuredImage} src={image} />
+            <img
+              alt="airboats"
+              className={sliderClasses.featuredImage}
+              src={image}
+            />
           </div>
         );
       });

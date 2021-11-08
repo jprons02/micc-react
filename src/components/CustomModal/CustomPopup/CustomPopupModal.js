@@ -52,7 +52,11 @@ const PopupModal = () => {
           to={getPopup().content.link}
           onClick={() => closeModal(getPopup())}
         >
-          <img style={{ width: "100%" }} src={getPopup().content.image} />
+          <img
+            style={{ width: "100%" }}
+            alt={getPopup().content.alt}
+            src={getPopup().content.image}
+          />
         </Link>
       );
     }
@@ -64,12 +68,22 @@ const PopupModal = () => {
           href={getPopup().content.link}
           onClick={() => closeModal(getPopup())}
         >
-          <img style={{ width: "100%" }} src={getPopup().content.image} />
+          <img
+            style={{ width: "100%" }}
+            alt={getPopup().content.alt}
+            src={getPopup().content.image}
+          />
         </a>
       );
     }
 
-    return <img style={{ width: "100%" }} src={getPopup().content.image} />;
+    return (
+      <img
+        style={{ width: "100%" }}
+        alt={getPopup().content.alt}
+        src={getPopup().content.image}
+      />
+    );
   };
 
   return (

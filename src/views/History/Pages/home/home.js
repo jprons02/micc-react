@@ -24,7 +24,12 @@ import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1, image2, image3];
+//const imageArray = [image1, image2, image3];
+const imageObj = [
+  { src: image1, alt: "Miccosukee people" },
+  { src: image2, alt: "Miccosukee people next to car" },
+  { src: image3, alt: "Miccosukee on canoe" },
+];
 
 const sliderContent = [
   {
@@ -135,7 +140,7 @@ const HistoryHome = () => {
           </GridItem>
           <GridItem md={5}>
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageArray} />
+              <CustomImageSlider images={imageObj} />
             </div>
           </GridItem>
         </GridContainer>

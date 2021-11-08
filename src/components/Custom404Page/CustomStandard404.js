@@ -24,7 +24,7 @@ const CustomStandard404Page = (props) => {
             verticalAlign: "middle",
           }}
         >
-          <img style={{ width: "200px" }} src={Roxy} />
+          <img style={{ width: "200px" }} alt="404 Dog" src={Roxy} />
         </div>
         <div style={{ display: "inline-block", verticalAlign: "middle" }}>
           <h2 style={{ marginTop: "5px" }}>Page not found :(</h2>

@@ -30,7 +30,8 @@ import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1];
+//const imageArray = [image1];
+const imageObj = [{ src: image1, alt: "Test1" }];
 
 const sliderContent = [
   {
@@ -71,7 +72,7 @@ const Maxs = () => {
           <GridItem md={5}>
             {/*
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageArray} />
+              <CustomImageSlider images={imageObj} />
             </div>
             */}
           </GridItem>

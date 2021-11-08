@@ -30,7 +30,11 @@ import { renderPoiHours } from "services/functions/renderPoiHours.js";
 import { useLanguage } from "contexts/languageContext.js";
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1, image2];
+//const imageArray = [image1, image2];
+const imageObj = [
+  { src: image1, alt: "Test" },
+  { src: image2, alt: "Test2" },
+];
 
 const sliderContent = [
   {
@@ -80,7 +84,7 @@ const Bravo = () => {
           <GridItem md={5}>
             {/*
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageArray} />
+              <CustomImageSlider images={imageObj} />
             </div>
             */}
           </GridItem>

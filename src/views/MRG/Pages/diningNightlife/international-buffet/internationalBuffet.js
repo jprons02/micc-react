@@ -36,7 +36,11 @@ import { renderPoiHours } from "services/functions/renderPoiHours.js";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1, image2];
+//const imageArray = [image1, image2];
+const imageObj = [
+  { src: image1, alt: "Hot dish" },
+  { src: image2, alt: "Paella" },
+];
 
 const sliderContent = [
   {
@@ -280,7 +284,7 @@ const InternationalBuffet = () => {
           </GridItem>
           <GridItem md={5}>
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageArray} />
+              <CustomImageSlider images={imageObj} />
             </div>
           </GridItem>
         </GridContainer>

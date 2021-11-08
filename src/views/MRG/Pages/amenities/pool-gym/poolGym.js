@@ -32,7 +32,14 @@ import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1, image2, image3, image4, image5];
+//const imageArray = [image1, image2, image3, image4, image5];
+const imageObj = [
+  { src: image1, alt: "Pool side a" },
+  { src: image2, alt: "Pool side b" },
+  { src: image3, alt: "Gym cardio equipment" },
+  { src: image4, alt: "Gym weights" },
+  { src: image5, alt: "Courtyard" },
+];
 
 const sliderContent = [
   {
@@ -67,7 +74,7 @@ const PoolGym = () => {
           </GridItem>
           <GridItem md={5}>
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageArray} />
+              <CustomImageSlider images={imageObj} />
             </div>
           </GridItem>
         </GridContainer>

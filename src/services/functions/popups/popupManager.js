@@ -66,6 +66,7 @@ const miccosukeePopup = {
   viewCount: 1,
   content: {
     image: jobfair,
+    alt: "job fair",
     linkType: "external",
     link:
       "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
@@ -91,6 +92,7 @@ const mrgPopup = {
   viewCount: 1,
   content: {
     image: jobfair,
+    alt: "job fair",
     linkType: "external",
     link:
       "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",

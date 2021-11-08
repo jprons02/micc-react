@@ -90,6 +90,7 @@ const VirtualEvent = (props) => {
               maxHeight: "200px",
               display: "inline-block",
             }}
+            alt="welcome image"
             src={props.welcome.pngImage}
           />
         </div>
@@ -327,7 +328,7 @@ const VirtualEvent = (props) => {
                     marginRight: "8px",
                   }}
                   src={painting2}
-                  alt="panther"
+                  alt="Turtle"
                 />
                 <figcaption
                   style={{
@@ -360,7 +361,7 @@ const VirtualEvent = (props) => {
                     marginRight: "8px",
                   }}
                   src={painting3}
-                  alt="panther"
+                  alt="Panther &amp; Turtle"
                 />
                 <figcaption
                   style={{

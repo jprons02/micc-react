@@ -33,7 +33,8 @@ import { useLanguage } from "contexts/languageContext.js";
 
 const useStyles = makeStyles(styles);
 
-const imageArray = [image1];
+//const imageArray = [image1];
+const imageObj = [{ src: image1, alt: "Poker cards" }];
 
 const sliderContent = [
   {
@@ -217,7 +218,7 @@ const Poker = () => {
           </GridItem>
           <GridItem md={5}>
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageArray} />
+              <CustomImageSlider images={imageObj} />
             </div>
           </GridItem>
         </GridContainer>

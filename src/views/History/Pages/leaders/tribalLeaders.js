@@ -27,11 +27,31 @@ import { useLanguage } from "contexts/languageContext";
 const useStyles = makeStyles(styles);
 
 const imageWithCaptions = [
-  { src: image1, caption: "Billy Cypress, Chairman" },
-  { src: image2, caption: "Lucas Osceola, Assistant Chairman" },
-  { src: image3, caption: "Kenneth Cypress, Treasurer" },
-  { src: image4, caption: "Talbert Cypress, Secretary" },
-  { src: image5, caption: "Petties Osceola, Jr., Lawmaker" },
+  {
+    src: image1,
+    caption: "Billy Cypress, Chairman",
+    alt: "Billy Cypress, Chairman",
+  },
+  {
+    src: image2,
+    caption: "Lucas Osceola, Assistant Chairman",
+    alt: "Lucas Osceola, Assistant Chairman",
+  },
+  {
+    src: image3,
+    caption: "Kenneth Cypress, Treasurer",
+    alt: "Kenneth Cypress, Treasurer",
+  },
+  {
+    src: image4,
+    caption: "Talbert Cypress, Secretary",
+    alt: "Talbert Cypress, Secretary",
+  },
+  {
+    src: image5,
+    caption: "Petties Osceola, Jr., Lawmaker",
+    alt: "Petties Osceola, Jr., Lawmaker",
+  },
 ];
 
 const sliderContent = [
