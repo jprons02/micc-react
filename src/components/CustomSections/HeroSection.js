@@ -118,16 +118,24 @@ export default function HeroSection(props) {
                 </video>
               ) : null}
               <div className={classes.sliderContent}>
-                <Typography className={classes.header} component="h1" paragraph>
-                  {slide.header}
-                </Typography>
-                <Typography
-                  className={classes.subHeader}
-                  component="h2"
-                  paragraph
-                >
-                  {slide.subHeader}
-                </Typography>
+                {slide.header === "" ? null : (
+                  <Typography
+                    className={classes.header}
+                    component="h1"
+                    paragraph
+                  >
+                    {slide.header}
+                  </Typography>
+                )}
+                {slide.subHeader === "" ? null : (
+                  <Typography
+                    className={classes.subHeader}
+                    component="h2"
+                    paragraph
+                  >
+                    {slide.subHeader}
+                  </Typography>
+                )}
                 {slide.button ? (
                   <CustomButton
                     className={classes.customButton}
@@ -167,16 +175,24 @@ export default function HeroSection(props) {
               style={getStyle()}
             >
               <div className={classes.sliderContent}>
-                <Typography className={classes.header} component="h1" paragraph>
-                  {slide.header}
-                </Typography>
-                <Typography
-                  className={classes.subHeader}
-                  component="h2"
-                  paragraph
-                >
-                  {slide.subHeader}
-                </Typography>
+                {slide.header === "" ? null : (
+                  <Typography
+                    className={classes.header}
+                    component="h1"
+                    paragraph
+                  >
+                    {slide.header}
+                  </Typography>
+                )}
+                {slide.subHeader === "" ? null : (
+                  <Typography
+                    className={classes.subHeader}
+                    component="h2"
+                    paragraph
+                  >
+                    {slide.subHeader}
+                  </Typography>
+                )}
                 {slide.button ? (
                   <CustomButton
                     className={classes.customButton}
