@@ -3,6 +3,7 @@ import { useRouteMatch, useLocation } from "react-router-dom";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -137,15 +138,32 @@ const Home = ({ history }) => {
             onClick={() => history.push(`/${card.url}`)}
             className={classes.mCard}
             style={card.cardBackground || {}}
+            role="button"
           >
             {card.header !== "" ? (
               <CardHeader color={card.headerColor}>{card.header}</CardHeader>
             ) : null}
             <div className={classes.mCardHeader}>
-              <h4 style={{ color: "white" }} className={classes.cardTitle}>
+              <Typography
+                component={"h1"}
+                style={{ color: "white" }}
+                className={classes.cardTitle}
+              >
                 {card.title}
-              </h4>
-              <p className={classes.mCardDescription}>{card.description}</p>
+              </Typography>
+
+              <Typography
+                style={{
+                  fontSize: "14px",
+                  margin: "0 0 10px",
+                  fontWeight: "300",
+                }}
+                className={classes.mCardDescription}
+                component={"h2"}
+                paragraph={true}
+              >
+                {card.description}
+              </Typography>
             </div>
             <CardBody></CardBody>
             {card.footer !== "" ? <CardFooter>{card.footer}</CardFooter> : null}
@@ -171,3 +189,5 @@ const Home = ({ history }) => {
 };
 
 export default Home;
+
+//<p className={classes.mCardDescription}>{card.description}</p>

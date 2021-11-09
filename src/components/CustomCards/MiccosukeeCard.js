@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // @material-ui/core components
 import { Icon } from "@material-ui/core";
 import { cardTitle } from "assets/jss/material-kit-react.js";
+import { Typography } from "@material-ui/core";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -122,8 +123,29 @@ const MiccosukeeCard = (props) => {
         alt="Card-img-cap"
       />
       <CardBody>
-        <h4 className={cardTitle}>{props.title}</h4>
-        <p>{props.description}</p>
+        <Typography
+          component="h1"
+          variant="h4"
+          style={{
+            fontSize: "1.125rem",
+            lineHeight: "1.5em",
+            fontWeight: "300",
+            margin: "10px 0",
+          }}
+        >
+          {props.title}
+        </Typography>
+        <Typography
+          component="h2"
+          style={{
+            fontSize: "14px",
+            margin: "0 0 10px",
+            fontWeight: "300",
+          }}
+          paragraph={true}
+        >
+          {props.description}
+        </Typography>
         <div
           style={
             props.buttonTwo !== ""

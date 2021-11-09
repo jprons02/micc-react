@@ -28,6 +28,7 @@ const Header = (props) => {
         src={logo}
         alt="miccosukee emblem logo"
         className={classes.logo}
+        role="link"
       />
       <div className={classes.navContainer}>
         <div className={classes.horizontalRule} />
@@ -58,6 +59,7 @@ const Header = (props) => {
             //style={language ? languageTrue : languageFalse}
             onClick={!language ? toggleLanguage : null}
             color="danger"
+            aria-pressed={language}
           >
             english
           </Button>
@@ -67,6 +69,7 @@ const Header = (props) => {
             //style={!language ? languageTrue : languageFalse}
             onClick={language ? toggleLanguage : null}
             color="danger"
+            aria-pressed={!language}
           >
             español
           </Button>

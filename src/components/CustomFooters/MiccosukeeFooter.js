@@ -68,6 +68,7 @@ const MiccosukeeFooter = () => {
         <span
           onClick={() => handleClick(setShowContactModal)}
           style={{ cursor: "pointer", fontWeight: "500", fontSize: "11px" }}
+          role="button"
         >
           MEDIA INQUIRIES
         </span>
