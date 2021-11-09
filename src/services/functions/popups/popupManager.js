@@ -4,7 +4,7 @@
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
 import mrgImage from "assets/media/img/popups/big-MonthlyPayouts_Calendar_OCT.jpg";
-import promoImage1 from "assets/media/img/mrg/monthly_promos/november/luggage bag image offer.jpg";
+import promoImage1 from "assets/media/img/popups/oxford_luggage.jpg";
 import jobfair from "assets/media/img/popups/CareerFair2019_WebSlider.jpg";
 
 const d = new Date();
@@ -103,15 +103,15 @@ const mrgGamingPromotionsPopup = {
   id: "02",
   showPopup: scheduler({
     start: {
-      year: "20",
-      month: "October",
+      year: "21",
+      month: "November",
       day: "1",
       time: "",
     },
     end: {
-      year: "20",
-      month: "November",
-      day: "30",
+      year: "21",
+      month: "December",
+      day: "28",
       time: "",
     },
   }),
