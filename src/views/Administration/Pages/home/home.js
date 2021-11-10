@@ -47,7 +47,10 @@ const Home = (props) => {
   const cardContent = [
     {
       id: 1,
-      img: cardImage1,
+      img: {
+        src: cardImage1,
+        alt: "police car",
+      },
       title: language ? "Police" : "Policía",
       body: language
         ? "The Miccosukee Police Department was established in 1976."

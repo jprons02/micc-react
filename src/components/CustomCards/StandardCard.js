@@ -31,8 +31,8 @@ export default function Cards(props) {
             ? classNames(classes.imgCardTop, props.classes.imgStyle)
             : classes.imgCardTop
         }
-        src={props.img}
-        alt="Card-img-cap"
+        src={props.img.src ? props.img.src : props.img}
+        alt={props.img.alt ? props.img.alt : "Promotion logo"}
       />
       <CardBody>
         <h4

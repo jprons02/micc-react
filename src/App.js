@@ -57,6 +57,7 @@ const App = () => {
     );
   }, []);
 
+  // This is success message for signing/logging in
   // Snackbar unmounting is placed in the Footer.js and VirtualEvent.js components. Footer will handle all website unmounts with exception to the virtual events.
   const renderSnackbar = () => {
     // snackbar message determined by alert

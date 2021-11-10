@@ -62,23 +62,31 @@ const EventCards = (props) => {
   const renderCards = (content, device) => {
     return device === "desktop"
       ? content.map((card) => {
+          const imgFix = {
+            src: card.img,
+            alt: card.cardTitle,
+          };
           return (
             <StandardHorizontalCard
               width="99.5%"
               classes={cardClasses}
               key={card.cardTitle}
-              img={card.dkImage}
+              img={imgFix}
               title={card.cardTitle}
               body={card.cardBody()}
             />
           );
         })
       : content.map((card) => {
+          const imgFix = {
+            src: card.img,
+            alt: card.cardTitle,
+          };
           return (
             <StandardCard
               classes={cardClasses}
               key={card.cardTitle}
-              img={card.image}
+              img={imgFix}
               title={card.cardTitle}
               body={card.cardBody()}
             />

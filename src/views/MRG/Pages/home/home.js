@@ -97,7 +97,10 @@ const Home = (props) => {
   const cardContent = [
     {
       id: 1,
-      img: cardImage1,
+      img: {
+        src: cardImage1,
+        alt: "row of a gaming machines",
+      },
       title: language ? "Gaming Machines" : "Máquinas de Juego",
       body: language
         ? "Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor!"
@@ -110,7 +113,10 @@ const Home = (props) => {
     },
     {
       id: 2,
-      img: cardImage2,
+      img: {
+        src: cardImage2,
+        alt: "burger and fries",
+      },
       title: language ? "Sawgrass Cafe" : "Sawgrass Cafe",
       body: language
         ? "Sawgrass Cafe serves tasty sandwiches, soups, salads, and Latino favorites like pastelitos."
@@ -123,7 +129,10 @@ const Home = (props) => {
     },
     {
       id: 3,
-      img: cardImage3,
+      img: {
+        src: cardImage3,
+        alt: "Bingo floor",
+      },
       title: language ? "Bingo" : "Bingo",
       body: language
         ? "Miccosukee Resort & Gaming’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance!"
@@ -190,7 +199,12 @@ const Home = (props) => {
               ? "Welcome to Miccosukee Resort & Gaming"
               : "Bienvenido a Miccosukee Resort & Gaming"}
           </Typography>
-          <Typography className={classes.subWelcome} paragraph component="h3">
+          <Typography
+            className={classes.subWelcome}
+            paragraph
+            component="h2"
+            variant="h3"
+          >
             {language
               ? "Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium."
               : "Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida."}

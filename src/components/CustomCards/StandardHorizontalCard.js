@@ -51,8 +51,8 @@ const StandardHorizontalCard = (props) => {
             height: "200px",
             display: "inline-block",
           }}
-          alt="Card-img-cap"
-          src={props.img}
+          src={props.img.src}
+          alt={props.img.alt}
         />
         <div
           style={{

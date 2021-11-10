@@ -120,7 +120,7 @@ const MiccosukeeCard = (props) => {
           borderTopRightRadius: "6px",
         }}
         src={props.imgSrc}
-        alt="Card-img-cap"
+        alt={props.title}
       />
       <CardBody>
         <Typography
