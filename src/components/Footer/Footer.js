@@ -102,6 +102,7 @@ export default function Footer(props) {
                   styleProp={{ cursor: "pointer", width: "70px" }}
                   onClick={toggleLanguage}
                   color="danger"
+                  role="button"
                 >
                   {language ? "español" : "english"}
                 </Badge>

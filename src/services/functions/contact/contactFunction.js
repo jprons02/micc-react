@@ -51,7 +51,6 @@ const getEmail = (value) => {
         "tmitchelson@miccosukee.com",
         "reservations@miccosukee.com",
         "kwhiting@miccosukee.com",
-        "fbutera@miccosukee.com",
       ];
     case "Spa & Salon":
       return [

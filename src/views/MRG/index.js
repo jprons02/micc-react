@@ -142,28 +142,6 @@ export default function Miccosukee(props) {
           <StandardAlert
             message={
               language ? (
-                <div id="test1">
-                  <b>
-                    Adults 18 years of age and over are welcomed on our gaming
-                    floor.
-                  </b>
-                </div>
-              ) : (
-                <div>
-                  <b>
-                    Adultos de 18 años o más son bienvenidos a nuestra sala de
-                    juegos.
-                  </b>
-                </div>
-              )
-            }
-            close
-            color="success"
-            icon="checkmark"
-          />
-          <StandardAlert
-            message={
-              language ? (
                 <div id="test">
                   <b>
                     <Link
