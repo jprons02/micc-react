@@ -3,9 +3,9 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
-import mrgImage from "assets/media/img/popups/big-MonthlyPayouts_Calendar_OCT.jpg";
+import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_November.jpg";
 import promoImage1 from "assets/media/img/popups/oxford_luggage.jpg";
-import jobfair from "assets/media/img/popups/CareerFair2019_WebSlider.jpg";
+import hubPopup from "assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg";
 
 const d = new Date();
 
@@ -59,17 +59,16 @@ const miccosukeePopup = {
     end: {
       year: "21",
       month: "November",
-      day: "13",
+      day: "29",
       time: "",
     },
   }),
   viewCount: 1,
   content: {
-    image: jobfair,
+    image: hubPopup,
     alt: "job fair",
-    linkType: "external",
-    link:
-      "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
+    linkType: "",
+    link: "",
   },
 };
 const mrgPopup = {
@@ -85,17 +84,16 @@ const mrgPopup = {
     end: {
       year: "21",
       month: "November",
-      day: "13",
+      day: "30",
       time: "",
     },
   }),
   viewCount: 1,
   content: {
-    image: jobfair,
-    alt: "job fair",
-    linkType: "external",
-    link:
-      "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=346f5352-8215-418a-95b5-a67f6bba88ac&ccId=19000101_000001&type=MP&lang=en_US",
+    image: mrgImage,
+    alt: "november mid month payouts",
+    linkType: "internal",
+    link: "/mrg/promotions",
   },
 };
 const mrgGamingPromotionsPopup = {
