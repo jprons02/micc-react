@@ -63,7 +63,7 @@ const Accommodations = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>{language ? "Accommodations" : "Habitaciones"}</h2>
-              {renderPoiHours(mrgHours.poi.accommodations, language)}
+              {/*renderPoiHours(mrgHours.poi.accommodations, language)*/}
               <p>
                 {language
                   ? "Standing at the edge of the magnificent Florida Everglades, the Resort boasts rooms designed with comfort as the number one priority as well as amazing views of the surrounding ecosystem."
