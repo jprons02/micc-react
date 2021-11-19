@@ -60,11 +60,27 @@ const CafeHammock = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Café Hammock</h2>
+              <h6 style={{ color: "green", display: "inline-block" }}>
+                {language
+                  ? "Opening December 1, 2021 "
+                  : "Abriremos el 1 de diciembre de 2021 "}
+              </h6>
+              <p style={{ display: "inline-block" }}>
+                &nbsp;
+                {language
+                  ? "(Breakfast, Friday - Sunday only)"
+                  : "(Desayuno, Viernes a Domingo solamente)"}
+              </p>
+              {/*<h6>
+                {language
+                  ? "Breakfast is being served from Friday - Sunday"
+                  : ""}
+              </h6>*/}
               {renderPoiHours(mrgHours.poi.hammock, language)}
               <p>
                 {language
-                  ? "Home of the world famous Florida Lobster and Steak special, Café Hammock offers local and continental favorites. From Bahamian conch fritters and sautéed alligator medallions to salads, filet mignon and pastas to Latin staples like grilled palomilla; this casual spot is right in the middle of the gaming action."
-                  : "Hogar del mundialmente reconocido especial de langosta y churrasco, Café Hammock ofrece los platos favoritos locales y continentales. Desde los buñuelos de caracol de las Bahamas y medallones de cocodrilo salteados, hasta ensaladas, filete mignon, pastas, y platos típicos latinos como el bistec de palomilla; este restaurante casual está justo en el centro de la acción del casino."}
+                  ? "Enjoy casual dining with a sophisticated flair. Café Hammock serves up breakfast, lunch & dinner favorites, right in the middle of the gaming action. Affordable prices, tasty dishes and a relaxed ambiance are all on the menu, so stop by and enjoy a delicious meal before or after you game with us."
+                  : "Disfrute de una cena informal con un toque sofisticado. Café Hammock sirve los favoritos de desayuno, almuerzo y cena, justo en medio de la acción del juego. Precios razonables, platos sabrosos y un ambiente relajado están en el menú, así que visítenos y disfrute de una deliciosa comida antes o después de pasar a nuestra sala de juegos."}
               </p>
               <Button
                 href="https://mapa-media.s3.amazonaws.com/website/CafeHammock_Menu_Web_2.pdf"

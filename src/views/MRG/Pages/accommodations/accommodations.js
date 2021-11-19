@@ -64,6 +64,11 @@ const Accommodations = () => {
             <div className={classes.leftTextArea}>
               <h2>{language ? "Accommodations" : "Habitaciones"}</h2>
               {/*renderPoiHours(mrgHours.poi.accommodations, language)*/}
+              <h6>
+                {language
+                  ? "Grand Reopening December 22, 2021! Our hotel will reopen on Wednesday, December 22. Guests must be 18 and over to enter our premises. We are delighted to welcome you back! Questions? Please call 305-925-2555."
+                  : "¡Gran reapertura el 22 de diciembre de 2021! Nuestro hotel reanudará operaciones el miércoles, 22 de diciembre. Los huéspedes deben tener 18 años o más para ingresar a nuestras instalaciones. ¡Estamos encantados de darles la bienvenida nuevamente! ¿Preguntas? Llame al 305-925-2555."}
+              </h6>
               <p>
                 {language
                   ? "Standing at the edge of the magnificent Florida Everglades, the Resort boasts rooms designed with comfort as the number one priority as well as amazing views of the surrounding ecosystem."

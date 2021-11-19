@@ -142,7 +142,31 @@ export default function Miccosukee(props) {
           <StandardAlert
             message={
               language ? (
-                <div id="test">
+                <div id="alert1">
+                  <b>
+                    Extended Hours! We will be open until 4 AM on Wednesday,
+                    November 24 and Thursday, November 25. Happy Thanksgiving
+                    everyone!
+                  </b>
+                </div>
+              ) : (
+                <div>
+                  <b>
+                    ¡Horario Extendido! Estaremos abiertos hasta las 4 AM el
+                    miércoles, 24 de noviembre y el jueves, 25 de noviembre.
+                    ¡Feliz Día de Acción de Gracias a todos!
+                  </b>
+                </div>
+              )
+            }
+            close
+            color="success"
+            icon="info_outline"
+          />
+          <StandardAlert
+            message={
+              language ? (
+                <div id="alert2">
                   <b>
                     <Link
                       style={{ color: "white", fontWeight: "800" }}

@@ -15,6 +15,8 @@ import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg";
 import image2 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
 import image3 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg";
+import bingoPromoEn from "assets/media/img/mrg/gaming/bingo/FDE7A013-2E37-4474-8A2A-9CA0275BB8B0.png";
+import bingoPromoSp from "assets/media/img/mrg/gaming/bingo/bingo_promo_sp.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -119,7 +121,13 @@ const Bingo = () => {
           </GridItem>
           <GridItem md={5}>
             <div className={classes.imageArea}>
-              <CustomImageSlider images={imageObj} />
+              {/*
+                <img
+                  style={{ width: "100%" }}
+                  src={language ? bingoPromoEn : bingoPromoSp}
+                />
+              */}
+              {<CustomImageSlider images={imageObj} />}
             </div>
           </GridItem>
         </GridContainer>

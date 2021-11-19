@@ -59,7 +59,10 @@ export const mrgStatus = {
       isOpen: false,
     },
     {
-      name: (language) => "Café Hammock",
+      name: (language) =>
+        language
+          ? "Café Hammock - Opening December 1, 2021 (Breakfast, Friday - Sunday only)"
+          : "Café Hammock – Apertura el 1 de diciembre de 2021 (Desayuno, viernes a domingo solamente)",
       isOpen: false,
     },
     {
@@ -77,10 +80,16 @@ export const mrgStatus = {
   ],
   accommodations: {
     isOpen: false,
-    details: (language) =>
+    details: (language) => [
+      /*
       language
         ? "The hotel will remain closed until further notice"
         : "El hotel permanecerá cerrado hasta nuevo aviso",
+      */
+      language
+        ? "Our hotel will reopen on Wednesday, December 22, 2021. Questions? Please call 305-925-2555."
+        : "Nuestro hotel reanudará operaciones el miércoles, 22 de diciembre. ¿Preguntas? Llame al 305-925-2555.",
+    ],
   },
   amenities: [
     {

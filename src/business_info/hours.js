@@ -238,10 +238,15 @@ export const mrgHours = {
     ],
     hammock: [
       {
-        days: (language) => (language ? "" : ""),
-        open: `${getMinutes(11).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-        details: (language) => (language ? "" : ""),
+        days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
+        open: `${getMinutes(12).combinedString}`,
+        close: `${getMinutes(22).combinedString}`,
+      },
+      {
+        days: (language) =>
+          language ? "Friday – Sunday" : "viernes – domingo",
+        open: `${getMinutes(9).combinedString}`,
+        close: `${getMinutes(22).combinedString}`,
       },
       /*
       {
