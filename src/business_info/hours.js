@@ -345,7 +345,7 @@ export const villageHours = {
     giftShop: [
       {
         days: (language) =>
-          language ? `Friday – Sunday` : "viernes – domingo",
+          language ? `Wednesday – Sunday` : "miércoles – domingo",
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(16, 30).combinedString}`,
       },
