@@ -68,6 +68,10 @@ const MrgSelectOptions = [
     label: "Human Resources",
   },
   {
+    value: "Other",
+    label: "Other",
+  },
+  {
     value: "Website Feedback",
     label: "Website Feedback",
   },

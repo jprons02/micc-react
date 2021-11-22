@@ -67,6 +67,12 @@ const getEmail = (value) => {
       ];
     case "Human Resources":
       return ["damaro@miccosukee.com"];
+    case "Other":
+      return [
+        "KWhiting@miccosukee.com",
+        "TMitchelson@miccosukee.com",
+        "reservations@miccosukee.com",
+      ];
     case "Website Feedback":
       return ["jronselli@miccosukee.com"];
     // Media Inquiry
