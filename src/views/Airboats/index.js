@@ -80,26 +80,24 @@ export default function Miccosukee(props) {
       <div>
         <AirboatsHeader />
         <ReactHelmetComponent url={window.location.pathname} />
-        {/*
-          <StandardAlert
-            message={
-              language ? (
-                <span>
-                  <b>Airboat rides are suspended until further notice.</b>
-                </span>
-              ) : (
-                <span>
-                  <b>
-                    Los viajes en Airboats quedan suspendidos hasta nuevo aviso.
-                  </b>
-                </span>
-              )
-            }
-            close
-            color="danger"
-            icon="info_outline"
-          />
-          */}
+        <StandardAlert
+          message={
+            language ? (
+              <span>
+                <b>Airboat rides are closed for Thanksgiving</b>
+              </span>
+            ) : (
+              <span>
+                <b>
+                  Los viajes en Airboats están cerrados por Acción de Gracias.
+                </b>
+              </span>
+            )
+          }
+          close
+          color="danger"
+          icon="info_outline"
+        />
         <Switch>
           <Route exact path={`${match.path}/`} component={Home} />
           <Route

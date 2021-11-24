@@ -87,6 +87,22 @@ export default function Miccosukee(props) {
           <StandardAlert
             message={
               language ? (
+                <span>
+                  <b>The Gift Shop is closed for Thanksgiving.</b>
+                </span>
+              ) : (
+                <span>
+                  <b>El Gift Shop están cerrados por Acción de Gracias.</b>
+                </span>
+              )
+            }
+            close
+            color="danger"
+            icon="info_outline"
+          />
+          <StandardAlert
+            message={
+              language ? (
                 <div>
                   <b>
                     Miccosukee Indian Village is temporarily closed due to
