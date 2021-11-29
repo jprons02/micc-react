@@ -143,19 +143,20 @@ export default function Miccosukee(props) {
             message={
               language ? (
                 <div id="alert1">
-                  <b>
-                    Extended Hours! We will be open until 4 AM on Wednesday,
-                    November 24 and Thursday, November 25. Happy Thanksgiving
-                    everyone!
-                  </b>
+                  <b>Grand Reopening December 22, 2021!</b>
+                  <p>
+                    Our hotel will reopen on Wednesday, December 22. Guests must
+                    be 18 and over to enter our premises.
+                  </p>
                 </div>
               ) : (
                 <div>
-                  <b>
-                    ¡Horario Extendido! Estaremos abiertos hasta las 4 AM el
-                    miércoles, 24 de noviembre y el jueves, 25 de noviembre.
-                    ¡Feliz Día de Acción de Gracias a todos!
-                  </b>
+                  <b>¡Gran reapertura el 22 de diciembre de 2021!</b>
+                  <p>
+                    Nuestro hotel reanudará operaciones el miércoles, 22 de
+                    diciembre. Los huéspedes deben tener 18 años o más para
+                    ingresar a nuestras instalaciones.
+                  </p>
                 </div>
               )
             }
