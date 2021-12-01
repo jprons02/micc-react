@@ -143,19 +143,18 @@ export default function Miccosukee(props) {
             message={
               language ? (
                 <div id="alert1">
-                  <b>Grand Reopening December 22, 2021!</b>
-                  <p>
-                    Our hotel will reopen on Wednesday, December 22. Guests must
-                    be 18 and over to enter our premises.
-                  </p>
+                  <b>Grand reopening of our hotel on Wednesday, December 22!</b>
+                  <p>Guests must be 18 and over to enter our premises.</p>
                 </div>
               ) : (
                 <div>
-                  <b>¡Gran reapertura el 22 de diciembre de 2021!</b>
+                  <b>
+                    ¡Gran reapertura de nuestro hotel el miércoles, 22 de
+                    diciembre!
+                  </b>
                   <p>
-                    Nuestro hotel reanudará operaciones el miércoles, 22 de
-                    diciembre. Los huéspedes deben tener 18 años o más para
-                    ingresar a nuestras instalaciones.
+                    Los huéspedes deben tener 18 años o más para ingresar a
+                    nuestras instalaciones.
                   </p>
                 </div>
               )

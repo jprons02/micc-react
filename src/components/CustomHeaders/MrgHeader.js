@@ -183,7 +183,6 @@ const MrgHeader = () => {
       link: "/events",
       //icon: () => <Icon>chevron_right</Icon>,
     },
-    /*
     {
       text: language ? "Book A Room" : "Reservar una Habitación",
       itemType: "action",
@@ -194,7 +193,6 @@ const MrgHeader = () => {
       clickFunction: () => openModal(setShowBookRoomModal),
       //icon: () => <Icon>chevron_right</Icon>,
     },
-    */
   ];
 
   return (

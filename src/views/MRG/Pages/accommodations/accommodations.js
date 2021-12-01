@@ -66,8 +66,8 @@ const Accommodations = () => {
               {/*renderPoiHours(mrgHours.poi.accommodations, language)*/}
               <h6>
                 {language
-                  ? "Grand Reopening December 22, 2021! Our hotel will reopen on Wednesday, December 22. Guests must be 18 and over to enter our premises. We are delighted to welcome you back! Questions? Please call 305-925-2555."
-                  : "¡Gran reapertura el 22 de diciembre de 2021! Nuestro hotel reanudará operaciones el miércoles, 22 de diciembre. Los huéspedes deben tener 18 años o más para ingresar a nuestras instalaciones. ¡Estamos encantados de darles la bienvenida nuevamente! ¿Preguntas? Llame al 305-925-2555."}
+                  ? "Grand reopening of our hotel on Wednesday, December 22! Guests must be 18 and over to enter our premises. We are delighted to welcome you back! Questions? Please call 305-925-2555."
+                  : "¡Gran reapertura de nuestro hotel el miércoles, 22 de diciembre! Los huéspedes deben tener 18 años o más para ingresar a nuestras instalaciones. ¡Estamos encantados de darles la bienvenida nuevamente! ¿Preguntas? Llame al 305-925-2555."}
               </h6>
               <p>
                 {language
@@ -84,14 +84,14 @@ const Accommodations = () => {
                   ? "Executive and Deluxe-level rooms are available with upgraded amenities and services."
                   : "Habitaciones Ejecutivas y de nivel Deluxe están disponibles con comodidades y servicios adicionales."}
               </p>
-              {/*
-              <Button
-                onClick={() => setShowBookRoomModal(true)}
-                usetheme="contained"
-              >
-                {language ? "Book A Room" : "Reservar una Habitación"}
-              </Button>
-              */}
+              {
+                <Button
+                  onClick={() => setShowBookRoomModal(true)}
+                  usetheme="contained"
+                >
+                  {language ? "Book A Room" : "Reservar una Habitación"}
+                </Button>
+              }
             </div>
           </GridItem>
           <GridItem md={5}>

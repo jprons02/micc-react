@@ -55,8 +55,12 @@ const BookRoomModal = (props) => {
         </IconButton>
         <div style={{ margin: "10px 0" }}>
           <Typography variant="h5" component="h2">
-            {language ? "Book A Room" : "Reservar Una Habitación"}
+            {language ? "Book A Room" : "Reservar Una Habitación"}{" "}
           </Typography>
+          <p>
+            {language ? "Having Trouble? Call " : "Necesita ayuda? Llame al "}
+            305-925-2555
+          </p>
         </div>
       </DialogTitle>
       <DialogContent

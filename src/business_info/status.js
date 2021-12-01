@@ -61,9 +61,9 @@ export const mrgStatus = {
     {
       name: (language) =>
         language
-          ? "Café Hammock - Opening December 1, 2021 (Breakfast, Friday - Sunday only)"
-          : "Café Hammock – Apertura el 1 de diciembre de 2021 (Desayuno, viernes a domingo solamente)",
-      isOpen: false,
+          ? "Café Hammock (Breakfast, Friday - Sunday only)"
+          : "Café Hammock (Desayuno, viernes a domingo solamente)",
+      isOpen: true,
     },
     {
       name: (language) => "Cypress Lounge",

@@ -61,15 +61,13 @@ const CafeHammock = () => {
             <div className={classes.leftTextArea}>
               <h2>Café Hammock</h2>
               <h6 style={{ color: "green", display: "inline-block" }}>
-                {language
-                  ? "Opening December 1, 2021 "
-                  : "Abriremos el 1 de diciembre de 2021 "}
+                {language ? "Now Open " : "Ahora abierto "}
               </h6>
               <p style={{ display: "inline-block" }}>
                 &nbsp;
                 {language
                   ? "(Breakfast, Friday - Sunday only)"
-                  : "(Desayuno, Viernes a Domingo solamente)"}
+                  : "(Desayuno, viernes a domingo solamente)"}
               </p>
               {/*<h6>
                 {language
