@@ -109,8 +109,8 @@ const mrgGamingPromotionsPopup = {
     },
     end: {
       year: "21",
-      month: "December",
-      day: "28",
+      month: "November",
+      day: "30",
       time: "",
     },
   }),

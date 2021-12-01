@@ -25,7 +25,7 @@ const promoCardStyle = {
     fontFamily: "sans-serif",
     fontSize: "14px",
     textAlign: "center",
-    height: "40px",
+    minHeight: "40px",
   },
   cardBodyText: {
     fontSize: "10px",
