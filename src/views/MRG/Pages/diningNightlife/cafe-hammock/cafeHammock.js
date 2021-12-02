@@ -14,8 +14,9 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 // Images
 import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
 import image1 from "assets/media/img/mrg/dining/cafe-hammock/CafeHammock_Interior.jpeg";
-import image2 from "assets/media/img/mrg/dining/cafe-hammock/CafeHammock_Drinks.jpeg";
-import image3 from "assets/media/img/mrg/dining/cafe-hammock/CafeHammock_SteakLobster.jpeg";
+import image2 from "assets/media/img/mrg/dining/cafe-hammock/filet.jpg";
+import image3 from "assets/media/img/mrg/dining/cafe-hammock/chicken.jpg";
+import image4 from "assets/media/img/mrg/dining/cafe-hammock/caprese.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -35,8 +36,9 @@ const useStyles = makeStyles(styles);
 //const imageArray = [image1, image2, image3];
 const imageObj = [
   { src: image1, alt: "Cafe Hammock interior" },
-  { src: image2, alt: "Drinks" },
-  { src: image3, alt: "Steak and Lobster" },
+  { src: image2, alt: "Steak" },
+  { src: image3, alt: "Chicken" },
+  { src: image4, alt: "Caprese salad" },
 ];
 
 const sliderContent = [

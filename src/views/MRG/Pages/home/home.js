@@ -45,6 +45,9 @@ import styles from "assets/jss/material-kit-react/views/mrg/home.js";
 import cardStyles from "assets/jss/material-kit-react/views/mrg/homeCardStyles.js";
 import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
 
+import cafeHammockVidImage from "assets/media/img/mrg/home/Cafe-Hammock-thubnail_1x.jpg";
+import cafeHammockVid from "assets/media/video/Cafe_Hammock_720p.mp4";
+
 // context
 import { useLanguage } from "contexts/languageContext.js";
 
@@ -61,6 +64,23 @@ const Home = (props) => {
   const sliderContent = [
     {
       id: 1,
+      bgImage: cafeHammockVidImage,
+      bgVideo: cafeHammockVid,
+      gradient: ".5",
+      header: language
+        ? "CAFÉ HAMMOCK NOW OPEN!"
+        : "¡CAFÉ HAMMOCK AHORA ABIERTO!",
+      subHeader: language
+        ? "Enjoy casual dining with a sophisticated flair!"
+        : "¡Disfrute de una cena informal con un toque sofisticado!",
+      button: {
+        text: language ? "SEE DETAILS" : "MÁS DETALLES",
+        link: "/mrg/cafe-hammock",
+      },
+    },
+    /*
+    {
+      id: 2,
       bgImage: heroImg1,
       header: language ? "MONTHLY PROMOTIONS" : "PROMOCIONES MENSUALES",
       subHeader: language
@@ -71,6 +91,7 @@ const Home = (props) => {
         link: "/mrg/promotions",
       },
     },
+    */
     /*
     {
       id: 2,
