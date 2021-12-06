@@ -297,6 +297,11 @@ const Events = ({ history, badgeColor, entityMargin }) => {
       <div>
         <div className={classes.container} style={{ padding: "15px" }}>
           {renderBadges()}
+          <h6 style={{ paddingTop: "10px", color: "red" }}>
+            {language
+              ? "The Miccosukee Indian Arts & Crafts Festival is canceled this year. We look forward to resuming this event in 2022."
+              : "El Festival de Artesanías Miccosukee está cancelado este año. Esperamos reanudar este evento en 2022."}
+          </h6>
           <div>{renderEvents()}</div>
         </div>
       </div>

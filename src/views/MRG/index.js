@@ -133,6 +133,16 @@ export default function Miccosukee(props) {
     setState(false);
   };
 
+  /*
+    xmas:
+    NOTICE: Christmas Eve & Christmas Day Hours: We will be open until 4 AM on Friday, December 24, and Saturday, December 25. Merry Christmas everyone!
+    AVISO: Horario de Nochebuena y Día de Navidad: Abriremos hasta las 4 AM el viernes, 24 de diciembre y el sábado, 25 de diciembre. ¡Feliz Navidad a todos!
+
+    new year:
+    NOTICE: New Year's Eve & New Year's Day Hours: We will be open until 4 AM on Friday, December 31, and Saturday, January 1, 2022. Cheers to the New Year!
+    AVISO: Horario de Víspera de Año Nuevo y Día de Año Nuevo: Abriremos hasta las 4 AM el viernes, 31 de diciembre y el sábado, 1 de enero de 2022. ¡Salud por el Año Nuevo!
+  */
+
   return (
     <ThemeProvider theme={theme("mrg")}>
       <BookRoomProvider>
