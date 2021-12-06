@@ -103,6 +103,7 @@ export default function HeroSection(props) {
                 }), rgba(0, 0, 0, ${
                   slide.gradient ? slide.gradient : "0.5"
                 })), url(${slide.bgVideo ? "" : slide.bgImage})`,
+                marginBottom: "-10px",
               }}
             >
               {slide.bgVideo ? (

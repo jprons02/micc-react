@@ -3,7 +3,7 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
-import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_November.jpg";
+import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_December.jpg";
 import promoImage1 from "assets/media/img/popups/oxford_luggage.jpg";
 import hubPopup from "assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg";
 import jobFair from "assets/media/img/popups/JOBFair2021_WebSlider.jpg";
@@ -85,16 +85,16 @@ const mrgPopup = {
     end: {
       year: "21",
       month: "December",
-      day: "4",
+      day: "15",
       time: "",
     },
   }),
   viewCount: 1,
   content: {
-    image: jobFair,
-    alt: "job fair",
-    linkType: "external",
-    link: "https://www.miccosukee.com/adp-job-board",
+    image: mrgImage,
+    alt: "monthly payouts",
+    linkType: "",
+    link: "",
   },
 };
 const mrgGamingPromotionsPopup = {
