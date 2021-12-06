@@ -266,9 +266,14 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     return (
       <React.Fragment>
         <h3 style={{ marginBottom: "20px" }}>
-          {language
-            ? category + " Upcoming Events"
-            : category + " Próximos Eventos"}
+          {
+            /* Weird if statements here is necessary for spanish "Todos los Proximos..." copy. */
+            language
+              ? category + " Upcoming Events"
+              : category === "All"
+              ? "Todos los Próximos Eventos"
+              : category + " Próximos Eventos"
+          }
         </h3>
         <div id="upcomming">{renderUpcommingEvents()}</div>
         {defaultUpcommingText ? (
