@@ -11,11 +11,11 @@ import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js
 
 // Images
 import bgImage from "assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
-import image1 from "assets/media/img/history/ImgLeadersBillyCypress-no6similp2b6jehl4s2ut96cx29wk5zhovimowr540.jpg";
-import image2 from "assets/media/img/history/AsstChairman_LucasOsceola.jpg";
-import image3 from "assets/media/img/history/Treasurer_KennyCypress.jpg";
-import image4 from "assets/media/img/history/imgLeadersTalbert-no6sixsnz2qmeq17awydn6bw1oqb4j89qfcgg8af1c.jpg";
-import image5 from "assets/media/img/history/imgLeadersPetties-no6sis5mu2iwh29e7uim87r4hdi3uclvpnfjkkis2o.jpg";
+import chairman from "assets/media/img/history/Chairman_TalbertCypress.jpg";
+import asstChairman from "assets/media/img/history/AsstChairman_LucasOsceola.jpg";
+import treasurer from "assets/media/img/history/Treasurer_KennyCypress.jpg";
+import secretary from "assets/media/img/history/Secretary_WilliamJOsceola.jpg";
+import lawmaker from "assets/media/img/history/imgLeadersPetties-no6sis5mu2iwh29e7uim87r4hdi3uclvpnfjkkis2o.jpg";
 
 // Styling
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,29 +26,35 @@ import { useLanguage } from "contexts/languageContext";
 
 const useStyles = makeStyles(styles);
 
+/*
+William J. Osceola, Secretary
+
+Talbert Cypress, Chairman
+*/
+
 const imageWithCaptions = [
   {
-    src: image1,
-    caption: "Billy Cypress, Chairman",
-    alt: "Billy Cypress, Chairman",
+    src: chairman,
+    caption: "Talbert Cypress, Chairman",
+    alt: "Talbert Cypress, Chairman",
   },
   {
-    src: image2,
-    caption: "Lucas Osceola, Assistant Chairman",
-    alt: "Lucas Osceola, Assistant Chairman",
+    src: asstChairman,
+    caption: "Lucas K. Osceola, Assistant Chairman",
+    alt: "Lucas K. Osceola, Assistant Chairman",
   },
   {
-    src: image3,
-    caption: "Kenneth Cypress, Treasurer",
-    alt: "Kenneth Cypress, Treasurer",
+    src: treasurer,
+    caption: "Kenneth H. Cypress, Treasurer",
+    alt: "Kenneth H. Cypress, Treasurer",
   },
   {
-    src: image4,
-    caption: "Talbert Cypress, Secretary",
-    alt: "Talbert Cypress, Secretary",
+    src: secretary,
+    caption: "William J. Osceola, Secretary",
+    alt: "William J. Osceola, Secretary",
   },
   {
-    src: image5,
+    src: lawmaker,
     caption: "Petties Osceola, Jr., Lawmaker",
     alt: "Petties Osceola, Jr., Lawmaker",
   },
