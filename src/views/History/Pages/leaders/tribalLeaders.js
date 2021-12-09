@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 
 // Core Components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -23,6 +23,7 @@ import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 
 // Context
 import { useLanguage } from "contexts/languageContext";
+import { SettingsInputAntennaTwoTone } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -73,6 +74,215 @@ const TribalLeaders = () => {
   const language = useLanguage();
   const classes = useStyles();
 
+  const [activeCouncilman, setActiveCouncilman] = useState(0);
+
+  const clickFunction = (getIndex) => {
+    setActiveCouncilman(getIndex);
+  };
+
+  const renderBio = () => {
+    switch (activeCouncilman) {
+      case 0:
+        return (
+          <React.Fragment>
+            <h3>Talbert Cypress, Chairman</h3>
+            {language ? (
+              <React.Fragment>
+                <p>
+                  The responsibilities of the General Council consist of the
+                  development and management of resources and the day-to-day
+                  business activities of the Tribe including those involving
+                  membership, government, law and order, education, welfare,
+                  recreation, and fiscal disbursement. This group is also known
+                  as the Business Council. It is a combination of traditional
+                  tribal government and modern management that forms the
+                  organizational structure of the present-day Miccosukee Tribe.​
+                </p>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p>
+                  Las responsabilidades del Consejo General consisten en el
+                  desarrollo y administración de recursos y actividades
+                  comerciales diarias de la Tribu, incluyendo las que involucran
+                  membresía, gobierno, ley y orden, educación, bienestar,
+                  recreación y desembolso fiscal. Este grupo también se conoce
+                  como Consejo Empresarial. Es una combinación de gobierno
+                  tribal tradicional y administración moderna que forma la
+                  estructura organizativa de la actual Tribu Miccosukee.​
+                </p>
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        );
+      case 1:
+        return (
+          <React.Fragment>
+            <h3>Lucas K. Osceola, Assistant Chairman</h3>
+            {language ? (
+              <React.Fragment>
+                <p>
+                  The responsibilities of the General Council consist of the
+                  development and management of resources and the day-to-day
+                  business activities of the Tribe including those involving
+                  membership, government, law and order, education, welfare,
+                  recreation, and fiscal disbursement. This group is also known
+                  as the Business Council. It is a combination of traditional
+                  tribal government and modern management that forms the
+                  organizational structure of the present-day Miccosukee Tribe.​
+                </p>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p>
+                  Las responsabilidades del Consejo General consisten en el
+                  desarrollo y administración de recursos y actividades
+                  comerciales diarias de la Tribu, incluyendo las que involucran
+                  membresía, gobierno, ley y orden, educación, bienestar,
+                  recreación y desembolso fiscal. Este grupo también se conoce
+                  como Consejo Empresarial. Es una combinación de gobierno
+                  tribal tradicional y administración moderna que forma la
+                  estructura organizativa de la actual Tribu Miccosukee.​
+                </p>
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        );
+      case 2:
+        return (
+          <React.Fragment>
+            <h3>Kenneth H. Cypress, Treasurer</h3>
+            {language ? (
+              <React.Fragment>
+                <p>
+                  The responsibilities of the General Council consist of the
+                  development and management of resources and the day-to-day
+                  business activities of the Tribe including those involving
+                  membership, government, law and order, education, welfare,
+                  recreation, and fiscal disbursement. This group is also known
+                  as the Business Council. It is a combination of traditional
+                  tribal government and modern management that forms the
+                  organizational structure of the present-day Miccosukee Tribe.​
+                </p>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p>
+                  Las responsabilidades del Consejo General consisten en el
+                  desarrollo y administración de recursos y actividades
+                  comerciales diarias de la Tribu, incluyendo las que involucran
+                  membresía, gobierno, ley y orden, educación, bienestar,
+                  recreación y desembolso fiscal. Este grupo también se conoce
+                  como Consejo Empresarial. Es una combinación de gobierno
+                  tribal tradicional y administración moderna que forma la
+                  estructura organizativa de la actual Tribu Miccosukee.​
+                </p>
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        );
+      case 3:
+        return (
+          <React.Fragment>
+            <h3>William J. Osceola, Secretary</h3>
+            {language ? (
+              <React.Fragment>
+                <p>
+                  The responsibilities of the General Council consist of the
+                  development and management of resources and the day-to-day
+                  business activities of the Tribe including those involving
+                  membership, government, law and order, education, welfare,
+                  recreation, and fiscal disbursement. This group is also known
+                  as the Business Council. It is a combination of traditional
+                  tribal government and modern management that forms the
+                  organizational structure of the present-day Miccosukee Tribe.​
+                </p>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p>
+                  Las responsabilidades del Consejo General consisten en el
+                  desarrollo y administración de recursos y actividades
+                  comerciales diarias de la Tribu, incluyendo las que involucran
+                  membresía, gobierno, ley y orden, educación, bienestar,
+                  recreación y desembolso fiscal. Este grupo también se conoce
+                  como Consejo Empresarial. Es una combinación de gobierno
+                  tribal tradicional y administración moderna que forma la
+                  estructura organizativa de la actual Tribu Miccosukee.​
+                </p>
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        );
+      case 4:
+        return (
+          <React.Fragment>
+            <h3>Petties Osceola, Jr., Lawmaker</h3>
+            {language ? (
+              <React.Fragment>
+                <p>
+                  The responsibilities of the General Council consist of the
+                  development and management of resources and the day-to-day
+                  business activities of the Tribe including those involving
+                  membership, government, law and order, education, welfare,
+                  recreation, and fiscal disbursement. This group is also known
+                  as the Business Council. It is a combination of traditional
+                  tribal government and modern management that forms the
+                  organizational structure of the present-day Miccosukee Tribe.​
+                </p>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p>
+                  Las responsabilidades del Consejo General consisten en el
+                  desarrollo y administración de recursos y actividades
+                  comerciales diarias de la Tribu, incluyendo las que involucran
+                  membresía, gobierno, ley y orden, educación, bienestar,
+                  recreación y desembolso fiscal. Este grupo también se conoce
+                  como Consejo Empresarial. Es una combinación de gobierno
+                  tribal tradicional y administración moderna que forma la
+                  estructura organizativa de la actual Tribu Miccosukee.​
+                </p>
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        );
+      default:
+        return (
+          <React.Fragment>
+            <h3>{language ? "Leaders" : "Líderes Tribales"}</h3>
+            {language ? (
+              <React.Fragment>
+                <p>
+                  The responsibilities of the General Council consist of the
+                  development and management of resources and the day-to-day
+                  business activities of the Tribe including those involving
+                  membership, government, law and order, education, welfare,
+                  recreation, and fiscal disbursement. This group is also known
+                  as the Business Council. It is a combination of traditional
+                  tribal government and modern management that forms the
+                  organizational structure of the present-day Miccosukee Tribe.​
+                </p>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <p>
+                  Las responsabilidades del Consejo General consisten en el
+                  desarrollo y administración de recursos y actividades
+                  comerciales diarias de la Tribu, incluyendo las que involucran
+                  membresía, gobierno, ley y orden, educación, bienestar,
+                  recreación y desembolso fiscal. Este grupo también se conoce
+                  como Consejo Empresarial. Es una combinación de gobierno
+                  tribal tradicional y administración moderna que forma la
+                  estructura organizativa de la actual Tribu Miccosukee.​
+                </p>
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        );
+    }
+  };
+
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
@@ -110,6 +320,7 @@ const TribalLeaders = () => {
                   </p>
                 </React.Fragment>
               )}
+              {/*renderBio()*/}
             </div>
           </GridItem>
           <GridItem md={5}>
@@ -117,6 +328,7 @@ const TribalLeaders = () => {
               <CustomImageSlider
                 customStyle={{ width: "200px" }}
                 customImages={imageWithCaptions}
+                clickFunction={clickFunction}
               />
             </div>
           </GridItem>

@@ -50,11 +50,11 @@ const ProgramsBusiness = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>
-                {language ? "Programs & Business" : "Programas y Empresas "}
+                {language ? "Programs & Businesses" : "Programas y Empresas "}
               </h2>
               <h4>
                 {language
-                  ? "Developing independence"
+                  ? "Developing Independence"
                   : "Desarrollando la Independencia"}
               </h4>
               {language ? (
