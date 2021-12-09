@@ -54,11 +54,13 @@ const Bingo = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Bingo</h2>
-              {/*<h6 style={{ color: "red" }}>
-                {language
-                  ? "Bingo will be closed for operations on Thanksgiving Day, Thursday, November 25, and on Christmas Eve, Friday, December 24. Wishing everyone a joyful holiday season!"
-                  : "El Bingo estará cerrado para las operaciones el Día de Acción de Gracias, el jueves, 25 de noviembre y la víspera de Navidad, el Viernes, 24 de diciembre. ¡Les deseamos a todos una feliz temporada festiva!"}
-              </h6>*/}
+              {
+                <h6 style={{ color: "red" }}>
+                  {language
+                    ? "Bingo will be closed for operations on Christmas Eve, Friday, December 24. Wishing everyone a joyful holiday season!"
+                    : "El Bingo estará cerrado para las operaciones la víspera de Navidad, el viernes, 24 de diciembre. ¡Les deseamos a todos una feliz temporada festiva!"}
+                </h6>
+              }
               <p>
                 {language
                   ? "A South Florida staple since 1990, Miccosukee Resort & Gaming’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance! With high payouts and plenty of rewards through our Miccosukee One Rewards Program, our High Stakes Bingo pays to play! Regardless of experience, it’s perfect for single players, couples and large groups."
