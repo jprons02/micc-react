@@ -15,6 +15,9 @@ import CardBody from "components/Card/CardBody";
 import CardFooter from "components/Card/CardFooter";
 import Button from "components/CustomButtons/Button.js";
 
+// service
+import { isHoliday } from "services/functions/isHoliday";
+
 // Styles
 import styles from "assets/jss/material-kit-react/components/customCardStyle/customMiccosukeeCardStyle.js";
 import { makeStyles } from "@material-ui/core/styles";
@@ -80,11 +83,14 @@ const MiccosukeeCard = (props) => {
         <CardFooter>
           <GridContainer direction="column">
             <GridItem style={{ marginBottom: "8px" }}>
-              {/*<p style={{ color: "red", marginTop: "-10px" }}>
-                {language
-                  ? "Holiday hours may apply, please call to confirm."
-                  : "Pueden aplicarse horarios navideños. Por favor llame para confirmar."}
-              </p>*/}
+              {/* Only display if holiday */}
+              {isHoliday() ? (
+                <p style={{ color: "red", marginTop: "-10px" }}>
+                  {language
+                    ? "Holiday hours may apply, please call to confirm."
+                    : "Pueden aplicarse horarios navideños. Por favor llame para confirmar."}
+                </p>
+              ) : null}
               <Icon
                 style={{
                   color: "#5a5a5a",
