@@ -80,11 +80,11 @@ const MiccosukeeCard = (props) => {
         <CardFooter>
           <GridContainer direction="column">
             <GridItem style={{ marginBottom: "8px" }}>
-              <p style={{ color: "red", marginTop: "-10px" }}>
+              {/*<p style={{ color: "red", marginTop: "-10px" }}>
                 {language
                   ? "Holiday hours may apply, please call to confirm."
                   : "Pueden aplicarse horarios navideños. Por favor llame para confirmar."}
-              </p>
+              </p>*/}
               <Icon
                 style={{
                   color: "#5a5a5a",
