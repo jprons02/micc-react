@@ -151,23 +151,43 @@ export default function Miccosukee(props) {
           <ReactHelmetComponent url={window.location.pathname} />
           <StandardAlert
             message={
-              language ? (
-                <div id="alert1">
-                  <b>Grand reopening of our hotel on Wednesday, December 22!</b>
-                  <p>Guests must be 18 and over to enter our premises.</p>
-                </div>
-              ) : (
-                <div>
-                  <b>
-                    ¡Gran reapertura de nuestro hotel el miércoles, 22 de
-                    diciembre!
-                  </b>
-                  <p>
-                    Los huéspedes deben tener 18 años o más para ingresar a
-                    nuestras instalaciones.
-                  </p>
-                </div>
-              )
+              <div id="alert1">
+                {language ? (
+                  <div>
+                    <b>
+                      We will be operating 24 hours starting on Sunday, December
+                      12, from 9 AM until 2 AM on December 14.
+                    </b>
+                  </div>
+                ) : (
+                  <div>
+                    <b>
+                      Estaremos operando las 24 horas a partir del domingo, 12
+                      de diciembre desde las 9 AM hasta las 2 AM del 14 de
+                      diciembre.
+                    </b>
+                  </div>
+                )}
+                {/*language ? (
+                  <div>
+                    <b>
+                      Grand reopening of our hotel on Wednesday, December 22!
+                    </b>
+                    <p>Guests must be 18 and over to enter our premises.</p>
+                  </div>
+                ) : (
+                  <div>
+                    <b>
+                      ¡Gran reapertura de nuestro hotel el miércoles, 22 de
+                      diciembre!
+                    </b>
+                    <p>
+                      Los huéspedes deben tener 18 años o más para ingresar a
+                      nuestras instalaciones.
+                    </p>
+                  </div>
+                )*/}
+              </div>
             }
             close
             color="success"
@@ -175,35 +195,37 @@ export default function Miccosukee(props) {
           />
           <StandardAlert
             message={
-              language ? (
-                <div id="alert2">
-                  <b>
-                    <Link
-                      style={{ color: "white", fontWeight: "800" }}
-                      to={`${match.path}/covid-19`}
-                    >
-                      Masks are optional for vaccinated patrons. Masks are
-                      mandatory for unvaccinated patrons. Click HERE for the
-                      Miccosukee Resort &amp; Gaming COVID-19 guidelines.
-                    </Link>
-                  </b>
-                </div>
-              ) : (
-                <div>
-                  <b>
-                    <Link
-                      style={{ color: "white", fontWeight: "800" }}
-                      to={`${match.path}/covid-19`}
-                    >
-                      El uso de mascarillas es opcional para los clientes
-                      vacunados. El uso de mascarillas es obligatorio para los
-                      clientes no vacunados. Oprima AQUÍ para las últimas
-                      noticias de COVID-19 relacionadas a nuestros
-                      establecimientos.
-                    </Link>
-                  </b>
-                </div>
-              )
+              <div id="alert2">
+                {language ? (
+                  <div>
+                    <b>
+                      <Link
+                        style={{ color: "white", fontWeight: "800" }}
+                        to={`${match.path}/covid-19`}
+                      >
+                        Masks are optional for vaccinated patrons. Masks are
+                        mandatory for unvaccinated patrons. Click HERE for the
+                        Miccosukee Resort &amp; Gaming COVID-19 guidelines.
+                      </Link>
+                    </b>
+                  </div>
+                ) : (
+                  <div>
+                    <b>
+                      <Link
+                        style={{ color: "white", fontWeight: "800" }}
+                        to={`${match.path}/covid-19`}
+                      >
+                        El uso de mascarillas es opcional para los clientes
+                        vacunados. El uso de mascarillas es obligatorio para los
+                        clientes no vacunados. Oprima AQUÍ para las últimas
+                        noticias de COVID-19 relacionadas a nuestros
+                        establecimientos.
+                      </Link>
+                    </b>
+                  </div>
+                )}
+              </div>
             }
             close
             color="info"

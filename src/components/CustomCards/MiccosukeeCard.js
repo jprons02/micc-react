@@ -19,10 +19,14 @@ import Button from "components/CustomButtons/Button.js";
 import styles from "assets/jss/material-kit-react/components/customCardStyle/customMiccosukeeCardStyle.js";
 import { makeStyles } from "@material-ui/core/styles";
 
+// context
+import { useLanguage } from "contexts/languageContext.js";
+
 const useStyles = makeStyles(styles);
 
 const MiccosukeeCard = (props) => {
   const classes = useStyles();
+  const language = useLanguage();
 
   const renderButtonOne = () => {
     const buttonOneStyle =
@@ -76,6 +80,11 @@ const MiccosukeeCard = (props) => {
         <CardFooter>
           <GridContainer direction="column">
             <GridItem style={{ marginBottom: "8px" }}>
+              <p style={{ color: "red", marginTop: "-10px" }}>
+                {language
+                  ? "Holiday hours may apply, please call to confirm."
+                  : "Pueden aplicarse horarios navideños. Por favor llame para confirmar."}
+              </p>
               <Icon
                 style={{
                   color: "#5a5a5a",
