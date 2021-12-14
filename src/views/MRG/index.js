@@ -155,22 +155,6 @@ export default function Miccosukee(props) {
                 {language ? (
                   <div>
                     <b>
-                      We will be operating 24 hours starting on Sunday, December
-                      12, from 9 AM until 2 AM on December 14.
-                    </b>
-                  </div>
-                ) : (
-                  <div>
-                    <b>
-                      Estaremos operando las 24 horas a partir del domingo, 12
-                      de diciembre desde las 9 AM hasta las 2 AM del 14 de
-                      diciembre.
-                    </b>
-                  </div>
-                )}
-                {/*language ? (
-                  <div>
-                    <b>
                       Grand reopening of our hotel on Wednesday, December 22!
                     </b>
                     <p>Guests must be 18 and over to enter our premises.</p>
@@ -186,7 +170,7 @@ export default function Miccosukee(props) {
                       nuestras instalaciones.
                     </p>
                   </div>
-                )*/}
+                )}
               </div>
             }
             close
