@@ -155,6 +155,26 @@ export default function Miccosukee(props) {
                 {language ? (
                   <div>
                     <b>
+                      Christmas Eve &amp; Christmas Day Hours: We will be open
+                      until 4 AM on Friday, December 24, and Saturday, December
+                      25. Merry Christmas everyone!
+                    </b>
+                  </div>
+                ) : (
+                  <div>
+                    <b>
+                      Horario de Nochebuena y Día de Navidad: Abriremos hasta
+                      las 4 AM el viernes, 24 de diciembre y el sábado, 25 de
+                      diciembre. ¡Feliz Navidad a todos!
+                    </b>
+                  </div>
+                )}
+              </div>
+              /*
+              <div id="alert1">
+                {language ? (
+                  <div>
+                    <b>
                       Grand reopening of our hotel on Wednesday, December 22!
                     </b>
                     <p>Guests must be 18 and over to enter our premises.</p>
@@ -172,6 +192,7 @@ export default function Miccosukee(props) {
                   </div>
                 )}
               </div>
+              */
             }
             close
             color="success"
