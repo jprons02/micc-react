@@ -7,6 +7,9 @@ import {
   Link,
 } from "react-router-dom";
 
+// Icons
+import Warning from "@material-ui/icons/Warning";
+
 // Context
 import { PopupContext } from "contexts/PopupContext.js";
 import { ContactModalContext } from "contexts/ContactFormModalContext.js";
@@ -35,6 +38,7 @@ import { airboatsBusinessInfo } from "business_info/genericInfo.js";
 
 // services
 import { popupManager } from "services/functions/popups/popupManager";
+import { isOrAfterDate } from "services/functions/scheduleThis";
 
 // Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
@@ -80,6 +84,31 @@ export default function Miccosukee(props) {
       <div>
         <AirboatsHeader />
         <ReactHelmetComponent url={window.location.pathname} />
+        {isOrAfterDate("January 1, 2022") ? null : (
+          <StandardAlert
+            message={
+              language ? (
+                <div>
+                  <b>
+                    Airboat Rides will be closed on Saturday, December 25 and
+                    Friday, December 31. Happy Holidays!
+                  </b>
+                </div>
+              ) : (
+                <div>
+                  <b>
+                    Los viajes en Airboats (hidrodeslizadores) estarán cerrados
+                    el sábado, 25 de diciembre y el viernes, 31 de diciembre.
+                    ¡Felices Fiestas!
+                  </b>
+                </div>
+              )
+            }
+            close
+            color="danger"
+            icon={Warning}
+          />
+        )}
         <Switch>
           <Route exact path={`${match.path}/`} component={Home} />
           <Route

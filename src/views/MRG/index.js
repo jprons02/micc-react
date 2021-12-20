@@ -57,6 +57,7 @@ import { mrgBusinessInfo } from "business_info/genericInfo.js";
 
 // services
 import { popupManager } from "services/functions/popups/popupManager";
+import { isOrAfterDate } from "services/functions/scheduleThis";
 
 export default function Miccosukee(props) {
   const language = useLanguage();
@@ -149,55 +150,62 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          <StandardAlert
-            message={
-              <div id="alert1">
-                {language ? (
-                  <div>
-                    <b>
-                      Christmas Eve &amp; Christmas Day Hours: We will be open
-                      until 4 AM on Friday, December 24, and Saturday, December
-                      25. Merry Christmas everyone!
-                    </b>
-                  </div>
-                ) : (
-                  <div>
-                    <b>
-                      Horario de Nochebuena y Día de Navidad: Abriremos hasta
-                      las 4 AM el viernes, 24 de diciembre y el sábado, 25 de
-                      diciembre. ¡Feliz Navidad a todos!
-                    </b>
-                  </div>
-                )}
-              </div>
-              /*
-              <div id="alert1">
-                {language ? (
-                  <div>
-                    <b>
-                      Grand reopening of our hotel on Wednesday, December 22!
-                    </b>
-                    <p>Guests must be 18 and over to enter our premises.</p>
-                  </div>
-                ) : (
-                  <div>
-                    <b>
-                      ¡Gran reapertura de nuestro hotel el miércoles, 22 de
-                      diciembre!
-                    </b>
-                    <p>
-                      Los huéspedes deben tener 18 años o más para ingresar a
-                      nuestras instalaciones.
-                    </p>
-                  </div>
-                )}
-              </div>
-              */
-            }
-            close
-            color="success"
-            icon="info_outline"
-          />
+          {isOrAfterDate("December 26, 2021") ? null : (
+            <StandardAlert
+              message={
+                <div id="alert1a">
+                  {language ? (
+                    <div>
+                      <b>
+                        Christmas Eve &amp; Christmas Day Hours: We will be open
+                        until 4 AM on Friday, December 24, and Saturday,
+                        December 25. Merry Christmas everyone!
+                      </b>
+                    </div>
+                  ) : (
+                    <div>
+                      <b>
+                        Horario de Nochebuena y Día de Navidad: Abriremos hasta
+                        las 4 AM el viernes, 24 de diciembre y el sábado, 25 de
+                        diciembre. ¡Feliz Navidad a todos!
+                      </b>
+                    </div>
+                  )}
+                </div>
+              }
+              close
+              color="success"
+              icon="info_outline"
+            />
+          )}
+          {/*isOrAfterDate("January 2, 2022") ? null : (
+            <StandardAlert
+              message={
+                <div id="alert1b">
+                  {language ? (
+                    <div>
+                      <b>
+                        New Year's Eve &amp; New Year's Day Hours: We will be
+                        open until 4 AM on Friday, December 31, and Saturday,
+                        January 1, 2022. Cheers to the New Year!
+                      </b>
+                    </div>
+                  ) : (
+                    <div>
+                      <b>
+                        Horario de Víspera de Año Nuevo y Día de Año Nuevo:
+                        Abriremos hasta las 4 AM el viernes, 31 de diciembre y
+                        el sábado, 1 de enero de 2022. ¡Salud por el Año Nuevo!
+                      </b>
+                    </div>
+                  )}
+                </div>
+              }
+              close
+              color="success"
+              icon="info_outline"
+            />
+          )*/}
           <StandardAlert
             message={
               <div id="alert2">
@@ -350,3 +358,28 @@ export default function Miccosukee(props) {
     </ThemeProvider>
   );
 }
+
+/*
+OLD ALERT
+<div id="alert1">
+  {language ? (
+    <div>
+      <b>
+        Grand reopening of our hotel on Wednesday, December 22!
+      </b>
+      <p>Guests must be 18 and over to enter our premises.</p>
+    </div>
+  ) : (
+    <div>
+      <b>
+        ¡Gran reapertura de nuestro hotel el miércoles, 22 de
+        diciembre!
+      </b>
+      <p>
+        Los huéspedes deben tener 18 años o más para ingresar a
+        nuestras instalaciones.
+      </p>
+    </div>
+  )}
+</div>
+*/
