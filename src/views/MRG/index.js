@@ -57,7 +57,7 @@ import { mrgBusinessInfo } from "business_info/genericInfo.js";
 
 // services
 import { popupManager } from "services/functions/popups/popupManager";
-import { isOrAfterDate } from "services/functions/scheduleThis";
+import { isRunning } from "services/functions/scheduleThis";
 
 export default function Miccosukee(props) {
   const language = useLanguage();
@@ -150,7 +150,7 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isOrAfterDate("December 26, 2021") ? null : (
+          {isRunning("December 21, 2021", "December 26, 2021") ? (
             <StandardAlert
               message={
                 <div id="alert1a">
@@ -177,8 +177,8 @@ export default function Miccosukee(props) {
               color="success"
               icon="info_outline"
             />
-          )}
-          {/*isOrAfterDate("January 2, 2022") ? null : (
+          ) : null}
+          {isRunning("December 27, 2021", "January 2, 2022") ? (
             <StandardAlert
               message={
                 <div id="alert1b">
@@ -205,7 +205,7 @@ export default function Miccosukee(props) {
               color="success"
               icon="info_outline"
             />
-          )*/}
+          ) : null}
           <StandardAlert
             message={
               <div id="alert2">

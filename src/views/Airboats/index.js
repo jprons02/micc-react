@@ -39,6 +39,7 @@ import { airboatsBusinessInfo } from "business_info/genericInfo.js";
 // services
 import { popupManager } from "services/functions/popups/popupManager";
 import { isOrAfterDate } from "services/functions/scheduleThis";
+import { isRunning } from "services/functions/scheduleThis";
 
 // Snackbar
 import SnackbarContent from "components/Snackbar/SnackbarContent.js";
@@ -84,7 +85,7 @@ export default function Miccosukee(props) {
       <div>
         <AirboatsHeader />
         <ReactHelmetComponent url={window.location.pathname} />
-        {isOrAfterDate("January 1, 2022") ? null : (
+        {isRunning("December 21, 2021", "January 1, 2022") ? (
           <StandardAlert
             message={
               language ? (
@@ -108,7 +109,7 @@ export default function Miccosukee(props) {
             color="danger"
             icon={Warning}
           />
-        )}
+        ) : null}
         <Switch>
           <Route exact path={`${match.path}/`} component={Home} />
           <Route

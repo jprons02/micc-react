@@ -25,6 +25,9 @@ import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
 // Context
 import { useLanguage } from "contexts/languageContext.js";
 
+// Services
+import { isRunning } from "services/functions/scheduleThis";
+
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2, image3];
@@ -54,13 +57,32 @@ const Bingo = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Bingo</h2>
-              {
-                <h6 style={{ color: "red" }}>
+              {isRunning("December 21, 2021", "January 1, 2022") ? (
+                <h6
+                  style={{
+                    color: "green",
+                    display: "inline-block",
+                    marginTop: "-5px",
+                  }}
+                >
+                  {language
+                    ? "Don’t miss the Holiday Bingo Extravaganza, paying nearly $20,000 on Christmas Day and over $50,000 on New Year’s Eve!"
+                    : "¡No se pierda el Holiday Bingo Extravaganza, pagando casi $20,000 el día de Navidad y más de $50,000 la víspera de Año Nuevo!"}
+                </h6>
+              ) : null}
+              {isRunning("December 21, 2021", "December 25, 2021") ? (
+                <h6
+                  style={{
+                    color: "red",
+                    display: "inline-block",
+                    marginTop: "0px",
+                  }}
+                >
                   {language
                     ? "Bingo will be closed for operations on Christmas Eve, Friday, December 24. Wishing everyone a joyful holiday season!"
                     : "El Bingo estará cerrado para las operaciones la víspera de Navidad, el viernes, 24 de diciembre. ¡Les deseamos a todos una feliz temporada festiva!"}
                 </h6>
-              }
+              ) : null}
               <p>
                 {language
                   ? "A South Florida staple since 1990, Miccosukee Resort & Gaming’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance! With high payouts and plenty of rewards through our Miccosukee One Rewards Program, our High Stakes Bingo pays to play! Regardless of experience, it’s perfect for single players, couples and large groups."
@@ -137,3 +159,9 @@ const Bingo = () => {
 };
 
 export default Bingo;
+
+/*
+Don’t miss the Holiday Bingo Extravaganza, paying nearly $20,000 on Christmas Day and over $50,000 on New Year’s Eve!
+
+¡No se pierda el Holiday Bingo Extravaganza, pagando casi $20,000 el día de Navidad y más de $50,000 la víspera de Año Nuevo!
+*/

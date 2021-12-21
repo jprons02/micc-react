@@ -27,7 +27,8 @@ import { mrgHours } from "business_info/hours.js";
 
 // Services
 import { renderPoiHours } from "services/functions/renderPoiHours.js";
-import { isOrAfterDate } from "services/functions/scheduleThis";
+//import { isOrAfterDate } from "services/functions/scheduleThis";
+import { isRunning } from "services/functions/scheduleThis";
 
 // Context
 import { useLanguage } from "contexts/languageContext.js";
@@ -69,7 +70,7 @@ const CafeHammock = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Café Hammock</h2>
-              {isOrAfterDate("January 1, 2022") ? null : (
+              {isRunning("December 21, 2021", "January 1, 2022") ? (
                 <h6
                   style={{
                     color: "red",
@@ -81,7 +82,7 @@ const CafeHammock = () => {
                     ? "EXTENDED HOURS: Café Hammock will be open until 1 AM on New Year’s Eve, Friday, December 31. May the New Year bring you health, wealth and good times!"
                     : "HORARIO EXTENDIDO: Café Hammock estará abierto hasta la 1 AM en la víspera de Año Nuevo, el viernes, 31 de diciembre. ¡Que el Año Nuevo le traiga salud, riqueza y buenos momentos!"}
                 </h6>
-              )}
+              ) : null}
               <h6 style={{ color: "green", display: "inline-block" }}>
                 {language ? "Now Open " : "Ahora abierto "}
               </h6>
