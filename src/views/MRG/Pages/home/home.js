@@ -47,9 +47,14 @@ import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
 
 import cafeHammockVidImage from "assets/media/img/mrg/home/Cafe-Hammock-thubnail_1x.jpg";
 import cafeHammockVid from "assets/media/video/Cafe_Hammock_720p.mp4";
+import hotelVid from "assets/media/video/MRG_BookToday_720p.mov";
+import hotelImage from "assets/media/img/mrg/home/MRG_BookToday_image.jpg";
 
 // context
 import { useLanguage } from "contexts/languageContext.js";
+
+// services
+import { isRunning } from "services/functions/scheduleThis";
 
 const useStyles = makeStyles(styles);
 const useCardStyles = makeStyles(cardStyles);
@@ -61,24 +66,51 @@ const Home = (props) => {
   const cardClasses = useCardStyles();
   const modalClasses = useModalStyles();
 
-  const sliderContent = [
-    {
-      id: 1,
-      bgImage: cafeHammockVidImage,
-      bgVideo: cafeHammockVid,
-      gradient: ".5",
-      header: language
-        ? "CAFÉ HAMMOCK NOW OPEN!"
-        : "¡CAFÉ HAMMOCK AHORA ABIERTO!",
-      subHeader: language
-        ? "Enjoy casual dining with a sophisticated flair!"
-        : "¡Disfrute de una cena informal con un toque sofisticado!",
-      button: {
-        text: language ? "SEE DETAILS" : "MÁS DETALLES",
-        link: "/mrg/cafe-hammock",
-      },
-    },
-    /*
+  /**
+   *  HOTEL NOW OPEN! Welcome Back!
+      Stay, play and experience the Miccosukee Everglades.
+ 
+      HOTEL YA ABIERTO! ¡Bienvenidos!
+      Descanse, juegue y experimente los Everglades Miccosukee.
+   */
+
+  const sliderContent = isRunning("December 22, 2021")
+    ? [
+        {
+          id: 1,
+          bgImage: hotelImage,
+          bgVideo: hotelVid,
+          gradient: ".5",
+          header: language
+            ? "HOTEL NOW OPEN! Welcome Back!"
+            : "HOTEL YA ABIERTO! ¡Bienvenidos!",
+          subHeader: language
+            ? "Stay, play and experience the Miccosukee Everglades."
+            : "Descanse, juegue y experimente los Everglades Miccosukee.",
+          button: {
+            text: language ? "SEE DETAILS" : "MÁS DETALLES",
+            link: "/mrg/accommodations",
+          },
+        },
+      ]
+    : [
+        {
+          id: 1,
+          bgImage: cafeHammockVidImage,
+          bgVideo: cafeHammockVid,
+          gradient: ".5",
+          header: language
+            ? "CAFÉ HAMMOCK NOW OPEN!"
+            : "¡CAFÉ HAMMOCK AHORA ABIERTO!",
+          subHeader: language
+            ? "Enjoy casual dining with a sophisticated flair!"
+            : "¡Disfrute de una cena informal con un toque sofisticado!",
+          button: {
+            text: language ? "SEE DETAILS" : "MÁS DETALLES",
+            link: "/mrg/cafe-hammock",
+          },
+        },
+        /*
     {
       id: 2,
       bgImage: heroImg1,
@@ -92,7 +124,7 @@ const Home = (props) => {
       },
     },
     */
-    /*
+        /*
     {
       id: 2,
       bgImage: image2,
@@ -113,7 +145,7 @@ const Home = (props) => {
       subHeader: "",
     },
     */
-  ];
+      ];
 
   const cardContent = [
     {
