@@ -327,16 +327,19 @@ const MrgCovidInfo = (props) => {
         <Collapse in={mrg.hours}>
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {mrgHours.weekday.days(props.language)}: {mrgHours.weekday.open} –{" "}
-              {mrgHours.weekday.close}
+              {mrgHours.hours.days(props.language)}
+              {", "}
+              {mrgHours.hours.open === mrgHours.hours.close
+                ? props.language
+                  ? "24 hours"
+                  : "24 horas"
+                : `${mrgHours.hours.open} - ${mrgHours.hours.close}`}
             </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {mrgHours.weekday.details(props.language)}
-              </li>
-            </ul>
+            {/*<ul style={innerUlStyle}>
+              <li style={liStyle}>{mrgHours.hours.details(props.language)}</li>
+            </ul>*/}
           </ul>
-          <ul style={ulStyle}>
+          {/*<ul style={ulStyle}>
             <li style={liStyle}>
               {mrgHours.weekend.days(props.language)}: {mrgHours.weekend.open} –{" "}
               {mrgHours.weekend.close}
@@ -346,7 +349,7 @@ const MrgCovidInfo = (props) => {
                 {mrgHours.weekend.details(props.language)}
               </li>
             </ul>
-          </ul>
+          </ul>*/}
         </Collapse>
       </div>
       <div style={sectionStyle}>
@@ -372,11 +375,6 @@ const MrgCovidInfo = (props) => {
               {props.language
                 ? "All guests must have have a government issued photo ID."
                 : "Todos los clientes deben tener un documento de identidad con fotografía emitido por el gobierno."}
-            </li>
-            <li style={liStyle}>
-              {props.language
-                ? "There will be one designated entrance and one designated exit."
-                : "Encontrará designada una puerta para el ingreso y otra diferente para la salida."}
             </li>
             <li style={liStyle}>
               {props.language

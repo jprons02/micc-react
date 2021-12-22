@@ -83,15 +83,6 @@ const CafeHammock = () => {
                     : "HORARIO EXTENDIDO: Café Hammock estará abierto hasta la 1 AM en la víspera de Año Nuevo, el viernes, 31 de diciembre. ¡Que el Año Nuevo le traiga salud, riqueza y buenos momentos!"}
                 </h6>
               ) : null}
-              <h6 style={{ color: "green", display: "inline-block" }}>
-                {language ? "Now Open " : "Ahora abierto "}
-              </h6>
-              <p style={{ display: "inline-block" }}>
-                &nbsp;
-                {language
-                  ? "(Breakfast, Friday - Sunday only)"
-                  : "(Desayuno, viernes a domingo solamente)"}
-              </p>
               {renderPoiHours(mrgHours.poi.hammock, language)}
               <p>
                 {language

@@ -97,7 +97,7 @@ export const mrgStatus = {
     },
     {
       name: (language) => "Pool & Gym",
-      isOpen: false,
+      isOpen: true,
     },
     {
       name: (language) => "Teen Arcade",

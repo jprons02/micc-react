@@ -36,6 +36,16 @@ const getMinutes = (hours, minutes) => {
 // This is all rendered from renderPoiHours.js function
 
 export const mrgHours = {
+  hours: {
+    days: (language) =>
+      language ? "Seven days a week" : "Seite días a la semana",
+    open: `${getMinutes(0).combinedString}`,
+    close: `${getMinutes(0).combinedString}`,
+    details: (language) => (language ? "" : ""),
+    //SEVEN DAYS A WEEK, 24 HOURS
+    //SEITE DÍAS A LA SEMANA, 24 HORAS
+  },
+  /*
   weekday: {
     days: (language) => (language ? `Sunday – Thursday` : `domingo – jueves`),
     open: `${getMinutes(9).combinedString}`,
@@ -54,6 +64,7 @@ export const mrgHours = {
         ? "No entry will be allowed after 3:00 A.M."
         : "No se permitirá la entrada después de las 3 A.M.",
   },
+  */
   todaysHours: (dayOfWeek, language) => {
     if (dayOfWeek > 4) {
       // return weekend hours
@@ -116,7 +127,8 @@ export const mrgHours = {
     ],
     poolGym: [
       {
-        days: (language) => (language ? "" : ""),
+        days: (language) =>
+          language ? "Seven days a week" : "Seite días a la semana",
         open: `${getMinutes(7).combinedString}`,
         close: `${getMinutes(23).combinedString}`,
         details: (language) => (language ? "" : ""),
@@ -216,16 +228,9 @@ export const mrgHours = {
     sawgrassCafe: [
       {
         days: (language) =>
-          language ? "Sunday – Thursday" : "domingo – jueves",
+          language ? "Seven days a week" : "Seite días a la semana",
         open: `${getMinutes(11).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
-        details: (language) => (language ? "" : ""),
-      },
-      {
-        days: (language) =>
-          language ? "Friday & Saturday" : "viernes y sábados",
-        open: `${getMinutes(11).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
         details: (language) => (language ? "" : ""),
       },
     ],
@@ -246,13 +251,8 @@ export const mrgHours = {
     ],
     hammock: [
       {
-        days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(22).combinedString}`,
-      },
-      {
         days: (language) =>
-          language ? "Friday – Sunday" : "viernes – domingo",
+          language ? "Seven days a week" : "Seite días a la semana",
         open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(22).combinedString}`,
       },
