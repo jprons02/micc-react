@@ -65,7 +65,7 @@ const Accommodations = () => {
             <div className={classes.leftTextArea}>
               <h2>{language ? "Accommodations" : "Habitaciones"}</h2>
               {/*renderPoiHours(mrgHours.poi.accommodations, language)*/}
-              {isRunning("December 22, 2021") ? null : (
+              {isRunning([2021, 12, 22]) ? null : (
                 <h6>
                   {language
                     ? "Grand reopening of our hotel on Wednesday, December 22! Guests must be 18 and over to enter our premises. We are delighted to welcome you back! Questions? Please call 305-925-2555."

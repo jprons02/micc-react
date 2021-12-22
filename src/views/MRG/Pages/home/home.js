@@ -74,7 +74,7 @@ const Home = (props) => {
       Descanse, juegue y experimente los Everglades Miccosukee.
    */
 
-  const sliderContent = isRunning("December 22, 2021")
+  const sliderContent = isRunning([2021, 12, 22])
     ? [
         {
           id: 1,

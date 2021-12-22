@@ -91,7 +91,7 @@ export default function Miccosukee(props) {
         <div>
           <VillageHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning("December 21, 2021", "January 1, 2022") ? (
+          {isRunning([2021, 12, 21], [2022, 1, 1]) ? (
             <StandardAlert
               message={
                 language ? (

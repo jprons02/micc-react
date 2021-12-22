@@ -150,7 +150,7 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning("December 21, 2021", "December 26, 2021") ? (
+          {isRunning([2021, 12, 21], [2021, 12, 26]) ? (
             <StandardAlert
               message={
                 <div id="alert1a">
@@ -178,7 +178,7 @@ export default function Miccosukee(props) {
               icon="info_outline"
             />
           ) : null}
-          {isRunning("December 27, 2021", "January 2, 2022") ? (
+          {isRunning([2021, 12, 27], [2022, 1, 2]) ? (
             <StandardAlert
               message={
                 <div id="alert1b">

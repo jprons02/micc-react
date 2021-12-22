@@ -70,7 +70,7 @@ const CafeHammock = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Café Hammock</h2>
-              {isRunning("December 21, 2021", "January 1, 2022") ? (
+              {isRunning([2021, 12, 21], [2022, 1, 1]) ? (
                 <h6
                   style={{
                     color: "red",

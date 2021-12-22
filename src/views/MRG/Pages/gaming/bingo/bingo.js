@@ -57,7 +57,7 @@ const Bingo = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Bingo</h2>
-              {isRunning("December 21, 2021", "January 1, 2022") ? (
+              {isRunning([2021, 12, 21], [2022, 1, 1]) ? (
                 <h6
                   style={{
                     color: "green",
@@ -70,7 +70,7 @@ const Bingo = () => {
                     : "¡No se pierda el Holiday Bingo Extravaganza, pagando casi $20,000 el día de Navidad y más de $50,000 la víspera de Año Nuevo!"}
                 </h6>
               ) : null}
-              {isRunning("December 21, 2021", "December 25, 2021") ? (
+              {isRunning([2021, 12, 21], [2021, 12, 25]) ? (
                 <h6
                   style={{
                     color: "red",
