@@ -46,9 +46,7 @@ const GamingGolf = () => {
         usesRouter: true,
         link: `/mrg`,
       },
-      hours: language
-        ? `Today's Hours: ${mrgHours.todaysHours(dayOfWeek)}`
-        : `Horario de Hoy: ${mrgHours.todaysHours(dayOfWeek)}`,
+      hours: mrgHours.todaysHours(dayOfWeek, language),
       phone: mrgBusinessInfo.phone,
       address: mrgBusinessInfo.address,
     },
