@@ -25,7 +25,7 @@ export const isRunning = (start, stop) => {
     // If both start and end date parameters are provided:
     if (
       nowDate.getTime() >= startDate.getTime() &&
-      nowDate.getTime() <= endDate.getTime()
+      nowDate.getTime() < endDate.getTime()
     ) {
       return true;
     } else {
