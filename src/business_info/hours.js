@@ -66,6 +66,10 @@ export const mrgHours = {
   },
   */
   todaysHours: (dayOfWeek, language) => {
+    return language
+      ? "Seven days a week, 24 hours"
+      : "Seite días a la semana, 24 horas";
+    /*
     if (dayOfWeek > 4) {
       // return weekend hours
       return `${mrgHours.weekend.open} - ${mrgHours.weekend.close}`;
@@ -73,6 +77,7 @@ export const mrgHours = {
       // return weekday hours
       return `${mrgHours.weekday.open} - ${mrgHours.weekday.close}`;
     }
+    */
   },
   poi: {
     salon: [
