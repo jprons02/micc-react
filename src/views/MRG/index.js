@@ -156,19 +156,19 @@ export default function Miccosukee(props) {
                 <div id="alert1a">
                   {language ? (
                     <div>
-                      <b>
-                        Christmas Eve &amp; Christmas Day Hours: We will be open
-                        until 4 AM on Friday, December 24, and Saturday,
-                        December 25. Merry Christmas everyone!
-                      </b>
+                      <b>Now Open 24 hours!</b>
+                      <p>
+                        We will be open until 4 AM on Friday, December 24, and
+                        Saturday, December 25. Merry Christmas everyone!
+                      </p>
                     </div>
                   ) : (
                     <div>
-                      <b>
-                        Horario de Nochebuena y Día de Navidad: Abriremos hasta
-                        las 4 AM el viernes, 24 de diciembre y el sábado, 25 de
-                        diciembre. ¡Feliz Navidad a todos!
-                      </b>
+                      <b>¡Abierto 24 horas!</b>
+                      <p>
+                        Abriremos hasta las 4 AM el viernes, 24 de diciembre y
+                        el sábado, 25 de diciembre. ¡Feliz Navidad a todos!
+                      </p>
                     </div>
                   )}
                 </div>
@@ -178,25 +178,25 @@ export default function Miccosukee(props) {
               icon="info_outline"
             />
           ) : null}
-          {isRunning([2021, 12, 27], [2022, 1, 2]) ? (
+          {isRunning([2021, 12, 26], [2022, 1, 2]) ? (
             <StandardAlert
               message={
                 <div id="alert1b">
                   {language ? (
                     <div>
-                      <b>
-                        New Year's Eve &amp; New Year's Day Hours: We will be
-                        open until 4 AM on Friday, December 31, and Saturday,
-                        January 1, 2022. Cheers to the New Year!
-                      </b>
+                      <b>Now Open 24 hours!</b>
+                      <p>
+                        We will be open until 4 AM on Friday, December 31, and
+                        Saturday, January 1, 2022. Cheers to the New Year!
+                      </p>
                     </div>
                   ) : (
                     <div>
-                      <b>
-                        Horario de Víspera de Año Nuevo y Día de Año Nuevo:
+                      <b>¡Abierto 24 horas!</b>
+                      <p>
                         Abriremos hasta las 4 AM el viernes, 31 de diciembre y
                         el sábado, 1 de enero de 2022. ¡Salud por el Año Nuevo!
-                      </b>
+                      </p>
                     </div>
                   )}
                 </div>
