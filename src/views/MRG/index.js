@@ -150,7 +150,33 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning([2021, 12, 21], [2021, 12, 26]) ? (
+          <StandardAlert
+            message={
+              <div id="alert1a">
+                {language ? (
+                  <div>
+                    <b>
+                      Resort and slot games next to the resort are open 24/7.
+                      The rest of the gaming floor will remain open until 4 AM.
+                    </b>
+                  </div>
+                ) : (
+                  <div>
+                    <b>
+                      El Hotel y las máquinas de tragamonedas junto al hotel
+                      están abiertos las 24 horas, los 7 días de la semana. El
+                      resto de la sala de juegos permanecerá abierta hasta las 4
+                      AM.
+                    </b>
+                  </div>
+                )}
+              </div>
+            }
+            close
+            color="success"
+            icon="info_outline"
+          />
+          {/*isRunning([2021, 12, 21], [2021, 12, 26]) ? (
             <StandardAlert
               message={
                 <div id="alert1a">
@@ -177,18 +203,18 @@ export default function Miccosukee(props) {
               color="success"
               icon="info_outline"
             />
-          ) : null}
-          {isRunning([2021, 12, 26], [2022, 1, 2]) ? (
+          ) : null*/}
+          {/*isRunning([2021, 12, 26], [2022, 1, 2]) ? (
             <StandardAlert
               message={
                 <div id="alert1b">
                   {language ? (
                     <div>
                       <b>Now Open 24 hours!</b>
-                      <p>
+                      <b>
                         We will be open until 4 AM on Friday, December 31, and
                         Saturday, January 1, 2022. Cheers to the New Year!
-                      </p>
+                      </b>
                     </div>
                   ) : (
                     <div>
@@ -205,7 +231,7 @@ export default function Miccosukee(props) {
               color="success"
               icon="info_outline"
             />
-          ) : null}
+          ) : null*/}
           <StandardAlert
             message={
               <div id="alert2">
