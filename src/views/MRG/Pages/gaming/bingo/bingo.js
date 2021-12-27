@@ -66,8 +66,8 @@ const Bingo = () => {
                   }}
                 >
                   {language
-                    ? "Don’t miss the Holiday Bingo Extravaganza, paying nearly $20,000 on Christmas Day and over $50,000 on New Year’s Eve!"
-                    : "¡No se pierda el Holiday Bingo Extravaganza, pagando casi $20,000 el día de Navidad y más de $50,000 la víspera de Año Nuevo!"}
+                    ? "Don’t miss the Holiday Bingo Extravaganza, paying over $50,000 on New Year’s Eve!"
+                    : "No se pierdan el Holiday Bingo Extravaganza, ¡​pagando más de $50,000 la Víspera de Año Nuevo!"}
                 </h6>
               ) : null}
               {isRunning([2021, 12, 21], [2021, 12, 25]) ? (
