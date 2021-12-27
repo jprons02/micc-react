@@ -90,15 +90,15 @@ export default function Miccosukee(props) {
               language ? (
                 <div>
                   <b>
-                    Airboat Rides will be closed on Saturday, December 25 and
-                    Friday, December 31. Happy Holidays!
+                    Airboat Rides will be closed on Friday, December 31 and
+                    Saturday, January 1. Happy Holidays!
                   </b>
                 </div>
               ) : (
                 <div>
                   <b>
                     Los viajes en Airboats (hidrodeslizadores) estarán cerrados
-                    el sábado, 25 de diciembre y el viernes, 31 de diciembre.
+                    el viernes, 31 de diciembre y el sábado, 1 de enero.
                     ¡Felices Fiestas!
                   </b>
                 </div>

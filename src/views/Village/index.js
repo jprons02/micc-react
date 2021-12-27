@@ -98,16 +98,14 @@ export default function Miccosukee(props) {
                   <div>
                     <b>
                       The Miccosukee Indian Village &amp; Gift Shop will be
-                      closed on Saturday, December 25 and Friday, December 31.
-                      Happy Holidays!
+                      closed on Friday, December 31. Happy Holidays!
                     </b>
                   </div>
                 ) : (
                   <div>
                     <b>
                       El Miccosukee Indian Village y Gift Shop estarán cerrados
-                      el sábado, 25 de diciembre y el viernes, 31 de diciembre.
-                      ¡Felices Fiestas!
+                      el viernes, 31 de diciembre. ¡Felices Fiestas!
                     </b>
                   </div>
                 )
