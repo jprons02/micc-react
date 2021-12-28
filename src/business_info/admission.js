@@ -20,12 +20,12 @@ export const airboatsPricing = [
   {
     title: (language) => (language ? "Adult admission" : "Adultos"),
     detail: (language) => (language ? "12 years old and up" : "12 años y más"),
-    price: (language) => "$15",
+    price: (language) => "$20",
   },
   {
     title: (language) => (language ? "Child admission" : "Niños"),
     detail: (language) => (language ? "6 — 12 years old" : "6 – 12 años"),
-    price: (language) => "$8",
+    price: (language) => "$12",
   },
   {
     title: (language) => (language ? "Child admission" : "Niños"),
