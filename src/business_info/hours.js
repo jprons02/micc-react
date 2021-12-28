@@ -5,6 +5,7 @@
 // Use numbers only for open/close
 
 import React from "react";
+import { isRunning } from "services/functions/scheduleThis";
 
 const getMinutes = (hours, minutes) => {
   const h = hours * 60;
@@ -399,6 +400,40 @@ export const golfHours = [
   },
 ];
 
+export const airboatsHours = isRunning([2021, 12, 28], [2022, 1, 2])
+  ? [
+      {
+        days: (language) => (language ? `Monday – Sunday` : "jueves – domingo"),
+        open: `${getMinutes(9).combinedString}`,
+        close: `${getMinutes(17).combinedString}`,
+        todaysHours: (dayOfWeek, language) => {
+          //`Not Friday`,
+          if (dayOfWeek !== 4) {
+            return `${airboatsHours[0].open} - ${airboatsHours[0].close}`;
+          } else {
+            return language ? "Closed" : "Cerrado";
+          }
+        },
+      },
+    ]
+  : [
+      {
+        days: (language) =>
+          language ? `Thursday – Sunday` : "jueves – domingo",
+        open: `${getMinutes(9).combinedString}`,
+        close: `${getMinutes(17).combinedString}`,
+        todaysHours: (dayOfWeek, language) => {
+          //`Thursday – Sunday`,
+          if (dayOfWeek === 0 || dayOfWeek > 3) {
+            return `${airboatsHours[0].open} - ${airboatsHours[0].close}`;
+          } else {
+            return language ? "Closed" : "Cerrado";
+          }
+        },
+      },
+    ];
+
+/*
 export const airboatsHours = [
   {
     days: (language) => (language ? `Thursday – Sunday` : "jueves – domingo"),
@@ -414,3 +449,4 @@ export const airboatsHours = [
     },
   },
 ];
+*/

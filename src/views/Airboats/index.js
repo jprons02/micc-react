@@ -79,12 +79,21 @@ export default function Miccosukee(props) {
     setState(false);
   };
 
+  /*
+Week of December 27, 2021 - January 2, 2022 
+Monday-Thursday - Open
+Friday & Saturday- Closed  NEW YEAR’S EVE CLOSED (FRIDAY ONLY)
+Sunday- Open SATURDAY AND SUNDAY OPEN
+Closed on New Year's Eve.
+*/
+
   return (
     <ThemeProvider theme={theme("airboats")}>
       <div>
         <AirboatsHeader />
         <ReactHelmetComponent url={window.location.pathname} />
-        {isRunning([2021, 12, 21], [2022, 1, 1]) ? (
+        {isRunning([2021, 12, 21], [2022, 1, 2]) ? (
+          /*
           <StandardAlert
             message={
               language ? (
@@ -106,6 +115,45 @@ export default function Miccosukee(props) {
             close
             color="danger"
             icon={Warning}
+          />
+          */
+          <StandardAlert
+            message={
+              language ? (
+                <div>
+                  <b>Week of December 27, 2021 - January 2, 2022:</b>
+                  <p>
+                    AIRBOATS - UPDATED HOURS: 9 AM - 5 PM
+                    <br />
+                    Monday-Thursday- Open
+                    <br />
+                    Friday (New Year's Eve)- Closed
+                    <br />
+                    Saturday &amp; Sunday- Open
+                    <br />
+                  </p>
+                </div>
+              ) : (
+                <div>
+                  <b>
+                    Semana del 27 de diciembre de 2021 - 2 de enero de 2022:
+                  </b>
+                  <p>
+                    AIRBOATS - HORARIO ACTUALIZADO: 9 AM - 5 PM
+                    <br />
+                    lunes-jueves - Abierto
+                    <br />
+                    viernes (Víspera de Año Nuevo)- Cerrado
+                    <br />
+                    sábado y domingo- Abierto
+                    <br />
+                  </p>
+                </div>
+              )
+            }
+            close
+            color="danger"
+            //icon={Warning}
           />
         ) : null}
         <Switch>
