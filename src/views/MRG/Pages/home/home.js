@@ -259,8 +259,8 @@ const Home = (props) => {
             variant="h3"
           >
             {language
-              ? "Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium."
-              : "Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida."}
+              ? "Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium"
+              : "Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida"}
           </Typography>
           <hr className={classes.hr} />
         </div>

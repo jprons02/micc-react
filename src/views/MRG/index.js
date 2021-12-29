@@ -156,8 +156,8 @@ export default function Miccosukee(props) {
                 {language ? (
                   <div>
                     <b>
-                      Resort and slot games next to the resort are open 24/7.
-                      The rest of the gaming floor will remain open until 4 AM.
+                      Resort &amp; resort-side slots open 24/7. The rest of the
+                      gaming floor will remain open until 4 AM.
                     </b>
                   </div>
                 ) : (
