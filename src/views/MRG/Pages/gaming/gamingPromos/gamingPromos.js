@@ -101,15 +101,15 @@ const GamingPromos = () => {
 
   const getMonth = () => {
     return language
-      ? `${"December".toUpperCase()} PROMOTIONS`
-      : `PROMOCIONES DE ${"diciembre".toUpperCase()}`;
+      ? `${"January".toUpperCase()} PROMOTIONS`
+      : `PROMOCIONES DE ${"enero".toUpperCase()}`;
   };
 
   const getCalendarPdf = () => {
     const englishCalendar =
-      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/december_en.pdf";
+      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/january_en.pdf";
     const spanishCalendar =
-      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/december_sp.pdf";
+      "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/january_sp.pdf";
 
     if (language) {
       return englishCalendar;
