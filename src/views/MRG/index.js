@@ -134,16 +134,6 @@ export default function Miccosukee(props) {
     setState(false);
   };
 
-  /*
-    xmas:
-    NOTICE: Christmas Eve & Christmas Day Hours: We will be open until 4 AM on Friday, December 24, and Saturday, December 25. Merry Christmas everyone!
-    AVISO: Horario de Nochebuena y Día de Navidad: Abriremos hasta las 4 AM el viernes, 24 de diciembre y el sábado, 25 de diciembre. ¡Feliz Navidad a todos!
-
-    new year:
-    NOTICE: New Year's Eve & New Year's Day Hours: We will be open until 4 AM on Friday, December 31, and Saturday, January 1, 2022. Cheers to the New Year!
-    AVISO: Horario de Víspera de Año Nuevo y Día de Año Nuevo: Abriremos hasta las 4 AM el viernes, 31 de diciembre y el sábado, 1 de enero de 2022. ¡Salud por el Año Nuevo!
-  */
-
   return (
     <ThemeProvider theme={theme("mrg")}>
       <BookRoomProvider>
@@ -159,6 +149,7 @@ export default function Miccosukee(props) {
                       Resort &amp; resort-side slots open 24/7. The rest of the
                       gaming floor will remain open until 4 AM.
                     </b>
+                    <p>Guests must be 18 or older.</p>
                   </div>
                 ) : (
                   <div>
@@ -168,70 +159,15 @@ export default function Miccosukee(props) {
                       resto de la sala de juegos permanecerá abierta hasta las 4
                       AM.
                     </b>
+                    <p>Deben tener 18 años o más para entrar.</p>
                   </div>
                 )}
               </div>
             }
             close
             color="success"
-            icon="info_outline"
+            //icon="info_outline"
           />
-          {/*isRunning([2021, 12, 21], [2021, 12, 26]) ? (
-            <StandardAlert
-              message={
-                <div id="alert1a">
-                  {language ? (
-                    <div>
-                      <b>Now Open 24 hours!</b>
-                      <p>
-                        We will be open until 4 AM on Friday, December 24, and
-                        Saturday, December 25. Merry Christmas everyone!
-                      </p>
-                    </div>
-                  ) : (
-                    <div>
-                      <b>¡Abierto 24 horas!</b>
-                      <p>
-                        Abriremos hasta las 4 AM el viernes, 24 de diciembre y
-                        el sábado, 25 de diciembre. ¡Feliz Navidad a todos!
-                      </p>
-                    </div>
-                  )}
-                </div>
-              }
-              close
-              color="success"
-              icon="info_outline"
-            />
-          ) : null*/}
-          {/*isRunning([2021, 12, 26], [2022, 1, 2]) ? (
-            <StandardAlert
-              message={
-                <div id="alert1b">
-                  {language ? (
-                    <div>
-                      <b>Now Open 24 hours!</b>
-                      <b>
-                        We will be open until 4 AM on Friday, December 31, and
-                        Saturday, January 1, 2022. Cheers to the New Year!
-                      </b>
-                    </div>
-                  ) : (
-                    <div>
-                      <b>¡Abierto 24 horas!</b>
-                      <p>
-                        Abriremos hasta las 4 AM el viernes, 31 de diciembre y
-                        el sábado, 1 de enero de 2022. ¡Salud por el Año Nuevo!
-                      </p>
-                    </div>
-                  )}
-                </div>
-              }
-              close
-              color="success"
-              icon="info_outline"
-            />
-          ) : null*/}
           <StandardAlert
             message={
               <div id="alert2">
@@ -242,11 +178,14 @@ export default function Miccosukee(props) {
                         style={{ color: "white", fontWeight: "800" }}
                         to={`${match.path}/covid-19`}
                       >
-                        Masks are optional for vaccinated patrons. Masks are
-                        mandatory for unvaccinated patrons. Click HERE for the
-                        Miccosukee Resort &amp; Gaming COVID-19 guidelines.
+                        Click HERE for the Miccosukee Resort &amp; Gaming
+                        COVID-19 guidelines.
                       </Link>
                     </b>
+                    <p>
+                      Masks are optional for vaccinated patrons. Masks are
+                      mandatory for unvaccinated patrons.
+                    </p>
                   </div>
                 ) : (
                   <div>
@@ -255,20 +194,22 @@ export default function Miccosukee(props) {
                         style={{ color: "white", fontWeight: "800" }}
                         to={`${match.path}/covid-19`}
                       >
-                        El uso de mascarillas es opcional para los clientes
-                        vacunados. El uso de mascarillas es obligatorio para los
-                        clientes no vacunados. Oprima AQUÍ para las últimas
-                        noticias de COVID-19 relacionadas a nuestros
-                        establecimientos.
+                        Oprima AQUÍ para las últimas noticias de COVID-19
+                        relacionadas a nuestros establecimientos.
                       </Link>
                     </b>
+                    <p>
+                      El uso de mascarillas es opcional para los clientes
+                      vacunados. El uso de mascarillas es obligatorio para los
+                      clientes no vacunados.
+                    </p>
                   </div>
                 )}
               </div>
             }
             close
             color="info"
-            icon="info_outline"
+            //icon="info_outline"
           />
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
@@ -300,6 +241,12 @@ export default function Miccosukee(props) {
             />
             <Route exact path={`${match.path}/bingo`} component={Bingo} />
             <Route exact path={`${match.path}/poker`} component={Poker} />
+            {/**
+              <Route
+                path={`${match.path}/promotions/:month`}
+                component={GamingPromos}
+              />
+             */}
             <Route
               exact
               path={`${match.path}/promotions`}
@@ -385,27 +332,9 @@ export default function Miccosukee(props) {
   );
 }
 
-/*
-OLD ALERT
-<div id="alert1">
-  {language ? (
-    <div>
-      <b>
-        Grand reopening of our hotel on Wednesday, December 22!
-      </b>
-      <p>Guests must be 18 and over to enter our premises.</p>
-    </div>
-  ) : (
-    <div>
-      <b>
-        ¡Gran reapertura de nuestro hotel el miércoles, 22 de
-        diciembre!
-      </b>
-      <p>
-        Los huéspedes deben tener 18 años o más para ingresar a
-        nuestras instalaciones.
-      </p>
-    </div>
-  )}
-</div>
-*/
+/**
+ * Idea for promotion month specific urls...
+ * /win take you to current month
+ * /promotions take you to current month
+ * /promotions#december take you to specified month but to prevent error, if image doesnt exist use current month
+ */

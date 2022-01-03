@@ -29,7 +29,10 @@ import styles from "assets/jss/material-kit-react/views/mrg/promotionCardStyles.
 import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
 
 // Card Content
-import { cardContent } from "views/MRG/Pages/gaming/gamingPromos/cardContent";
+import {
+  cardContent,
+  futureCardContent,
+} from "views/MRG/Pages/gaming/gamingPromos/cardContent";
 import { standardLinkColor } from "themes/colors.js";
 
 import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
@@ -49,7 +52,7 @@ const sliderContent = [
   },
 ];
 
-const GamingPromos = () => {
+const GamingPromos = (props) => {
   const language = useLanguage();
   const classes = useStyles();
   const toggleLanguage = useLanguageUpdate();
@@ -98,6 +101,37 @@ const GamingPromos = () => {
       }
     });
   }, []);
+
+  const getContent = () => {
+    console.log("params: ", props.match.params.month);
+    const monthNames = [
+      "january",
+      "february",
+      "march",
+      "april",
+      "may",
+      "june",
+      "july",
+      "august",
+      "september",
+      "october",
+      "november",
+      "december",
+    ];
+    const d = new Date();
+    const futureMonthName =
+      monthNames[d.getMonth() + 1 === 12 ? d.getMonth() - 11 : d.getMonth + 1];
+    //if month is future by 1 and has images or some OK flag then return future content, else return current content.
+    if (props.match.params.month === futureMonthName) {
+      console.log("futureMonthName: ", futureMonthName);
+      //return futureCardContent;
+    } else {
+      return cardContent;
+    }
+
+    //WHAT HAPPENS WHEN FUTURE BECOMES CURRENT...
+  };
+  //getContent();
 
   const getMonth = () => {
     return language
