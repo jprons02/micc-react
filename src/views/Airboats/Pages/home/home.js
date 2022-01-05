@@ -85,6 +85,11 @@ const Home = () => {
         >
           <div style={{ margin: "-30px 0 30px 0" }}>
             {renderPoiHours(airboatsHours, language)}
+            <h6 style={{ marginTop: "-8px" }}>
+              {language
+                ? "Walk-ins welcome | Pay on Arrival (cash or credit card)"
+                : "Bienvenidos sin cita previa | Pague al llegar (efectivo o tarjeta de crédito)"}
+            </h6>
           </div>
           <Details />
         </div>

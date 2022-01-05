@@ -126,10 +126,17 @@ const GamingPromos = (props) => {
       console.log("futureMonthName: ", futureMonthName);
       //return futureCardContent;
     } else {
-      return cardContent;
+      console.log(monthNames[d.getMonth()]);
     }
 
+    // if prop and d.getmonth() is the same...
+
     //WHAT HAPPENS WHEN FUTURE BECOMES CURRENT...
+
+    // {month: january, data: []}
+    // if prop exists...
+    // if futureCardContent.month === props.match.params.month return futureCardContent.data
+    // else return cardContent
   };
   //getContent();
 

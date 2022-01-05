@@ -254,6 +254,11 @@ export default function Miccosukee(props) {
             />
             <Route
               exact
+              path={`${match.path}/promotions/:month`}
+              component={GamingPromos}
+            />
+            <Route
+              exact
               path={`${match.path}/promotions/es`}
               component={GamingPromos}
             />
