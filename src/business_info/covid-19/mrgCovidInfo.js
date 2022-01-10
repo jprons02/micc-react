@@ -428,8 +428,8 @@ const MrgCovidInfo = (props) => {
               </li>
               <li style={liStyle}>
                 {props.language
-                  ? "No RV overnight parking is allowed, and all RVs must vacate the premises by 2 AM. Failure to do so will result in towing."
-                  : "No se permite que los RVs permanezcan estacionados durante la noche, y todos los RVs deben desocupar el local a las 2 AM. No hacerlo resultará en un remolque."}
+                  ? "RV overnight parking is permitted."
+                  : "Se permite el estacionamiento nocturno de RVs."}
               </li>
               <li style={liStyle}>
                 {props.language
