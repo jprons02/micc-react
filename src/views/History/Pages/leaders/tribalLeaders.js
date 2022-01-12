@@ -27,40 +27,6 @@ import { SettingsInputAntennaTwoTone } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
-/*
-William J. Osceola, Secretary
-
-Talbert Cypress, Chairman
-*/
-
-const imageWithCaptions = [
-  {
-    src: chairman,
-    caption: "Talbert Cypress, Chairman",
-    alt: "Talbert Cypress, Chairman",
-  },
-  {
-    src: asstChairman,
-    caption: "Lucas K. Osceola, Assistant Chairman",
-    alt: "Lucas K. Osceola, Assistant Chairman",
-  },
-  {
-    src: treasurer,
-    caption: "Kenneth H. Cypress, Treasurer",
-    alt: "Kenneth H. Cypress, Treasurer",
-  },
-  {
-    src: secretary,
-    caption: "William J. Osceola, Secretary",
-    alt: "William J. Osceola, Secretary",
-  },
-  {
-    src: lawmaker,
-    caption: "Petties Osceola, Jr., Lawmaker",
-    alt: "Petties Osceola, Jr., Lawmaker",
-  },
-];
-
 const sliderContent = [
   {
     id: 1,
@@ -73,6 +39,36 @@ const sliderContent = [
 const TribalLeaders = () => {
   const language = useLanguage();
   const classes = useStyles();
+
+  const imageWithCaptions = [
+    {
+      src: chairman,
+      caption: `Talbert Cypress, ${language ? "Chairman" : "Presidente"}`,
+      alt: "Talbert Cypress, Chairman",
+    },
+    {
+      src: asstChairman,
+      caption: `Lucas K. Osceola, ${
+        language ? "Assistant Chairman" : "Asistente del Presidente"
+      }`,
+      alt: "Lucas K. Osceola, Assistant Chairman",
+    },
+    {
+      src: treasurer,
+      caption: `Kenneth H. Cypress, ${language ? "Treasurer" : "Tesorero"}`,
+      alt: "Kenneth H. Cypress, Treasurer",
+    },
+    {
+      src: secretary,
+      caption: `William J. Osceola, ${language ? "Secretary" : "Secretario"}`,
+      alt: "William J. Osceola, Secretary",
+    },
+    {
+      src: lawmaker,
+      caption: `Petties Osceola, Jr., ${language ? "Lawmaker" : "Legislador"}`,
+      alt: "Petties Osceola, Jr., Lawmaker",
+    },
+  ];
 
   const [activeCouncilman, setActiveCouncilman] = useState(0);
 
