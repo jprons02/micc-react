@@ -241,12 +241,6 @@ export default function Miccosukee(props) {
             />
             <Route exact path={`${match.path}/bingo`} component={Bingo} />
             <Route exact path={`${match.path}/poker`} component={Poker} />
-            {/**
-              <Route
-                path={`${match.path}/promotions/:month`}
-                component={GamingPromos}
-              />
-             */}
             <Route
               exact
               path={`${match.path}/promotions`}

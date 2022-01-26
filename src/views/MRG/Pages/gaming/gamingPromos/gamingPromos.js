@@ -306,8 +306,6 @@ const GamingPromos = (props) => {
 
   const [showModal, setShowModal] = useState(false);
   const [selectedPromo, setSelectedPromo] = useState({});
-  const [month, setMonth] = useState(currentMonth);
-
   const [popupState, setPopupState] = useContext(PopupContext);
 
   useEffect(() => {
@@ -327,6 +325,10 @@ const GamingPromos = (props) => {
       }
     });
   }, []);
+
+  const month = props.match.params.month
+    ? props.match.params.month
+    : currentMonth;
 
   const monthContent = content(language, month);
 

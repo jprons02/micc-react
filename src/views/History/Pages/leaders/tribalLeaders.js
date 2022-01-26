@@ -564,23 +564,3 @@ const TribalLeaders = () => {
 };
 
 export default TribalLeaders;
-
-/* 
-
-Assistant Chairman Lucas K. Osceola:
-
-<p>Lucas K. Osceola began his first full term as Assistant Chairman of the Miccosukee Business Council in 2021. With a vibrant personality and playful sense of humor, he is determined to honor and preserve the Tribe’s traditional values while keeping pace with the modern world. “Our forefathers fought hard to be here in this land. We must uphold this tradition so we can be here for future generations to come”, he expressed with conviction, feeling proud about leading his people on a continuous path towards progress.</p>
-<p>As Assistant Chairman, he performs the duties of the Chairman in his absence, assumes his powers if the position becomes vacant, and carries out administrative functions delegated to him by the leader of the Business Council. His main focus is to listen patiently to his community to better understand their needs.</p>
-<p>He is Panther Clan and grew up in the Reservation, later receiving a scholarship from the Miccosukee Tribe to attend Fisher College in Boston, Massachusetts, where he played baseball. Having completed his studies, he returned to Miami to work for Miccosukee Resort & Gaming and pursue a career in agriculture.</p>
-<p>His plans while in office include starting a new housing project, finishing the construction of the medical building, and increasing the quality of life for his community. “Hopefully, my children and their children will have a place to call home”, he said thoughtfully. Hard work and dedication will help him achieve this goal.</p>
-
-
-
-Asistente del Presidente Lucas K. Osceola:
-
-<p>Lucas K. Osceola comenzó su primer mandato completo como Asistente del Presidente del Consejo General (Empresarial) de la Tribu Miccosukee en 2021. Con una personalidad vibrante y un sentido del humor juguetón, está decidido a honrar y preservar los valores tradicionales de la Tribu mientras se mantiene al día con el mundo moderno. “Nuestros antepasados lucharon duro para estar aquí en esta tierra. Debemos mantener esta tradición para estar aquí para las futuras generaciones”, expresó con convicción, sintiéndose orgulloso de llevar a su pueblo por un camino continuo hacia el progreso.</p>
-<p>Como Asistente del Presidente, ejerce las funciones del Presidente en su ausencia, asume sus poderes en caso de vacancia del cargo y cumple las funciones administrativas que le delegue el líder del Consejo Empresarial. Su enfoque principal es escuchar pacientemente a su comunidad para comprender mejor sus necesidades.</p>
-<p>Él es Panther Clan y creció en la Reserva, luego recibió una beca de la Tribu Miccosukee para asistir a Fisher College en Boston, Massachusetts, donde jugó béisbol. Habiendo completado sus estudios, regresó a Miami para trabajar en Miccosukee Resort & Gaming y seguir una carrera en agricultura.</p>
-<p>Sus planes mientras esté en el cargo incluyen comenzar un nuevo proyecto de vivienda, terminar la construcción del edificio médico y aumentar la calidad de vida de su comunidad. “Con suerte, mis hijos y sus hijos tendrán un lugar al que llamar hogar”, dijo pensativo. El trabajo duro y la dedicación lo ayudarán a lograr este objetivo.</p>
-
-*/
