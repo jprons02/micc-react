@@ -90,6 +90,50 @@ export const ourLittleShackMenu = [
 
 // Sawgrass Cafe
 export const sawgrassCafeMenu = [
+  /*
+  {
+    name: "Breakfast",
+    subMenu: [
+      {
+        name:
+          "Omelette Combo, includes: two eggs any style (fried or scrambled), two proteins (sausage, bacon, ham), breakfast potatoes, toast and one american coffee",
+        items: [
+          { name: "Veggie Omelette Combo", price: "$8.00" },
+          { name: "Ham & Cheese Omelette Combo", price: "$8.00" },
+          { name: "All Meat Omelette Combo", price: "$8.00" },
+        ],
+      },
+
+      {
+        name: "Sides",
+        items: [
+          { name: "Oatmeal (6 oz.)", price: "$2.00" },
+          { name: "French Fries (4 oz.)", price: "$1.75" },
+          { name: "Steak Ham (4 oz.)", price: "$3.00" },
+          { name: "Sausage (2 pc.)", price: "$1.50" },
+          { name: "Hash Brown (2 pc.)", price: "$1.50" },
+          { name: "Home Potatoes (4 oz.)", price: "$1.75" },
+          { name: "Bacon (4 pc.)", price: "$3.00" },
+          { name: "Two eggs any style (fried or scrambled)", price: "$1.75" },
+        ],
+      },
+      {
+        name: "Extras",
+        items: [
+          { name: "Egg White", price: "$2.00" },
+          {
+            name: "Choice of American, Mozzarella, Cheddar or Swiss cheese",
+            price: "$1.60",
+          },
+          { name: "Choice of Ham, Bacon or Sausage", price: "$1.90" },
+          { name: "Onions, Peppers, Tomatoes or Mushrooms", price: "$1.35" },
+          { name: "Toast", price: "$1.84" },
+          { name: "Cuban Toast", price: "$2.49" },
+        ],
+      },
+    ],
+  },
+  */
   {
     name: "Drinks",
     subMenu: [

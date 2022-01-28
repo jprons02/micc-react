@@ -86,8 +86,8 @@ const CafeHammock = () => {
               {renderPoiHours(mrgHours.poi.hammock, language)}
               <p>
                 {language
-                  ? "Enjoy casual dining with a sophisticated flair. Café Hammock serves up breakfast, lunch & dinner favorites, right in the middle of the gaming action. Affordable prices, tasty dishes and a relaxed ambiance are all on the menu, so stop by and enjoy a delicious meal before or after you game with us."
-                  : "Disfrute de una cena informal con un toque sofisticado. Café Hammock sirve los favoritos de desayuno, almuerzo y cena, justo en medio de la acción del juego. Precios razonables, platos sabrosos y un ambiente relajado están en el menú, así que visítenos y disfrute de una deliciosa comida antes o después de pasar a nuestra sala de juegos."}
+                  ? "Enjoy casual dining with a sophisticated flair. Café Hammock serves up lunch & dinner favorites, right in the middle of the gaming action. Affordable prices, tasty dishes and a relaxed ambiance are all on the menu, so stop by and enjoy a delicious meal before or after you game with us."
+                  : "Disfrute de una cena informal con un toque sofisticado. Café Hammock sirve los favoritos de almuerzo y cena, justo en medio de la acción del juego. Precios razonables, platos sabrosos y un ambiente relajado están en el menú, así que visítenos y disfrute de una deliciosa comida antes o después de pasar a nuestra sala de juegos."}
               </p>
               <Button
                 href="https://mapa-media.s3.amazonaws.com/website/CafeHammock_Menu_Web_2.pdf"

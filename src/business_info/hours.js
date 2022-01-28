@@ -239,6 +239,22 @@ export const mrgHours = {
         close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? "" : ""),
       },
+      /* NEW HOURS START 1/31
+      {
+        days: (language) =>
+          language ? "Sunday - Thursday" : "domingo - jueves",
+        open: `${getMinutes(9).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      {
+        days: (language) =>
+          language ? "Friday & Saturday" : "viernes y sábado",
+        open: `${getMinutes(9).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? "" : ""),
+      },
+      */
     ],
     deli: [
       {
@@ -258,24 +274,18 @@ export const mrgHours = {
     hammock: [
       {
         days: (language) =>
-          language ? "Seven days a week" : "Seite días a la semana",
-        open: `${getMinutes(9).combinedString}`,
+          language
+            ? "Wednesday, Thursday & Sunday"
+            : "miércoles, jueves y domingo",
+        open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(22).combinedString}`,
       },
-      /*
       {
         days: (language) =>
-          language ? "Sunday – Thursday" : "domingo – jueves",
-        open: `${getMinutes(11).combinedString}`,
+          language ? "Friday & Saturday" : "viernes y sábado",
+        open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
-      {
-        days: (language) =>
-          language ? "Friday & Saturday" : "viernes & sábado",
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(2).combinedString}`,
-      },
-      */
     ],
     cypressLounge: [
       {
