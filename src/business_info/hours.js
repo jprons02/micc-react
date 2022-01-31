@@ -232,6 +232,7 @@ export const mrgHours = {
       */
     ],
     sawgrassCafe: [
+      /*
       {
         days: (language) =>
           language ? "Seven days a week" : "Seite días a la semana",
@@ -239,7 +240,7 @@ export const mrgHours = {
         close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? "" : ""),
       },
-      /* NEW HOURS START 1/31
+      */
       {
         days: (language) =>
           language ? "Sunday - Thursday" : "domingo - jueves",
@@ -254,7 +255,6 @@ export const mrgHours = {
         close: `${getMinutes(1).combinedString}`,
         details: (language) => (language ? "" : ""),
       },
-      */
     ],
     deli: [
       {

@@ -56,12 +56,6 @@ const CafeHammock = () => {
   const language = useLanguage();
   const classes = useStyles();
 
-  /*
-  EXTENDED HOURS: Café Hammock will be open until 1 AM on New Year’s Eve, Friday, December 31. May the New Year bring you health, wealth and good times!
-
-  HORARIO EXTENDIDO: Café Hammock estará abierto hasta la 1 AM en la víspera de Año Nuevo, el viernes, 31 de diciembre. ¡Que el Año Nuevo le traiga salud, riqueza y buenos momentos!
-  */
-
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />

@@ -90,7 +90,6 @@ export const ourLittleShackMenu = [
 
 // Sawgrass Cafe
 export const sawgrassCafeMenu = [
-  /*
   {
     name: "Breakfast",
     subMenu: [
@@ -133,7 +132,6 @@ export const sawgrassCafeMenu = [
       },
     ],
   },
-  */
   {
     name: "Drinks",
     subMenu: [
