@@ -3,7 +3,7 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
-import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_January.jpg";
+import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_February.jpeg";
 import promoImage1 from "assets/media/img/popups/oxford_luggage.jpg";
 import hubPopup from "assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg";
 import jobFair from "assets/media/img/popups/JOBFair2021_WebSlider.jpg";
@@ -78,14 +78,14 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: "22",
-      month: "January",
-      day: "15",
+      month: "February",
+      day: "1",
       time: "",
     },
     end: {
       year: "22",
-      month: "January",
-      day: "31",
+      month: "February",
+      day: "15",
       time: "",
     },
   }),
