@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { Link, withRouter, useRouteMatch } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, withRouter, useRouteMatch } from 'react-router-dom';
 
-import { eventbriteIDs } from "assets/data/events/eventbriteIDs";
+import { eventbriteIDs } from 'assets/data/events/eventbriteIDs';
 
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 
 // @material-ui/core components
-import Divider from "@material-ui/core/Divider";
-import { makeStyles } from "@material-ui/core/styles";
+import Divider from '@material-ui/core/Divider';
+import { makeStyles } from '@material-ui/core/styles';
 
 // Styles
-import styles from "assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js";
-import { events } from "assets/data/events/eventList.js";
+import styles from 'assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js';
+import { events } from 'assets/data/events/eventList.js';
 
 // Custom Components
-import Badge from "components/Badge/Badge.js";
+import Badge from 'components/Badge/Badge.js';
 
 // @material-ui/icons
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 // Core components
-import Button from "components/CustomButtons/Button.js";
+import Button from 'components/CustomButtons/Button.js';
 
 // Custom Functions
-import { setEstTime } from "services/functions/setEstTime.js";
-import { urlify } from "services/functions/urlify.js";
+import { setEstTime } from 'services/functions/setEstTime.js';
+import { urlify } from 'services/functions/urlify.js';
 
 // Colors
-import { standardLinkColor, errorColor } from "themes/colors.js";
+import { standardLinkColor, errorColor } from 'themes/colors.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext";
+import { useLanguage } from 'contexts/languageContext';
 
 const useStyles = makeStyles(styles);
 
@@ -39,7 +39,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   const language = useLanguage();
   const classes = useStyles();
 
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState('All');
   const [defaultUpcommingText, setDefaultUpcommingText] = useState(false);
 
   let match = useRouteMatch();
@@ -48,11 +48,12 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     // Set the default category depending on url.
     // ex) if url === mrg/events, category default is "Resort & Gaming"
     switch (history.location.pathname) {
-      case "/mrg/events":
-        setCategory("Resort & Gaming");
+      case '/mrg/events':
+        //setCategory('Resort & Gaming');
+        setCategory('All');
         break;
-      case "/golf/events":
-        setCategory("Golf & Country Club");
+      case '/golf/events':
+        setCategory('Golf & Country Club');
         break;
     }
   }, []);
@@ -60,8 +61,8 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   useEffect(() => {
     // When category changes, insert default upcomming text if needed.
     const renderUpcommingDefault = () => {
-      if (document.getElementById("upcomming")) {
-        if (!document.getElementById("upcomming").innerText) {
+      if (document.getElementById('upcomming')) {
+        if (!document.getElementById('upcomming').innerText) {
           setDefaultUpcommingText(true);
         } else {
           setDefaultUpcommingText(false);
@@ -74,13 +75,13 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   // Eventbrite - create widget for each id
   useEffect(() => {
     events(language).map((event) => {
-      if (event.buttons) {
+      if (event.eventbriteButton) {
         var exampleCallbackEvents = function () {
-          console.log("Order complete!");
+          console.log('Order complete!');
         };
 
         window.EBWidgets.createWidget({
-          widgetType: "checkout",
+          widgetType: 'checkout',
           eventId: event.buttons[0].eventbrite.eventId,
           modal: true,
           modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}events`,
@@ -103,7 +104,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   const currentDateObj = new Date(d.getFullYear(), d.getMonth(), d.getDate());
 
   const isUpcomming = (event) => {
-    const split = event.endDate.split("/");
+    const split = event.endDate.split('/');
     const month = parseInt(split[0] - 1);
     const day = parseInt(split[1]);
     const year = parseInt(split[2]);
@@ -120,25 +121,25 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   const renderBadges = () => {
     const selectedStyle = {
       backgroundColor: badgeColor ? badgeColor : errorColor,
-      color: "white",
-      cursor: "pointer",
-      margin: "2px",
+      color: 'white',
+      cursor: 'pointer',
+      margin: '2px',
     };
     const defaultStyle = {
-      backgroundColor: "transparent",
+      backgroundColor: 'transparent',
       color: badgeColor ? badgeColor : errorColor,
-      cursor: "pointer",
-      margin: "2px",
+      cursor: 'pointer',
+      margin: '2px',
     };
 
     return (
-      <div style={{ marginTop: "20px" }}>
+      <div style={{ marginTop: '20px' }}>
         <Badge
-          styleProp={category === "All" ? selectedStyle : defaultStyle}
+          styleProp={category === 'All' ? selectedStyle : defaultStyle}
           color="info"
-          onClick={() => handleBadgeClick("All")}
+          onClick={() => handleBadgeClick('All')}
         >
-          {language ? "ALL EVENTS" : "TODOS LOS EVENTOS"}
+          {language ? 'ALL EVENTS' : 'TODOS LOS EVENTOS'}
         </Badge>
         {events(language).map((event) => {
           if (event.category) {
@@ -163,16 +164,16 @@ const Events = ({ history, badgeColor, entityMargin }) => {
 
   const renderTitle = (title, startDate, type, link) => {
     const url = `${match.path}/${urlify(title)}${startDate
-      .split("/")
-      .join("")}`;
+      .split('/')
+      .join('')}`;
 
-    if (type === "standard") {
+    if (type === 'standard') {
       return (
         <a onClick={() => handleClick(url)}>
           <h4
             style={{
-              fontWeight: "400",
-              cursor: "pointer",
+              fontWeight: '400',
+              cursor: 'pointer',
               color: standardLinkColor.color,
             }}
           >
@@ -182,10 +183,10 @@ const Events = ({ history, badgeColor, entityMargin }) => {
       );
     }
 
-    if (type === "virtual") {
+    if (type === 'virtual') {
       return (
         <Link
-          style={{ fontWeight: "400", color: standardLinkColor.color }}
+          style={{ fontWeight: '400', color: standardLinkColor.color }}
           to={link}
         >
           {title}
@@ -197,7 +198,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   const renderEvents = () => {
     //if not category... dont render.
     const isCategory = (event) => {
-      if (category === "All" || event.category === category) {
+      if (category === 'All' || event.category === category) {
         return true;
       } else {
         return false;
@@ -209,7 +210,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         if (isCategory(event)) {
           if (isUpcomming(event)) {
             return (
-              <div style={{ marginBottom: "22px" }} key={event.title}>
+              <div style={{ marginBottom: '22px' }} key={event.title}>
                 {renderTitle(
                   event.title,
                   event.startDate,
@@ -217,11 +218,28 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                   event.link
                 )}
                 <h6>{`${event.startDate} - ${event.endDate}`}</h6>
-                <h6>{`${language ? "Admission: " : "Admisión: "}${
+                <h6>{`${language ? 'Admission: ' : 'Admisión: '}${
                   event.admission
                 }`}</h6>
                 <p>{event.excerpt}</p>
-                {event.buttons[0] ? (
+                {!event.buttons
+                  ? null
+                  : event.buttons.map((button) => {
+                      return (
+                        <Button
+                          key={button.key}
+                          href={button.href}
+                          target={button.target}
+                          color="success"
+                          type="button"
+                          className={classes.button}
+                          variant="contained"
+                        >
+                          {button.name}
+                        </Button>
+                      );
+                    })}
+                {/*event.eventbriteButton ? (
                   <Button
                     color="success"
                     id={`${event.buttons[0].eventbrite.modalTriggerElementId}events`}
@@ -233,7 +251,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                   >
                     {event.buttons[0].name}
                   </Button>
-                ) : null}
+                ) : null*/}
               </div>
             );
           }
@@ -246,7 +264,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         if (isCategory(event)) {
           if (!isUpcomming(event)) {
             return (
-              <div style={{ marginBottom: "22px" }} key={event.title}>
+              <div style={{ marginBottom: '22px' }} key={event.title}>
                 {renderTitle(
                   event.title,
                   event.startDate,
@@ -265,29 +283,29 @@ const Events = ({ history, badgeColor, entityMargin }) => {
 
     return (
       <React.Fragment>
-        <h3 style={{ marginBottom: "20px" }}>
+        <h3 style={{ marginBottom: '20px' }}>
           {
             /* Weird if statements here is necessary for spanish "Todos los Proximos..." copy. */
             language
-              ? category + " Upcoming Events"
-              : category === "All"
-              ? "Todos los Próximos Eventos"
-              : category + " Próximos Eventos"
+              ? category + ' Upcoming Events'
+              : category === 'All'
+              ? 'Todos los Próximos Eventos'
+              : category + ' Próximos Eventos'
           }
         </h3>
         <div id="upcomming">{renderUpcommingEvents()}</div>
         {defaultUpcommingText ? (
           <p>
             {language
-              ? "No upcoming events at this time"
-              : "No hay eventos programados por el momento."}
+              ? 'No upcoming events at this time'
+              : 'No hay eventos programados por el momento.'}
           </p>
         ) : (
-          ""
+          ''
         )}
         <Divider />
-        <h3 style={{ marginBottom: "20px" }}>
-          {language ? "Past Events" : "Eventos Pasados"}
+        <h3 style={{ marginBottom: '20px' }}>
+          {language ? 'Past Events' : 'Eventos Pasados'}
         </h3>
         <div id="past">{renderPastEvents()}</div>
       </React.Fragment>
@@ -296,17 +314,17 @@ const Events = ({ history, badgeColor, entityMargin }) => {
 
   return (
     <div
-      style={entityMargin ? { marginBottom: "20px" } : { margin: "20px 0px" }}
+      style={entityMargin ? { marginBottom: '20px' } : { margin: '20px 0px' }}
       className={classNames(classes.main, classes.mainRaised)}
     >
       <div>
-        <div className={classes.container} style={{ padding: "15px" }}>
+        <div className={classes.container} style={{ padding: '15px' }}>
           {renderBadges()}
-          <h6 style={{ paddingTop: "10px", color: "red" }}>
+          {/* <h6 style={{ paddingTop: '10px', color: 'red' }}>
             {language
-              ? "The Miccosukee Indian Arts & Crafts Festival is canceled this year. We look forward to resuming this event in 2022."
-              : "El Festival de Artesanías Miccosukee está cancelado este año. Esperamos reanudar este evento en 2022."}
-          </h6>
+              ? 'The Miccosukee Indian Arts & Crafts Festival is canceled this year. We look forward to resuming this event in 2022.'
+              : 'El Festival de Artesanías Miccosukee está cancelado este año. Esperamos reanudar este evento en 2022.'}
+          </h6> */}
           <div>{renderEvents()}</div>
         </div>
       </div>
