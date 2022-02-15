@@ -128,8 +128,8 @@ const Bingo = () => {
                 <ul>
                   <li>
                     {language
-                      ? 'All gaming electronic devices will be sanitized prior to and after each use'
-                      : 'Todos los equipos electrónicos serán desinfectados antes y después de cada uso'}
+                      ? 'All gaming electronic devices will be sanitized prior to and after each use.'
+                      : 'Todos los equipos electrónicos serán desinfectados antes y después de cada uso.'}
                   </li>
                 </ul>
               </div>
