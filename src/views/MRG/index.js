@@ -150,7 +150,7 @@ export default function Miccosukee(props) {
                       the gaming floor is open Sunday - Thursday, 9 AM - 2 AM,
                       and Fridays &amp; Saturdays, 9 AM - 4 AM.
                     </b>
-                    <p>Guests must be 18 or older.</p>
+                    <p>Guests must be 18 or older to enter the building.</p>
                   </div>
                 ) : (
                   <div>
@@ -160,7 +160,10 @@ export default function Miccosukee(props) {
                       resto del piso de juego está abierto de domingo a jueves,
                       de 9 AM - 2 AM, y los viernes y sábados, de 9 AM - 4 AM.
                     </b>
-                    <p>Deben tener 18 años o más para entrar.</p>
+                    <p>
+                      Los invitados deben tener 18 años o más para entrar al
+                      establecimiento.
+                    </p>
                   </div>
                 )}
               </div>
