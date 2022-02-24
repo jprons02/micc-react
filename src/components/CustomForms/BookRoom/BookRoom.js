@@ -1,33 +1,33 @@
-import "date-fns";
-import React, { useEffect, useState, useContext } from "react";
+import 'date-fns';
+import React, { useEffect, useState, useContext } from 'react';
 
-import DateFnsUtils from "@date-io/date-fns";
-import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
-import { withStyles } from "@material-ui/core/styles";
+import DateFnsUtils from '@date-io/date-fns';
+import { MuiPickersUtilsProvider, DatePicker } from '@material-ui/pickers';
+import { withStyles } from '@material-ui/core/styles';
 
 // @material-ui components
-import TextField from "@material-ui/core/TextField";
-import MenuItem from "@material-ui/core/MenuItem";
+import TextField from '@material-ui/core/TextField';
+import MenuItem from '@material-ui/core/MenuItem';
 
 // material-ui core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Button from 'components/CustomButtons/Button.js';
 
 // My custom function
 import {
   validateCheckIn,
   validateCheckOut,
-} from "components/CustomForms/BookRoom/validateBookRoom.js";
-import { setEstTime } from "services/functions/setEstTime.js";
+} from 'components/CustomForms/BookRoom/validateBookRoom.js';
+import { setEstTime } from 'services/functions/setEstTime.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext";
+import { useLanguage } from 'contexts/languageContext';
 
 const CustomTextField = withStyles({
   root: {
-    "& .MuiFilledInput-root": {
-      backgroundColor: "white",
+    '& .MuiFilledInput-root': {
+      backgroundColor: 'white',
     },
   },
 })(TextField);
@@ -89,7 +89,7 @@ const BookRoomForm = (props) => {
 
     const getUrl = () => {
       const baseUrl =
-        "https://miccosukee.webhotel.microsdc.us/bp/availStart.jsp?";
+        'https://miccosukee.webhotel.microsdc.us/bp/availStart.jsp?';
       const numberOfRooms = `numberOfRooms=${1}&`;
       const numberOfAdults = `numberOfAdults=${adults}&`;
       const numberOfChildren = `numberOfChildren=${children}&`;
@@ -131,8 +131,8 @@ const BookRoomForm = (props) => {
                 validateCheckIn(checkInDate).error
                   ? validateCheckIn(checkInDate).errorMessage
                   : language
-                  ? "Check In"
-                  : "Llegada"
+                  ? 'Check In'
+                  : 'Llegada'
               }
               fullWidth={true}
               value={checkInDate}
@@ -150,8 +150,8 @@ const BookRoomForm = (props) => {
                 validateCheckOut(checkOutDate, checkInDate).error
                   ? validateCheckOut(checkOutDate, checkInDate).errorMessage
                   : language
-                  ? "Check Out"
-                  : "Salida"
+                  ? 'Check Out'
+                  : 'Salida'
               }
               fullWidth={true}
               value={checkOutDate}
@@ -173,7 +173,7 @@ const BookRoomForm = (props) => {
             error={false}
             name="adults"
             id="adults"
-            label={language ? "Adults" : "Adultos"}
+            label={language ? 'Adults' : 'Adultos'}
             fullWidth={true}
             variant="filled"
             select
@@ -187,11 +187,12 @@ const BookRoomForm = (props) => {
         <GridItem sm={12} md={6}>
           <CustomTextField
             onChange={(e) => handleChange(e, setChildren)}
+            disabled
             value={children}
             error={false}
             name="children"
             id="children"
-            label={language ? "Children" : "Niños"}
+            label={language ? 'Children' : 'Niños'}
             fullWidth={true}
             variant="filled"
             select
@@ -214,19 +215,19 @@ const BookRoomForm = (props) => {
         {renderAdultsChildren()}
         <div
           style={{
-            position: "relative",
+            position: 'relative',
           }}
         >
           <Button
             style={{
-              margin: "35px 0 0 0",
+              margin: '35px 0 0 0',
             }}
             disabled={errorExists()}
             fullWidth
             onClick={submit}
             usetheme="contained"
           >
-            {language ? "Submit" : "Enviar"}
+            {language ? 'Submit' : 'Enviar'}
           </Button>
         </div>
       </form>

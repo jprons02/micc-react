@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
 //images
-import mrgImg from "assets/media/img/miccosukee/pages/mrg_golf/mrg-card.jpg";
-import golfImg from "assets/media/img/miccosukee/pages/mrg_golf/golf-card.jpg";
+import mrgImg from 'assets/media/img/miccosukee/pages/mrg_golf/mrg-card.jpg';
+import golfImg from 'assets/media/img/miccosukee/pages/mrg_golf/golf-card.jpg';
 //Miccosukee Component
-import MiccosukeeCard from "components/CustomCards/MiccosukeeCard.js";
+import MiccosukeeCard from 'components/CustomCards/MiccosukeeCard.js';
 
-import styles from "assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js";
+import styles from 'assets/jss/material-kit-react/views/miccosukee/pages/gaming_golf.js';
 
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 // Business info
-import { mrgHours, golfHours } from "business_info/hours.js";
+import { mrgHours, golfHours } from 'business_info/hours.js';
 
 import {
   mrgBusinessInfo,
   golfBusinessInfo,
-} from "business_info/genericInfo.js";
+} from 'business_info/genericInfo.js';
 
 const useStyles = makeStyles(styles);
 
@@ -35,33 +35,36 @@ const GamingGolf = () => {
   const cards = [
     {
       id: 1,
-      title: language ? "Resort & Gaming" : "Resort & Gaming",
+      title: language ? 'Resort & Gaming' : 'Resort & Gaming',
       theme: mrgBusinessInfo.name,
       description: language
-        ? "Come for the gaming, stay for the fun!"
-        : "Venga a jugar, ¡quédese a divertirse!",
+        ? 'Come for the gaming, stay for the fun!'
+        : 'Venga a jugar, ¡quédese a divertirse!',
       imgSrc: mrgImg,
       buttonOne: {
-        text: language ? "WEBSITE" : "Página web",
+        text: language ? 'WEBSITE' : 'Página web',
         usesRouter: true,
         link: `/mrg`,
       },
-      hours: mrgHours.todaysHours(dayOfWeek, language),
+      //hours: mrgHours.todaysHours(dayOfWeek, language),
+      hours: language
+        ? `Today's Hours: ${mrgHours.todaysHours(dayOfWeek, language)}`
+        : `Horario de Hoy: ${mrgHours.todaysHours(dayOfWeek, language)}`,
       phone: mrgBusinessInfo.phone,
       address: mrgBusinessInfo.address,
     },
     {
       id: 2,
-      title: language ? "Golf & Country Club" : "Golf & Country Club",
+      title: language ? 'Golf & Country Club' : 'Golf & Country Club',
       theme: golfBusinessInfo.name,
       description: language
-        ? "Enjoy breathtaking views and three challenging courses."
-        : "Disfrute vistas impresionantes y tres campos desafiantes.",
+        ? 'Enjoy breathtaking views and three challenging courses.'
+        : 'Disfrute vistas impresionantes y tres campos desafiantes.',
       imgSrc: golfImg,
       buttonOne: {
-        text: language ? "WEBSITE" : "Página web",
+        text: language ? 'WEBSITE' : 'Página web',
         usesRouter: true,
-        link: "/golf",
+        link: '/golf',
       },
       hours: language
         ? `Today's Hours: ${golfHours[0].todaysHours(dayOfWeek)}`
@@ -81,7 +84,7 @@ const GamingGolf = () => {
             description={card.description}
             imgSrc={card.imgSrc}
             buttonOne={card.buttonOne}
-            buttonTwo={card.buttonTwo ? card.buttonTwo : ""}
+            buttonTwo={card.buttonTwo ? card.buttonTwo : ''}
             hours={card.hours}
             phone={card.phone}
             address={card.address}
@@ -95,7 +98,7 @@ const GamingGolf = () => {
     <GridContainer
       className={classes.gridContainer}
       justify="center"
-      style={{ position: "static" }}
+      style={{ position: 'static' }}
     >
       {renderCards()}
     </GridContainer>

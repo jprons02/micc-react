@@ -1,63 +1,63 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from 'react';
 import {
   Switch,
   Route,
   useRouteMatch,
   useLocation,
   Link,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 // Context
-import { BookRoomProvider } from "contexts/BookRoomContext.js";
-import { PopupContext } from "contexts/PopupContext.js";
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { BookRoomProvider } from 'contexts/BookRoomContext.js';
+import { PopupContext } from 'contexts/PopupContext.js';
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // Theme
-import { theme } from "../../themes";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { theme } from '../../themes';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 // My components
-import MrgHeader from "components/CustomHeaders/MrgHeader.js";
-import MrgFooter from "components/CustomFooters/MrgFooter.js";
-import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
-import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
-import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
+import MrgHeader from 'components/CustomHeaders/MrgHeader.js';
+import MrgFooter from 'components/CustomFooters/MrgFooter.js';
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
+import StandardAlert from 'components/CustomAlert/CustomStandardAlert.js';
+import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 
 // Pages
-import Home from "views/MRG/Pages/home/home.js";
-import Accommodations from "views/MRG/Pages/accommodations/accommodations.js";
-import SalonSpa from "views/MRG/Pages/amenities/salon-spa/salonSpa.js";
-import ClubEgret from "views/MRG/Pages/amenities/club-egret/clubEgret.js";
-import PoolGym from "views/MRG/Pages/amenities/pool-gym/poolGym.js";
-import TeenArcade from "views/MRG/Pages/amenities/teen-arcade/teenArcade.js";
-import GamingMachines from "views/MRG/Pages/gaming/gamingMachines/gamingMachines.js";
-import GamingPromos from "views/MRG/Pages/gaming/gamingPromos/gamingPromos.js";
-import OneRewards from "views/MRG/Pages/gaming/oneRewards/oneRewards.js";
-import Bingo from "views/MRG/Pages/gaming/bingo/bingo.js";
-import Poker from "views/MRG/Pages/gaming/poker/poker.js";
-import SawgrassCafe from "views/MRG/Pages/diningNightlife/sawgrass-cafe/sawgrassCafe.js";
-import InternationalBuffet from "views/MRG/Pages/diningNightlife/international-buffet/internationalBuffet.js";
-import Bravo from "views/MRG/Pages/diningNightlife/bravo-bravissimo/bravoBravissimo.js";
-import Deli from "views/MRG/Pages/diningNightlife/deli/deli.js";
-import CafeHammock from "views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js";
-import CypressLounge from "views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js";
-import MartiniBar from "views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js";
-import Maxs from "views/MRG/Pages/diningNightlife/maxs/maxs.js";
-import BanquetsCatering from "views/MRG/Pages/banquetsCatering/banquetsCatering.js";
-import MrgEvents from "views/MRG/Pages/events/mrgEvents.js";
-import MrgEventPage from "views/MRG/Pages/events/mrgEventPage";
-import MrgCovidPage from "views/MRG/Pages/business_info/mrgCovidPage.js";
-import MrgErrorPage from "views/MRG/Pages/error/mrgErrorPage.js";
+import Home from 'views/MRG/Pages/home/home.js';
+import Accommodations from 'views/MRG/Pages/accommodations/accommodations.js';
+import SalonSpa from 'views/MRG/Pages/amenities/salon-spa/salonSpa.js';
+import ClubEgret from 'views/MRG/Pages/amenities/club-egret/clubEgret.js';
+import PoolGym from 'views/MRG/Pages/amenities/pool-gym/poolGym.js';
+import TeenArcade from 'views/MRG/Pages/amenities/teen-arcade/teenArcade.js';
+import GamingMachines from 'views/MRG/Pages/gaming/gamingMachines/gamingMachines.js';
+import GamingPromos from 'views/MRG/Pages/gaming/gamingPromos/gamingPromos.js';
+import OneRewards from 'views/MRG/Pages/gaming/oneRewards/oneRewards.js';
+import Bingo from 'views/MRG/Pages/gaming/bingo/bingo.js';
+import Poker from 'views/MRG/Pages/gaming/poker/poker.js';
+import SawgrassCafe from 'views/MRG/Pages/diningNightlife/sawgrass-cafe/sawgrassCafe.js';
+import InternationalBuffet from 'views/MRG/Pages/diningNightlife/international-buffet/internationalBuffet.js';
+import Bravo from 'views/MRG/Pages/diningNightlife/bravo-bravissimo/bravoBravissimo.js';
+import Deli from 'views/MRG/Pages/diningNightlife/deli/deli.js';
+import CafeHammock from 'views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js';
+import CypressLounge from 'views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js';
+import MartiniBar from 'views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js';
+import Maxs from 'views/MRG/Pages/diningNightlife/maxs/maxs.js';
+import BanquetsCatering from 'views/MRG/Pages/banquetsCatering/banquetsCatering.js';
+import MrgEvents from 'views/MRG/Pages/events/mrgEvents.js';
+import MrgEventPage from 'views/MRG/Pages/events/mrgEventPage';
+import MrgCovidPage from 'views/MRG/Pages/business_info/mrgCovidPage.js';
+import MrgErrorPage from 'views/MRG/Pages/error/mrgErrorPage.js';
 
 // Business info
-import { mrgBusinessInfo } from "business_info/genericInfo.js";
+import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 
 // services
-import { popupManager } from "services/functions/popups/popupManager";
-import { isRunning } from "services/functions/scheduleThis";
+import { popupManager } from 'services/functions/popups/popupManager';
+import { isRunning } from 'services/functions/scheduleThis';
 
 export default function Miccosukee(props) {
   const language = useLanguage();
@@ -87,35 +87,35 @@ export default function Miccosukee(props) {
   //reroute
   useEffect(() => {
     if (
-      window.location.pathname === "/mrg/dining-nightlife" ||
-      window.location.pathname === "/mrg/dining-nightlife/"
+      window.location.pathname === '/mrg/dining-nightlife' ||
+      window.location.pathname === '/mrg/dining-nightlife/'
     ) {
-      props.history.push("/mrg");
+      props.history.push('/mrg');
     }
     if (
-      window.location.pathname === "/mrg/gaming" ||
-      window.location.pathname === "/mrg/gaming/"
+      window.location.pathname === '/mrg/gaming' ||
+      window.location.pathname === '/mrg/gaming/'
     ) {
-      props.history.push("/mrg");
+      props.history.push('/mrg');
     }
     if (
-      window.location.pathname === "/mrg/upcoming-events" ||
-      window.location.pathname === "/mrg/upcoming-events/"
+      window.location.pathname === '/mrg/upcoming-events' ||
+      window.location.pathname === '/mrg/upcoming-events/'
     ) {
-      props.history.push("/mrg/events");
+      props.history.push('/mrg/events');
     }
     if (
       window.location.pathname ===
-        "/mrg/event/american-indian-day-2020-09-28" ||
-      window.location.pathname === "/mrg/event/american-indian-day-2020-09-28/"
+        '/mrg/event/american-indian-day-2020-09-28' ||
+      window.location.pathname === '/mrg/event/american-indian-day-2020-09-28/'
     ) {
-      props.history.push("/virtual-event/aid");
+      props.history.push('/virtual-event/aid');
     }
     if (
-      location.pathname === "/mrg/contact" ||
-      location.pathname === "/mrg/contact/"
+      location.pathname === '/mrg/contact' ||
+      location.pathname === '/mrg/contact/'
     ) {
-      props.history.push("/mrg");
+      props.history.push('/mrg');
       setShowContactModal(true);
     } else {
       closeModal(setShowContactModal);
@@ -135,7 +135,7 @@ export default function Miccosukee(props) {
   };
 
   return (
-    <ThemeProvider theme={theme("mrg")}>
+    <ThemeProvider theme={theme('mrg')}>
       <BookRoomProvider>
         <div>
           <MrgHeader />
@@ -146,18 +146,19 @@ export default function Miccosukee(props) {
                 {language ? (
                   <div>
                     <b>
-                      Resort &amp; resort-side slots open 24/7. The rest of the
-                      gaming floor will remain open until 4 AM.
+                      Resort &amp; resort-side slots are open 24/7. The rest of
+                      the gaming floor is open Sunday - Thursday, 9 AM - 2 AM,
+                      and Fridays &amp; Saturdays, 9 AM - 4 AM.
                     </b>
                     <p>Guests must be 18 or older.</p>
                   </div>
                 ) : (
                   <div>
                     <b>
-                      El Hotel y las máquinas de tragamonedas junto al hotel
-                      están abiertos las 24 horas, los 7 días de la semana. El
-                      resto de la sala de juegos permanecerá abierta hasta las 4
-                      AM.
+                      El Hotel y las máquinas tragamonedas del lado del Hotel
+                      están abiertas las 24 horas, los 7 días de la semana. El
+                      resto del piso de juego está abierto de domingo a jueves,
+                      de 9 AM - 2 AM, y los viernes y sábados, de 9 AM - 4 AM.
                     </b>
                     <p>Deben tener 18 años o más para entrar.</p>
                   </div>
@@ -175,7 +176,7 @@ export default function Miccosukee(props) {
                   <div>
                     <b>
                       <Link
-                        style={{ color: "white", fontWeight: "800" }}
+                        style={{ color: 'white', fontWeight: '800' }}
                         to={`${match.path}/covid-19`}
                       >
                         Click HERE for the Miccosukee Resort &amp; Gaming
@@ -191,7 +192,7 @@ export default function Miccosukee(props) {
                   <div>
                     <b>
                       <Link
-                        style={{ color: "white", fontWeight: "800" }}
+                        style={{ color: 'white', fontWeight: '800' }}
                         to={`${match.path}/covid-19`}
                       >
                         Oprima AQUÍ para las últimas noticias de COVID-19
