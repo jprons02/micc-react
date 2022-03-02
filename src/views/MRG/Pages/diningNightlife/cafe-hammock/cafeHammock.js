@@ -64,7 +64,11 @@ const CafeHammock = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Café Hammock</h2>
-              <h6 style={{ color: 'red' }}>CLOSED MONDAY &amp; TUESDAY</h6>
+              <h6 style={{ color: 'red' }}>
+                {language
+                  ? 'CLOSED MONDAY & TUESDAY'
+                  : 'CERRADO LUNES Y MARTES'}
+              </h6>
               {renderPoiHours(mrgHours.poi.hammock, language)}
               <p>
                 {language
