@@ -37,18 +37,16 @@ const getMinutes = (hours, minutes) => {
 // This is all rendered from renderPoiHours.js function
 
 export const mrgHours = {
-  /*
   hours: {
     days: (language) =>
-      language ? "Seven days a week" : "Seite días a la semana",
+      language ? 'Seven days a week' : 'Seite días a la semana',
     open: `${getMinutes(0).combinedString}`,
     close: `${getMinutes(0).combinedString}`,
-    details: (language) => (language ? "" : ""),
+    details: (language) => (language ? '' : ''),
     //SEVEN DAYS A WEEK, 24 HOURS
     //SEITE DÍAS A LA SEMANA, 24 HORAS
   },
-  */
-
+  /*
   weekday: {
     days: (language) => (language ? `Sunday - Thursday` : `domingo - jueves`),
     open: `${getMinutes(9).combinedString}`,
@@ -67,6 +65,7 @@ export const mrgHours = {
         ? 'No entry will be allowed after 3:00 A.M.'
         : 'No se permitirá la entrada después de las 3 A.M.',
   },
+  */
 
   todaysHours: (dayOfWeek, language) => {
     /*

@@ -140,6 +140,7 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
+          {/*
           <StandardAlert
             message={
               <div id="alert1a">
@@ -172,6 +173,7 @@ export default function Miccosukee(props) {
             color="success"
             //icon="info_outline"
           />
+          */}
           <StandardAlert
             message={
               <div id="alert2">

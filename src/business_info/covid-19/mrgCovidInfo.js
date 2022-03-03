@@ -325,22 +325,27 @@ const MrgCovidInfo = (props) => {
           {props.language ? 'Hours of Operation' : 'Horarios'}
         </h4>
         <Collapse in={mrg.hours}>
-          {/*
-          <ul style={ulStyle}>
-            <li style={liStyle}>
-              {mrgHours.hours.days(props.language)}
-              {', '}
-              {mrgHours.hours.open === mrgHours.hours.close
-                ? props.language
-                  ? '24 hours'
-                  : '24 horas'
-                : `${mrgHours.hours.open} - ${mrgHours.hours.close}`}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>{mrgHours.hours.details(props.language)}</li>
+          {
+            <ul style={ulStyle}>
+              <li style={liStyle}>
+                {mrgHours.hours.days(props.language)}
+                {', '}
+                {mrgHours.hours.open === mrgHours.hours.close
+                  ? props.language
+                    ? '24 hours'
+                    : '24 horas'
+                  : `${mrgHours.hours.open} - ${mrgHours.hours.close}`}
+              </li>
+              {/*
+              <ul style={innerUlStyle}>
+                <li style={liStyle}>
+                  {mrgHours.hours.details(props.language)}
+                </li>
+              </ul>
+              */}
             </ul>
-          </ul>
-          */}
+          }
+          {/*
           <ul style={ulStyle}>
             <li style={liStyle}>
               {mrgHours.weekday.days(props.language)}: {mrgHours.weekday.open} –{' '}
@@ -363,6 +368,7 @@ const MrgCovidInfo = (props) => {
               </li>
             </ul>
           </ul>
+          */}
         </Collapse>
       </div>
       <div style={sectionStyle}>

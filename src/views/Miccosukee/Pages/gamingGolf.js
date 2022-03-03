@@ -47,9 +47,12 @@ const GamingGolf = () => {
         link: `/mrg`,
       },
       //hours: mrgHours.todaysHours(dayOfWeek, language),
+      hours: language ? ' 24 Hours' : ' 24 Horas',
+      /*
       hours: language
         ? `Today's Hours: ${mrgHours.todaysHours(dayOfWeek, language)}`
         : `Horario de Hoy: ${mrgHours.todaysHours(dayOfWeek, language)}`,
+      */
       phone: mrgBusinessInfo.phone,
       address: mrgBusinessInfo.address,
     },
