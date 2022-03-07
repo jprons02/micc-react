@@ -54,17 +54,28 @@ export const renderPoiHoursSimple = (hours, language, liStyle) => {
   return (
     <React.Fragment>
       {hours.map((item) => {
-        if (item.open === item.close) {
-          return (
-            <li key={item.days(language)} style={liStyle}>
-              {item.days(language)}
-              {language ? ', 24 Hours' : ', 24 Horas'} <br />
-            </li>
-          );
+        // if its a day that is open
+        if (item.days) {
+          if (item.open === item.close) {
+            return (
+              <li key={item.days(language)} style={liStyle}>
+                {item.days(language)}
+                {language ? ', 24 Hours' : ', 24 Horas'} <br />
+              </li>
+            );
+          } else {
+            return (
+              <li key={item.days(language)} style={liStyle}>
+                {item.days(language)}, {item.open} - {item.close} <br />
+              </li>
+            );
+          }
+          // days that are closed
         } else {
           return (
-            <li key={item.days(language)} style={liStyle}>
-              {item.days(language)}, {item.open} - {item.close} <br />
+            <li key={item.daysClosed(language)} style={liStyle}>
+              {language ? 'Closed: ' : 'Cerrado: '}
+              {item.daysClosed(language)}
             </li>
           );
         }

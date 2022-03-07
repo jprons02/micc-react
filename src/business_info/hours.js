@@ -287,6 +287,10 @@ export const mrgHours = {
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
+      {
+        daysClosed: (language) =>
+          language ? 'Monday & Tuesday' : 'lunes y martes',
+      },
     ],
     cypressLounge: [
       {
