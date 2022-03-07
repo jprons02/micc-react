@@ -7,6 +7,7 @@ import Collapse from '@material-ui/core/Collapse';
 
 //import mrgCovidVideo from "assets/media/video/GAMING-SAFE_MRG.mp4";
 import winItAll from 'assets/media/video/mrg_win_it_all.mp4';
+import { renderPoiHoursSimple } from 'services/functions/renderPoiHours';
 
 const MrgCovidInfo = (props) => {
   const sectionStyle = { marginTop: '20px' };
@@ -151,6 +152,7 @@ const MrgCovidInfo = (props) => {
           return (
             <React.Fragment key={item.name(props.language)}>
               <li style={liStyle}>{item.name(props.language)}</li>
+              {/* IF GIFT SHOP */}
               {item.details ? (
                 <ul style={innerUlStyle}>
                   {item.details(props.language).map((detailItem) => (
@@ -158,6 +160,11 @@ const MrgCovidInfo = (props) => {
                       {detailItem}
                     </li>
                   ))}
+                </ul>
+              ) : null}
+              {item.hours ? (
+                <ul style={innerUlStyle}>
+                  {renderPoiHoursSimple(item.hours, props.language, liStyle)}
                 </ul>
               ) : null}
             </React.Fragment>
