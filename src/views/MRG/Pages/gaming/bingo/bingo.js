@@ -15,8 +15,9 @@ import bgImage from 'assets/media/img/mrg/MRG_Header1.jpg';
 import image1 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg';
 import image2 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg';
 import image3 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg';
-import bingoPromoEn from 'assets/media/img/mrg/gaming/bingo/BINGO-ENLIGH-WEB.jpg';
-import bingoPromoSp from 'assets/media/img/mrg/gaming/bingo/BINGO-SPA_AWEB-.jpg';
+//import bingoPromoEn from 'assets/media/img/mrg/gaming/bingo/BINGO-ENLIGH-WEB.jpg';
+import bingoPromoEn from 'assets/media/img/mrg/gaming/bingo/bingo_promos_en.jpg';
+import bingoPromoSp from 'assets/media/img/mrg/gaming/bingo/bingo_promos_sp.jpg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -132,6 +133,22 @@ const Bingo = () => {
                       : 'Todos los equipos electrónicos serán desinfectados antes y después de cada uso.'}
                   </li>
                 </ul>
+                {isRunning([2022, 2, 10], [2022, 3, 27]) ? (
+                  <a
+                    target="_blank"
+                    href="https://mapa-media.s3.amazonaws.com/website/Bingo+Program+March+2022.pdf"
+                  >
+                    <img
+                      style={{
+                        width: '100%',
+                        margin: '10px 0',
+                        boxShadow:
+                          '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+                      }}
+                      src={language ? bingoPromoEn : bingoPromoSp}
+                    />
+                  </a>
+                ) : null}
               </div>
             </div>
           </GridItem>

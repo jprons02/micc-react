@@ -2,7 +2,7 @@
 // parameter is an array of numbers: [year, month, day]
 // 2nd parameter is optional
 // returns boolean
-// stops on the the stop date exactly at 12am.
+// stops on the stop date exactly at 12am.
 // example) let birthday = new Date(1995, 11, 17) // the month is 0-indexed
 // use example) isRunning([2021, 12, 22], [2021, 12, 31]) ? 'do this during this timeframe' : 'this is done outside of this timeframe'
 
