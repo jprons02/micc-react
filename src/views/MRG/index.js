@@ -188,9 +188,10 @@ export default function Miccosukee(props) {
                         COVID-19 guidelines.
                       </Link>
                     </b>
-                    <p>
-                      Masks are optional for vaccinated patrons. Masks are
-                      mandatory for unvaccinated patrons.
+                    <p style={{ fontWeight: '400' }}>
+                      Guests must be 18 or older to enter the building. Masks
+                      are optional for vaccinated patrons. Masks are mandatory
+                      for unvaccinated patrons.
                     </p>
                   </div>
                 ) : (
@@ -204,10 +205,11 @@ export default function Miccosukee(props) {
                         relacionadas a nuestros establecimientos.
                       </Link>
                     </b>
-                    <p>
-                      El uso de mascarillas es opcional para los clientes
-                      vacunados. El uso de mascarillas es obligatorio para los
-                      clientes no vacunados.
+                    <p style={{ fontWeight: '400' }}>
+                      Los invitados deben tener 18 años o más para entrar al
+                      establecimiento. El uso de mascarillas es opcional para
+                      los clientes vacunados. El uso de mascarillas es
+                      obligatorio para los clientes no vacunados.
                     </p>
                   </div>
                 )}
