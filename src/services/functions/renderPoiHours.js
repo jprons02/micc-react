@@ -20,7 +20,9 @@ export const renderPoiHours = (hours, language) => {
     return (
       <React.Fragment>
         {hours.map((item) => {
-          if (item.days(language) === '') {
+          if (item.daysClosed) {
+            return null;
+          } else if (item.days(language) === '') {
             return (
               <h6 style={{ color: 'red' }} key={item.days(language)}>
                 {language ? 'CLOSED' : 'CERRADO'}
