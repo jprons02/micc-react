@@ -2,16 +2,16 @@
 // Stop showing popup after 1 time load... may need to change how state works
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
-import aidImage from "assets/media/img/events/aid/21/aid_2021_popup_min.jpg";
-import mrgImage from "assets/media/img/popups/MonthlyPayouts_Calendar_February.jpeg";
-import promoImage1 from "assets/media/img/popups/oxford_luggage.jpg";
-import hubPopup from "assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg";
-import jobFair from "assets/media/img/popups/JOBFair2021_WebSlider.jpg";
+import aidImage from 'assets/media/img/events/aid/21/aid_2021_popup_min.jpg';
+import mrgImage from 'assets/media/img/popups/MonthlyPayouts_Calendar_March.jpeg';
+import promoImage1 from 'assets/media/img/popups/oxford_luggage.jpg';
+import hubPopup from 'assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg';
+import jobFair from 'assets/media/img/popups/JOBFair2021_WebSlider.jpg';
 
 const d = new Date();
 
 const scheduler = (time) => {
-  if (time.start.year === "") {
+  if (time.start.year === '') {
     return false;
   }
   const startTime = new Date(
@@ -48,221 +48,221 @@ showPopup: scheduler({
   }),
 */
 const miccosukeePopup = {
-  name: "miccosukeePopup",
-  id: "01",
+  name: 'miccosukeePopup',
+  id: '01',
   showPopup: scheduler({
     start: {
-      year: "21",
-      month: "November",
-      day: "1",
-      time: "",
+      year: '21',
+      month: 'November',
+      day: '1',
+      time: '',
     },
     end: {
-      year: "21",
-      month: "December",
-      day: "4",
-      time: "",
+      year: '21',
+      month: 'December',
+      day: '4',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: jobFair,
-    alt: "job fair",
-    linkType: "external",
-    link: "https://www.miccosukee.com/adp-job-board",
+    alt: 'job fair',
+    linkType: 'external',
+    link: 'https://www.miccosukee.com/adp-job-board',
   },
 };
 const mrgPopup = {
-  name: "mrgPopup",
-  id: "02",
+  name: 'mrgPopup',
+  id: '02',
   showPopup: scheduler({
     start: {
-      year: "22",
-      month: "February",
-      day: "1",
-      time: "",
+      year: '22',
+      month: 'March',
+      day: '15',
+      time: '',
     },
     end: {
-      year: "22",
-      month: "February",
-      day: "15",
-      time: "",
+      year: '22',
+      month: 'March',
+      day: '31',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: mrgImage,
-    alt: "monthly payouts",
-    linkType: "",
-    link: "",
+    alt: 'monthly payouts',
+    linkType: '',
+    link: '',
   },
 };
 const mrgGamingPromotionsPopup = {
-  name: "mrgGamingPromotions",
-  id: "02",
+  name: 'mrgGamingPromotions',
+  id: '02',
   showPopup: scheduler({
     start: {
-      year: "21",
-      month: "November",
-      day: "1",
-      time: "",
+      year: '21',
+      month: 'November',
+      day: '1',
+      time: '',
     },
     end: {
-      year: "21",
-      month: "November",
-      day: "30",
-      time: "",
+      year: '21',
+      month: 'November',
+      day: '30',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: promoImage1,
-    linkType: "",
-    link: "",
+    linkType: '',
+    link: '',
   },
 };
 const golfPopup = {
-  name: "golfPopup",
-  id: "03",
+  name: 'golfPopup',
+  id: '03',
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: aidImage,
-    linkType: "internal",
-    link: "/test2",
+    linkType: 'internal',
+    link: '/test2',
   },
 };
 const villagePopup = {
-  name: "villagePopup",
-  id: "04",
+  name: 'villagePopup',
+  id: '04',
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: aidImage,
-    linkType: "internal",
-    link: "/test1",
+    linkType: 'internal',
+    link: '/test1',
   },
 };
 const airboatsPopup = {
-  name: "airboatsPopup",
-  id: "05",
+  name: 'airboatsPopup',
+  id: '05',
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: aidImage,
-    linkType: "internal",
-    link: "/test1",
+    linkType: 'internal',
+    link: '/test1',
   },
 };
 const miccosukeeEventsPopup = {
-  name: "miccosukeeEventsPopup",
-  id: "06",
+  name: 'miccosukeeEventsPopup',
+  id: '06',
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: aidImage,
-    linkType: "internal",
-    link: "/test1",
+    linkType: 'internal',
+    link: '/test1',
   },
 };
 const historyPopup = {
-  name: "historyPopup",
-  id: "07",
+  name: 'historyPopup',
+  id: '07',
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: aidImage,
-    linkType: "internal",
-    link: "/test1",
+    linkType: 'internal',
+    link: '/test1',
   },
 };
 const administrationPopup = {
-  name: "administrationPopup",
-  id: "08",
+  name: 'administrationPopup',
+  id: '08',
   showPopup: scheduler({
     start: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
     end: {
-      year: "",
-      month: "",
-      day: "",
-      time: "",
+      year: '',
+      month: '',
+      day: '',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: aidImage,
-    linkType: "internal",
-    link: "/test1",
+    linkType: 'internal',
+    link: '/test1',
   },
 };
 
@@ -280,7 +280,7 @@ const setPopup = (setState, state, popup) => {
       ...state,
       [popup.name]: {
         ...state[popup.name],
-        ["showPopup"]: false,
+        ['showPopup']: false,
       },
     });
   } else {
@@ -289,8 +289,8 @@ const setPopup = (setState, state, popup) => {
       ...state,
       [popup.name]: {
         ...state[popup.name],
-        ["viewCount"]: state[popup.name]["viewCount"] + 1,
-        ["showPopup"]: true,
+        ['viewCount']: state[popup.name]['viewCount'] + 1,
+        ['showPopup']: true,
       },
     });
   }
@@ -299,63 +299,63 @@ const setPopup = (setState, state, popup) => {
 // Manager Function - chooses which page to display which popup on.
 export const popupManager = (setState, state, location) => {
   if (miccosukeePopup.showPopup) {
-    if (location.pathname === "/") {
+    if (location.pathname === '/') {
       setTimeout(() => {
         setPopup(setState, state, miccosukeePopup);
       }, 700);
     }
   }
   if (mrgPopup.showPopup) {
-    if (location.pathname === "/mrg") {
+    if (location.pathname === '/mrg') {
       setTimeout(() => {
         setPopup(setState, state, mrgPopup);
       }, 700);
     }
   }
   if (mrgGamingPromotionsPopup.showPopup) {
-    if (location.pathname === "/mrg/promotions") {
+    if (location.pathname === '/mrg/promotions') {
       setTimeout(() => {
         setPopup(setState, state, mrgGamingPromotionsPopup);
       }, 700);
     }
   }
   if (golfPopup.showPopup) {
-    if (location.pathname === "/golf") {
+    if (location.pathname === '/golf') {
       setTimeout(() => {
         setPopup(setState, state, golfPopup);
       }, 700);
     }
   }
   if (villagePopup.showPopup) {
-    if (location.pathname === "/village") {
+    if (location.pathname === '/village') {
       setTimeout(() => {
         setPopup(setState, state, villagePopup);
       }, 700);
     }
   }
   if (airboatsPopup.showPopup) {
-    if (location.pathname === "/airboats") {
+    if (location.pathname === '/airboats') {
       setTimeout(() => {
         setPopup(setState, state, airboatsPopup);
       }, 700);
     }
   }
   if (miccosukeeEventsPopup.showPopup) {
-    if (location.pathname === "/events") {
+    if (location.pathname === '/events') {
       setTimeout(() => {
         setPopup(setState, state, miccosukeeEventsPopup);
       }, 700);
     }
   }
   if (historyPopup.showPopup) {
-    if (location.pathname === "/history") {
+    if (location.pathname === '/history') {
       setTimeout(() => {
         setPopup(setState, state, historyPopup);
       }, 700);
     }
   }
   if (administrationPopup.showPopup) {
-    if (location.pathname === "/administration") {
+    if (location.pathname === '/administration') {
       setTimeout(() => {
         setPopup(setState, state, administrationPopup);
       }, 700);
