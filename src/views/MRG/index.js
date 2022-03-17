@@ -140,40 +140,29 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {/*
-          <StandardAlert
-            message={
-              <div id="alert1a">
-                {language ? (
-                  <div>
-                    <b>
-                      Resort &amp; resort-side slots are open 24/7. The rest of
-                      the gaming floor is open Sunday - Thursday, 9 AM - 2 AM,
-                      and Fridays &amp; Saturdays, 9 AM - 4 AM.
-                    </b>
-                    <p>Guests must be 18 or older to enter the building.</p>
-                  </div>
-                ) : (
-                  <div>
-                    <b>
-                      El Hotel y las máquinas tragamonedas del lado del Hotel
-                      están abiertas las 24 horas, los 7 días de la semana. El
-                      resto del piso de juego está abierto de domingo a jueves,
-                      de 9 AM - 2 AM, y los viernes y sábados, de 9 AM - 4 AM.
-                    </b>
-                    <p>
-                      Los invitados deben tener 18 años o más para entrar al
-                      establecimiento.
-                    </p>
-                  </div>
-                )}
-              </div>
-            }
-            close
-            color="success"
-            //icon="info_outline"
-          />
-          */}
+          {isRunning([2022, 3, 18]) ? (
+            <StandardAlert
+              message={
+                <div id="alert1a">
+                  {language ? (
+                    <div>
+                      <b>High Limit Room now open 24/7.</b>
+                    </div>
+                  ) : (
+                    <div>
+                      <b>
+                        Salón de Altas Apuestas ahora abierto 24 horas al día, 7
+                        días a la semana.
+                      </b>
+                    </div>
+                  )}
+                </div>
+              }
+              close
+              color="success"
+              //icon="info_outline"
+            />
+          ) : null}
           <StandardAlert
             message={
               <div id="alert2">
