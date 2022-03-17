@@ -454,8 +454,8 @@ const MrgCovidInfo = (props) => {
               </li>
               <li style={liStyle}>
                 {props.language
-                  ? 'RV overnight parking is permitted.'
-                  : 'Se permite el estacionamiento nocturno de RVs.'}
+                  ? 'There will be a charge of $25.00 + tax per night for overnight RV parking.'
+                  : 'Habrá un cargo de $25.00 + impuestos por noche para el estacionamiento nocturno de RVs.'}
               </li>
               <li style={liStyle}>
                 {props.language
