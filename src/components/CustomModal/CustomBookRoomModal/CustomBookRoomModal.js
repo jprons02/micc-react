@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from "react";
-import classNames from "classnames";
+import React, { useState, useEffect } from 'react';
+import classNames from 'classnames';
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
+import { makeStyles } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent';
 //import DialogActions from "@material-ui/core/DialogActions";
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from '@material-ui/core/IconButton';
 // @material-ui/icons
-import Close from "@material-ui/icons/Close";
+import Close from '@material-ui/icons/Close';
 // core components
-import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
+import modalStyle from 'assets/jss/material-kit-react/virtualLoginModal.js';
 // @material-ui/icons
-import Typography from "@material-ui/core/Typography";
+import Typography from '@material-ui/core/Typography';
 
 // My custom components
-import BookRoomForm from "components/CustomForms/BookRoom/BookRoom.js";
+import BookRoomForm from 'components/CustomForms/BookRoom/BookRoom.js';
+//import BookRoomForm from 'components/CustomForms/BookRoom/BookRoomNew.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext";
+import { useLanguage } from 'contexts/languageContext';
 
 const useStyles = makeStyles(modalStyle);
 
@@ -42,7 +43,7 @@ const BookRoomModal = (props) => {
         id="classic-modal-slide-title"
         disableTypography
         className={classes.modalHeader}
-        style={{ width: "100%" }}
+        style={{ width: '100%' }}
       >
         <IconButton
           className={classes.modalCloseButton}
@@ -53,19 +54,19 @@ const BookRoomModal = (props) => {
         >
           <Close className={classes.modalClose} />
         </IconButton>
-        <div style={{ margin: "10px 0" }}>
+        <div style={{ margin: '10px 0' }}>
           <Typography variant="h5" component="h2">
-            {language ? "Book A Room" : "Reservar Una Habitación"}{" "}
+            {language ? 'Book A Room' : 'Reservar Una Habitación'}{' '}
           </Typography>
           <p>
-            {language ? "Having Trouble? Call " : "¿Necesita ayuda? Llame al "}
+            {language ? 'Having Trouble? Call ' : '¿Necesita ayuda? Llame al '}
             305-925-2555
           </p>
         </div>
       </DialogTitle>
       <DialogContent
         style={{
-          paddingTop: "0px",
+          paddingTop: '0px',
         }}
         id="modal-slide-description"
         className={classes.modalBody}
