@@ -84,6 +84,7 @@ const BookRoomForm = (props) => {
     }
   };
 
+  /* OLD BOOKING SYSTEM
   const submit = (e) => {
     e.preventDefault();
 
@@ -111,6 +112,38 @@ const BookRoomForm = (props) => {
         checkoutMonth +
         checkoutDay +
         checkoutYear
+      );
+    };
+    window.open(getUrl());
+  };
+  */
+
+  const submit = (e) => {
+    e.preventDefault();
+
+    const getUrl = () => {
+      const baseUrl =
+        'https://direct-book.com/properties/miccosukeeresortgamingdirect?locale=en&items[0]';
+      const numberOfAdults = `[adults]=${adults}&items[0]`;
+      const numberOfChildren = `[children]=${children}&items[0]`;
+      const numberOfInfants = `[infants]=0&`;
+      const currency = `currency=USD&`;
+
+      const checkinDate = `checkInDate=${checkInDate.getFullYear()}-${
+        checkInDate.getMonth() + 1
+      }-${checkInDate.getDate()}&`;
+      const checkoutDate = `checkOutDate=${checkOutDate.getFullYear()}-${
+        checkOutDate.getMonth() + 1
+      }-${checkOutDate.getDate()}`;
+
+      return (
+        baseUrl +
+        numberOfAdults +
+        numberOfChildren +
+        numberOfInfants +
+        currency +
+        checkinDate +
+        checkoutDate
       );
     };
     window.open(getUrl());

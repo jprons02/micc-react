@@ -16,7 +16,6 @@ import Typography from '@material-ui/core/Typography';
 
 // My custom components
 import BookRoomForm from 'components/CustomForms/BookRoom/BookRoom.js';
-//import BookRoomForm from 'components/CustomForms/BookRoom/BookRoomNew.js';
 
 // Context
 import { useLanguage } from 'contexts/languageContext';
