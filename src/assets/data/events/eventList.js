@@ -71,13 +71,27 @@ export const events = (language) => {
         : 'Tarifas de Inscripción: $25 para mayores de 11 años, $15 para menores de 10 años - Incluye camiseta y boleto para la rifa. Los primeros 10 niños que se registren recibirán una docena de carnada natural para pescar.',
       startDate: '3/25/2022',
       endDate: '3/26/2022',
-      excerpt:
-        'Removal of the Swamp Invaders Fishing Tournament hosted by the Miccosukee Fish & Wildlife Department starts at 7 PM tonight at Miccosukee Resort & Gaming...',
-      fullDescription: [
-        'Removal of the Swamp Invaders Fishing Tournament hosted by the Miccosukee Fish & Wildlife Department starts at 7 PM tonight at Miccosukee Resort & Gaming, aiming to inform the public about the harmful effects of exotic fish and encourage their removal and consumption. Nonnative fish invade the Everglades and interfere with its ecosystem, causing native plants and wildlife to go extinct.',
-        'Winners of the tournament will be announced tomorrow, March 26, at 3 PM, after the official weigh-in at Miccosukee Resort & Gaming, located at 500 SW 177th Avenue, Miami, Florida 33194. Over $4,000 in cash prizes will be awarded.',
-        'For any questions, please contact the Miccosukee Fish & Wildlife Director, Craig Van Der Heiden, at 786-527-4703.',
-      ],
+      excerpt: language
+        ? 'Over $4,000 in cash prizes and giveaways; brought to you by the...'
+        : 'Más de $4,000 en premios en efectivo y regalos; presentado por el...',
+
+      fullDescription: language
+        ? [
+            'Over $4,000 in cash prizes and giveaways; brought to you by the Miccosukee Fish & Wildlife Department. This tournament aims to inform the public about the harmful effects of exotic fish and encourages their removal and consumption.',
+            '- Fishing begins on March 25, 2022, at 7 PM and ends on March 26, 2022, before 3 PM.',
+            '- Registration Fees: $25 for 11 & Up, $15 for 10 & Under - Includes t-shirt and raffle ticket. First 10 kids to register receive live dozen shiners.',
+            '- Location: Miccosukee Resort & Gaming',
+            '- Registration & More Info: Removal Of The Swamp Invaders Fishing Tournament Tickets, Fri, March 25, 2022, at 7:00 PM | Eventbrite',
+            '*Questions? Contact the Miccosukee Fish & Wildlife Department at 305-223-8380 ext. 2242.',
+          ]
+        : [
+            'Más de $4,000 en premios en efectivo y regalos; presentado por el Departamento de Pesca y Vida Silvestre Miccosukee. Este torneo tiene como objetivo informar al público sobre los efectos nocivos de los peces exóticos y fomentar su extracción y consumo.',
+            '- La pesca comienza el 25 de marzo de 2022 a las 7 PM y finaliza el 26 de marzo de 2022 antes de las 3 PM.',
+            '- Tarifas de Inscripción: $25 para mayores de 11 años, $15 para menores de 10 años - Incluye camiseta y boleto para la rifa. Los primeros 10 niños que se registren recibirán una docena de carnada natural para pescar.',
+            '- Ubicación: Miccosukee Resort & Gaming',
+            '- Registro y Más Información: Removal Of The Swamp Invaders Fishing Tournament Tickets, Fri, March 25, 2022, at 7:00 PM | Eventbrite​',
+            '*¿Preguntas? Comuníquese con el Departamento de Pesca y Vida Silvestre Miccosukee al 305-223-8380 ext. 2242.',
+          ],
       // format is html or youtube
       buttons: [
         {
