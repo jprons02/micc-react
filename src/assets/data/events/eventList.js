@@ -43,24 +43,6 @@ export const events = (language) => {
     },
     */
     {
-      title: 'American Indian Day (Virtual Event)',
-      type: 'standard',
-      //link: "/virtual-event/aid",
-      category: '',
-      //annual: true,
-      admission: language ? 'Free - $10' : 'Gratis - $10',
-      startDate: '9/20/2021',
-      endDate: '9/25/2021',
-      excerpt: language
-        ? '“A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes...'
-        : '“A Celebration of Indigenous Nations” (Una Celebración de las Naciones Indígenas) es un festival virtual de una semana de duración que incluye actuaciones y presentaciones que muestran la cultura y las tradiciones de las tribus...',
-      fullDescription: [
-        language
-          ? 'Celebrate American Indian Day from September 20 - 25 alongside the Miccosukee Tribe of Indians of Florida. “A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes around the globe. Enjoy this virtual event with the whole family from the comfort of your home and learn about the art, lifestyle and customs of modern-day Natives.'
-          : 'Celebre el Día del Nativo Americano del 20 al 25 de septiembre junto a la Tribu de Indios Miccosukee de Florida. “A Celebration of Indigenous Nations” (Una Celebración de las Naciones Indígenas) es un festival virtual de una semana de duración que incluye actuaciones y presentaciones que muestran la cultura y las tradiciones de las tribus nativas americanas de todo el mundo. Disfrute de este evento virtual con toda la familia desde la comodidad de su hogar y aprenda sobre el arte, el estilo de vida y las costumbres de los nativos de hoy en día.',
-      ],
-    },
-    {
       title: 'Removal of the Swamp Invaders Fishing Tournament',
       type: 'standard',
       //link: "/virtual-event/aid",
@@ -101,6 +83,24 @@ export const events = (language) => {
             'https://www.eventbrite.com/e/removal-of-the-swamp-invaders-fishing-tournament-tickets-265331462547?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=escbhttps://www.eventbrite.com/e/2nd-annual-removal-of-the-swamp-invaders-fishing-tournament-tickets-56061585712',
           target: '_blank',
         },
+      ],
+    },
+    {
+      title: 'American Indian Day (Virtual Event)',
+      type: 'standard',
+      //link: "/virtual-event/aid",
+      category: '',
+      //annual: true,
+      admission: language ? 'Free - $10' : 'Gratis - $10',
+      startDate: '9/20/2021',
+      endDate: '9/25/2021',
+      excerpt: language
+        ? '“A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes...'
+        : '“A Celebration of Indigenous Nations” (Una Celebración de las Naciones Indígenas) es un festival virtual de una semana de duración que incluye actuaciones y presentaciones que muestran la cultura y las tradiciones de las tribus...',
+      fullDescription: [
+        language
+          ? 'Celebrate American Indian Day from September 20 - 25 alongside the Miccosukee Tribe of Indians of Florida. “A Celebration of Indigenous Nations” is a week-long virtual festival including performances and presentations showcasing the culture and traditions of Native American Tribes around the globe. Enjoy this virtual event with the whole family from the comfort of your home and learn about the art, lifestyle and customs of modern-day Natives.'
+          : 'Celebre el Día del Nativo Americano del 20 al 25 de septiembre junto a la Tribu de Indios Miccosukee de Florida. “A Celebration of Indigenous Nations” (Una Celebración de las Naciones Indígenas) es un festival virtual de una semana de duración que incluye actuaciones y presentaciones que muestran la cultura y las tradiciones de las tribus nativas americanas de todo el mundo. Disfrute de este evento virtual con toda la familia desde la comodidad de su hogar y aprenda sobre el arte, el estilo de vida y las costumbres de los nativos de hoy en día.',
       ],
     },
     /*

@@ -32,6 +32,7 @@ import { standardLinkColor, errorColor } from 'themes/colors.js';
 
 // Context
 import { useLanguage } from 'contexts/languageContext';
+import { ContactsOutlined } from '@material-ui/icons';
 
 const useStyles = makeStyles(styles);
 
