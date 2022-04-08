@@ -3,7 +3,7 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from 'assets/media/img/events/aid/21/aid_2021_popup_min.jpg';
-import mrgImage from 'assets/media/img/popups/MonthlyPayouts_Calendar_April.jpeg';
+import mrgImage from 'assets/media/img/popups/Bingo_promo_ENG.jpg';
 import promoImage1 from 'assets/media/img/popups/oxford_luggage.jpg';
 import hubPopup from 'assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg';
 import jobFair from 'assets/media/img/popups/JOBFair2021_WebSlider.jpg';
@@ -79,13 +79,13 @@ const mrgPopup = {
     start: {
       year: '22',
       month: 'April',
-      day: '1',
+      day: '10',
       time: '',
     },
     end: {
       year: '22',
       month: 'April',
-      day: '15',
+      day: '30',
       time: '',
     },
   }),
@@ -93,8 +93,8 @@ const mrgPopup = {
   content: {
     image: mrgImage,
     alt: 'monthly payouts',
-    linkType: '',
-    link: '',
+    linkType: 'internal',
+    link: '/mrg/bingo',
   },
 };
 const mrgGamingPromotionsPopup = {
