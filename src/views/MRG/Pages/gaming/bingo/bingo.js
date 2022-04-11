@@ -133,10 +133,10 @@ const Bingo = () => {
                       : 'Todos los equipos electrónicos serán desinfectados antes y después de cada uso.'}
                   </li>
                 </ul>
-                {isRunning([2022, 2, 10], [2022, 3, 27]) ? (
+                {isRunning([2022, 4, 10], [2022, 5, 1]) ? (
                   <a
                     target="_blank"
-                    href="https://mapa-media.s3.amazonaws.com/website/Bingo+Program+March+2022.pdf"
+                    href="https://mapa-media.s3.amazonaws.com/website/april_bingo_program.pdf"
                   >
                     <img
                       style={{
@@ -168,9 +168,3 @@ const Bingo = () => {
 };
 
 export default Bingo;
-
-/*
-Don’t miss the Holiday Bingo Extravaganza, paying nearly $20,000 on Christmas Day and over $50,000 on New Year’s Eve!
-
-¡No se pierda el Holiday Bingo Extravaganza, pagando casi $20,000 el día de Navidad y más de $50,000 la víspera de Año Nuevo!
-*/
