@@ -35,7 +35,11 @@ const getEmail = (value) => {
         'fbutera@miccosukee.com',
       ];
     case 'Gaming Machines':
-      return ['EPerez@miccosukee.com', 'HClemente@miccosukee.com'];
+      return [
+        'Bking@miccosukee.com',
+        'gbotero@miccosukee.com',
+        'crodriguez@miccosukee.com',
+      ];
     case 'Group Sales':
       return [
         'ggalarza@miccosukee.com',
