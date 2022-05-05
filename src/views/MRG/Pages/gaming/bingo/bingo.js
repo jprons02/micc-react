@@ -136,9 +136,6 @@ const Bingo = () => {
                 {isRunning([2022, 5, 1], [2022, 5, 29]) ? (
                   <a
                     target="_blank"
-                    /* CHANGE THIS LINK */
-                    /* CHANGE THIS LINK */
-                    /* CHANGE THIS LINK */
                     href="https://mapa-media.s3.amazonaws.com/website/may_bingo_program.pdf"
                   >
                     <img
