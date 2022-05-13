@@ -140,19 +140,22 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning([2022, 3, 18]) ? (
+          {isRunning([2022, 5, 20]) ? (
             <StandardAlert
               message={
                 <div id="alert1a">
                   {language ? (
                     <div>
-                      <b>High Limit Room now open 24/7.</b>
+                      <b>
+                        Now Open! New 24/7 Smoking Casino, located next to the
+                        Miccosukee One Player’s Club.
+                      </b>
                     </div>
                   ) : (
                     <div>
                       <b>
-                        Salón de Altas Apuestas ahora abierto 24 horas al día, 7
-                        días a la semana.
+                        ¡Ya Abierto! Nuevo Casino para Fumadores abierto 24/7,
+                        ubicado al lado del Miccosukee One Player’s Club.
                       </b>
                     </div>
                   )}
@@ -162,7 +165,32 @@ export default function Miccosukee(props) {
               color="success"
               //icon="info_outline"
             />
-          ) : null}
+          ) : (
+            <StandardAlert
+              message={
+                <div id="alert1a">
+                  {language ? (
+                    <div>
+                      <b>
+                        Coming Soon! New 24/7 Smoking Casino opening on Friday,
+                        May 20 at 9 AM.
+                      </b>
+                    </div>
+                  ) : (
+                    <div>
+                      <b>
+                        ¡Próximamente! Nuevo Casino para Fumadores abriendo 24/7
+                        a partir del viernes, 20 de mayo a las 9 AM.
+                      </b>
+                    </div>
+                  )}
+                </div>
+              }
+              close
+              color="success"
+              //icon="info_outline"
+            />
+          )}
           <StandardAlert
             message={
               <div id="alert2">
@@ -334,3 +362,13 @@ export default function Miccosukee(props) {
  * /promotions take you to current month
  * /promotions#december take you to specified month but to prevent error, if image doesnt exist use current month
  */
+
+/* 
+Coming Soon! New 24/7 Smoking Casino opening on Friday, May 20 at 9 AM.
+
+¡Próximamente! Nuevo Casino para Fumadores abriendo 24/7 a partir del viernes, 20 de mayo a las 9 AM.
+
+Now Open! New 24/7 Smoking Casino, located next to the Miccosukee One Player’s Club.
+
+¡Ya Abierto! Nuevo Casino para Fumadores abierto 24/7, ubicado al lado del Miccosukee One Player’s Club.
+*/
