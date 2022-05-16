@@ -147,14 +147,14 @@ export default function Miccosukee(props) {
                   {language ? (
                     <div>
                       <b>
-                        Now Open! New 24/7 Smoking Casino, located next to the
-                        Miccosukee One Player’s Club.
+                        Now Open! New 24/7 Smoking Casino Area, located next to
+                        the Miccosukee One Player’s Club.
                       </b>
                     </div>
                   ) : (
                     <div>
                       <b>
-                        ¡Ya Abierto! Nuevo Casino para Fumadores abierto 24/7,
+                        ¡Ya Abierto! Nuevo Área de Juego para Fumadores 24/7,
                         ubicado al lado del Miccosukee One Player’s Club.
                       </b>
                     </div>
@@ -172,15 +172,16 @@ export default function Miccosukee(props) {
                   {language ? (
                     <div>
                       <b>
-                        Coming Soon! New 24/7 Smoking Casino opening on Friday,
-                        May 20 at 9 AM.
+                        Coming Soon! New 24/7 Smoking Casino Area opening on
+                        Friday, May 20 at 9 AM.
                       </b>
                     </div>
                   ) : (
                     <div>
                       <b>
-                        ¡Próximamente! Nuevo Casino para Fumadores abriendo 24/7
-                        a partir del viernes, 20 de mayo a las 9 AM.
+                        ¡Próximamente! Nuevo Área de Juego para Fumadores
+                        abriendo 24/7 a partir del viernes, 20 de mayo a las 9
+                        AM.
                       </b>
                     </div>
                   )}
