@@ -154,7 +154,7 @@ export default function Miccosukee(props) {
                   ) : (
                     <div>
                       <b>
-                        ¡Ya Abierto! Nuevo Área de Juego para Fumadores 24/7,
+                        ¡Ya Abierto! Nueva Área de Juego para Fumadores 24/7,
                         ubicado al lado del Miccosukee One Player’s Club.
                       </b>
                     </div>
@@ -179,7 +179,7 @@ export default function Miccosukee(props) {
                   ) : (
                     <div>
                       <b>
-                        ¡Próximamente! Nuevo Área de Juego para Fumadores
+                        ¡Próximamente! Nueva Área de Juego para Fumadores
                         abriendo 24/7 a partir del viernes, 20 de mayo a las 9
                         AM.
                       </b>
