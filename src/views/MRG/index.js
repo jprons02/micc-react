@@ -147,15 +147,15 @@ export default function Miccosukee(props) {
                   {language ? (
                     <div>
                       <b>
-                        Now Open! New 24/7 Smoking Casino Area, located next to
+                        Now Open 24/7! New Smoking Gaming Area, located next to
                         the Miccosukee One Player’s Club.
                       </b>
                     </div>
                   ) : (
                     <div>
                       <b>
-                        ¡Ya Abierto! Nueva Área de Juego para Fumadores 24/7,
-                        ubicado al lado del Miccosukee One Player’s Club.
+                        ¡Ya Abierta 24/7! Nueva Área de Juego para Fumadores,
+                        ubicada al lado del Miccosukee One Player’s Club.
                       </b>
                     </div>
                   )}
