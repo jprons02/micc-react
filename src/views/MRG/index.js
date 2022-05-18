@@ -172,7 +172,7 @@ export default function Miccosukee(props) {
                   {language ? (
                     <div>
                       <b>
-                        Coming Soon! New 24/7 Smoking Casino Area opening on
+                        Coming Soon! New 24/7 Smoking Gaming Area opening on
                         Friday, May 20 at 9 AM.
                       </b>
                     </div>
