@@ -3,7 +3,7 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from 'assets/media/img/events/aid/21/aid_2021_popup_min.jpg';
-import mrgImage from 'assets/media/img/popups/MonthlyPayouts_Calendar_May.jpeg';
+import mrgImage from 'assets/media/img/popups/large-24hr-gmaing-friday.jpg';
 import promoImage1 from 'assets/media/img/popups/oxford_luggage.jpg';
 import hubPopup from 'assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg';
 import jobFair from 'assets/media/img/popups/JOBFair2021_WebSlider.jpg';
@@ -85,7 +85,7 @@ const mrgPopup = {
     end: {
       year: '22',
       month: 'May',
-      day: '31',
+      day: '28',
       time: '',
     },
   }),
