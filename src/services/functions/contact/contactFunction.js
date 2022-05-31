@@ -17,23 +17,11 @@ const getEmail = (value) => {
     case 'Event Tickets':
       return ['sales@miccosukee.com'];
     case 'Food & Beverage':
-      return [
-        'dgomez@miccosukee.com',
-        'cbillie@miccosukee.com',
-        'raxenfeld@miccosukee.com',
-        'kwhiting@miccosukee.com',
-        'fbutera@miccosukee.com',
-      ];
+      return ['F&BSupervisors@miccosukee.com'];
     case 'Finance & Accounting':
       return ['MIGAccountingSupervisors@miccosukee.com'];
     case 'Food & Beverage – Comment Card':
-      return [
-        'dgomez@miccosukee.com',
-        'cbillie@miccosukee.com',
-        'raxenfeld@miccosukee.com',
-        'kwhiting@miccosukee.com',
-        'fbutera@miccosukee.com',
-      ];
+      return ['F&BSupervisors@miccosukee.com'];
     case 'Gaming Machines':
       return [
         'Bking@miccosukee.com',
