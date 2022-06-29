@@ -1,38 +1,41 @@
-import React, { useContext, useEffect } from "react";
-import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router-dom";
+import React, { useContext, useEffect } from 'react';
+import { createBrowserHistory } from 'history';
+import { Router, Route, Switch } from 'react-router-dom';
 
 // google analytics
-import GA4React from "ga-4-react";
+import GA4React from 'ga-4-react';
 
 // metatag component
-import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
+import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 
 // context
-import { LanguageProvider } from "contexts/languageContext.js";
-import { PopupProvider } from "contexts/PopupContext.js";
-import { AlertContext } from "contexts/AlertContext.js";
-import { ContactFormProvider } from "contexts/ContactFormContext.js";
-import { ContactModalProvider } from "contexts/ContactFormModalContext.js";
-import { FoodMenuProvider } from "contexts/FoodMenuContext.js";
-import { MobileMenuDrawerProvider } from "contexts/MobileMenuDrawerContext.js";
+import { LanguageProvider } from 'contexts/languageContext.js';
+import { PopupProvider } from 'contexts/PopupContext.js';
+import { AlertContext } from 'contexts/AlertContext.js';
+import { ContactFormProvider } from 'contexts/ContactFormContext.js';
+import { ContactModalProvider } from 'contexts/ContactFormModalContext.js';
+import { FoodMenuProvider } from 'contexts/FoodMenuContext.js';
+import { MobileMenuDrawerProvider } from 'contexts/MobileMenuDrawerContext.js';
 
 // Snackbar
-import SnackbarContent from "components/Snackbar/SnackbarContent.js";
-import Check from "@material-ui/icons/Check";
+import SnackbarContent from 'components/Snackbar/SnackbarContent.js';
+import Check from '@material-ui/icons/Check';
 
 // my pages
-import Miccosukee from "views/Miccosukee";
-import MRG from "views/MRG";
-import Golf from "views/Golf";
-import Village from "views/Village";
-import Airboats from "views/Airboats";
-import History from "views/History";
-import Administration from "views/Administration";
-import AID from "views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js";
+import Miccosukee from 'views/Miccosukee';
+import MRG from 'views/MRG';
+import Golf from 'views/Golf';
+import Village from 'views/Village';
+import Airboats from 'views/Airboats';
+import History from 'views/History';
+import Administration from 'views/Administration';
+import AID from 'views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js';
+
+// landing pages
+import Tomahawk from 'views/LandingPages/tomahawk.js';
 
 // my components
-import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
 
 var hist = createBrowserHistory();
 
@@ -41,14 +44,14 @@ const App = () => {
 
   useEffect(() => {
     //https://www.npmjs.com/package/ga-4-react
-    const trackingId = "UA-81355839-8"; // Replace with your Google Analytics tracking ID
+    const trackingId = 'UA-81355839-8'; // Replace with your Google Analytics tracking ID
     const history = createBrowserHistory();
     const ga4react = new GA4React(trackingId);
     ga4react.initialize().then(
       (ga4) => {
         history.listen((location) => {
           ga4.pageview(window.location.pathname);
-          ga4.gtag("event", "pageview", window.location.pathname);
+          ga4.gtag('event', 'pageview', window.location.pathname);
         });
       },
       (err) => {
@@ -62,21 +65,21 @@ const App = () => {
   const renderSnackbar = () => {
     // snackbar message determined by alert
     const getMessage = (id) => {
-      if (id === "virtualEventLoginId") {
+      if (id === 'virtualEventLoginId') {
         return (
           <span>
             <b>Congratulations!</b> You have successfully logged in!
           </span>
         );
       }
-      if (id === "signupAlertId") {
+      if (id === 'signupAlertId') {
         return (
           <span>
             <b>Signup Successful!</b>
           </span>
         );
       }
-      if (id === "contactAlertId") {
+      if (id === 'contactAlertId') {
         return (
           <span>
             <b>Message Sent Successfully!</b>
@@ -91,10 +94,10 @@ const App = () => {
         return (
           <div
             style={{
-              position: "fixed",
+              position: 'fixed',
               bottom: 0,
               zIndex: 5,
-              width: "100%",
+              width: '100%',
             }}
           >
             <SnackbarContent
@@ -127,6 +130,9 @@ const App = () => {
                     <Route path="/airboats" component={Airboats} />
                     <Route path="/history" component={History} />
                     <Route path="/administration" component={Administration} />
+                    {/* LANDING PAGES */}
+                    <Route exact path={'/tomahawk'} component={Tomahawk} />
+                    {/* END LANDING PAGES */}
                     <Route path="/" component={Miccosukee} />
                   </Switch>
                 </Router>

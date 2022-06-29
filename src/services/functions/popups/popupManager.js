@@ -3,7 +3,7 @@
 
 //import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
 import aidImage from 'assets/media/img/events/aid/21/aid_2021_popup_min.jpg';
-import mrgImage from 'assets/media/img/popups/MonthlyPayouts_Calendar_May.jpeg';
+import mrgImage from 'assets/media/img/popups/july_bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/oxford_luggage.jpg';
 import hubPopup from 'assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg';
 import jobFair from 'assets/media/img/popups/JOBFair2021_WebSlider.jpg';
@@ -78,14 +78,14 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: '22',
-      month: 'May',
-      day: '31',
+      month: 'June',
+      day: '27',
       time: '',
     },
     end: {
       year: '22',
-      month: 'June',
-      day: '15',
+      month: 'August',
+      day: '1',
       time: '',
     },
   }),
@@ -93,8 +93,8 @@ const mrgPopup = {
   content: {
     image: mrgImage,
     alt: 'monthly payouts',
-    linkType: 'internal',
-    link: '/mrg/promotions',
+    linkType: 'external',
+    link: 'https://mapa-media.s3.amazonaws.com/website/july_bingo_program.pdf',
   },
 };
 const mrgGamingPromotionsPopup = {

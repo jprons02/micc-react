@@ -1,19 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
 // Context
-import { ContactModalContext } from "contexts/ContactFormModalContext";
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext";
-import { ContactFormContext } from "contexts/ContactFormContext";
+import { ContactModalContext } from 'contexts/ContactFormModalContext';
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext';
+import { ContactFormContext } from 'contexts/ContactFormContext';
 
 // My Components
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
 
 // Images
-import emblem from "assets/media/img/miccosukee/MiccosukeeEmblem_Color.svg";
+import emblem from 'assets/media/img/miccosukee/MiccosukeeEmblem_Color.svg';
 
 // Styles
-import styles from "assets/jss/material-kit-react/components/footerStyle.js";
-import { makeStyles } from "@material-ui/core/styles";
+import styles from 'assets/jss/material-kit-react/components/footerStyle.js';
+import { makeStyles } from '@material-ui/core/styles';
+
+// Legal
+import { privacyPolicy } from 'business_info/legal';
+import { cookiePolicy } from 'business_info/legal';
+import { termsConditions } from 'business_info/legal';
+
 const useStyles = makeStyles(styles);
 
 const MiccosukeeFooter = () => {
@@ -39,9 +45,9 @@ const MiccosukeeFooter = () => {
       ...formValues,
       inputValues: {
         ...formValues.inputValues,
-        ["select"]: "Media Inquiry",
-        ["selectError"]: false,
-        ["selectTouched"]: true,
+        ['select']: 'Media Inquiry',
+        ['selectError']: false,
+        ['selectTouched']: true,
       },
     });
     openModal(setState);
@@ -51,27 +57,63 @@ const MiccosukeeFooter = () => {
     <div>
       <div
         style={{
-          fontSize: "10px",
-          display: "flex",
-          alignItems: "center",
+          fontSize: '10px',
+          display: 'flex',
+          alignItems: 'center',
         }}
         className={classes.left}
       >
         <img
-          style={{ width: "16px", marginRight: "2px" }}
+          style={{ width: '16px', marginRight: '2px' }}
           alt="miccosukee emblem"
           src={emblem}
-        />{" "}
+        />{' '}
         Copyright &copy; {1900 + new Date().getYear()}
       </div>
-      <div style={{ padding: "0px" }} className={classes.right}>
+      <div style={{ padding: '0px' }} className={classes.right}>
         <span
           onClick={() => handleClick(setShowContactModal)}
-          style={{ cursor: "pointer", fontWeight: "500", fontSize: "11px" }}
+          style={{
+            cursor: 'pointer',
+            fontWeight: '500',
+            fontSize: '11px',
+            marginRight: '12px',
+          }}
           role="button"
         >
           MEDIA INQUIRIES
         </span>
+        <a
+          target="_blank"
+          href={privacyPolicy}
+          style={{
+            color: '#3c4858',
+            fontWeight: '500',
+            fontSize: '11px',
+            marginRight: '12px',
+          }}
+        >
+          PRIVACY POLICY
+        </a>
+        <a
+          target="_blank"
+          href={cookiePolicy}
+          style={{
+            color: '#3c4858',
+            fontWeight: '500',
+            fontSize: '11px',
+            marginRight: '12px',
+          }}
+        >
+          COOKIE POLICY
+        </a>
+        <a
+          target="_blank"
+          href={termsConditions}
+          style={{ color: '#3c4858', fontWeight: '500', fontSize: '11px' }}
+        >
+          TERMS &amp; CONDITIONS
+        </a>
       </div>
       {/*
       <CustomContactModal

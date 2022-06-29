@@ -1,48 +1,48 @@
-import React, { useEffect, useContext } from "react";
-import { Switch, Route, useRouteMatch, useLocation } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import React, { useEffect, useContext } from 'react';
+import { Switch, Route, useRouteMatch, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 //components
-import Header from "components/CustomHeaders/MiccosukeeHeader.js";
-import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
-import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
+import Header from 'components/CustomHeaders/MiccosukeeHeader.js';
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
+import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 
 // Context
-import { PopupContext } from "contexts/PopupContext.js";
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { PopupContext } from 'contexts/PopupContext.js';
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
 
 //pages
-import Home from "./Pages/home";
+import Home from './Pages/home';
 
 //import MRG from "./Pages/mrg";
-import GamingGolf from "./Pages/gamingGolf";
-import Everglades from "./Pages/everglades";
-import Events from "./Pages/events";
-import EventPage from "./Pages/eventPage";
-import HistoryAdmin from "./Pages/historyAdmin";
-import MiccosukeeErrorPage from "views/Miccosukee/Pages/error/miccosukeeErrorPage.js";
+import GamingGolf from './Pages/gamingGolf';
+import Everglades from './Pages/everglades';
+import Events from './Pages/events';
+import EventPage from './Pages/eventPage';
+import HistoryAdmin from './Pages/historyAdmin';
+import MiccosukeeErrorPage from 'views/Miccosukee/Pages/error/miccosukeeErrorPage.js';
 
 // business variables
-import { mrgBusinessInfo } from "business_info/genericInfo.js";
+import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 
 // styles
-import styles from "assets/jss/material-kit-react/views/miccosukee/index.js";
+import styles from 'assets/jss/material-kit-react/views/miccosukee/index.js';
 
 // services
-import { popupManager } from "services/functions/popups/popupManager";
-import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
-import { getMetaData } from "services/functions/getMetaData.js";
+import { popupManager } from 'services/functions/popups/popupManager';
+import { LocalConvenienceStoreOutlined } from '@material-ui/icons';
+import { getMetaData } from 'services/functions/getMetaData.js';
 
 // context
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 const useStyles = makeStyles(styles);
 
@@ -138,7 +138,7 @@ const Miccosukee = (props) => {
         <Header />
         <ReactHelmetComponent url={window.location.pathname} />
         <Switch>
-          <Route exact path={"/"} component={Home} />
+          <Route exact path={'/'} component={Home} />
           <Route exact path={`${path}gaming-golf`} component={GamingGolf} />
           <Route exact path={`${path}glades`} component={Everglades} />
           <Route exact path={`${path}events`} component={Events} />
@@ -152,7 +152,7 @@ const Miccosukee = (props) => {
           language={language}
           showModal={showContactModal}
           closeModal={() => closeModal(setShowContactModal)}
-          entity={{ name: "media" }}
+          entity={{ name: 'media' }}
         />
       </div>
     </div>

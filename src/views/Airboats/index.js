@@ -1,50 +1,50 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from 'react';
 import {
   Switch,
   Route,
   useRouteMatch,
   useLocation,
   Link,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 // Icons
-import Warning from "@material-ui/icons/Warning";
+import Warning from '@material-ui/icons/Warning';
 
 // Context
-import { PopupContext } from "contexts/PopupContext.js";
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { PopupContext } from 'contexts/PopupContext.js';
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // Theme
-import { theme } from "../../themes";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { theme } from '../../themes';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 // My components
-import AirboatsHeader from "components/CustomHeaders/AirboatsHeader.js";
-import AirboatsFooter from "components/CustomFooters/AirboatsFooter.js";
-import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
-import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
-import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
+import AirboatsHeader from 'components/CustomHeaders/AirboatsHeader.js';
+import AirboatsFooter from 'components/CustomFooters/AirboatsFooter.js';
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
+import StandardAlert from 'components/CustomAlert/CustomStandardAlert.js';
+import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 
 // Pages
-import Home from "views/Airboats/Pages/home/home.js";
-import AirboatsCovidPage from "views/Airboats/Pages/business_info/airboatsCovidPage.js";
-import AirboatsErrorPage from "views/Airboats/Pages/error/airboatsErrorPage.js";
+import Home from 'views/Airboats/Pages/home/home.js';
+import AirboatsCovidPage from 'views/Airboats/Pages/business_info/airboatsCovidPage.js';
+import AirboatsErrorPage from 'views/Airboats/Pages/error/airboatsErrorPage.js';
 
 // Business info
-import { airboatsBusinessInfo } from "business_info/genericInfo.js";
+import { airboatsBusinessInfo } from 'business_info/genericInfo.js';
 
 // services
-import { popupManager } from "services/functions/popups/popupManager";
-import { isRunning } from "services/functions/scheduleThis";
+import { popupManager } from 'services/functions/popups/popupManager';
+import { isRunning } from 'services/functions/scheduleThis';
 
 // Snackbar
-import SnackbarContent from "components/Snackbar/SnackbarContent.js";
+import SnackbarContent from 'components/Snackbar/SnackbarContent.js';
 
 // theme colors
-import { standardLinkColor } from "themes/colors.js";
+import { standardLinkColor } from 'themes/colors.js';
 
 export default function Miccosukee(props) {
   const language = useLanguage();
@@ -79,16 +79,8 @@ export default function Miccosukee(props) {
     setState(false);
   };
 
-  /*
-Week of December 27, 2021 - January 2, 2022 
-Monday-Thursday - Open
-Friday & Saturday- Closed  NEW YEAR’S EVE CLOSED (FRIDAY ONLY)
-Sunday- Open SATURDAY AND SUNDAY OPEN
-Closed on New Year's Eve.
-*/
-
   return (
-    <ThemeProvider theme={theme("airboats")}>
+    <ThemeProvider theme={theme('airboats')}>
       <div>
         <AirboatsHeader />
         <ReactHelmetComponent url={window.location.pathname} />

@@ -1,18 +1,23 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from 'react';
 
 // Custom Component
-import Footer from "components/Footer/Footer.js";
+import Footer from 'components/Footer/Footer.js';
 
 // Theme
-import { golfColor } from "themes/colors.js";
+import { golfColor } from 'themes/colors.js';
 
 // Business Info
-import { golfBusinessInfo } from "business_info/genericInfo.js";
-import { golfSocialMedia } from "business_info/socialMedia.js";
+import { golfBusinessInfo } from 'business_info/genericInfo.js';
+import { golfSocialMedia } from 'business_info/socialMedia.js';
 
 // Context
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
+
+// Legal
+import { privacyPolicy } from 'business_info/legal';
+import { cookiePolicy } from 'business_info/legal';
+import { termsConditions } from 'business_info/legal';
 
 const GolfFooter = () => {
   const language = useLanguage();
@@ -35,55 +40,70 @@ const GolfFooter = () => {
 
   const footerArray = [
     {
-      header: "MICCOSUKEE",
+      header: 'MICCOSUKEE',
       subMenu: [
         {
-          linkText: language ? "Main Home" : "Página Principal",
-          linkTo: "/",
+          linkText: language ? 'Main Home' : 'Página Principal',
+          linkTo: '/',
         },
         {
-          linkText: "Covid-19",
-          linkTo: "/golf/covid-19",
+          linkText: 'Covid-19',
+          linkTo: '/golf/covid-19',
         },
         {
           externalLink: true,
-          linkText: language ? "Careers" : "Empleos",
+          linkText: language ? 'Careers' : 'Empleos',
           linkTo:
-            "https://www.indeed.com/cmp/Miccosukee-Tribe-of-Indians-of-Florida/jobs",
+            'https://www.indeed.com/cmp/Miccosukee-Tribe-of-Indians-of-Florida/jobs',
         },
       ],
     },
     {
-      header: language ? "ADDITIONAL LINKS" : "ENLACES ADICIONALES ",
+      header: language ? 'ADDITIONAL LINKS' : 'ENLACES ADICIONALES ',
       subMenu: [
         {
-          linkText: language ? "Contact" : "Contacto",
-          linkTo: "#",
+          linkText: language ? 'Contact' : 'Contacto',
+          linkTo: '#',
           clickFunction: () => openModal(setShowContactModal),
         },
         {
           externalLink: true,
-          linkText: language ? "Directions" : "Direcciones",
-          linkTo: "https://goo.gl/maps/SxyAMrs1jSX7MrVK8",
+          linkText: language ? 'Directions' : 'Direcciones',
+          linkTo: 'https://goo.gl/maps/SxyAMrs1jSX7MrVK8',
+        },
+        {
+          externalLink: true,
+          linkText: 'Privacy Policy',
+          linkTo: privacyPolicy,
+        },
+        {
+          externalLink: true,
+          linkText: 'Cookie Policy',
+          linkTo: cookiePolicy,
+        },
+        {
+          externalLink: true,
+          linkText: 'Terms & Conditions',
+          linkTo: termsConditions,
         },
       ],
     },
     {
-      header: language ? "FOLLOW US" : "CONÉCTESE CON NOSOTROS",
+      header: language ? 'FOLLOW US' : 'CONÉCTESE CON NOSOTROS',
       subMenu: [
         {
           externalLink: true,
-          linkText: "Facebook",
+          linkText: 'Facebook',
           linkTo: golfSocialMedia.facebook,
         },
         {
           externalLink: true,
-          linkText: "Instagram",
+          linkText: 'Instagram',
           linkTo: golfSocialMedia.instagram,
         },
         {
           externalLink: true,
-          linkText: "Twitter",
+          linkText: 'Twitter',
           linkTo: golfSocialMedia.twitter,
         },
       ],
@@ -91,9 +111,9 @@ const GolfFooter = () => {
     {
       action: true,
       headerDesktop: language
-        ? "SIGN UP FOR OUR PROMOTIONS"
-        : "INSCRÍBASE A NUESTRAS PROMOCIONES",
-      headerMobile: language ? "SUBSCRIBE" : "SUSCRÍBASE",
+        ? 'SIGN UP FOR OUR PROMOTIONS'
+        : 'INSCRÍBASE A NUESTRAS PROMOCIONES',
+      headerMobile: language ? 'SUBSCRIBE' : 'SUSCRÍBASE',
     },
   ];
 

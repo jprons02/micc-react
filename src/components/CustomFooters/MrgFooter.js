@@ -1,18 +1,23 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from 'react';
 
 // Custom Component
-import Footer from "components/Footer/Footer.js";
+import Footer from 'components/Footer/Footer.js';
 
 // Theme
-import { mrgColor } from "themes/colors.js";
+import { mrgColor } from 'themes/colors.js';
 
 // Business Info
-import { mrgBusinessInfo } from "business_info/genericInfo.js";
-import { mrgSocialMedia } from "business_info/socialMedia.js";
+import { mrgBusinessInfo } from 'business_info/genericInfo.js';
+import { mrgSocialMedia } from 'business_info/socialMedia.js';
 
 // Context
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
+
+// Legal
+import { privacyPolicy } from 'business_info/legal';
+import { cookiePolicy } from 'business_info/legal';
+import { termsConditions } from 'business_info/legal';
 
 const MrgFooter = () => {
   const language = useLanguage();
@@ -35,58 +40,73 @@ const MrgFooter = () => {
 
   const footerArray = [
     {
-      header: "MICCOSUKEE",
+      header: 'MICCOSUKEE',
       subMenu: [
         {
-          linkText: language ? "Main Home" : "Página Principal",
-          linkTo: "/",
+          linkText: language ? 'Main Home' : 'Página Principal',
+          linkTo: '/',
         },
         {
-          linkText: "Covid-19",
-          linkTo: "/mrg/covid-19",
+          linkText: 'Covid-19',
+          linkTo: '/mrg/covid-19',
         },
         {
           externalLink: true,
-          linkText: language ? "Careers" : "Empleos",
+          linkText: language ? 'Careers' : 'Empleos',
           linkTo: mrgBusinessInfo.careersLink,
         },
       ],
     },
     {
-      header: language ? "ADDITIONAL LINKS" : "ENLACES ADICIONALES",
+      header: language ? 'ADDITIONAL LINKS' : 'ENLACES ADICIONALES',
       subMenu: [
         {
-          linkText: language ? "Contact" : "Contacto",
+          linkText: language ? 'Contact' : 'Contacto',
           //linkTo: "#contact",
           clickFunction: () => openModal(setShowContactModal),
         },
         {
           externalLink: true,
-          linkText: language ? "Directions" : "Direcciones",
-          linkTo: "https://goo.gl/maps/yZ9QCXJ869UqZRxJ9",
+          linkText: language ? 'Directions' : 'Direcciones',
+          linkTo: 'https://goo.gl/maps/yZ9QCXJ869UqZRxJ9',
         },
         {
-          linkText: language ? "Banquets & Catering" : "Banquetes y Catering",
-          linkTo: "/mrg/banquets-catering",
+          linkText: language ? 'Banquets & Catering' : 'Banquetes y Catering',
+          linkTo: '/mrg/banquets-catering',
+        },
+        {
+          externalLink: true,
+          linkText: 'Privacy Policy',
+          linkTo: privacyPolicy,
+        },
+        {
+          externalLink: true,
+          linkText: 'Cookie Policy',
+          linkTo: cookiePolicy,
+        },
+        {
+          externalLink: true,
+          linkText: 'Terms & Conditions',
+          linkTo: termsConditions,
         },
       ],
     },
     {
-      header: language ? "FOLLOW US" : "CONÉCTESE CON NOSOTROS",
+      header: language ? 'FOLLOW US' : 'CONÉCTESE CON NOSOTROS',
       subMenu: [
         {
           externalLink: true,
-          linkText: "Facebook",
+          linkText: 'Facebook',
           linkTo: mrgSocialMedia.facebook,
         },
         {
           externalLink: true,
-          linkText: "Instagram",
+          linkText: 'Instagram',
           linkTo: mrgSocialMedia.instagram,
         },
         {
           externalLink: true,
-          linkText: "Twitter",
+          linkText: 'Twitter',
           linkTo: mrgSocialMedia.twitter,
         },
       ],
@@ -94,9 +114,9 @@ const MrgFooter = () => {
     {
       action: true,
       headerDesktop: language
-        ? "SIGN UP FOR OUR PROMOTIONS"
-        : "INSCRÍBASE A NUESTRAS PROMOCIONES",
-      headerMobile: language ? "SUBSCRIBE" : "SUSCRÍBASE",
+        ? 'SIGN UP FOR OUR PROMOTIONS'
+        : 'INSCRÍBASE A NUESTRAS PROMOCIONES',
+      headerMobile: language ? 'SUBSCRIBE' : 'SUSCRÍBASE',
     },
   ];
 
