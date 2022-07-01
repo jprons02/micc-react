@@ -43,6 +43,29 @@ export const events = (language) => {
     },
     */
     {
+      title: 'Wheels & Meals',
+      type: 'standard',
+      category: '',
+      admission: language
+        ? '$5 cover per specialty vehicles. Free general parking for regular cars.'
+        : '$5 cover per specialty vehicles. Free general parking for regular cars.',
+      startDate: '7/14/2022',
+      endDate: '7/14/2022',
+      startTime: '7:00 P.M.',
+      endTime: '11:00 P.M.',
+      excerpt: language
+        ? 'A car, truck, jeep and motorcycle food truck festival...'
+        : 'A car, truck, jeep and motorcycle food truck festival...',
+
+      fullDescription: language
+        ? [
+            'Roadrage Media presents Wheels & Meals - a car, truck, jeep and motorcycle food truck festival.',
+          ]
+        : [
+            'Roadrage Media presents Wheels & Meals - a car, truck, jeep and motorcycle food truck festival.',
+          ],
+    },
+    {
       title: 'Removal of the Swamp Invaders Fishing Tournament',
       type: 'standard',
       //link: "/virtual-event/aid",
