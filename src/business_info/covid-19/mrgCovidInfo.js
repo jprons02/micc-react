@@ -399,7 +399,7 @@ const MrgCovidInfo = (props) => {
             </li>
             <li style={liStyle}>
               {props.language
-                ? 'All guests must have have a government issued photo ID.'
+                ? 'All guests must have a government-issued photo ID.'
                 : 'Todos los clientes deben tener un documento de identidad con fotografía emitido por el gobierno.'}
             </li>
             <li style={liStyle}>
