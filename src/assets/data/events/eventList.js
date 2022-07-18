@@ -43,6 +43,31 @@ export const events = (language) => {
     },
     */
     {
+      title: 'American Indian Day',
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '9/24/2022',
+      endDate: '9/24/2022',
+      startTime: '12:00 P.M.',
+      endTime: '6:00 P.M.',
+      excerpt: language
+        ? 'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Resort & Gaming! Admission is free, so bring the whole tribe!...'
+        : 'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Resort & Gaming. La entrada es gratuita, ¡así que traiga a toda su tribu!...',
+
+      fullDescription: language
+        ? [
+            'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Resort & Gaming! Admission is free, so bring the whole tribe!',
+            'On American Indian Day, we honor the culture and traditions of indigenous First Nations and their contributions to the world.',
+            'This family-friendly festival provides a glimpse into the Miccosukee Tribe’s culture as we host indigenous craft and food vendors, alligator wrestling shows, airboat rides, and more. Visit us and connect with Miami’s original locals in the heart of the Florida Everglades.',
+          ]
+        : [
+            'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Resort & Gaming. La entrada es gratuita, ¡así que traiga a toda su tribu!',
+            'En el Día del Indio Americano, honramos la cultura y las tradiciones de las Primeras Naciones indígenas y sus contribuciones al mundo.',
+            'Este festival familiar ofrece un vistazo a la cultura de la tribu Miccosukee mientras presentamos vendedores de comida y artesanía indígena, espectáculos de lucha con caimanes, paseos en hidrodeslizador y más. Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.',
+          ],
+    },
+    {
       title: 'Wheels & Meals',
       type: 'standard',
       category: '',
@@ -108,6 +133,7 @@ export const events = (language) => {
         },
       ],
     },
+    /*
     {
       title: 'American Indian Day (Virtual Event)',
       type: 'standard',
@@ -126,6 +152,7 @@ export const events = (language) => {
           : 'Celebre el Día del Nativo Americano del 20 al 25 de septiembre junto a la Tribu de Indios Miccosukee de Florida. “A Celebration of Indigenous Nations” (Una Celebración de las Naciones Indígenas) es un festival virtual de una semana de duración que incluye actuaciones y presentaciones que muestran la cultura y las tradiciones de las tribus nativas americanas de todo el mundo. Disfrute de este evento virtual con toda la familia desde la comodidad de su hogar y aprenda sobre el arte, el estilo de vida y las costumbres de los nativos de hoy en día.',
       ],
     },
+    */
     /*
     {
       title: "Freedom Festival",
