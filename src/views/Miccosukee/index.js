@@ -122,6 +122,14 @@ const Miccosukee = (props) => {
   );
 
   useEffect(() => {
+    // simple reroute
+    if (
+      window.location.pathname === '/gaming-golf' ||
+      window.location.pathname === '/gaming-golf/'
+    ) {
+      props.history.push('/mrg');
+    }
+
     // Closes mobile drawer any time location changes
     setMobileOpen(false);
     // Check if popup should be displayed after location change

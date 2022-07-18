@@ -1,45 +1,45 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from 'react';
 import {
   Switch,
   Route,
   useRouteMatch,
   useLocation,
   Link,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 // Context
-import { TeeTimeProvider } from "contexts/TeeTimeContext.js";
-import { PopupContext } from "contexts/PopupContext.js";
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { TeeTimeProvider } from 'contexts/TeeTimeContext.js';
+import { PopupContext } from 'contexts/PopupContext.js';
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // Theme
-import { theme } from "../../themes";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { theme } from '../../themes';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 // My components
-import GolfHeader from "components/CustomHeaders/GolfHeader.js";
-import GolfFooter from "components/CustomFooters/GolfFooter.js";
-import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
-import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
-import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
+import GolfHeader from 'components/CustomHeaders/GolfHeader.js';
+import GolfFooter from 'components/CustomFooters/GolfFooter.js';
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
+import StandardAlert from 'components/CustomAlert/CustomStandardAlert.js';
+import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 
 // Pages
-import Home from "views/Golf/Pages/home/home.js";
-import Courses from "views/Golf/Pages/courses/courses.js";
-import Rates from "views/Golf/Pages/rates/rates.js";
-import GolfEvents from "views/Golf/Pages/events/golfEvents.js";
-import GolfEventPage from "views/Golf/Pages/events/golfEventPage";
-import GolfCovidPage from "views/Golf/Pages/business_info/golfCovidPage.js";
-import GolfErrorPage from "views/Golf/Pages/error/golfErrorPage.js";
+import Home from 'views/Golf/Pages/home/home.js';
+import Courses from 'views/Golf/Pages/courses/courses.js';
+import Rates from 'views/Golf/Pages/rates/rates.js';
+import GolfEvents from 'views/Golf/Pages/events/golfEvents.js';
+import GolfEventPage from 'views/Golf/Pages/events/golfEventPage';
+import GolfCovidPage from 'views/Golf/Pages/business_info/golfCovidPage.js';
+import GolfErrorPage from 'views/Golf/Pages/error/golfErrorPage.js';
 
 // Business info
-import { golfBusinessInfo } from "business_info/genericInfo.js";
+import { golfBusinessInfo } from 'business_info/genericInfo.js';
 
 // services
-import { popupManager } from "services/functions/popups/popupManager";
+import { popupManager } from 'services/functions/popups/popupManager';
 
 export default function Miccosukee(props) {
   const language = useLanguage();
@@ -75,11 +75,12 @@ export default function Miccosukee(props) {
   };
 
   return (
-    <ThemeProvider theme={theme("golf")}>
+    <ThemeProvider theme={theme('golf')}>
       <TeeTimeProvider>
         <div>
           <GolfHeader />
           <ReactHelmetComponent url={window.location.pathname} />
+          {/*
           <StandardAlert
             message={
               language ? (
@@ -115,6 +116,7 @@ export default function Miccosukee(props) {
             color="info"
             icon="info_outline"
           />
+          */}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route exact path={`${match.path}/courses`} component={Courses} />

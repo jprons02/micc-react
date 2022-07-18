@@ -147,10 +147,17 @@ export default function Miccosukee(props) {
                   {language ? (
                     <div>
                       <b>All gaming areas NOW OPEN 24/7!</b>
+                      <p style={{ fontWeight: '400' }}>
+                        Guests must be 18 or older to enter the building.
+                      </p>
                     </div>
                   ) : (
                     <div>
                       <b>¡Todas las áreas de juego ya están ABIERTAS 24/7!</b>
+                      <p style={{ fontWeight: '400' }}>
+                        Los invitados deben tener 18 años o más para entrar al
+                        establecimiento.
+                      </p>
                     </div>
                   )}
                 </div>
@@ -186,6 +193,7 @@ export default function Miccosukee(props) {
               //icon="info_outline"
             />
           )}
+          {/*
           <StandardAlert
             message={
               <div id="alert2">
@@ -231,6 +239,7 @@ export default function Miccosukee(props) {
             color="info"
             //icon="info_outline"
           />
+          */}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route

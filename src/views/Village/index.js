@@ -1,50 +1,50 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from 'react';
 import {
   Switch,
   Route,
   useRouteMatch,
   useLocation,
   Link,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 // Context
-import { PopupContext } from "contexts/PopupContext.js";
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
-import { PricingModalProvider } from "contexts/PricingModalContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { PopupContext } from 'contexts/PopupContext.js';
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
+import { PricingModalProvider } from 'contexts/PricingModalContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // Theme
-import { theme } from "../../themes";
-import { ThemeProvider } from "@material-ui/core/styles";
+import { theme } from '../../themes';
+import { ThemeProvider } from '@material-ui/core/styles';
 
 // Icons
-import Warning from "@material-ui/icons/Warning";
+import Warning from '@material-ui/icons/Warning';
 
 // My components
-import VillageHeader from "components/CustomHeaders/VillageHeader.js";
-import VillageFooter from "components/CustomFooters/VillageFooter.js";
-import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
-import CustomContactModal from "components/CustomModal/CustomContactModals/CustomContactModal.js";
-import StandardAlert from "components/CustomAlert/CustomStandardAlert.js";
-import ReactHelmetComponent from "components/ReactHelmet/ReactHelmetComponent";
+import VillageHeader from 'components/CustomHeaders/VillageHeader.js';
+import VillageFooter from 'components/CustomFooters/VillageFooter.js';
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
+import StandardAlert from 'components/CustomAlert/CustomStandardAlert.js';
+import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 
 // Pages
-import Home from "views/Village/Pages/Home/home.js";
-import GiftShop from "views/Village/Pages/GiftShop/giftShop.js";
-import Museum from "views/Village/Pages/Museum/museum.js";
-import AlligatorDemos from "views/Village/Pages/AlligatorDemos/alligatorDemos.js";
-import OurLittleShack from "views/Village/Pages/OurLittleShack/ourLittleShack";
-import VillageCovidPage from "views/Village/Pages/business_info/villageCovidPage.js";
-import VillageErrorPage from "views/Village/Pages/error/villageErrorPage.js";
+import Home from 'views/Village/Pages/Home/home.js';
+import GiftShop from 'views/Village/Pages/GiftShop/giftShop.js';
+import Museum from 'views/Village/Pages/Museum/museum.js';
+import AlligatorDemos from 'views/Village/Pages/AlligatorDemos/alligatorDemos.js';
+import OurLittleShack from 'views/Village/Pages/OurLittleShack/ourLittleShack';
+import VillageCovidPage from 'views/Village/Pages/business_info/villageCovidPage.js';
+import VillageErrorPage from 'views/Village/Pages/error/villageErrorPage.js';
 
 // Business info
-import { villageBusinessInfo } from "business_info/genericInfo.js";
-import { villageHours } from "business_info/hours.js";
+import { villageBusinessInfo } from 'business_info/genericInfo.js';
+import { villageHours } from 'business_info/hours.js';
 
 // services
-import { popupManager } from "services/functions/popups/popupManager";
-import { isRunning } from "services/functions/scheduleThis";
+import { popupManager } from 'services/functions/popups/popupManager';
+import { isRunning } from 'services/functions/scheduleThis';
 
 export default function Miccosukee(props) {
   const language = useLanguage();
@@ -86,7 +86,7 @@ export default function Miccosukee(props) {
    */
 
   return (
-    <ThemeProvider theme={theme("village")}>
+    <ThemeProvider theme={theme('village')}>
       <PricingModalProvider>
         <div>
           <VillageHeader />
@@ -121,9 +121,9 @@ export default function Miccosukee(props) {
                   <div>
                     <b>
                       Miccosukee Indian Village is temporarily closed due to
-                      COVID-19, but the Gift Shop will remain open{" "}
-                      {villageHours.poi.giftShop[0].days(language)} from{" "}
-                      {villageHours.poi.giftShop[0].open} -{" "}
+                      COVID-19, but the Gift Shop will remain open{' '}
+                      {villageHours.poi.giftShop[0].days(language)} from{' '}
+                      {villageHours.poi.giftShop[0].open} -{' '}
                       {villageHours.poi.giftShop[0].close}
                     </b>
                   </div>
@@ -132,8 +132,8 @@ export default function Miccosukee(props) {
                     <b>
                       El Miccosukee Indian Village permanecerá cerrado debido a
                       la pandemia del COVID-19, pero el Gift Shop estará abierto
-                      los {villageHours.poi.giftShop[0].days(language)} de{" "}
-                      {villageHours.poi.giftShop[0].open} -{" "}
+                      los {villageHours.poi.giftShop[0].days(language)} de{' '}
+                      {villageHours.poi.giftShop[0].open} -{' '}
                       {villageHours.poi.giftShop[0].close}
                     </b>
                   </div>
@@ -144,6 +144,7 @@ export default function Miccosukee(props) {
               icon={Warning}
             />
           )}
+          {/*
           <StandardAlert
             message={
               language ? (
@@ -178,6 +179,7 @@ export default function Miccosukee(props) {
             color="info"
             icon="info_outline"
           />
+          */}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route
