@@ -33,6 +33,7 @@ import AID from 'views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js';
 
 // landing pages
 import Tomahawk from 'views/LandingPages/tomahawk.js';
+import ResortPackages from 'views/LandingPages/resortPackages.js';
 
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
@@ -132,6 +133,11 @@ const App = () => {
                     <Route path="/administration" component={Administration} />
                     {/* LANDING PAGES */}
                     <Route exact path={'/tomahawk'} component={Tomahawk} />
+                    {/*<Route
+                      exact
+                      path={'/resortpackages'}
+                      component={ResortPackages}
+                    />*/}
                     {/* END LANDING PAGES */}
                     <Route path="/" component={Miccosukee} />
                   </Switch>

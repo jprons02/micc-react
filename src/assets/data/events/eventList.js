@@ -43,6 +43,31 @@ export const events = (language) => {
     },
     */
     {
+      title: 'Carritos y Cafecito',
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '8/6/2022',
+      endDate: '8/6/2022',
+      startTime: '8:00 A.M.',
+      endTime: '12:00 P.M.',
+      excerpt: language
+        ? 'Cruise down nostalgia highway and show off your classic & specialty ride while getting your caffeine fix...'
+        : '¡Navegue por la autopista de la nostalgia y presuma de su vehículo clásico y especializado mientras obtiene su dosis de cafeína...',
+      fullDescription: language
+        ? [
+            'Cruise down nostalgia highway and show off your classic & specialty ride while getting your caffeine fix on Saturday, August 6, from 8 AM - 12 PM at Miccosukee Resort & Gaming!',
+            'Carritos y Cafecito, hosted by Road Rage Media, invites car enthusiasts to show off their specialty vehicles, motorcycles, trucks, and Jeeps while enjoying coffee and plenty of food trucks! Spectators are welcome!',
+            'Cars, coffee, and tasty grub on a Saturday are way better than brunch. We hope to see you there!',
+          ]
+        : [
+            '¡Navegue por la autopista de la nostalgia y presuma de su vehículo clásico y especializado mientras obtiene su dosis de cafeína el sábado, 6 de agosto, de 8 AM a 12 PM en Miccosukee Resort & Gaming!',
+            'Carritos y Cafecito, organizado por Road Rage Media, invita a los entusiastas de automóviles a mostrar sus vehículos especiales, motos, camionetas y Jeeps mientras disfrutan de un café y muchos camiones de comida. ¡Los espectadores son bienvenidos!',
+            'Un sábado con carros, café y comida son mejores que el brunch. ¡Esperamos verlos allí!',
+          ],
+    },
+
+    {
       title: 'American Indian Day',
       type: 'standard',
       category: '',
