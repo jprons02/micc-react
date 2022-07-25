@@ -17,7 +17,8 @@ import MrgFooter from 'components/CustomFooters/MrgFooter.js';
 import styles from 'assets/jss/material-kit-react/views/landingPage.js';
 
 // header image
-import hero from 'assets/media/img/landingPages/tomahawk_webV3.jpeg';
+import heroDesktop from 'assets/media/img/landingPages/tomahawk_webV3_desktop.jpg';
+import heroMobile from 'assets/media/img/landingPages/tomahawk_webV3.jpeg';
 
 // Icons
 import { Icon } from '@material-ui/core';
@@ -28,6 +29,10 @@ import image1 from 'assets/media/img/mrg/amenities/club-egret/club_egret_01.jpg'
 import image2 from 'assets/media/img/mrg/amenities/club-egret/club_egret_01.jpg';
 import image3 from 'assets/media/img/mrg/amenities/club-egret/club_egret_01.jpg';
 
+import image1desktop from 'assets/media/img/landingPages/tomahawk_webV3.jpeg';
+import image2desktop from 'assets/media/img/landingPages/test_club_egret_desktop.jpg';
+import image3desktop from 'assets/media/img/landingPages/test_club_egret_desktop.jpg';
+
 const useStyles = makeStyles(styles);
 
 const ResortPackages = () => {
@@ -36,6 +41,7 @@ const ResortPackages = () => {
   const language = useLanguage();
 
   const renderDesktopView = () => {
+    /*
     const header = () => {
       return (
         <div style={{ textAlign: 'center' }}>
@@ -58,6 +64,9 @@ const ResortPackages = () => {
         </div>
       );
     };
+    */
+    const contentDivStyle = { marginTop: '70px' };
+    const imageStyle = { width: '100%', borderRadius: '10px' };
 
     const horizontalRule = () => {
       return (
@@ -71,20 +80,17 @@ const ResortPackages = () => {
       );
     };
 
+    const bottomSpacer = (pixelNumber) => {
+      return <div style={{ paddingBottom: `${pixelNumber}px` }}></div>;
+    };
+
     const getaway = () => {
       const detailsCss = {
         fontSize: '18px',
       };
       return (
-        <div
-          style={{
-            marginTop: '70px',
-          }}
-        >
-          <img
-            src={image1}
-            style={{ maxWidth: '600px', borderRadius: '10px' }}
-          />
+        <div style={contentDivStyle}>
+          <img src={image1desktop} style={imageStyle} />
           <div style={{ marginTop: '30px' }}>
             <h2
               style={{ color: '#f4004a', fontWeight: '600', fontSize: '30px' }}
@@ -109,15 +115,8 @@ const ResortPackages = () => {
         fontSize: '18px',
       };
       return (
-        <div
-          style={{
-            marginTop: '70px',
-          }}
-        >
-          <img
-            src={image2}
-            style={{ maxWidth: '600px', borderRadius: '10px' }}
-          />
+        <div style={contentDivStyle}>
+          <img src={image2desktop} style={imageStyle} />
           <div style={{ marginTop: '30px' }}>
             <h2
               style={{
@@ -158,15 +157,8 @@ const ResortPackages = () => {
         fontSize: '18px',
       };
       return (
-        <div
-          style={{
-            marginTop: '70px',
-          }}
-        >
-          <img
-            src={image3}
-            style={{ maxWidth: '600px', borderRadius: '10px' }}
-          />
+        <div style={contentDivStyle}>
+          <img src={image3desktop} style={imageStyle} />
           <div style={{ marginTop: '30px' }}>
             <h2
               style={{
@@ -201,23 +193,29 @@ const ResortPackages = () => {
     };
 
     return (
-      <div
-        id="mobile"
-        className={classes.container}
-        style={{ paddingBottom: '80px' }}
-      >
-        {header()}
-        <RaisedContainer customMargin="-18px">
-          {getaway()}
-          {horizontalRule()}
-          {adventurePackage()}
-          {horizontalRule()}
-          {golfPackage()}
-        </RaisedContainer>
+      <div>
+        <img style={{ width: '100%' }} src={heroDesktop} />
+
+        <div
+          id="desktop"
+          className={classes.container}
+          style={{ marginBottom: '20px' }}
+        >
+          {/*header()*/}
+          <RaisedContainer>
+            {getaway()}
+            {horizontalRule()}
+            {adventurePackage()}
+            {horizontalRule()}
+            {golfPackage()}
+            {bottomSpacer(60)}
+          </RaisedContainer>
+        </div>
       </div>
     );
   };
 
+  /*
   const renderMobileView = () => {
     const headerMobile = () => {
       return (
@@ -382,17 +380,166 @@ const ResortPackages = () => {
     };
 
     return (
-      <div
-        id="mobile"
-        className={classes.container}
-        style={{ paddingBottom: '80px' }}
-      >
+      <div id="mobile" className={classes.container}>
         {headerMobile()}
         {getawayMobile()}
         {horizontalRuleMobile()}
         {adventurePackageMobile()}
         {horizontalRuleMobile()}
         {golfPackageMobile()}
+      </div>
+    );
+  };
+  */
+
+  const renderMobileView = () => {
+    const contentDivStyle = { marginTop: '20px' };
+    const imageStyle = { width: '100%', borderRadius: '10px' };
+
+    const horizontalRule = () => {
+      return (
+        <hr
+          style={{
+            border: '1px solid rgb(212 212 212)',
+            width: '50%',
+            marginTop: '120px',
+          }}
+        />
+      );
+    };
+
+    const bottomSpacer = (pixelNumber) => {
+      return <div style={{ paddingBottom: `${pixelNumber}px` }}></div>;
+    };
+
+    const getaway = () => {
+      const detailsCss = {
+        fontSize: '18px',
+      };
+      return (
+        <div style={contentDivStyle}>
+          <img src={image1} style={imageStyle} />
+          <div style={{ marginTop: '30px' }}>
+            <h2
+              style={{ color: '#f4004a', fontWeight: '600', fontSize: '30px' }}
+            >
+              GETAWAY PACKAGE
+            </h2>
+            <p style={detailsCss}>Book 2 nights and get the 3rd night free!</p>
+            <p style={detailsCss}>
+              Reserve 2 nights in any of our Deluxe Level or standard rate and
+              get the 3rd night free!
+            </p>
+            <p style={detailsCss}>
+              Book by 8/31/2022 for stays through 9/15/2022
+            </p>
+          </div>
+        </div>
+      );
+    };
+
+    const adventurePackage = () => {
+      const detailsCss = {
+        fontSize: '18px',
+      };
+      return (
+        <div style={contentDivStyle}>
+          <img src={image2} style={imageStyle} />
+          <div style={{ marginTop: '30px' }}>
+            <h2
+              style={{
+                color: 'rgb(255 141 0)',
+                fontWeight: '600',
+                fontSize: '30px',
+              }}
+            >
+              ADVENTURE PACKAGE
+            </h2>
+            <p style={detailsCss}>
+              Includes a Deluxe Level room with one king bed or two queen beds
+              for one night, double occupancy.
+            </p>
+            <p style={detailsCss}>
+              Airboat ride experience through the beautiful Everglades
+            </p>
+            <p style={detailsCss}>
+              Transportation to and from Miccosukee Airboats
+            </p>
+            <p style={detailsCss}>
+              * Valid through 11/30/2022
+              <br />
+              $168.60
+            </p>
+            <p style={detailsCss}>
+              * Valid 12/01/2022 through 4/30/2023
+              <br />
+              $262.95
+            </p>
+          </div>
+        </div>
+      );
+    };
+
+    const golfPackage = () => {
+      const detailsCss = {
+        fontSize: '18px',
+      };
+      return (
+        <div style={contentDivStyle}>
+          <img src={image3} style={imageStyle} />
+          <div style={{ marginTop: '30px' }}>
+            <h2
+              style={{
+                color: 'rgb(0 171 84)',
+                fontWeight: '600',
+                fontSize: '30px',
+              }}
+            >
+              GOLF PACKAGE
+            </h2>
+            <p style={detailsCss}>
+              Includes a Deluxe Level room with one king bed or two queen beds
+              for one night, double occupancy.
+            </p>
+            <p style={detailsCss}>18 holes of golf for two, plus cart rental</p>
+            <p style={detailsCss}>
+              Transportation to and from Miccosukee Golf &amp; Country Club
+            </p>
+            <p style={detailsCss}>
+              * Valid through 11/30/2022
+              <br />
+              $188.60
+            </p>
+            <p style={detailsCss}>
+              * Valid 12/01/2022 through 4/30/2023
+              <br />
+              $282.95
+            </p>
+          </div>
+        </div>
+      );
+    };
+
+    return (
+      <div>
+        <img style={{ width: '100%' }} src={heroMobile} />
+        <div
+          id="mobile"
+          className={classes.container}
+          style={{ marginBottom: '20px' }}
+        >
+          {/*header()*/}
+          <RaisedContainer customMargin="-18px">
+            {getaway()}
+            {bottomSpacer(70)}
+            {/*horizontalRule()*/}
+            {adventurePackage()}
+            {bottomSpacer(70)}
+            {/*horizontalRule()*/}
+            {golfPackage()}
+            {bottomSpacer(20)}
+          </RaisedContainer>
+        </div>
       </div>
     );
   };
