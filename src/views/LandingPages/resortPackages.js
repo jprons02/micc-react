@@ -137,7 +137,7 @@ const ResortPackages = () => {
               get the 3rd night free!
             </p>
             <p style={detailsCss}>
-              Book by 8/31/2022 for stays through 9/15/2022
+              Book by 8/31/2022 for stays through 9/15/2022.
             </p>
           </div>
           <Button onClick={handleClick} style={buttonStyle(red)}>
@@ -166,16 +166,18 @@ const ResortPackages = () => {
             >
               ADVENTURE PACKAGE
             </h2>
-            <p style={detailsCss}>
-              Includes a Deluxe Level room with one king bed or two queen beds
-              for one night, double occupancy.
-            </p>
-            <p style={detailsCss}>
-              Airboat ride experience through the beautiful Everglades
-            </p>
-            <p style={detailsCss}>
-              Transportation to and from Miccosukee Airboats
-            </p>
+            <ul style={{ paddingLeft: '20px' }}>
+              <li style={detailsCss}>
+                Includes a Deluxe Level room with one king bed or two queen beds
+                for one night, double occupancy.
+              </li>
+              <li style={detailsCss}>
+                Airboat ride experience through the beautiful Everglades
+              </li>
+              <li style={detailsCss}>
+                Transportation to and from Miccosukee Airboats
+              </li>
+            </ul>
             <p style={detailsCss}>
               * Valid through 11/30/2022
               <br />
@@ -213,14 +215,18 @@ const ResortPackages = () => {
             >
               GOLF PACKAGE
             </h2>
-            <p style={detailsCss}>
-              Includes a Deluxe Level room with one king bed or two queen beds
-              for one night, double occupancy.
-            </p>
-            <p style={detailsCss}>18 holes of golf for two, plus cart rental</p>
-            <p style={detailsCss}>
-              Transportation to and from Miccosukee Golf &amp; Country Club
-            </p>
+            <ul style={{ paddingLeft: '20px' }}>
+              <li style={detailsCss}>
+                Includes a Deluxe Level room with one king bed or two queen beds
+                for one night, double occupancy.
+              </li>
+              <li style={detailsCss}>
+                18 holes of golf for two, plus cart rental
+              </li>
+              <li style={detailsCss}>
+                Transportation to and from Miccosukee Golf &amp; Country Club
+              </li>
+            </ul>
             <p style={detailsCss}>
               * Valid through 11/30/2022
               <br />
@@ -549,7 +555,7 @@ const ResortPackages = () => {
               get the 3rd night free!
             </p>
             <p style={detailsCss}>
-              Book by 8/31/2022 for stays through 9/15/2022
+              Book by 8/31/2022 for stays through 9/15/2022.
             </p>
           </div>
           <Button onClick={handleClick} style={buttonStyle(red)}>
@@ -578,16 +584,18 @@ const ResortPackages = () => {
             >
               ADVENTURE PACKAGE
             </h2>
-            <p style={detailsCss}>
-              Includes a Deluxe Level room with one king bed or two queen beds
-              for one night, double occupancy.
-            </p>
-            <p style={detailsCss}>
-              Airboat ride experience through the beautiful Everglades
-            </p>
-            <p style={detailsCss}>
-              Transportation to and from Miccosukee Airboats
-            </p>
+            <ul style={{ paddingLeft: '20px' }}>
+              <li style={detailsCss}>
+                Includes a Deluxe Level room with one king bed or two queen beds
+                for one night, double occupancy.
+              </li>
+              <li style={detailsCss}>
+                Airboat ride experience through the beautiful Everglades
+              </li>
+              <li style={detailsCss}>
+                Transportation to and from Miccosukee Airboats
+              </li>
+            </ul>
             <p style={detailsCss}>
               * Valid through 11/30/2022
               <br />
@@ -625,14 +633,18 @@ const ResortPackages = () => {
             >
               GOLF PACKAGE
             </h2>
-            <p style={detailsCss}>
-              Includes a Deluxe Level room with one king bed or two queen beds
-              for one night, double occupancy.
-            </p>
-            <p style={detailsCss}>18 holes of golf for two, plus cart rental</p>
-            <p style={detailsCss}>
-              Transportation to and from Miccosukee Golf &amp; Country Club
-            </p>
+            <ul style={{ paddingLeft: '20px' }}>
+              <li style={detailsCss}>
+                Includes a Deluxe Level room with one king bed or two queen beds
+                for one night, double occupancy.
+              </li>
+              <li style={detailsCss}>
+                18 holes of golf for two, plus cart rental
+              </li>
+              <li style={detailsCss}>
+                Transportation to and from Miccosukee Golf &amp; Country Club
+              </li>
+            </ul>
             <p style={detailsCss}>
               * Valid through 11/30/2022
               <br />
