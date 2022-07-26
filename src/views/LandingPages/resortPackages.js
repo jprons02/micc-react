@@ -138,7 +138,7 @@ const ResortPackages = () => {
                 fontStyle: 'italic',
               }}
             >
-              MiccosukeeResort &amp; Gaming offers world-classs lots and
+              Miccosukee Resort &amp; Gaming offers world-class slots and
               luxurious accommodations in the heart of the Florida Everglades.
             </p>
             <p style={detailsCss}>Book 2 nights and get the 3rd night free!</p>
@@ -591,7 +591,7 @@ const ResortPackages = () => {
                 fontStyle: 'italic',
               }}
             >
-              MiccosukeeResort &amp; Gaming offers world-classs lots and
+              Miccosukee Resort &amp; Gaming offers world-class slots and
               luxurious accommodations in the heart of the Florida Everglades.
             </p>
             <p style={detailsCss}>Book 2 nights and get the 3rd night free!</p>
