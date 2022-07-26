@@ -13,7 +13,7 @@ import Footer from 'components/CustomFooters/SimpleFooter';
 import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // header image
-import hero from 'assets/media/img/landingPages/tomahawk_webV3.jpeg';
+import hero from 'assets/media/img/landingPages/tomahawk/tomahawk_webV3.jpeg';
 
 // Icons
 import { Icon } from '@material-ui/core';

@@ -133,11 +133,13 @@ const App = () => {
                     <Route path="/administration" component={Administration} />
                     {/* LANDING PAGES */}
                     <Route exact path={'/tomahawk'} component={Tomahawk} />
-                    {/*<Route
-                      exact
-                      path={'/resortpackages'}
-                      component={ResortPackages}
-                    />*/}
+                    {
+                      <Route
+                        exact
+                        path={'/resortpackages'}
+                        component={ResortPackages}
+                      />
+                    }
                     {/* END LANDING PAGES */}
                     <Route path="/" component={Miccosukee} />
                   </Switch>
