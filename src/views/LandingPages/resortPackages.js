@@ -131,6 +131,16 @@ const ResortPackages = () => {
             <h2 style={{ color: red, fontWeight: '600', fontSize: '30px' }}>
               GETAWAY PACKAGE
             </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                fontStyle: 'italic',
+              }}
+            >
+              MiccosukeeResort &amp; Gaming offers world-classs lots and
+              luxurious accommodations in the heart of the Florida Everglades.
+            </p>
             <p style={detailsCss}>Book 2 nights and get the 3rd night free!</p>
             <p style={detailsCss}>
               Reserve 2 nights in any of our Deluxe Level or standard rate and
@@ -166,6 +176,19 @@ const ResortPackages = () => {
             >
               ADVENTURE PACKAGE
             </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                fontStyle: 'italic',
+              }}
+            >
+              Take an exhilarating airboat ride and discover the Everglades,
+              home of the Miccosukee Tribe. Visit a hammock-style camp and
+              glimpse into the Tribe’s traditions and history, while
+              experiencing the excitement and tranquility only nature can
+              provide.
+            </p>
             <ul style={{ paddingLeft: '20px' }}>
               <li style={detailsCss}>
                 Includes a Deluxe Level room with one king bed or two queen beds
@@ -215,6 +238,18 @@ const ResortPackages = () => {
             >
               GOLF PACKAGE
             </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                fontStyle: 'italic',
+              }}
+            >
+              Miccosukee Golf &amp; Country Club boasts three challenging
+              courses with breathtaking views enjoyed by pros and enthusiasts
+              alike. After playing an exciting round of golf, rest up and seize
+              the night at our Resort.
+            </p>
             <ul style={{ paddingLeft: '20px' }}>
               <li style={detailsCss}>
                 Includes a Deluxe Level room with one king bed or two queen beds
@@ -549,6 +584,16 @@ const ResortPackages = () => {
             >
               GETAWAY PACKAGE
             </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                fontStyle: 'italic',
+              }}
+            >
+              MiccosukeeResort &amp; Gaming offers world-classs lots and
+              luxurious accommodations in the heart of the Florida Everglades.
+            </p>
             <p style={detailsCss}>Book 2 nights and get the 3rd night free!</p>
             <p style={detailsCss}>
               Reserve 2 nights in any of our Deluxe Level or standard rate and
@@ -584,6 +629,19 @@ const ResortPackages = () => {
             >
               ADVENTURE PACKAGE
             </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                fontStyle: 'italic',
+              }}
+            >
+              Take an exhilarating airboat ride and discover the Everglades,
+              home of the Miccosukee Tribe. Visit a hammock-style camp and
+              glimpse into the Tribe’s traditions and history, while
+              experiencing the excitement and tranquility only nature can
+              provide.
+            </p>
             <ul style={{ paddingLeft: '20px' }}>
               <li style={detailsCss}>
                 Includes a Deluxe Level room with one king bed or two queen beds
@@ -633,6 +691,18 @@ const ResortPackages = () => {
             >
               GOLF PACKAGE
             </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                fontStyle: 'italic',
+              }}
+            >
+              Miccosukee Golf &amp; Country Club boasts three challenging
+              courses with breathtaking views enjoyed by pros and enthusiasts
+              alike. After playing an exciting round of golf, rest up and seize
+              the night at our Resort.
+            </p>
             <ul style={{ paddingLeft: '20px' }}>
               <li style={detailsCss}>
                 Includes a Deluxe Level room with one king bed or two queen beds
