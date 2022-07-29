@@ -91,6 +91,26 @@ export const events = (language) => {
             'En el Día del Indio Americano, honramos la cultura y las tradiciones de las Primeras Naciones indígenas y sus contribuciones al mundo.',
             'Este festival familiar ofrece un vistazo a la cultura de la tribu Miccosukee mientras presentamos vendedores de comida y artesanía indígena, espectáculos de lucha con caimanes, paseos en hidrodeslizador y más. Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.',
           ],
+      /*eventbriteButton: [
+        {
+          name: language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ',
+          eventbrite: {
+            eventId: eventbriteIDs.aid2022,
+            modalTriggerElementId: 'example-widget-trigger',
+          },
+          href: '',
+          target: '',
+        },
+      ],*/
+      buttons: [
+        {
+          key: 1,
+          name: 'Eventbrite Info',
+          href:
+            'https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website',
+          target: '_blank',
+        },
+      ],
     },
     {
       title: 'Wheels & Meals',

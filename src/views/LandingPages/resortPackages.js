@@ -784,7 +784,6 @@ const ResortPackages = () => {
     <div className={classes.main}>
       <Hidden mdUp>{renderMobileView()}</Hidden>
       <Hidden smDown>{renderDesktopView()}</Hidden>
-
       <MrgFooter />
     </div>
   );

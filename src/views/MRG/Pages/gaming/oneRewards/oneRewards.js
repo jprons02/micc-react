@@ -82,7 +82,7 @@ const OneRewards = () => {
           <div>
             <p>
               {language
-                ? 'These points can be used like a gift card at most of our outlets. Below is a list of participating outlets:'
+                ? 'These points can be used like a gift card at most of our outlets. Below is a list of participating outlets:'
                 : 'Estos puntos pueden ser usados como una tarjeta de regalo en la mayoría de nuestros establecimientos. Aquí una lista de los locales participantes:'}
             </p>
             <ul>
@@ -95,7 +95,7 @@ const OneRewards = () => {
                   <li>Café Hammock</li>
                   {/*<li>-Bingo Snack Bar</li>*/}
                   {/*<li>-Empeeke Aya Deli</li>*/}
-                  <li>Hotel Stays</li>
+                  {/*<li>Hotel Stays</li>*/}
                   {/*<li>-Spa &amp; Salon</li>*/}
                   <li>Gift Shop</li>
                 </React.Fragment>
@@ -108,7 +108,7 @@ const OneRewards = () => {
                   <li>Café Hammock</li>
                   {/*<li>-Bar de entremeses Bingo</li>*/}
                   {/*<li>-Deli Empeeke Aya</li>*/}
-                  <li>Habitaciones de hotel</li>
+                  {/*<li>Habitaciones de hotel</li>*/}
                   {/*<li>-Spa &amp; Salón</li>*/}
                   <li>Gift Shop</li>
                 </React.Fragment>
