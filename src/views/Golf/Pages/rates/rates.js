@@ -174,23 +174,23 @@ const Rates = () => {
     createData(
       21,
       language
-        ? 'Non-Members – Small Basket (34 balls)'
-        : 'No Miembros – Canasta Pequeña (34 bolas)',
-      '$5'
+        ? 'Non-Members – Small Basket (30 balls)'
+        : 'No Miembros – Canasta Pequeña (30 bolas)',
+      '$6'
     ),
     createData(
       22,
       language
-        ? 'Non-Members – Small Basket (51 balls)'
-        : 'No Miembros – Canasta Mediana (51 bolas)',
-      '$7'
+        ? 'Non-Members – Medium Basket (60 balls)'
+        : 'No Miembros – Canasta Mediana (60 bolas)',
+      '$9'
     ),
     createData(
       23,
       language
-        ? 'Non-Members – Small Basket (102 balls)'
-        : 'No Miembros – Canasta Grande (102 bolas)',
-      '$10'
+        ? 'Non-Members – Large Basket (90 balls)'
+        : 'No Miembros – Canasta Grande (90 bolas)',
+      '$12'
     ),
   ];
 

@@ -143,8 +143,8 @@ const ResortPackages = () => {
             </p>
             <p style={detailsCss}>Book 2 nights and get the 3rd night free!</p>
             <p style={detailsCss}>
-              Reserve 2 nights in any of our Deluxe Level or standard rate and
-              get the 3rd night free!
+              Reserve 2 nights in any of our Deluxe Level or Executive Level
+              rooms or suites at the standard rate and get the 3rd night free!
             </p>
             <p style={detailsCss}>
               Book by 8/31/2022 for stays through 9/15/2022.
@@ -596,8 +596,8 @@ const ResortPackages = () => {
             </p>
             <p style={detailsCss}>Book 2 nights and get the 3rd night free!</p>
             <p style={detailsCss}>
-              Reserve 2 nights in any of our Deluxe Level or standard rate and
-              get the 3rd night free!
+              Reserve 2 nights in any of our Deluxe Level or Executive Level
+              rooms or suites at the standard rate and get the 3rd night free!
             </p>
             <p style={detailsCss}>
               Book by 8/31/2022 for stays through 9/15/2022.
