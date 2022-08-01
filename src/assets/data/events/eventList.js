@@ -105,7 +105,7 @@ export const events = (language) => {
       buttons: [
         {
           key: 1,
-          name: 'Eventbrite Info',
+          name: 'Register',
           href:
             'https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website',
           target: '_blank',
