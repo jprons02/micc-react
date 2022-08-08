@@ -29,12 +29,13 @@ import Village from 'views/Village';
 import Airboats from 'views/Airboats';
 import History from 'views/History';
 import Administration from 'views/Administration';
-import AID from 'views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js';
+//import AID from 'views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js';
 
 // landing pages
 import Tomahawk from 'views/LandingPages/tomahawk.js';
 import ResortPackages from 'views/LandingPages/resortPackages.js';
 import Amenities from 'views/LandingPages/amenities.js';
+import AID from 'views/LandingPages/aid.js';
 
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
@@ -144,6 +145,7 @@ const App = () => {
                       path={'/casino-resort-amenities'}
                       component={Amenities}
                     />
+                    <Route exact path={'/aid'} component={AID} />
                     {/* END LANDING PAGES */}
                     <Route path="/" component={Miccosukee} />
                   </Switch>
