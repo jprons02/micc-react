@@ -15,7 +15,7 @@ import Button from 'components/CustomButtons/Button.js';
 import MrgFooter from 'components/CustomFooters/MrgFooter.js';
 
 // styles
-import styles from 'assets/jss/material-kit-react/views/landingPage.js';
+import styles from 'assets/jss/material-kit-react/views/landingPage/landingPage.js';
 
 // header image
 import heroDesktop from 'assets/media/img/landingPages/resortPackages/hero_image_desktop.jpg';
@@ -281,7 +281,7 @@ const ResortPackages = () => {
               }}
             >
               {language
-                ? 'Miccosukee Golf & Country Club boasts three challenging courses with breathtaking views enjoyed by pros and enthusiasts alike. After playing an exciting round of golf, rest up and seize the night at our Resort.</p>'
+                ? 'Miccosukee Golf & Country Club boasts three challenging courses with breathtaking views enjoyed by pros and enthusiasts alike. After playing an exciting round of golf, rest up and seize the night at our Resort.'
                 : 'Miccosukee Golf & Country Club cuenta con tres campos desafiantes con impresionantes vistas que disfrutan tanto los profesionales como los entusiastas. Después de jugar una emocionante ronda de golf, descanse y aproveche la noche en nuestro Resort.'}
             </p>
             <ul style={{ paddingLeft: '20px' }}>
@@ -567,7 +567,7 @@ const ResortPackages = () => {
               }}
             >
               {language
-                ? 'Miccosukee Golf & Country Club boasts three challenging courses with breathtaking views enjoyed by pros and enthusiasts alike. After playing an exciting round of golf, rest up and seize the night at our Resort.</p>'
+                ? 'Miccosukee Golf & Country Club boasts three challenging courses with breathtaking views enjoyed by pros and enthusiasts alike. After playing an exciting round of golf, rest up and seize the night at our Resort.'
                 : 'Miccosukee Golf & Country Club cuenta con tres campos desafiantes con impresionantes vistas que disfrutan tanto los profesionales como los entusiastas. Después de jugar una emocionante ronda de golf, descanse y aproveche la noche en nuestro Resort.'}
             </p>
             <ul style={{ paddingLeft: '20px' }}>
