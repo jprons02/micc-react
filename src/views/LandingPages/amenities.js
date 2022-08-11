@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from 'react-router-dom';
+import CustomDropdown from 'components/CustomDropdown/CustomDropdown.js';
 
 // context
 import { useLanguage, useLanguageUpdate } from 'contexts/languageContext.js';
@@ -94,7 +95,8 @@ const ResortPackages = () => {
   const amenitiesContent = [
     {
       image: () => {
-        return (
+        return '';
+        /*return (
           <div>
             <Hidden mdUp>
               <img src={image1} className={classes.contentImage} />
@@ -103,7 +105,7 @@ const ResortPackages = () => {
               <img src={image1desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );
+        );*/
       },
       color: '',
       title: language
@@ -116,14 +118,15 @@ const ResortPackages = () => {
       body: [
         {
           p: language
-            ? 'Welcome to Miccosukee Casino & Resort, your 24/7 gaming destination in the heart of the Florida Everglades. With an extensive selection of slots that pay out millions every month, bingo sessions with guaranteed cash prizes, exciting promotions and delectable dining options, our establishment is a gamester’s paradise with a down-home vibe.'
+            ? 'Welcome to Miccosukee Casino & Resort, your 24/7 gaming destination in the heart of the Florida Everglades. With an extensive selection of slots that pay out millions every month, bingo sessions with guaranteed cash prizes, exciting promotions, and delectable dining options, our establishment is a gamester’s paradise with a down-home vibe.'
             : '',
         },
       ],
     },
     {
       image: () => {
-        return (
+        return '';
+        /*return (
           <div>
             <Hidden mdUp>
               <img src={image1} className={classes.contentImage} />
@@ -132,7 +135,7 @@ const ResortPackages = () => {
               <img src={image1desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );
+        );*/
       },
       color: '',
       title: language ? 'Slots' : 'Slots',
@@ -150,7 +153,8 @@ const ResortPackages = () => {
     },
     {
       image: () => {
-        return (
+        return '';
+        /*return (
           <div>
             <Hidden mdUp>
               <img src={image1} className={classes.contentImage} />
@@ -159,7 +163,7 @@ const ResortPackages = () => {
               <img src={image1desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );
+        );*/
       },
       color: '',
       title: language ? 'Bingo' : 'Bingo',
@@ -177,7 +181,8 @@ const ResortPackages = () => {
     },
     {
       image: () => {
-        return (
+        return '';
+        /*return (
           <div>
             <Hidden mdUp>
               <img src={image1} className={classes.contentImage} />
@@ -186,13 +191,51 @@ const ResortPackages = () => {
               <img src={image1desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );
+        );*/
       },
       color: '',
       title: language ? 'Dining' : 'Dining',
       button: {
-        text: language ? 'LEARN MORE' : 'CONOZCA MÁSE',
-        link: '',
+        type: 'ul',
+        renderList: () => {
+          return (
+            <React.Fragment>
+              <Link to="/mrg/sawgrass-cafe">
+                <Button className={classes.contentButton}>
+                  <span className={classes.contentButtonText}>
+                    Sawgrass Cafe
+                  </span>
+                </Button>
+              </Link>
+              <Link to="/mrg/maxs">
+                <Button className={classes.contentButton}>
+                  <span className={classes.contentButtonText}>Max's</span>
+                </Button>
+              </Link>
+              <Link to="/mrg/cafe-hammock">
+                <Button className={classes.contentButton}>
+                  <span className={classes.contentButtonText}>
+                    Café Hammock
+                  </span>
+                </Button>
+              </Link>
+            </React.Fragment>
+          );
+
+          /*return (
+            <ul>
+              <Link to="/mrg/sawgrass-cafe">
+                <li>Sawgrass Cafe</li>
+              </Link>
+              <Link to="/mrg/maxs">
+                <li>Max's</li>
+              </Link>
+              <Link to="/mrg/cafe-hammock">
+                <li>Café Hammock</li>
+              </Link>
+            </ul>
+          );*/
+        },
       },
       body: [
         {
@@ -204,7 +247,8 @@ const ResortPackages = () => {
     },
     {
       image: () => {
-        return (
+        return '';
+        /*return (
           <div>
             <Hidden mdUp>
               <img src={image1} className={classes.contentImage} />
@@ -213,7 +257,7 @@ const ResortPackages = () => {
               <img src={image1desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );
+        );*/
       },
       color: '',
       title: language ? 'Pool & Fitness Center' : 'Pool & Fitness Center',
@@ -279,6 +323,27 @@ const ResortPackages = () => {
         });
       };
 
+      const renderButtonContent = () => {
+        if (content.button.type) {
+          if (content.button.type === 'ul') {
+            return content.button.renderList();
+          }
+        } else {
+          return (
+            <Link to={content.button.link}>
+              <Button
+                style={{ backgroundColor: content.color }}
+                className={classes.contentButton}
+              >
+                <span className={classes.contentButtonText}>
+                  {content.button.text}
+                </span>
+              </Button>
+            </Link>
+          );
+        }
+      };
+
       return (
         <div>
           {content.image()}
@@ -297,16 +362,7 @@ const ResortPackages = () => {
             ) : null}
             {details()}
           </div>
-          <Link to={content.button.link}>
-            <Button
-              style={{ backgroundColor: content.color }}
-              className={classes.contentButton}
-            >
-              <span className={classes.contentButtonText}>
-                {content.button.text}
-              </span>
-            </Button>
-          </Link>
+          {renderButtonContent()}
         </div>
       );
     };
@@ -336,7 +392,7 @@ const ResortPackages = () => {
         {header()}
         <div className={classes.container} style={{ marginBottom: '20px' }}>
           <RaisedContainer>
-            {/*languageToggler()*/}
+            {languageToggler()}
             <div className={classes.contentSection}>
               {renderContentSection()}
               <hr
