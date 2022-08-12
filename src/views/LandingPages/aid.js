@@ -21,8 +21,8 @@ import headerStyle from 'assets/jss/material-kit-react/views/miccosukee/componen
 
 // header image
 //import heroImageDesktop from 'assets/media/img/landingPages/aid2022/AID_landing-page-header.jpeg';
-import heroImageDesktop from 'assets/media/img/landingPages/aid2022/AID_landing-page-header_with_guide.jpg';
-import heroImageMobile from 'assets/media/img/landingPages/aid2022/AID_landing-page-header_test.jpg';
+import heroImageDesktop from 'assets/media/img/landingPages/aid2022/aid_banner_mobile.jpg';
+import heroImageMobile from 'assets/media/img/landingPages/aid2022/aid_banner_mobile.jpg';
 
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
@@ -78,14 +78,118 @@ const AID = () => {
           key: 2,
           p: () => {
             return (
-              <p className={classes.contentSectionDetails}>
-                <span style={{ fontWeight: 'bold' }}>
-                  {language ? 'Save the Date:' : 'Reserve la Fecha:'}
-                </span>{' '}
-                {language
-                  ? ' Saturday, September 24, 2022, from 12 PM - 6 PM at Miccosukee Resort & Gaming'
-                  : ' sábado 24 de septiembre de 2022, de 12 PM a 6 PM en Miccosukee Resort & Gaming'}
-              </p>
+              <div style={{ marginBottom: '25px' }}>
+                <p className={classes.contentSectionDetails}>
+                  <span style={{ fontWeight: 'bold' }}>
+                    {language ? 'Save the Date:' : 'Reserve la Fecha:'}
+                  </span>{' '}
+                  {language
+                    ? ' Saturday, September 24, 2022, from 12 PM - 6 PM at Miccosukee Resort & Gaming'
+                    : ' sábado 24 de septiembre de 2022, de 12 PM a 6 PM en Miccosukee Resort & Gaming'}
+                </p>
+                <Button
+                  href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website"
+                  target="_blank"
+                  style={{ backgroundColor: primary }}
+                  className={classes.contentButton}
+                >
+                  <span className={classes.contentButtonText}>
+                    {language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ'}
+                  </span>
+                </Button>
+              </div>
+            );
+          },
+        },
+        {
+          key: 3,
+          p: () => {
+            return (
+              <div>
+                <p className={classes.contentSectionDetails}>
+                  <span style={{ fontWeight: 'bold' }}>
+                    {language
+                      ? 'Experience Miccosukee:'
+                      : 'La Experiencia Miccosukee:'}
+                  </span>{' '}
+                  {language
+                    ? ' Golfing, adventure, relaxation? Check out our amazing'
+                    : '¿Golf, aventura, relajación? Echa un vistazo a nuestros increíbles'}
+                  <a
+                    href="https://www.miccosukee.com/resortpackages"
+                    target="_blank"
+                  >
+                    <span
+                      style={{
+                        color: primary,
+                        fontWeight: 'bold',
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      {language ? ' Resort Packages' : ' Paquetes de Resort'}
+                    </span>{' '}
+                  </a>
+                  {language
+                    ? " that cater to whatever you're in the mood for."
+                    : ' que se adaptan a lo que sea que le apetezca.'}
+                </p>
+                {/*<Button
+                  href="https://www.miccosukee.com/resortpackages"
+                  target="_blank"
+                  style={{ backgroundColor: primary }}
+                  className={classes.contentButton}
+                >
+                  <span className={classes.contentButtonText}>
+                    {language ? 'RESORT PACKAGES' : 'RESORT PACKAGES'}
+                  </span>
+                </Button>*/}
+              </div>
+            );
+          },
+        },
+        {
+          key: 4,
+          p: () => {
+            return (
+              <div
+                style={
+                  {
+                    /*marginBottom: '25px'*/
+                  }
+                }
+              >
+                <p className={classes.contentSectionDetails}>
+                  <span style={{ fontWeight: 'bold' }}>
+                    {language ? 'Upcoming Events' : 'Próximos eventos'}
+                  </span>
+                  <br />
+                  {language
+                    ? "Don't miss our Indian Arts & ﻿Crafts Festival coming in December 2022!"
+                    : '¡No se pierda nuestro Indian Arts & Crafts Festival que se realizará en diciembre de 2022!'}
+                </p>
+              </div>
+            );
+          },
+        },
+        {
+          key: 5,
+          p: () => {
+            return (
+              <div
+                style={
+                  {
+                    /*marginBottom: '25px'*/
+                  }
+                }
+              >
+                <p className={classes.contentSectionDetails}>
+                  <span style={{ fontWeight: 'bold' }}>
+                    {language ? 'Presented by:' : 'Presentado por:'}
+                  </span>{' '}
+                  <br />
+                  TBD
+                </p>
+              </div>
             );
           },
         },
@@ -155,8 +259,11 @@ const AID = () => {
     );
   };
 
+  const sponserLogos = () => {
+    return '';
+  };
+
   const renderContentSection = () => {
-    const languageToggler = () => {};
     const section = (content) => {
       const details = () => {
         return content.body.map((item) => {
@@ -181,16 +288,6 @@ const AID = () => {
             ) : null}
             {details()}
           </div>
-          <Button
-            href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website"
-            target="_blank"
-            style={{ backgroundColor: content.color }}
-            className={classes.contentButton}
-          >
-            <span className={classes.contentButtonText}>
-              {language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ'}
-            </span>
-          </Button>
           {imageSlider()}
         </div>
       );
