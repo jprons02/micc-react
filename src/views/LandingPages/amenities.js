@@ -119,7 +119,7 @@ const ResortPackages = () => {
         {
           p: language
             ? 'Welcome to Miccosukee Casino & Resort, your 24/7 gaming destination in the heart of the Florida Everglades. With an extensive selection of slots that pay out millions every month, bingo sessions with guaranteed cash prizes, exciting promotions, and delectable dining options, our establishment is a gamester’s paradise with a down-home vibe.'
-            : '',
+            : 'Bienvenido a Miccosukee Casino & Resort, su destino de juego las 24 horas, los 7 días de la semana en el corazón de los Everglades de Florida. Con una amplia selección de máquinas tragamonedas que pagan millones cada mes, sesiones de bingo con premios en efectivo garantizados, promociones emocionantes y deliciosas opciones gastronómicas, nuestro establecimiento es un paraíso para los jugadores con un ambiente hogareño.',
         },
       ],
     },
@@ -138,7 +138,7 @@ const ResortPackages = () => {
         );*/
       },
       color: '',
-      title: language ? 'Slots' : 'Slots',
+      title: language ? 'Slots' : 'Tragamonedas',
       button: {
         text: language ? 'LEARN MORE' : 'CONOZCA MÁSE',
         link: '/mrg/gaming-machines',
@@ -147,7 +147,7 @@ const ResortPackages = () => {
         {
           p: language
             ? 'Get your game on with close to 2,000 slot machines featuring the latest special effects, bonuses, and rewards! Enhance your gaming experience in our High-Limit Room, and feel free to light up in our dedicated Smoking Casino Area located next to the Miccosukee One Player’s Club.'
-            : '',
+            : "¡Comience a jugar con cerca de 2,000 máquinas tragamonedas que ofrecen los últimos efectos especiales, bonos y recompensas! Mejore su experiencia de juego en nuestra Sala de Altas Apuestas y siéntase libre de fumar en nuestra Área de Casino para Fumadores ubicada junto al Miccosukee One Player's Club.",
         },
       ],
     },
@@ -175,7 +175,7 @@ const ResortPackages = () => {
         {
           p: language
             ? 'Win like never B-4 in sessions awarding thousands in cash every Wednesday through Saturday night, and select Sundays too.'
-            : '',
+            : 'Gane como nunca antes en sesiones que otorgan miles en efectivo todos los miércoles a sábados por la noche, y domingos selectos también.',
         },
       ],
     },
@@ -241,7 +241,7 @@ const ResortPackages = () => {
         {
           p: language
             ? 'Whether you’re craving a light lunch or a chef special, we have a dining outlet to satisfy your palate. Liven your spirit while spinning our slots with a cocktail or a beer from our friendly evening servers or conveniently located satellite bars along the casino floor.'
-            : '',
+            : 'Ya sea que esté deseando un almuerzo ligero o un especial del chef, tenemos un restaurante para satisfacer su paladar. Anime su espíritu mientras hace girar nuestras máquinas tragamonedas con un cóctel o una cerveza servida por nuestros amigables meseros nocturnos o de las barras satelitales convenientemente ubicadas a lo largo del piso del casino.',
         },
       ],
     },
@@ -260,7 +260,7 @@ const ResortPackages = () => {
         );*/
       },
       color: '',
-      title: language ? 'Pool & Fitness Center' : 'Pool & Fitness Center',
+      title: language ? 'Pool & Fitness Center' : 'Piscina y Gimnasio',
       button: {
         text: language ? 'LEARN MORE' : 'CONOZCA MÁSE',
         link: '/mrg/pool-gym',
@@ -269,7 +269,7 @@ const ResortPackages = () => {
         {
           p: language
             ? 'Relax and unwind in our indoor pool and jacuzzi, or hit the weights and cardio equipment to increase your energy levels. These amenities are open daily, from 7 AM – 11 PM.'
-            : '',
+            : 'Relájese y descanse en nuestra piscina cubierta y jacuzzi, o use pesas y el equipo cardiovascular para aumentar sus niveles de energía. Estos servicios están abiertos todos los días, de 7 AM a 11 PM.',
         },
       ],
     },
