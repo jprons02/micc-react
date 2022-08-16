@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
 
+//my custom components
+import LogoSlider from 'components/CustomSlider/logoSlider';
+
 // context
 import { useLanguage, useLanguageUpdate } from 'contexts/languageContext.js';
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
+
+// Business info
+import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
@@ -39,6 +47,16 @@ const useHeaderStyles = makeStyles(headerStyle);
 const AID = () => {
   const classes = useStyles();
   const headerClasses = useHeaderStyles();
+  const [showContactModal, setShowContactModal] = useContext(
+    ContactModalContext
+  );
+  // Close contact modal on mount
+  useEffect(() => {
+    closeModal(setShowContactModal);
+  }, []);
+  const closeModal = (setState) => {
+    setState(false);
+  };
 
   const language = useLanguage();
   const toggleLanguage = useLanguageUpdate();
@@ -51,6 +69,31 @@ const AID = () => {
     { src: image3, alt: 'apparel' },
     { src: image4, alt: 'indian activity' },
   ];
+
+  const sponsorLogos = () => {
+    return (
+      <React.Fragment>
+        <div style={{ width: '100px' }}>
+          <h3>1</h3>
+        </div>
+        <div style={{ width: '100px' }}>
+          <h3>2</h3>
+        </div>
+        <div style={{ width: '100px' }}>
+          <h3>3</h3>
+        </div>
+        <div style={{ width: '100px' }}>
+          <h3>4</h3>
+        </div>
+        <div style={{ width: '100px' }}>
+          <h3>5</h3>
+        </div>
+        <div style={{ width: '100px' }}>
+          <h3>6</h3>
+        </div>
+      </React.Fragment>
+    );
+  };
 
   const aidContent = [
     {
@@ -112,6 +155,7 @@ const AID = () => {
                       ? 'Experience Miccosukee:'
                       : 'La Experiencia Miccosukee:'}
                   </span>{' '}
+                  <br />
                   {language
                     ? ' Golfing, adventure, relaxation? Check out our amazing'
                     : '¿Golf, aventura, relajación? Echa un vistazo a nuestros increíbles'}
@@ -187,8 +231,9 @@ const AID = () => {
                     {language ? 'Presented by:' : 'Presentado por:'}
                   </span>{' '}
                   <br />
-                  TBD
                 </p>
+                TBD
+                {/*<LogoSlider content={sponsorLogos} />*/}
               </div>
             );
           },
@@ -259,10 +304,6 @@ const AID = () => {
     );
   };
 
-  const sponserLogos = () => {
-    return '';
-  };
-
   const renderContentSection = () => {
     const section = (content) => {
       const details = () => {
@@ -293,22 +334,8 @@ const AID = () => {
       );
     };
 
-    return aidContent.map((item, index) => {
-      //change padding dependent on what section this is
-      const divStyle = () => {
-        if (index === 0) {
-          return classes.contentSectionTop;
-        } else if (index === aidContent.length - 1) {
-          return classes.contentSectionBottom;
-        } else {
-          return classes.contentSectionMiddle;
-        }
-      };
-      return (
-        <div key={item.title} className={divStyle()}>
-          {section(item)}
-        </div>
-      );
+    return aidContent.map((item) => {
+      return <div key={item.title}>{section(item)}</div>;
     });
   };
 
@@ -332,6 +359,12 @@ const AID = () => {
     <div>
       {renderContent()}
       <MrgFooter />
+      <CustomContactModal
+        language={language}
+        showModal={showContactModal}
+        closeModal={() => closeModal(setShowContactModal)}
+        entity={mrgBusinessInfo}
+      />
     </div>
   );
 };

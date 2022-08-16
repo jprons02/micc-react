@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import CustomDropdown from 'components/CustomDropdown/CustomDropdown.js';
 
 // context
 import { useLanguage, useLanguageUpdate } from 'contexts/languageContext.js';
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import CustomContactModal from 'components/CustomModal/CustomContactModals/CustomContactModal.js';
+
+// Business info
+import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
@@ -45,6 +50,17 @@ const ResortPackages = () => {
 
   const language = useLanguage();
   const toggleLanguage = useLanguageUpdate();
+
+  const [showContactModal, setShowContactModal] = useContext(
+    ContactModalContext
+  );
+  // Close contact modal on mount
+  useEffect(() => {
+    closeModal(setShowContactModal);
+  }, []);
+  const closeModal = (setState) => {
+    setState(false);
+  };
 
   const red = '#fe284f';
   const yellowTitle = '#ffd800';
@@ -411,6 +427,12 @@ const ResortPackages = () => {
     <div>
       {renderContent()}
       <MrgFooter />
+      <CustomContactModal
+        language={language}
+        showModal={showContactModal}
+        closeModal={() => closeModal(setShowContactModal)}
+        entity={mrgBusinessInfo}
+      />
     </div>
   );
 };
