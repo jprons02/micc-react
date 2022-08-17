@@ -41,9 +41,16 @@ const landingPageStyle = {
       fontSize: '14px',
     },
   },
+  sponsorLogosSection: {
+    textAlign: 'center',
+    //desktop view
+    '@media (min-width: 960px)': {
+      //textAlign: 'left',
+    },
+  },
   sponsorLogosTop: {
     padding: '10px 20px 0 0',
-    maxWidth: '200px',
+    maxWidth: '250px',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',
@@ -51,7 +58,7 @@ const landingPageStyle = {
   },
   sponsorLogos: {
     padding: '40px 20px 0 0',
-    maxWidth: '200px',
+    maxWidth: '220px',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',

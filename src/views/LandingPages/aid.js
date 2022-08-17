@@ -44,6 +44,14 @@ import image4 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_D.jpg';
 // logos
 import logo1 from 'assets/media/img/landingPages/aid2022/logos/Rock Rose.jpeg';
 import logo2 from 'assets/media/img/landingPages/aid2022/logos/AGS_logo_international.jpg';
+import logo3 from 'assets/media/img/landingPages/aid2022/logos/att_hz_lg_lkp_rgb_pos.jpeg';
+import logo4 from 'assets/media/img/landingPages/aid2022/logos/BluberiLogoFullCMYK_2C.jpg';
+import logo5 from 'assets/media/img/landingPages/aid2022/logos/EVERI_Logo.jpg';
+import logo6 from 'assets/media/img/landingPages/aid2022/logos/Fortunet Logo 2014-07-14(1).jpg';
+import logo7 from 'assets/media/img/landingPages/aid2022/logos/HSS 2020 Primary Logo Lockup_plue KBS tag (1)(1).jpg';
+import logo8 from 'assets/media/img/landingPages/aid2022/logos/ManTech-Logo-.jpg';
+import logo9 from 'assets/media/img/landingPages/aid2022/logos/AFC-AIS.png';
+import logo10 from 'assets/media/img/landingPages/aid2022/logos/Aristocrat Gaming Logo.Purple.png';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
@@ -75,15 +83,67 @@ const AID = () => {
   ];
 
   const sponsorLogoImages = [
+    /*
     {
       key: 1,
       img: logo1,
+      style: { width: '320px', paddingRight: '40px' },
       link: '',
     },
     {
       key: 2,
       img: logo2,
+      style: { width: '270px', paddingRight: '20px', marginTop: '50px' },
       link: 'https://google.com',
+    },
+    */
+    {
+      key: 3,
+      img: logo3,
+      style: { width: '170px', marginTop: '35px' },
+      link: '',
+    },
+    {
+      key: 4,
+      img: logo4,
+      style: { height: '80px', paddingRight: '30px', marginTop: '20px' },
+      link: '',
+    },
+    {
+      key: 5,
+      img: logo5,
+      style: { height: '80px', paddingRight: '30px', marginTop: '20px' },
+      link: '',
+    },
+    {
+      key: 6,
+      img: logo6,
+      style: { width: '170px', paddingRight: '30px', marginTop: '40px' },
+      link: '',
+    },
+    {
+      key: 7,
+      img: logo7,
+      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      link: '',
+    },
+    {
+      key: 8,
+      img: logo8,
+      style: { height: '90px', paddingRight: '30px', marginTop: '20px' },
+      link: '',
+    },
+    {
+      key: 9,
+      img: logo9,
+      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      link: '',
+    },
+    {
+      key: 10,
+      img: logo10,
+      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      link: '',
     },
   ];
 
@@ -218,17 +278,13 @@ const AID = () => {
                   </span>{' '}
                   <br />
                 </p>
-                <div>
-                  <img
-                    src={sponsorLogoImages[0]['img']}
-                    className={classes.sponsorLogosTop}
-                  />
-                  <img
-                    src={sponsorLogoImages[1]['img']}
-                    className={classes.sponsorLogos}
-                  />
-                </div>
-                {/*<LogoSlider content={sponsorLogoImages} />*/}
+                {
+                  <div className={classes.sponsorLogosSection}>
+                    <img src={logo1} className={classes.sponsorLogosTop} />
+                    <img src={logo2} className={classes.sponsorLogos} />
+                  </div>
+                }
+                {<LogoSlider content={sponsorLogoImages} />}
               </div>
             );
           },
