@@ -41,6 +41,10 @@ import image2 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_B.jpg';
 import image3 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_C.jpg';
 import image4 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_D.jpg';
 
+// logos
+import logo1 from 'assets/media/img/landingPages/aid2022/logos/Rock Rose.jpeg';
+import logo2 from 'assets/media/img/landingPages/aid2022/logos/AGS_logo_international.jpg';
+
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
 
@@ -70,30 +74,18 @@ const AID = () => {
     { src: image4, alt: 'indian activity' },
   ];
 
-  const sponsorLogos = () => {
-    return (
-      <React.Fragment>
-        <div style={{ width: '100px' }}>
-          <h3>1</h3>
-        </div>
-        <div style={{ width: '100px' }}>
-          <h3>2</h3>
-        </div>
-        <div style={{ width: '100px' }}>
-          <h3>3</h3>
-        </div>
-        <div style={{ width: '100px' }}>
-          <h3>4</h3>
-        </div>
-        <div style={{ width: '100px' }}>
-          <h3>5</h3>
-        </div>
-        <div style={{ width: '100px' }}>
-          <h3>6</h3>
-        </div>
-      </React.Fragment>
-    );
-  };
+  const sponsorLogoImages = [
+    {
+      key: 1,
+      img: logo1,
+      link: '',
+    },
+    {
+      key: 2,
+      img: logo2,
+      link: 'https://google.com',
+    },
+  ];
 
   const aidContent = [
     {
@@ -219,21 +211,24 @@ const AID = () => {
           key: 5,
           p: () => {
             return (
-              <div
-                style={
-                  {
-                    /*marginBottom: '25px'*/
-                  }
-                }
-              >
+              <div>
                 <p className={classes.contentSectionDetails}>
                   <span style={{ fontWeight: 'bold' }}>
                     {language ? 'Presented by:' : 'Presentado por:'}
                   </span>{' '}
                   <br />
                 </p>
-                TBD
-                {/*<LogoSlider content={sponsorLogos} />*/}
+                <div>
+                  <img
+                    src={sponsorLogoImages[0]['img']}
+                    className={classes.sponsorLogosTop}
+                  />
+                  <img
+                    src={sponsorLogoImages[1]['img']}
+                    className={classes.sponsorLogos}
+                  />
+                </div>
+                {/*<LogoSlider content={sponsorLogoImages} />*/}
               </div>
             );
           },

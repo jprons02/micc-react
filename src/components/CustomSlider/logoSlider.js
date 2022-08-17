@@ -4,32 +4,51 @@ import React from 'react';
 import Slider from 'react-slick';
 
 const LogoSlider = (props) => {
-  console.log('props: ', props.content());
+  const sponsorLogos = () => {
+    return props.content.map((item) => {
+      return (
+        <a
+          key={item.key}
+          href={item.link !== '' ? item.link : null}
+          target="_blank"
+        >
+          <img
+            src={item.img}
+            style={{
+              width: '200px',
+              padding: '10px 50px 0 0',
+            }}
+          />
+        </a>
+      );
+    });
+  };
   // slider settings
   const settings = {
     dots: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
+    arrows: false,
+    //infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    //autoplay: true,
+    //speed: 2000,
+    //autoplaySpeed: 2000,
+    //cssEase: 'linear',
     //TEST THIS
-    //variableWidth: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          //slidesToShow: 2,
+          //slidesToScroll: 3,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
       {
@@ -42,7 +61,11 @@ const LogoSlider = (props) => {
     ],
   };
 
-  return <Slider {...settings}>{props.content()}</Slider>;
+  return (
+    <Slider {...settings} style={{ display: 'flex', alignItems: 'center' }}>
+      {sponsorLogos()}
+    </Slider>
+  );
 };
 
 export default LogoSlider;
