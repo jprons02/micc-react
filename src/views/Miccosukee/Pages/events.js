@@ -206,6 +206,14 @@ const Events = ({ history, badgeColor, entityMargin }) => {
       }
     };
 
+    const eventDate = (event) => {
+      if (event.startDate === event.endDate) {
+        return `${event.endDate}`;
+      } else {
+        return `${event.startDate} - ${event.endDate}`;
+      }
+    };
+
     const renderUpcommingEvents = () => {
       return events(language).map((event) => {
         if (isCategory(event)) {
@@ -218,7 +226,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                   event.type,
                   event.link
                 )}
-                <h6>{`${event.startDate} - ${event.endDate}`}</h6>
+                <h6>{eventDate(event)}</h6>
                 <h6>{`${language ? 'Admission: ' : 'Admisión: '}${
                   event.admission
                 }`}</h6>
@@ -272,7 +280,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                   event.type,
                   event.link
                 )}
-                <h6>{`${event.startDate} - ${event.endDate}`}</h6>
+                <h6>{eventDate(event)}</h6>
                 <h6>{`Admission: ${event.admission}`}</h6>
                 <p>{event.excerpt}</p>
               </div>
