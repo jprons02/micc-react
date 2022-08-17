@@ -43,6 +43,50 @@ export const events = (language) => {
     },
     */
     {
+      title: language
+        ? 'Labor Day Weekend CAR & BIKE SHOW'
+        : 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '9/3/2022',
+      endDate: '9/3/2022',
+      startTime: '11:00 A.M.',
+      endTime: '5:00 P.M.',
+      excerpt: language
+        ? 'Calling all gear heads! Rev up your engines and head down to Miccosukee Resort & Gaming for a...'
+        : '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Resort & Gaming para un...',
+      fullDescription: language
+        ? [
+            'Calling all gear heads! Rev up your engines and head down to Miccosukee Resort & Gaming for a spectacular Car & Bike Show on Saturday, September 3! Check out amazing rides, food trucks, music, vendors, and contests in this outdoor event rated E for everyone!',
+          ]
+        : [
+            '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Resort & Gaming para un espectacular show de Carros y Motos el sábado, 3 de septiembre! ¡Tendremos increíbles vehículos, camiones de comida, música, vendedores y concursos en este evento al aire libre apto para todo público!',
+          ],
+    },
+    {
+      title: language
+        ? 'Labor Day Weekend CAR & BIKE SHOW'
+        : 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '9/4/2022',
+      endDate: '9/4/2022',
+      startTime: '11:00 A.M.',
+      endTime: '7:00 P.M.',
+      excerpt: language
+        ? 'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Resort & Gaming! Buy unique items from...'
+        : '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Resort & Gaming! Compre artículos únicos de...',
+      fullDescription: language
+        ? [
+            'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Resort & Gaming! Buy unique items from hundreds of vendors, chow down with delicious food trucks, and dance the afternoon away with live music and entertainment.',
+          ]
+        : [
+            '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Resort & Gaming! Compre artículos únicos de cientos de vendedores, disfrute de deliciosos camiones de comida y baile toda la tarde con música en vivo y entretenimiento.',
+          ],
+    },
+    {
       title: 'Carritos y Cafecito',
       type: 'standard',
       category: '',
