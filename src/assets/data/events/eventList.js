@@ -65,9 +65,7 @@ export const events = (language) => {
           ],
     },
     {
-      title: language
-        ? 'Labor Day Weekend CAR & BIKE SHOW'
-        : 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      title: 'Florida Mega Market',
       type: 'standard',
       category: '',
       admission: language ? 'FREE' : 'GRATIS',
