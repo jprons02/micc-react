@@ -45,7 +45,7 @@ const landingPageStyle = {
     textAlign: 'center',
     //desktop view
     '@media (min-width: 960px)': {
-      //textAlign: 'left',
+      textAlign: 'left',
     },
   },
   sponsorLogosTop: {

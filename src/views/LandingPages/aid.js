@@ -52,6 +52,10 @@ import logo7 from 'assets/media/img/landingPages/aid2022/logos/HSS 2020 Primary 
 import logo8 from 'assets/media/img/landingPages/aid2022/logos/ManTech-Logo-.jpg';
 import logo9 from 'assets/media/img/landingPages/aid2022/logos/AFC-AIS.png';
 import logo10 from 'assets/media/img/landingPages/aid2022/logos/Aristocrat Gaming Logo.Purple.png';
+import logo11 from 'assets/media/img/landingPages/aid2022/logos/Imagine-This-Logo_vector-(1).jpg';
+import logo12 from 'assets/media/img/landingPages/aid2022/logos/LOGO_IGT_RGB_4COL-BLUE.jpg';
+import logo13 from 'assets/media/img/landingPages/aid2022/logos/TPI_logo_color_black.jpg';
+import logo14 from 'assets/media/img/landingPages/aid2022/logos/Wipfli_Logo_Blue_PMS2728C-(1).jpg';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
@@ -142,6 +146,30 @@ const AID = () => {
     {
       key: 10,
       img: logo10,
+      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      link: '',
+    },
+    {
+      key: 11,
+      img: logo11,
+      style: { width: '180px', paddingRight: '30px', marginTop: '32px' },
+      link: '',
+    },
+    {
+      key: 12,
+      img: logo12,
+      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      link: '',
+    },
+    {
+      key: 13,
+      img: logo13,
+      style: { width: '180px', paddingRight: '30px', marginTop: '25px' },
+      link: '',
+    },
+    {
+      key: 14,
+      img: logo14,
       style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
       link: '',
     },
