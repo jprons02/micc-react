@@ -12,6 +12,20 @@ export const getMetaData = (uri, pageObj) => {
   const tribe = /\/tribe/gm;
   const administration = /\/administration/gm;
 
+  // LANDING PAGES
+  if (uri === '/aid') {
+    return {
+      name: 'Miccosukee American Indian Day',
+      title: 'Miccosukee American Indian Day',
+      description:
+        "Discover the Miccosukee Tribe's culture and traditions as we host alligator wrestling shows, airboat rides, grease pole competitions, indigenous craft and food vendors, and more fun for the whole family!",
+      thumbnail:
+        'https://mapa-media.s3.amazonaws.com/websiteMetadataImages/mrgMeta.jpg',
+      slug: uri,
+      url: `https://www.miccosukee.com${uri}`,
+    };
+  }
+  // END LANDING PAGES
   if (mrg.test(uri)) {
     return {
       name: 'Miccosukee Resort & Gaming',

@@ -7,18 +7,16 @@ const LogoSlider = (props) => {
   const sponsorLogos = () => {
     return props.content.map((item) => {
       return (
-        <div>
-          <a
-            key={item.key}
-            href={item.link !== '' ? item.link : null}
-            target="_blank"
-          >
-            <img
-              src={item.img}
-              style={item.style !== '' ? item.style : { maxWidth: '200px' }}
-            />
-          </a>
-        </div>
+        <a
+          key={item.key}
+          href={item.link !== '' ? item.link : null}
+          target="_blank"
+        >
+          <img
+            src={item.img}
+            style={item.style !== '' ? item.style : { maxWidth: '200px' }}
+          />
+        </a>
       );
     });
   };

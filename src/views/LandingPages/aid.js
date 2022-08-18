@@ -104,7 +104,7 @@ const AID = () => {
     {
       key: 3,
       img: logo3,
-      style: { width: '170px', marginTop: '35px' },
+      style: { width: '170px', marginTop: '24px' },
       link: '',
     },
     {
