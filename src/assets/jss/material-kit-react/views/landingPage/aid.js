@@ -45,20 +45,32 @@ const landingPageStyle = {
     textAlign: 'center',
     //desktop view
     '@media (min-width: 960px)': {
-      textAlign: 'left',
+      //textAlign: 'left',
     },
   },
-  sponsorLogosTop: {
+  sponsorLogosTopLarge: {
     padding: '10px 20px 0 0',
-    maxWidth: '250px',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',
     },
   },
-  sponsorLogos: {
+  sponsorLogosLarge: {
     padding: '40px 20px 0 0',
-    maxWidth: '220px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      padding: '10px 50px 0 0',
+    },
+  },
+  sponsorLogosTopMedium: {
+    padding: '10px 20px 0 0',
+    //desktop view
+    '@media (min-width: 960px)': {
+      padding: '10px 50px 0 0',
+    },
+  },
+  sponsorLogosMedium: {
+    padding: '40px 20px 0 0',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',

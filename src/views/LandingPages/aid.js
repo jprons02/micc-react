@@ -44,15 +44,16 @@ import image4 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_D.jpg';
 // logos
 import logo1 from 'assets/media/img/landingPages/aid2022/logos/Rock Rose.jpeg';
 import logo2 from 'assets/media/img/landingPages/aid2022/logos/AGS_logo_international.jpg';
-import logo3 from 'assets/media/img/landingPages/aid2022/logos/att_hz_lg_lkp_rgb_pos.jpeg';
-import logo4 from 'assets/media/img/landingPages/aid2022/logos/BluberiLogoFullCMYK_2C.jpg';
-import logo5 from 'assets/media/img/landingPages/aid2022/logos/EVERI_Logo.jpg';
-import logo6 from 'assets/media/img/landingPages/aid2022/logos/Fortunet Logo 2014-07-14(1).jpg';
-import logo7 from 'assets/media/img/landingPages/aid2022/logos/HSS 2020 Primary Logo Lockup_plue KBS tag (1)(1).jpg';
-import logo8 from 'assets/media/img/landingPages/aid2022/logos/ManTech-Logo-.jpg';
-import logo9 from 'assets/media/img/landingPages/aid2022/logos/AFC-AIS.png';
-import logo10 from 'assets/media/img/landingPages/aid2022/logos/Aristocrat Gaming Logo.Purple.png';
-import logo11 from 'assets/media/img/landingPages/aid2022/logos/Imagine-This-Logo_vector-(1).jpg';
+import logo3 from 'assets/media/img/landingPages/aid2022/logos/Imagine-This-Logo_vector-(1).jpg';
+import logo4 from 'assets/media/img/landingPages/aid2022/logos/att_hz_lg_lkp_rgb_pos.jpeg';
+import logo5 from 'assets/media/img/landingPages/aid2022/logos/BluberiLogoFullCMYK_2C.jpg';
+import logo6 from 'assets/media/img/landingPages/aid2022/logos/EVERI_Logo.jpg';
+import logo7 from 'assets/media/img/landingPages/aid2022/logos/Fortunet Logo 2014-07-14(1).jpg';
+import logo8 from 'assets/media/img/landingPages/aid2022/logos/HSS 2020 Primary Logo Lockup_plue KBS tag (1)(1).jpg';
+import logo9 from 'assets/media/img/landingPages/aid2022/logos/ManTech-Logo-.jpg';
+import logo10 from 'assets/media/img/landingPages/aid2022/logos/AFC-AIS.png';
+import logo11 from 'assets/media/img/landingPages/aid2022/logos/Aristocrat Gaming Logo.Purple.png';
+
 import logo12 from 'assets/media/img/landingPages/aid2022/logos/LOGO_IGT_RGB_4COL-BLUE.jpg';
 import logo13 from 'assets/media/img/landingPages/aid2022/logos/TPI_logo_color_black.jpg';
 import logo14 from 'assets/media/img/landingPages/aid2022/logos/Wipfli_Logo_Blue_PMS2728C-(1).jpg';
@@ -100,19 +101,25 @@ const AID = () => {
       style: { width: '270px', paddingRight: '20px', marginTop: '50px' },
       link: 'https://google.com',
     },
-    */
     {
       key: 3,
       img: logo3,
-      style: { width: '170px', marginTop: '24px' },
+      style: { width: '180px', paddingRight: '30px', marginTop: '32px' },
       link: '',
     },
+    */
     {
       key: 4,
       img: logo4,
-      style: { height: '80px', paddingRight: '30px', marginTop: '20px' },
+      style: {
+        height: '65px',
+        paddingRight: '30px',
+        marginTop: '30px',
+        filter: 'grayscale(100%)',
+      },
       link: '',
     },
+    /*
     {
       key: 5,
       img: logo5,
@@ -125,18 +132,30 @@ const AID = () => {
       style: { width: '170px', paddingRight: '30px', marginTop: '40px' },
       link: '',
     },
+    */
     {
       key: 7,
       img: logo7,
-      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      style: {
+        width: '165px',
+        paddingRight: '30px',
+        marginTop: '50px',
+        filter: 'grayscale(100%)',
+      },
       link: '',
     },
     {
       key: 8,
       img: logo8,
-      style: { height: '90px', paddingRight: '30px', marginTop: '20px' },
+      style: {
+        height: '65px',
+        paddingRight: '30px',
+        marginTop: '30px',
+        filter: 'grayscale(100%)',
+      },
       link: '',
     },
+    /*
     {
       key: 9,
       img: logo9,
@@ -149,28 +168,44 @@ const AID = () => {
       style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
       link: '',
     },
+    */
     {
       key: 11,
       img: logo11,
-      style: { width: '180px', paddingRight: '30px', marginTop: '32px' },
+      style: { width: '165px', paddingRight: '30px', marginTop: '40px' },
       link: '',
     },
     {
       key: 12,
       img: logo12,
-      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      style: {
+        width: '165px',
+        paddingRight: '30px',
+        marginTop: '40px',
+        filter: 'grayscale(100%)',
+      },
       link: '',
     },
     {
       key: 13,
       img: logo13,
-      style: { width: '180px', paddingRight: '30px', marginTop: '25px' },
+      style: {
+        width: '165px',
+        paddingRight: '30px',
+        marginTop: '25px',
+        filter: 'grayscale(100%)',
+      },
       link: '',
     },
     {
       key: 14,
       img: logo14,
-      style: { width: '180px', paddingRight: '30px', marginTop: '40px' },
+      style: {
+        width: '165px',
+        paddingRight: '30px',
+        marginTop: '40px',
+        filter: 'grayscale(100%)',
+      },
       link: '',
     },
   ];
@@ -307,9 +342,49 @@ const AID = () => {
                   <br />
                 </p>
                 {
-                  <div className={classes.sponsorLogosSection}>
-                    <img src={logo1} className={classes.sponsorLogosTop} />
-                    <img src={logo2} className={classes.sponsorLogos} />
+                  <div>
+                    <div
+                      className={classes.sponsorLogosSection}
+                      style={{ paddingBottom: '10px' }}
+                    >
+                      <img
+                        src={logo1}
+                        className={classes.sponsorLogosTopLarge}
+                        style={{ maxWidth: '300px' }}
+                      />
+                      <img
+                        src={logo2}
+                        className={classes.sponsorLogosLarge}
+                        style={{ maxWidth: '250px' }}
+                      />
+                      <img
+                        src={logo3}
+                        className={classes.sponsorLogosLarge}
+                        style={{ maxWidth: '300px' }}
+                      />
+                    </div>
+                    <div className={classes.sponsorLogosSection}>
+                      <img
+                        src={logo5}
+                        className={classes.sponsorLogosTopMedium}
+                        style={{ maxWidth: '150px' }}
+                      />
+                      <img
+                        src={logo6}
+                        className={classes.sponsorLogosMedium}
+                        style={{ maxWidth: '150px' }}
+                      />
+                      <img
+                        src={logo9}
+                        className={classes.sponsorLogosMedium}
+                        style={{ maxWidth: '150px' }}
+                      />
+                      <img
+                        src={logo10}
+                        className={classes.sponsorLogosMedium}
+                        style={{ maxWidth: '270px' }}
+                      />
+                    </div>
                   </div>
                 }
                 {<LogoSlider content={sponsorLogoImages} />}
