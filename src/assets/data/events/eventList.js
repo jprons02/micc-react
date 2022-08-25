@@ -43,9 +43,14 @@ export const events = (language) => {
     },
     */
     {
+      id: '5',
       title: language
         ? 'Labor Day Weekend CAR & BIKE SHOW'
         : 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      test: {
+        english: 'Labor Day Weekend CAR & BIKE SHOW',
+        spanish: 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      },
       type: 'standard',
       category: '',
       admission: language ? 'FREE' : 'GRATIS',
@@ -65,6 +70,7 @@ export const events = (language) => {
           ],
     },
     {
+      id: '4',
       title: 'Florida Mega Market',
       type: 'standard',
       category: '',
@@ -85,6 +91,7 @@ export const events = (language) => {
           ],
     },
     {
+      id: '3',
       title: 'Carritos y Cafecito',
       type: 'standard',
       category: '',
@@ -110,6 +117,7 @@ export const events = (language) => {
     },
 
     {
+      id: '2',
       title: 'American Indian Day',
       type: 'standard',
       category: '',
@@ -155,6 +163,7 @@ export const events = (language) => {
       ],
     },
     {
+      id: '1',
       title: 'Wheels & Meals',
       type: 'standard',
       category: '',
@@ -178,6 +187,7 @@ export const events = (language) => {
           ],
     },
     {
+      id: '0',
       title: 'Removal of the Swamp Invaders Fishing Tournament',
       type: 'standard',
       //link: "/virtual-event/aid",

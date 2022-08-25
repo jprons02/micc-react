@@ -112,7 +112,7 @@ const AID = () => {
       key: 4,
       img: logo4,
       style: {
-        height: '65px',
+        height: '35px',
         paddingRight: '30px',
         marginTop: '30px',
         filter: 'grayscale(100%)',
@@ -137,7 +137,7 @@ const AID = () => {
       key: 7,
       img: logo7,
       style: {
-        width: '165px',
+        width: '90px',
         paddingRight: '30px',
         marginTop: '50px',
         filter: 'grayscale(100%)',
@@ -148,7 +148,7 @@ const AID = () => {
       key: 8,
       img: logo8,
       style: {
-        height: '65px',
+        height: '35px',
         paddingRight: '30px',
         marginTop: '30px',
         filter: 'grayscale(100%)',
@@ -172,14 +172,14 @@ const AID = () => {
     {
       key: 11,
       img: logo11,
-      style: { width: '165px', paddingRight: '30px', marginTop: '40px' },
+      style: { width: '90px', paddingRight: '30px', marginTop: '40px' },
       link: '',
     },
     {
       key: 12,
       img: logo12,
       style: {
-        width: '165px',
+        width: '90px',
         paddingRight: '30px',
         marginTop: '40px',
         filter: 'grayscale(100%)',
@@ -190,9 +190,9 @@ const AID = () => {
       key: 13,
       img: logo13,
       style: {
-        width: '165px',
+        width: '90px',
         paddingRight: '30px',
-        marginTop: '25px',
+        marginTop: '35px',
         filter: 'grayscale(100%)',
       },
       link: '',
@@ -201,7 +201,7 @@ const AID = () => {
       key: 14,
       img: logo14,
       style: {
-        width: '165px',
+        width: '90px',
         paddingRight: '30px',
         marginTop: '40px',
         filter: 'grayscale(100%)',
@@ -330,6 +330,7 @@ const AID = () => {
             );
           },
         },
+        /*
         {
           key: 5,
           p: () => {
@@ -350,39 +351,39 @@ const AID = () => {
                       <img
                         src={logo1}
                         className={classes.sponsorLogosTopLarge}
-                        style={{ maxWidth: '300px' }}
+                        style={{ maxWidth: '150px' }}
                       />
                       <img
                         src={logo2}
                         className={classes.sponsorLogosLarge}
-                        style={{ maxWidth: '250px' }}
+                        style={{ maxWidth: '150px' }}
                       />
                       <img
                         src={logo3}
                         className={classes.sponsorLogosLarge}
-                        style={{ maxWidth: '300px' }}
+                        style={{ maxWidth: '150px' }}
                       />
                     </div>
                     <div className={classes.sponsorLogosSection}>
                       <img
                         src={logo5}
                         className={classes.sponsorLogosTopMedium}
-                        style={{ maxWidth: '150px' }}
+                        style={{ maxWidth: '80px' }}
                       />
                       <img
                         src={logo6}
                         className={classes.sponsorLogosMedium}
-                        style={{ maxWidth: '150px' }}
+                        style={{ maxWidth: '80px' }}
                       />
                       <img
                         src={logo9}
                         className={classes.sponsorLogosMedium}
-                        style={{ maxWidth: '150px' }}
+                        style={{ maxWidth: '80px' }}
                       />
                       <img
                         src={logo10}
                         className={classes.sponsorLogosMedium}
-                        style={{ maxWidth: '270px' }}
+                        style={{ maxWidth: '140px' }}
                       />
                     </div>
                   </div>
@@ -392,9 +393,70 @@ const AID = () => {
             );
           },
         },
+        */
       ],
     },
   ];
+
+  const logoSection = () => {
+    return (
+      <div>
+        <p className={classes.contentSectionDetails}>
+          <span style={{ fontWeight: 'bold' }}>
+            {language ? 'Presented by:' : 'Presentado por:'}
+          </span>{' '}
+          <br />
+        </p>
+        {
+          <div>
+            <div
+              className={classes.sponsorLogosSection}
+              style={{ paddingBottom: '10px' }}
+            >
+              <img
+                src={logo1}
+                className={classes.sponsorLogosTopLarge}
+                style={{ maxWidth: '150px' }}
+              />
+              <img
+                src={logo2}
+                className={classes.sponsorLogosLarge}
+                style={{ maxWidth: '150px', paddingTop: '0' }}
+              />
+              <img
+                src={logo3}
+                className={classes.sponsorLogosLarge}
+                style={{ maxWidth: '150px' }}
+              />
+            </div>
+            <div className={classes.sponsorLogosSection}>
+              <img
+                src={logo5}
+                className={classes.sponsorLogosTopMedium}
+                style={{ maxWidth: '80px' }}
+              />
+              <img
+                src={logo6}
+                className={classes.sponsorLogosMedium}
+                style={{ maxWidth: '80px' }}
+              />
+              <img
+                src={logo9}
+                className={classes.sponsorLogosMedium}
+                style={{ maxWidth: '80px' }}
+              />
+              <img
+                src={logo10}
+                className={classes.sponsorLogosMedium}
+                style={{ maxWidth: '140px' }}
+              />
+            </div>
+          </div>
+        }
+        {<LogoSlider content={sponsorLogoImages} />}
+      </div>
+    );
+  };
 
   const languageToggler = () => {
     return (
@@ -448,7 +510,7 @@ const AID = () => {
 
   const imageSlider = () => {
     return (
-      <GridContainer style={{ paddingTop: '24px' }}>
+      <GridContainer>
         <GridItem md={7} style={{ padding: '2px' }}>
           <div>
             <CustomImageSlider images={imageObj} />
@@ -484,6 +546,15 @@ const AID = () => {
             {details()}
           </div>
           {imageSlider()}
+          <hr
+            style={{
+              border: '1px solid #e3e3e3',
+              width: '30%',
+              marginTop: '30px',
+              marginBottom: '60px',
+            }}
+          />
+          {logoSection()}
         </div>
       );
     };

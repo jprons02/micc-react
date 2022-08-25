@@ -56,7 +56,7 @@ const landingPageStyle = {
     },
   },
   sponsorLogosLarge: {
-    padding: '40px 20px 0 0',
+    padding: '10px 20px 0 0',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',
