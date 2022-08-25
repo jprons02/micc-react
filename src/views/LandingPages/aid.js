@@ -400,7 +400,7 @@ const AID = () => {
 
   const logoSection = () => {
     return (
-      <div>
+      <div className={classes.sponsorLogosSection}>
         <p className={classes.contentSectionDetails}>
           <span style={{ fontWeight: 'bold' }}>
             {language ? 'Presented by:' : 'Presentado por:'}
@@ -408,50 +408,100 @@ const AID = () => {
           <br />
         </p>
         {
-          <div>
-            <div
-              className={classes.sponsorLogosSection}
-              style={{ paddingBottom: '10px' }}
-            >
-              <img
-                src={logo1}
-                className={classes.sponsorLogosTopLarge}
-                style={{ maxWidth: '150px' }}
-              />
-              <img
-                src={logo2}
-                className={classes.sponsorLogosLarge}
-                style={{ maxWidth: '150px', paddingTop: '0' }}
-              />
-              <img
-                src={logo3}
-                className={classes.sponsorLogosLarge}
-                style={{ maxWidth: '150px' }}
-              />
-            </div>
-            <div className={classes.sponsorLogosSection}>
-              <img
-                src={logo5}
-                className={classes.sponsorLogosTopMedium}
-                style={{ maxWidth: '80px' }}
-              />
-              <img
-                src={logo6}
-                className={classes.sponsorLogosMedium}
-                style={{ maxWidth: '80px' }}
-              />
-              <img
-                src={logo9}
-                className={classes.sponsorLogosMedium}
-                style={{ maxWidth: '80px' }}
-              />
-              <img
-                src={logo10}
-                className={classes.sponsorLogosMedium}
-                style={{ maxWidth: '140px' }}
-              />
-            </div>
-          </div>
+          <React.Fragment>
+            <Hidden mdUp>
+              <div>
+                <div
+                  className={classes.topSponsorLogosSection}
+                  style={{ paddingBottom: '10px' }}
+                >
+                  <img
+                    src={logo1}
+                    className={classes.topSponsorLogosTopLarge}
+                    style={{ maxWidth: '150px' }}
+                  />
+                  <img
+                    src={logo2}
+                    className={classes.topSponsorLogosLarge}
+                    style={{ maxWidth: '150px', marginTop: '10px' }}
+                  />
+                  <img
+                    src={logo3}
+                    className={classes.topSponsorLogosLarge}
+                    style={{ maxWidth: '150px' }}
+                  />
+                </div>
+                <div className={classes.topSponsorLogosSection}>
+                  <img
+                    src={logo5}
+                    className={classes.topSponsorLogosTopMedium}
+                    style={{ maxWidth: '80px' }}
+                  />
+                  <img
+                    src={logo6}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '80px' }}
+                  />
+                  <img
+                    src={logo9}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '80px' }}
+                  />
+                  <img
+                    src={logo10}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '140px' }}
+                  />
+                </div>
+              </div>
+            </Hidden>
+            <Hidden smDown>
+              <div>
+                <div
+                  className={classes.topSponsorLogosSection}
+                  style={{ paddingBottom: '10px' }}
+                >
+                  <img
+                    src={logo1}
+                    className={classes.topSponsorLogosTopLarge}
+                    style={{ maxWidth: '200px' }}
+                  />
+                  <img
+                    src={logo2}
+                    className={classes.topSponsorLogosLarge}
+                    style={{ maxWidth: '200px', marginTop: '10px' }}
+                  />
+                  <img
+                    src={logo3}
+                    className={classes.topSponsorLogosLarge}
+                    style={{ maxWidth: '200px' }}
+                  />
+                </div>
+                <div className={classes.topSponsorLogosSection}>
+                  <img
+                    src={logo5}
+                    className={classes.topSponsorLogosTopMedium}
+                    style={{ maxWidth: '110px' }}
+                  />
+                  <img
+                    src={logo6}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '110px' }}
+                  />
+                  <img
+                    src={logo9}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '110px' }}
+                  />
+                  <img
+                    src={logo10}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '190px' }}
+                  />
+                </div>
+              </div>
+            </Hidden>
+          </React.Fragment>
         }
         {<LogoSlider content={sponsorLogoImages} />}
       </div>

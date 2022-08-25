@@ -42,34 +42,41 @@ const landingPageStyle = {
     },
   },
   sponsorLogosSection: {
+    paddingBottom: '10px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      paddingBottom: '30px',
+    },
+  },
+  topSponsorLogosSection: {
     textAlign: 'center',
     //desktop view
     '@media (min-width: 960px)': {
       //textAlign: 'left',
     },
   },
-  sponsorLogosTopLarge: {
+  topSponsorLogosTopLarge: {
     padding: '10px 20px 0 0',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',
     },
   },
-  sponsorLogosLarge: {
+  topSponsorLogosLarge: {
     padding: '10px 20px 0 0',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',
     },
   },
-  sponsorLogosTopMedium: {
+  topSponsorLogosTopMedium: {
     padding: '10px 20px 0 0',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '10px 50px 0 0',
     },
   },
-  sponsorLogosMedium: {
+  topSponsorLogosMedium: {
     padding: '40px 20px 0 0',
     //desktop view
     '@media (min-width: 960px)': {
