@@ -56,14 +56,14 @@ const landingPageStyle = {
       padding: '40px 0 60px 0',
     },
   },
-  /*contentSectionTop: {
+  contentSectionTop: {
     padding: '0 0 80px 0',
     //desktop view
     '@media (min-width: 960px)': {
       padding: '20px 0 80px 0',
     },
   },
-  
+
   contentSectionBottom: {
     padding: '80px 0 0 0',
     //desktop view
@@ -79,7 +79,9 @@ const landingPageStyle = {
       padding: '80px 0',
     },
   },
-  */
+
+  /* 
+  // WITH NO TOP IMAGE
   contentSectionTop: {
     padding: '0 0 40px 0',
     marginTop: '-30px',
@@ -103,6 +105,7 @@ const landingPageStyle = {
       padding: '40px 0',
     },
   },
+  */
   contentImage: {
     width: '100%',
     borderRadius: '10px',

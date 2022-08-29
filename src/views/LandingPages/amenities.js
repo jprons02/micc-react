@@ -33,13 +33,18 @@ import { Icon } from '@material-ui/core';
 
 // Images
 import emblem from 'assets/media/img/miccosukee/MiccosukeeEmblem_Color.svg';
-import image1 from 'assets/media/img/landingPages/resortPackages/getaway_section-image_mobile.jpg';
-import image2 from 'assets/media/img/landingPages/resortPackages/adventure_section-image_mobile.jpg';
-import image3 from 'assets/media/img/landingPages/resortPackages/golf_section-image_mobile.jpg';
 
-import image1desktop from 'assets/media/img/landingPages/resortPackages/getaway_section-image_desktop.jpg';
-import image2desktop from 'assets/media/img/landingPages/resortPackages/adventure_section-image_desktop.jpg';
-import image3desktop from 'assets/media/img/landingPages/resortPackages/golf_section-image_desktop.jpg';
+import image1 from 'assets/media/img/landingPages/amenities/Resort_Mobile.jpg';
+import image2 from 'assets/media/img/landingPages/amenities/Slots_Mobile.jpg';
+import image3 from 'assets/media/img/landingPages/amenities/Bingo_Mobile.jpg';
+import image4 from 'assets/media/img/landingPages/amenities/Dining_Mobile.jpg';
+import image5 from 'assets/media/img/landingPages/amenities/Pool_Mobile.jpg';
+
+import image1desktop from 'assets/media/img/landingPages/amenities/Resort_Desktop.jpg';
+import image2desktop from 'assets/media/img/landingPages/amenities/Slots_Desktop.jpg';
+import image3desktop from 'assets/media/img/landingPages/amenities/Bingo_Desktop.jpg';
+import image4desktop from 'assets/media/img/landingPages/amenities/Dining_Desktop.jpg';
+import image5desktop from 'assets/media/img/landingPages/amenities/Pool_Desktop.jpg';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
@@ -111,8 +116,7 @@ const ResortPackages = () => {
   const amenitiesContent = [
     {
       image: () => {
-        return '';
-        /*return (
+        return (
           <div>
             <Hidden mdUp>
               <img src={image1} className={classes.contentImage} />
@@ -121,7 +125,7 @@ const ResortPackages = () => {
               <img src={image1desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );*/
+        );
       },
       color: '',
       title: language
@@ -141,17 +145,16 @@ const ResortPackages = () => {
     },
     {
       image: () => {
-        return '';
-        /*return (
+        return (
           <div>
             <Hidden mdUp>
-              <img src={image1} className={classes.contentImage} />
+              <img src={image2} className={classes.contentImage} />
             </Hidden>
             <Hidden smDown>
-              <img src={image1desktop} className={classes.contentImage} />
+              <img src={image2desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );*/
+        );
       },
       color: '',
       title: language ? 'Slots' : 'Tragamonedas',
@@ -169,17 +172,16 @@ const ResortPackages = () => {
     },
     {
       image: () => {
-        return '';
-        /*return (
+        return (
           <div>
             <Hidden mdUp>
-              <img src={image1} className={classes.contentImage} />
+              <img src={image3} className={classes.contentImage} />
             </Hidden>
             <Hidden smDown>
-              <img src={image1desktop} className={classes.contentImage} />
+              <img src={image3desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );*/
+        );
       },
       color: '',
       title: language ? 'Bingo' : 'Bingo',
@@ -197,17 +199,16 @@ const ResortPackages = () => {
     },
     {
       image: () => {
-        return '';
-        /*return (
+        return (
           <div>
             <Hidden mdUp>
-              <img src={image1} className={classes.contentImage} />
+              <img src={image4} className={classes.contentImage} />
             </Hidden>
             <Hidden smDown>
-              <img src={image1desktop} className={classes.contentImage} />
+              <img src={image4desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );*/
+        );
       },
       color: '',
       title: language ? 'Dining' : 'Dining',
@@ -263,17 +264,16 @@ const ResortPackages = () => {
     },
     {
       image: () => {
-        return '';
-        /*return (
+        return (
           <div>
             <Hidden mdUp>
-              <img src={image1} className={classes.contentImage} />
+              <img src={image5} className={classes.contentImage} />
             </Hidden>
             <Hidden smDown>
-              <img src={image1desktop} className={classes.contentImage} />
+              <img src={image5desktop} className={classes.contentImage} />
             </Hidden>
           </div>
-        );*/
+        );
       },
       color: '',
       title: language ? 'Pool & Fitness Center' : 'Piscina y Gimnasio',
