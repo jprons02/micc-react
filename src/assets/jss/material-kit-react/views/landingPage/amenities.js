@@ -31,7 +31,7 @@ const landingPageStyle = {
     textAlign: 'center',
     fontSize: '36px',
     fontWeight: '800',
-    fontFamily: 'Avenir Next Heavy',
+    fontFamily: 'AvenirNextHeavy',
     display: 'inline-block',
     lineHeight: '.95',
     //desktop view

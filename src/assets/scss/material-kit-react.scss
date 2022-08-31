@@ -44,9 +44,28 @@
 
 // Custom font from designers
 @font-face {
-  font-family: "Avenir Next";
-  src: url("../../fonts/AvenirNext/avenir_next.ttf")
-      format("truetype");
+  font-family: "AvenirNext";
+      src: url("../../fonts/AvenirNext/avenir_next.woff2")
+      format("woff2"),
+    url("../../fonts/AvenirNext/avenir_next.woff") format("woff"),
+    url("../../fonts/AvenirNext/avenir_next.ttf")
+      format("truetype"),
+    url("../../fonts/AvenirNext/avenir_next.svg") format("svg"),
+    url("../../fonts/AvenirNext/avenir_next.eot");    
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Custom font from designers
+@font-face {
+  font-family: "AvenirNextHeavy";
+      src: url("../../fonts/AvenirNextHeavy/avenir_next_heavy.woff2")
+      format("woff2"),
+    url("../../fonts/AvenirNextHeavy/avenir_next_heavy.woff") format("woff"),
+    url("../../fonts/AvenirNextHeavy/avenir_next_heavy.ttf")
+      format("truetype"),
+    url("../../fonts/AvenirNextHeavy/avenir_next_heavy.svg") format("svg"),
+    url("../../fonts/AvenirNextHeavy/avenir_next_heavy.eot");    
   font-weight: normal;
   font-style: normal;
 }
