@@ -58,7 +58,7 @@ const Bingo = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Bingo</h2>
-              {isRunning([2021, 12, 21], [2022, 1, 1]) ? (
+              {/*isRunning([2021, 12, 21], [2022, 1, 1]) ? (
                 <h6
                   style={{
                     color: 'green',
@@ -70,26 +70,13 @@ const Bingo = () => {
                     ? 'Don’t miss the Holiday Bingo Extravaganza, paying over $50,000 on New Year’s Eve!'
                     : 'No se pierdan el Holiday Bingo Extravaganza, ¡​pagando más de $50,000 la Víspera de Año Nuevo!'}
                 </h6>
-              ) : null}
-              {isRunning([2021, 12, 21], [2021, 12, 25]) ? (
-                <h6
-                  style={{
-                    color: 'red',
-                    display: 'inline-block',
-                    marginTop: '0px',
-                  }}
-                >
-                  {language
-                    ? 'Bingo will be closed for operations on Christmas Eve, Friday, December 24. Wishing everyone a joyful holiday season!'
-                    : 'El Bingo estará cerrado para las operaciones la víspera de Navidad, el viernes, 24 de diciembre. ¡Les deseamos a todos una feliz temporada festiva!'}
-                </h6>
-              ) : null}
+              ) : null*/}
               <p>
                 {language
                   ? 'A South Florida staple since 1990, Miccosukee Resort & Gaming’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance! With high payouts and plenty of rewards through our Miccosukee One Rewards Program, our High Stakes Bingo pays to play! Regardless of experience, it’s perfect for single players, couples and large groups.'
                   : '¡Un establecimiento principal del Sur de la Florida desde 1990, la Sala de Bingo de Miccosukee Resort & Gaming es el lugar ideal para probar su suerte con el bingo de altas apuestas! ¡Con grandes premios y pagos a través de nuestro programa Miccosukee One, nuestro Bingo de Altas Apuestas le recompensa por jugar! Sin importar su nivel de experiencia, es el lugar perfecto para jugadores solos, parejas y grupos grandes.'}
               </p>
-              {isRunning([2021, 12, 21], [2021, 12, 26]) ? (
+              {/*isRunning([2021, 12, 21], [2021, 12, 26]) ? (
                 <Button
                   href="https://mapa-media.s3.amazonaws.com/website/Christmas+BINGO+program+flyer_creative.pdf"
                   target="_blank"
@@ -97,7 +84,7 @@ const Bingo = () => {
                 >
                   {language ? 'CHRISTMAS PROGRAM' : 'PROGRAMA NAVIDEÑO'}
                 </Button>
-              ) : null}
+              ) : null*/}
               <div style={{ marginTop: '25px' }}>
                 <h6>
                   {language
@@ -133,10 +120,10 @@ const Bingo = () => {
                       : 'Todos los equipos electrónicos serán desinfectados antes y después de cada uso.'}
                   </li>
                 </ul>
-                {isRunning([2022, 8, 1], [2022, 8, 27]) ? (
+                {isRunning([2022, 8, 31], [2022, 9, 16]) ? (
                   <a
-                    target="_blank"
-                    href="https://mapa-media.s3.amazonaws.com/website/august_bingo_program.pdf"
+                  //target="_blank"
+                  //href="https://mapa-media.s3.amazonaws.com/website/august_bingo_program.pdf"
                   >
                     <img
                       style={{

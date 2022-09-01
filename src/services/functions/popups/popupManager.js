@@ -1,12 +1,11 @@
 // Show popups on certain pages
 // Stop showing popup after 1 time load... may need to change how state works
 
-//import mrgImage from "assets/media/img/test/MonthlyPayouts_Calendar_April-1.jpg";
-import aidImage from 'assets/media/img/events/aid/21/aid_2021_popup_min.jpg';
 import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
-import promoImage1 from 'assets/media/img/popups/oxford_luggage.jpg';
-import hubPopup from 'assets/media/img/popups/POPUP_Service-Plaza-Tribal.jpg';
-import jobFair from 'assets/media/img/popups/JOBFair2021_WebSlider.jpg';
+import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
+import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
+import jobFair from 'assets/media/img/popups/bingo_promo_en.jpg';
 
 const d = new Date();
 
@@ -79,13 +78,13 @@ const mrgPopup = {
     start: {
       year: '22',
       month: 'August',
-      day: '1',
+      day: '31',
       time: '',
     },
     end: {
       year: '22',
-      month: 'August',
-      day: '27',
+      month: 'September',
+      day: '16',
       time: '',
     },
   }),
@@ -93,9 +92,8 @@ const mrgPopup = {
   content: {
     image: mrgImage,
     alt: 'bingo promotion',
-    linkType: 'external',
-    link:
-      'https://mapa-media.s3.amazonaws.com/website/august_bingo_program.pdf',
+    linkType: '',
+    link: '',
   },
 };
 const mrgGamingPromotionsPopup = {

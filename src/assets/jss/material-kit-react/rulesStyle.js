@@ -4,11 +4,11 @@ const rulesStyle = {
   /*This is specific promo header*/
   promoTitle: {
     color: mrgColor[500],
-    fontWeight: '700',
+    //fontWeight: '700',
     textDecoration: 'none',
     verticalAlign: 'baseline',
     fontSize: '18px !important',
-    fontFamily: 'Avenir Next, sans-serif',
+    fontFamily: 'AvenirNext, sans-serif',
     fontStyle: 'normal',
     textTransform: 'uppercase !important',
     marginBottom: '15px !important',

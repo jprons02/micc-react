@@ -20,7 +20,7 @@ import Button from 'components/CustomButtons/Button.js';
 import MrgFooter from 'components/CustomFooters/MrgFooter.js';
 
 // styles
-import styles from 'assets/jss/material-kit-react/views/landingPage/landingPage.js';
+import styles from 'assets/jss/material-kit-react/views/landingPage/resortPackages.js';
 
 // header image
 import heroDesktop from 'assets/media/img/landingPages/resortPackages/hero_image_desktop.jpg';
@@ -124,7 +124,7 @@ const ResortPackages = () => {
                 textAlign: 'center',
                 fontSize: '80px',
                 fontWeight: '800',
-                fontFamily: 'Avenir Next',
+                fontFamily: 'AvenirNextHeavy',
                 display: 'inline-block',
                 lineHeight: '.95',
                 color: yellowTitle,
@@ -423,7 +423,7 @@ const ResortPackages = () => {
                 textAlign: 'center',
                 fontSize: '36px',
                 fontWeight: '800',
-                fontFamily: 'Avenir Next',
+                fontFamily: 'AvenirNextHeavy',
                 display: 'inline-block',
                 lineHeight: '.95',
                 color: yellowTitle,
