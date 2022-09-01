@@ -92,8 +92,8 @@ const mrgPopup = {
   content: {
     image: mrgImage,
     alt: 'bingo promotion',
-    linkType: '',
-    link: '',
+    linkType: 'external',
+    link: 'https://mapa-media.s3.amazonaws.com/website/monthly_bingo_promo.pdf',
   },
 };
 const mrgGamingPromotionsPopup = {

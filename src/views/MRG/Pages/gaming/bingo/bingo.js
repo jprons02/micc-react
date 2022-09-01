@@ -122,8 +122,8 @@ const Bingo = () => {
                 </ul>
                 {isRunning([2022, 8, 31], [2022, 9, 16]) ? (
                   <a
-                  //target="_blank"
-                  //href="https://mapa-media.s3.amazonaws.com/website/august_bingo_program.pdf"
+                    target="_blank"
+                    href="https://mapa-media.s3.amazonaws.com/website/monthly_bingo_promo.pdf"
                   >
                     <img
                       style={{
