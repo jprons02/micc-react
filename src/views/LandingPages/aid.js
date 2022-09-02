@@ -58,6 +58,9 @@ import logo12 from 'assets/media/img/landingPages/aid2022/logos/LOGO_IGT_RGB_4CO
 import logo13 from 'assets/media/img/landingPages/aid2022/logos/TPI_logo_color_black.jpg';
 import logo14 from 'assets/media/img/landingPages/aid2022/logos/Wipfli_Logo_Blue_PMS2728C-(1).jpg';
 
+import logo15 from 'assets/media/img/landingPages/aid2022/logos/MiamiMarlins_MLogo_Outline_RGB.jpg';
+import logo16 from 'assets/media/img/landingPages/aid2022/logos/2022-rev-Logo.jpg';
+
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
 
@@ -204,6 +207,17 @@ const AID = () => {
         width: '90px',
         paddingRight: '30px',
         marginTop: '40px',
+        filter: 'grayscale(100%)',
+      },
+      link: '',
+    },
+    {
+      key: 16,
+      img: logo16,
+      style: {
+        width: '90px',
+        paddingRight: '30px',
+        marginTop: '30px',
         filter: 'grayscale(100%)',
       },
       link: '',
@@ -452,6 +466,11 @@ const AID = () => {
                     className={classes.topSponsorLogosMedium}
                     style={{ maxWidth: '140px' }}
                   />
+                  <img
+                    src={logo15}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '85px' }}
+                  />
                 </div>
               </div>
             </Hidden>
@@ -497,6 +516,11 @@ const AID = () => {
                     src={logo10}
                     className={classes.topSponsorLogosMedium}
                     style={{ maxWidth: '190px' }}
+                  />
+                  <img
+                    src={logo15}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '115px' }}
                   />
                 </div>
               </div>
