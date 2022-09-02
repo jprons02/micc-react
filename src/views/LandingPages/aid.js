@@ -448,6 +448,13 @@ const AID = () => {
                   className={classes.topSponsorLogosSection}
                   style={{ paddingBottom: '10px' }}
                 >
+                  {/*
+                  <img
+                    src={logo15}
+                    className={classes.topSponsorLogosTopLarge}
+                    style={{ maxWidth: '110px' }}
+                  />
+                  */}
                   <img
                     src={logo1}
                     className={classes.topSponsorLogosTopLarge}
@@ -486,11 +493,6 @@ const AID = () => {
                     style={{ maxWidth: '140px' }}
                   />
                   <img
-                    src={logo15}
-                    className={classes.topSponsorLogosMedium}
-                    style={{ maxWidth: '85px' }}
-                  />
-                  <img
                     src={logo17}
                     className={classes.topSponsorLogosMedium}
                     style={{ maxWidth: '160px' }}
@@ -504,6 +506,13 @@ const AID = () => {
                   className={classes.topSponsorLogosSection}
                   style={{ paddingBottom: '10px' }}
                 >
+                  {/*
+                  <img
+                    src={logo15}
+                    className={classes.topSponsorLogosTopLarge}
+                    style={{ maxWidth: '160px' }}
+                  />
+                  */}
                   <img
                     src={logo1}
                     className={classes.topSponsorLogosTopLarge}
@@ -540,11 +549,6 @@ const AID = () => {
                     src={logo10}
                     className={classes.topSponsorLogosMedium}
                     style={{ maxWidth: '190px' }}
-                  />
-                  <img
-                    src={logo15}
-                    className={classes.topSponsorLogosMedium}
-                    style={{ maxWidth: '115px' }}
                   />
                   <img
                     src={logo17}
