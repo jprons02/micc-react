@@ -41,25 +41,28 @@ import image2 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_B.jpg';
 import image3 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_C.jpg';
 import image4 from 'assets/media/img/landingPages/aid2022/AID_PHOTO_D.jpg';
 
-// logos
+// Logos:
+// Tier 1
 import logo1 from 'assets/media/img/landingPages/aid2022/logos/Rock Rose.jpeg';
 import logo2 from 'assets/media/img/landingPages/aid2022/logos/AGS_logo_international.jpg';
 import logo3 from 'assets/media/img/landingPages/aid2022/logos/Imagine-This-Logo_vector-(1).jpg';
-import logo4 from 'assets/media/img/landingPages/aid2022/logos/att_hz_lg_lkp_rgb_pos.jpeg';
+// Tier 2
 import logo5 from 'assets/media/img/landingPages/aid2022/logos/BluberiLogoFullCMYK_2C.jpg';
 import logo6 from 'assets/media/img/landingPages/aid2022/logos/EVERI_Logo.jpg';
-import logo7 from 'assets/media/img/landingPages/aid2022/logos/Fortunet Logo 2014-07-14(1).jpg';
-import logo8 from 'assets/media/img/landingPages/aid2022/logos/HSS 2020 Primary Logo Lockup_plue KBS tag (1)(1).jpg';
 import logo9 from 'assets/media/img/landingPages/aid2022/logos/ManTech-Logo-.jpg';
 import logo10 from 'assets/media/img/landingPages/aid2022/logos/AFC-AIS.png';
+import logo15 from 'assets/media/img/landingPages/aid2022/logos/MiamiMarlins_MLogo_Outline_RGB.jpg';
+import logo17 from 'assets/media/img/landingPages/aid2022/logos/big-BBRetail001-CMYK.jpeg';
+// Tier 3
+import logo4 from 'assets/media/img/landingPages/aid2022/logos/att_hz_lg_lkp_rgb_pos.jpeg';
+import logo7 from 'assets/media/img/landingPages/aid2022/logos/Fortunet Logo 2014-07-14(1).jpg';
+import logo8 from 'assets/media/img/landingPages/aid2022/logos/HSS 2020 Primary Logo Lockup_plue KBS tag (1)(1).jpg';
 import logo11 from 'assets/media/img/landingPages/aid2022/logos/Aristocrat Gaming Logo.Purple.png';
-
 import logo12 from 'assets/media/img/landingPages/aid2022/logos/LOGO_IGT_RGB_4COL-BLUE.jpg';
 import logo13 from 'assets/media/img/landingPages/aid2022/logos/TPI_logo_color_black.jpg';
 import logo14 from 'assets/media/img/landingPages/aid2022/logos/Wipfli_Logo_Blue_PMS2728C-(1).jpg';
-
-import logo15 from 'assets/media/img/landingPages/aid2022/logos/MiamiMarlins_MLogo_Outline_RGB.jpg';
 import logo16 from 'assets/media/img/landingPages/aid2022/logos/2022-rev-Logo.jpg';
+import logo18 from 'assets/media/img/landingPages/aid2022/logos/wtw_pos_clr_cs_1cs_220126.jpg';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
@@ -142,7 +145,7 @@ const AID = () => {
       style: {
         width: '90px',
         paddingRight: '30px',
-        marginTop: '50px',
+        marginTop: '40px',
         filter: 'grayscale(100%)',
       },
       link: '',
@@ -175,7 +178,12 @@ const AID = () => {
     {
       key: 11,
       img: logo11,
-      style: { width: '90px', paddingRight: '30px', marginTop: '40px' },
+      style: {
+        width: '90px',
+        paddingRight: '30px',
+        marginTop: '40px',
+        filter: 'grayscale(100%)',
+      },
       link: '',
     },
     {
@@ -214,6 +222,17 @@ const AID = () => {
     {
       key: 16,
       img: logo16,
+      style: {
+        width: '90px',
+        paddingRight: '30px',
+        marginTop: '30px',
+        filter: 'grayscale(100%)',
+      },
+      link: '',
+    },
+    {
+      key: 18,
+      img: logo18,
       style: {
         width: '90px',
         paddingRight: '30px',
@@ -471,6 +490,11 @@ const AID = () => {
                     className={classes.topSponsorLogosMedium}
                     style={{ maxWidth: '85px' }}
                   />
+                  <img
+                    src={logo17}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '160px' }}
+                  />
                 </div>
               </div>
             </Hidden>
@@ -521,6 +545,11 @@ const AID = () => {
                     src={logo15}
                     className={classes.topSponsorLogosMedium}
                     style={{ maxWidth: '115px' }}
+                  />
+                  <img
+                    src={logo17}
+                    className={classes.topSponsorLogosMedium}
+                    style={{ maxWidth: '200px' }}
                   />
                 </div>
               </div>
