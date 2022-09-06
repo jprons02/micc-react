@@ -448,13 +448,13 @@ const AID = () => {
                   className={classes.topSponsorLogosSection}
                   style={{ paddingBottom: '10px' }}
                 >
-                  {/*
-                  <img
-                    src={logo15}
-                    className={classes.topSponsorLogosTopLarge}
-                    style={{ maxWidth: '110px' }}
-                  />
-                  */}
+                  {
+                    <img
+                      src={logo15}
+                      className={classes.topSponsorLogosTopLarge}
+                      style={{ maxWidth: '110px' }}
+                    />
+                  }
                   <img
                     src={logo1}
                     className={classes.topSponsorLogosTopLarge}
@@ -506,13 +506,13 @@ const AID = () => {
                   className={classes.topSponsorLogosSection}
                   style={{ paddingBottom: '10px' }}
                 >
-                  {/*
-                  <img
-                    src={logo15}
-                    className={classes.topSponsorLogosTopLarge}
-                    style={{ maxWidth: '160px' }}
-                  />
-                  */}
+                  {
+                    <img
+                      src={logo15}
+                      className={classes.topSponsorLogosTopLarge}
+                      style={{ maxWidth: '160px' }}
+                    />
+                  }
                   <img
                     src={logo1}
                     className={classes.topSponsorLogosTopLarge}
