@@ -278,6 +278,32 @@ const AID = () => {
                     ? ' Saturday, September 24, 2022, from 12 PM - 6 PM at Miccosukee Resort & Gaming'
                     : ' sábado 24 de septiembre de 2022, de 12 PM a 6 PM en Miccosukee Resort & Gaming'}
                 </p>
+                <p className={classes.contentSectionDetails}>
+                  <span style={{ fontWeight: 'bold' }}>
+                    {language ? 'Paint Sessions' : 'Sesiones de Pintura'}
+                  </span>
+                  <br />
+                  {language
+                    ? 'Kids and adults will enjoy painting Everglades’ wildlife and scenery alongside our Miccosukee artist, Cristina Osceola.'
+                    : 'Niños y adultos disfrutarán pintando la vida silvestre y el paisaje de los Everglades junto a nuestra artista Miccosukee, Cristina Osceola.'}
+                  <br />
+                  {language
+                    ? '30-minute sessions are available at: 12:15 PM, 1:00 PM, 1:45 PM, 2:30 PM, 3:45 PM, 4:40 PM, 5:15 PM.'
+                    : 'Las sesiones de 30 minutos están disponibles a las: 12:15 PM, 1:00 PM, 1:45 PM, 2:30 PM, 3:45 PM, 4:40 PM y 5:15 PM.'}
+                </p>
+                <p className={classes.contentSectionDetails}>
+                  <span style={{ fontWeight: 'bold' }}>
+                    {language ? 'Alligator Shows' : 'Espectáculos de Caimanes'}
+                  </span>
+                  <br />
+                  {language
+                    ? 'The Miccosukee used alligator wrestling as a survival and hunting technique many years ago. Today, it has become a popular attraction that educates the public about these powerful reptiles that are an essential part of the Everglades ecosystem. Our alligator wrestlers will show you how they handle these wild creatures in a jaw-dropping performance that will have you on the edge of your seat!'
+                    : 'Los Miccosukee utilizaron la lucha con caimanes como técnica de supervivencia y caza hace muchos años. Hoy, se ha convertido en una atracción popular que educa al público sobre estos poderosos reptiles que son una parte esencial del ecosistema de los Everglades. ¡Nuestros luchadores de caimanes le mostrarán cómo manejan a estas criaturas salvajes en una actuación asombrosa que lo tendrá al borde de su asiento!'}
+                  <br />
+                  {language
+                    ? 'Alligator Shows are at 1 PM, 3 PM & 5 PM.'
+                    : 'Los espectáculos de caimanes son a la 1 PM, 3 PM y 5 PM.'}
+                </p>
                 <Button
                   href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website"
                   target="_blank"
