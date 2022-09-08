@@ -382,8 +382,26 @@ const AID = () => {
                   </span>
                   <br />
                   {language
-                    ? "Don't miss our Indian Arts & ﻿Crafts Festival coming in December 2022!"
+                    ? "Don't miss our Indian Arts & Crafts Festival coming in December 2022!"
                     : '¡No se pierda nuestro Indian Arts & Crafts Festival que se realizará en diciembre de 2022!'}
+                  <br />
+                  <a
+                    href="https://miccosukee.us8.list-manage.com/subscribe?u=ae1406c9f991aa9c928c1fb38&id=2338c8fb67"
+                    target="_blank"
+                  >
+                    <span
+                      style={{
+                        color: primary,
+                        fontWeight: 'bold',
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      {language ? ' Sign up HERE' : ' Regístrese AQUÍ'}
+                    </span>
+                  </a>
+                  {language
+                    ? ' to be among the first to hear about special promotions and updates!'
+                    : ' para enterarse de promociones especiales y actualizaciones.'}
                 </p>
               </div>
             );

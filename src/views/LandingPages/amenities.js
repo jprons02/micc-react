@@ -39,12 +39,14 @@ import image2 from 'assets/media/img/landingPages/amenities/Slots_Mobile.jpg';
 import image3 from 'assets/media/img/landingPages/amenities/Bingo_Mobile.jpg';
 import image4 from 'assets/media/img/landingPages/amenities/Dining_Mobile.jpg';
 import image5 from 'assets/media/img/landingPages/amenities/Pool_Mobile.jpg';
+import image6 from 'assets/media/img/landingPages/amenities/Banquets_Mobile.jpeg';
 
 import image1desktop from 'assets/media/img/landingPages/amenities/Resort_Desktop.jpg';
 import image2desktop from 'assets/media/img/landingPages/amenities/Slots_Desktop.jpg';
 import image3desktop from 'assets/media/img/landingPages/amenities/Bingo_Desktop.jpg';
 import image4desktop from 'assets/media/img/landingPages/amenities/Dining_Desktop.jpg';
 import image5desktop from 'assets/media/img/landingPages/amenities/Pool_Desktop.jpg';
+import image6desktop from 'assets/media/img/landingPages/amenities/Banquets_Desktop.jpeg';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
@@ -289,6 +291,35 @@ const ResortPackages = () => {
         },
       ],
     },
+    {
+      image: () => {
+        return (
+          <div>
+            <Hidden mdUp>
+              <img src={image6} className={classes.contentImage} />
+            </Hidden>
+            <Hidden smDown>
+              <img src={image6desktop} className={classes.contentImage} />
+            </Hidden>
+          </div>
+        );
+      },
+      color: '',
+      title: language ? 'Meetings & Banquets' : 'Reuniones y Banquetes',
+      button: {
+        type: 'external',
+        text: language ? 'FACILITY DIMENSIONS' : 'DIMENSIONES DE INSTALACIONES', //Dimensiones de Instalaciones
+        link:
+          'https://mapa-media.s3.amazonaws.com/mrg/Meeting_BanquetSpace.pdf',
+      },
+      body: [
+        {
+          p: language
+            ? 'For conventions, weddings, and special events, our flexible meeting space provides ample room for all of your needs. Full open ballrooms can accommodate extensive general sessions, including banquet and catering services for up to 1,200 guests.'
+            : 'Para convenciones, bodas y eventos especiales, tenemos amplio espacio para todas sus necesidades. Los salones de baile completamente abiertos pueden acomodar sesiones generales extensas, incluidos servicios de banquetes y catering para hasta 1,200 invitados.',
+        },
+      ],
+    },
   ];
 
   const header = () => {
@@ -343,6 +374,19 @@ const ResortPackages = () => {
         if (content.button.type) {
           if (content.button.type === 'ul') {
             return content.button.renderList();
+          } else if (content.button.type === 'external') {
+            return (
+              <Button
+                style={{ backgroundColor: content.color }}
+                className={classes.contentButton}
+                target="_blank"
+                href={content.button.link}
+              >
+                <span className={classes.contentButtonText}>
+                  {content.button.text}
+                </span>
+              </Button>
+            );
           }
         } else {
           return (
