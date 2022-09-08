@@ -209,7 +209,7 @@ export const september = {
       title: 'Senior Tuesdays',
       img: cardImage4,
       oneLiner:
-        'Tuesday, from 9 AM –6 PM, guests 55+ Play & Earn $10 Free Play, plus qualify for 50% off Bingo Admission on Thursday.',
+        'Tuesdays, from 9 AM – 6 PM, guests 55+ Play & Earn $10 Free Play, plus qualify for 50% off Bingo Admission on Thursday.',
       rules: {
         subSections: [
           {
