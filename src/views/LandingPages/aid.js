@@ -301,9 +301,46 @@ const AID = () => {
                     : 'Los Miccosukee utilizaron la lucha con caimanes como técnica de supervivencia y caza hace muchos años. Hoy, se ha convertido en una atracción popular que educa al público sobre estos poderosos reptiles que son una parte esencial del ecosistema de los Everglades. ¡Nuestros luchadores de caimanes le mostrarán cómo manejan a estas criaturas salvajes en una actuación asombrosa que lo tendrá al borde de su asiento!'}
                   <br />
                   {language
-                    ? 'Alligator Shows are at 1 PM, 3 PM & 5 PM.'
-                    : 'Los espectáculos de caimanes son a la 1 PM, 3 PM y 5 PM.'}
+                    ? 'Alligator Shows are at 12:30 PM, 1:30 PM, 2:30 PM, 3:30 PM & 4:30 PM'
+                    : 'Los espectáculos de caimanes son a la 12:30 PM, 1:30 PM, 2:30 PM, 3:30 PM y 4:30 PM'}
                 </p>
+                <div>
+                  {/*
+                  <p className={classes.contentSectionDetails}>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {language ? 'Event Day Resources:' : ''}
+                    </span>
+                    <ul
+                      style={{
+                        marginTop: '5px',
+                      }}
+                    >
+                      <a
+                        style={{
+                          color: primary,
+                          textDecoration: 'underline',
+                          fontWeight: 400,
+                        }}
+                        href="#"
+                        target="_blank"
+                      >
+                        <li>Event Map</li>
+                      </a>
+                      <a
+                        style={{
+                          color: primary,
+                          textDecoration: 'underline',
+                          fontWeight: 400,
+                        }}
+                        href="#"
+                        target="_blank"
+                      >
+                        <li>Event Schedule</li>
+                      </a>
+                    </ul>
+                  </p>
+                  */}
+                </div>
                 <Button
                   href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website"
                   target="_blank"
@@ -337,14 +374,16 @@ const AID = () => {
                     href="https://www.miccosukee.com/resortpackages"
                     target="_blank"
                   >
+                    &nbsp;
                     <span
                       style={{
                         color: primary,
                         fontWeight: 'bold',
                         textTransform: 'uppercase',
+                        textDecoration: 'underline',
                       }}
                     >
-                      {language ? ' Resort Packages' : ' Paquetes de Resort'}
+                      {language ? 'Resort Packages' : 'Paquetes de Resort'}
                     </span>{' '}
                   </a>
                   {language
@@ -389,14 +428,16 @@ const AID = () => {
                     href="https://miccosukee.us8.list-manage.com/subscribe?u=ae1406c9f991aa9c928c1fb38&id=2338c8fb67"
                     target="_blank"
                   >
+                    &nbsp;
                     <span
                       style={{
                         color: primary,
                         fontWeight: 'bold',
                         textTransform: 'uppercase',
+                        textDecoration: 'underline',
                       }}
                     >
-                      {language ? ' Sign up HERE' : ' Regístrese AQUÍ'}
+                      {language ? 'Sign up HERE' : 'Regístrese AQUÍ'}
                     </span>
                   </a>
                   {language
