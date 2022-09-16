@@ -64,6 +64,8 @@ import logo14 from 'assets/media/img/landingPages/aid2022/logos/Wipfli_Logo_Blue
 import logo16 from 'assets/media/img/landingPages/aid2022/logos/2022-rev-Logo.jpg';
 import logo18 from 'assets/media/img/landingPages/aid2022/logos/wtw_pos_clr_cs_1cs_220126.jpg';
 
+import video1 from 'assets/media/video/AID_SEPT_24.mp4';
+
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
 
@@ -305,41 +307,32 @@ const AID = () => {
                     : 'Los espectáculos de caimanes son a la 12:30 PM, 1:30 PM, 2:30 PM, 3:30 PM y 4:30 PM'}
                 </p>
                 <div>
-                  {/*
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
-                      {language ? 'Event Day Resources:' : ''}
+                      {language ? 'Event Info:' : 'Información del Evento:'}
                     </span>
-                    <ul
-                      style={{
-                        marginTop: '5px',
-                      }}
-                    >
-                      <a
-                        style={{
-                          color: primary,
-                          textDecoration: 'underline',
-                          fontWeight: 400,
-                        }}
-                        href="#"
-                        target="_blank"
-                      >
-                        <li>Event Map</li>
-                      </a>
-                      <a
-                        style={{
-                          color: primary,
-                          textDecoration: 'underline',
-                          fontWeight: 400,
-                        }}
-                        href="#"
-                        target="_blank"
-                      >
-                        <li>Event Schedule</li>
-                      </a>
-                    </ul>
                   </p>
-                  */}
+                  <ul
+                    style={{
+                      marginTop: '5px',
+                    }}
+                  >
+                    <a
+                      style={{
+                        color: primary,
+                        textDecoration: 'underline',
+                        fontWeight: 400,
+                      }}
+                      href="https://mapa-media.s3.amazonaws.com/website/AID_Map_Schedule_Web.pdf"
+                      target="_blank"
+                    >
+                      <li>
+                        {language
+                          ? 'Event Map & Schedule'
+                          : 'Mapa y Horario del Evento'}
+                      </li>
+                    </a>
+                  </ul>
                 </div>
                 <Button
                   href="https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website"
@@ -428,7 +421,6 @@ const AID = () => {
                     href="https://miccosukee.us8.list-manage.com/subscribe?u=ae1406c9f991aa9c928c1fb38&id=2338c8fb67"
                     target="_blank"
                   >
-                    &nbsp;
                     <span
                       style={{
                         color: primary,
@@ -703,7 +695,7 @@ const AID = () => {
   const imageSlider = () => {
     return (
       <GridContainer>
-        <GridItem md={7} style={{ padding: '2px' }}>
+        <GridItem md={4} style={{ padding: '2px' }}>
           <div>
             <CustomImageSlider images={imageObj} />
           </div>
@@ -737,7 +729,31 @@ const AID = () => {
             ) : null}
             {details()}
           </div>
-          {imageSlider()}
+          {/*<div>
+            <GridContainer justifyContent="center" alignItems="center">
+              <GridItem md={5} style={{ padding: '2px' }}>
+                <div>
+                  <video width="100%" controls>
+                    <source src={video1} type="video/mp4" />
+                  </video>
+                </div>
+              </GridItem>
+              <GridItem md={5} style={{ padding: '2px' }}>
+                <div>
+                  <CustomImageSlider images={imageObj} />
+                </div>
+              </GridItem>
+            </GridContainer>
+          </div>*/}
+          <div>
+            <GridContainer>
+              <GridItem md={7} style={{ padding: '2px' }}>
+                <div>
+                  <CustomImageSlider images={imageObj} />
+                </div>
+              </GridItem>
+            </GridContainer>
+          </div>
           <hr
             style={{
               border: '1px solid #e3e3e3',

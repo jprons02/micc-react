@@ -308,7 +308,7 @@ const ResortPackages = () => {
       title: language ? 'Meetings & Banquets' : 'Reuniones y Banquetes',
       button: {
         type: 'external',
-        text: language ? 'FACILITY DIMENSIONS' : 'DIMENSIONES DE INSTALACIONES', //Dimensiones de Instalaciones
+        text: language ? 'FACILITY DIMENSIONS' : 'DIMENSIONES DE INSTALACIONES',
         link:
           'https://mapa-media.s3.amazonaws.com/mrg/Meeting_BanquetSpace.pdf',
       },

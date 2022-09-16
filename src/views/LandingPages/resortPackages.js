@@ -193,6 +193,11 @@ const ResortPackages = () => {
                 ? 'Book by 8/31/2022 for stays through 9/15/2022.'
                 : 'Reserve antes del 31 de agosto de 2022 para estancias hasta el 15 de septiembre de 2022.'}
             </p>
+            <p style={detailsCss}>
+              {language
+                ? '* Valid through 11/30/2022.'
+                : '* Válido hasta el 30 de noviembre de 2022.'}
+            </p>
           </div>
           <Button onClick={handleClick} style={buttonStyle(red)}>
             <span style={{ fontSize: '14px', fontWeight: '600' }}>
@@ -478,6 +483,11 @@ const ResortPackages = () => {
               {language
                 ? 'Book by 8/31/2022 for stays through 9/15/2022.'
                 : 'Reserve antes del 31 de agosto de 2022 para estancias hasta el 15 de septiembre de 2022.'}
+            </p>
+            <p style={detailsCss}>
+              {language
+                ? '* Valid through 11/30/2022.'
+                : '* Válido hasta el 30 de noviembre de 2022.'}
             </p>
           </div>
           <Button onClick={handleClick} style={buttonStyle(red)}>

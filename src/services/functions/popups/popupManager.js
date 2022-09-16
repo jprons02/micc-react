@@ -1,7 +1,7 @@
 // Show popups on certain pages
 // Stop showing popup after 1 time load... may need to change how state works
 
-import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+import mrgImage from 'assets/media/img/popups/payouts.jpg';
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
 import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -77,23 +77,23 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: '22',
-      month: 'August',
-      day: '31',
+      month: 'September',
+      day: '15',
       time: '',
     },
     end: {
       year: '22',
-      month: 'September',
-      day: '16',
+      month: 'October',
+      day: '1',
       time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: mrgImage,
-    alt: 'bingo promotion',
-    linkType: 'external',
-    link: 'https://mapa-media.s3.amazonaws.com/website/monthly_bingo_promo.pdf',
+    alt: 'monthly payouts',
+    linkType: '',
+    link: '',
   },
 };
 const mrgGamingPromotionsPopup = {

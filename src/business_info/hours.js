@@ -245,14 +245,14 @@ export const mrgHours = {
       {
         days: (language) =>
           language ? 'Sunday - Thursday' : 'domingo - jueves',
-        open: `${getMinutes(9).combinedString}`,
+        open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
       {
         days: (language) =>
           language ? 'Friday & Saturday' : 'viernes y sábado',
-        open: `${getMinutes(9).combinedString}`,
+        open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(1).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
@@ -275,21 +275,19 @@ export const mrgHours = {
     hammock: [
       {
         days: (language) =>
-          language
-            ? 'Wednesday, Thursday & Sunday'
-            : 'miércoles, jueves y domingo',
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(22).combinedString}`,
-      },
-      {
-        days: (language) =>
           language ? 'Friday & Saturday' : 'viernes y sábado',
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
       {
+        days: (language) => (language ? 'Sunday' : 'domingo'),
+        open: `${getMinutes(12).combinedString}`,
+        close: `${getMinutes(22).combinedString}`,
+      },
+
+      {
         daysClosed: (language) =>
-          language ? 'Monday & Tuesday' : 'lunes y martes',
+          language ? 'Monday - Thursday' : 'lunes a jueves',
       },
     ],
     cypressLounge: [
