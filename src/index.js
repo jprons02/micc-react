@@ -4,9 +4,16 @@ import { AlertProvider } from 'contexts/AlertContext.js';
 import 'assets/scss/material-kit-react.scss?v=1.9.0';
 import './fonts/Phosphate/phosphate-solid-02-webfont.ttf';
 import './fonts/AvenirNext/avenir_next.ttf';
-
-// my pages
 import App from './App.js';
+import { keys } from './keys';
+
+//google tag manager:
+//https://medium.com/finnovate-io/integrating-google-tag-manager-with-a-react-app-5a8584ee2251
+import TagManager from 'react-gtm-module';
+const tagManagerArgs = {
+  gtmId: keys.gtmId,
+};
+TagManager.initialize(tagManagerArgs);
 
 ReactDOM.render(
   <AlertProvider>
