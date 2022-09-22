@@ -317,21 +317,36 @@ const AID = () => {
                       marginTop: '5px',
                     }}
                   >
-                    <a
-                      style={{
-                        color: primary,
-                        textDecoration: 'underline',
-                        fontWeight: 400,
-                      }}
-                      href="https://mapa-media.s3.amazonaws.com/website/AID_Map_Schedule_Web.pdf"
-                      target="_blank"
-                    >
-                      <li>
+                    <li>
+                      <a
+                        style={{
+                          color: primary,
+                          textDecoration: 'underline',
+                          fontWeight: 400,
+                        }}
+                        href="https://mapa-media.s3.amazonaws.com/website/AID_Map_Schedule_Web.pdf"
+                        target="_blank"
+                      >
                         {language
                           ? 'Event Map & Schedule'
                           : 'Mapa y Horario del Evento'}
-                      </li>
-                    </a>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{
+                          color: primary,
+                          textDecoration: 'underline',
+                          fontWeight: 400,
+                        }}
+                        href="https://mapa-media.s3.amazonaws.com/website/AID_Event_Participation_Waiver_Release.pdf"
+                        target="_blank"
+                      >
+                        {language
+                          ? 'Event Participation Waiver and Release'
+                          : 'Formulario de Exención y Liberación de Responsabilidad en la Participación de Eventos'}
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <Button
