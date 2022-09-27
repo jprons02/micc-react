@@ -140,6 +140,25 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
+          {isRunning([2022, 9, 27], [2022, 9, 30]) ? (
+            <StandardAlert
+              message={
+                <div id="alert2">
+                  <div>
+                    <b>
+                      For the safety and security of our community, Miccosukee
+                      Casino &amp; Resort will welcome guests of all ages during
+                      the impending threat of Hurricane Ian. Age restriction of
+                      18+ will be reinstated on Friday, September 30.
+                    </b>
+                  </div>
+                </div>
+              }
+              close
+              color="info"
+              //icon="info_outline"
+            />
+          ) : null}
           {isRunning([2022, 5, 20]) ? (
             <StandardAlert
               message={

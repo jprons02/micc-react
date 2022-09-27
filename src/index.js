@@ -11,7 +11,7 @@ import { keys } from './keys';
 //https://medium.com/finnovate-io/integrating-google-tag-manager-with-a-react-app-5a8584ee2251
 import TagManager from 'react-gtm-module';
 const tagManagerArgs = {
-  gtmId: keys.gtmId,
+  gtmId: 'GTM-MW544LL',
 };
 TagManager.initialize(tagManagerArgs);
 
