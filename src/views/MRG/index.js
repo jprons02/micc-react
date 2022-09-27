@@ -158,17 +158,45 @@ export default function Miccosukee(props) {
               color="info"
               //icon="info_outline"
             />
-          ) : null}
-          {isRunning([2022, 5, 20]) ? (
+          ) : (
             <StandardAlert
               message={
                 <div id="alert1a">
                   {language ? (
                     <div>
                       <b>All gaming areas NOW OPEN 24/7!</b>
+                      {
+                        <p style={{ fontWeight: '400' }}>
+                          Guests must be 18 or older to enter the building.
+                        </p>
+                      }
+                    </div>
+                  ) : (
+                    <div>
+                      <b>¡Todas las áreas de juego ya están ABIERTAS 24/7!</b>
                       <p style={{ fontWeight: '400' }}>
-                        Guests must be 18 or older to enter the building.
+                        Los invitados deben tener 18 años o más para entrar al
+                        establecimiento.
                       </p>
+                    </div>
+                  )}
+                </div>
+              }
+              close
+              color="success"
+              //icon="info_outline"
+            />
+          )}
+          {/*isRunning([2022, 5, 20]) ? (
+            <StandardAlert
+              message={
+                <div id="alert1a">
+                  {language ? (
+                    <div>
+                      <b>All gaming areas NOW OPEN 24/7!</b>
+                      {<p style={{ fontWeight: '400' }}>
+                        Guests must be 18 or older to enter the building.
+                      </p>}
                     </div>
                   ) : (
                     <div>
@@ -211,7 +239,7 @@ export default function Miccosukee(props) {
               color="success"
               //icon="info_outline"
             />
-          )}
+          )*/}
           {/*
           <StandardAlert
             message={
