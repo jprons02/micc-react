@@ -146,9 +146,10 @@ export default function Miccosukee(props) {
                 <div id="alert2">
                   <div>
                     <b>
-                      {language
-                        ? 'For the safety and security of our community, Miccosukee Casino & Resort will welcome guests of all ages during the impending threat of Hurricane Ian. Age restriction of 18+ will be reinstated on Friday, September 30.'
-                        : 'Para la seguridad de nuestra comunidad, Miccosukee Casino & Resort dará la bienvenida a huéspedes de todas las edades durante la inminente amenaza del huracán Ian. La restricción de edad para mayores de 18 años se restablecerá el viernes, 30 de septiembre.'}
+                      Given the extreme impact of Hurricane Ian on the state of
+                      Florida and our surrounding counties, Miccosukee Casino
+                      &amp; Resort is extending welcome to guests of all ages to
+                      our resort and facility until further notice.
                     </b>
                   </div>
                 </div>
