@@ -146,10 +146,9 @@ export default function Miccosukee(props) {
                 <div id="alert2">
                   <div>
                     <b>
-                      Given the extreme impact of Hurricane Ian on the state of
-                      Florida and our surrounding counties, Miccosukee Casino
-                      &amp; Resort is extending welcome to guests of all ages to
-                      our resort and facility until further notice.
+                      {language
+                        ? 'Given the extreme impact of Hurricane Ian on the state of Florida and our surrounding counties, Miccosukee Casino & Resort is extending welcome to guests of all ages to our resort and facility until further notice.'
+                        : 'Dado el impacto extremo del huracán Ian en el estado de Florida y los condados circundantes, Miccosukee Casino & Resort da la bienvenida a los huéspedes de todas las edades a nuestro resort e instalaciones hasta nuevo aviso.'}
                     </b>
                   </div>
                 </div>
