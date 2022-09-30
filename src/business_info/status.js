@@ -6,7 +6,7 @@ export const mrgStatus = {
   gaming: [
     {
       name: (language) =>
-        language ? 'General Gaming Floor' : 'Área de máquinas',
+        language ? 'General Casino Floor' : 'Área de máquinas',
       isOpen: true,
       details: (language) => [
         language

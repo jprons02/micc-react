@@ -87,7 +87,7 @@ const MrgHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: language ? 'Gaming' : 'Casino',
+      text: language ? 'Casino' : 'Casino',
       itemType: 'dropdown',
       href: '',
       target: '',

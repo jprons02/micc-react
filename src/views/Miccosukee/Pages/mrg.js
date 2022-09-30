@@ -23,8 +23,8 @@ const MRG = (props) => {
             <div className={classes.innerContainer}>
               <h1 className={classes.header}>CASINO &amp; RESORT</h1>
               <p className={classes.description}>
-                Located in the heart of the Everglades, Miccosukee Resort &amp;
-                Gaming is home to South Florida’s original gaming and all-around
+                Located in the heart of the Everglades, Miccosukee Casino &amp;
+                Resort is home to South Florida’s original gaming and all-around
                 entertainment emporium. With non-stop gaming thrills and the
                 highest payouts in town, there is something for everyone. Come
                 for the gaming, stay for the fun!

@@ -31,7 +31,7 @@ export const getMetaData = (uri, pageObj) => {
       name: 'Miccosukee Casino & Resort',
       title: 'Miccosukee Casino & Resort',
       description:
-        'Enjoy our gaming resort in Miami that features non-stop gaming thrills and the highest payouts in town! There is something for everyone!',
+        'Enjoy our casino resort in Miami that features non-stop thrills and the highest payouts in town! There is something for everyone!',
       thumbnail:
         'https://mapa-media.s3.amazonaws.com/websiteMetadataImages/mrgMeta.jpg',
       slug: uri,
@@ -104,7 +104,7 @@ export const getMetaData = (uri, pageObj) => {
     name: 'Miccosukee Home',
     title: 'Miccosukee Home',
     description:
-      'Enjoy our gaming resort in Miami that features non-stop gaming thrills and the highest payouts in town! There is something for everyone!',
+      'Enjoy our casino resort in Miami that features non-stop thrills and the highest payouts in town! There is something for everyone!',
     thumbnail:
       'https://mapa-media.s3.amazonaws.com/websiteMetadataImages/mrgMeta.jpg',
     slug: uri,

@@ -20,7 +20,7 @@ const VirtualEventFooter = () => {
       ],
     },
     {
-      header: 'GAMING & GOLF',
+      header: 'CASINO & GOLF',
       subMenu: [
         {
           linkText: 'Casino & Resort',

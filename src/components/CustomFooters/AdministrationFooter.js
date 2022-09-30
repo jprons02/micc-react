@@ -56,7 +56,7 @@ const AdministrationFooter = () => {
       ],
     },
     {
-      header: language ? 'GAMING & GOLF' : 'CASINO Y GOLF',
+      header: language ? 'CASINO & GOLF' : 'CASINO Y GOLF',
       subMenu: [
         {
           linkText: 'Casino & Resort',

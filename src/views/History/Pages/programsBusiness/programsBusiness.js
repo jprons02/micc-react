@@ -1,40 +1,40 @@
-import React from "react";
+import React from 'react';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from "assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
-import image1 from "assets/media/img/miccosukee/pages/history_admin/Screen-Shot-2021-07-20-at-8.49.47-AM.jpg";
-import image2 from "assets/media/img/administration/plaza.jpg";
+import bgImage from 'assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg';
+import image1 from 'assets/media/img/miccosukee/pages/history_admin/Screen-Shot-2021-07-20-at-8.49.47-AM.jpg';
+import image2 from 'assets/media/img/administration/plaza.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext";
+import { useLanguage } from 'contexts/languageContext';
 
 const useStyles = makeStyles(styles);
 
 const imageArray = [image1, image2];
 const imageObj = [
-  { src: image1, alt: "Admin Building" },
-  { src: image2, alt: "Service Plaza" },
+  { src: image1, alt: 'Admin Building' },
+  { src: image2, alt: 'Service Plaza' },
 ];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -50,12 +50,12 @@ const ProgramsBusiness = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>
-                {language ? "Programs & Businesses" : "Programas y Empresas "}
+                {language ? 'Programs & Businesses' : 'Programas y Empresas '}
               </h2>
               <h4>
                 {language
-                  ? "Developing Independence"
-                  : "Desarrollando la Independencia"}
+                  ? 'Developing Independence'
+                  : 'Desarrollando la Independencia'}
               </h4>
               {language ? (
                 <React.Fragment>
@@ -84,10 +84,9 @@ const ProgramsBusiness = () => {
                   <p>
                     In addition, the Miccosukee Tribe owns and operates a Gift
                     Shop; General Store; Service Station and Indian Village on
-                    the Tamiami Trail Reservation; an Indian Gaming Facility and
-                    Tobacco Shop on the Krome Avenue Reservation; and a
-                    full-service Gas Station and Service Plaza on Alligator
-                    Alley Reservation.
+                    the Tamiami Trail Reservation; an Indian Casino and Tobacco
+                    Shop on the Krome Avenue Reservation; and a full-service Gas
+                    Station and Service Plaza on Alligator Alley Reservation.
                   </p>
                   <h4>Population</h4>
                   <p>

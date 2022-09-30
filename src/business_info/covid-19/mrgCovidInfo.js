@@ -472,7 +472,7 @@ const MrgCovidInfo = (props) => {
           onClick={() => setMrg({ ...mrg, gaming: !mrg.gaming })}
           style={sectionHeaderStyle}
         >
-          {props.language ? 'Gaming' : 'Juegos de Azar'}
+          {props.language ? 'Casino' : 'Casino'}
         </h4>
         <Collapse in={mrg.gaming}>
           {renderGaming()}
