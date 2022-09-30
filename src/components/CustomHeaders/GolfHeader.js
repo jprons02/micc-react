@@ -65,7 +65,7 @@ const GolfHeader = () => {
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: 'Resort & Gaming',
+      text: 'Casino & Resort',
       itemType: 'external',
       href: 'https://miccosukee.com/mrg',
       target: '_blank',

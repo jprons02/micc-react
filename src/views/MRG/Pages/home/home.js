@@ -1,60 +1,60 @@
-import React, { useState, useEffect } from "react";
-import { Link, useRouteMatch } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useRouteMatch } from 'react-router-dom';
 
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 
 // Custom Components
-import Button from "components/CustomButtons/Button.js";
+import Button from 'components/CustomButtons/Button.js';
 
 // @material-ui/core components
-import Icon from "@material-ui/core/Icon";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
+import Icon from '@material-ui/core/Icon';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent';
 //import DialogActions from "@material-ui/core/DialogActions";
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from '@material-ui/core/IconButton';
 
 // @material-ui/icons
-import Close from "@material-ui/icons/Close";
-import { Hidden } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import CustomButton from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import Close from '@material-ui/icons/Close';
+import { Hidden } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import CustomButton from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 // My Custom Component
-import HeroSection from "components/CustomSections/HeroSection.js";
-import RaisedContainer from "components/CustomSections/RaisedContainer";
-import StandardCard from "components/CustomCards/StandardCard.js";
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import RaisedContainer from 'components/CustomSections/RaisedContainer';
+import StandardCard from 'components/CustomCards/StandardCard.js';
 
 // react component for creating beautiful carousel
-import Slider from "react-slick";
+import Slider from 'react-slick';
 
 // Images
-import heroImg1 from "assets/media/img/mrg/home/mrg_hero.jpg";
+import heroImg1 from 'assets/media/img/mrg/home/mrg_hero.jpg';
 
-import cardImage1 from "assets/media/img/mrg/gaming/machines/MRG_Gaming1.jpg";
-import cardImage2 from "assets/media/img/mrg/home/burgerfries.jpg";
-import cardImage3 from "assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg";
-import cardImage4 from "assets/media/img/mrg/home/homeCard_spa.jpg";
-import cardImage5 from "assets/media/img/mrg/home/homeCard_events.jpg";
-import cardImage6 from "assets/media/img/mrg/home/homeCard_banquets.jpg";
+import cardImage1 from 'assets/media/img/mrg/gaming/machines/MRG_Gaming1.jpg';
+import cardImage2 from 'assets/media/img/mrg/home/burgerfries.jpg';
+import cardImage3 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg';
+import cardImage4 from 'assets/media/img/mrg/home/homeCard_spa.jpg';
+import cardImage5 from 'assets/media/img/mrg/home/homeCard_events.jpg';
+import cardImage6 from 'assets/media/img/mrg/home/homeCard_banquets.jpg';
 
 // Styles
-import styles from "assets/jss/material-kit-react/views/mrg/home.js";
-import cardStyles from "assets/jss/material-kit-react/views/mrg/homeCardStyles.js";
-import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
+import styles from 'assets/jss/material-kit-react/views/mrg/home.js';
+import cardStyles from 'assets/jss/material-kit-react/views/mrg/homeCardStyles.js';
+import modalStyle from 'assets/jss/material-kit-react/virtualLoginModal.js';
 
-import cafeHammockVidImage from "assets/media/img/mrg/home/Cafe-Hammock-thubnail_1x.jpg";
-import cafeHammockVid from "assets/media/video/Cafe_Hammock_720p.mp4";
-import hotelVid from "assets/media/video/MRG_BookToday_720p.mov";
-import hotelImage from "assets/media/img/mrg/home/MRG_BookToday_image.jpg";
+import cafeHammockVidImage from 'assets/media/img/mrg/home/Cafe-Hammock-thubnail_1x.jpg';
+import cafeHammockVid from 'assets/media/video/Cafe_Hammock_720p.mp4';
+import hotelVid from 'assets/media/video/MRG_BookToday_720p.mov';
+import hotelImage from 'assets/media/img/mrg/home/MRG_BookToday_image.jpg';
 
 // context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 // services
-import { isRunning } from "services/functions/scheduleThis";
+import { isRunning } from 'services/functions/scheduleThis';
 
 const useStyles = makeStyles(styles);
 const useCardStyles = makeStyles(cardStyles);
@@ -80,16 +80,16 @@ const Home = (props) => {
           id: 1,
           bgImage: hotelImage,
           bgVideo: hotelVid,
-          gradient: ".5",
+          gradient: '.5',
           header: language
-            ? "HOTEL NOW OPEN! Welcome Back!"
-            : "HOTEL YA ABIERTO! ¡Bienvenidos!",
+            ? 'HOTEL NOW OPEN! Welcome Back!'
+            : 'HOTEL YA ABIERTO! ¡Bienvenidos!',
           subHeader: language
-            ? "Stay, play and experience the Miccosukee Everglades."
-            : "Descanse, juegue y experimente los Everglades Miccosukee.",
+            ? 'Stay, play and experience the Miccosukee Everglades.'
+            : 'Descanse, juegue y experimente los Everglades Miccosukee.',
           button: {
-            text: language ? "SEE DETAILS" : "MÁS DETALLES",
-            link: "/mrg/accommodations",
+            text: language ? 'SEE DETAILS' : 'MÁS DETALLES',
+            link: '/mrg/accommodations',
           },
         },
       ]
@@ -98,16 +98,16 @@ const Home = (props) => {
           id: 1,
           bgImage: cafeHammockVidImage,
           bgVideo: cafeHammockVid,
-          gradient: ".5",
+          gradient: '.5',
           header: language
-            ? "CAFÉ HAMMOCK NOW OPEN!"
-            : "¡CAFÉ HAMMOCK AHORA ABIERTO!",
+            ? 'CAFÉ HAMMOCK NOW OPEN!'
+            : '¡CAFÉ HAMMOCK AHORA ABIERTO!',
           subHeader: language
-            ? "Enjoy casual dining with a sophisticated flair!"
-            : "¡Disfrute de una cena informal con un toque sofisticado!",
+            ? 'Enjoy casual dining with a sophisticated flair!'
+            : '¡Disfrute de una cena informal con un toque sofisticado!',
           button: {
-            text: language ? "SEE DETAILS" : "MÁS DETALLES",
-            link: "/mrg/cafe-hammock",
+            text: language ? 'SEE DETAILS' : 'MÁS DETALLES',
+            link: '/mrg/cafe-hammock',
           },
         },
         /*
@@ -152,48 +152,48 @@ const Home = (props) => {
       id: 1,
       img: {
         src: cardImage1,
-        alt: "row of a gaming machines",
+        alt: 'row of a gaming machines',
       },
-      title: language ? "Gaming Machines" : "Máquinas de Juego",
+      title: language ? 'Gaming Machines' : 'Máquinas de Juego',
       body: language
-        ? "Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor!"
-        : "¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas!",
-      buttonText: language ? "Learn More" : "Conozca Más",
+        ? 'Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor!'
+        : '¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas!',
+      buttonText: language ? 'Learn More' : 'Conozca Más',
       linkObj: {
-        type: "internal",
-        link: "/gaming-machines",
+        type: 'internal',
+        link: '/gaming-machines',
       },
     },
     {
       id: 2,
       img: {
         src: cardImage2,
-        alt: "burger and fries",
+        alt: 'burger and fries',
       },
-      title: language ? "Sawgrass Cafe" : "Sawgrass Cafe",
+      title: language ? 'Sawgrass Cafe' : 'Sawgrass Cafe',
       body: language
-        ? "Sawgrass Cafe serves tasty sandwiches, soups, salads, and Latino favorites like pastelitos."
-        : "Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos.",
-      buttonText: language ? "See Details" : "Más Detalles",
+        ? 'Sawgrass Cafe serves tasty sandwiches, soups, salads, and Latino favorites like pastelitos.'
+        : 'Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos.',
+      buttonText: language ? 'See Details' : 'Más Detalles',
       linkObj: {
-        type: "internal",
-        link: "/sawgrass-cafe",
+        type: 'internal',
+        link: '/sawgrass-cafe',
       },
     },
     {
       id: 3,
       img: {
         src: cardImage3,
-        alt: "Bingo floor",
+        alt: 'Bingo floor',
       },
-      title: language ? "Bingo" : "Bingo",
+      title: language ? 'Bingo' : 'Bingo',
       body: language
-        ? "Miccosukee Resort & Gaming’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance!"
-        : "¡La Sala de Bingo de Miccosukee Resort & Gaming es el lugar ideal para probar su suerte con el bingo de altas apuestas!",
-      buttonText: language ? "Learn More" : "Conozca Más",
+        ? 'Miccosukee Casino & Resort’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance!'
+        : '¡La Sala de Bingo de Miccosukee Casino & Resort es el lugar ideal para probar su suerte con el bingo de altas apuestas!',
+      buttonText: language ? 'Learn More' : 'Conozca Más',
       linkObj: {
-        type: "internal",
-        link: "/bingo",
+        type: 'internal',
+        link: '/bingo',
       },
     },
   ];
@@ -201,7 +201,7 @@ const Home = (props) => {
   let match = useRouteMatch();
 
   const cardButtonClick = (card) => {
-    if (card.linkObj.type === "internal") {
+    if (card.linkObj.type === 'internal') {
       props.history.push(`/mrg${card.linkObj.link}`);
     } else {
       return null;
@@ -249,8 +249,8 @@ const Home = (props) => {
         <div className={classes.welcomeContainer}>
           <Typography className={classes.welcome} paragraph component="h1">
             {language
-              ? "Welcome to Miccosukee Resort & Gaming"
-              : "Bienvenido a Miccosukee Resort & Gaming"}
+              ? 'Welcome to Miccosukee Casino & Resort'
+              : 'Bienvenido a Miccosukee Casino & Resort'}
           </Typography>
           <Typography
             className={classes.subWelcome}
@@ -259,8 +259,8 @@ const Home = (props) => {
             variant="h3"
           >
             {language
-              ? "Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium"
-              : "Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida"}
+              ? 'Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium'
+              : 'Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida'}
           </Typography>
           <hr className={classes.hr} />
         </div>

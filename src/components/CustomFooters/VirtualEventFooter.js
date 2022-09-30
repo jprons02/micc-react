@@ -1,56 +1,56 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import { historyColor } from "themes/colors.js";
+import { historyColor } from 'themes/colors.js';
 
 // Custom Component
-import Footer from "components/Footer/Footer.js";
+import Footer from 'components/Footer/Footer.js';
 
 // Business Info
-import { airboatsSocialMedia } from "business_info/socialMedia.js";
+import { airboatsSocialMedia } from 'business_info/socialMedia.js';
 
 const VirtualEventFooter = () => {
   const footerArray = [
     {
-      header: "MICCOSUKEE",
+      header: 'MICCOSUKEE',
       subMenu: [
         {
-          linkText: "Main Home",
-          linkTo: "/",
+          linkText: 'Main Home',
+          linkTo: '/',
         },
       ],
     },
     {
-      header: "GAMING & GOLF",
+      header: 'GAMING & GOLF',
       subMenu: [
         {
-          linkText: "Resort & Gaming",
-          linkTo: "/mrg",
+          linkText: 'Casino & Resort',
+          linkTo: '/mrg',
         },
         {
-          linkText: "Golf & Country Club",
-          linkTo: "/golf",
+          linkText: 'Golf & Country Club',
+          linkTo: '/golf',
         },
       ],
     },
     {
-      header: "EXPERIENCES",
+      header: 'EXPERIENCES',
       subMenu: [
         {
-          linkText: "Indian Village",
-          linkTo: "/village",
+          linkText: 'Indian Village',
+          linkTo: '/village',
         },
         {
-          linkText: "Airboats",
-          linkTo: "/airboats",
+          linkText: 'Airboats',
+          linkTo: '/airboats',
         },
       ],
     },
     {
-      header: "FOLLOW US",
+      header: 'FOLLOW US',
       subMenu: [
         {
           externalLink: true,
-          linkText: "Twitter",
+          linkText: 'Twitter',
           linkTo: airboatsSocialMedia.twitter,
         },
       ],

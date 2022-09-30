@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 //import { Icon } from "@material-ui/core";
 
 // core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import styles from "assets/jss/material-kit-react/views/miccosukee/pages/mrg.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Button from 'components/CustomButtons/Button.js';
+import styles from 'assets/jss/material-kit-react/views/miccosukee/pages/mrg.js';
 
 const useStyles = makeStyles(styles);
 
@@ -17,11 +17,11 @@ const MRG = (props) => {
 
   return (
     <div className={classes.main}>
-      <GridContainer style={{ height: "100%" }}>
+      <GridContainer style={{ height: '100%' }}>
         <GridItem className={classes.mrgBG} sm={12} md={6}>
           <div className={classes.container}>
             <div className={classes.innerContainer}>
-              <h1 className={classes.header}>RESORT &amp; GAMING</h1>
+              <h1 className={classes.header}>CASINO &amp; RESORT</h1>
               <p className={classes.description}>
                 Located in the heart of the Everglades, Miccosukee Resort &amp;
                 Gaming is home to South Florida’s original gaming and all-around
@@ -33,7 +33,7 @@ const MRG = (props) => {
                 <Button
                   className={classes.backButton}
                   color="white"
-                  onClick={() => props.click("/")}
+                  onClick={() => props.click('/')}
                 >
                   BACK
                 </Button>
@@ -58,7 +58,7 @@ const MRG = (props) => {
                 <Button
                   className={classes.backButton}
                   color="white"
-                  onClick={() => props.click("/")}
+                  onClick={() => props.click('/')}
                 >
                   BACK
                 </Button>

@@ -28,8 +28,8 @@ export const getMetaData = (uri, pageObj) => {
   // END LANDING PAGES
   if (mrg.test(uri)) {
     return {
-      name: 'Miccosukee Resort & Gaming',
-      title: 'Miccosukee Resort & Gaming',
+      name: 'Miccosukee Casino & Resort',
+      title: 'Miccosukee Casino & Resort',
       description:
         'Enjoy our gaming resort in Miami that features non-stop gaming thrills and the highest payouts in town! There is something for everyone!',
       thumbnail:

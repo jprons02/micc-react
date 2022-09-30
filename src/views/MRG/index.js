@@ -250,7 +250,7 @@ export default function Miccosukee(props) {
                         style={{ color: 'white', fontWeight: '800' }}
                         to={`${match.path}/covid-19`}
                       >
-                        Click HERE for the Miccosukee Resort &amp; Gaming
+                        Click HERE for the Miccosukee Casino &amp; Resort
                         COVID-19 guidelines.
                       </Link>
                     </b>

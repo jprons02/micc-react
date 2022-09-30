@@ -36,8 +36,8 @@ const Home = ({ history }) => {
       id: 1,
       url: 'mrg',
       title: language
-        ? 'Miccosukee Resort & Gaming'
-        : 'Miccosukee Resort & Gaming',
+        ? 'Miccosukee Casino & Resort'
+        : 'Miccosukee Casino & Resort',
       description: language
         ? 'Come for the gaming, stay for the fun!'
         : 'Venga a jugar, ¡quédese a divertirse!',

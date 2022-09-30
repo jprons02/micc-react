@@ -1,29 +1,29 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState } from 'react';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from "assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg";
-import chairman from "assets/media/img/history/Chairman_TalbertCypress.jpg";
-import asstChairman from "assets/media/img/history/AsstChairman_LucasOsceola.jpg";
-import treasurer from "assets/media/img/history/Treasurer_KennyCypress.jpg";
-import secretary from "assets/media/img/history/Secretary_WilliamJOsceola.jpg";
-import lawmaker from "assets/media/img/history/imgLeadersPetties-no6sis5mu2iwh29e7uim87r4hdi3uclvpnfjkkis2o.jpg";
+import bgImage from 'assets/media/img/history/Header_Tribe_1500x354-e1551386527765.jpg';
+import chairman from 'assets/media/img/history/Chairman_TalbertCypress.jpg';
+import asstChairman from 'assets/media/img/history/AsstChairman_LucasOsceola.jpg';
+import treasurer from 'assets/media/img/history/Treasurer_KennyCypress.jpg';
+import secretary from 'assets/media/img/history/Secretary_WilliamJOsceola.jpg';
+import lawmaker from 'assets/media/img/history/imgLeadersPetties-no6sis5mu2iwh29e7uim87r4hdi3uclvpnfjkkis2o.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext";
-import { SettingsInputAntennaTwoTone } from "@material-ui/icons";
+import { useLanguage } from 'contexts/languageContext';
+import { SettingsInputAntennaTwoTone } from '@material-ui/icons';
 
 const useStyles = makeStyles(styles);
 
@@ -31,8 +31,8 @@ const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -43,30 +43,30 @@ const TribalLeaders = () => {
   const imageWithCaptions = [
     {
       src: chairman,
-      caption: `Talbert Cypress, ${language ? "Chairman" : "Presidente"}`,
-      alt: "Talbert Cypress, Chairman",
+      caption: `Talbert Cypress, ${language ? 'Chairman' : 'Presidente'}`,
+      alt: 'Talbert Cypress, Chairman',
     },
     {
       src: asstChairman,
       caption: `Lucas K. Osceola, ${
-        language ? "Assistant Chairman" : "Asistente del Presidente"
+        language ? 'Assistant Chairman' : 'Asistente del Presidente'
       }`,
-      alt: "Lucas K. Osceola, Assistant Chairman",
+      alt: 'Lucas K. Osceola, Assistant Chairman',
     },
     {
       src: treasurer,
-      caption: `Kenneth H. Cypress, ${language ? "Treasurer" : "Tesorero"}`,
-      alt: "Kenneth H. Cypress, Treasurer",
+      caption: `Kenneth H. Cypress, ${language ? 'Treasurer' : 'Tesorero'}`,
+      alt: 'Kenneth H. Cypress, Treasurer',
     },
     {
       src: secretary,
-      caption: `William J. Osceola, ${language ? "Secretary" : "Secretario"}`,
-      alt: "William J. Osceola, Secretary",
+      caption: `William J. Osceola, ${language ? 'Secretary' : 'Secretario'}`,
+      alt: 'William J. Osceola, Secretary',
     },
     {
       src: lawmaker,
-      caption: `Petties Osceola, Jr., ${language ? "Lawmaker" : "Legislador"}`,
-      alt: "Petties Osceola, Jr., Lawmaker",
+      caption: `Petties Osceola, Jr., ${language ? 'Lawmaker' : 'Legislador'}`,
+      alt: 'Petties Osceola, Jr., Lawmaker',
     },
   ];
 
@@ -81,7 +81,7 @@ const TribalLeaders = () => {
       case 0:
         return (
           <React.Fragment>
-            <h3>Talbert Cypress, {language ? "Chairman" : "Presidente"}</h3>
+            <h3>Talbert Cypress, {language ? 'Chairman' : 'Presidente'}</h3>
             {language ? (
               <React.Fragment>
                 <p>
@@ -158,8 +158,8 @@ const TribalLeaders = () => {
         return (
           <React.Fragment>
             <h3>
-              Lucas K. Osceola,{" "}
-              {language ? "Assistant Chairman" : "Asistente del Presidente"}
+              Lucas K. Osceola,{' '}
+              {language ? 'Assistant Chairman' : 'Asistente del Presidente'}
             </h3>
             {language ? (
               <React.Fragment>
@@ -187,7 +187,7 @@ const TribalLeaders = () => {
                   receiving a scholarship from the Miccosukee Tribe to attend
                   Fisher College in Boston, Massachusetts, where he played
                   baseball. Having completed his studies, he returned to Miami
-                  to work for Miccosukee Resort &amp; Gaming and pursue a career
+                  to work for Miccosukee Casino &amp; Resort and pursue a career
                   in agriculture.
                 </p>
                 <p>
@@ -226,7 +226,7 @@ const TribalLeaders = () => {
                   beca de la Tribu Miccosukee para asistir a Fisher College en
                   Boston, Massachusetts, donde jugó béisbol. Habiendo completado
                   sus estudios, regresó a Miami para trabajar en Miccosukee
-                  Resort &amp; Gaming y seguir una carrera en agricultura.
+                  Casino &amp; Resort y seguir una carrera en agricultura.
                 </p>
                 <p>
                   Sus planes mientras esté en el cargo incluyen comenzar un
@@ -243,7 +243,7 @@ const TribalLeaders = () => {
       case 2:
         return (
           <React.Fragment>
-            <h3>Kenneth H. Cypress, {language ? "Treasurer" : "Tesorero"}</h3>
+            <h3>Kenneth H. Cypress, {language ? 'Treasurer' : 'Tesorero'}</h3>
             {language ? (
               <React.Fragment>
                 <p>
@@ -255,7 +255,7 @@ const TribalLeaders = () => {
                   eye on finances and bring in more money”, expressed Cypress.
                   He manages the finances for the Tribe’s enterprises, including
                   the airboats, gas station and general store, service plaza,
-                  and Miccosukee Resort &amp; Gaming.
+                  and Miccosukee Casino &amp; Resort.
                 </p>
                 <p>
                   Belonging to the Bird Clan and growing up in the Reservation,
@@ -285,7 +285,7 @@ const TribalLeaders = () => {
                   expresó Cypress. Maneja las finanzas de las empresas de la
                   Tribu, incluyendo los airboats (hidrodeslizadores), la
                   gasolinera y tienda general, la plaza de servicio y Miccosukee
-                  Resort &amp; Gaming.
+                  Casino &amp; Resort.
                 </p>
                 <p>
                   Perteneciente al Clan de los Pájaros y criado en la Reserva,
@@ -311,7 +311,7 @@ const TribalLeaders = () => {
       case 3:
         return (
           <React.Fragment>
-            <h3>William J. Osceola, {language ? "Secretary" : "Secretario"}</h3>
+            <h3>William J. Osceola, {language ? 'Secretary' : 'Secretario'}</h3>
             {language ? (
               <React.Fragment>
                 <p>
@@ -389,7 +389,7 @@ const TribalLeaders = () => {
         return (
           <React.Fragment>
             <h3>
-              Petties Osceola, Jr., {language ? "Lawmaker" : "Legislador"}
+              Petties Osceola, Jr., {language ? 'Lawmaker' : 'Legislador'}
             </h3>
             {language ? (
               <React.Fragment>
@@ -515,7 +515,7 @@ const TribalLeaders = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Tribal Leaders" : "Líderes Tribales"}</h2>
+              <h2>{language ? 'Tribal Leaders' : 'Líderes Tribales'}</h2>
               {language ? (
                 <React.Fragment>
                   <p>
@@ -551,7 +551,7 @@ const TribalLeaders = () => {
           <GridItem md={5}>
             <div className={classes.imageArea}>
               <CustomImageSlider
-                customStyle={{ width: "200px" }}
+                customStyle={{ width: '200px' }}
                 customImages={imageWithCaptions}
                 clickFunction={clickFunction}
               />

@@ -59,7 +59,7 @@ const AdministrationFooter = () => {
       header: language ? 'GAMING & GOLF' : 'CASINO Y GOLF',
       subMenu: [
         {
-          linkText: 'Resort & Gaming',
+          linkText: 'Casino & Resort',
           linkTo: '/mrg',
         },
         {

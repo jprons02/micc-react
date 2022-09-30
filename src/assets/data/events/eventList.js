@@ -43,80 +43,6 @@ export const events = (language) => {
     },
     */
     {
-      id: '5',
-      title: language
-        ? 'Labor Day Weekend CAR & BIKE SHOW'
-        : 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
-      test: {
-        english: 'Labor Day Weekend CAR & BIKE SHOW',
-        spanish: 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
-      },
-      type: 'standard',
-      category: '',
-      admission: language ? 'FREE' : 'GRATIS',
-      startDate: '9/3/2022',
-      endDate: '9/3/2022',
-      startTime: '11:00 A.M.',
-      endTime: '5:00 P.M.',
-      excerpt: language
-        ? 'Calling all gear heads! Rev up your engines and head down to Miccosukee Resort & Gaming for a...'
-        : '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Resort & Gaming para un...',
-      fullDescription: language
-        ? [
-            'Calling all gear heads! Rev up your engines and head down to Miccosukee Resort & Gaming for a spectacular Car & Bike Show on Saturday, September 3! Check out amazing rides, food trucks, music, vendors, and contests in this outdoor event rated E for everyone!',
-          ]
-        : [
-            '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Resort & Gaming para un espectacular show de Carros y Motos el sábado, 3 de septiembre! ¡Tendremos increíbles vehículos, camiones de comida, música, vendedores y concursos en este evento al aire libre apto para todo público!',
-          ],
-    },
-    {
-      id: '4',
-      title: 'Florida Mega Market',
-      type: 'standard',
-      category: '',
-      admission: language ? 'FREE' : 'GRATIS',
-      startDate: '9/4/2022',
-      endDate: '9/4/2022',
-      startTime: '11:00 A.M.',
-      endTime: '7:00 P.M.',
-      excerpt: language
-        ? 'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Resort & Gaming! Buy unique items from...'
-        : '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Resort & Gaming! Compre artículos únicos de...',
-      fullDescription: language
-        ? [
-            'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Resort & Gaming! Buy unique items from hundreds of vendors, chow down with delicious food trucks, and dance the afternoon away with live music and entertainment.',
-          ]
-        : [
-            '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Resort & Gaming! Compre artículos únicos de cientos de vendedores, disfrute de deliciosos camiones de comida y baile toda la tarde con música en vivo y entretenimiento.',
-          ],
-    },
-    {
-      id: '3',
-      title: 'Carritos y Cafecito',
-      type: 'standard',
-      category: '',
-      admission: language ? 'FREE' : 'GRATIS',
-      startDate: '8/6/2022',
-      endDate: '8/6/2022',
-      startTime: '8:00 A.M.',
-      endTime: '12:00 P.M.',
-      excerpt: language
-        ? 'Cruise down nostalgia highway and show off your classic & specialty ride while getting your caffeine fix...'
-        : '¡Navegue por la autopista de la nostalgia y presuma de su vehículo clásico y especializado mientras obtiene su dosis de cafeína...',
-      fullDescription: language
-        ? [
-            'Cruise down nostalgia highway and show off your classic & specialty ride while getting your caffeine fix on Saturday, August 6, from 8 AM - 12 PM at Miccosukee Resort & Gaming!',
-            'Carritos y Cafecito, hosted by Road Rage Media, invites car enthusiasts to show off their specialty vehicles, motorcycles, trucks, and Jeeps while enjoying coffee and plenty of food trucks! Spectators are welcome!',
-            'Cars, coffee, and tasty grub on a Saturday are way better than brunch. We hope to see you there!',
-          ]
-        : [
-            '¡Navegue por la autopista de la nostalgia y presuma de su vehículo clásico y especializado mientras obtiene su dosis de cafeína el sábado, 6 de agosto, de 8 AM a 12 PM en Miccosukee Resort & Gaming!',
-            'Carritos y Cafecito, organizado por Road Rage Media, invita a los entusiastas de automóviles a mostrar sus vehículos especiales, motos, camionetas y Jeeps mientras disfrutan de un café y muchos camiones de comida. ¡Los espectadores son bienvenidos!',
-            'Un sábado con carros, café y comida son mejores que el brunch. ¡Esperamos verlos allí!',
-          ],
-    },
-
-    {
       id: '2',
       title: 'American Indian Day',
       type: 'standard',
@@ -127,17 +53,17 @@ export const events = (language) => {
       startTime: '12:00 P.M.',
       endTime: '6:00 P.M.',
       excerpt: language
-        ? 'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Resort & Gaming! Admission is free, so bring the whole tribe!...'
-        : 'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Resort & Gaming. La entrada es gratuita, ¡así que traiga a toda su tribu!...',
+        ? 'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Casino & Resort! Admission is free, so bring the whole tribe!...'
+        : 'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita, ¡así que traiga a toda su tribu!...',
 
       fullDescription: language
         ? [
-            'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Resort & Gaming! Admission is free, so bring the whole tribe!',
+            'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Casino & Resort! Admission is free, so bring the whole tribe!',
             'On American Indian Day, we honor the culture and traditions of indigenous First Nations and their contributions to the world.',
             'This family-friendly festival provides a glimpse into the Miccosukee Tribe’s culture as we host indigenous craft and food vendors, alligator wrestling shows, airboat rides, and more. Visit us and connect with Miami’s original locals in the heart of the Florida Everglades.',
           ]
         : [
-            'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Resort & Gaming. La entrada es gratuita, ¡así que traiga a toda su tribu!',
+            'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita, ¡así que traiga a toda su tribu!',
             'En el Día del Indio Americano, honramos la cultura y las tradiciones de las Primeras Naciones indígenas y sus contribuciones al mundo.',
             'Este festival familiar ofrece un vistazo a la cultura de la tribu Miccosukee mientras presentamos vendedores de comida y artesanía indígena, espectáculos de lucha con caimanes, paseos en hidrodeslizador y más. Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.',
           ],
@@ -161,6 +87,79 @@ export const events = (language) => {
           target: '_blank',
         },
       ],
+    },
+    {
+      id: '4',
+      title: 'Florida Mega Market',
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '9/4/2022',
+      endDate: '9/4/2022',
+      startTime: '11:00 A.M.',
+      endTime: '7:00 P.M.',
+      excerpt: language
+        ? 'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Casino & Resort! Buy unique items from...'
+        : '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Casino & Resort! Compre artículos únicos de...',
+      fullDescription: language
+        ? [
+            'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Casino & Resort! Buy unique items from hundreds of vendors, chow down with delicious food trucks, and dance the afternoon away with live music and entertainment.',
+          ]
+        : [
+            '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Casino & Resort! Compre artículos únicos de cientos de vendedores, disfrute de deliciosos camiones de comida y baile toda la tarde con música en vivo y entretenimiento.',
+          ],
+    },
+    {
+      id: '5',
+      title: language
+        ? 'Labor Day Weekend CAR & BIKE SHOW'
+        : 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      test: {
+        english: 'Labor Day Weekend CAR & BIKE SHOW',
+        spanish: 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      },
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '9/3/2022',
+      endDate: '9/3/2022',
+      startTime: '11:00 A.M.',
+      endTime: '5:00 P.M.',
+      excerpt: language
+        ? 'Calling all gear heads! Rev up your engines and head down to Miccosukee Casino & Resort for a...'
+        : '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Casino & Resort para un...',
+      fullDescription: language
+        ? [
+            'Calling all gear heads! Rev up your engines and head down to Miccosukee Casino & Resort for a spectacular Car & Bike Show on Saturday, September 3! Check out amazing rides, food trucks, music, vendors, and contests in this outdoor event rated E for everyone!',
+          ]
+        : [
+            '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Casino & Resort para un espectacular show de Carros y Motos el sábado, 3 de septiembre! ¡Tendremos increíbles vehículos, camiones de comida, música, vendedores y concursos en este evento al aire libre apto para todo público!',
+          ],
+    },
+    {
+      id: '3',
+      title: 'Carritos y Cafecito',
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '8/6/2022',
+      endDate: '8/6/2022',
+      startTime: '8:00 A.M.',
+      endTime: '12:00 P.M.',
+      excerpt: language
+        ? 'Cruise down nostalgia highway and show off your classic & specialty ride while getting your caffeine fix...'
+        : '¡Navegue por la autopista de la nostalgia y presuma de su vehículo clásico y especializado mientras obtiene su dosis de cafeína...',
+      fullDescription: language
+        ? [
+            'Cruise down nostalgia highway and show off your classic & specialty ride while getting your caffeine fix on Saturday, August 6, from 8 AM - 12 PM at Miccosukee Casino & Resort!',
+            'Carritos y Cafecito, hosted by Road Rage Media, invites car enthusiasts to show off their specialty vehicles, motorcycles, trucks, and Jeeps while enjoying coffee and plenty of food trucks! Spectators are welcome!',
+            'Cars, coffee, and tasty grub on a Saturday are way better than brunch. We hope to see you there!',
+          ]
+        : [
+            '¡Navegue por la autopista de la nostalgia y presuma de su vehículo clásico y especializado mientras obtiene su dosis de cafeína el sábado, 6 de agosto, de 8 AM a 12 PM en Miccosukee Casino & Resort!',
+            'Carritos y Cafecito, organizado por Road Rage Media, invita a los entusiastas de automóviles a mostrar sus vehículos especiales, motos, camionetas y Jeeps mientras disfrutan de un café y muchos camiones de comida. ¡Los espectadores son bienvenidos!',
+            'Un sábado con carros, café y comida son mejores que el brunch. ¡Esperamos verlos allí!',
+          ],
     },
     {
       id: '1',
@@ -207,7 +206,7 @@ export const events = (language) => {
             'Over $4,000 in cash prizes and giveaways; brought to you by the Miccosukee Fish & Wildlife Department. This tournament aims to inform the public about the harmful effects of exotic fish and encourages their removal and consumption.',
             '- Fishing begins on March 25, 2022, at 7 PM and ends on March 26, 2022, before 3 PM.',
             '- Registration Fees: $25 for 11 & Up, $15 for 10 & Under - Includes t-shirt and raffle ticket. First 10 kids to register receive live dozen shiners.',
-            '- Location: Miccosukee Resort & Gaming',
+            '- Location: Miccosukee Casino & Resort',
             '- Registration & More Info: Removal Of The Swamp Invaders Fishing Tournament Tickets, Fri, March 25, 2022, at 7:00 PM | Eventbrite',
             '*Questions? Contact the Miccosukee Fish & Wildlife Department at 305-223-8380 ext. 2242.',
           ]
@@ -215,7 +214,7 @@ export const events = (language) => {
             'Más de $4,000 en premios en efectivo y regalos; presentado por el Departamento de Pesca y Vida Silvestre Miccosukee. Este torneo tiene como objetivo informar al público sobre los efectos nocivos de los peces exóticos y fomentar su extracción y consumo.',
             '- La pesca comienza el 25 de marzo de 2022 a las 7 PM y finaliza el 26 de marzo de 2022 antes de las 3 PM.',
             '- Tarifas de Inscripción: $25 para mayores de 11 años, $15 para menores de 10 años - Incluye camiseta y boleto para la rifa. Los primeros 10 niños que se registren recibirán una docena de carnada natural para pescar.',
-            '- Ubicación: Miccosukee Resort & Gaming',
+            '- Ubicación: Miccosukee Casino & Resort',
             '- Registro y Más Información: Removal Of The Swamp Invaders Fishing Tournament Tickets, Fri, March 25, 2022, at 7:00 PM | Eventbrite​',
             '*¿Preguntas? Comuníquese con el Departamento de Pesca y Vida Silvestre Miccosukee al 305-223-8380 ext. 2242.',
           ],
@@ -256,7 +255,7 @@ export const events = (language) => {
       // type can be "standard" or "virtual"
       type: "standard",
       // category is if entity specific... ie: golf event or mrg nightlife event, etc...
-      category: "Resort & Gaming",
+      category: "Casino & Resort",
       annual: true,
       admission: "Free",
       startDate: "12/26/2020",
@@ -264,9 +263,9 @@ export const events = (language) => {
       startTime: "10:00 A.M.",
       endTime: "5:00 P.M.",
       excerpt:
-        "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
+        "Miccosukee Casino & Resort’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
       fullDescription: [
-        "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
+        "Miccosukee Casino & Resort’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
         "Everyone will be able to enjoy the FREE concert starting at 5:30 p.m. with Miami-based folk singer Keith Johns and Grammy Award winning artist, LeAnn Rimes! Don’t miss out on the 4th of July event everyone will be talking about!",
       ],
       schedule: [
@@ -317,9 +316,9 @@ export const events = (language) => {
       startTime: "10:00 A.M.",
       endTime: "5:00 P.M.",
       excerpt:
-        "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
+        "Miccosukee Casino & Resort’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
       fullDescription: [
-        "Miccosukee Resort & Gaming’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
+        "Miccosukee Casino & Resort’s annual Fourth of July celebration is back and better than ever! This FREE family-oriented event features music, food, carnival rides, refreshing water slides, exhilarating airboat rides, alligator wrestling shows, fireworks, and more. There will be a variety of vendors onsite with delicious food and beverage options.",
         "Everyone will be able to enjoy the FREE concert starting at 5:30 p.m. with Miami-based folk singer Keith Johns and Grammy Award winning artist, LeAnn Rimes! Don’t miss out on the 4th of July event everyone will be talking about!",
       ],
       schedule: [

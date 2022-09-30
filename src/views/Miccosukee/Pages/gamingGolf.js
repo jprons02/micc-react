@@ -35,7 +35,7 @@ const GamingGolf = () => {
   const cards = [
     {
       id: 1,
-      title: language ? 'Resort & Gaming' : 'Resort & Gaming',
+      title: language ? 'Casino & Resort' : 'Casino & Resort',
       theme: mrgBusinessInfo.name,
       description: language
         ? 'Come for the gaming, stay for the fun!'

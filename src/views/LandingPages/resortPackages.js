@@ -175,8 +175,8 @@ const ResortPackages = () => {
               }}
             >
               {language
-                ? 'Miccosukee Resort & Gaming offers world-class slots and luxurious accommodations in the heart of the Florida Everglades.'
-                : 'Miccosukee Resort & Gaming ofrece máquinas tragamonedas de clase mundial y alojamiento de lujo en el corazón de los Everglades de Florida.'}
+                ? 'Miccosukee Casino & Resort offers world-class slots and luxurious accommodations in the heart of the Florida Everglades.'
+                : 'Miccosukee Casino & Resort ofrece máquinas tragamonedas de clase mundial y alojamiento de lujo en el corazón de los Everglades de Florida.'}
             </p>
             <p style={detailsCss}>
               {language
@@ -466,8 +466,8 @@ const ResortPackages = () => {
               }}
             >
               {language
-                ? 'Miccosukee Resort & Gaming offers world-class slots and luxurious accommodations in the heart of the Florida Everglades.'
-                : 'Miccosukee Resort & Gaming ofrece máquinas tragamonedas de clase mundial y alojamiento de lujo en el corazón de los Everglades de Florida.'}
+                ? 'Miccosukee Casino & Resort offers world-class slots and luxurious accommodations in the heart of the Florida Everglades.'
+                : 'Miccosukee Casino & Resort ofrece máquinas tragamonedas de clase mundial y alojamiento de lujo en el corazón de los Everglades de Florida.'}
             </p>
             <p style={detailsCss}>
               {language

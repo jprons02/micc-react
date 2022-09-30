@@ -299,8 +299,8 @@ const MrgCovidInfo = (props) => {
       <div style={{ marginTop: '10px' }}>
         <h3>
           {props.language
-            ? 'Miccosukee Resort & Gaming Reopening Details'
-            : 'Miccosukee Resort & Gaming Detalles de Reapertura'}
+            ? 'Miccosukee Casino & Resort Reopening Details'
+            : 'Miccosukee Casino & Resort Detalles de Reapertura'}
         </h3>
         <video
           style={{ margin: '5px 0 15px 0', width: '100%', maxWidth: '500px' }}
@@ -310,8 +310,8 @@ const MrgCovidInfo = (props) => {
         />
         <p>
           {props.language
-            ? 'At this time, all employees returning to work have tested negative for COVID-19 and have all been trained on how to properly prevent the spread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee Resort & Gaming asks any employee or patron who is exhibiting symptoms to please remain at home for the safety of all other employees and guests. Miccosukee Resort & Gaming is very proud to be able to serve its South Florida community once again.'
-            : 'Hemos realizado controles a todos nuestros empleados y todos han dado negativo al COVID-19. Además los hemos capacitado sobre cómo prevenir su contagio. Debido a la pandemia provocada por el brote de COVID-19, Miccosukee Resort & Gaming le pide a todos los empleados y clientes que tengan síntomas que por favor permanezcan en sus casas por la seguridad de todos. Miccosukee Resort & Gaming se enorgullece de volver a colaborar con la comunidad del sur de la Florida.'}
+            ? 'At this time, all employees returning to work have tested negative for COVID-19 and have all been trained on how to properly prevent the spread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee Casino & Resort asks any employee or patron who is exhibiting symptoms to please remain at home for the safety of all other employees and guests. Miccosukee Casino & Resort is very proud to be able to serve its South Florida community once again.'
+            : 'Hemos realizado controles a todos nuestros empleados y todos han dado negativo al COVID-19. Además los hemos capacitado sobre cómo prevenir su contagio. Debido a la pandemia provocada por el brote de COVID-19, Miccosukee Casino & Resort le pide a todos los empleados y clientes que tengan síntomas que por favor permanezcan en sus casas por la seguridad de todos. Miccosukee Casino & Resort se enorgullece de volver a colaborar con la comunidad del sur de la Florida.'}
         </p>
         <p>
           {props.language
@@ -493,8 +493,8 @@ const MrgCovidInfo = (props) => {
             <ul style={innerUlStyle}>
               <li style={liStyle}>
                 {props.language
-                  ? "Miccosukee Resort & Gaming will not downgrade any accounts from the impacted January – June 2020 term. All Miccosukee One players will automatically retain their current card tier through December 31, 2020 unless an eligible upgrade is earned."
-                  : "Miccosukee Resort & Gaming no rebajará ninguna cuenta debido al impacto del COVID -19 ocurrido entre enero y junio de 2020. Todos los jugadores de Miccosukee One mantendrán su nivel actual hasta el 31 de diciembre del 2020 salvo que hayan ganado un ascenso."}
+                  ? "Miccosukee Casino & Resort will not downgrade any accounts from the impacted January – June 2020 term. All Miccosukee One players will automatically retain their current card tier through December 31, 2020 unless an eligible upgrade is earned."
+                  : "Miccosukee Casino & Resort no rebajará ninguna cuenta debido al impacto del COVID -19 ocurrido entre enero y junio de 2020. Todos los jugadores de Miccosukee One mantendrán su nivel actual hasta el 31 de diciembre del 2020 salvo que hayan ganado un ascenso."}
               </li>
             </ul>
             <li style={liStyle}>
@@ -567,8 +567,8 @@ const MrgCovidInfo = (props) => {
             }}
           >
             {props.language
-              ? 'Once disqualification is declared, it is final. Offers are subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Resort & Gaming may not be enrolled or participate in the Miccosukee One program without written documentation that such status has been rescinded.'
-              : 'Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Resort & Gaming no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles.'}
+              ? 'Once disqualification is declared, it is final. Offers are subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Casino & Resort may not be enrolled or participate in the Miccosukee One program without written documentation that such status has been rescinded.'
+              : 'Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Casino & Resort no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles.'}
           </span>
         </Collapse>
       </div>

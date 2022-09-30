@@ -261,8 +261,8 @@ const AID = () => {
                   American Indian Day
                 </span>{' '}
                 {language
-                  ? " is back at Miccosukee Resort & Gaming! Discover the Miccosukee Tribe's culture and traditions as we host alligator wrestling shows, airboat rides, grease pole competitions, indigenous craft and food vendors, and more fun for the whole family! Join us and connect with Miami's original locals in the heart of the Florida Everglades."
-                  : ' está de regreso en Miccosukee Resort & Gaming! Descubra la cultura y las tradiciones de la Tribu Miccosukee mientras disfruta espectáculos de lucha con caimanes, paseos en hidrodeslizador, competencias de “grease pole”, artesanía indígena, vendedores de comida, ¡y más diversión para toda la familia! Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.'}
+                  ? " is back at Miccosukee Casino & Resort! Discover the Miccosukee Tribe's culture and traditions as we host alligator wrestling shows, airboat rides, grease pole competitions, indigenous craft and food vendors, and more fun for the whole family! Join us and connect with Miami's original locals in the heart of the Florida Everglades."
+                  : ' está de regreso en Miccosukee Casino & Resort! Descubra la cultura y las tradiciones de la Tribu Miccosukee mientras disfruta espectáculos de lucha con caimanes, paseos en hidrodeslizador, competencias de “grease pole”, artesanía indígena, vendedores de comida, ¡y más diversión para toda la familia! Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.'}
               </p>
             );
           },
@@ -277,8 +277,8 @@ const AID = () => {
                     {language ? 'Save the Date:' : 'Reserve la Fecha:'}
                   </span>{' '}
                   {language
-                    ? ' Saturday, September 24, 2022, from 12 PM - 6 PM at Miccosukee Resort & Gaming'
-                    : ' sábado 24 de septiembre de 2022, de 12 PM a 6 PM en Miccosukee Resort & Gaming'}
+                    ? ' Saturday, September 24, 2022, from 12 PM - 6 PM at Miccosukee Casino & Resort'
+                    : ' sábado 24 de septiembre de 2022, de 12 PM a 6 PM en Miccosukee Casino & Resort'}
                 </p>
                 <p className={classes.contentSectionDetails}>
                   <span style={{ fontWeight: 'bold' }}>
