@@ -1,23 +1,23 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from 'react';
 
 // core components
-import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import { Icon } from "@material-ui/core";
+import Header from 'components/Header/Header.js';
+import HeaderLinks from 'components/Header/HeaderLinks.js';
+import { Icon } from '@material-ui/core';
 
 // Context
-import { ContactModalContext } from "contexts/ContactFormModalContext.js";
-import { ContactFormContext } from "contexts/ContactFormContext.js";
-import { PricingModalContext } from "contexts/PricingModalContext.js";
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
+import { ContactFormContext } from 'contexts/ContactFormContext.js';
+import { PricingModalContext } from 'contexts/PricingModalContext.js';
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // theme color
-import { villageColor } from "themes/colors.js";
-import villageLogo from "assets/media/logos/MiccosukeeVillage&Airboats.svg";
+import { villageColor } from 'themes/colors.js';
+import villageLogo from 'assets/media/logos/MiccosukeeVillage&Airboats.svg';
 
 // Modal
-import VillagePricingModal from "components/CustomModal/PricingModal/VillagePricingModal.js";
+import VillagePricingModal from 'components/CustomModal/PricingModal/VillagePricingModal.js';
 
 const VillageHeader = () => {
   const language = useLanguage();
@@ -51,9 +51,9 @@ const VillageHeader = () => {
       ...formValues,
       inputValues: {
         ...formValues.inputValues,
-        ["select"]: "Indian Village Groups",
-        ["selectError"]: false,
-        ["selectTouched"]: true,
+        ['select']: 'Indian Village Groups',
+        ['selectError']: false,
+        ['selectTouched']: true,
       },
     });
     openModal(setState);
@@ -61,34 +61,35 @@ const VillageHeader = () => {
 
   const menuLinks = [
     {
-      text: "Gift Shop",
-      itemType: "",
-      href: "",
-      target: "",
-      color: "",
-      link: "/gift-shop",
+      text: 'Gift Shop',
+      itemType: '',
+      href: '',
+      target: '',
+      color: '',
+      link: '/gift-shop',
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: language ? "Village Museum" : "Museo",
-      itemType: "",
-      href: "",
-      target: "",
-      color: "",
-      link: "/museum",
+      text: language ? 'Village Museum' : 'Museo',
+      itemType: '',
+      href: '',
+      target: '',
+      color: '',
+      link: '/museum',
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
       text: language
-        ? "Alligator Demonstrations"
-        : "Demostraciones de Caimanes",
-      itemType: "",
-      href: "",
-      target: "",
-      color: "",
-      link: "/alligator-demonstrations",
+        ? 'Alligator Demonstrations'
+        : 'Demostraciones de Caimanes',
+      itemType: '',
+      href: '',
+      target: '',
+      color: '',
+      link: '/alligator-demonstrations',
       //icon: () => <Icon>chevron_right</Icon>,
     },
+    /*
     {
       text: "Our Little Shack",
       itemType: "",
@@ -98,22 +99,23 @@ const VillageHeader = () => {
       link: "/our-little-shack",
       //icon: () => <Icon>chevron_right</Icon>,
     },
+    */
     {
-      text: language ? "Admission" : "Admisión ",
-      itemType: "",
-      href: "",
-      target: "",
-      color: "",
-      link: "",
+      text: language ? 'Admission' : 'Admisión ',
+      itemType: '',
+      href: '',
+      target: '',
+      color: '',
+      link: '',
       clickFunction: () => openModal(setShowPricingModal),
     },
     {
-      text: language ? "Groups" : "Grupos",
-      itemType: "action",
-      href: "",
-      target: "",
-      color: "",
-      link: "",
+      text: language ? 'Groups' : 'Grupos',
+      itemType: 'action',
+      href: '',
+      target: '',
+      color: '',
+      link: '',
       clickFunction: () => groupsClick(setShowContactModal),
       //icon: () => <Icon>chevron_right</Icon>,
     },
@@ -131,7 +133,7 @@ const VillageHeader = () => {
         fixed
         changeColorOnScroll={{
           height: 200,
-          color: "white",
+          color: 'white',
         }}
       />
       <VillagePricingModal

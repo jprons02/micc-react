@@ -1,49 +1,49 @@
-import React from "react";
+import React from 'react';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Button from 'components/CustomButtons/Button.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from "assets/media/img/village/Village_Header1.jpg";
-import image1 from "assets/media/img/village/1024x642_Slider_L-e1551456221969.jpg";
-import image2 from "assets/media/img/village/1024x642_Slider_D-e1551456149892.jpg";
-import image3 from "assets/media/img/village/1024x642_Slider_M-e1551456229527.jpg";
+import bgImage from 'assets/media/img/village/Village_Header1.jpg';
+import image1 from 'assets/media/img/village/1024x642_Slider_L-e1551456221969.jpg';
+import image2 from 'assets/media/img/village/1024x642_Slider_D-e1551456149892.jpg';
+import image3 from 'assets/media/img/village/1024x642_Slider_M-e1551456229527.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 
 // Business info
-import { villageHours } from "business_info/hours.js";
+import { villageHours } from 'business_info/hours.js';
 
 // context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2, image3];
 const imageObj = [
-  { src: image1, alt: "Exhibit" },
-  { src: image2, alt: "Miccosukee speaking" },
-  { src: image3, alt: "Big alligator" },
+  { src: image1, alt: 'Exhibit' },
+  { src: image2, alt: 'Miccosukee speaking' },
+  { src: image3, alt: 'Big alligator' },
 ];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -59,7 +59,7 @@ const Museum = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Village Museum</h2>
-              {renderPoiHours(villageHours, language)}
+              {/*renderPoiHours(villageHours, language)*/}
               {language ? (
                 <React.Fragment>
                   <p>

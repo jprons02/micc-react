@@ -1,51 +1,51 @@
-import React from "react";
+import React from 'react';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Button from 'components/CustomButtons/Button.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from "assets/media/img/village/Village_Header1.jpg";
-import image1 from "assets/media/img/village/GiftShop1.jpg";
-import image2 from "assets/media/img/village/GiftShop2.jpg";
-import image3 from "assets/media/img/village/GiftShop3.jpg";
-import image4 from "assets/media/img/village/GiftShop4.jpg";
+import bgImage from 'assets/media/img/village/Village_Header1.jpg';
+import image1 from 'assets/media/img/village/GiftShop1.jpg';
+import image2 from 'assets/media/img/village/GiftShop2.jpg';
+import image3 from 'assets/media/img/village/GiftShop3.jpg';
+import image4 from 'assets/media/img/village/GiftShop4.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 
 // Business info
-import { villageHours } from "business_info/hours.js";
+import { villageHours } from 'business_info/hours.js';
 
 // context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2, image3, image4];
 const imageObj = [
-  { src: image1, alt: "Bracelet" },
-  { src: image2, alt: "Necklace" },
-  { src: image3, alt: "Ring" },
-  { src: image4, alt: "Watch" },
+  { src: image1, alt: 'Bracelet' },
+  { src: image2, alt: 'Necklace' },
+  { src: image3, alt: 'Ring' },
+  { src: image4, alt: 'Watch' },
 ];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -63,7 +63,7 @@ const GiftShop = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Gift Shop</h2>
-              {renderPoiHours(giftShopHours, language)}
+              {/*renderPoiHours(giftShopHours, language)*/}
               {language ? (
                 <p>
                   Visit the Miccosukee Indian Gift Shop to find crafts created

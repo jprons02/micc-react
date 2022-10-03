@@ -147,6 +147,7 @@ const Home = () => {
                   : 'No “peleamos” con nuestros caimanes – ¡los amamos y esperamos que puedan aprender sobre ellos con nuestras demostraciones!'}
               </p>
             </GridItem>
+            {/*
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
               <Link to="/village/our-little-shack">
                 <FastfoodIcon className={classes.icons} color="primary" />
@@ -160,6 +161,7 @@ const Home = () => {
                   : '¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, nuggets de caimán, batidos y mucho más.'}
               </p>
             </GridItem>
+            */}
           </GridContainer>
         </div>
       </RaisedContainer>

@@ -1,64 +1,69 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from 'react';
+import { useRouteMatch, useHistory } from 'react-router-dom';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Button from 'components/CustomButtons/Button.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
-import CustomFoodMenuModal from "components/CustomModal/CustomFoodMenuModal/CustomFoodMenuModal.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import CustomFoodMenuModal from 'components/CustomModal/CustomFoodMenuModal/CustomFoodMenuModal.js';
 
 // Images
-import bgImage from "assets/media/img/village/Village_Header1.jpg";
-import image1 from "assets/media/img/village/OurLittleShack1.jpg";
-import image2 from "assets/media/img/village/OurLittleShack2.jpg";
-import image3 from "assets/media/img/village/OurLittleShack3.jpg";
+import bgImage from 'assets/media/img/village/Village_Header1.jpg';
+import image1 from 'assets/media/img/village/OurLittleShack1.jpg';
+import image2 from 'assets/media/img/village/OurLittleShack2.jpg';
+import image3 from 'assets/media/img/village/OurLittleShack3.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 
 // Business info
-import { villageHours } from "business_info/hours.js";
-import { ourLittleShackMenu } from "business_info/foodMenu.js";
+import { villageHours } from 'business_info/hours.js';
+import { ourLittleShackMenu } from 'business_info/foodMenu.js';
 
 // Context
-import { FoodMenuContext } from "contexts/FoodMenuContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { FoodMenuContext } from 'contexts/FoodMenuContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2, image3];
 const imageObj = [
-  { src: image1, alt: "Breakfast" },
-  { src: image2, alt: "Salad" },
-  { src: image3, alt: "Cheese burger" },
+  { src: image1, alt: 'Breakfast' },
+  { src: image2, alt: 'Salad' },
+  { src: image3, alt: 'Cheese burger' },
 ];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
 const OurLittleShack = () => {
   const language = useLanguage();
   const classes = useStyles();
+  const history = useHistory();
 
   const [showFoodMenu, setShowFoodMenu] = useContext(FoodMenuContext);
 
   // Close contact modal on mount
   useEffect(() => {
     closeModal(setShowFoodMenu);
+
+    // our little shack no longer exists...
+    history.push('/village');
   }, []);
 
   const openModal = (setState) => {
@@ -91,17 +96,17 @@ const OurLittleShack = () => {
                   mas.
                 </p>
               )}
-              <div style={{ marginBottom: "5px" }}>
+              <div style={{ marginBottom: '5px' }}>
                 <i
-                  style={{ marginRight: "8px" }}
+                  style={{ marginRight: '8px' }}
                   className="fab fa-cc-visa fa-lg"
                 ></i>
                 <i
-                  style={{ marginRight: "8px" }}
+                  style={{ marginRight: '8px' }}
                   className="fab fa-cc-mastercard fa-lg"
                 ></i>
                 <i
-                  style={{ marginRight: "8px" }}
+                  style={{ marginRight: '8px' }}
                   className="fab fa-cc-amex fa-lg"
                 ></i>
               </div>
@@ -109,7 +114,7 @@ const OurLittleShack = () => {
                 onClick={() => openModal(setShowFoodMenu)}
                 usetheme="contained"
               >
-                {language ? "Menu" : "Menú"}
+                {language ? 'Menu' : 'Menú'}
               </Button>
             </div>
           </GridItem>

@@ -1,37 +1,37 @@
-import React from "react";
+import React from 'react';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Button from 'components/CustomButtons/Button.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from "assets/media/img/village/Village_Header1.jpg";
-import image1 from "assets/media/img/village/1024x642_Slider_L-e1551456221969.jpg";
-import image2 from "assets/media/img/village/1024x642_Slider_D-e1551456149892.jpg";
-import image3 from "assets/media/img/village/1024x642_Slider_M-e1551456229527.jpg";
+import bgImage from 'assets/media/img/village/Village_Header1.jpg';
+import image1 from 'assets/media/img/village/1024x642_Slider_L-e1551456221969.jpg';
+import image2 from 'assets/media/img/village/1024x642_Slider_D-e1551456149892.jpg';
+import image3 from 'assets/media/img/village/1024x642_Slider_M-e1551456229527.jpg';
 
 // Video
-import gatorVid from "assets/media/img/village/alligator-wrestling-1080P.mov";
-import gatorVidImage from "assets/media/img/village/alligator-wrestling-1080P-img-e1551460924638.jpg";
+import gatorVid from 'assets/media/img/village/alligator-wrestling-1080P.mov';
+import gatorVidImage from 'assets/media/img/village/alligator-wrestling-1080P-img-e1551460924638.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 
 // Business info
-import { villageHours } from "business_info/hours.js";
+import { villageHours } from 'business_info/hours.js';
 
 // context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 const useStyles = makeStyles(styles);
 
@@ -41,8 +41,8 @@ const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -59,10 +59,10 @@ const AlligatorDemos = () => {
             <div className={classes.leftTextArea}>
               <h2>
                 {language
-                  ? "Alligator Demonstrations"
-                  : "Demostraciones de Caimanes"}
+                  ? 'Alligator Demonstrations'
+                  : 'Demostraciones de Caimanes'}
               </h2>
-              {renderPoiHours(villageHours.poi.alligator, language)}
+              {/*renderPoiHours(villageHours.poi.alligator, language)*/}
               {language ? (
                 <React.Fragment>
                   <p>
@@ -102,7 +102,7 @@ const AlligatorDemos = () => {
             </div>
           </GridItem>
           <GridItem md={6}>
-            <div className={classes.imageArea} style={{ marginBottom: "50px" }}>
+            <div className={classes.imageArea} style={{ marginBottom: '50px' }}>
               <video
                 loop
                 autoPlay
