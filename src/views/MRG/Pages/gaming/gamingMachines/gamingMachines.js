@@ -55,7 +55,7 @@ const GamingMachines = () => {
               <p>
                 {language
                   ? 'Miccosukee Casino & Resort is South Florida’s gaming pioneer. Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor — from classic games to the most cutting-edge machines featuring the latest gaming innovations, special effects, bonuses and rewards!'
-                  : 'Miccosukee Resort & Casino es el pionero en juegos de casino en el Sur de la Florida. ¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas de nuestro casino – desde juegos clásicos, hasta las máquinas más modernas y tecnológicas con efectos especiales, bonos y premios!'}
+                  : 'Miccosukee Casino & Resort es el pionero en juegos de casino en el Sur de la Florida. ¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas de nuestro casino – desde juegos clásicos, hasta las máquinas más modernas y tecnológicas con efectos especiales, bonos y premios!'}
               </p>
               <p>
                 {language

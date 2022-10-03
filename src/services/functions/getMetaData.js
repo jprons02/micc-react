@@ -101,8 +101,8 @@ export const getMetaData = (uri, pageObj) => {
     };
   }
   return {
-    name: 'Miccosukee Home',
-    title: 'Miccosukee Home',
+    name: 'Miccosukee',
+    title: 'Miccosukee',
     description:
       'Enjoy our casino resort in Miami that features non-stop thrills and the highest payouts in town! There is something for everyone!',
     thumbnail:
