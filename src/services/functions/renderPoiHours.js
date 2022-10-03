@@ -15,6 +15,15 @@ export const renderPoiHours = (hours, language) => {
           </h6>
         </React.Fragment>
       );
+    } else {
+      // Used in village hours case since village hours is not an array
+      return (
+        <React.Fragment>
+          <h6 key={hours.days(language)}>
+            {hours.days(language)}, {hours.open} – {hours.close} <br />
+          </h6>
+        </React.Fragment>
+      );
     }
   } else {
     return (

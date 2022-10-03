@@ -1,46 +1,49 @@
-import React, { useContext } from "react";
-import classNames from "classnames";
+import React, { useContext } from 'react';
+import classNames from 'classnames';
+
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
+import { villageHours } from 'business_info/hours.js';
 
 // react components for routing our app without refresh
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // @material core
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 // core components
-import InfoArea from "components/InfoArea/InfoArea.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
+import InfoArea from 'components/InfoArea/InfoArea.js';
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Card from 'components/Card/Card.js';
+import CardBody from 'components/Card/CardBody.js';
 
 // context
-import { PricingModalContext } from "contexts/PricingModalContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { PricingModalContext } from 'contexts/PricingModalContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // My Custom Component
-import HeroSection from "components/CustomSections/HeroSection.js";
-import RaisedContainer from "components/CustomSections/RaisedContainer";
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import RaisedContainer from 'components/CustomSections/RaisedContainer';
 
 // media
-import villageImage from "assets/media/img/village/alligator_demo.jpg";
+import villageImage from 'assets/media/img/village/alligator_demo.jpg';
 
 // Icons
-import StorefrontIcon from "@material-ui/icons/Storefront";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
-import MuseumIcon from "@material-ui/icons/Museum";
-import GatorIcon from "components/CustomIcons/Icons/GatorIcon.js";
+import StorefrontIcon from '@material-ui/icons/Storefront';
+import FastfoodIcon from '@material-ui/icons/Fastfood';
+import MuseumIcon from '@material-ui/icons/Museum';
+import GatorIcon from 'components/CustomIcons/Icons/GatorIcon.js';
 
 // Styles
-import styles from "assets/jss/material-kit-react/views/village/home.js";
+import styles from 'assets/jss/material-kit-react/views/village/home.js';
 import {
   cardTitle,
   cardLink,
   cardSubtitle,
-} from "assets/jss/material-kit-react.js";
-import modalStyle from "assets/jss/material-kit-react/virtualLoginModal.js";
-import { SettingsInputAntennaTwoTone } from "@material-ui/icons";
+} from 'assets/jss/material-kit-react.js';
+import modalStyle from 'assets/jss/material-kit-react/virtualLoginModal.js';
+import { SettingsInputAntennaTwoTone } from '@material-ui/icons';
 
 const cardStyles = {
   cardTitle,
@@ -70,14 +73,14 @@ const Home = () => {
       id: 1,
       bgImage: villageImage,
       //bgVideo: golfVid,
-      gradient: ".4",
-      header: "CHEHANTAMO!",
+      gradient: '.4',
+      header: 'CHEHANTAMO!',
       subHeader: language
-        ? "(MEANS WELCOME IN OUR MIKASUKI LANGUAGE)"
-        : "SIGNIFICA BIENVENIDO EN NUESTRO IDIOMA MIKASUKI",
+        ? '(MEANS WELCOME IN OUR MIKASUKI LANGUAGE)'
+        : 'SIGNIFICA BIENVENIDO EN NUESTRO IDIOMA MIKASUKI',
       button: {
-        text: "See Admission",
-        link: "",
+        text: 'See Admission',
+        link: '',
         clickFunction: () => openModal(setShowPricingModal),
       },
     },
@@ -88,18 +91,21 @@ const Home = () => {
       <HeroSection large={true} sliderContent={sliderContent} />
       <RaisedContainer>
         <div className={classes.welcomeContainer}>
+          <div style={{ margin: '-30px 0 30px 0' }}>
+            {renderPoiHours(villageHours, language)}
+          </div>
           <Typography className={classes.welcome} paragraph component="h1">
             {language
-              ? "Welcome to Miccosukee Indian Village"
-              : "Bienvenido a Miccosukee Indian Village"}
+              ? 'Welcome to Miccosukee Indian Village'
+              : 'Bienvenido a Miccosukee Indian Village'}
           </Typography>
           <Typography className={classes.subWelcome} paragraph component="h3">
             {language
-              ? "Showcasing Miccosukee tribal arts & culture, with crafts, airboat rides & alligators."
-              : "Mostrando la cultura y arte tribal de los Miccosukee con artesanías, paseos en airboat (hidrodeslizador) y caimanes."}
+              ? 'Showcasing Miccosukee tribal arts & culture, with crafts, airboat rides & alligators.'
+              : 'Mostrando la cultura y arte tribal de los Miccosukee con artesanías, paseos en airboat (hidrodeslizador) y caimanes.'}
           </Typography>
           <hr className={classes.hr} />
-          <GridContainer style={{ marginTop: "60px" }} justify="center">
+          <GridContainer style={{ marginTop: '60px' }} justify="center">
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
               <Link to="/village/gift-shop">
                 <StorefrontIcon className={classes.icons} color="primary" />
@@ -109,8 +115,8 @@ const Home = () => {
               </Typography>
               <p className={classes.iconText}>
                 {language
-                  ? "Visit the Miccosukee Indian Gift Shop to find crafts created by natives around the world."
-                  : "Visite el Miccosukee Indian Gift shop y encuentre artesanías creadas por nativos alrededor del mundo."}
+                  ? 'Visit the Miccosukee Indian Gift Shop to find crafts created by natives around the world.'
+                  : 'Visite el Miccosukee Indian Gift shop y encuentre artesanías creadas por nativos alrededor del mundo.'}
               </p>
             </GridItem>
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
@@ -118,12 +124,12 @@ const Home = () => {
                 <MuseumIcon className={classes.icons} color="primary" />
               </Link>
               <Typography className={classes.poiTitle} component="h4">
-                {language ? "Museum" : "Museo"}
+                {language ? 'Museum' : 'Museo'}
               </Typography>
               <p className={classes.iconText}>
                 {language
-                  ? "Miccosukee history and culture is preserved through historical documents, archival photographs and original artifacts."
-                  : "La historia y cultura de los Miccosukee se preserva en documentos históricos, fotografías de archivo y objetos originales."}
+                  ? 'Miccosukee history and culture is preserved through historical documents, archival photographs and original artifacts.'
+                  : 'La historia y cultura de los Miccosukee se preserva en documentos históricos, fotografías de archivo y objetos originales.'}
               </p>
             </GridItem>
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
@@ -132,13 +138,13 @@ const Home = () => {
               </Link>
               <Typography className={classes.poiTitle} component="h4">
                 {language
-                  ? "Alligator Demonstrations"
-                  : "Demostraciones de Caimanes"}
+                  ? 'Alligator Demonstrations'
+                  : 'Demostraciones de Caimanes'}
               </Typography>
               <p className={classes.iconText}>
                 {language
-                  ? "We don’t “wrestle” our ‘gators—we love them and hope that you’ll learn about them through our demonstrations!"
-                  : "No “peleamos” con nuestros caimanes – ¡los amamos y esperamos que puedan aprender sobre ellos con nuestras demostraciones!"}
+                  ? 'We don’t “wrestle” our ‘gators—we love them and hope that you’ll learn about them through our demonstrations!'
+                  : 'No “peleamos” con nuestros caimanes – ¡los amamos y esperamos que puedan aprender sobre ellos con nuestras demostraciones!'}
               </p>
             </GridItem>
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>
@@ -150,8 +156,8 @@ const Home = () => {
               </Typography>
               <p className={classes.iconText}>
                 {language
-                  ? "The Village’s casual eatery has something for everybody! Burgers, fries, alligator bites, shakes and more! Our Little Shack is here for you."
-                  : "¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, nuggets de caimán, batidos y mucho más."}
+                  ? 'The Village’s casual eatery has something for everybody! Burgers, fries, alligator bites, shakes and more! Our Little Shack is here for you.'
+                  : '¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, nuggets de caimán, batidos y mucho más.'}
               </p>
             </GridItem>
           </GridContainer>

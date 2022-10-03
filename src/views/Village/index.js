@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   Switch,
   Route,
@@ -45,6 +45,7 @@ import { villageHours } from 'business_info/hours.js';
 // services
 import { popupManager } from 'services/functions/popups/popupManager';
 import { isRunning } from 'services/functions/scheduleThis';
+import { SettingsApplicationsRounded } from '@material-ui/icons';
 
 export default function Miccosukee(props) {
   const language = useLanguage();
@@ -61,13 +62,11 @@ export default function Miccosukee(props) {
     setMobileOpen(false);
   }, [location]);
 
-  // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
   useEffect(() => {
+    // popup modal is triggered in main index file so that when user navigates around website and then back to home page, it does not trigger again.
     popupManager(setPopupState, popupState, location);
-  }, []);
 
-  // Close contact modal on mount
-  useEffect(() => {
+    // close contact modal on mount
     closeModal(setShowContactModal);
   }, []);
 
@@ -79,71 +78,12 @@ export default function Miccosukee(props) {
     setState(false);
   };
 
-  /**
-   * The Miccosukee Indian Village & Gift Shop will be closed on Saturday, December 25 and Friday, December 31. Happy Holidays!
-   *
-   * El Miccosukee Indian Village y Gift Shop estarán cerrados el sábado, 25 de diciembre y el viernes, 31 de diciembre. ¡Felices Fiestas!
-   */
-
   return (
     <ThemeProvider theme={theme('village')}>
       <PricingModalProvider>
         <div>
           <VillageHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning([2021, 12, 21], [2022, 1, 1]) ? (
-            <StandardAlert
-              message={
-                language ? (
-                  <div>
-                    <b>
-                      The Miccosukee Indian Village &amp; Gift Shop will be
-                      closed on Friday, December 31. Happy Holidays!
-                    </b>
-                  </div>
-                ) : (
-                  <div>
-                    <b>
-                      El Miccosukee Indian Village y Gift Shop estarán cerrados
-                      el viernes, 31 de diciembre. ¡Felices Fiestas!
-                    </b>
-                  </div>
-                )
-              }
-              close
-              color="danger"
-              icon={Warning}
-            />
-          ) : (
-            <StandardAlert
-              message={
-                language ? (
-                  <div>
-                    <b>
-                      Miccosukee Indian Village is temporarily closed due to
-                      COVID-19, but the Gift Shop will remain open{' '}
-                      {villageHours.poi.giftShop[0].days(language)} from{' '}
-                      {villageHours.poi.giftShop[0].open} -{' '}
-                      {villageHours.poi.giftShop[0].close}
-                    </b>
-                  </div>
-                ) : (
-                  <div>
-                    <b>
-                      El Miccosukee Indian Village permanecerá cerrado debido a
-                      la pandemia del COVID-19, pero el Gift Shop estará abierto
-                      los {villageHours.poi.giftShop[0].days(language)} de{' '}
-                      {villageHours.poi.giftShop[0].open} -{' '}
-                      {villageHours.poi.giftShop[0].close}
-                    </b>
-                  </div>
-                )
-              }
-              close
-              color="warning"
-              icon={Warning}
-            />
-          )}
           {/*
           <StandardAlert
             message={

@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 // @material-ui core
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import Box from "@material-ui/core/Box";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Box from '@material-ui/core/Box';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -44,14 +44,14 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `scrollable-force-tab-${index}`,
-    "aria-controls": `scrollable-force-tabpanel-${index}`,
+    'aria-controls': `scrollable-force-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    width: "100%",
+    width: '100%',
     backgroundColor: theme.palette.background.paper,
   },
 }));
@@ -66,13 +66,13 @@ export default function ScrollableTabsButtonAuto(props) {
 
   const renderPriceTable = (header, rows) => {
     return (
-      <TableContainer style={{ marginBottom: "30px" }} component={Paper}>
+      <TableContainer style={{ marginBottom: '30px' }} component={Paper}>
         <Table
-          style={{ backgroundColor: "#f5f5f5" }}
+          style={{ backgroundColor: '#f5f5f5' }}
           className={classes.table}
           aria-label="simple table"
         >
-          {header === "" ? null : (
+          {header === '' ? null : (
             <TableHead>
               <TableRow>
                 <TableCell>{header}</TableCell>
@@ -116,7 +116,7 @@ export default function ScrollableTabsButtonAuto(props) {
         // If the menu does not have subMenu, example) Drinks, Kid's Menu
         if (item.items) {
           return (
-            <React.Fragment>{renderPriceTable("", item.items)}</React.Fragment>
+            <React.Fragment>{renderPriceTable('', item.items)}</React.Fragment>
           );
         }
       };
@@ -127,6 +127,19 @@ export default function ScrollableTabsButtonAuto(props) {
         </TabPanel>
       );
     });
+  };
+
+  const disclaimer = (title) => {
+    if (title === 'Sawgrass Cafe Menu') {
+      return (
+        <p style={{ fontSize: '12px', fontStyle: 'italic' }}>
+          8.7% tax plus a 20% service charge will be added to all items prepared
+          to order.
+        </p>
+      );
+    } else {
+      return null;
+    }
   };
 
   return (
@@ -144,7 +157,8 @@ export default function ScrollableTabsButtonAuto(props) {
           {renderTab()}
         </Tabs>
       </AppBar>
-      <div style={{ marginTop: "20px" }}>{renderTabPanel()}</div>
+      <div style={{ marginTop: '20px' }}>{renderTabPanel()}</div>
+      {disclaimer(props.title)}
     </div>
   );
 }

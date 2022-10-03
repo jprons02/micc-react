@@ -351,40 +351,34 @@ export const mrgHours = {
 };
 
 export const villageHours = {
-  days: (language) => '',
-  open: '',
-  close: '',
-  details: (language) =>
-    language
-      ? 'The Miccosukee Indian Village will NOT reopen until further notice.'
-      : 'El Village permanecerá cerrado hasta nuevo aviso.',
+  days: (language) => (language ? 'Wednesday – Sunday' : 'miercoles – domingo'),
+  open: `${getMinutes(8, 30).combinedString}`,
+  close: `${getMinutes(16, 30).combinedString}`,
+  details: (language) => (language ? '' : ''),
   todaysHours: (dayOfWeek, language) => {
-    //`Thursday – Sunday`,
-    if (dayOfWeek === 0 || dayOfWeek > 4) {
-      return `Closed, however, the Gift Shop is open: ${villageHours.poi.giftShop[0].open} - ${villageHours.poi.giftShop[0].close}`;
-    } else {
+    //`Wednesday – Sunday`,
+    if (dayOfWeek === 1 || dayOfWeek === 2) {
       return language ? 'Closed' : 'Cerrado';
+    } else {
+      return `${villageHours.open} – ${villageHours.close}`;
     }
   },
   poi: {
-    //Friday - Sunday from 9 A.M. - 4:30 P.M
     giftShop: [
       {
         days: (language) =>
           language ? `Wednesday – Sunday` : 'miércoles – domingo',
-        open: `${getMinutes(9).combinedString}`,
+        open: `${getMinutes(8, 30).combinedString}`,
         close: `${getMinutes(16, 30).combinedString}`,
       },
     ],
     alligator: [
       {
-        days: (language) => '',
-        open: `${getMinutes(11).combinedString}`,
-        close: `${getMinutes(5).combinedString}`,
-        details: (language) =>
-          language
-            ? 'The Miccosukee Indian Village will NOT reopen until further notice.'
-            : 'El Village permanecerá cerrado hasta nuevo aviso.',
+        days: (language) =>
+          language ? `Wednesday – Sunday` : 'miércoles – domingo',
+        open: `${getMinutes(8, 30).combinedString}`,
+        close: `${getMinutes(16, 30).combinedString}`,
+        details: (language) => (language ? '' : ''),
       },
     ],
     ourLittleShack: [
@@ -392,10 +386,7 @@ export const villageHours = {
         days: (language) => '',
         open: `${getMinutes(8).combinedString}`,
         close: `${getMinutes(15, 30).combinedString}`,
-        details: (language) =>
-          language
-            ? 'The Miccosukee Indian Village will NOT reopen until further notice.'
-            : 'El Village permanecerá cerrado hasta nuevo aviso.',
+        details: (language) => (language ? '' : ''),
       },
     ],
   },

@@ -1,40 +1,35 @@
-import React from "react";
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
-import { villageHours } from "business_info/hours.js";
+import React from 'react';
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
+import { villageHours } from 'business_info/hours.js';
 
 const VillageCovidInfo = (props) => {
-  const sectionStyle = { marginTop: "20px" };
-  const sectionHeaderStyle = { textDecoration: "underline" };
-  const ulStyle = { marginTop: "0px" };
-  const innerUlStyle = { paddingLeft: "20px" };
-  const liStyle = { fontSize: "14px" };
-  const paddingLeftStyle = { paddingLeft: "24px" };
+  const sectionStyle = { marginTop: '20px' };
+  const sectionHeaderStyle = { textDecoration: 'underline' };
+  const ulStyle = { marginTop: '0px' };
+  const innerUlStyle = { paddingLeft: '20px' };
+  const liStyle = { fontSize: '14px' };
+  const paddingLeftStyle = { paddingLeft: '24px' };
 
   return (
-    <div style={{ marginBottom: "30px" }}>
-      <div style={{ marginTop: "10px" }}>
+    <div style={{ marginBottom: '30px' }}>
+      <div style={{ marginTop: '10px' }}>
         <h3>Miccosukee Indian Village</h3>
-        <p style={paddingLeftStyle}>
-          {props.language ? (
-            <b>
-              {villageHours.days(props.language) === "" ? "CLOSED:" : "OPEN:"}
-            </b>
-          ) : (
-            <b>
-              {villageHours.days(props.language) === ""
-                ? "CERRADO:"
-                : "ABIERTO:"}
-            </b>
-          )}
-        </p>
-        <ul style={{ marginTop: "-5px", paddingLeft: "50px" }}>
-          <li style={liStyle}>{villageHours.details(props.language)}</li>
-        </ul>
         <div style={sectionStyle}>
-          <h3 style={{ paddingTop: "20px" }}>Village Gift Shop</h3>
+          <h4 style={sectionHeaderStyle}>
+            {props.language ? 'Hours of Operation' : 'Horarios'}
+          </h4>
+          <ul style={ulStyle}>
+            <li style={liStyle}>
+              {renderPoiHours(villageHours, props.language)}
+            </li>
+          </ul>
+        </div>
+        <div style={sectionStyle}>
+          {/*
+          <h3 style={{ paddingTop: '20px' }}>Village Gift Shop</h3>
           <div style={sectionStyle}>
             <h4 style={sectionHeaderStyle}>
-              {props.language ? "Hours of Operation" : "Horarios"}
+              {props.language ? 'Hours of Operation' : 'Horarios'}
             </h4>
             <ul style={ulStyle}>
               <li style={liStyle}>
@@ -42,9 +37,11 @@ const VillageCovidInfo = (props) => {
               </li>
             </ul>
           </div>
+          */}
+
           <div style={sectionStyle}>
             <h4 style={sectionHeaderStyle}>
-              {props.language ? "Guidelines" : "Reglas de Seguridad"}
+              {props.language ? 'Guidelines' : 'Reglas de Seguridad'}
             </h4>
             <ul style={ulStyle}>
               {props.language ? (
