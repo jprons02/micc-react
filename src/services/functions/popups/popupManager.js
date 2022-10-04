@@ -1,7 +1,8 @@
 // Show popups on certain pages
 // Stop showing popup after 1 time load... may need to change how state works
 
-import mrgImage from 'assets/media/img/popups/payouts.jpg';
+//import mrgImage from 'assets/media/img/popups/payouts.jpg';
+import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
 import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -77,23 +78,26 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: '22',
-      month: 'September',
-      day: '15',
+      month: 'October',
+      day: '1',
       time: '',
     },
     end: {
       year: '22',
       month: 'October',
-      day: '1',
+      day: '31',
       time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: mrgImage,
-    alt: 'monthly payouts',
-    linkType: '',
-    link: '',
+    //alt: 'monthly payouts',
+    //linkType: '',
+    //link: '',
+    alt: 'bingo promo',
+    linkType: 'internal',
+    link: '/mrg/bingo',
   },
 };
 const mrgGamingPromotionsPopup = {
