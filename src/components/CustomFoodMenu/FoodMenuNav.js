@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Context
+import { useLanguage } from 'contexts/languageContext.js';
+
 // @material-ui core
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -57,6 +60,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ScrollableTabsButtonAuto(props) {
+  const language = useLanguage();
+
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -131,16 +136,21 @@ export default function ScrollableTabsButtonAuto(props) {
 
   const disclaimer = (title) => {
     if (title === 'Sawgrass Cafe Menu') {
-      return (
-        <p style={{ fontSize: '12px', fontStyle: 'italic' }}>
-          8.7% tax plus a 20% service charge will be added to all items prepared
-          to order.
-        </p>
-      );
+      if (value === 3 || value === 2) {
+        return (
+          <p style={{ fontSize: '12px', fontStyle: 'italic' }}>
+            {language
+              ? '8.7% tax plus a 20% service charge will be added to all items prepared to order.'
+              : 'Se agregará un impuesto del 8.7 % más un cargo por servicio del 20% a todos los artículos preparados para ordenar.'}
+          </p>
+        );
+      }
     } else {
       return null;
     }
   };
+
+  console.log('value: ', value);
 
   return (
     <div className={classes.root}>
