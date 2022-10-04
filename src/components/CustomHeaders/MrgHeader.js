@@ -210,7 +210,7 @@ const MrgHeader = () => {
         borderColor={mrgColor[500]}
         color="white"
         brand={mrgLogo}
-        brandAlt="mrgLogo"
+        brandAlt="Miccosukee Casino and Resort logo"
         brandLink="/mrg"
         rightLinks={<HeaderLinks menuItems={menuLinks} />}
         fixed
