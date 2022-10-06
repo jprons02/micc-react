@@ -136,6 +136,7 @@ export default function ScrollableTabsButtonAuto(props) {
 
   const disclaimer = (title) => {
     if (title === 'Sawgrass Cafe Menu') {
+      // display disclaimer if tab is "combos" or "hot stuff"
       if (value === 3 || value === 2) {
         return (
           <p style={{ fontSize: '12px', fontStyle: 'italic' }}>
@@ -149,8 +150,6 @@ export default function ScrollableTabsButtonAuto(props) {
       return null;
     }
   };
-
-  console.log('value: ', value);
 
   return (
     <div className={classes.root}>
