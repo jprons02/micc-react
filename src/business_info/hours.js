@@ -352,7 +352,7 @@ export const mrgHours = {
 
 export const villageHours = {
   days: (language) => (language ? 'Wednesday – Sunday' : 'miercoles – domingo'),
-  open: `${getMinutes(8, 30).combinedString}`,
+  open: `${getMinutes(9).combinedString}`,
   close: `${getMinutes(16, 30).combinedString}`,
   details: (language) => (language ? '' : ''),
   todaysHours: (dayOfWeek, language) => {
@@ -368,7 +368,7 @@ export const villageHours = {
       {
         days: (language) =>
           language ? `Wednesday – Sunday` : 'miércoles – domingo',
-        open: `${getMinutes(8, 30).combinedString}`,
+        open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(16, 30).combinedString}`,
       },
     ],
@@ -376,7 +376,7 @@ export const villageHours = {
       {
         days: (language) =>
           language ? `Wednesday – Sunday` : 'miércoles – domingo',
-        open: `${getMinutes(8, 30).combinedString}`,
+        open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(16, 30).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
@@ -384,7 +384,7 @@ export const villageHours = {
     ourLittleShack: [
       {
         days: (language) => '',
-        open: `${getMinutes(8).combinedString}`,
+        open: `${getMinutes(9).combinedString}`,
         close: `${getMinutes(15, 30).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
