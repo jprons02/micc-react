@@ -262,7 +262,7 @@ const AID = () => {
                 </span>{' '}
                 {language
                   ? " is back at Miccosukee Casino & Resort! Discover the Miccosukee Tribe's culture and traditions as we host alligator wrestling shows, airboat rides, grease pole competitions, indigenous craft and food vendors, and more fun for the whole family! Join us and connect with Miami's original locals in the heart of the Florida Everglades."
-                  : ' está de regreso en Miccosukee Casino & Resort! Descubra la cultura y las tradiciones de la Tribu Miccosukee mientras disfruta espectáculos de lucha con caimanes, paseos en hidrodeslizador, competencias de “grease pole”, artesanía indígena, vendedores de comida, ¡y más diversión para toda la familia! Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.'}
+                  : ' está de regreso en Miccosukee Casino & Resort! Descubra la cultura y las tradiciones de la Tribu Miccosukee mientras disfruta espectáculos de lucha con lagartos, paseos en hidrodeslizador, competencias de “grease pole”, artesanía indígena, vendedores de comida, ¡y más diversión para toda la familia! Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.'}
               </p>
             );
           },
@@ -295,16 +295,16 @@ const AID = () => {
                 </p>
                 <p className={classes.contentSectionDetails}>
                   <span style={{ fontWeight: 'bold' }}>
-                    {language ? 'Alligator Shows' : 'Espectáculos de Caimanes'}
+                    {language ? 'Alligator Shows' : 'Espectáculos de Lagartos'}
                   </span>
                   <br />
                   {language
                     ? 'The Miccosukee used alligator wrestling as a survival and hunting technique many years ago. Today, it has become a popular attraction that educates the public about these powerful reptiles that are an essential part of the Everglades ecosystem. Our alligator wrestlers will show you how they handle these wild creatures in a jaw-dropping performance that will have you on the edge of your seat!'
-                    : 'Los Miccosukee utilizaron la lucha con caimanes como técnica de supervivencia y caza hace muchos años. Hoy, se ha convertido en una atracción popular que educa al público sobre estos poderosos reptiles que son una parte esencial del ecosistema de los Everglades. ¡Nuestros luchadores de caimanes le mostrarán cómo manejan a estas criaturas salvajes en una actuación asombrosa que lo tendrá al borde de su asiento!'}
+                    : 'Los Miccosukee utilizaron la lucha con lagartos como técnica de supervivencia y caza hace muchos años. Hoy, se ha convertido en una atracción popular que educa al público sobre estos poderosos reptiles que son una parte esencial del ecosistema de los Everglades. ¡Nuestros luchadores de lagartos le mostrarán cómo manejan a estas criaturas salvajes en una actuación asombrosa que lo tendrá al borde de su asiento!'}
                   <br />
                   {language
                     ? 'Alligator Shows are at 12:30 PM, 1:30 PM, 2:30 PM, 3:30 PM & 4:30 PM'
-                    : 'Los espectáculos de caimanes son a la 12:30 PM, 1:30 PM, 2:30 PM, 3:30 PM y 4:30 PM'}
+                    : 'Los espectáculos de lagartos son a la 12:30 PM, 1:30 PM, 2:30 PM, 3:30 PM y 4:30 PM'}
                 </p>
                 <div>
                   <p className={classes.contentSectionDetails}>

@@ -92,8 +92,8 @@ const OurLittleShack = () => {
               ) : (
                 <p>
                   ¡El lugar en el Pueblo que tiene algo para todos!
-                  Hamburguesas, papas fritas, nuggets de caimán, batidos y mucho
-                  mas.
+                  Hamburguesas, papas fritas, nuggets de lagarto, batidos y
+                  mucho mas.
                 </p>
               )}
               <div style={{ marginBottom: '5px' }}>

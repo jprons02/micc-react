@@ -81,7 +81,7 @@ const VillageHeader = () => {
     {
       text: language
         ? 'Alligator Demonstrations'
-        : 'Demostraciones de Caimanes',
+        : 'Demostraciones de Lagartos',
       itemType: '',
       href: '',
       target: '',

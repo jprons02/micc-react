@@ -473,7 +473,7 @@ const TribalLeaders = () => {
                   Clan de los Pájaros en Musa Isle a lo largo del río Miami, un
                   campamento fundado a principios del siglo XX por su bisabuelo
                   Charlie Willie que luego se convirtió en un importante destino
-                  turístico. Su comunidad fabricaba lanzas para cazar caimanes,
+                  turístico. Su comunidad fabricaba lanzas para cazar lagartos,
                   ranas y tortugas. Aunque no tenían muchos recursos, está de
                   acuerdo en que superaron los desafíos para triunfar en la
                   vida.

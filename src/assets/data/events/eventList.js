@@ -65,7 +65,7 @@ export const events = (language) => {
         : [
             'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita, ¡así que traiga a toda su tribu!',
             'En el Día del Indio Americano, honramos la cultura y las tradiciones de las Primeras Naciones indígenas y sus contribuciones al mundo.',
-            'Este festival familiar ofrece un vistazo a la cultura de la tribu Miccosukee mientras presentamos vendedores de comida y artesanía indígena, espectáculos de lucha con caimanes, paseos en hidrodeslizador y más. Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.',
+            'Este festival familiar ofrece un vistazo a la cultura de la tribu Miccosukee mientras presentamos vendedores de comida y artesanía indígena, espectáculos de lucha con lagartos, paseos en hidrodeslizador y más. Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.',
           ],
       /*eventbriteButton: [
         {

@@ -102,7 +102,7 @@ const Home = () => {
           <Typography className={classes.subWelcome} paragraph component="h3">
             {language
               ? 'Showcasing Miccosukee tribal arts & culture, with crafts, airboat rides & alligators.'
-              : 'Mostrando la cultura y arte tribal de los Miccosukee con artesanías, paseos en airboat (hidrodeslizador) y caimanes.'}
+              : 'Mostrando la cultura y arte tribal de los Miccosukee con artesanías, paseos en airboat (hidrodeslizador) y lagartos.'}
           </Typography>
           <hr className={classes.hr} />
           <GridContainer style={{ marginTop: '60px' }} justify="center">
@@ -139,12 +139,12 @@ const Home = () => {
               <Typography className={classes.poiTitle} component="h4">
                 {language
                   ? 'Alligator Demonstrations'
-                  : 'Demostraciones de Caimanes'}
+                  : 'Demostraciones de Lagartos'}
               </Typography>
               <p className={classes.iconText}>
                 {language
                   ? 'We don’t “wrestle” our ‘gators—we love them and hope that you’ll learn about them through our demonstrations!'
-                  : 'No “peleamos” con nuestros caimanes – ¡los amamos y esperamos que puedan aprender sobre ellos con nuestras demostraciones!'}
+                  : 'No “peleamos” con nuestros lagartos – ¡los amamos y esperamos que puedan aprender sobre ellos con nuestras demostraciones!'}
               </p>
             </GridItem>
             {/*
@@ -158,7 +158,7 @@ const Home = () => {
               <p className={classes.iconText}>
                 {language
                   ? 'The Village’s casual eatery has something for everybody! Burgers, fries, alligator bites, shakes and more! Our Little Shack is here for you.'
-                  : '¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, nuggets de caimán, batidos y mucho más.'}
+                  : '¡El lugar en el Pueblo que tiene algo para todos! Hamburguesas, papas fritas, nuggets de lagarto, batidos y mucho más.'}
               </p>
             </GridItem>
             */}

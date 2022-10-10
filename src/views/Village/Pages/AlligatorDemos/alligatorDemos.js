@@ -60,7 +60,7 @@ const AlligatorDemos = () => {
               <h2>
                 {language
                   ? 'Alligator Demonstrations'
-                  : 'Demostraciones de Caimanes'}
+                  : 'Demostraciones de Lagartos'}
               </h2>
               {/*renderPoiHours(villageHours.poi.alligator, language)*/}
               {language ? (
@@ -83,7 +83,7 @@ const AlligatorDemos = () => {
               ) : (
                 <React.Fragment>
                   <p>
-                    No “peleamos” con nuestros caimanes – ¡los amamos y
+                    No “peleamos” con nuestros lagartos – ¡los amamos y
                     esperamos que puedan aprender sobre ellos con nuestras
                     demostraciones! Se asombrarán al ver a nuestros luchadores
                     valientes explicar las tradiciones y los rituales que los
@@ -92,9 +92,9 @@ const AlligatorDemos = () => {
                   <p>
                     Los Miccosukee aprendieron hace mucho como capturarlos para
                     alimentación y productos como su piel dura. Desde entonces,
-                    la relación de la Tribu con los caimanes ha cambiado. Ahora,
+                    la relación de la Tribu con los lagartos ha cambiado. Ahora,
                     ellos están mas preocupados de conservarlos y de educar a la
-                    gente del rol que tienen los caimanes en este ambiente
+                    gente del rol que tienen los lagartos en este ambiente
                     particular.
                   </p>
                 </React.Fragment>
