@@ -275,7 +275,7 @@ export const mrgHours = {
     hammock: [
       {
         daysClosed: (language) =>
-          language ? 'Closed Monday - Thursday' : 'Cerrado lunes a jueves',
+          language ? 'Monday - Thursday' : 'Cerrado lunes a jueves',
       },
       {
         days: (language) =>

@@ -70,10 +70,7 @@ export const mrgStatus = {
       hours: mrgHours.poi.bravo,
     },
     {
-      name: (language) =>
-        language
-          ? 'Café Hammock (Breakfast, Friday - Sunday only)'
-          : 'Café Hammock (Desayuno, viernes a domingo solamente)',
+      name: (language) => (language ? 'Café Hammock' : 'Café Hammock'),
       isOpen: true,
       hours: mrgHours.poi.hammock,
     },

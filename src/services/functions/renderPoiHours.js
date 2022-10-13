@@ -33,6 +33,7 @@ export const renderPoiHours = (hours, language) => {
             //return null;
             return (
               <h6 style={{ color: 'red' }} key={item.daysClosed(language)}>
+                {language ? 'Closed: ' : 'Cerrado: '}
                 {item.daysClosed(language)}
               </h6>
             );
