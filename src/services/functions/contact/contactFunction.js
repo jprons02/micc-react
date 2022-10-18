@@ -29,11 +29,7 @@ const getEmail = (value) => {
         'crodriguez@miccosukee.com',
       ];
     case 'Group Sales':
-      return [
-        'ggalarza@miccosukee.com',
-        'kwhiting@miccosukee.com',
-        'fbutera@miccosukee.com',
-      ];
+      return ['ggalarza@miccosukee.com', 'kwhiting@miccosukee.com'];
     case 'Promotions & Special Events':
       return ['rduncan@miccosukee.com'];
     case 'Player’s Club':
@@ -45,17 +41,12 @@ const getEmail = (value) => {
         'kwhiting@miccosukee.com',
       ];
     case 'Spa & Salon':
-      return [
-        'kwhiting@miccosukee.com',
-        'cklimekoski@miccosukee.com',
-        'fbutera@miccosukee.com',
-      ];
+      return ['kwhiting@miccosukee.com', 'cklimekoski@miccosukee.com'];
     case 'Valet Services':
       return [
         'tmitchelson@miccosukee.com',
         'kwhiting@miccosukee.com',
         'transportation@miccosukee.com',
-        'fbutera@miccosukee.com',
       ];
     case 'Human Resources':
       return ['damaro@miccosukee.com'];
