@@ -24,7 +24,8 @@ const VirtualEventFooter = () => {
       subMenu: [
         {
           linkText: 'Casino & Resort',
-          linkTo: '/mrg',
+          //mrg to mcr change
+          linkTo: '/mcr',
         },
         {
           linkText: 'Golf & Country Club',

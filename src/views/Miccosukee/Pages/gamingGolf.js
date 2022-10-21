@@ -44,7 +44,8 @@ const GamingGolf = () => {
       buttonOne: {
         text: language ? 'WEBSITE' : 'Página web',
         usesRouter: true,
-        link: `/mrg`,
+        //mrg to mcr change
+        link: `/mcr`,
       },
       //hours: mrgHours.todaysHours(dayOfWeek, language),
       hours: language ? ' 24 Hours' : ' 24 Horas',

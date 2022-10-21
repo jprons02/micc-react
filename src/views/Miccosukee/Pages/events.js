@@ -49,6 +49,11 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     // Set the default category depending on url.
     // ex) if url === mrg/events, category default is "Casino & Resort"
     switch (history.location.pathname) {
+      //mrg to mcr change
+      case '/mcr/events':
+        //setCategory('Casino & Resort');
+        setCategory('All');
+        break;
       case '/mrg/events':
         //setCategory('Casino & Resort');
         setCategory('All');

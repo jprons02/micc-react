@@ -34,7 +34,7 @@ const Home = ({ history }) => {
   const cards = [
     {
       id: 1,
-      url: 'mrg',
+      url: 'mcr',
       title: language
         ? 'Miccosukee Casino & Resort'
         : 'Miccosukee Casino & Resort',

@@ -89,7 +89,7 @@ const Home = (props) => {
             : 'Descanse, juegue y experimente los Everglades Miccosukee.',
           button: {
             text: language ? 'SEE DETAILS' : 'MÁS DETALLES',
-            link: '/mrg/accommodations',
+            link: '/mcr/accommodations',
           },
         },
       ]
@@ -107,7 +107,7 @@ const Home = (props) => {
             : '¡Disfrute de una cena informal con un toque sofisticado!',
           button: {
             text: language ? 'SEE DETAILS' : 'MÁS DETALLES',
-            link: '/mrg/cafe-hammock',
+            link: '/mcr/cafe-hammock',
           },
         },
         /*
@@ -202,7 +202,7 @@ const Home = (props) => {
 
   const cardButtonClick = (card) => {
     if (card.linkObj.type === 'internal') {
-      props.history.push(`/mrg${card.linkObj.link}`);
+      props.history.push(`/mcr${card.linkObj.link}`);
     } else {
       return null;
     }

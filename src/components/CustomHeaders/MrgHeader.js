@@ -211,7 +211,8 @@ const MrgHeader = () => {
         color="white"
         brand={mrgLogo}
         brandAlt="Miccosukee Casino and Resort logo"
-        brandLink="/mrg"
+        //mrg to mcr change
+        brandLink="/mcr"
         rightLinks={<HeaderLinks menuItems={menuLinks} />}
         fixed
         changeColorOnScroll={{

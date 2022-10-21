@@ -67,7 +67,8 @@ const GolfHeader = () => {
     {
       text: 'Casino & Resort',
       itemType: 'external',
-      href: 'https://miccosukee.com/mrg',
+      //mrg to mcr change
+      href: 'https://miccosukee.com/mcr',
       target: '_blank',
       color: '',
       link: '',

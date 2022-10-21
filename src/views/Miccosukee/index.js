@@ -127,7 +127,8 @@ const Miccosukee = (props) => {
       window.location.pathname === '/gaming-golf' ||
       window.location.pathname === '/gaming-golf/'
     ) {
-      props.history.push('/mrg');
+      //mrg to mcr change
+      props.history.push('/mcr');
     }
 
     // Closes mobile drawer any time location changes

@@ -48,7 +48,8 @@ const MrgFooter = () => {
         },
         {
           linkText: 'Covid-19',
-          linkTo: '/mrg/covid-19',
+          //mrg to mcr change
+          linkTo: '/mcr/covid-19',
         },
         {
           externalLink: true,
@@ -72,7 +73,8 @@ const MrgFooter = () => {
         },
         {
           linkText: language ? 'Banquets & Catering' : 'Banquetes y Catering',
-          linkTo: '/mrg/banquets-catering',
+          //mrg to mcr change
+          linkTo: '/mcr/banquets-catering',
         },
         {
           externalLink: true,

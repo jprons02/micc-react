@@ -4,7 +4,8 @@
 */
 
 export const getMetaData = (uri, pageObj) => {
-  const mrg = /\/mrg/gm;
+  //mrg to mcr change
+  const mrg = /\/mrg|\/mcr/gm;
   const golf = /\/golf/gm;
   const village = /\/village/gm;
   const airboats = /\/airboats/gm;

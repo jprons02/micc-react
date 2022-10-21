@@ -63,6 +63,18 @@ const App = () => {
     );
   }, []);
 
+  /*useEffect(() => {
+    const history = createBrowserHistory();
+    console.log('url: ', history.location.pathname);
+    console.log('replace: ', history.location.pathname.replace('mrg', 'mcr'));
+    //if regex is mrg or mrg/asdf then change url from /mrg to /mcr and then reload page
+    const mrgRegex = /(\/mrg\/.)|(\/mrg)/i;
+    if (mrgRegex.test(history.location.pathname)) {
+      history.push(history.location.pathname.replace('mrg', 'mcr'));
+      //window.location.reload();
+    }
+  }, []);*/
+
   // This is success message for signing/logging in
   // Snackbar unmounting is placed in the Footer.js and VirtualEvent.js components. Footer will handle all website unmounts with exception to the virtual events.
   const renderSnackbar = () => {
@@ -127,7 +139,10 @@ const App = () => {
                   <ReactHelmetComponent url={window.location.pathname} />
                   <Switch>
                     {/*<Route exact path={"/virtual-event/aid"} component={AID} />*/}
+                    {/* //mrg to mcr change */}
+                    {/* using both mrg and mcr to keep legacy links active. */}
                     <Route path="/mrg" component={MRG} />
+                    <Route path="/mcr" component={MRG} />
                     <Route path="/golf" component={Golf} />
                     <Route path="/village" component={Village} />
                     <Route path="/airboats" component={Airboats} />

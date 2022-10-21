@@ -58,6 +58,10 @@ const InfoPage = ({ history, badgeColor, entityMargin }) => {
     // Set the default category depending on url.
     // ex) if url === mrg/events, category default is "Casino & Resort"
     switch (history.location.pathname) {
+      //mrg to mcr change
+      case '/mcr/covid-19':
+        setCategory('Casino & Resort');
+        break;
       case '/mrg/covid-19':
         setCategory('Casino & Resort');
         break;

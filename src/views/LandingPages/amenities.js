@@ -135,7 +135,8 @@ const ResortPackages = () => {
         : 'Miccosukee Casino & Resort',
       button: {
         text: language ? 'LEARN MORE' : 'CONOZCA MÁSE',
-        link: '/mrg',
+        //mrg to mcr change
+        link: '/mcr',
       },
       body: [
         {
@@ -162,7 +163,8 @@ const ResortPackages = () => {
       title: language ? 'Slots' : 'Tragamonedas',
       button: {
         text: language ? 'LEARN MORE' : 'CONOZCA MÁSE',
-        link: '/mrg/gaming-machines',
+        //mrg to mcr change
+        link: '/mcr/gaming-machines',
       },
       body: [
         {
@@ -189,7 +191,8 @@ const ResortPackages = () => {
       title: language ? 'Bingo' : 'Bingo',
       button: {
         text: language ? 'LEARN MORE' : 'CONOZCA MÁSE',
-        link: '/mrg/bingo',
+        //mrg to mcr change
+        link: '/mcr/bingo',
       },
       body: [
         {
@@ -219,19 +222,20 @@ const ResortPackages = () => {
         renderList: () => {
           return (
             <React.Fragment>
-              <Link to="/mrg/sawgrass-cafe">
+              {/* //mrg to mcr change */}
+              <Link to="/mcr/sawgrass-cafe">
                 <Button className={classes.contentButton}>
                   <span className={classes.contentButtonText}>
                     Sawgrass Cafe
                   </span>
                 </Button>
               </Link>
-              <Link to="/mrg/maxs">
+              <Link to="/mcr/maxs">
                 <Button className={classes.contentButton}>
                   <span className={classes.contentButtonText}>Max's</span>
                 </Button>
               </Link>
-              <Link to="/mrg/cafe-hammock">
+              <Link to="/mcr/cafe-hammock">
                 <Button className={classes.contentButton}>
                   <span className={classes.contentButtonText}>
                     Café Hammock
@@ -281,7 +285,7 @@ const ResortPackages = () => {
       title: language ? 'Pool & Fitness Center' : 'Piscina y Gimnasio',
       button: {
         text: language ? 'LEARN MORE' : 'CONOZCA MÁSE',
-        link: '/mrg/pool-gym',
+        link: '/mcr/pool-gym',
       },
       body: [
         {

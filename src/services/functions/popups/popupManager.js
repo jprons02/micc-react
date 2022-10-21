@@ -97,7 +97,8 @@ const mrgPopup = {
     //link: '',
     alt: 'bingo promo',
     linkType: 'internal',
-    link: '/mrg/bingo',
+    //mrg to mcr change
+    link: '/mcr/bingo',
   },
 };
 const mrgGamingPromotionsPopup = {
@@ -309,14 +310,19 @@ export const popupManager = (setState, state, location) => {
     }
   }
   if (mrgPopup.showPopup) {
-    if (location.pathname === '/mrg') {
+    //mrg to mcr change
+    if (location.pathname === '/mrg' || location.pathname === '/mcr') {
       setTimeout(() => {
         setPopup(setState, state, mrgPopup);
       }, 700);
     }
   }
   if (mrgGamingPromotionsPopup.showPopup) {
-    if (location.pathname === '/mrg/promotions') {
+    //mrg to mcr change
+    if (
+      location.pathname === '/mrg/promotions' ||
+      location.pathname === '/mcr/promotions'
+    ) {
       setTimeout(() => {
         setPopup(setState, state, mrgGamingPromotionsPopup);
       }, 700);

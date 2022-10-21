@@ -7,6 +7,8 @@ import {
   Link,
 } from 'react-router-dom';
 
+import { createBrowserHistory } from 'history';
+
 // Context
 import { BookRoomProvider } from 'contexts/BookRoomContext.js';
 import { PopupContext } from 'contexts/PopupContext.js';
@@ -86,23 +88,38 @@ export default function Miccosukee(props) {
 
   //reroute
   useEffect(() => {
+    //if regex is mrg or mrg/asdf then change url from /mrg to /mcr and then reload page
+    const history = createBrowserHistory();
+    const mrgRegex = /(\/mrg\/.)|(\/mrg)/i;
+    if (mrgRegex.test(history.location.pathname)) {
+      history.push(history.location.pathname.replace('mrg', 'mcr'));
+      //window.location.reload();
+    }
+
+    //mrg to mcr change
     if (
       window.location.pathname === '/mrg/dining-nightlife' ||
-      window.location.pathname === '/mrg/dining-nightlife/'
+      window.location.pathname === '/mrg/dining-nightlife/' ||
+      window.location.pathname === '/mcr/dining-nightlife' ||
+      window.location.pathname === '/mcr/dining-nightlife/'
     ) {
-      props.history.push('/mrg');
+      props.history.push('/mcr');
     }
     if (
       window.location.pathname === '/mrg/gaming' ||
-      window.location.pathname === '/mrg/gaming/'
+      window.location.pathname === '/mrg/gaming/' ||
+      window.location.pathname === '/mcr/gaming' ||
+      window.location.pathname === '/mcr/gaming/'
     ) {
-      props.history.push('/mrg');
+      props.history.push('/mcr');
     }
     if (
       window.location.pathname === '/mrg/upcoming-events' ||
-      window.location.pathname === '/mrg/upcoming-events/'
+      window.location.pathname === '/mrg/upcoming-events/' ||
+      window.location.pathname === '/mcr/upcoming-events' ||
+      window.location.pathname === '/mcr/upcoming-events/'
     ) {
-      props.history.push('/mrg/events');
+      props.history.push('/mcr/events');
     }
     if (
       window.location.pathname ===
@@ -113,9 +130,11 @@ export default function Miccosukee(props) {
     }
     if (
       location.pathname === '/mrg/contact' ||
-      location.pathname === '/mrg/contact/'
+      location.pathname === '/mrg/contact/' ||
+      location.pathname === '/mcr/contact' ||
+      location.pathname === '/mcr/contact/'
     ) {
-      props.history.push('/mrg');
+      props.history.push('/mcr');
       setShowContactModal(true);
     } else {
       closeModal(setShowContactModal);
