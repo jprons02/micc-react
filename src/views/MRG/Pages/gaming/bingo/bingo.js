@@ -35,7 +35,6 @@ const useStyles = makeStyles(styles);
 const imageObj = [
   { src: image1, alt: 'Bingo image 1' },
   { src: image2, alt: 'Bingo image 2' },
-  { src: image3, alt: 'Bingo image 3' },
 ];
 
 const sliderContent = [

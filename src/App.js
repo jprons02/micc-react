@@ -36,6 +36,7 @@ import Tomahawk from 'views/LandingPages/tomahawk.js';
 import ResortPackages from 'views/LandingPages/resortPackages.js';
 import Amenities from 'views/LandingPages/amenities.js';
 import Aid from 'views/LandingPages/aid.js';
+import Banquets from 'views/LandingPages/banquets.js';
 
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
@@ -161,6 +162,7 @@ const App = () => {
                       component={Amenities}
                     />
                     <Route path={'/aid'} component={Aid} />
+                    <Route path={'/banquets-catering'} component={Banquets} />
                     {/* END LANDING PAGES */}
                     <Route path="/" component={Miccosukee} />
                   </Switch>

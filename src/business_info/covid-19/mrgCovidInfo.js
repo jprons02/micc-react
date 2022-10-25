@@ -310,18 +310,8 @@ const MrgCovidInfo = (props) => {
           />*/}
         <p>
           {props.language
-            ? 'At this time, all employees returning to work have tested negative for COVID-19 and have all been trained on how to properly prevent the spread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee Casino & Resort asks any employee or patron who is exhibiting symptoms to please remain at home for the safety of all other employees and guests. Miccosukee Casino & Resort is very proud to be able to serve its South Florida community once again.'
-            : 'Hemos realizado controles a todos nuestros empleados y todos han dado negativo al COVID-19. Además los hemos capacitado sobre cómo prevenir su contagio. Debido a la pandemia provocada por el brote de COVID-19, Miccosukee Casino & Resort le pide a todos los empleados y clientes que tengan síntomas que por favor permanezcan en sus casas por la seguridad de todos. Miccosukee Casino & Resort se enorgullece de volver a colaborar con la comunidad del sur de la Florida.'}
-        </p>
-        <p>
-          {props.language
-            ? 'In addition to existing health and hygiene practices, we will be regularly disinfecting all areas with Electrostatic Sprayers.'
-            : 'Además de las prácticas de higiene y salud actuales, estaremos desinfectando regularmente todas las áreas con rociadores electroestáticos.'}
-        </p>
-        <p>
-          {props.language
-            ? 'We thank you for your continued patience as we take these additional measures to ensure a safe environment for everyone.'
-            : 'Agradecemos su paciencia mientras tomamos estas medidas adicionales para garantizar un ambiente seguro para todos.'}
+            ? 'Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium.'
+            : 'Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida.'}
         </p>
       </div>
       <div style={sectionStyle}>
@@ -331,53 +321,21 @@ const MrgCovidInfo = (props) => {
         >
           {props.language ? 'Hours of Operation' : 'Horarios'}
         </h4>
-        <Collapse in={mrg.hours}>
-          {
-            <ul style={ulStyle}>
-              <li style={liStyle}>
-                {mrgHours.hours.days(props.language)}
-                {', '}
-                {mrgHours.hours.open === mrgHours.hours.close
-                  ? props.language
-                    ? '24 hours'
-                    : '24 horas'
-                  : `${mrgHours.hours.open} - ${mrgHours.hours.close}`}
-              </li>
-              {/*
-              <ul style={innerUlStyle}>
-                <li style={liStyle}>
-                  {mrgHours.hours.details(props.language)}
-                </li>
-              </ul>
-              */}
-            </ul>
-          }
-          {/*
+        {
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {mrgHours.weekday.days(props.language)}: {mrgHours.weekday.open} –{' '}
-              {mrgHours.weekday.close}
+              {mrgHours.hours.days(props.language)}
+              {', '}
+              {mrgHours.hours.open === mrgHours.hours.close
+                ? props.language
+                  ? '24 hours'
+                  : '24 horas'
+                : `${mrgHours.hours.open} - ${mrgHours.hours.close}`}
             </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {mrgHours.weekday.details(props.language)}
-              </li>
-            </ul>
           </ul>
-          <ul style={ulStyle}>
-            <li style={liStyle}>
-              {mrgHours.weekend.days(props.language)}: {mrgHours.weekend.open} –{' '}
-              {mrgHours.weekend.close}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {mrgHours.weekend.details(props.language)}
-              </li>
-            </ul>
-          </ul>
-          */}
-        </Collapse>
+        }
       </div>
+
       <div style={sectionStyle}>
         <h4
           onClick={() => setMrg({ ...mrg, entryDetails: !mrg.entryDetails })}
@@ -385,88 +343,86 @@ const MrgCovidInfo = (props) => {
         >
           {props.language ? 'Entry Details' : 'Normas de Acceso'}
         </h4>
-        <Collapse in={mrg.entryDetails}>
-          <ul style={ulStyle}>
+        <ul style={ulStyle}>
+          <li style={liStyle}>
+            {props.language
+              ? 'We are operating at full capacity.'
+              : 'Estamos operando a máxima capacidad.'}
+          </li>
+          <li style={liStyle}>
+            {props.language
+              ? 'Temperature screenings are no longer required when entering the building.'
+              : 'No se requiere controles de temperatura para entrar al edificio.'}
+          </li>
+          <li style={liStyle}>
+            {props.language
+              ? 'All guests must have a government-issued photo ID.'
+              : 'Todos los clientes deben tener un documento de identidad con fotografía emitido por el gobierno.'}
+          </li>
+          <li style={liStyle}>
+            {props.language
+              ? 'Must be 18 or older.'
+              : 'Debe ser mayor de 18 años.'}
+          </li>
+          <li style={liStyle}>
+            {props.language
+              ? 'Masks are optional for vaccinated patrons. Masks are mandatory for unvaccinated patrons.'
+              : 'El uso de mascarillas es opcional para los clientes vacunados. El uso de mascarillas es obligatorio para los clientes no vacunados.'}
+          </li>
+          <li style={liStyle}>
+            {props.language
+              ? 'We remain a non-smoking facility.'
+              : 'Está prohibido fumar adentro del edificio.'}
+          </li>
+          <ul style={innerUlStyle}>
             <li style={liStyle}>
               {props.language
-                ? 'We are operating at full capacity.'
-                : 'Estamos operando a máxima capacidad.'}
+                ? 'There will be designated smoking areas outside.'
+                : 'Se han designado zonas externas exclusivamente para fumadores.'}
             </li>
-            <li style={liStyle}>
-              {props.language
-                ? 'Temperature screenings are no longer required when entering the building.'
-                : 'No se requiere controles de temperatura para entrar al edificio.'}
-            </li>
-            <li style={liStyle}>
-              {props.language
-                ? 'All guests must have a government-issued photo ID.'
-                : 'Todos los clientes deben tener un documento de identidad con fotografía emitido por el gobierno.'}
-            </li>
-            <li style={liStyle}>
-              {props.language
-                ? 'Must be 18 or older.'
-                : 'Debe ser mayor de 18 años.'}
-            </li>
-            <li style={liStyle}>
-              {props.language
-                ? 'Masks are optional for vaccinated patrons. Masks are mandatory for unvaccinated patrons.'
-                : 'El uso de mascarillas es opcional para los clientes vacunados. El uso de mascarillas es obligatorio para los clientes no vacunados.'}
-            </li>
-            <li style={liStyle}>
-              {props.language
-                ? 'We remain a non-smoking facility.'
-                : 'Está prohibido fumar adentro del edificio.'}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? 'There will be designated smoking areas outside.'
-                  : 'Se han designado zonas externas exclusivamente para fumadores.'}
-              </li>
-            </ul>
-            <li style={liStyle}>
-              {props.language
-                ? 'There have been disinfecting wipe dispensers installed all around the facility.'
-                : 'Se han instalado dispensadores de toallas desinfectantes alrededor de toda la edificio.'}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? 'Guests must wipe down each machine after use.'
-                  : 'Todas las máquinas deberán ser desinfectadas con una toalla al finalizar su uso.'}
-              </li>
-            </ul>
-            <li style={liStyle}>
-              {props.language
-                ? 'Eighteen-wheelers can park in the Raccoon Parking Lot but must register first with the Hotel Security Dispatch and are required to rent a hotel room.'
-                : 'Los camiones de dieciocho ruedas deben parquearse en el Estacionamiento Raccoon, pero antes deben registrarse con el Despacho de Seguridad del hotel y alquilar un cuarto de hotel.'}
-            </li>
-            <li style={liStyle}>
-              {props.language
-                ? 'RVs are allowed on property.'
-                : 'Los RVs (casas rodantes) están permitidos en nuestro establecimiento.'}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? 'RVs are allowed to park in the Raccoon Parking Lot but must register first with the Hotel Security Dispatch.'
-                  : 'Los RVs deben parquearse en el Estacionamiento Raccoon pero antes deben registrarse con el Despacho de Seguridad del hotel.'}
-              </li>
-              <li style={liStyle}>
-                {props.language
-                  ? 'There will be a charge of $25.00 + tax per night for overnight RV parking.'
-                  : 'Habrá un cargo de $25.00 + impuestos por noche para el estacionamiento nocturno de RVs.'}
-              </li>
-              <li style={liStyle}>
-                {props.language
-                  ? 'Everyone in the RV must be 18 years of age and over in order to enter the property.'
-                  : 'Todos en el RV deben tener 18 años o más para poder entrar al establecimiento.'}
-              </li>
-            </ul>
           </ul>
-        </Collapse>
+          <li style={liStyle}>
+            {props.language
+              ? 'There have been disinfecting wipe dispensers installed all around the facility.'
+              : 'Se han instalado dispensadores de toallas desinfectantes alrededor de toda la edificio.'}
+          </li>
+          <ul style={innerUlStyle}>
+            <li style={liStyle}>
+              {props.language
+                ? 'Guests must wipe down each machine after use.'
+                : 'Todas las máquinas deberán ser desinfectadas con una toalla al finalizar su uso.'}
+            </li>
+          </ul>
+          <li style={liStyle}>
+            {props.language
+              ? 'Eighteen-wheelers can park in the Raccoon Parking Lot but must register first with the Hotel Security Dispatch and are required to rent a hotel room.'
+              : 'Los camiones de dieciocho ruedas deben parquearse en el Estacionamiento Raccoon, pero antes deben registrarse con el Despacho de Seguridad del hotel y alquilar un cuarto de hotel.'}
+          </li>
+          <li style={liStyle}>
+            {props.language
+              ? 'RVs are allowed on property.'
+              : 'Los RVs (casas rodantes) están permitidos en nuestro establecimiento.'}
+          </li>
+          <ul style={innerUlStyle}>
+            <li style={liStyle}>
+              {props.language
+                ? 'RVs are allowed to park in the Raccoon Parking Lot but must register first with the Hotel Security Dispatch.'
+                : 'Los RVs deben parquearse en el Estacionamiento Raccoon pero antes deben registrarse con el Despacho de Seguridad del hotel.'}
+            </li>
+            <li style={liStyle}>
+              {props.language
+                ? 'There will be a charge of $25.00 + tax per night for overnight RV parking.'
+                : 'Habrá un cargo de $25.00 + impuestos por noche para el estacionamiento nocturno de RVs.'}
+            </li>
+            <li style={liStyle}>
+              {props.language
+                ? 'Everyone in the RV must be 18 years of age and over in order to enter the property.'
+                : 'Todos en el RV deben tener 18 años o más para poder entrar al establecimiento.'}
+            </li>
+          </ul>
+        </ul>
       </div>
-
+      {/*
       <div style={sectionStyle}>
         <h4
           onClick={() => setMrg({ ...mrg, gaming: !mrg.gaming })}
@@ -476,89 +432,6 @@ const MrgCovidInfo = (props) => {
         </h4>
         <Collapse in={mrg.gaming}>
           {renderGaming()}
-          {/*
-          <p style={paddingLeftStyle}>
-            <b>
-              {props.language
-                ? "Miccosukee One Program Covid-19 Impact FAQs:"
-                : "Miccosukee One Program Impacto del COVID-19 Preguntas Frecuentes:"}
-            </b>
-          </p>
-          <ul style={{ marginTop: "0px", paddingLeft: "50px" }}>
-            <li style={liStyle}>
-              {props.language
-                ? "Will I lose my card status due to the COVID-19 closure?"
-                : "¿Podría perder el nivel de mi tarjeta debido al cierre por COVID-19?"}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? "Miccosukee Casino & Resort will not downgrade any accounts from the impacted January – June 2020 term. All Miccosukee One players will automatically retain their current card tier through December 31, 2020 unless an eligible upgrade is earned."
-                  : "Miccosukee Casino & Resort no rebajará ninguna cuenta debido al impacto del COVID -19 ocurrido entre enero y junio de 2020. Todos los jugadores de Miccosukee One mantendrán su nivel actual hasta el 31 de diciembre del 2020 salvo que hayan ganado un ascenso."}
-              </li>
-            </ul>
-            <li style={liStyle}>
-              {props.language
-                ? "Will I receive credit for the points I have earned towards being upgraded?"
-                : "¿Recibiré crédito por los puntos que ahorre para ascender?"}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? "We know you’ve played hard to reach the next tier. Since circumstances beyond our control have resulted in less available play time for you, we are lowering the required point threshold for this impacted January – June 2020 term based on the quantity of days that our doors were closed to you. All tier point earnings will accrue until 11:59 PM on June 30, 2020."
-                  : "Sabemos que te has esforzado mucho para ascender de nivel. Por ello, debido a las públicas circunstancias de fuerza mayor que provocaron que haya menos tiempo disponible para jugar, realizamos una reducción en el límite de puntos requeridos para el plazo de enero a junio del 2020. Esto implica que, basándonos en la totalidad de los días que estuvimos cerrados todos los puntos ahorrados se acumularán hasta las 11:59 PM del 30 de junio."}
-              </li>
-            </ul>
-            <li style={liStyle}>
-              {props.language
-                ? "What if my birthday passed while you were closed?"
-                : "¿Qué pasa si mi cumpleaños paso mientras estaban cerrados?"}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? "We are so saddened that we were unable to celebrate with you! If you had an existing account and could not visit us on your birthday due to the resort being closed, please visit the Player’s Club before June 30, 2020 to claim a $25 Quarantine Consolation voucher."
-                  : "¡Estamos muy tristes de que no pudimos festejar con usted! Si tenían una cuenta existente y no pudo visitarnos en su cumpleaños por el cierre del hotel, por favor visite el Player’s Club antes del 30 de junio del 2020 para reclamar un cupón de Quarantine Consolation de $25."}
-              </li>
-            </ul>
-            <li style={liStyle}>
-              {props.language
-                ? "What if my birthday voucher expires before I can use it?"
-                : "¿Qué pasa si mi cupón de cumpleaños expira antes de que lo pueda usar?"}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? "All meal vouchers issued on or after March 17 will be valid until 11:59 PM on December 30, 2020."
-                  : "Todos los cupones de comida emitidos en o después del 17 de marzo serán válidos hasta las 11:59 PM del 30 de diciembre de 2020."}
-              </li>
-            </ul>
-            <li style={liStyle}>
-              {props.language
-                ? "Will I be able to retrieve the Player’s Club points that expired during the closure period?"
-                : "¿Voy a poder recuperar los puntos del Player’s Club que expiraron durante el periodo de cierre?"}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? "If your Miccosukee One account has been dormant for a full calendar year and you experienced a point expiration during the dates that we were closed, please visit the Player’s Club by 11:59 PM on July 16, 2020 for a refund of the expired points."
-                  : "Si su cuenta Miccosukee One ha estado inactiva por un año calendario completo y sus puntos expiraron durante los días que estuvimos cerrados, por favor visite el Player’s Club antes de las 11:59 PM el 16 de julio del 2020 para un reembolso de los puntos expirados."}
-              </li>
-            </ul>
-            <li style={liStyle}>
-              {props.language
-                ? "What happened to drawing entries earned before Miccosukee closed?"
-                : "¿Qué pasó con las entradas ahorradas antes que el Miccosukee cerrara?"}
-            </li>
-            <ul style={innerUlStyle}>
-              <li style={liStyle}>
-                {props.language
-                  ? "All drawings were cancelled at the discretion of management and thus any accrued entries were discarded."
-                  : "Todos los sorteos fueron cancelados a la discreción de la administración y todas las entradas acumuladas fueron descartadas."}
-              </li>
-            </ul>
-          </ul>
-          */}
           <span
             style={{
               fontSize: '10px',
@@ -601,6 +474,7 @@ const MrgCovidInfo = (props) => {
         </h4>
         <Collapse in={mrg.amenities}>{renderAmenities()}</Collapse>
       </div>
+      */}
     </div>
   );
 };
