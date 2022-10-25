@@ -212,16 +212,21 @@ export default function Miccosukee(props) {
                   <div>
                     <b>
                       Café Hammock will cease operations temporarily after
-                      Sunday, October 30, 2022, to make way for our long-awaited
-                      New Poker Room.
+                      Sunday, October 30, to make way for our long-awaited New
+                      Poker Room. Please join us beginning November 4 for your
+                      dining favorites at Bravo Bravissimo, open Friday - Sunday
+                      on the second floor.
                     </b>
                   </div>
                 ) : (
                   <div>
                     <b>
                       Café Hammock dejará de operar temporalmente después del
-                      domingo, 30 de octubre de 2022, para dar paso a nuestra
-                      tan esperada Nueva Sala de Póquer.
+                      domingo, 30 de octubre, para dar paso a nuestra tan
+                      esperada nueva Sala de Póquer. Visítenos a partir del 4 de
+                      noviembre para disfrutar de sus comidas favoritas en Bravo
+                      Bravissimo, abierto de viernes a domingo en el segundo
+                      piso.
                     </b>
                   </div>
                 )}
