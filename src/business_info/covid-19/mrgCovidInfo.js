@@ -299,15 +299,15 @@ const MrgCovidInfo = (props) => {
       <div style={{ marginTop: '10px' }}>
         <h3>
           {props.language
-            ? 'Miccosukee Casino & Resort Reopening Details'
-            : 'Miccosukee Casino & Resort Detalles de Reapertura'}
+            ? 'Miccosukee Casino & Resort'
+            : 'Miccosukee Casino & Resort'}
         </h3>
-        <video
+        {/*<video
           style={{ margin: '5px 0 15px 0', width: '100%', maxWidth: '500px' }}
           src={winItAll}
           controls={true}
           controlsList="nodownload"
-        />
+          />*/}
         <p>
           {props.language
             ? 'At this time, all employees returning to work have tested negative for COVID-19 and have all been trained on how to properly prevent the spread of it. Due to the outbreak of the COVID-19 pandemic, Miccosukee Casino & Resort asks any employee or patron who is exhibiting symptoms to please remain at home for the safety of all other employees and guests. Miccosukee Casino & Resort is very proud to be able to serve its South Florida community once again.'

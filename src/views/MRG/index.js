@@ -153,13 +153,15 @@ export default function Miccosukee(props) {
     setState(false);
   };
 
+  //alert colors: success, warning, danger, info
+
   return (
     <ThemeProvider theme={theme('mrg')}>
       <BookRoomProvider>
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning([2022, 9, 27], [2022, 10, 30]) ? (
+          {isRunning([2022, 9, 27], [2030, 10, 30]) ? (
             <StandardAlert
               message={
                 <div id="alert2">
@@ -203,106 +205,32 @@ export default function Miccosukee(props) {
               //icon="info_outline"
             />
           )}
-          {/*isRunning([2022, 5, 20]) ? (
-            <StandardAlert
-              message={
-                <div id="alert1a">
-                  {language ? (
-                    <div>
-                      <b>All gaming areas NOW OPEN 24/7!</b>
-                      {<p style={{ fontWeight: '400' }}>
-                        Guests must be 18 or older to enter the building.
-                      </p>}
-                    </div>
-                  ) : (
-                    <div>
-                      <b>¡Todas las áreas de juego ya están ABIERTAS 24/7!</b>
-                      <p style={{ fontWeight: '400' }}>
-                        Los invitados deben tener 18 años o más para entrar al
-                        establecimiento.
-                      </p>
-                    </div>
-                  )}
-                </div>
-              }
-              close
-              color="success"
-              //icon="info_outline"
-            />
-          ) : (
-            <StandardAlert
-              message={
-                <div id="alert1a">
-                  {language ? (
-                    <div>
-                      <b>
-                        Coming Soon! New 24/7 Smoking Gaming Area opening on
-                        Friday, May 20 at 9 AM.
-                      </b>
-                    </div>
-                  ) : (
-                    <div>
-                      <b>
-                        ¡Próximamente! Nueva Área de Juego para Fumadores
-                        abriendo 24/7 a partir del viernes, 20 de mayo a las 9
-                        AM.
-                      </b>
-                    </div>
-                  )}
-                </div>
-              }
-              close
-              color="success"
-              //icon="info_outline"
-            />
-          )*/}
-          {/*
           <StandardAlert
             message={
-              <div id="alert2">
+              <div id="alert1a">
                 {language ? (
                   <div>
                     <b>
-                      <Link
-                        style={{ color: 'white', fontWeight: '800' }}
-                        to={`${match.path}/covid-19`}
-                      >
-                        Click HERE for the Miccosukee Casino &amp; Resort
-                        COVID-19 guidelines.
-                      </Link>
+                      Café Hammock will cease operations temporarily after
+                      Sunday, October 30, 2022, to make way for our long-awaited
+                      New Poker Room.
                     </b>
-                    <p style={{ fontWeight: '400' }}>
-                      Guests must be 18 or older to enter the building. Masks
-                      are optional for vaccinated patrons. Masks are mandatory
-                      for unvaccinated patrons.
-                    </p>
                   </div>
                 ) : (
                   <div>
                     <b>
-                      <Link
-                        style={{ color: 'white', fontWeight: '800' }}
-                        to={`${match.path}/covid-19`}
-                      >
-                        Oprima AQUÍ para las últimas noticias de COVID-19
-                        relacionadas a nuestros establecimientos.
-                      </Link>
+                      Café Hammock dejará de operar temporalmente después del
+                      domingo, 30 de octubre de 2022, para dar paso a nuestra
+                      tan esperada Nueva Sala de Póquer.
                     </b>
-                    <p style={{ fontWeight: '400' }}>
-                      Los invitados deben tener 18 años o más para entrar al
-                      establecimiento. El uso de mascarillas es opcional para
-                      los clientes vacunados. El uso de mascarillas es
-                      obligatorio para los clientes no vacunados.
-                    </p>
                   </div>
                 )}
               </div>
             }
             close
-            color="info"
+            color="warning"
             //icon="info_outline"
           />
-          */}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route
@@ -401,11 +329,8 @@ export default function Miccosukee(props) {
               path={`${match.path}/events/:eventId`}
               component={MrgEventPage}
             />
-            <Route
-              exact
-              path={`${match.path}/covid-19`}
-              component={MrgCovidPage}
-            />
+            {/* Old covid page. */}
+            <Route exact path={`${match.path}/info`} component={MrgCovidPage} />
             <Route exact path={`/404`} component={MrgErrorPage} />
             <Route exact path={`${match.path}/*`} component={MrgErrorPage} />
           </Switch>

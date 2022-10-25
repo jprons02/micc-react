@@ -32,6 +32,8 @@ import Slider from 'react-slick';
 
 // Images
 import heroImg1 from 'assets/media/img/mrg/home/mrg_hero.jpg';
+import heroImg2 from 'assets/media/img/mrg/home/building.jpg';
+import heroImg3 from 'assets/media/img/mrg/home/accommodations_hero.jpg';
 
 import cardImage1 from 'assets/media/img/mrg/gaming/machines/MRG_Gaming1.jpg';
 import cardImage2 from 'assets/media/img/mrg/home/burgerfries.jpg';
@@ -74,7 +76,8 @@ const Home = (props) => {
       Descanse, juegue y experimente los Everglades Miccosukee.
    */
 
-  const sliderContent = isRunning([2021, 12, 22])
+  const sliderContent =
+    /*isRunning([2021, 12, 22])
     ? [
         {
           id: 1,
@@ -110,27 +113,35 @@ const Home = (props) => {
             link: '/mcr/cafe-hammock',
           },
         },
-        /*
-    {
-      id: 2,
-      bgImage: heroImg1,
-      header: language ? "MONTHLY PROMOTIONS" : "PROMOCIONES MENSUALES",
-      subHeader: language
-        ? "Miccosukee One Members, enter our drawings for chances to win thousands in cash and plenty of Free Play!"
-        : "¡Miembros de Miccosukee One, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho Free Play!​",
-      button: {
-        text: language ? "SEE PROMOS" : "VER PROMOCIONES",
-        link: "/mrg/promotions",
+      ];
+      */
+    [
+      {
+        id: 1,
+        bgImage: heroImg1,
+        header: language ? 'MONTHLY PROMOTIONS' : 'PROMOCIONES MENSUALES',
+        subHeader: language
+          ? 'Miccosukee One Members, enter our drawings for chances to win thousands in cash and plenty of Free Play!'
+          : '¡Miembros de Miccosukee One, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho Free Play!​',
+        button: {
+          text: language ? 'SEE PROMOS' : 'VER PROMOCIONES',
+          link: '/mcr/promotions',
+        },
       },
-    },
-    */
-        /*
-    {
-      id: 2,
-      bgImage: image2,
-      header: "AMERICAN INDIAN DAY",
-      subHeader: "Itaque earum rerum hic tenetur a sapiente delectus.",
-    },
+
+      {
+        id: 2,
+        bgImage: heroImg3,
+        header: language ? 'UNWIND IN LUXURY' : 'RELÁJESE EN LUJO',
+        subHeader: language
+          ? 'Take in scenic views of the Florida Everglades with 302 elegant guest rooms and suites featuring modern amenities and outstanding service.'
+          : 'Mientras contempla las vistas panorámicas de los Everglades de Florida con 302 elegantes habitaciones y suites que ofrecen comodidades modernas y un servicio excepcional.',
+        button: {
+          text: language ? 'SEE DETAILS' : 'MÁS DETALLES',
+          link: '/mcr/accommodations',
+        },
+      },
+      /*
     {
       id: 3,
       bgImage: image3,
@@ -145,7 +156,7 @@ const Home = (props) => {
       subHeader: "",
     },
     */
-      ];
+    ];
 
   const cardContent = [
     {

@@ -47,9 +47,9 @@ const MrgFooter = () => {
           linkTo: '/',
         },
         {
-          linkText: 'Covid-19',
+          linkText: 'Info',
           //mrg to mcr change
-          linkTo: '/mcr/covid-19',
+          linkTo: '/mcr/info',
         },
         {
           externalLink: true,

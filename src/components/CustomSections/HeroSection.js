@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates classes
-import classNames from "classnames";
-import { Link, useHistory } from "react-router-dom";
+import classNames from 'classnames';
+import { Link, useHistory } from 'react-router-dom';
 // react component for creating beautiful carousel
-import Slider from "react-slick";
+import Slider from 'react-slick';
 
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import CustomButton from "@material-ui/core/Button";
-import { Hidden } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import CustomButton from '@material-ui/core/Button';
+import { Hidden } from '@material-ui/core';
 
-import styles from "assets/jss/material-kit-react/views/miccosukee/components/customHeroSectionStyle.js";
-import videoStyles from "assets/jss/material-kit-react/views/miccosukee/components/bgVideoStyle.js";
+import styles from 'assets/jss/material-kit-react/views/miccosukee/components/customHeroSectionStyle.js';
+import videoStyles from 'assets/jss/material-kit-react/views/miccosukee/components/bgVideoStyle.js';
 
 const useStyles = makeStyles(styles);
 const useVideoStyles = makeStyles(videoStyles);
@@ -26,11 +26,12 @@ export default function HeroSection(props) {
   const settings = {
     arrows: false,
     dots: true,
-    infinite: true,
-    speed: 150,
+    infinite: false,
+    autoplaySpeed: 5000,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
   };
 
   //const handleClick = (link) => {};
@@ -75,18 +76,18 @@ export default function HeroSection(props) {
   */
 
   const videoStyle = {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    minWidth: "100%",
-    minHeight: "100%",
-    width: "auto",
-    height: "auto",
-    zIndex: "-100",
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    minWidth: '100%',
+    minHeight: '100%',
+    width: 'auto',
+    height: 'auto',
+    zIndex: '-100',
     transform: `translateX(-50%) translateY(-50%)`,
     //background: `url('${props.bgImage}') no-repeat`,
-    backgroundSize: "cover",
-    transition: "1s opacity",
+    backgroundSize: 'cover',
+    transition: '1s opacity',
   };
 
   // desktop and mobile renders needed to implement bgImage dynamically for video background when transitioning to mobile view and we need to hide video and keep bg image.
@@ -99,11 +100,11 @@ export default function HeroSection(props) {
               className={props.large ? classes.large : classes.standard}
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, ${
-                  slide.gradient ? slide.gradient : "0.5"
+                  slide.gradient ? slide.gradient : '0.5'
                 }), rgba(0, 0, 0, ${
-                  slide.gradient ? slide.gradient : "0.5"
-                })), url(${slide.bgVideo ? "" : slide.bgImage})`,
-                marginBottom: "-10px",
+                  slide.gradient ? slide.gradient : '0.5'
+                })), url(${slide.bgVideo ? '' : slide.bgImage})`,
+                marginBottom: '-10px',
               }}
             >
               {slide.bgVideo ? (
@@ -119,7 +120,7 @@ export default function HeroSection(props) {
                 </video>
               ) : null}
               <div className={classes.sliderContent}>
-                {slide.header === "" ? null : (
+                {slide.header === '' ? null : (
                   <Typography
                     className={classes.header}
                     component="h1"
@@ -128,7 +129,7 @@ export default function HeroSection(props) {
                     {slide.header}
                   </Typography>
                 )}
-                {slide.subHeader === "" ? null : (
+                {slide.subHeader === '' ? null : (
                   <Typography
                     className={classes.subHeader}
                     component="h2"
@@ -176,7 +177,7 @@ export default function HeroSection(props) {
               style={getStyle()}
             >
               <div className={classes.sliderContent}>
-                {slide.header === "" ? null : (
+                {slide.header === '' ? null : (
                   <Typography
                     className={classes.header}
                     component="h1"
@@ -185,7 +186,7 @@ export default function HeroSection(props) {
                     {slide.header}
                   </Typography>
                 )}
-                {slide.subHeader === "" ? null : (
+                {slide.subHeader === '' ? null : (
                   <Typography
                     className={classes.subHeader}
                     component="h2"

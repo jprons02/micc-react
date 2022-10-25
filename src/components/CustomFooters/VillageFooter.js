@@ -47,8 +47,8 @@ const VillageFooter = () => {
           linkTo: '/',
         },
         {
-          linkText: 'Covid-19',
-          linkTo: '/village/covid-19',
+          linkText: 'Info',
+          linkTo: '/village/info',
         },
         {
           externalLink: true,

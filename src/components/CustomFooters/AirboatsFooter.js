@@ -47,8 +47,8 @@ const AirboatsFooter = () => {
           linkTo: '/',
         },
         {
-          linkText: 'Covid-19',
-          linkTo: '/airboats/covid-19',
+          linkText: 'Info',
+          linkTo: '/airboats/info',
         },
         {
           externalLink: true,

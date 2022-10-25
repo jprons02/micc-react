@@ -1,47 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Typography from "@material-ui/core/Typography";
-import Button from "components/CustomButtons/Button.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Typography from '@material-ui/core/Typography';
+import Button from 'components/CustomButtons/Button.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/media/img/mrg/dining/international-buffet/HotDish_1024x642.jpeg";
-import image2 from "assets/media/img/mrg/dining/international-buffet/Paella_1024x642.jpeg";
+import bgImage from 'assets/media/img/mrg/MRG_Header1.jpg';
+import image1 from 'assets/media/img/mrg/dining/international-buffet/HotDish_1024x642.jpeg';
+import image2 from 'assets/media/img/mrg/dining/international-buffet/Paella_1024x642.jpeg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // BusinessInfo
-import { mrgHours } from "business_info/hours.js";
+import { mrgHours } from 'business_info/hours.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
+import { isRunning } from 'services/functions/scheduleThis';
 
 // Context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2];
 const imageObj = [
-  { src: image1, alt: "Test" },
-  { src: image2, alt: "Test2" },
+  { src: image1, alt: 'Test' },
+  { src: image2, alt: 'Test2' },
 ];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -58,10 +59,17 @@ const Bravo = () => {
             <div className={classes.leftTextArea}>
               <h2>Bravo Bravissimo!</h2>
               {renderPoiHours(mrgHours.poi.bravo, language)}
+              {isRunning([2022, 11, 4]) ? null : (
+                <p style={{ fontWeight: '500', fontSize: '15px' }}>
+                  {language
+                    ? 'Bravo Bravissimo is BACK on Friday, November 4, 2022!'
+                    : 'Bravo Bravissimo REGRESA el viernes, 4 de noviembre de 2022!'}
+                </p>
+              )}
               <p>
                 {language
-                  ? "Enjoy traditional Italian dishes and an extensive wine selection in a casual, cozy setting perfect for couples and families alike."
-                  : "Disfrute platos tradicionales de la cocina Italiana y una extensa selección de vinos en un ambiente casual y acogedor perfecto para parejas y familias."}
+                  ? 'Enjoy traditional Italian dishes and an extensive wine selection in a casual, cozy setting perfect for couples and families alike.'
+                  : 'Disfrute platos tradicionales de la cocina Italiana y una extensa selección de vinos en un ambiente casual y acogedor perfecto para parejas y familias.'}
               </p>
               {/*
               <Button

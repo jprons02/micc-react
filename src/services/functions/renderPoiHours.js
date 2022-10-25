@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const renderPoiHours = (hours, language) => {
+export const renderPoiHours = (hours, language, noH6) => {
   // If the function exists then continue, else, map through array
   if (hours.days) {
     if (hours.days() === '') {
@@ -15,13 +15,20 @@ export const renderPoiHours = (hours, language) => {
           </h6>
         </React.Fragment>
       );
-    } else {
+    } else if (!noH6) {
+      // noH6 means I do not want it in an h6 tag, <h6>.
       // Used in village hours case since village hours is not an array
       return (
         <React.Fragment>
           <h6 key={hours.days(language)}>
             {hours.days(language)}, {hours.open} – {hours.close} <br />
           </h6>
+        </React.Fragment>
+      );
+    } else {
+      return (
+        <React.Fragment>
+          {hours.days(language)}, {hours.open} – {hours.close} <br />
         </React.Fragment>
       );
     }
@@ -33,10 +40,16 @@ export const renderPoiHours = (hours, language) => {
             //return null;
             return (
               <h6 style={{ color: 'red' }} key={item.daysClosed(language)}>
-                {language ? 'Closed: ' : 'Cerrado: '}
+                {language
+                  ? `Closed${item.daysClosed(language) === '' ? '' : ': '}`
+                  : `Cerrado${item.daysClosed(language) === '' ? '' : ': '}`}
                 {item.daysClosed(language)}
               </h6>
             );
+          }
+          //null was needed to use the isRunning schedule function.
+          else if (item.days(language) === null) {
+            return null;
           } else if (item.days(language) === '') {
             return (
               <h6 style={{ color: 'red' }} key={item.days(language)}>

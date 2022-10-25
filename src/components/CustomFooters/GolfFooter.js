@@ -47,8 +47,8 @@ const GolfFooter = () => {
           linkTo: '/',
         },
         {
-          linkText: 'Covid-19',
-          linkTo: '/golf/covid-19',
+          linkText: 'Info',
+          linkTo: '/golf/info',
         },
         {
           externalLink: true,

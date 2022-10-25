@@ -129,7 +129,7 @@ export default function Miccosukee(props) {
             />
             <Route
               exact
-              path={`${match.path}/covid-19`}
+              path={`${match.path}/info`}
               component={GolfCovidPage}
             />
             <Route exact path={`${match.path}/*`} component={GolfErrorPage} />

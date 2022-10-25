@@ -20,7 +20,7 @@ const VillageCovidInfo = (props) => {
           </h4>
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {renderPoiHours(villageHours, props.language)}
+              {renderPoiHours(villageHours, props.language, true)}
             </li>
           </ul>
         </div>

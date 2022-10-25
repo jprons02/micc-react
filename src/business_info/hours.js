@@ -7,6 +7,8 @@
 import React from 'react';
 import { isRunning } from 'services/functions/scheduleThis';
 
+const bravoOpeningDay = [2022, 11, 4];
+
 const getMinutes = (hours, minutes) => {
   const h = hours * 60;
   const m = minutes ? minutes : 0;
@@ -178,20 +180,64 @@ export const mrgHours = {
         details: (language) => (language ? '' : ''),
       },
     ],
+    /*  
+      Bravo Bravissimo is BACK on Friday, November 4, 2022!
+      Hours: Monday - Thursday (Closed)
+      Friday & Saturday: 5 PM - 12 AM
+      Sunday: 12 PM - 8 PM
+
+      Bravo Bravissimo REGRESA el viernes, 4 de noviembre de 2022!
+      Horario: lunes - jueves (Cerrado)
+      viernes y sábado: 5 PM a 12 AM
+      domingo: 12 PM a 8 PM
+    */
+
     bravo: [
       {
-        days: (language) => (language ? '' : ''),
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
-        details: (language) => (language ? '' : ''),
+        daysClosed: (language) => {
+          return isRunning(bravoOpeningDay)
+            ? language
+              ? 'Monday - Thursday'
+              : 'lunes - jueves'
+            : language
+            ? ''
+            : '';
+        },
       },
-      /*
       {
-        days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
+        days: (language) => {
+          return isRunning(bravoOpeningDay)
+            ? language
+              ? 'Friday & Saturday'
+              : 'viernes y sábado'
+            : language
+            ? null
+            : null;
+        },
+        open: isRunning(bravoOpeningDay)
+          ? `${getMinutes(17).combinedString}`
+          : null,
+        close: isRunning(bravoOpeningDay)
+          ? `${getMinutes(0).combinedString}`
+          : null,
       },
-      */
+      {
+        days: (language) => {
+          return isRunning(bravoOpeningDay)
+            ? language
+              ? 'Sunday'
+              : 'domingo'
+            : language
+            ? null
+            : null;
+        },
+        open: isRunning(bravoOpeningDay)
+          ? `${getMinutes(12).combinedString}`
+          : null,
+        close: isRunning(bravoOpeningDay)
+          ? `${getMinutes(20).combinedString}`
+          : null,
+      },
     ],
     internationalBuffet: [
       {
@@ -275,7 +321,7 @@ export const mrgHours = {
     hammock: [
       {
         daysClosed: (language) =>
-          language ? 'Monday - Thursday' : 'Cerrado lunes a jueves',
+          language ? 'Monday - Thursday' : 'lunes a jueves',
       },
       {
         days: (language) =>

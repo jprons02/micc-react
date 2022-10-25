@@ -59,19 +59,19 @@ const InfoPage = ({ history, badgeColor, entityMargin }) => {
     // ex) if url === mrg/events, category default is "Casino & Resort"
     switch (history.location.pathname) {
       //mrg to mcr change
-      case '/mcr/covid-19':
+      case '/mcr/info':
         setCategory('Casino & Resort');
         break;
-      case '/mrg/covid-19':
+      case '/mrg/info':
         setCategory('Casino & Resort');
         break;
-      case '/golf/covid-19':
+      case '/golf/info':
         setCategory('Golf');
         break;
-      case '/village/covid-19':
+      case '/village/info':
         setCategory('Village');
         break;
-      case '/airboats/covid-19':
+      case '/airboats/info':
         setCategory('Airboats');
         break;
     }
