@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
 // My custom component
-import HeroSection from "components/CustomSections/HeroSection";
-import Events from "views/Miccosukee/Pages/events.js";
-import { mrgColor } from "themes/colors.js";
+import HeroSection from 'components/CustomSections/HeroSection';
+import Events from 'views/Miccosukee/Pages/events.js';
+import { mrgColor } from 'themes/colors.js';
 
 // Images
-import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import bgImage from 'assets/media/img/mrg/events_header.jpg';
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 

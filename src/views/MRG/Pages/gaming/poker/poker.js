@@ -1,47 +1,47 @@
-import React from "react";
+import React from 'react';
 
 // material-ui core components
-import { Hidden } from "@material-ui/core";
+import { Hidden } from '@material-ui/core';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
-import CustomHorizontalTabs from "components/CustomTabs/CustomHorizontalTabs.js";
-import CustomVerticalTabs from "components/CustomTabs/CustomVerticalTabs.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import CustomHorizontalTabs from 'components/CustomTabs/CustomHorizontalTabs.js';
+import CustomVerticalTabs from 'components/CustomTabs/CustomVerticalTabs.js';
 
 // Images
-import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/media/img/mrg/poker/poker1.jpg";
+import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
+import image1 from 'assets/media/img/mrg/poker/poker1.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // BusinessInfo
-import { mrgHours } from "business_info/hours.js";
+import { mrgHours } from 'business_info/hours.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1];
-const imageObj = [{ src: image1, alt: "Poker cards" }];
+const imageObj = [{ src: image1, alt: 'Poker cards' }];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -51,11 +51,11 @@ const Poker = () => {
 
   const tabContent = [
     {
-      title: language ? "Monday" : "lunes",
+      title: language ? 'Monday' : 'lunes',
       text: () => {
         return (
           <div>
-            <ul style={{ marginTop: "0", fontSize: "14px" }}>
+            <ul style={{ marginTop: '0', fontSize: '14px' }}>
               <li>High Hands every 45 minutes from 10 A.M. – 1 A.M.</li>
             </ul>
           </div>
@@ -63,11 +63,11 @@ const Poker = () => {
       },
     },
     {
-      title: language ? "Tuesday" : "martes",
+      title: language ? 'Tuesday' : 'martes',
       text: () => {
         return (
           <div>
-            <ul style={{ marginTop: "0", fontSize: "14px" }}>
+            <ul style={{ marginTop: '0', fontSize: '14px' }}>
               <li>$2,000 Guaranteed Texas Hold’em Tournament at 7 P.M.</li>
               <li>“Choose Your Stack” $20 or $40 buy-in</li>
               <li>
@@ -83,11 +83,11 @@ const Poker = () => {
       },
     },
     {
-      title: language ? "Wednesday" : "miércoloes",
+      title: language ? 'Wednesday' : 'miércoloes',
       text: () => {
         return (
           <div>
-            <ul style={{ marginTop: "0", fontSize: "14px" }}>
+            <ul style={{ marginTop: '0', fontSize: '14px' }}>
               <li>
                 High Hands every 30 minutes (up to $100) from 8 A.M. – 1 A.M.
               </li>
@@ -97,11 +97,11 @@ const Poker = () => {
       },
     },
     {
-      title: language ? "Thursday" : "jueves",
+      title: language ? 'Thursday' : 'jueves',
       text: () => {
         return (
           <div>
-            <ul style={{ marginTop: "0", fontSize: "14px" }}>
+            <ul style={{ marginTop: '0', fontSize: '14px' }}>
               <li>$2,000 Guaranteed Texas Hold’em Tournament at 7 P.M.</li>
               <li>“Choose Your Stack” $20 or $40 buy-in</li>
               <li>
@@ -118,11 +118,11 @@ const Poker = () => {
       },
     },
     {
-      title: language ? "Friday" : "viernes",
+      title: language ? 'Friday' : 'viernes',
       text: () => {
         return (
           <div>
-            <ul style={{ marginTop: "0", fontSize: "14px" }}>
+            <ul style={{ marginTop: '0', fontSize: '14px' }}>
               <li>
                 $3,000 Guaranteed Texas Hold’em Tournament at 7 P.M. (Except
                 July 6)
@@ -141,11 +141,11 @@ const Poker = () => {
       },
     },
     {
-      title: language ? "Saturday" : "sábado",
+      title: language ? 'Saturday' : 'sábado',
       text: () => {
         return (
           <div>
-            <ul style={{ marginTop: "0", fontSize: "14px" }}>
+            <ul style={{ marginTop: '0', fontSize: '14px' }}>
               <li>
                 Spin for Cash High Hand 10 A.M. – 6 P.M. (every 60 minutes), 7
                 P.M. – 1 A.M. (every 30 minutes)
@@ -156,11 +156,11 @@ const Poker = () => {
       },
     },
     {
-      title: language ? "Sunday" : "domingo",
+      title: language ? 'Sunday' : 'domingo',
       text: () => {
         return (
           <div>
-            <ul style={{ marginTop: "0", fontSize: "14px" }}>
+            <ul style={{ marginTop: '0', fontSize: '14px' }}>
               <li>$2,000 Guaranteed Texas Hold’em Tournament at 2 P.M.</li>
               <li>“Choose Your Stack” $20 or $40 buy-in</li>
               <li>
@@ -185,17 +185,17 @@ const Poker = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? "Poker" : "Póker"}</h2>
+              <h2>{language ? 'Poker' : 'Póker'}</h2>
               {renderPoiHours(mrgHours.poi.poker, language)}
               <p>
                 {language
-                  ? "With a whole new look and it being a non-smoking room, it’s the perfect place to come and play."
-                  : "Con un nuevo look y libre de humo, es el lugar perfecto para venir a jugar."}
+                  ? 'With a whole new look and it being a non-smoking room, it’s the perfect place to come and play.'
+                  : 'Con un nuevo look y libre de humo, es el lugar perfecto para venir a jugar.'}
               </p>
               <p>
                 {language
-                  ? "All we’re missing is you, we can’t wait to see you there!"
-                  : "Lo único que nos falta es usted, ¡y estamos ansiosos de que nos visite!"}
+                  ? 'All we’re missing is you, we can’t wait to see you there!'
+                  : 'Lo único que nos falta es usted, ¡y estamos ansiosos de que nos visite!'}
               </p>
               {/*
               <div style={{ marginTop: "30px", marginBottom: "20px" }}>

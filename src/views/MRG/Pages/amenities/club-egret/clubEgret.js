@@ -1,49 +1,49 @@
-import React from "react";
+import React from 'react';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Typography from "@material-ui/core/Typography";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Typography from '@material-ui/core/Typography';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/media/img/mrg/amenities/club-egret/club_egret_01.jpg";
-import image2 from "assets/media/img/mrg/amenities/club-egret/club_egret_02.jpg";
-import image3 from "assets/media/img/mrg/amenities/club-egret/club_egret_03.jpg";
+import bgImage from 'assets/media/img/mrg/amenities/amenities_header.jpg';
+import image1 from 'assets/media/img/mrg/amenities/club-egret/club_egret_01.jpg';
+import image2 from 'assets/media/img/mrg/amenities/club-egret/club_egret_02.jpg';
+import image3 from 'assets/media/img/mrg/amenities/club-egret/club_egret_03.jpg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // BusinessInfo
-import { mrgHours } from "business_info/hours.js";
+import { mrgHours } from 'business_info/hours.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2, image3];
 const imageObj = [
-  { src: image1, alt: "playground" },
-  { src: image2, alt: "playground climbing" },
-  { src: image3, alt: "child car toys" },
+  { src: image1, alt: 'playground' },
+  { src: image2, alt: 'playground climbing' },
+  { src: image3, alt: 'child car toys' },
 ];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -62,12 +62,12 @@ const ClubEgret = () => {
               {renderPoiHours(mrgHours.poi.clubEgret, language)}
               <p>
                 {language
-                  ? "Club Egret is reserved for children ages 12 and under."
-                  : "Club Egret está reservado para niños de 12 años o menos."}
+                  ? 'Club Egret is reserved for children ages 12 and under.'
+                  : 'Club Egret está reservado para niños de 12 años o menos.'}
                 <br />
                 {language
-                  ? "For more information, please call "
-                  : "Para más información, por favor llame al "}
+                  ? 'For more information, please call '
+                  : 'Para más información, por favor llame al '}
                 <a href="tel:+13059252555">
                   <Typography variant="inherit" color="primary">
                     305-925-2555
@@ -76,10 +76,10 @@ const ClubEgret = () => {
                 .
               </p>
               <p>
-                <span style={{ fontSize: "80%", fontStyle: "italic" }}>
+                <span style={{ fontSize: '80%', fontStyle: 'italic' }}>
                   {language
-                    ? "*Hourly rates apply. Minimum one hour."
-                    : "*Se aplican tarifas por hora. Mínimo una hora."}
+                    ? '*Hourly rates apply. Minimum one hour.'
+                    : '*Se aplican tarifas por hora. Mínimo una hora.'}
                 </span>
               </p>
             </div>

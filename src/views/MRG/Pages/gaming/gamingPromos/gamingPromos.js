@@ -234,42 +234,42 @@ const GamingPromos = (props) => {
 export default GamingPromos;
 */
 
-import React, { useState, useEffect, useContext } from "react";
-import { useRouteMatch, useLocation } from "react-router-dom";
+import React, { useState, useEffect, useContext } from 'react';
+import { useRouteMatch, useLocation } from 'react-router-dom';
 
 //My Custom Component
-import HeroSection from "components/CustomSections/HeroSection.js";
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import StandardCard from "components/CustomCards/StandardCard.js";
-import CustomGamingPromoModal from "components/CustomModal/CustomPromosModal/CustomGamingPromoModal.js";
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import StandardCard from 'components/CustomCards/StandardCard.js';
+import CustomGamingPromoModal from 'components/CustomModal/CustomPromosModal/CustomGamingPromoModal.js';
 
 //import englishCalendar from "https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/july_en.pdf";
 
 // @material-ui/core components
-import { Hidden } from "@material-ui/core";
+import { Hidden } from '@material-ui/core';
 
 // React component for creating beautiful carousel
-import Slider from "react-slick";
+import Slider from 'react-slick';
 
 // Context
-import { useLanguage, useLanguageUpdate } from "contexts/languageContext.js";
+import { useLanguage, useLanguageUpdate } from 'contexts/languageContext.js';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/promotionCardStyles.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/promotionCardStyles.js';
 
 // Images
-import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
+import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
 
 // Card Content
-import { content } from "views/MRG/Pages/gaming/gamingPromos/cardContent/cardContent.js";
-import { standardLinkColor } from "themes/colors.js";
+import { content } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/cardContent.js';
+import { standardLinkColor } from 'themes/colors.js';
 
-import PopupModal from "components/CustomModal/CustomPopup/CustomPopupModal.js";
-import { PopupContext } from "contexts/PopupContext.js";
+import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
+import { PopupContext } from 'contexts/PopupContext.js';
 
 // services
-import { popupManager } from "services/functions/popups/popupManager";
+import { popupManager } from 'services/functions/popups/popupManager';
 
 const useStyles = makeStyles(styles);
 
@@ -277,25 +277,25 @@ const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
 const GamingPromos = (props) => {
   const monthNames = [
-    "january",
-    "february",
-    "march",
-    "april",
-    "may",
-    "june",
-    "july",
-    "august",
-    "september",
-    "october",
-    "november",
-    "december",
+    'january',
+    'february',
+    'march',
+    'april',
+    'may',
+    'june',
+    'july',
+    'august',
+    'september',
+    'october',
+    'november',
+    'december',
   ];
   const d = new Date();
   const currentMonth = monthNames[d.getMonth()];
@@ -364,8 +364,8 @@ const GamingPromos = (props) => {
           key={card.id}
           img={card.img}
           title={card.oneLiner}
-          body={""}
-          buttonText={language ? "SEE DETAILS" : "VER DETALLES"}
+          body={''}
+          buttonText={language ? 'SEE DETAILS' : 'VER DETALLES'}
           buttonVariant="outlined"
           buttonFunction={() => promoClick(card)}
         />
@@ -395,19 +395,19 @@ const GamingPromos = (props) => {
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
-        <div style={{ textAlign: "center" }}>
-          <h2 style={{ fontSize: "30px" }}>{getMonth()}</h2>
+        <div style={{ textAlign: 'center' }}>
+          <h2 style={{ fontSize: '30px' }}>{getMonth()}</h2>
           <a target="_blank" href={getCalendarPdf()}>
             <span
               style={{
                 color: standardLinkColor.color,
-                textAlign: "center",
-                fontSize: "16px",
-                fontWeight: "400",
-                marginTop: "-5px",
+                textAlign: 'center',
+                fontSize: '16px',
+                fontWeight: '400',
+                marginTop: '-5px',
               }}
             >
-              {language ? "CALENDAR VIEW" : "VER CALENDARIO"}
+              {language ? 'CALENDAR VIEW' : 'VER CALENDARIO'}
             </span>
           </a>
         </div>

@@ -1,53 +1,53 @@
-import React from "react";
+import React from 'react';
 
 // material-ui core components
-import { Hidden } from "@material-ui/core";
+import { Hidden } from '@material-ui/core';
 
 // Core Components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Typography from "@material-ui/core/Typography";
-import CustomTabs from "components/CustomTabs/CustomTabs.js";
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
+import Typography from '@material-ui/core/Typography';
+import CustomTabs from 'components/CustomTabs/CustomTabs.js';
 
 // My Custom Components
-import RaisedContainer from "components/CustomSections/RaisedContainer.js";
-import HeroSection from "components/CustomSections/HeroSection.js";
-import CustomImageSlider from "components/CustomImageSlider/CustomImageSlider.js";
-import CustomHorizontalTabs from "components/CustomTabs/CustomHorizontalTabs.js";
-import CustomVerticalTabs from "components/CustomTabs/CustomVerticalTabs.js";
+import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
+import HeroSection from 'components/CustomSections/HeroSection.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import CustomHorizontalTabs from 'components/CustomTabs/CustomHorizontalTabs.js';
+import CustomVerticalTabs from 'components/CustomTabs/CustomVerticalTabs.js';
 
 // Images
-import bgImage from "assets/media/img/mrg/MRG_Header1.jpg";
-import image1 from "assets/media/img/mrg/dining/international-buffet/HotDish_1024x642.jpeg";
-import image2 from "assets/media/img/mrg/dining/international-buffet/Paella_1024x642.jpeg";
+import bgImage from 'assets/media/img/mrg/dining/dining_header.jpg';
+import image1 from 'assets/media/img/mrg/dining/international-buffet/HotDish_1024x642.jpeg';
+import image2 from 'assets/media/img/mrg/dining/international-buffet/Paella_1024x642.jpeg';
 
 // Styling
-import { makeStyles } from "@material-ui/core/styles";
-import styles from "assets/jss/material-kit-react/views/mrg/basicPage.js";
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // Context
-import { useLanguage } from "contexts/languageContext.js";
+import { useLanguage } from 'contexts/languageContext.js';
 
 // BusinessInfo
-import { mrgHours } from "business_info/hours.js";
+import { mrgHours } from 'business_info/hours.js';
 
 // Services
-import { renderPoiHours } from "services/functions/renderPoiHours.js";
+import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2];
 const imageObj = [
-  { src: image1, alt: "Hot dish" },
-  { src: image2, alt: "Paella" },
+  { src: image1, alt: 'Hot dish' },
+  { src: image2, alt: 'Paella' },
 ];
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -60,35 +60,35 @@ const InternationalBuffet = () => {
       <React.Fragment>
         <div>
           <h6>
-            {language ? "À la carte Breakfast: " : "Desayuna a la carta: "}6:00
+            {language ? 'À la carte Breakfast: ' : 'Desayuna a la carta: '}6:00
             A.M. – 11:00 A.M.
           </h6>
         </div>
         <div>
-          <h6>{language ? "Lunch: " : "Almuerzo: "}12:00 P.M. – 4:00 P.M.</h6>
-          <ul style={{ fontSize: "12px" }}>
-            <li>{language ? "Adults " : "Adultos "}$16.16</li>
+          <h6>{language ? 'Lunch: ' : 'Almuerzo: '}12:00 P.M. – 4:00 P.M.</h6>
+          <ul style={{ fontSize: '12px' }}>
+            <li>{language ? 'Adults ' : 'Adultos '}$16.16</li>
             <li>
-              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.08
+              {language ? 'Kids (ages 6 – 12) ' : 'Niños (6 – 12 años) '}$8.08
             </li>
             <li>
               {language
-                ? "Kids 5 and under FREE"
-                : "Niños menores de 5 años o menos comen GRATIS"}
+                ? 'Kids 5 and under FREE'
+                : 'Niños menores de 5 años o menos comen GRATIS'}
             </li>
           </ul>
         </div>
         <div>
-          <h6>{language ? "Dinner: " : "Cena: "}6:00 P.M. – 10:00 P.M.</h6>
-          <ul style={{ fontSize: "12px" }}>
-            <li>{language ? "Adults " : "Adultos "}$17.78</li>
+          <h6>{language ? 'Dinner: ' : 'Cena: '}6:00 P.M. – 10:00 P.M.</h6>
+          <ul style={{ fontSize: '12px' }}>
+            <li>{language ? 'Adults ' : 'Adultos '}$17.78</li>
             <li>
-              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.89
+              {language ? 'Kids (ages 6 – 12) ' : 'Niños (6 – 12 años) '}$8.89
             </li>
             <li>
               {language
-                ? "Kids 5 and under FREE"
-                : "Niños menores de 5 años o menos comen GRATIS"}
+                ? 'Kids 5 and under FREE'
+                : 'Niños menores de 5 años o menos comen GRATIS'}
             </li>
           </ul>
         </div>
@@ -101,45 +101,45 @@ const InternationalBuffet = () => {
       <React.Fragment>
         <div>
           <h6>
-            {language ? "Breakfast: " : "Desayuna: "}6:00 A.M. – 10:00 A.M
+            {language ? 'Breakfast: ' : 'Desayuna: '}6:00 A.M. – 10:00 A.M
           </h6>
-          <ul style={{ fontSize: "12px" }}>
-            <li>{language ? "Adults " : "Adultos "}$14.55</li>
+          <ul style={{ fontSize: '12px' }}>
+            <li>{language ? 'Adults ' : 'Adultos '}$14.55</li>
             <li>
-              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$7.28
+              {language ? 'Kids (ages 6 – 12) ' : 'Niños (6 – 12 años) '}$7.28
             </li>
             <li>
               {language
-                ? "Kids 5 and under FREE"
-                : "Niños menores de 5 años o menos comen GRATIS"}
+                ? 'Kids 5 and under FREE'
+                : 'Niños menores de 5 años o menos comen GRATIS'}
             </li>
           </ul>
         </div>
         <div>
-          <h6>{language ? "Lunch: " : "Almuerzo: "}12:00 P.M. – 4:00 P.M</h6>
-          <ul style={{ fontSize: "12px" }}>
-            <li>{language ? "Adults " : "Adultos "}$16.16</li>
+          <h6>{language ? 'Lunch: ' : 'Almuerzo: '}12:00 P.M. – 4:00 P.M</h6>
+          <ul style={{ fontSize: '12px' }}>
+            <li>{language ? 'Adults ' : 'Adultos '}$16.16</li>
             <li>
-              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.08
+              {language ? 'Kids (ages 6 – 12) ' : 'Niños (6 – 12 años) '}$8.08
             </li>
             <li>
               {language
-                ? "Kids 5 and under FREE"
-                : "Niños menores de 5 años o menos comen GRATIS"}
+                ? 'Kids 5 and under FREE'
+                : 'Niños menores de 5 años o menos comen GRATIS'}
             </li>
           </ul>
         </div>
         <div>
-          <h6>{language ? "Dinner: " : "Cena: "}6:00 P.M. – 10:00 P.M.</h6>
-          <ul style={{ fontSize: "12px" }}>
-            <li>{language ? "Adults " : "Adultos "}$17.78</li>
+          <h6>{language ? 'Dinner: ' : 'Cena: '}6:00 P.M. – 10:00 P.M.</h6>
+          <ul style={{ fontSize: '12px' }}>
+            <li>{language ? 'Adults ' : 'Adultos '}$17.78</li>
             <li>
-              {language ? "Kids (ages 6 – 12) " : "Niños (6 – 12 años) "}$8.89
+              {language ? 'Kids (ages 6 – 12) ' : 'Niños (6 – 12 años) '}$8.89
             </li>
             <li>
               {language
-                ? "Kids 5 and under FREE"
-                : "Niños menores de 5 años o menos comen GRATIS"}
+                ? 'Kids 5 and under FREE'
+                : 'Niños menores de 5 años o menos comen GRATIS'}
             </li>
           </ul>
         </div>
@@ -149,7 +149,7 @@ const InternationalBuffet = () => {
 
   const tabContent = [
     {
-      title: "Monday",
+      title: 'Monday',
       text: () => {
         return (
           <div>
@@ -161,7 +161,7 @@ const InternationalBuffet = () => {
       },
     },
     {
-      title: "Tuesday",
+      title: 'Tuesday',
       text: () => {
         return (
           <div>
@@ -173,7 +173,7 @@ const InternationalBuffet = () => {
       },
     },
     {
-      title: "Wednesday",
+      title: 'Wednesday',
       text: () => {
         return (
           <div>
@@ -185,7 +185,7 @@ const InternationalBuffet = () => {
       },
     },
     {
-      title: "Thursday",
+      title: 'Thursday',
       text: () => {
         return (
           <div>
@@ -197,7 +197,7 @@ const InternationalBuffet = () => {
       },
     },
     {
-      title: "Friday",
+      title: 'Friday',
       text: () => {
         return (
           <div>
@@ -209,7 +209,7 @@ const InternationalBuffet = () => {
       },
     },
     {
-      title: "Saturday",
+      title: 'Saturday',
       text: () => {
         return (
           <div>
@@ -221,7 +221,7 @@ const InternationalBuffet = () => {
       },
     },
     {
-      title: "Sunday",
+      title: 'Sunday',
       text: () => {
         return (
           <div>
@@ -245,14 +245,14 @@ const InternationalBuffet = () => {
               {renderPoiHours(mrgHours.poi.internationalBuffet, language)}
               <p>
                 {language
-                  ? "With a killer à la carte breakfast menu and an international buffet, you are sure to enjoy different cuisines everyday! Let your taste buds travel the world from the comfort of our home. Empeeke Aaweeke is South Florida’s most compelling buffet destination."
-                  : "Con un excelente menú de desayuno a la carta y un bufé internacional, disfrutará la cocina de distintas culturas, ¡ya que todos los días tenemos algo nuevo! Deleite su paladar con sabores internacionales. Empeeke Aaweeke es el bufé más impresionante del Sur de la Florida."}
+                  ? 'With a killer à la carte breakfast menu and an international buffet, you are sure to enjoy different cuisines everyday! Let your taste buds travel the world from the comfort of our home. Empeeke Aaweeke is South Florida’s most compelling buffet destination.'
+                  : 'Con un excelente menú de desayuno a la carta y un bufé internacional, disfrutará la cocina de distintas culturas, ¡ya que todos los días tenemos algo nuevo! Deleite su paladar con sabores internacionales. Empeeke Aaweeke es el bufé más impresionante del Sur de la Florida.'}
               </p>
               <p>
-                <span style={{ fontSize: "80%", fontStyle: "italic" }}>
+                <span style={{ fontSize: '80%', fontStyle: 'italic' }}>
                   {language
-                    ? "*Prices do not include gratuity and taxes."
-                    : "*Precios no incluyen propinas e impuestos."}
+                    ? '*Prices do not include gratuity and taxes.'
+                    : '*Precios no incluyen propinas e impuestos.'}
                 </span>
               </p>
               {/*
