@@ -34,20 +34,8 @@ import { Icon } from '@material-ui/core';
 
 // Images
 import emblem from 'assets/media/img/miccosukee/MiccosukeeEmblem_Color.svg';
-
-import image1 from 'assets/media/img/landingPages/amenities/Resort_Mobile.jpg';
-import image2 from 'assets/media/img/landingPages/amenities/Slots_Mobile.jpg';
-import image3 from 'assets/media/img/landingPages/amenities/Bingo_Mobile.jpg';
-import image4 from 'assets/media/img/landingPages/amenities/Dining_Mobile.jpg';
-import image5 from 'assets/media/img/landingPages/amenities/Pool_Mobile.jpg';
-import image6 from 'assets/media/img/landingPages/amenities/Banquets_Mobile.jpeg';
-
-import image1desktop from 'assets/media/img/landingPages/amenities/Resort_Desktop.jpg';
-import image2desktop from 'assets/media/img/landingPages/amenities/Slots_Desktop.jpg';
-import image3desktop from 'assets/media/img/landingPages/amenities/Bingo_Desktop.jpg';
-import image4desktop from 'assets/media/img/landingPages/amenities/Dining_Desktop.jpg';
-import image5desktop from 'assets/media/img/landingPages/amenities/Pool_Desktop.jpg';
-import image6desktop from 'assets/media/img/landingPages/amenities/Banquets_Desktop.jpeg';
+import image6 from 'assets/media/img/landingPages/banquets/banquets1_mobile.jpg';
+import image6desktop from 'assets/media/img/landingPages/banquets/banquets1_desktop.jpg';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
