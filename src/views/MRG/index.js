@@ -122,6 +122,14 @@ export default function Miccosukee(props) {
       props.history.push('/mcr/events');
     }
     if (
+      window.location.pathname === '/mrg/covid-19' ||
+      window.location.pathname === '/mrg/covid-19/' ||
+      window.location.pathname === '/mcr/covid-19' ||
+      window.location.pathname === '/mcr/covid-19/'
+    ) {
+      props.history.push('/mcr/info');
+    }
+    if (
       window.location.pathname ===
         '/mrg/event/american-indian-day-2020-09-28' ||
       window.location.pathname === '/mrg/event/american-indian-day-2020-09-28/'

@@ -70,6 +70,15 @@ export default function Miccosukee(props) {
     closeModal(setShowContactModal);
   }, []);
 
+  useEffect(() => {
+    if (
+      window.location.pathname === '/village/covid-19' ||
+      window.location.pathname === '/village/covid-19/'
+    ) {
+      props.history.push('/village/info');
+    }
+  }, []);
+
   const openModal = (setState) => {
     setState(true);
   };

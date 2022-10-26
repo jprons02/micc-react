@@ -66,6 +66,15 @@ export default function Miccosukee(props) {
     closeModal(setShowContactModal);
   }, []);
 
+  useEffect(() => {
+    if (
+      window.location.pathname === '/golf/covid-19' ||
+      window.location.pathname === '/golf/covid-19/'
+    ) {
+      props.history.push('/golf/info');
+    }
+  }, []);
+
   const openModal = (setState) => {
     setState(true);
   };
