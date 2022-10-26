@@ -165,7 +165,7 @@ const ResortPackages = () => {
         <h2 className={classes.contentSectionHeader}>
           {language
             ? 'Miccosukee Resort & Convention Center'
-            : 'Miccosukee Resort & Convention Center'}
+            : 'Miccosukee: Hotel y Centro de Convenciones'}
         </h2>
       );
     };
@@ -175,10 +175,15 @@ const ResortPackages = () => {
         <React.Fragment>
           <ul>
             <li>
-              Located 17 miles west of Miami International Airport, on the edge
-              of the scenic Everglades.
+              {language
+                ? 'Located 17 miles west of Miami International Airport, on the edge of the scenic Everglades'
+                : 'Ubicado a 17 millas al oeste del Aeropuerto Internacional de Miami, en el borde de los pintorescos Everglades'}
             </li>
-            <li>The resort offers 302 elegant guest rooms &amp; suites</li>
+            <li>
+              {language
+                ? 'The resort offers 302 elegant guest rooms & suites.'
+                : 'El complejo ofrece 302 elegantes habitaciones y suites.'}
+            </li>
           </ul>
         </React.Fragment>
       );
@@ -226,7 +231,7 @@ const ResortPackages = () => {
     const renderTitle = () => {
       return (
         <h3 className={classes.contentSectionSubHeader}>
-          {language ? 'Meetings & Ballrooms' : 'Meetings & Ballrooms'}
+          {language ? 'Meetings & Ballrooms' : 'Salones de Reuniones y Fiestas'}
         </h3>
       );
     };
@@ -236,29 +241,35 @@ const ResortPackages = () => {
         <React.Fragment>
           <ul>
             <li>
-              Located on the resort's spacious 2nd floor, offering over 20,000
-              sq. ft. featuring 8 breakout areas.
+              {language
+                ? "Located on the resort's spacious 2nd floor, offering over 20,000 sq. ft. featuring 8 breakout areas"
+                : 'Ubicado en el espacioso segundo piso del hotel, ofrece más de 20,000 pies cuadrados con 8 áreas de descanso.'}
             </li>
             <li>
-              Our flexible meeting space provides ample room for all of your
-              needs. Full open ballrooms can accommodate extensive general
-              sessions, including banquet and catering services for up to 1,200
-              guests.
+              {language
+                ? 'Our flexible meeting space provides ample room for all of your needs. Full open ballrooms can accommodate extensive general sessions, including banquet and catering services for up to 1,200 guests.'
+                : 'Nuestra área para reuniones ofrece un amplio espacio para todas sus necesidades. Los salones completamente abiertos pueden acomodar sesiones generales extensas, incluidos servicios de banquetes y catering para hasta 1,200 invitados.'}
             </li>
             <li>
-              The 2nd floor features a reception lobby and lounge, adjacent to
-              the ballrooms and the foyer. Dimensions are available for each
-              area.
+              {language
+                ? 'The 2nd floor features a reception lobby and lounge, adjacent to the ballrooms and the foyer. Dimensions are available for each area.'
+                : 'El segundo piso cuenta con un vestíbulo de recepción y sala de estancia junto a los salones. Las dimensiones están disponibles para cada área.'}
             </li>
             <li>
-              High-capacity internet connectivity and hard-wired services are
-              available in the meeting rooms, ballrooms, and foyer.
+              {language
+                ? 'High-capacity internet connectivity and hard-wired services are available in the meeting rooms, ballrooms, and foyer.'
+                : 'La conectividad a Internet de alta capacidad y los servicios por cable están disponibles en las salas de reuniones y el vestíbulo.'}
             </li>
             <li>
-              Segmented Wi-Fi network is available in all conference spaces
-              specific to your event.
+              {language
+                ? 'Segmented Wi-Fi network is available in all conference spaces specific to your event.'
+                : 'La red Wi-Fi segmentada está disponible en todos los espacios de conferencias específicos para su evento.'}
             </li>
-            <li>Outdoor space is also available.</li>
+            <li>
+              {language
+                ? 'Outdoor space is also available.'
+                : 'El espacio al aire libre también está disponible.'}
+            </li>
           </ul>
         </React.Fragment>
       );
@@ -278,7 +289,7 @@ const ResortPackages = () => {
     const renderTitle = () => {
       return (
         <h3 className={classes.contentSectionSubHeader}>
-          {language ? 'Food & Beverage' : 'Food & Beverage'}
+          {language ? 'Food & Beverage' : 'Alimentos y Bebidas'}
         </h3>
       );
     };
@@ -288,7 +299,9 @@ const ResortPackages = () => {
         <React.Fragment>
           <ul>
             <li>
-              Banquet and catering services can accommodate up to 1,200 guests.
+              {language
+                ? 'Banquet and catering services can accommodate up to 1,200 guests.'
+                : 'Los servicios de banquetes y catering tienen capacidad para 1,200 invitados.'}
             </li>
           </ul>
         </React.Fragment>
@@ -309,7 +322,7 @@ const ResortPackages = () => {
     const renderTitle = () => {
       return (
         <h3 className={classes.contentSectionSubHeader}>
-          {language ? 'Elevators' : 'Elevators'}
+          {language ? 'Elevators' : 'Ascensores'}
         </h3>
       );
     };
@@ -319,7 +332,9 @@ const ResortPackages = () => {
         <React.Fragment>
           <ul>
             <li>
-              Service elevator with direct access to the 2nd floor ballrooms.
+              {language
+                ? 'Service elevator with direct access to the 2nd floor ballrooms'
+                : 'Ascensor de servicio con acceso directo a los salones de fiesta del segundo piso'}
             </li>
           </ul>
         </React.Fragment>
@@ -340,7 +355,7 @@ const ResortPackages = () => {
     const renderTitle = () => {
       return (
         <h3 className={classes.contentSectionSubHeader}>
-          {language ? 'Parking' : 'Parking'}
+          {language ? 'Parking' : 'Estacionamiento'}
         </h3>
       );
     };
@@ -349,7 +364,11 @@ const ResortPackages = () => {
       return (
         <React.Fragment>
           <ul>
-            <li>Complimentary parking for all patrons.</li>
+            <li>
+              {language
+                ? 'Complimentary parking for all patrons'
+                : 'Estacionamiento de cortesía para todos los clients'}
+            </li>
           </ul>
         </React.Fragment>
       );
@@ -369,7 +388,7 @@ const ResortPackages = () => {
     const renderTitle = () => {
       return (
         <h3 className={classes.contentSectionSubHeader}>
-          {language ? 'Digital Signage' : 'Digital Signage'}
+          {language ? 'Digital Signage' : 'Señalización Digital'}
         </h3>
       );
     };
@@ -379,7 +398,9 @@ const ResortPackages = () => {
         <React.Fragment>
           <ul>
             <li>
-              Available to customers in key places throughout our facility.
+              {language
+                ? 'Available to customers in key places throughout our facility'
+                : 'Disponible para los clientes en lugares clave en todas nuestras instalaciones'}
             </li>
           </ul>
         </React.Fragment>
@@ -400,7 +421,7 @@ const ResortPackages = () => {
     const renderTitle = () => {
       return (
         <h3 className={classes.contentSectionSubHeader}>
-          {language ? 'Attractions' : 'Attractions'}
+          {language ? 'Attractions' : 'Atracciones'}
         </h3>
       );
     };
@@ -410,16 +431,19 @@ const ResortPackages = () => {
         <React.Fragment>
           <ul>
             <li>
-              The Everglades experience includes the Miccosukee Indian Village
-              and Airboat rides.
+              {language
+                ? 'The Everglades experience includes the Miccosukee Indian Village and Airboat rides.'
+                : 'La experiencia de los Everglades incluye los paseos en hidrodeslizador y la Aldea Indígena Miccosukee.'}
             </li>
             <li>
-              Group and business outings are available at the Miccosukee Golf
-              &amp; Country Club.
+              {language
+                ? 'Group and business outings are available at the Miccosukee Golf & Country Club.'
+                : 'Las salidas grupales y de negocios están disponibles en Miccosukee Golf & Country Club.'}
             </li>
             <li>
-              Nearby attractions include Shark Valley, the Dolphin Mall, and
-              more.
+              {language
+                ? 'Nearby attractions include Shark Valley, the Dolphin Mall, and more.'
+                : 'Las atracciones cercanas incluyen Shark Valley, Dolphin Mall y más.'}
             </li>
           </ul>
         </React.Fragment>
@@ -440,7 +464,7 @@ const ResortPackages = () => {
     const renderTitle = () => {
       return (
         <h3 className={classes.contentSectionSubHeader}>
-          {language ? 'Amenities' : 'Amenities'}
+          {language ? 'Amenities' : 'Comodidades'}
         </h3>
       );
     };
@@ -449,16 +473,32 @@ const ResortPackages = () => {
       return (
         <React.Fragment>
           <ul>
-            <li>Indoor Pool/Outdoor Patio</li>
-            <li>24-hour Dining Options</li>
-            <li>High Stakes Bingo Hall</li>
-            <li>Fitness Center</li>
-            <li>Gift Shop</li>
-            <li>1,800+ Slot Machines on our casino floor</li>
             <li>
-              All resort guest rooms conveniently feature Wi-Fi, premium cable
-              programming, pay-per-view entertainment, in-room safe, flat-screen
-              TVs, and more.
+              {language
+                ? 'Indoor Pool/Outdoor Patio'
+                : 'Piscina cubierta/patio al aire libre'}
+            </li>
+            <li>
+              {language
+                ? '24-hour Dining Options'
+                : 'Opciones gastronómicas las 24 horas'}
+            </li>
+            <li>
+              {language
+                ? 'High Stakes Bingo Hall'
+                : 'Sala de Bingo de Altas Apuestas'}
+            </li>
+            <li>{language ? 'Fitness Center' : 'Gimnasio'}</li>
+            <li>{language ? 'Gift Shop' : 'Tienda de Regalos'}</li>
+            <li>
+              {language
+                ? '1,800+ Slot Machines on our casino floor'
+                : 'Más de 1,800 máquinas tragamonedas en nuestra sala de casino'}
+            </li>
+            <li>
+              {language
+                ? 'All resort guest rooms conveniently feature Wi-Fi, premium cable programming, pay-per-view entertainment, in-room safe, flat-screen TVs, and more.'
+                : 'Todas las habitaciones del hotel cuentan convenientemente con Wi-Fi, programación de cable, entretenimiento de pago por evento, caja de seguridad en la habitación, televisores de pantalla plana y más.'}
             </li>
           </ul>
         </React.Fragment>
@@ -481,7 +521,7 @@ const ResortPackages = () => {
         <p className={classes.disclaimerBold}>
           {language
             ? 'Please contact the Sales Department at 305-925-2561, Sales&Catering@miccosukee.com'
-            : 'Please contact the Sales Department at 305-925-2561, Sales&Catering@miccosukee.com'}
+            : 'Comuníquese con el Departamento de Ventas al 305-925-2561, Sales&Catering@miccosukee.com'}
         </p>
       </div>
     );
