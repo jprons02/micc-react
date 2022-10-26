@@ -72,9 +72,10 @@ const MrgFooter = () => {
           linkTo: 'https://goo.gl/maps/yZ9QCXJ869UqZRxJ9',
         },
         {
+          externalLink: true,
           linkText: language ? 'Banquets & Catering' : 'Banquetes y Catering',
           //mrg to mcr change
-          linkTo: '/mcr/banquets-catering',
+          linkTo: 'https://www.miccosukee.com/banquets-catering',
         },
         {
           externalLink: true,
