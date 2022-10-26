@@ -152,7 +152,7 @@ const ResortPackages = () => {
       return (
         <h2 className={classes.contentSectionHeader}>
           {language
-            ? 'Miccosukee Resort & Convention Center'
+            ? 'Ballrooms, Conference Space & More'
             : 'Miccosukee: Hotel y Centro de Convenciones'}
         </h2>
       );
