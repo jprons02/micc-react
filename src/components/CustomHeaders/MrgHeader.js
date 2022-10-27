@@ -63,6 +63,7 @@ const MrgHeader = () => {
       color: '',
       link: '',
       subMenu: [
+        /*
         {
           text: language ? 'Salon & Spa' : 'Salón y Spa',
           link: '/salon-spa',
@@ -73,16 +74,19 @@ const MrgHeader = () => {
           link: '/club-egret',
           target: '',
         },
+        */
         {
           text: language ? 'Pool & Gym' : 'Piscina y Gimnasio',
           link: '/pool-gym',
           target: '',
         },
+        /*
         {
           text: language ? 'Teen Arcade' : 'Sala de Juegos',
           link: '/teen-arcade',
           target: '',
         },
+        */
       ],
       //icon: () => <Icon>chevron_right</Icon>,
     },
@@ -135,11 +139,13 @@ const MrgHeader = () => {
           link: '/bravo-bravissimo',
           target: '',
         },
+        /*
         {
           text: 'Empeeke Aaweeke International Buffet',
           link: '/international-buffet',
           target: '',
         },
+        */
         {
           text: 'Sawgrass Cafe',
           link: '/sawgrass-cafe',
@@ -150,17 +156,20 @@ const MrgHeader = () => {
           link: '/maxs',
           target: '',
         },
+        /*
         {
           text: 'Empeeke Aya Deli',
           link: '/deli',
           target: '',
         },
+        */
         {
           text: 'Café Hammock',
           link: '/cafe-hammock',
           target: '',
-          divider: true,
+          //divider: true,
         },
+        /*
         {
           text: 'Cypress Lounge',
           link: '/cypress-lounge',
@@ -171,6 +180,7 @@ const MrgHeader = () => {
           link: '/martini-bar',
           target: '',
         },
+        */
       ],
       //icon: () => <Icon>chevron_right</Icon>,
     },

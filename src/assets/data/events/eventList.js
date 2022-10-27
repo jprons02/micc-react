@@ -43,6 +43,54 @@ export const events = (language) => {
     },
     */
     {
+      id: '1',
+      title: '47th Annual Miccosukee Indian Arts & Crafts Festival',
+      type: 'standard',
+      category: '',
+      admission: language
+        ? '$20 Adults, $10 Children, $15 Teachers & First Responders (with valid ID), Free Miccosukee Community & Tribal Members'
+        : '',
+      startDate: '12/29/2022',
+      endDate: '12/31/2022',
+      startTime: '10:00 A.M.',
+      endTime: '5:00 P.M.',
+      excerpt: language
+        ? 'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades....'
+        : '',
+
+      fullDescription: language
+        ? [
+            'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades.',
+            'Indigenous Crafts Market, Alligator Demonstrations, Artisan Exhibitions, Native American Food, Miccosukee Fashion Show, Storytelling',
+            'Live Music & Dance Performances by: Joe Tahonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.',
+            'Airboat rides available across the street.',
+            'At the historic Miccosukee Indian Village fairgrounds - 500 US Hwy 41, Miami, FL 33194',
+          ]
+        : [''],
+      /*eventbriteButton: [
+        {
+          name: language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ',
+          eventbrite: {
+            eventId: eventbriteIDs.aid2022,
+            modalTriggerElementId: 'example-widget-trigger',
+          },
+          href: '',
+          target: '',
+        },
+      ],*/
+      /*
+      buttons: [
+        {
+          key: 1,
+          name: 'Register',
+          href:
+            'https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website',
+          target: '_blank',
+        },
+      ],
+      */
+    },
+    {
       id: '2',
       title: 'American Indian Day',
       type: 'standard',
