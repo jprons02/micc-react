@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useRouteMatch, useHistory } from 'react-router-dom';
 
 // material-ui core components
 import { Hidden } from '@material-ui/core';
@@ -54,6 +55,11 @@ const sliderContent = [
 const InternationalBuffet = () => {
   const language = useLanguage();
   const classes = useStyles();
+
+  const history = useHistory();
+  useEffect(() => {
+    history.push('/mcr');
+  }, []);
 
   const weekdayContent = () => {
     return (

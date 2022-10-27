@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useRouteMatch, useHistory } from 'react-router-dom';
 
 // Core Components
 import GridContainer from 'components/Grid/GridContainer.js';
@@ -47,6 +48,11 @@ const sliderContent = [
 const CypressLounge = () => {
   const language = useLanguage();
   const classes = useStyles();
+
+  const history = useHistory();
+  useEffect(() => {
+    history.push('/mcr');
+  }, []);
 
   return (
     <React.Fragment>
