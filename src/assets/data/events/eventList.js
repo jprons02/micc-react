@@ -55,18 +55,26 @@ export const events = (language) => {
       startTime: '10:00 A.M.',
       endTime: '5:00 P.M.',
       excerpt: language
-        ? 'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades....'
-        : '',
+        ? 'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades...'
+        : 'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida...',
 
       fullDescription: language
         ? [
+            'Location: Historic Miccosukee Indian Village Fairgrounds - 500 US Hwy 41, Miami, FL 33194',
             'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades.',
-            'Indigenous Crafts Market, Alligator Demonstrations, Artisan Exhibitions, Native American Food, Miccosukee Fashion Show, Storytelling',
+            'Gather in the Everglades for indigenous music and dance performances, an artisan market featuring crafts and authentic cuisine, and alligator demonstrations teaching this traditional art of survival.',
             'Live Music & Dance Performances by: Joe Tahonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.',
-            'Airboat rides available across the street.',
-            'At the historic Miccosukee Indian Village fairgrounds - 500 US Hwy 41, Miami, FL 33194',
+            'Airboat rides are available across the street.',
+            "You're invited to take part in our holiday tradition with your family.",
           ]
-        : [''],
+        : [
+            'Lugar: Área de ferias del Miccosukee Indian Village - 500 US Hwy 41, Miami, FL 33194',
+            'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida.',
+            'Visite los Everglades para disfrutar de espectáculos de música y danza indígenas, un mercado artisanal, cocina auténtica, y demostraciones de caimanes que enseñan este arte tradicional de supervivencia.',
+            'Actuaciones de danza y música en vivo a cargo de: Joe Tahonnie Jr. y White Mountain Apache Crown Dancers, Iroquois Sky Dancers y Native Pride.',
+            'Los paseos en hidrodeslizador están disponibles al otro lado de la calle.',
+            'Los invitamos a participar en nuestra tradición navideña con su familia.',
+          ],
       /*eventbriteButton: [
         {
           name: language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ',
