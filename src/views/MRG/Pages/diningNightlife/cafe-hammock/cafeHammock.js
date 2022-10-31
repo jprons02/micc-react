@@ -57,12 +57,10 @@ const CafeHammock = () => {
   const language = useLanguage();
   const classes = useStyles();
 
-  /* UNCOMMENT THIS ON 10/30 ANNNND COMMENT OUT THE MENU ITEM IN MrgHeader.js
   const history = useHistory();
   useEffect(() => {
     history.push('/mcr');
   }, []);
-  */
 
   return (
     <React.Fragment>

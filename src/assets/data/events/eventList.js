@@ -44,12 +44,12 @@ export const events = (language) => {
     */
     {
       id: '1',
-      title: '47th Annual Miccosukee Indian Arts & Crafts Festival',
+      title: 'Miccosukee Indian Arts & Crafts Festival',
       type: 'standard',
       category: '',
       admission: language
         ? '$20 Adults, $10 Children, $15 Teachers & First Responders (with valid ID), Free Miccosukee Community & Tribal Members'
-        : '',
+        : '$20 Adults, $10 Children, $15 Teachers & First Responders (with valid ID), Free Miccosukee Community & Tribal Members',
       startDate: '12/29/2022',
       endDate: '12/31/2022',
       startTime: '10:00 A.M.',

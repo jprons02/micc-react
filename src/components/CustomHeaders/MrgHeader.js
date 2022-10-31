@@ -163,12 +163,14 @@ const MrgHeader = () => {
           target: '',
         },
         */
+        /*
         {
           text: 'Café Hammock',
           link: '/cafe-hammock',
           target: '',
           //divider: true,
         },
+        */
         /*
         {
           text: 'Cypress Lounge',
