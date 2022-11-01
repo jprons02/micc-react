@@ -37,6 +37,7 @@ import ResortPackages from 'views/LandingPages/resortPackages.js';
 import Amenities from 'views/LandingPages/amenities.js';
 import Aid from 'views/LandingPages/aid.js';
 import Banquets from 'views/LandingPages/banquets.js';
+import HolidayCards from 'views/LandingPages/community/holidayCards/index.js';
 
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
@@ -163,6 +164,7 @@ const App = () => {
                     />
                     <Route path={'/aid'} component={Aid} />
                     <Route path={'/banquets-catering'} component={Banquets} />
+                    <Route path={'/holidaycards'} component={HolidayCards} />
                     {/* END LANDING PAGES */}
                     <Route path="/" component={Miccosukee} />
                   </Switch>
