@@ -42,14 +42,21 @@ export const events = (language) => {
       ],
     },
     */
+    /*
+    $20 Adults (12+)
+    $10 Children (6-12)
+    $15 Teachers, First Responders & Military Personnel (with valid ID)
+    Free Entry for Miccosukee Community & Tribal Members
+    */
+
     {
       id: '1',
       title: 'Miccosukee Indian Arts & Crafts Festival',
       type: 'standard',
       category: '',
       admission: language
-        ? '$20 Adults, $10 Children, $15 Teachers & First Responders (with valid ID), Free Miccosukee Community & Tribal Members'
-        : '$20 Adults, $10 Children, $15 Teachers & First Responders (with valid ID), Free Miccosukee Community & Tribal Members',
+        ? '$20 Adults (12+), $10 Children (6-12), $15 Teachers, First Responders & Military Personnel (with valid ID), Free Entry for Miccosukee Community & Tribal Members'
+        : '$20 Adultos (12+), $10 Niños (6-12), $15 Maestros, Socorristas y Personal Militar (con identificación válida), Entrada Gratis para Miembros Tribales y de la Comunidad Miccosukee',
       startDate: '12/29/2022',
       endDate: '12/31/2022',
       startTime: '10:00 A.M.',
