@@ -119,7 +119,7 @@ const Bingo = () => {
                       : 'Todos los equipos electrónicos serán desinfectados antes y después de cada uso.'}
                   </li>
                 </ul>
-                {isRunning([2022, 10, 1], [2022, 10, 31]) ? (
+                {isRunning([2022, 11, 1], [2022, 11, 26]) ? (
                   <a
                     target="_blank"
                     href="https://mapa-media.s3.amazonaws.com/website/monthly_bingo_promo.pdf"

@@ -78,14 +78,14 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: '22',
-      month: 'October',
+      month: 'November',
       day: '1',
       time: '',
     },
     end: {
       year: '22',
-      month: 'October',
-      day: '31',
+      month: 'November',
+      day: '26',
       time: '',
     },
   }),

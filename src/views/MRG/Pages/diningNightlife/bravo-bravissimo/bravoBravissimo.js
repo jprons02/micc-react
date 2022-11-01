@@ -71,22 +71,15 @@ const Bravo = () => {
                   ? 'Enjoy traditional Italian dishes and an extensive wine selection in a casual, cozy setting perfect for couples and families alike.'
                   : 'Disfrute platos tradicionales de la cocina Italiana y una extensa selección de vinos en un ambiente casual y acogedor perfecto para parejas y familias.'}
               </p>
-              {/*
-              <Button
-                href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_Menu_11x17.pdf"
-                target="_blank"
-                usetheme="contained"
-              >
-                {language ? "MENU" : "MENÚ"}
-              </Button>{" "}
-              <Button
-                href="https://mrg.miccosukee.com/wp-content/uploads/2019/06/BravoBravissimo_DrinksMenu.pdf"
-                target="_blank"
-                usetheme="contained"
-              >
-                {language ? "DRINK MENU" : "CARTA DE VINOS Y BEBIDAS"}
-              </Button>
-              */}
+              {isRunning([2022, 11, 4]) ? (
+                <Button
+                  href="https://mapa-media.s3.amazonaws.com/mcr/BravoBravissimo_Menu_Web.pdf"
+                  target="_blank"
+                  usetheme="contained"
+                >
+                  {language ? 'MENU' : 'MENÚ'}
+                </Button>
+              ) : null}
             </div>
           </GridItem>
           <GridItem md={5}>
