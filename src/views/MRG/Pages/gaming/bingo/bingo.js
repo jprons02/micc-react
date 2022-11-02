@@ -64,7 +64,6 @@ const Bingo = () => {
               </p>
 
               <div style={{ marginTop: '25px' }}>
-                {/*
                 <h6>
                   {language
                     ? 'Bingo will operate on Wednesday, Thursday, Friday and Saturday'
@@ -87,6 +86,8 @@ const Bingo = () => {
                       : 'Sesión regular comienza a las 7:15 P.M.'}
                   </li>
                 </ul>
+
+                {/*
                 <h6>
                   {language
                     ? 'New safety measures:'
