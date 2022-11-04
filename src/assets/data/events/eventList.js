@@ -93,17 +93,15 @@ export const events = (language) => {
           target: '',
         },
       ],*/
-      /*
       buttons: [
         {
           key: 1,
-          name: 'Register',
+          name: language ? 'Tickets' : 'Entradas',
           href:
-            'https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website',
+            'https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=website',
           target: '_blank',
         },
       ],
-      */
     },
     {
       id: '2',
