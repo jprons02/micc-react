@@ -38,6 +38,7 @@ import Amenities from 'views/LandingPages/amenities.js';
 import Aid from 'views/LandingPages/aid.js';
 import Banquets from 'views/LandingPages/banquets.js';
 import HolidayCards from 'views/LandingPages/community/holidayCards/index.js';
+import ArtsAndCrafts from 'views/LandingPages/artsandcrafts.js';
 
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
@@ -165,6 +166,7 @@ const App = () => {
                     <Route path={'/aid'} component={Aid} />
                     <Route path={'/banquets-catering'} component={Banquets} />
                     <Route path={'/holidaycards'} component={HolidayCards} />
+                    <Route path={'/artsandcrafts'} component={ArtsAndCrafts} />
                     {/* END LANDING PAGES */}
                     <Route path="/" component={Miccosukee} />
                   </Switch>
