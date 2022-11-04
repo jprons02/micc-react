@@ -80,12 +80,12 @@ const ArtsAndCrafts = () => {
                 <p className={classes.contentSectionDetails}>
                   {language
                     ? 'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades.'
-                    : 'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida.'}
+                    : 'La cultura Nativa Americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida.'}
                 </p>
                 <p className={classes.contentSectionDetails}>
                   {language
                     ? 'Gather in the Everglades for indigenous music and dance performances, an artisan market featuring crafts and authentic cuisine, and alligator demonstrations teaching this traditional art of survival.'
-                    : 'Visite los Everglades para disfrutar de espectáculos de música y danza indígenas, un mercado artisanal, cocina auténtica, y demostraciones de caimanes que enseñan este arte tradicional de supervivencia.'}
+                    : 'Visite los Everglades para disfrutar de espectáculos de música y danza indígenas, un mercado artesanal, cocina auténtica, y demostraciones de caimanes que enseñan este arte tradicional de supervivencia.'}
                 </p>
                 <p className={classes.contentSectionDetails}>
                   {language
@@ -118,7 +118,7 @@ const ArtsAndCrafts = () => {
                     </span>
                     {language
                       ? 'December 29 – 31, 2022, from 10 AM – 5 PM'
-                      : '29 a 31 de diciembre, de 10 AM a 5 PM'}
+                      : '29 al 31 de diciembre, de 10 AM a 5 PM'}
                   </p>
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
@@ -126,7 +126,7 @@ const ArtsAndCrafts = () => {
                     </span>
                     {language
                       ? 'Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194.'
-                      : 'Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194.'}
+                      : 'Recinto Ferial del Miccosukee Indian Village Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194'}
                   </p>
                   {/*
                   <div>
@@ -180,7 +180,7 @@ const ArtsAndCrafts = () => {
                     className={classes.contentButton}
                   >
                     <span className={classes.contentButtonText}>
-                      {language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ'}
+                      {language ? 'TICKETS' : 'ENTRADAS'}
                     </span>
                   </Button>
                 </div>
@@ -268,9 +268,7 @@ const ArtsAndCrafts = () => {
                 <div className={classes.disclaimer}>
                   <p className={classes.contentSectionDetailsDisclaimer}>
                     <span style={{ fontWeight: 'bold' }}>
-                      {language
-                        ? 'Experience Miccosukee:'
-                        : 'La Experiencia Miccosukee:'}
+                      {language ? 'Experience Miccosukee:' : 'Eche un Vistazo:'}
                     </span>{' '}
                     <br />
                     {language
@@ -317,7 +315,7 @@ const ArtsAndCrafts = () => {
                           textDecoration: 'underline',
                         }}
                       >
-                        {language ? 'Sign up HERE' : 'Regístrese AQUÍ'}
+                        {language ? 'Sign up HERE' : 'BOLETOS'}
                       </span>
                     </a>
                     {language
