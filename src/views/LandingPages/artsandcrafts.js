@@ -42,6 +42,7 @@ import image2 from 'assets/media/img/landingPages/artsandcrafts/Fashion-show-700
 import image3 from 'assets/media/img/landingPages/artsandcrafts/iriqouis-dancers-700x500.jpg';
 import image4 from 'assets/media/img/landingPages/artsandcrafts/pride-dancers-700x500.jpg';
 import image5 from 'assets/media/img/landingPages/artsandcrafts/White-mountain-apache-crown-dancers-700x500.jpg';
+import image6 from 'assets/media/img/landingPages/artsandcrafts/crafts.jpeg';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
@@ -122,57 +123,23 @@ const ArtsAndCrafts = () => {
                   </p>
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
-                      {language ? 'Location: ' : 'Ubicación: '}
+                      {language ? 'Location: ' : 'Lugar: '}
                     </span>
                     {language
                       ? 'Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194.'
-                      : 'Recinto Ferial del Miccosukee Indian Village Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194'}
+                      : 'Recinto Ferial del Miccosukee Indian Village Miccosukee Indian Village, 500 US Hwy 41, Miami, FL 33194'}
                   </p>
-                  {/*
-                  <div>
-                    <p className={classes.contentSectionDetails}>
-                      <span style={{ fontWeight: 'bold' }}>
-                        {language ? 'Event Info:' : 'Información del Evento:'}
-                      </span>
-                    </p>
-                    <ul
-                      style={{
-                        marginTop: '5px',
-                      }}
-                    >
-                      <li>
-                        <a
-                          style={{
-                            color: primary,
-                            textDecoration: 'underline',
-                            fontWeight: 400,
-                          }}
-                          href="https://mapa-media.s3.amazonaws.com/website/AID_Map_Schedule_Web.pdf"
-                          target="_blank"
-                        >
-                          {language
-                            ? 'Event Map & Schedule'
-                            : 'Mapa y Horario del Evento'}
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{
-                            color: primary,
-                            textDecoration: 'underline',
-                            fontWeight: 400,
-                          }}
-                          href="https://mapa-media.s3.amazonaws.com/website/AID_Event_Participation_Waiver_Release.pdf"
-                          target="_blank"
-                        >
-                          {language
-                            ? 'Event Participation Waiver and Release'
-                            : 'Formulario de Exención y Liberación de Responsabilidad en la Participación de Eventos'}
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  */}
+                  <p className={classes.contentSectionDetails}>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {language
+                        ? 'PRESALE available until November 30!'
+                        : '¡PREVENTA hasta el 30 de noviembre!'}
+                    </span>
+                    <br />
+                    {language
+                      ? 'With the purchase of each child ticket, your Eventbrite fee will be waived, and you will receive a FREE painting kit (distributed upon arrival at the event).'
+                      : 'Con la compra de cada boleto de niño, eliminaremos la tarifa de Eventbrite y recibirá un kit de pintura GRATIS (distribuido a su llegada al evento).'}
+                  </p>
                   <Button
                     href="https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=landingpage"
                     target="_blank"
@@ -184,9 +151,34 @@ const ArtsAndCrafts = () => {
                     </span>
                   </Button>
                 </div>
-
                 <div className={classes.subSection}>
-                  <img className={classes.subSectionImage} src={image5} />
+                  <img
+                    alt="crafts"
+                    className={classes.subSectionImage}
+                    src={image6}
+                  />
+                  <p className={classes.contentSectionDetails}>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {language
+                        ? 'Indigenous Crafts Market'
+                        : 'Mercado de Artesanías Indígenas'}
+                    </span>
+                    <br />
+                    {language
+                      ? 'Shop cultural treasures and bring home a piece of history with one-of-a-kind crafts made by Native American artisans.'
+                      : 'Compre tesoros culturales y llévese a casa un pedazo de historia con artesanías únicas hechas por Nativos Americanos.'}
+                    <br />
+                    {language
+                      ? 'The Miccosukees are known for handmade sweet grass baskets, wood carvings, beadwork, and elaborate patchwork designs. They spend years honing their craft and take pride in sharing their ancestral legacy with you.'
+                      : 'Los Miccosukees son conocidos por sus cestas de hierba dulce hechas a mano, tallas de madera, joyería con cuentas y elaborados diseños de retazos. Pasan años perfeccionando su oficio y se enorgullecen de compartir su legado ancestral con usted.'}
+                  </p>
+                </div>
+                <div className={classes.subSection}>
+                  <img
+                    alt="Joe Tohonnie Jr. and the White Mountain Apache Crown Dancers"
+                    className={classes.subSectionImage}
+                    src={image5}
+                  />
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language
@@ -200,7 +192,11 @@ const ArtsAndCrafts = () => {
                   </p>
                 </div>
                 <div className={classes.subSection}>
-                  <img className={classes.subSectionImage} src={image3} />
+                  <img
+                    alt="Iroquois Sky Dancers"
+                    className={classes.subSectionImage}
+                    src={image3}
+                  />
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language
@@ -214,7 +210,11 @@ const ArtsAndCrafts = () => {
                   </p>
                 </div>
                 <div className={classes.subSection}>
-                  <img className={classes.subSectionImage} src={image4} />
+                  <img
+                    alt="Native Pride Dancers"
+                    className={classes.subSectionImage}
+                    src={image4}
+                  />
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language
@@ -228,7 +228,11 @@ const ArtsAndCrafts = () => {
                   </p>
                 </div>
                 <div className={classes.subSection}>
-                  <img className={classes.subSectionImage} src={image2} />
+                  <img
+                    alt="Miccosukee Fashion Show"
+                    className={classes.subSectionImage}
+                    src={image2}
+                  />
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language
@@ -242,7 +246,11 @@ const ArtsAndCrafts = () => {
                   </p>
                 </div>
                 <div className={classes.subSectionLast}>
-                  <img className={classes.subSectionImage} src={image1} />
+                  <img
+                    alt="Alligator Demonstrations"
+                    className={classes.subSectionImage}
+                    src={image1}
+                  />
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language
@@ -268,7 +276,9 @@ const ArtsAndCrafts = () => {
                 <div className={classes.disclaimer}>
                   <p className={classes.contentSectionDetailsDisclaimer}>
                     <span style={{ fontWeight: 'bold' }}>
-                      {language ? 'Experience Miccosukee:' : 'Eche un Vistazo:'}
+                      {language
+                        ? 'Experience Miccosukee:'
+                        : 'Experiencia Miccosukee:'}
                     </span>{' '}
                     <br />
                     {language
@@ -296,7 +306,7 @@ const ArtsAndCrafts = () => {
                   </p>
                   <p className={classes.contentSectionDetailsDisclaimer}>
                     <span style={{ fontWeight: 'bold' }}>
-                      {language ? 'Upcoming Events' : 'Próximos eventos'}
+                      {language ? 'Upcoming Events' : 'Próximos Eventos'}
                     </span>
                     <br />
                     {/*language
@@ -384,10 +394,18 @@ const ArtsAndCrafts = () => {
     return (
       <div>
         <Hidden mdUp>
-          <img style={{ width: '100%' }} src={heroImageMobile} />
+          <img
+            alt="Arts and Crafts Festival Sign"
+            style={{ width: '100%' }}
+            src={heroImageMobile}
+          />
         </Hidden>
         <Hidden smDown>
-          <img style={{ width: '100%' }} src={heroImageDesktop} />
+          <img
+            alt="Arts and Crafts Festival Sign"
+            style={{ width: '100%' }}
+            src={heroImageDesktop}
+          />
         </Hidden>
       </div>
     );
