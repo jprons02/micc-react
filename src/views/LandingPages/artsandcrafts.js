@@ -89,8 +89,8 @@ const ArtsAndCrafts = () => {
                 </p>
                 <p className={classes.contentSectionDetails}>
                   {language
-                    ? 'Live Music & Dance Performances by: Joe Tahonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.'
-                    : 'Actuaciones de danza y música en vivo a cargo de: Joe Tahonnie Jr. y White Mountain Apache Crown Dancers, Iroquois Sky Dancers y Native Pride.'}
+                    ? 'Live Music & Dance Performances by: Joe Tohonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.'
+                    : 'Actuaciones de danza y música en vivo a cargo de: Joe Tohonnie Jr. y White Mountain Apache Crown Dancers, Iroquois Sky Dancers y Native Pride.'}
                 </p>
                 <p className={classes.contentSectionDetails}>
                   {language
