@@ -132,13 +132,13 @@ const ArtsAndCrafts = () => {
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language
-                        ? 'PRESALE available until November 30!'
-                        : '¡PREVENTA hasta el 30 de noviembre!'}
+                        ? 'Children & Adult Presale Tickets (Now through November 30)'
+                        : 'Preventa de boletos para niños y adultos (desde ahora hasta el 30 de noviembre)'}
                     </span>
                     <br />
                     {language
-                      ? 'With the purchase of each child ticket, your Eventbrite fee will be waived, and you will receive a FREE painting kit (distributed upon arrival at the event).'
-                      : 'Con la compra de cada boleto de niño, eliminaremos la tarifa de Eventbrite y recibirá un kit de pintura GRATIS (distribuido a su llegada al evento).'}
+                      ? 'PRESALE available until November 30! With the purchase of each ticket, your Eventbrite fee will be waived, plus with the purchase of each child ticket, you will receive a free painting kit (distributed upon arrival at the event).'
+                      : '¡PREVENTA disponible hasta el 30 de noviembre! Con la compra de cada entrada, se eliminará la tarifa de Eventbrite y, además, con la compra de cada entrada para niños, recibirá un kit de pintura gratis (repartido a su llegada al evento).'}
                   </p>
                   <Button
                     href="https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=landingpage"
@@ -150,28 +150,6 @@ const ArtsAndCrafts = () => {
                       {language ? 'TICKETS' : 'ENTRADAS'}
                     </span>
                   </Button>
-                </div>
-                <div className={classes.subSection}>
-                  <img
-                    alt="crafts"
-                    className={classes.subSectionImage}
-                    src={image6}
-                  />
-                  <p className={classes.contentSectionDetails}>
-                    <span style={{ fontWeight: 'bold' }}>
-                      {language
-                        ? 'Indigenous Crafts Market'
-                        : 'Mercado de Artesanías Indígenas'}
-                    </span>
-                    <br />
-                    {language
-                      ? 'Shop cultural treasures and bring home a piece of history with one-of-a-kind crafts made by Native American artisans.'
-                      : 'Compre tesoros culturales y llévese a casa un pedazo de historia con artesanías únicas hechas por Nativos Americanos.'}
-                    <br />
-                    {language
-                      ? 'The Miccosukees are known for handmade sweet grass baskets, wood carvings, beadwork, and elaborate patchwork designs. They spend years honing their craft and take pride in sharing their ancestral legacy with you.'
-                      : 'Los Miccosukees son conocidos por sus cestas de hierba dulce hechas a mano, tallas de madera, joyería con cuentas y elaborados diseños de retazos. Pasan años perfeccionando su oficio y se enorgullecen de compartir su legado ancestral con usted.'}
-                  </p>
                 </div>
                 <div className={classes.subSection}>
                   <img
@@ -261,6 +239,28 @@ const ArtsAndCrafts = () => {
                     {language
                       ? 'Wrestling alligators was a form of survival, a hunting technique used by the Miccosukee when they first inhabited the Florida Everglades. Today, it has become a popular attraction that educates the public about these powerful reptiles that are an essential part of this unique ecosystem. Our alligator wrestlers will show you how they handle these wild creatures in a jaw-dropping performance that will have you on the edge of your seat!'
                       : 'La lucha con lagartos era una forma de supervivencia, una técnica de caza utilizada por los Miccosukee cuando habitaron por primera vez los Everglades de Florida. Hoy, se ha convertido en una atracción popular que educa al público sobre estos poderosos reptiles que son parte esencial de este ecosistema único. ¡Nuestros luchadores de caimanes le mostrarán cómo manejan a estas criaturas salvajes en una actuación asombrosa que lo tendrá al borde de su asiento!'}
+                  </p>
+                </div>
+                <div className={classes.subSection}>
+                  <img
+                    alt="crafts"
+                    className={classes.subSectionImage}
+                    src={image6}
+                  />
+                  <p className={classes.contentSectionDetails}>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {language
+                        ? 'Indigenous Crafts Market'
+                        : 'Mercado de Artesanías Indígenas'}
+                    </span>
+                    <br />
+                    {language
+                      ? 'Shop cultural treasures and bring home a piece of history with one-of-a-kind crafts made by Native American artisans.'
+                      : 'Compre tesoros culturales y llévese a casa un pedazo de historia con artesanías únicas hechas por Nativos Americanos.'}
+                    <br />
+                    {language
+                      ? 'The Miccosukees are known for handmade sweet grass baskets, wood carvings, beadwork, and elaborate patchwork designs. They spend years honing their craft and take pride in sharing their ancestral legacy with you.'
+                      : 'Los Miccosukees son conocidos por sus cestas de hierba dulce hechas a mano, tallas de madera, joyería con cuentas y elaborados diseños de retazos. Pasan años perfeccionando su oficio y se enorgullecen de compartir su legado ancestral con usted.'}
                   </p>
                 </div>
               </div>
