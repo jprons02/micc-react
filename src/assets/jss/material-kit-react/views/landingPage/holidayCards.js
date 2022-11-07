@@ -83,32 +83,26 @@ const landingPageStyle = {
     },
   },
 
-  /* 
-  // WITH NO TOP IMAGE
-  contentSectionTop: {
-    padding: '0 0 40px 0',
-    marginTop: '-30px',
-    //desktop view
-    '@media (min-width: 960px)': {
-      padding: '20px 0 40px 0',
-      marginTop: '-30px',
-    },
+  numberStyle: {
+    verticalAlign: 'top',
+    display: 'inline-block',
   },
-  contentSectionBottom: {
-    padding: '40px 0 0 0',
-    //desktop view
-    '@media (min-width: 960px)': {
-      padding: '40px 0 40px 0',
-    },
+
+  cardStyle: {
+    width: '150px',
+    margin: '5px',
+    display: 'inline-block',
   },
-  contentSectionMiddle: {
-    padding: '40px 0',
-    //desktop view
-    '@media (min-width: 960px)': {
-      padding: '40px 0',
-    },
+
+  imageStyle: {
+    border: '1px solid black',
+    width: '100%',
   },
-  */
+
+  captionStyle: {
+    textAlign: 'center',
+  },
+
   contentImage: {
     width: '100%',
     borderRadius: '10px',

@@ -68,7 +68,7 @@ export const events = (language) => {
       fullDescription: language
         ? [
             'Location: Historic Miccosukee Indian Village Fairgrounds - 500 US Hwy 41, Miami, FL 33194',
-            'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades.',
+            'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades, December 29 – 31, 2022, from 10 AM – 5 PM at the historic Miccosukee Indian Village festival grounds, 20 miles west of Krome Avenue and SW 8th Street.',
             'Gather in the Everglades for indigenous music and dance performances, an artisan market featuring crafts and authentic cuisine, and alligator demonstrations teaching this traditional art of survival.',
             'Live Music & Dance Performances by: Joe Tohonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.',
             'Airboat rides are available across the street.',
@@ -76,7 +76,7 @@ export const events = (language) => {
           ]
         : [
             'Lugar: Área de ferias del Miccosukee Indian Village - 500 US Hwy 41, Miami, FL 33194',
-            'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida.',
+            'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida, 29 al 31 de diciembre, de 10 AM a 5 PM, 20 millas al oeste de la Avenida Krome y la Calle 8 del suroeste.',
             'Visite los Everglades para disfrutar de espectáculos de música y danza indígenas, un mercado artisanal, cocina auténtica, y demostraciones de caimanes que enseñan este arte tradicional de supervivencia.',
             'Actuaciones de danza y música en vivo a cargo de: Joe Tohonnie Jr. y White Mountain Apache Crown Dancers, Iroquois Sky Dancers y Native Pride.',
             'Los paseos en hidrodeslizador están disponibles al otro lado de la calle.',

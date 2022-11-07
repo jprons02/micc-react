@@ -23,6 +23,7 @@ import MrgFooter from 'components/CustomFooters/MrgFooter.js';
 
 // Custom Components
 import Badge from 'components/Badge/Badge.js';
+import CustomSimpleDialog from 'components/CustomModal/CustomSimpleModal/CustomSimpleModal';
 
 // styles
 import styles from 'assets/jss/material-kit-react/views/landingPage/holidayCards.js';
@@ -43,6 +44,10 @@ import emblem from 'assets/media/img/miccosukee/MiccosukeeEmblem_Color.svg';
 import image6 from 'assets/media/img/landingPages/banquets/banquets1_mobile.jpg';
 import image6desktop from 'assets/media/img/landingPages/banquets/banquets1_desktop.jpg';
 
+// Holiday card components
+import ThanksgivingCards from './thanksgiving';
+import XmasCards from './xmas';
+
 // Cards
 import xmas1a from 'assets/media/img/landingPages/holiday/xmas/cards/Christmas1_Inside.jpg';
 import xmas1b from 'assets/media/img/landingPages/holiday/xmas/cards/Christmas1_Outside.jpg';
@@ -55,6 +60,7 @@ const HolidayCards = () => {
   const headerClasses = useHeaderStyles();
   const language = useLanguage();
 
+  //Footer Dialog
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
   );
@@ -64,6 +70,19 @@ const HolidayCards = () => {
   }, []);
   const closeModal = (setState) => {
     setState(false);
+  };
+
+  //Cards Dialog
+  const [isOpen, setOpen] = useState(false);
+  const [dialogContent, setDialogContent] = useState(null);
+  const closeDialog = () => {
+    setOpen(false);
+  };
+  const openDialog = () => {
+    setOpen(true);
+  };
+  const getDialogContent = (data) => {
+    setDialogContent(data);
   };
 
   const [holiday, setHoliday] = useState('thanksgiving');
@@ -119,65 +138,34 @@ const HolidayCards = () => {
     );
   };
 
-  //<h2 className={classes.contentSectionHeader}>
+  const sectionTitle = () => {
+    switch (holiday) {
+      case 'halloween':
+        return <h2 className={classes.contentSectionHeader}>Halloween</h2>;
+      case 'thanksgiving':
+        return <h2 className={classes.contentSectionHeader}>Thanksgiving</h2>;
+      case 'christmas':
+        return <h2 className={classes.contentSectionHeader}>Christmas</h2>;
+      case 'newyears':
+        return <h2 className={classes.contentSectionHeader}>New Year</h2>;
+      default:
+        return <h2 className={classes.contentSectionHeader}>Thanksgiving</h2>;
+    }
+  };
+
   const renderCards = () => {
-    const sectionTitle = () => {
-      switch (holiday) {
-        case 'halloween':
-          return 'Halloween';
-        case 'thanksgiving':
-          return 'Thanksgiving';
-        case 'christmas':
-          return 'Christmas';
-        case 'newyears':
-          return 'New Year';
-        default:
-          return 'Thanksgiving';
-      }
-    };
-
-    const cards = () => {
-      const thanksgivingCards = () => {
+    switch (holiday) {
+      case 'thanksgiving':
         return (
-          <div>
-            <div id="1">
-              <img
-                style={{ width: '150px', margin: '5px' }}
-                src={xmas1b}
-                width="100%"
-              />
-              <img
-                style={{
-                  width: '150px',
-                  margin: '5px',
-                  border: '1px solid black',
-                }}
-                src={xmas1a}
-                width="100%"
-              />
-            </div>
-          </div>
+          <ThanksgivingCards
+            openDialog={openDialog}
+            getDialogContent={getDialogContent}
+            classes={classes}
+          />
         );
-      };
-
-      const christmasCards = () => {
-        return <div>working on it</div>;
-      };
-
-      switch (holiday) {
-        case 'thanksgiving':
-          return thanksgivingCards();
-        case 'christmas':
-          return christmasCards();
-      }
-    };
-
-    return (
-      <div>
-        <h2 className={classes.contentSectionHeader}>{sectionTitle()}</h2>
-        {cards()}
-      </div>
-    );
+      case 'christmas':
+        return <XmasCards />;
+    }
   };
 
   const disclaimer = () => {
@@ -199,6 +187,7 @@ const HolidayCards = () => {
           <RaisedContainer>
             <div className={classes.contentSection}>
               {renderButtons()}
+              {sectionTitle()}
               {renderCards()}
               <hr
                 className={classes.horizontalRule}
@@ -221,6 +210,11 @@ const HolidayCards = () => {
         showModal={showContactModal}
         closeModal={() => closeModal(setShowContactModal)}
         entity={mrgBusinessInfo}
+      />
+      <CustomSimpleDialog
+        isOpen={isOpen}
+        closeDialog={closeDialog}
+        dialogContent={dialogContent}
       />
     </div>
   );

@@ -80,8 +80,8 @@ const ArtsAndCrafts = () => {
               <React.Fragment>
                 <p className={classes.contentSectionDetails}>
                   {language
-                    ? 'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades.'
-                    : 'La cultura Nativa Americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida.'}
+                    ? 'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades, December 29 – 31, 2022, from 10 AM – 5 PM at the historic Miccosukee Indian Village festival grounds, 20 miles west of Krome Avenue and SW 8th Street.'
+                    : 'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida, 29 al 31 de diciembre, de 10 AM a 5 PM, 20 millas al oeste de la Avenida Krome y la Calle 8 del suroeste.'}
                 </p>
                 <p className={classes.contentSectionDetails}>
                   {language
@@ -150,7 +150,7 @@ const ArtsAndCrafts = () => {
                       {language ? 'TICKETS' : 'ENTRADAS'}
                     </span>
                   </Button>
-                  <div style={{ margin: '30px 0 80px 0' }}>
+                  <div style={{ marginTop: '30px' }}>
                     <iframe
                       style={{ maxWidth: '100%' }}
                       width="560"
