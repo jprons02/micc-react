@@ -45,15 +45,22 @@ const landingPageStyle = {
       fontSize: '14px',
     },
   },
-  subSectionFirst: {
-    marginBottom: '40px',
+  subSectionIntro: {
+    marginBottom: '0',
     //desktop view
     '@media (min-width: 960px)': {
-      marginBottom: '60px',
+      marginBottom: '0',
+    },
+  },
+  subSectionFirst: {
+    marginBottom: '0',
+    //desktop view
+    '@media (min-width: 960px)': {
+      marginBottom: '0',
     },
   },
   subSection: {
-    marginBottom: '80px',
+    marginBottom: '60px',
     //desktop view
     '@media (min-width: 960px)': {
       height: '320px',
@@ -61,7 +68,7 @@ const landingPageStyle = {
     },
   },
   subSectionLast: {
-    marginBottom: '60px',
+    marginBottom: '0',
     //desktop view
     '@media (min-width: 960px)': {
       height: '320px',
@@ -84,11 +91,11 @@ const landingPageStyle = {
     border: '1px solid #e3e3e3',
     width: '30%',
     marginTop: '70px',
-    marginBottom: '65px',
+    marginBottom: '70px',
     //desktop view
     '@media (min-width: 960px)': {
       marginTop: '95px',
-      marginBottom: '80px',
+      marginBottom: '95px',
     },
   },
   disclaimer: {

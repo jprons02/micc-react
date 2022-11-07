@@ -112,7 +112,7 @@ const ArtsAndCrafts = () => {
           p: () => {
             return (
               <div style={{ marginBottom: '25px', marginTop: '30px' }}>
-                <div className={classes.subSectionFirst}>
+                <div className={classes.subSectionIntro}>
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language ? 'Event Date: ' : 'Fecha del Evento: '}
@@ -127,7 +127,7 @@ const ArtsAndCrafts = () => {
                     </span>
                     {language
                       ? 'Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194.'
-                      : 'Recinto Ferial del Miccosukee Indian Village Miccosukee Indian Village, 500 US Hwy 41, Miami, FL 33194'}
+                      : 'Recinto ferial del Miccosukee Indian Village, 500 US Hwy 41, Miami, FL 33194.'}
                   </p>
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
@@ -150,7 +150,20 @@ const ArtsAndCrafts = () => {
                       {language ? 'TICKETS' : 'ENTRADAS'}
                     </span>
                   </Button>
+                  <div style={{ margin: '30px 0 80px 0' }}>
+                    <iframe
+                      style={{ maxWidth: '100%' }}
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/kmKY8LPZI98?rel=0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
                 </div>
+                <hr className={classes.divider}></hr>
                 <div className={classes.subSection}>
                   <img
                     alt="Joe Tohonnie Jr. and the White Mountain Apache Crown Dancers"
@@ -223,7 +236,7 @@ const ArtsAndCrafts = () => {
                       : 'Las costureras Miccosukee crean vibrantes diseños de retazos de tela inspirados en elementos de la naturaleza. Estas coloridas prendas se crearon por primera vez a principios del siglo XX como una forma de expresar su herencia. Los miembros de la Tribu usan esta vestimenta para actividades diarias y eventos ceremoniales. El desfile de modas Miccosukee destaca la evolución de esta forma de arte a medida que los miembros caminan por la pasarela con patrones elegantemente elaborados que adornan faldas, capas, vestidos y chaquetas.'}
                   </p>
                 </div>
-                <div className={classes.subSectionLast}>
+                <div className={classes.subSection}>
                   <img
                     alt="Alligator Demonstrations"
                     className={classes.subSectionImage}
@@ -241,7 +254,7 @@ const ArtsAndCrafts = () => {
                       : 'La lucha con lagartos era una forma de supervivencia, una técnica de caza utilizada por los Miccosukee cuando habitaron por primera vez los Everglades de Florida. Hoy, se ha convertido en una atracción popular que educa al público sobre estos poderosos reptiles que son parte esencial de este ecosistema único. ¡Nuestros luchadores de caimanes le mostrarán cómo manejan a estas criaturas salvajes en una actuación asombrosa que lo tendrá al borde de su asiento!'}
                   </p>
                 </div>
-                <div className={classes.subSection}>
+                <div className={classes.subSectionLast}>
                   <img
                     alt="crafts"
                     className={classes.subSectionImage}
@@ -325,7 +338,7 @@ const ArtsAndCrafts = () => {
                           textDecoration: 'underline',
                         }}
                       >
-                        {language ? 'Sign up HERE' : 'BOLETOS'}
+                        {language ? 'Sign up HERE' : 'REGÍSTRESE'}
                       </span>
                     </a>
                     {language
