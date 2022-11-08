@@ -7,6 +7,7 @@ const landingPageStyle = {
   //HEADER SECTION
   headerSection: {
     backgroundImage: `url(${holidayBg})`,
+    backgroundSize: 'cover',
     padding: '40px 0 60px 0',
     //desktop view
     '@media (min-width: 960px)': {
