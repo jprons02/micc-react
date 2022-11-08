@@ -164,7 +164,13 @@ const HolidayCards = () => {
           />
         );
       case 'christmas':
-        return <XmasCards />;
+        return (
+          <XmasCards
+            openDialog={openDialog}
+            getDialogContent={getDialogContent}
+            classes={classes}
+          />
+        );
     }
   };
 
@@ -172,8 +178,7 @@ const HolidayCards = () => {
     return (
       <div className={classes.disclaimerSection}>
         <p className={classes.disclaimerBold}>
-          Please contact the Sales Department at 305-925-2561,
-          Sales&amp;Catering@miccosukee.com
+          Please contact MAPA at 305-894-2375, mapa@miccosukee.com
         </p>
       </div>
     );
@@ -188,7 +193,7 @@ const HolidayCards = () => {
             <div className={classes.contentSection}>
               {renderButtons()}
               {sectionTitle()}
-              {renderCards()}
+              <div>{renderCards()}</div>
               <hr
                 className={classes.horizontalRule}
                 style={{ marginTop: '60px', marginBottom: '40px' }}

@@ -88,15 +88,42 @@ const landingPageStyle = {
     display: 'inline-block',
   },
 
-  cardStyle: {
+  cardStylePortrait: {
     width: '150px',
     margin: '5px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      display: 'inline-block',
+    },
+  },
+  cardStyleLandscape: {
+    width: '207px',
+    margin: '5px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      display: 'inline-block',
+    },
+  },
+  cardImageSectionStyle: {
     display: 'inline-block',
+    //desktop view
+    '@media (min-width: 960px)': {
+      display: 'inline-block',
+    },
+  },
+  cardSectionStyle: {
+    display: 'inline-block',
+    margin: '5px 0px 30px 0px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      margin: '5px 30px 30px 0px',
+    },
   },
 
   imageStyle: {
     border: '1px solid black',
     width: '100%',
+    cursor: 'pointer',
   },
 
   captionStyle: {
