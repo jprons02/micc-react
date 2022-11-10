@@ -178,6 +178,9 @@ const HolidayCards = () => {
     return (
       <div className={classes.disclaimerSection}>
         <p className={classes.disclaimerBold}>
+          Custom designs will incur a design fee and should be requested two
+          weeks in advance to ensure timely delivery.
+          <br />
           Please contact MAPA at 305-894-2375, mapa@miccosukee.com
         </p>
       </div>
