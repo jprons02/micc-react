@@ -73,6 +73,7 @@ export const events = (language) => {
             'Live Music & Dance Performances by: Joe Tohonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.',
             'Airboat rides are available across the street.',
             "You're invited to take part in our holiday tradition with your family.",
+            'FREE shuttle service to and from Miccosukee Casino & Resort / Indian Village available all day from 9:30 AM to 5 PM.',
           ]
         : [
             'Lugar: Área de ferias del Miccosukee Indian Village - 500 US Hwy 41, Miami, FL 33194',
@@ -81,6 +82,7 @@ export const events = (language) => {
             'Actuaciones de danza y música en vivo a cargo de: Joe Tohonnie Jr. y White Mountain Apache Crown Dancers, Iroquois Sky Dancers y Native Pride.',
             'Los paseos en hidrodeslizador están disponibles al otro lado de la calle.',
             'Los invitamos a participar en nuestra tradición navideña con su familia.',
+            'Servicio de transporte GRATIS desde y hacia Miccosukee Casino & Resort / Indian Village disponible todo el día de 9:30 AM a 5 PM.',
           ],
       /*eventbriteButton: [
         {

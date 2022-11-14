@@ -103,6 +103,14 @@ const ArtsAndCrafts = () => {
                     ? "You're invited to take part in our holiday tradition with your family."
                     : 'Los invitamos a participar en nuestra tradición navideña con su familia.'}
                 </p>
+                <p
+                  style={{ fontStyle: 'italic', fontWeight: '400' }}
+                  className={classes.contentSectionDetails}
+                >
+                  {language
+                    ? 'FREE shuttle service to and from Miccosukee Casino & Resort / Indian Village available all day from 9:30 AM to 5 PM.'
+                    : 'Servicio de transporte GRATIS desde y hacia Miccosukee Casino & Resort / Indian Village disponible todo el día de 9:30 AM a 5 PM.'}
+                </p>
               </React.Fragment>
             );
           },
