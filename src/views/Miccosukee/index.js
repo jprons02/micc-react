@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet';
 import classNames from 'classnames';
 
 // @material-ui/core components
+import { Hidden } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 //components
@@ -43,6 +44,10 @@ import { getMetaData } from 'services/functions/getMetaData.js';
 // context
 import { ContactModalContext } from 'contexts/ContactFormModalContext.js';
 import { useLanguage } from 'contexts/languageContext.js';
+
+// images
+import webBannerMobile from 'assets/media/img/miccosukee/WebHeaderMobile.jpg';
+import webBanner from 'assets/media/img/miccosukee/WebHeaderDesktop.jpeg';
 
 const useStyles = makeStyles(styles);
 
@@ -142,27 +147,47 @@ const Miccosukee = (props) => {
   };
 
   return (
-    <div className={classNames(classes.main)}>
-      <div className={classes.container}>
-        <Header />
-        <ReactHelmetComponent url={window.location.pathname} />
-        <Switch>
-          <Route exact path={'/'} component={Home} />
-          <Route exact path={`${path}gaming-golf`} component={GamingGolf} />
-          <Route exact path={`${path}glades`} component={Everglades} />
-          <Route exact path={`${path}events`} component={Events} />
-          <Route exact path={`${path}events/:eventId`} component={EventPage} />
-          <Route exact path={`${path}history-admin`} component={HistoryAdmin} />
-          <Route exact path={`/404`} component={MiccosukeeErrorPage} />
-          <Route exact path={`*`} component={MiccosukeeErrorPage} />
-        </Switch>
-        <PopupModal />
-        <CustomContactModal
-          language={language}
-          showModal={showContactModal}
-          closeModal={() => closeModal(setShowContactModal)}
-          entity={{ name: 'media' }}
-        />
+    <div>
+      <div className={classNames(classes.main)}>
+        <div className={classes.container}>
+          <Header />
+          <div className={classes.webBannerDiv}>
+            <a href="/artsandcrafts" target="_blank">
+              <Hidden mdUp>
+                {<img className={classes.webBannerImg} src={webBannerMobile} />}
+              </Hidden>
+              <Hidden smDown>
+                {<img className={classes.webBannerImg} src={webBanner} />}
+              </Hidden>
+            </a>
+          </div>
+          <ReactHelmetComponent url={window.location.pathname} />
+          <Switch>
+            <Route exact path={'/'} component={Home} />
+            <Route exact path={`${path}gaming-golf`} component={GamingGolf} />
+            <Route exact path={`${path}glades`} component={Everglades} />
+            <Route exact path={`${path}events`} component={Events} />
+            <Route
+              exact
+              path={`${path}events/:eventId`}
+              component={EventPage}
+            />
+            <Route
+              exact
+              path={`${path}history-admin`}
+              component={HistoryAdmin}
+            />
+            <Route exact path={`/404`} component={MiccosukeeErrorPage} />
+            <Route exact path={`*`} component={MiccosukeeErrorPage} />
+          </Switch>
+          <PopupModal />
+          <CustomContactModal
+            language={language}
+            showModal={showContactModal}
+            closeModal={() => closeModal(setShowContactModal)}
+            entity={{ name: 'media' }}
+          />
+        </div>
       </div>
     </div>
   );
