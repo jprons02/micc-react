@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import { useRouteMatch, useHistory } from 'react-router-dom';
+
 // Core Components
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
@@ -49,6 +51,7 @@ const sliderContent = [
 const Bravo = () => {
   const language = useLanguage();
   const classes = useStyles();
+  const history = useHistory();
 
   return (
     <React.Fragment>

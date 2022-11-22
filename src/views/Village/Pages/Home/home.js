@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import classNames from 'classnames';
 
+import { isRunning } from 'services/functions/scheduleThis';
+
 import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 import { villageHours } from 'business_info/hours.js';
 
@@ -93,6 +95,22 @@ const Home = () => {
         <div className={classes.welcomeContainer}>
           <div style={{ margin: '-30px 0 30px 0' }}>
             {renderPoiHours(villageHours, language)}
+
+            {isRunning([2022, 11, 24], [2022, 11, 25]) ? (
+              <p
+                style={{
+                  fontStyle: 'italic',
+                  fontSize: '12px',
+                  marginTop: '-10px',
+                }}
+              >
+                {language
+                  ? '(Thanksgiving Day Hours)'
+                  : '(Horario del Día Acción de Gracias​)'}
+              </p>
+            ) : (
+              ''
+            )}
           </div>
           <Typography className={classes.welcome} paragraph component="h1">
             {language

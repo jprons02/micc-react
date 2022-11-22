@@ -58,6 +58,7 @@ const CafeHammock = () => {
   const classes = useStyles();
 
   const history = useHistory();
+
   useEffect(() => {
     history.push('/mcr');
   }, []);
@@ -73,8 +74,8 @@ const CafeHammock = () => {
               {renderPoiHours(mrgHours.poi.hammock, language)}
               <p>
                 {language
-                  ? 'Enjoy casual dining with a sophisticated flair. Café Hammock serves up lunch & dinner favorites, right in the middle of the gaming action. Affordable prices, tasty dishes and a relaxed ambiance are all on the menu, so stop by and enjoy a delicious meal before or after you game with us.'
-                  : 'Disfrute de una cena informal con un toque sofisticado. Café Hammock sirve los favoritos de almuerzo y cena, justo en medio de la acción del juego. Precios razonables, platos sabrosos y un ambiente relajado están en el menú, así que visítenos y disfrute de una deliciosa comida antes o después de pasar a nuestra sala de juegos.'}
+                  ? 'Enjoy casual dining with a sophisticated flair. Café Hammock serves up lunch & dinner favorites on the second floor of the Resort. Tasty dishes, craft cocktails, and a relaxed ambiance are all on the menu, so stop by and enjoy a delicious meal before or after you game with us.'
+                  : 'Disfrute de una cena informal con un toque sofisticado. Café Hammock sirve sus comidas favoritas en el segundo piso del Resort. Deliciosos platos, cócteles artesanales y un ambiente relajado están todos en el menú, así que pase y disfrute de una deliciosa comida antes o después de jugar con nosotros.'}
               </p>
               <Button
                 href="https://mapa-media.s3.amazonaws.com/website/CafeHammock_Menu_Web_2.pdf"
@@ -85,11 +86,13 @@ const CafeHammock = () => {
               </Button>{' '}
             </div>
           </GridItem>
+          {/*
           <GridItem md={5}>
             <div className={classes.imageArea}>
               <CustomImageSlider images={imageObj} />
             </div>
           </GridItem>
+          */}
         </GridContainer>
       </RaisedContainer>
     </React.Fragment>

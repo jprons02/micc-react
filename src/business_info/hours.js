@@ -7,6 +7,8 @@
 import React from 'react';
 import { isRunning } from 'services/functions/scheduleThis';
 
+import { useLanguage } from 'contexts/languageContext.js';
+
 const bravoOpeningDay = [2022, 11, 4];
 
 const getMinutes = (hours, minutes) => {
@@ -326,13 +328,13 @@ export const mrgHours = {
       {
         days: (language) =>
           language ? 'Friday & Saturday' : 'viernes y sábado',
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
+        open: `${getMinutes(17).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
       },
       {
         days: (language) => (language ? 'Sunday' : 'domingo'),
         open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
+        close: `${getMinutes(20).combinedString}`,
       },
     ],
     cypressLounge: [
@@ -399,7 +401,9 @@ export const mrgHours = {
 export const villageHours = {
   days: (language) => (language ? 'Wednesday – Sunday' : 'miercoles – domingo'),
   open: `${getMinutes(9).combinedString}`,
-  close: `${getMinutes(16, 30).combinedString}`,
+  close: isRunning([2022, 11, 24], [2022, 11, 25])
+    ? `${getMinutes(14).combinedString}`
+    : `${getMinutes(16, 30).combinedString}`,
   details: (language) => (language ? '' : ''),
   todaysHours: (dayOfWeek, language) => {
     //`Wednesday – Sunday`,
