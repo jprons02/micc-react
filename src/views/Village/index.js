@@ -93,42 +93,26 @@ export default function Miccosukee(props) {
         <div>
           <VillageHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {/*
-          <StandardAlert
-            message={
-              language ? (
-                <div>
-                  <b>
-                    <Link
-                      style={{ color: "white", fontWeight: "800" }}
-                      to={`${match.path}/covid-19`}
-                    >
-                      Click HERE for the Indian Village COVID-19 guidelines.
-                    </Link>
-                  </b>
-                </div>
-              ) : (
-                <div>
-                  <b>
-                    Oprima
-                    <Link
-                      style={{ color: "white", fontWeight: "800" }}
-                      to={`${match.path}/covid-19`}
-                    >
-                      {" "}
-                      AQUÍ{" "}
-                    </Link>
-                    para las últimas noticias de COVID-19 relacionadas a
-                    nuestros establecimientos
-                  </b>
-                </div>
-              )
-            }
-            close
-            color="info"
-            icon="info_outline"
-          />
-          */}
+          {
+            <StandardAlert
+              message={
+                language ? (
+                  <div>
+                    <b>Thanksgiving Day Hours: 9:00 A.M. - 2:00 P.M.</b>
+                  </div>
+                ) : (
+                  <div>
+                    <b>
+                      Horario del Día Acción de Gracias: 9:00 A.M. - 2:00 P.M.
+                    </b>
+                  </div>
+                )
+              }
+              close
+              color="info"
+              //icon="info_outline"
+            />
+          }
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route
