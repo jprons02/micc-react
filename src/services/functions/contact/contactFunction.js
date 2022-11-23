@@ -64,6 +64,7 @@ const getEmail = (value) => {
         'AFrye@miccosukee.com',
         'JenniferM@miccosukeetribe.com',
         'iguerra@miccosukee.com',
+        'fsamper@miccosukee.com',
       ];
     // Village
     case 'Indian Village':
