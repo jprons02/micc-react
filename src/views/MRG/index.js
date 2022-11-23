@@ -169,24 +169,23 @@ export default function Miccosukee(props) {
         <div>
           <MrgHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning([2022, 9, 27], [2030, 10, 30]) ? (
-            <StandardAlert
-              message={
-                <div id="alert2">
-                  <div>
-                    <b>
-                      {language
-                        ? 'Given the extreme impact of Hurricane Ian on the state of Florida and our surrounding counties, Miccosukee Casino & Resort is extending welcome to guests of all ages to our resort and facility until further notice.'
-                        : 'Dado el impacto extremo del huracán Ian en el estado de Florida y los condados circundantes, Miccosukee Casino & Resort da la bienvenida a los huéspedes de todas las edades a nuestro resort e instalaciones hasta nuevo aviso.'}
-                    </b>
-                  </div>
+          <StandardAlert
+            message={
+              <div id="alert2">
+                <div>
+                  <b>
+                    {language
+                      ? 'Given the extreme impact of the recent hurricanes in the state of Florida and our surrounding counties, Miccosukee Casino & Resort is extending welcome to guests of all ages to our resort and facility until further notice.'
+                      : 'Dado el impacto extremo de los recientes huracanes en el estado de la Florida y los condados circundantes, Miccosukee Casino & Resort da la bienvenida a los huéspedes de todas las edades a nuestro resort e instalaciones hasta nuevo aviso.'}
+                  </b>
                 </div>
-              }
-              close
-              color="info"
-              //icon="info_outline"
-            />
-          ) : (
+              </div>
+            }
+            close
+            color="info"
+            //icon="info_outline"
+          />
+          {/*
             <StandardAlert
               message={
                 <div id="alert1a">
@@ -212,38 +211,7 @@ export default function Miccosukee(props) {
               color="success"
               //icon="info_outline"
             />
-          )}
-          <StandardAlert
-            message={
-              <div id="alert1a">
-                {language ? (
-                  <div>
-                    <b>
-                      Café Hammock will cease operations temporarily after
-                      Sunday, October 30, to make way for our long-awaited New
-                      Poker Room. Please join us beginning November 4 for your
-                      dining favorites at Bravo Bravissimo, open Friday - Sunday
-                      on the second floor.
-                    </b>
-                  </div>
-                ) : (
-                  <div>
-                    <b>
-                      Café Hammock dejará de operar temporalmente después del
-                      domingo, 30 de octubre, para dar paso a nuestra tan
-                      esperada nueva Sala de Póquer. Visítenos a partir del 4 de
-                      noviembre para disfrutar de sus comidas favoritas en Bravo
-                      Bravissimo, abierto de viernes a domingo en el segundo
-                      piso.
-                    </b>
-                  </div>
-                )}
-              </div>
-            }
-            close
-            color="warning"
-            //icon="info_outline"
-          />
+            */}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route

@@ -53,6 +53,10 @@ const Bravo = () => {
   const classes = useStyles();
   const history = useHistory();
 
+  useEffect(() => {
+    history.push('/mcr');
+  }, []);
+
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />

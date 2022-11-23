@@ -134,11 +134,13 @@ const MrgHeader = () => {
       color: '',
       link: '',
       subMenu: [
+        /*
         {
           text: 'Bravo Bravissimo!',
           link: '/bravo-bravissimo',
           target: '',
         },
+        */
         /*
         {
           text: 'Empeeke Aaweeke International Buffet',
@@ -163,14 +165,14 @@ const MrgHeader = () => {
           target: '',
         },
         */
-        /*
+
         {
           text: 'Café Hammock',
           link: '/cafe-hammock',
           target: '',
           //divider: true,
         },
-        */
+
         /*
         {
           text: 'Cypress Lounge',

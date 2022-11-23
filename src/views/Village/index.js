@@ -93,7 +93,9 @@ export default function Miccosukee(props) {
         <div>
           <VillageHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {
+          {isRunning([2022, 11, 25]) ? (
+            ''
+          ) : (
             <StandardAlert
               message={
                 language ? (
@@ -112,7 +114,7 @@ export default function Miccosukee(props) {
               color="info"
               //icon="info_outline"
             />
-          }
+          )}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />
             <Route

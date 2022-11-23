@@ -59,14 +59,21 @@ const CafeHammock = () => {
 
   const history = useHistory();
 
-  useEffect(() => {
-    history.push('/mcr');
-  }, []);
-
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
+        <p
+          style={{
+            textAlign: 'center',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+          }}
+        >
+          {language
+            ? 'Café Hammock has moved to the Resort 2nd floor. Please join us upstairs for your fine dining favorites!'
+            : 'Café Hammock se ha mudado al Segundo piso del Resort. ¡Visítenos para disfrutar de sus platos favoritos!'}
+        </p>
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
