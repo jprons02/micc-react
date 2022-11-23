@@ -84,9 +84,9 @@ const mrgPopup = {
     },
     end: {
       year: '22',
-      month: 'December',
-      day: '5',
-      time: '',
+      month: 'November',
+      day: '30',
+      time: '23:45',
     },
   }),
   viewCount: 1,
