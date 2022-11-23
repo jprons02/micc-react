@@ -2,7 +2,7 @@
 // Stop showing popup after 1 time load... may need to change how state works
 
 //import mrgImage from 'assets/media/img/popups/payouts.jpg';
-import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+import mrgImage from 'assets/media/img/popups/MCR-BOOK-OFFERS-black friday.jpeg';
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
 import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -84,21 +84,20 @@ const mrgPopup = {
     },
     end: {
       year: '22',
-      month: 'November',
-      day: '26',
+      month: 'December',
+      day: '5',
       time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: mrgImage,
-    //alt: 'monthly payouts',
-    //linkType: '',
-    //link: '',
-    alt: 'bingo promo',
-    linkType: 'internal',
+    alt: 'resort blackfriday promo',
+    linkType: '',
+    link: '',
+    linkType: 'external',
     //mrg to mcr change
-    link: '/mcr/bingo',
+    link: 'tel:+13059252555',
   },
 };
 const mrgGamingPromotionsPopup = {
