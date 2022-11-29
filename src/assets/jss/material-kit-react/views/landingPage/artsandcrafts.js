@@ -67,11 +67,27 @@ const landingPageStyle = {
       marginBottom: '100px',
     },
   },
+  subSectionNoImage: {
+    marginBottom: '60px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      //height: '320px',
+      marginBottom: '100px',
+    },
+  },
   subSectionLast: {
     marginBottom: '0',
     //desktop view
     '@media (min-width: 960px)': {
       height: '320px',
+      marginBottom: '115px',
+    },
+  },
+  subSectionNoImageLast: {
+    marginBottom: '0',
+    //desktop view
+    '@media (min-width: 960px)': {
+      //height: '320px',
       marginBottom: '115px',
     },
   },

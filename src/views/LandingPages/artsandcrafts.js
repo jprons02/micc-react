@@ -262,7 +262,7 @@ const ArtsAndCrafts = () => {
                       : 'La lucha con lagartos era una forma de supervivencia, una técnica de caza utilizada por los Miccosukee cuando habitaron por primera vez los Everglades de Florida. Hoy, se ha convertido en una atracción popular que educa al público sobre estos poderosos reptiles que son parte esencial de este ecosistema único. ¡Nuestros luchadores de caimanes le mostrarán cómo manejan a estas criaturas salvajes en una actuación asombrosa que lo tendrá al borde de su asiento!'}
                   </p>
                 </div>
-                <div className={classes.subSectionLast}>
+                <div className={classes.subSection}>
                   <img
                     alt="crafts"
                     className={classes.subSectionImage}
@@ -282,6 +282,30 @@ const ArtsAndCrafts = () => {
                     {language
                       ? 'The Miccosukees are known for handmade sweet grass baskets, wood carvings, beadwork, and elaborate patchwork designs. They spend years honing their craft and take pride in sharing their ancestral legacy with you.'
                       : 'Los Miccosukees son conocidos por sus cestas de hierba dulce hechas a mano, tallas de madera, joyería con cuentas y elaborados diseños de retazos. Pasan años perfeccionando su oficio y se enorgullecen de compartir su legado ancestral con usted.'}
+                  </p>
+                </div>
+                <div className={classes.subSectionNoImage}>
+                  <p className={classes.contentSectionDetails}>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {language
+                        ? 'Authentic Native Food'
+                        : 'Auténtica Comida Nativa'}
+                    </span>
+                    <br />
+                    {language
+                      ? 'The Miccosukee carry on the tradition of cooking over an open fire in structures called chickees. Drinking sofkee made from corn and eating frybread made with simple ingredients like flour, sugar, and salt, their diet also includes meat, rice, and fish. Savor a fry bread taco and other tasty dishes as a part of this cultural experience.'
+                      : 'Los Miccosukee continúan con la tradición de cocinar a fuego abierto en estructuras llamadas chickees. Beber sofkee hecho de maíz y comer pan frito (fry bread) hecho con ingredientes simples como harina, azúcar y sal, su dieta también incluye carne, arroz y pescado. Saboree un taco de pan frito y otros sabrosos platillos como parte de esta experiencia cultural.'}
+                  </p>
+                </div>
+                <div className={classes.subSectionNoImageLast}>
+                  <p className={classes.contentSectionDetails}>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {language ? 'Storytelling' : 'Contar Cuentos'}
+                    </span>
+                    <br />
+                    {language
+                      ? "In Native American culture, storytelling is a way to recount the people's history, passing down traditions like local customs, how to live off the land and how to survive their environment. Learn about indigenous culture passed down from generations through the rich art of oral expression."
+                      : 'En la cultura Nativa Americana, la narración es una forma de contar la historia de la gente, transmitiendo tradiciones como las costumbres locales, cómo vivir de la tierra y cómo sobrevivir en su entorno. Aprenda sobre la cultura indígena transmitida de generación en generación a través del rico arte de la expresión oral.'}
                   </p>
                 </div>
               </div>
