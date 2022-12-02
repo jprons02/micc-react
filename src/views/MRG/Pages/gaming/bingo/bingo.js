@@ -102,8 +102,17 @@ const Bingo = () => {
                 </ul>
                 */}
 
-                {isRunning([2022, 11, 1], [2022, 11, 26]) ? (
-                  <a
+                {isRunning([2022, 12, 1], [2023, 1, 1]) ? (
+                  <img
+                    style={{
+                      width: '100%',
+                      margin: '10px 0',
+                      boxShadow:
+                        '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+                    }}
+                    src={language ? bingoPromoEn : bingoPromoSp}
+                  />
+                ) : /*<a
                     target="_blank"
                     href="https://mapa-media.s3.amazonaws.com/website/monthly_bingo_promo.pdf"
                   >
@@ -116,8 +125,8 @@ const Bingo = () => {
                       }}
                       src={language ? bingoPromoEn : bingoPromoSp}
                     />
-                  </a>
-                ) : null}
+                  </a>*/
+                null}
               </div>
             </div>
           </GridItem>

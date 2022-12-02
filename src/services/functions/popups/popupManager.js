@@ -2,7 +2,7 @@
 // Stop showing popup after 1 time load... may need to change how state works
 
 //import mrgImage from 'assets/media/img/popups/payouts.jpg';
-import mrgImage from 'assets/media/img/popups/MCR-BOOK-OFFERS-black friday.jpeg';
+import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
 import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -75,30 +75,40 @@ const miccosukeePopup = {
 const mrgPopup = {
   name: 'mrgPopup',
   id: '02',
+  //military popup notes: per Randi 12/01 @ 12:01 AM until further notice?
   showPopup: scheduler({
     start: {
       year: '22',
-      month: 'November',
+      month: 'December',
       day: '1',
       time: '',
     },
     end: {
-      year: '22',
-      month: 'November',
-      day: '30',
-      time: '23:45',
+      year: '23',
+      month: 'December',
+      day: '1',
+      time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: mrgImage,
-    alt: 'resort blackfriday promo',
+    alt: 'resort promotion',
     linkType: '',
     link: '',
     linkType: 'external',
     //mrg to mcr change
     link: 'tel:+13059252555',
   },
+  /*
+  content: {
+    image: mrgImage,
+    alt: 'Bingo Promotion',
+    linkType: '',
+    link: '/mcr/bingo',
+    linkType: 'internal',
+  },
+  */
 };
 const mrgGamingPromotionsPopup = {
   name: 'mrgGamingPromotions',

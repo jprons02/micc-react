@@ -64,7 +64,7 @@ import logo14 from 'assets/media/img/landingPages/aid2022/logos/Wipfli_Logo_Blue
 import logo16 from 'assets/media/img/landingPages/aid2022/logos/2022-rev-Logo.jpg';
 import logo18 from 'assets/media/img/landingPages/aid2022/logos/wtw_pos_clr_cs_1cs_220126.jpg';
 
-import video1 from 'assets/media/video/AID_SEPT_24.mp4';
+//import video1 from 'assets/media/video/AID_SEPT_24.mp4';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);

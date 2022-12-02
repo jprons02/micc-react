@@ -48,7 +48,7 @@ import cardStyles from 'assets/jss/material-kit-react/views/mrg/homeCardStyles.j
 import modalStyle from 'assets/jss/material-kit-react/virtualLoginModal.js';
 
 import cafeHammockVidImage from 'assets/media/img/mrg/home/Cafe-Hammock-thubnail_1x.jpg';
-import cafeHammockVid from 'assets/media/video/Cafe_Hammock_720p.mp4';
+//import cafeHammockVid from 'assets/media/video/Cafe_Hammock_720p.mp4';
 import hotelVid from 'assets/media/video/MRG_BookToday_720p.mov';
 import hotelImage from 'assets/media/img/mrg/home/MRG_BookToday_image.jpg';
 

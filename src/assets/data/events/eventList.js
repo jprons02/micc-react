@@ -1,6 +1,6 @@
 import React from 'react';
 import { eventbriteIDs } from 'assets/data/events/eventbriteIDs.js';
-import aid2021 from 'assets/media/video/AID_savethedate_spot_30sec.mp4';
+//import aid2021 from 'assets/media/video/AID_savethedate_spot_30sec.mp4';
 import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg';
 
 export const events = (language) => {
