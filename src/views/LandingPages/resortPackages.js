@@ -253,6 +253,7 @@ const ResortPackages = () => {
                   : 'Transporte ida y vuelta a los Miccosukee Airboats'}
               </li>
             </ul>
+            {/*
             <p style={detailsCss}>
               {language
                 ? '* Valid through 11/30/2022'
@@ -260,6 +261,7 @@ const ResortPackages = () => {
               <br />
               $168.60
             </p>
+            */}
             <p style={detailsCss}>
               {language
                 ? '* Valid 12/01/2022 through 4/30/2023'
@@ -322,6 +324,7 @@ const ResortPackages = () => {
                   : 'Transporte ida y vuelta al Miccosukee Golf & Country Club'}
               </li>
             </ul>
+            {/*
             <p style={detailsCss}>
               {language
                 ? '* Valid through 11/30/2022'
@@ -329,6 +332,7 @@ const ResortPackages = () => {
               <br />
               $188.60
             </p>
+            */}
             <p style={detailsCss}>
               {language
                 ? '* Valid 12/01/2022 through 4/30/2023'
@@ -356,7 +360,7 @@ const ResortPackages = () => {
           style={{ marginBottom: '20px' }}
         >
           <RaisedContainer>
-            {getaway()}
+            {/*getaway()*/}
             {bottomSpacer(130)}
             {/*horizontalRule()*/}
             {adventurePackage()}
@@ -544,6 +548,7 @@ const ResortPackages = () => {
                   : 'Transporte ida y vuelta a los Miccosukee Airboats'}
               </li>
             </ul>
+            {/*
             <p style={detailsCss}>
               {language
                 ? '* Valid through 11/30/2022'
@@ -551,6 +556,7 @@ const ResortPackages = () => {
               <br />
               $168.60
             </p>
+            */}
             <p style={detailsCss}>
               {language
                 ? '* Valid 12/01/2022 through 4/30/2023'
@@ -613,6 +619,7 @@ const ResortPackages = () => {
                   : 'Transporte ida y vuelta al Miccosukee Golf & Country Club'}
               </li>
             </ul>
+            {/*
             <p style={detailsCss}>
               {language
                 ? '* Valid through 11/30/2022'
@@ -620,6 +627,7 @@ const ResortPackages = () => {
               <br />
               $188.60
             </p>
+            */}
             <p style={detailsCss}>
               {language
                 ? '* Valid 12/01/2022 through 4/30/2023'
@@ -648,7 +656,7 @@ const ResortPackages = () => {
         >
           {/*header()*/}
           <RaisedContainer customMargin="-18px">
-            {getaway()}
+            {/*getaway()*/}
             {bottomSpacer(110)}
             {/*horizontalRule()*/}
             {adventurePackage()}
