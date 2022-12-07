@@ -350,7 +350,7 @@ export const december = {
         'Earn 500 pts, pick a gift set! Receive your gift on Thursday, Dec. 8 & 22, from 4 PM – 10 PM at the Cypress Lounge.',
       rules: {
         subSections: [
-          { id: '50', title: 'Day', body: 'Friday, December 8 & 22, 2022' },
+          { id: '50', title: 'Day', body: 'Thursday, December 8 & 22, 2022' },
           { id: '51', title: 'Promotion Type', body: 'Gifting Program' },
           {
             id: '52',
@@ -991,7 +991,7 @@ export const december = {
           {
             id: '50',
             title: 'Día',
-            body: 'viernes, 8 y 22 de diciembre de 2022',
+            body: 'jueves, 8 y 22 de diciembre de 2022',
           },
           { id: '51', title: 'Tipo de Promoción', body: 'Programa de Regalos' },
           {
