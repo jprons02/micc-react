@@ -114,7 +114,7 @@ const MrgHeader = () => {
           target: '',
         },
         {
-          text: language ? 'Poker' : 'Póker',
+          text: language ? 'Poker' : 'Póquer',
           link: '/poker',
           target: '',
         },

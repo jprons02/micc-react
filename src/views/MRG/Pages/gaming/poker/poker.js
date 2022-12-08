@@ -185,7 +185,7 @@ const Poker = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>{language ? 'Poker' : 'Póker'}</h2>
+              <h2>{language ? 'Poker' : 'Póquer'}</h2>
               {renderPoiHours(mrgHours.poi.poker, language)}
               <p>
                 {language ? "WE'RE ALL-IN!" : '¡LO ESTAMOS APOSTANDO TODO!'}

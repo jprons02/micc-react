@@ -19,7 +19,7 @@ export const mrgStatus = {
       isOpen: true,
     },
     {
-      name: (language) => (language ? 'Poker Room' : 'Sala de Póker'),
+      name: (language) => (language ? 'Poker Room' : 'Sala de Póquer'),
       isOpen: false,
     },
   ],
