@@ -186,14 +186,17 @@ const Poker = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>{language ? 'Poker' : 'Póquer'}</h2>
-              {renderPoiHours(mrgHours.poi.poker, language)}
+              <h6 style={{ color: 'red' }}>
+                {language ? 'COMING SOON' : 'ABRIENDO PRÓXIMAMENTE'}
+              </h6>
+              {/*renderPoiHours(mrgHours.poi.poker, language)*/}
               <p>
                 {language ? "WE'RE ALL-IN!" : '¡LO ESTAMOS APOSTANDO TODO!'}
               </p>
               <p>
                 {language
-                  ? 'New Poker Room Coming Soon!'
-                  : '¡Nueva Sala de Póquer Abriendo Próximamente!'}
+                  ? 'New Poker Room Opening Spring 2023!'
+                  : '¡Nueva Sala de Póquer Abriendo Primavera 2023!'}
               </p>
               {/*
               <div style={{ marginTop: "30px", marginBottom: "20px" }}>
