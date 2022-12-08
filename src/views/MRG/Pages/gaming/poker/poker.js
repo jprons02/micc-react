@@ -15,8 +15,8 @@ import CustomHorizontalTabs from 'components/CustomTabs/CustomHorizontalTabs.js'
 import CustomVerticalTabs from 'components/CustomTabs/CustomVerticalTabs.js';
 
 // Images
-import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
-import image1 from 'assets/media/img/mrg/poker/poker1.jpg';
+import bgImage from 'assets/media/img/mrg/poker/Poker_Header.jpeg';
+import image1 from 'assets/media/img/mrg/poker/Poker_Logo.jpeg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -188,14 +188,12 @@ const Poker = () => {
               <h2>{language ? 'Poker' : 'Póker'}</h2>
               {renderPoiHours(mrgHours.poi.poker, language)}
               <p>
-                {language
-                  ? 'With a whole new look and it being a non-smoking room, it’s the perfect place to come and play.'
-                  : 'Con un nuevo look y libre de humo, es el lugar perfecto para venir a jugar.'}
+                {language ? "WE'RE ALL-IN!" : '¡LO ESTAMOS APOSTANDO TODO!'}
               </p>
               <p>
                 {language
-                  ? 'All we’re missing is you, we can’t wait to see you there!'
-                  : 'Lo único que nos falta es usted, ¡y estamos ansiosos de que nos visite!'}
+                  ? 'New Poker Room Coming Soon!'
+                  : '¡Nueva Sala de Póquer Abriendo Próximamente!'}
               </p>
               {/*
               <div style={{ marginTop: "30px", marginBottom: "20px" }}>
