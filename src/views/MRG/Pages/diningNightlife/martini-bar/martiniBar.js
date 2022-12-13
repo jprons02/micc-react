@@ -29,6 +29,9 @@ import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 // Context
 import { useLanguage } from 'contexts/languageContext.js';
 
+// Dates
+import { isMartiniBarOpen } from 'business_info/importantDates';
+
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1];
@@ -48,9 +51,14 @@ const MartiniBar = () => {
   const classes = useStyles();
 
   const history = useHistory();
+  /*
   useEffect(() => {
-    history.push('/mcr');
+    // If martini bar is not open, redirect to home page.
+    if (!isMartiniBarOpen()) {
+      history.push('/mcr');
+    }
   }, []);
+  */
 
   return (
     <React.Fragment>
@@ -60,11 +68,22 @@ const MartiniBar = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Martini Bar</h2>
-              {renderPoiHours(mrgHours.poi.martiniBar, language)}
+              {isMartiniBarOpen()
+                ? renderPoiHours(mrgHours.poi.martiniBar, language)
+                : ''}
+              {!isMartiniBarOpen() ? (
+                <h6 style={{ color: 'red' }}>
+                  {language
+                    ? 'Martini Bar NOW OPEN every Friday & Saturday 6 PM - 2 AM'
+                    : 'Martini Bar AHORA ABIERTO todos los viernes y sábados, de 6 PM a 2 AM'}
+                </h6>
+              ) : (
+                ''
+              )}
               <p>
                 {language
-                  ? 'Classic cocktails in a tropical setting. Chic and comfortable, the Martini Bar is the perfect place to unwind and enjoy a drink, small plates and live entertainment throughout the week.'
-                  : 'Cócteles clásicos en un ambiente tropical. Chic y cómodo, el Martini Bar es el lugar perfecto para relajarse durante la semana y disfrutar de un trago, tapas, y entretenimiento en vivo.'}
+                  ? 'Chic and comfortable, the Martini Bar is the perfect place to unwind. Join us for live entertainment, classic cocktails, and great times!'
+                  : 'Elegante y cómodo, el Martini Bar es el lugar perfecto para relajarse. ¡Visítenos para disfrutar de entretenimiento en vivo, cócteles clásicos y mucha diversión!'}
               </p>
             </div>
           </GridItem>

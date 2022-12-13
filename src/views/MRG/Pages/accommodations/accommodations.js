@@ -65,7 +65,6 @@ const Accommodations = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>{language ? 'Accommodations' : 'Habitaciones'}</h2>
-              {/*renderPoiHours(mrgHours.poi.accommodations, language)*/}
               <h6>
                 {language
                   ? 'Guests must be 18 or older to enter the building.'

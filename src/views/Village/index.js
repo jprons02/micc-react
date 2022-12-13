@@ -93,27 +93,31 @@ export default function Miccosukee(props) {
         <div>
           <VillageHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning([2022, 11, 25]) ? (
-            ''
-          ) : (
+          {isRunning([2022, 11, 25], [2022, 12, 26]) ? (
             <StandardAlert
               message={
                 language ? (
                   <div>
-                    <b>Thanksgiving Day Hours: 9:00 A.M. - 2:00 P.M.</b>
+                    <b>
+                      The Gift Shop and Village will be closed on December 24th
+                      and December 25 2022. Happy Holidays!
+                    </b>
                   </div>
                 ) : (
                   <div>
                     <b>
-                      Horario del Día Acción de Gracias: 9:00 A.M. - 2:00 P.M.
+                      La Tienda de Regalos estará cerrada el 24 y 25 de
+                      diciembre de 2022. ¡Felices Fiestas!
                     </b>
                   </div>
                 )
               }
               close
-              color="info"
+              color="warning"
               //icon="info_outline"
             />
+          ) : (
+            ''
           )}
           <Switch>
             <Route exact path={`${match.path}/`} component={Home} />

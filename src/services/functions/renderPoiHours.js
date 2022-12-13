@@ -1,8 +1,16 @@
 import React from 'react';
 
 export const renderPoiHours = (hours, language, noH6) => {
+  // Use all custom strings for hours, days, etc.
+  if (hours.details() === 'CUSTOM') {
+    return (
+      <React.Fragment>
+        <h6 style={{ color: 'red' }}>{hours.days(language)}</h6>
+      </React.Fragment>
+    );
+  }
   // If the function exists then continue, else, map through array
-  if (hours.days) {
+  else if (hours.days) {
     if (hours.days() === '') {
       return (
         <React.Fragment>

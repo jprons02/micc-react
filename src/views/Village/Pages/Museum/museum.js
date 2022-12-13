@@ -59,7 +59,6 @@ const Museum = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Village Museum</h2>
-              {/*renderPoiHours(villageHours, language)*/}
               {language ? (
                 <React.Fragment>
                   <p>

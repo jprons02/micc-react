@@ -7,6 +7,9 @@
 import React from 'react';
 import { isRunning } from 'services/functions/scheduleThis';
 
+// important dates
+import { isMartiniBarOpen } from 'business_info/importantDates';
+
 import { useLanguage } from 'contexts/languageContext.js';
 
 const bravoOpeningDay = [2022, 11, 4];
@@ -144,13 +147,6 @@ export const mrgHours = {
         close: `${getMinutes(23).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
-      /*
-      {
-        days: (language) => (language ? "Daily" : "Diario"),
-        open: `${getMinutes(7).combinedString}`,
-        close: `${getMinutes(23).combinedString}`,
-      },
-      */
     ],
     teenArcade: [
       {
@@ -159,20 +155,6 @@ export const mrgHours = {
         close: `${getMinutes(23).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
-      /*
-      {
-        days: (language) =>
-          language ? "Sunday – Thursday" : "domingo – jueves",
-        open: `${getMinutes(13).combinedString}`,
-        close: `${getMinutes(23).combinedString}`,
-      },
-      {
-        days: (language) =>
-          language ? "Friday & Saturday" : "viernes & sábado",
-        open: `${getMinutes(13).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-      },
-      */
     ],
     poker: [
       {
@@ -182,63 +164,12 @@ export const mrgHours = {
         details: (language) => (language ? '' : ''),
       },
     ],
-    /*  
-      Bravo Bravissimo is BACK on Friday, November 4, 2022!
-      Hours: Monday - Thursday (Closed)
-      Friday & Saturday: 5 PM - 12 AM
-      Sunday: 12 PM - 8 PM
-
-      Bravo Bravissimo REGRESA el viernes, 4 de noviembre de 2022!
-      Horario: lunes - jueves (Cerrado)
-      viernes y sábado: 5 PM a 12 AM
-      domingo: 12 PM a 8 PM
-    */
-
     bravo: [
       {
-        daysClosed: (language) => {
-          return isRunning(bravoOpeningDay)
-            ? language
-              ? 'Monday - Thursday'
-              : 'lunes - jueves'
-            : language
-            ? ''
-            : '';
-        },
-      },
-      {
-        days: (language) => {
-          return isRunning(bravoOpeningDay)
-            ? language
-              ? 'Friday & Saturday'
-              : 'viernes y sábado'
-            : language
-            ? null
-            : null;
-        },
-        open: isRunning(bravoOpeningDay)
-          ? `${getMinutes(17).combinedString}`
-          : null,
-        close: isRunning(bravoOpeningDay)
-          ? `${getMinutes(0).combinedString}`
-          : null,
-      },
-      {
-        days: (language) => {
-          return isRunning(bravoOpeningDay)
-            ? language
-              ? 'Sunday'
-              : 'domingo'
-            : language
-            ? null
-            : null;
-        },
-        open: isRunning(bravoOpeningDay)
-          ? `${getMinutes(12).combinedString}`
-          : null,
-        close: isRunning(bravoOpeningDay)
-          ? `${getMinutes(20).combinedString}`
-          : null,
+        days: (language) => (language ? '' : ''),
+        open: `${getMinutes(0).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
+        details: (language) => (language ? '' : ''),
       },
     ],
     internationalBuffet: [
@@ -248,13 +179,6 @@ export const mrgHours = {
         close: `${getMinutes(1).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
-      /*
-      {
-        days: (language) => (language ? "Monday – Sunday" : "lunes – domingo"),
-        open: `${getMinutes(11).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
-      },
-      */
     ],
     maxs: [
       {
@@ -263,33 +187,8 @@ export const mrgHours = {
         open: `${getMinutes(0).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
       },
-      /*
-      {
-        days: (language) =>
-          language ? "Sunday – Thursday" : "domingo – jueves",
-        open: `${getMinutes(9).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
-        details: (language) => (language ? "" : ""),
-      },
-      {
-        days: (language) =>
-          language ? "Friday & Saturday" : "viernes y sábados",
-        open: `${getMinutes(9).combinedString}`,
-        close: `${getMinutes(2).combinedString}`,
-        details: (language) => (language ? "" : ""),
-      },
-      */
     ],
     sawgrassCafe: [
-      /*
-      {
-        days: (language) =>
-          language ? "Seven days a week" : "Seite días a la semana",
-        open: `${getMinutes(11).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-        details: (language) => (language ? "" : ""),
-      },
-      */
       {
         days: (language) =>
           language ? 'Sunday - Thursday' : 'domingo - jueves',
@@ -312,13 +211,6 @@ export const mrgHours = {
         close: `${getMinutes(1).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
-      /*
-      {
-        days: (language) => (language ? "Monday – Sunday" : "lunes – domingo"),
-        open: `${getMinutes(11).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
-      },
-      */
     ],
     hammock: [
       {
@@ -344,41 +236,26 @@ export const mrgHours = {
         close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
-      /*
-      {
-        days: (language) =>
-          language ? "Seven days a week" : "Seite días a la semana",
-        open: `${getMinutes(0).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-      },
-      */
     ],
-    martiniBar: [
-      {
-        days: (language) => (language ? '' : ''),
-        open: `${getMinutes(4).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-        details: (language) => (language ? '' : ''),
-      },
-      /*
-      {
-        days: (language) => (language ? "Monday – Thursday" : "lunes – jueves"),
-        open: `${getMinutes(4).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-      },
-      {
-        days: (language) =>
-          language ? "Friday & Saturday" : "viernes & sábado",
-        open: `${getMinutes(11).combinedString}`,
-        close: `${getMinutes(2).combinedString}`,
-      },
-      {
-        days: (language) => (language ? "Sunday" : "domingo"),
-        open: `${getMinutes(9).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-      },
-      */
-    ],
+    martiniBar: isMartiniBarOpen()
+      ? [
+          {
+            days: (language) =>
+              language ? 'Friday & Saturday' : 'viernes y sábado',
+            open: `${getMinutes(18).combinedString}`,
+            close: `${getMinutes(2).combinedString}`,
+            details: (language) => (language ? '' : ''),
+          },
+        ]
+      : [
+          {
+            days: (language) => (language ? '' : ''),
+            open: `${getMinutes(0).combinedString}`,
+            close: `${getMinutes(0).combinedString}`,
+            details: (language) => (language ? '' : ''),
+          },
+        ],
+    /*
     accommodations: [
       {
         days: (language) => (language ? '' : ''),
@@ -386,18 +263,41 @@ export const mrgHours = {
         close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
-      /*
-      {
-        days: (language) =>
-          language ? "Seven days a week" : "Seite días a la semana",
-        open: `${getMinutes(0).combinedString}`,
-        close: `${getMinutes(0).combinedString}`,
-      },
-      */
     ],
+    */
   },
 };
 
+export const villageHours = isRunning([2022, 12, 24], [2022, 12, 26])
+  ? {
+      days: (language) =>
+        language ? 'Closed for the holidays' : 'Cerrado por vacaciones',
+      open: `${getMinutes(0).combinedString}`,
+      close: `${getMinutes(0).combinedString}`,
+      details: (language) => 'CUSTOM',
+      todaysHours: (dayOfWeek, language) => {
+        return language ? 'Closed for the holidays' : 'Cerrado por vacaciones';
+      },
+    }
+  : {
+      days: (language) =>
+        language ? 'Wednesday – Sunday' : 'miercoles – domingo',
+      open: `${getMinutes(9).combinedString}`,
+      close: isRunning([2022, 11, 24], [2022, 11, 25])
+        ? `${getMinutes(14).combinedString}`
+        : `${getMinutes(16, 30).combinedString}`,
+      details: (language) => (language ? '' : ''),
+      todaysHours: (dayOfWeek, language) => {
+        //`Wednesday – Sunday`,
+        if (dayOfWeek === 1 || dayOfWeek === 2) {
+          return language ? 'Closed' : 'Cerrado';
+        } else {
+          return `${villageHours.open} – ${villageHours.close}`;
+        }
+      },
+    };
+
+/*
 export const villageHours = {
   days: (language) => (language ? 'Wednesday – Sunday' : 'miercoles – domingo'),
   open: `${getMinutes(9).combinedString}`,
@@ -441,6 +341,7 @@ export const villageHours = {
     ],
   },
 };
+*/
 
 export const golfHours = [
   {

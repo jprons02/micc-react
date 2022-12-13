@@ -49,8 +49,6 @@ const sliderContent = [
   },
 ];
 
-const giftShopHours = villageHours.poi.giftShop;
-
 const GiftShop = () => {
   const language = useLanguage();
   const classes = useStyles();
@@ -63,7 +61,6 @@ const GiftShop = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Gift Shop</h2>
-              {/*renderPoiHours(giftShopHours, language)*/}
               {language ? (
                 <p>
                   Visit the Miccosukee Indian Gift Shop to find crafts created

@@ -65,42 +65,27 @@ const Bingo = () => {
 
               <div style={{ marginTop: '25px' }}>
                 <h6>
-                  {language
-                    ? 'Bingo will operate on Wednesday, Thursday, Friday and Saturday'
-                    : 'Bingo operará miércoles, jueves, viernes y sábado'}
+                  {language ? 'Wednesday – Saturday' : 'miércoles a sábado'}
                 </h6>
-                <ul>
+                <ul style={{ marginTop: 0 }}>
+                  <li>{language ? 'Sales: 4:15 P.M.' : 'Ventas: 4:15 P.M.'}</li>
                   <li>
-                    {language
-                      ? 'Sales begin at 4:15 P.M.'
-                      : 'Ventas comienzan a las 4:15 P.M.'}
+                    {language ? 'Warm-Ups: 6:30 P.M.' : 'Prácticas: 6:30 P.M.'}
                   </li>
                   <li>
                     {language
-                      ? 'Warm-ups begin at 6:30 P.M.'
-                      : 'Prácticas comienzan a las 6:30 P.M.'}
-                  </li>
-                  <li>
-                    {language
-                      ? 'Regular session begins at 7:15 P.M.'
-                      : 'Sesión regular comienza a las 7:15 P.M.'}
+                      ? 'Regular Session: 7:15 P.M.'
+                      : 'Sesión Regular: 7:15 P.M.'}
                   </li>
                 </ul>
-
-                {/*
-                <h6>
-                  {language
-                    ? 'New safety measures:'
-                    : 'Nuevas Medidas de Seguridad'}
-                </h6>
-                <ul>
+                <h6>{language ? 'Sunday' : 'domingo'}</h6>
+                <ul style={{ marginTop: 0 }}>
                   <li>
                     {language
-                      ? 'All gaming electronic devices will be sanitized prior to and after each use.'
-                      : 'Todos los equipos electrónicos serán desinfectados antes y después de cada uso.'}
+                      ? 'Regular Session: 6:15 P.M.'
+                      : 'Sesión Regular: 6:15 P.M.'}
                   </li>
                 </ul>
-                */}
 
                 {isRunning([2022, 12, 1], [2023, 1, 1]) ? (
                   <img
@@ -112,21 +97,7 @@ const Bingo = () => {
                     }}
                     src={language ? bingoPromoEn : bingoPromoSp}
                   />
-                ) : /*<a
-                    target="_blank"
-                    href="https://mapa-media.s3.amazonaws.com/website/monthly_bingo_promo.pdf"
-                  >
-                    <img
-                      style={{
-                        width: '100%',
-                        margin: '10px 0',
-                        boxShadow:
-                          '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
-                      }}
-                      src={language ? bingoPromoEn : bingoPromoSp}
-                    />
-                  </a>*/
-                null}
+                ) : null}
               </div>
             </div>
           </GridItem>
@@ -146,3 +117,21 @@ const Bingo = () => {
 };
 
 export default Bingo;
+
+/*
+Wednesday – Saturday
+Sales: 4:15 PM
+Warm-Ups: 6:30 PM
+Regular Session: 7:15 PM
+
+Sunday 
+Regular Session: 6:15 PM
+
+miércoles a sábado
+Ventas: 4:15 PM 
+Prácticas: 6:30 PM 
+Sesión Regular: 7:15 PM
+
+domingo
+Sesión Regular: 6:15 PM ​
+*/
