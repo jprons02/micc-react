@@ -1,24 +1,27 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Button from "@material-ui/core/Button";
-import Hidden from "@material-ui/core/Hidden";
-import Drawer from "@material-ui/core/Drawer";
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
+import Hidden from '@material-ui/core/Hidden';
+import Drawer from '@material-ui/core/Drawer';
 // @material-ui/icons
-import Menu from "@material-ui/icons/Menu";
+import Menu from '@material-ui/icons/Menu';
 // core components
-import styles from "assets/jss/material-kit-react/components/headerStyle.js";
+import styles from 'assets/jss/material-kit-react/components/headerStyle.js';
+
+// Images
+import nonsmokingimage from 'assets/media/img/mrg/icons8-do-not-smoke-96.png';
 
 // custom context
-import { MobileMenuDrawerContext } from "contexts/MobileMenuDrawerContext.js";
+import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
 
 const useStyles = makeStyles(styles);
 
@@ -27,11 +30,11 @@ export default function Header(props) {
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
-      window.addEventListener("scroll", headerColorChange);
+      window.addEventListener('scroll', headerColorChange);
     }
     return function cleanup() {
       if (props.changeColorOnScroll) {
-        window.removeEventListener("scroll", headerColorChange);
+        window.removeEventListener('scroll', headerColorChange);
       }
     };
   });
@@ -43,17 +46,17 @@ export default function Header(props) {
     const windowsScrollTop = window.pageYOffset;
     if (windowsScrollTop > changeColorOnScroll.height) {
       document.body
-        .getElementsByTagName("header")[0]
+        .getElementsByTagName('header')[0]
         .classList.remove(classes[color]);
       document.body
-        .getElementsByTagName("header")[0]
+        .getElementsByTagName('header')[0]
         .classList.add(classes[changeColorOnScroll.color]);
     } else {
       document.body
-        .getElementsByTagName("header")[0]
+        .getElementsByTagName('header')[0]
         .classList.add(classes[color]);
       document.body
-        .getElementsByTagName("header")[0]
+        .getElementsByTagName('header')[0]
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
@@ -67,7 +70,7 @@ export default function Header(props) {
   const brandComponent = (
     <Button className={classes.title}>
       <Link to={props.brandLink}>
-        <img style={{ width: "175px" }} src={brand} alt={props.brandAlt} />
+        <img style={{ width: '175px' }} src={brand} alt={props.brandAlt} />
       </Link>
     </Button>
   );
@@ -77,9 +80,10 @@ export default function Header(props) {
       className={appBarClasses}
       style={{
         borderBottom: `3px solid ${props.borderColor}`,
-        borderRadius: "0",
+        borderRadius: '0',
       }}
     >
+      {/*<img src={nonsmokingimage} />*/}
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
@@ -107,7 +111,7 @@ export default function Header(props) {
       <Hidden lgUp implementation="js">
         <Drawer
           variant="temporary"
-          anchor={"right"}
+          anchor={'right'}
           open={mobileOpen}
           classes={{
             paper: classes.drawerPaper,
@@ -125,20 +129,20 @@ export default function Header(props) {
 }
 
 Header.defaultProp = {
-  color: "white",
+  color: 'white',
 };
 
 Header.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "transparent",
-    "white",
-    "rose",
-    "dark",
+    'primary',
+    'info',
+    'success',
+    'warning',
+    'danger',
+    'transparent',
+    'white',
+    'rose',
+    'dark',
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
@@ -154,15 +158,15 @@ Header.propTypes = {
   changeColorOnScroll: PropTypes.shape({
     height: PropTypes.number.isRequired,
     color: PropTypes.oneOf([
-      "primary",
-      "info",
-      "success",
-      "warning",
-      "danger",
-      "transparent",
-      "white",
-      "rose",
-      "dark",
+      'primary',
+      'info',
+      'success',
+      'warning',
+      'danger',
+      'transparent',
+      'white',
+      'rose',
+      'dark',
     ]).isRequired,
   }),
 };

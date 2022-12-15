@@ -111,6 +111,14 @@ const ArtsAndCrafts = () => {
                     ? 'FREE shuttle service to and from Miccosukee Casino & Resort / Indian Village available all day from 9:30 AM to 5 PM.'
                     : 'Servicio de transporte GRATIS desde y hacia Miccosukee Casino & Resort / Indian Village disponible todo el día de 9:30 AM a 5 PM.'}
                 </p>
+                <p
+                  style={{ fontStyle: 'italic', fontWeight: '400' }}
+                  className={classes.contentSectionDetails}
+                >
+                  {language
+                    ? 'Some vendors may only accept cash.'
+                    : 'Es posible que algunos vendedores solo acepten efectivo.'}
+                </p>
               </React.Fragment>
             );
           },
@@ -170,6 +178,7 @@ const ArtsAndCrafts = () => {
                       allowFullScreen
                     ></iframe>
                   </div>
+                  <div style={{ marginTop: '20px', textAlign: 'center' }}></div>
                 </div>
                 <hr className={classes.divider}></hr>
                 <div className={classes.subSection}>

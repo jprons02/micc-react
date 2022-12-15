@@ -22,8 +22,6 @@ import mrgLogo from 'assets/media/logos/MiccosukeeResort&Gaming.svg';
 
 import BookRoomModal from 'components/CustomModal/CustomBookRoomModal/CustomBookRoomModal.js';
 
-import { isMartiniBarOpen } from 'business_info/importantDates';
-
 const useStyles = makeStyles(styles);
 
 const MrgHeader = () => {
