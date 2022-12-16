@@ -200,7 +200,7 @@ const MrgHeader = () => {
     {
       text: 'Golf & Country Club',
       itemType: 'external',
-      href: 'https://miccosukee.com/golf',
+      href: 'http://www.miccosukeegolf.com/',
       target: '_blank',
       color: '',
       link: '',

@@ -4,6 +4,7 @@ import {
   Route,
   useRouteMatch,
   useLocation,
+  useHistory,
   Link,
 } from 'react-router-dom';
 
@@ -52,6 +53,7 @@ export default function Miccosukee(props) {
   );
   const [mobileOpen, setMobileOpen] = useContext(MobileMenuDrawerContext);
 
+  /*
   useEffect(() => {
     setMobileOpen(false);
   }, [location]);
@@ -73,6 +75,12 @@ export default function Miccosukee(props) {
     ) {
       props.history.push('/golf/info');
     }
+  }, []);
+  */
+
+  // REDIRECT ALL TRAFIC TO miccosukeegolf.com
+  useEffect(() => {
+    window.location.href = 'http://www.miccosukeegolf.com/';
   }, []);
 
   const openModal = (setState) => {
