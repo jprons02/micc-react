@@ -237,24 +237,15 @@ export const mrgHours = {
         details: (language) => (language ? '' : ''),
       },
     ],
-    martiniBar: isMartiniBarOpen()
-      ? [
-          {
-            days: (language) =>
-              language ? 'Friday & Saturday' : 'viernes y sábado',
-            open: `${getMinutes(18).combinedString}`,
-            close: `${getMinutes(2).combinedString}`,
-            details: (language) => (language ? '' : ''),
-          },
-        ]
-      : [
-          {
-            days: (language) => (language ? '' : ''),
-            open: `${getMinutes(0).combinedString}`,
-            close: `${getMinutes(0).combinedString}`,
-            details: (language) => (language ? '' : ''),
-          },
-        ],
+    martiniBar: [
+      {
+        days: (language) =>
+          language ? 'Friday & Saturday' : 'viernes y sábado',
+        open: `${getMinutes(18).combinedString}`,
+        close: `${getMinutes(2).combinedString}`,
+        details: (language) => (language ? '' : ''),
+      },
+    ],
     /*
     accommodations: [
       {
