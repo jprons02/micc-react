@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
 
+//custom colors
+import { standardLinkColor } from 'themes/colors.js';
+
 //my custom components
 import LogoSlider from 'components/CustomSlider/logoSlider';
 
@@ -144,6 +147,20 @@ const ArtsAndCrafts = () => {
                     {language
                       ? 'Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194.'
                       : 'Recinto ferial del Miccosukee Indian Village, 500 US Hwy 41, Miami, FL 33194.'}
+                  </p>
+                  <p className={classes.contentSectionDetails}>
+                    <span style={{ fontWeight: 'bold' }}>
+                      {language ? 'Event Map: ' : 'Mapa Del Evento: '}
+                    </span>
+                    <a
+                      style={{ color: standardLinkColor.color }}
+                      href="https://mapa-media.s3.amazonaws.com/events/Arts&Crafts_Map.pdf"
+                      target="_blank"
+                    >
+                      {language
+                        ? 'Click here for event map'
+                        : 'Haga clic para ver el mapa del evento'}
+                    </a>
                   </p>
                   <Button
                     href="https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=landingpage"
