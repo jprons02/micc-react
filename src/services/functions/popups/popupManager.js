@@ -2,7 +2,7 @@
 // Stop showing popup after 1 time load... may need to change how state works
 
 //import mrgImage from 'assets/media/img/popups/payouts.jpg';
-import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
+import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
 import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -85,7 +85,7 @@ const mrgPopup = {
     },
     end: {
       year: '23',
-      month: 'December',
+      month: 'January',
       day: '1',
       time: '',
     },
@@ -96,9 +96,9 @@ const mrgPopup = {
     alt: 'resort promotion',
     linkType: '',
     link: '',
-    linkType: 'external',
+    linkType: 'internal',
     //mrg to mcr change
-    link: 'tel:+13059252555',
+    link: '/mcr/bingo',
   },
   /*
   content: {
