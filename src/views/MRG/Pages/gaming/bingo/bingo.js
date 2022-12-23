@@ -15,6 +15,7 @@ import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
 import image1 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg';
 import image2 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg';
 import image3 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg';
+import image4 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE4.jpeg';
 //import bingoPromoEn from 'assets/media/img/mrg/gaming/bingo/BINGO-ENLIGH-WEB.jpg';
 import bingoPromoEn from 'assets/media/img/mrg/gaming/bingo/bingo_promos_en.jpg';
 import bingoPromoSp from 'assets/media/img/mrg/gaming/bingo/bingo_promos_sp.jpg';
@@ -33,8 +34,10 @@ const useStyles = makeStyles(styles);
 
 //const imageArray = [image1, image2, image3];
 const imageObj = [
-  { src: image1, alt: 'Bingo image 1' },
-  { src: image2, alt: 'Bingo image 2' },
+  { src: image1, alt: 'Bingo entrance' },
+  { src: image2, alt: 'Bingo seating area 1' },
+  { src: image3, alt: 'Bingo seating area 2' },
+  { src: image4, alt: 'Bingo game display' },
 ];
 
 const sliderContent = [
