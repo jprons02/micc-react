@@ -46,6 +46,7 @@ import image3 from 'assets/media/img/landingPages/artsandcrafts/iriqouis-dancers
 import image4 from 'assets/media/img/landingPages/artsandcrafts/pride-dancers-700x500.jpg';
 import image5 from 'assets/media/img/landingPages/artsandcrafts/White-mountain-apache-crown-dancers-700x500.jpg';
 import image6 from 'assets/media/img/landingPages/artsandcrafts/crafts.jpeg';
+import artsMap from 'assets/media/img/landingPages/artsandcrafts/ArtsMap.png';
 
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
@@ -148,6 +149,20 @@ const ArtsAndCrafts = () => {
                       ? 'Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194.'
                       : 'Recinto ferial del Miccosukee Indian Village, 500 US Hwy 41, Miami, FL 33194.'}
                   </p>
+                  <div>
+                    <Button
+                      href="https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=landingpage"
+                      target="_blank"
+                      style={{ backgroundColor: primary }}
+                      className={classes.contentButton}
+                    >
+                      <span className={classes.contentButtonText}>
+                        {language ? 'TICKETS' : 'ENTRADAS'}
+                      </span>
+                    </Button>
+                  </div>
+
+                  {/*
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language ? 'Event Map: ' : 'Mapa Del Evento: '}
@@ -162,17 +177,8 @@ const ArtsAndCrafts = () => {
                         : 'Haga clic para ver el mapa del evento'}
                     </a>
                   </p>
-                  <Button
-                    href="https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=landingpage"
-                    target="_blank"
-                    style={{ backgroundColor: primary }}
-                    className={classes.contentButton}
-                  >
-                    <span className={classes.contentButtonText}>
-                      {language ? 'TICKETS' : 'ENTRADAS'}
-                    </span>
-                  </Button>
-                  <div style={{ marginTop: '30px' }}>
+                  */}
+                  <div className={classes.videoSection}>
                     <iframe
                       style={{ maxWidth: '100%' }}
                       width="560"
@@ -183,6 +189,12 @@ const ArtsAndCrafts = () => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     ></iframe>
+                    <a
+                      href="https://mapa-media.s3.amazonaws.com/events/Arts&Crafts_Map.pdf"
+                      target="_blank"
+                    >
+                      <img src={artsMap} className={classes.eventMapThumb} />
+                    </a>
                   </div>
                   <div style={{ marginTop: '20px', textAlign: 'center' }}></div>
                 </div>

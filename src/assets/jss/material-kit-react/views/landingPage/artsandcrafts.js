@@ -103,6 +103,23 @@ const landingPageStyle = {
       margin: '0 20px 0 0',
     },
   },
+  videoSection: {
+    marginTop: '30px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      display: 'flex',
+      alignItems: 'center',
+    },
+  },
+  eventMapThumb: {
+    width: '100%',
+    marginTop: '30px',
+    //desktop view
+    '@media (min-width: 960px)': {
+      maxWidth: '400px',
+      marginLeft: '40px',
+    },
+  },
   divider: {
     border: '1px solid #e3e3e3',
     width: '30%',
