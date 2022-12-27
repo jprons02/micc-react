@@ -148,7 +148,6 @@ const ArtsAndCrafts = () => {
                       ? 'Miccosukee Indian Village fairgrounds, 500 US Hwy 41, Miami, FL 33194.'
                       : 'Recinto ferial del Miccosukee Indian Village, 500 US Hwy 41, Miami, FL 33194.'}
                   </p>
-                  {/*
                   <p className={classes.contentSectionDetails}>
                     <span style={{ fontWeight: 'bold' }}>
                       {language ? 'Event Map: ' : 'Mapa Del Evento: '}
@@ -163,7 +162,6 @@ const ArtsAndCrafts = () => {
                         : 'Haga clic para ver el mapa del evento'}
                     </a>
                   </p>
-                  */}
                   <Button
                     href="https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=landingpage"
                     target="_blank"
