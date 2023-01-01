@@ -482,7 +482,7 @@ export const december = {
             id: '612',
             title: 'Game Rules',
             body:
-              'If present, winners will spin a prize wheel. A total of 12 prize slots will be on the prize wheel. The prize slots will be worth the following amounts [3 - $5,023] [5 - $7,023] [3 - $10,023] [1 - $15,523]. Wheel must complete one revolution for a spin to be eligible for a prize. Wheel flapper must end the spin clearly on a value. A flapper that is stuck between two values will result in a respin. Management will make the final decision on what flapper position constitutes a respin.',
+              'If present, winners will spin a prize wheel. A total of 12 prize slots will be on the prize wheel. The prize slots will be worth the following amounts [3 - $5,023] [5 - $7,023] [3 - $10,023] [1 - $15,023]. Wheel must complete one revolution for a spin to be eligible for a prize. Wheel flapper must end the spin clearly on a value. A flapper that is stuck between two values will result in a respin. Management will make the final decision on what flapper position constitutes a respin.',
           },
           {
             id: '613',
@@ -1125,7 +1125,7 @@ export const december = {
             id: '612',
             title: 'Reglas del Juego',
             body:
-              'Si están presente, los ganadores harán girar una rueda de premios. Habrá un total de 12 espacios para premios en la rueda de premios. Los espacios de premios valdrán las siguientes cantidades [3 - $5,023] [5 - $7,023] [3 - $10,023] [1 - $15,523]. La rueda debe hacer un giro completo para que sea elegible para un premio. La aleta de la rueda debe terminar el giro claramente en un valor. Si la aleta queda atascada entre dos valores resultará en un nuevo giro. La gerencia tomará la decisión final sobre qué posición de la aleta constituye un nuevo giro.',
+              'Si están presente, los ganadores harán girar una rueda de premios. Habrá un total de 12 espacios para premios en la rueda de premios. Los espacios de premios valdrán las siguientes cantidades [3 - $5,023] [5 - $7,023] [3 - $10,023] [1 - $15,023]. La rueda debe hacer un giro completo para que sea elegible para un premio. La aleta de la rueda debe terminar el giro claramente en un valor. Si la aleta queda atascada entre dos valores resultará en un nuevo giro. La gerencia tomará la decisión final sobre qué posición de la aleta constituye un nuevo giro.',
           },
           {
             id: '613',
