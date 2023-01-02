@@ -151,6 +151,7 @@ const Miccosukee = (props) => {
       <div className={classNames(classes.main)}>
         <div className={classes.container}>
           <Header />
+          {/*
           <div className={classes.webBannerDiv}>
             <a href="/artsandcrafts" target="_blank">
               <Hidden mdUp>
@@ -161,6 +162,7 @@ const Miccosukee = (props) => {
               </Hidden>
             </a>
           </div>
+          */}
           <ReactHelmetComponent url={window.location.pathname} />
           <Switch>
             <Route exact path={'/'} component={Home} />

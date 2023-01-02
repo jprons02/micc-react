@@ -2,7 +2,7 @@
 // Stop showing popup after 1 time load... may need to change how state works
 
 //import mrgImage from 'assets/media/img/popups/payouts.jpg';
-import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
 import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -78,14 +78,14 @@ const mrgPopup = {
   //military popup notes: per Randi 12/01 @ 12:01 AM until further notice?
   showPopup: scheduler({
     start: {
-      year: '22',
-      month: 'December',
+      year: '24',
+      month: 'January',
       day: '1',
       time: '',
     },
     end: {
-      year: '23',
-      month: 'January',
+      year: '24',
+      month: 'February',
       day: '1',
       time: '',
     },
@@ -96,9 +96,9 @@ const mrgPopup = {
     alt: 'resort promotion',
     linkType: '',
     link: '',
-    linkType: 'internal',
+    linkType: 'external',
     //mrg to mcr change
-    link: '/mcr/bingo',
+    link: 'tel:+13059252555',
   },
   /*
   content: {
