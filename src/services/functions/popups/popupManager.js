@@ -1,12 +1,15 @@
 // Show popups on certain pages
 // Stop showing popup after 1 time load... may need to change how state works
-
-//import mrgImage from 'assets/media/img/popups/payouts.jpg';
 import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
+
+//JAN BINGO PROMO HERE
+//import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
 import hubPopup from 'assets/media/img/popups/bingo_promo_en.jpg';
 import jobFair from 'assets/media/img/popups/bingo_promo_en.jpg';
+import HeroSection from 'components/CustomSections/HeroSection';
 
 const d = new Date();
 
@@ -75,7 +78,6 @@ const miccosukeePopup = {
 const mrgPopup = {
   name: 'mrgPopup',
   id: '02',
-  //military popup notes: per Randi 12/01 @ 12:01 AM until further notice?
   showPopup: scheduler({
     start: {
       year: '23',
@@ -97,7 +99,6 @@ const mrgPopup = {
     linkType: '',
     link: '',
     linkType: 'external',
-    //mrg to mcr change
     link: 'tel:+13059252555',
   },
   /*

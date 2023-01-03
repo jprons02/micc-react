@@ -90,7 +90,7 @@ const Bingo = () => {
                   </li>
                 </ul>
 
-                {isRunning([2022, 12, 1], [2023, 1, 1]) ? (
+                {isRunning([2023, 1, 1], [2023, 2, 1]) ? (
                   <img
                     style={{
                       width: '100%',
@@ -99,6 +99,7 @@ const Bingo = () => {
                         '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
                     }}
                     src={language ? bingoPromoEn : bingoPromoSp}
+                    alt="bingo promotion"
                   />
                 ) : null}
               </div>

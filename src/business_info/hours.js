@@ -259,34 +259,20 @@ export const mrgHours = {
   },
 };
 
-export const villageHours = isRunning([2022, 12, 24], [2022, 12, 26])
-  ? {
-      days: (language) =>
-        language ? 'Closed for the holidays' : 'Cerrado por vacaciones',
-      open: `${getMinutes(0).combinedString}`,
-      close: `${getMinutes(0).combinedString}`,
-      details: (language) => 'CUSTOM',
-      todaysHours: (dayOfWeek, language) => {
-        return language ? 'Closed for the holidays' : 'Cerrado por vacaciones';
-      },
+export const villageHours = {
+  days: (language) => (language ? 'Wednesday – Sunday' : 'miercoles – domingo'),
+  open: `${getMinutes(9).combinedString}`,
+  close: `${getMinutes(16, 30).combinedString}`,
+  details: (language) => (language ? '' : ''),
+  todaysHours: (dayOfWeek, language) => {
+    //`Wednesday – Sunday`,
+    if (dayOfWeek === 1 || dayOfWeek === 2) {
+      return language ? 'Closed' : 'Cerrado';
+    } else {
+      return `${villageHours.open} – ${villageHours.close}`;
     }
-  : {
-      days: (language) =>
-        language ? 'Wednesday – Sunday' : 'miercoles – domingo',
-      open: `${getMinutes(9).combinedString}`,
-      close: isRunning([2022, 11, 24], [2022, 11, 25])
-        ? `${getMinutes(14).combinedString}`
-        : `${getMinutes(16, 30).combinedString}`,
-      details: (language) => (language ? '' : ''),
-      todaysHours: (dayOfWeek, language) => {
-        //`Wednesday – Sunday`,
-        if (dayOfWeek === 1 || dayOfWeek === 2) {
-          return language ? 'Closed' : 'Cerrado';
-        } else {
-          return `${villageHours.open} – ${villageHours.close}`;
-        }
-      },
-    };
+  },
+};
 
 /*
 export const villageHours = {
