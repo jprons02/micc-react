@@ -78,7 +78,7 @@ const mrgPopup = {
   //military popup notes: per Randi 12/01 @ 12:01 AM until further notice?
   showPopup: scheduler({
     start: {
-      year: '24',
+      year: '23',
       month: 'January',
       day: '1',
       time: '',
