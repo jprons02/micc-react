@@ -9,6 +9,18 @@ import {
 
 import { createBrowserHistory } from 'history';
 
+// nodejs library that concatenates classes
+import classNames from 'classnames';
+// @material-ui/core components
+import { Hidden } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+// styles
+import styles from 'assets/jss/material-kit-react/views/mrg/index.js';
+
+// web banners
+import webBanner from 'assets/media/img/mrg/banners/ResidentDiscount_Banner_Mobile.jpg';
+import webBannerDesktop from 'assets/media/img/mrg/banners/ResidentDiscount_Banner_Desktop.jpg';
+
 // Context
 import { BookRoomProvider } from 'contexts/BookRoomContext.js';
 import { PopupContext } from 'contexts/PopupContext.js';
@@ -61,10 +73,13 @@ import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 import { popupManager } from 'services/functions/popups/popupManager';
 import { isRunning } from 'services/functions/scheduleThis';
 
+const useStyles = makeStyles(styles);
+
 export default function Miccosukee(props) {
   const language = useLanguage();
   let match = useRouteMatch();
   let location = useLocation();
+  const classes = useStyles();
 
   const [popupState, setPopupState] = useContext(PopupContext);
   const [showContactModal, setShowContactModal] = useContext(
@@ -168,6 +183,21 @@ export default function Miccosukee(props) {
       <BookRoomProvider>
         <div>
           <MrgHeader />
+          <div className={classes.webBannerDiv}>
+            <a href="tel:+13059252555" target="_blank">
+              <Hidden mdUp>
+                {<img className={classes.webBannerImg} src={webBanner} />}
+              </Hidden>
+              <Hidden smDown>
+                {
+                  <img
+                    className={classes.webBannerImg}
+                    src={webBannerDesktop}
+                  />
+                }
+              </Hidden>
+            </a>
+          </div>
           <ReactHelmetComponent url={window.location.pathname} />
           <StandardAlert
             message={
