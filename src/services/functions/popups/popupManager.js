@@ -1,9 +1,9 @@
 // Show popups on certain pages
 // Stop showing popup after 1 time load... may need to change how state works
-import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
+//import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
 
 //JAN BINGO PROMO HERE
-//import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -93,6 +93,7 @@ const mrgPopup = {
     },
   }),
   viewCount: 1,
+  /*
   content: {
     image: mrgImage,
     alt: 'resort promotion',
@@ -101,7 +102,7 @@ const mrgPopup = {
     linkType: 'external',
     link: 'tel:+13059252555',
   },
-  /*
+  */
   content: {
     image: mrgImage,
     alt: 'Bingo Promotion',
@@ -109,7 +110,6 @@ const mrgPopup = {
     link: '/mcr/bingo',
     linkType: 'internal',
   },
-  */
 };
 const mrgGamingPromotionsPopup = {
   name: 'mrgGamingPromotions',
