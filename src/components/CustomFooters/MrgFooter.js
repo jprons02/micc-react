@@ -19,6 +19,9 @@ import { privacyPolicy } from 'business_info/legal';
 import { cookiePolicy } from 'business_info/legal';
 import { termsConditions } from 'business_info/legal';
 
+// Images
+import nonsmokingimage from 'assets/media/img/mrg/icons8-do-not-smoke-96.png';
+
 const MrgFooter = () => {
   const language = useLanguage();
   const [showContactModal, setShowContactModal] = useContext(
@@ -135,3 +138,5 @@ const MrgFooter = () => {
 };
 
 export default MrgFooter;
+
+/*<img src={nonsmokingimage} />*/
