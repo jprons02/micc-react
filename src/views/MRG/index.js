@@ -159,10 +159,11 @@ export default function Miccosukee(props) {
     ) {
       props.history.push('/mcr');
       setShowContactModal(true);
-    } else {
+    } /*else {
       closeModal(setShowContactModal);
-    }
-  }, []);
+    }*/
+    console.log(props.history.location.pathname);
+  }, [props.history.location.pathname]);
 
   // show food menu on load if url matches.
   // close contact modal on mount if url does not match menu url.
