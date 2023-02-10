@@ -4,7 +4,8 @@
 
 //JAN BINGO PROMO HERE
 //import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
-import mrgImage from 'assets/media/img/popups/valentines-promo.jpeg';
+//import mrgImage from 'assets/media/img/popups/valentines-promo.jpeg';
+import mrgImage from 'assets/media/img/popups/SIGN-UP_biggame-popup.jpeg';
 
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -82,21 +83,21 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: '23',
-      month: 'January',
-      day: '1',
-      time: '',
+      month: 'February',
+      day: '12',
+      time: '12:00',
     },
     end: {
       year: '23',
       month: 'February',
-      day: '15',
+      day: '19',
       time: '',
     },
   }),
   viewCount: 1,
   content: {
     image: mrgImage,
-    alt: 'resort promotion',
+    alt: 'big game promotion',
     linkType: 'internal',
     link: '/mcr/signup',
   },
