@@ -94,20 +94,20 @@ const mrgPopup = {
     },
   }),
   viewCount: 1,
-  /*
   content: {
     image: mrgImage,
     alt: 'resort promotion',
     linkType: 'internal',
-    link: '/mcr/contact',
+    link: '/mcr/signup',
   },
-  */
+  /*
   content: {
     image: mrgImage,
     alt: 'resort promotion',
     linkType: 'external',
     link: 'tel:+13059252555',
   },
+  */
   /*
   content: {
     image: mrgImage,

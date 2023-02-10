@@ -162,7 +162,14 @@ export default function Miccosukee(props) {
     } /*else {
       closeModal(setShowContactModal);
     }*/
-    console.log(props.history.location.pathname);
+    if (
+      location.pathname === '/mrg/signup' ||
+      location.pathname === '/mrg/signup/' ||
+      location.pathname === '/mcr/signup' ||
+      location.pathname === '/mcr/signup/'
+    ) {
+      props.history.push('/mcr');
+    }
   }, [props.history.location.pathname]);
 
   // show food menu on load if url matches.

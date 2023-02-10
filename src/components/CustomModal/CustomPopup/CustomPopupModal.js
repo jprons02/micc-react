@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import Dialog from "@material-ui/core/Dialog";
-import IconButton from "@material-ui/core/IconButton";
+import { makeStyles } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
+import IconButton from '@material-ui/core/IconButton';
 
 // @material-ui/icons
-import Close from "@material-ui/icons/Close";
+import Close from '@material-ui/icons/Close';
 
 // style
-import popupModalStyle from "assets/jss/material-kit-react/popupModalStyle.js";
+import popupModalStyle from 'assets/jss/material-kit-react/popupModalStyle.js';
 
 // Context
-import { PopupContext } from "contexts/PopupContext.js";
+import { PopupContext } from 'contexts/PopupContext.js';
 
 const useStyles = makeStyles(popupModalStyle);
 
@@ -29,7 +29,7 @@ const PopupModal = () => {
           ...popupState,
           [Object.keys(popupState)[i]]: {
             ...popupState[Object.keys(popupState)[i]],
-            ["showPopup"]: false,
+            ['showPopup']: false,
           },
         });
       }
@@ -46,14 +46,36 @@ const PopupModal = () => {
   };
 
   const renderPopupContent = () => {
-    if (getPopup().content.linkType === "internal") {
+    /*
+    if (getPopup().content.video) {
+      console.log('this is a video...');
+      return (
+        <Link
+          to={getPopup().content.link}
+          onClick={() => closeModal(getPopup())}
+        >
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/UiIRlg4Xr5w?controls=0?rel=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </Link>
+      );
+    }
+    */
+
+    if (getPopup().content.linkType === 'internal') {
       return (
         <Link
           to={getPopup().content.link}
           onClick={() => closeModal(getPopup())}
         >
           <img
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             alt={getPopup().content.alt}
             src={getPopup().content.image}
           />
@@ -61,7 +83,7 @@ const PopupModal = () => {
       );
     }
 
-    if (getPopup().content.linkType === "external") {
+    if (getPopup().content.linkType === 'external') {
       return (
         <a
           target="_blank"
@@ -69,7 +91,7 @@ const PopupModal = () => {
           onClick={() => closeModal(getPopup())}
         >
           <img
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
             alt={getPopup().content.alt}
             src={getPopup().content.image}
           />
@@ -79,7 +101,7 @@ const PopupModal = () => {
 
     return (
       <img
-        style={{ width: "100%" }}
+        style={{ width: '100%' }}
         alt={getPopup().content.alt}
         src={getPopup().content.image}
       />
@@ -99,7 +121,7 @@ const PopupModal = () => {
       aria-labelledby="modal-slide-title"
       aria-describedby="modal-slide-description"
     >
-      <div style={{ position: "relative" }}>
+      <div style={{ position: 'relative' }}>
         <IconButton
           className={classes.modalCloseButton}
           key="close"
@@ -109,7 +131,7 @@ const PopupModal = () => {
         >
           <Close className={classes.modalClose} />
         </IconButton>
-        {getPopup() ? renderPopupContent() : "Loading..."}
+        {getPopup() ? renderPopupContent() : 'Loading...'}
       </div>
     </Dialog>
   );
