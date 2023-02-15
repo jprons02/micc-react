@@ -48,9 +48,50 @@ export const events = (language) => {
     $15 Teachers, First Responders & Military Personnel (with valid ID)
     Free Entry for Miccosukee Community & Tribal Members
     */
-
     {
-      id: '1',
+      id: '7',
+      title: 'Removal of the Swamp Invaders Fishing Tournament',
+      type: 'standard',
+      //link: "/virtual-event/aid",
+      category: '',
+      //annual: true,
+      admission: language
+        ? '$25 for 11 & Up, $15 for 10 & Under - Includes t-shirt. First 10 kids to register receive live dozen shiners.'
+        : 'Tarifas de Inscripción: $25 para mayores de 11 años, $15 para menores de 10 años - Incluye camiseta y boleto para la rifa. Los primeros 10 niños que se registren recibirán una docena de carnada natural para pescar.',
+      startDate: '3/24/2023',
+      endDate: '3/25/2023',
+      excerpt: language
+        ? 'Fishing will begin at 7:00 P.M. on March 24th, 2023 and end prior to 3:00 P.M. on March 25th, 2023. This tournament aims to inform the public about the negative effects of exotic fish and encourages...'
+        : 'La pesca comienza el 24 de marzo de 2023 a las 7 P.M. y finaliza el 25 de marzo de 2023 antes de las 3 P.M. Este torneo tiene como objetivo informar al público sobre los efectos nocivos de los peces exóticos y fomentar...',
+
+      fullDescription: language
+        ? [
+            'Over $4,000 in cash prizes and giveaways; brought to you by the Miccosukee Fish & Wildlife Department. This tournament aims to inform the public about the negative effects of exotic fish and encourages their removal and consumption.',
+            '- Fishing begins on March 24, 2023, at 7 PM and ends on March 25, 2023, before 3 PM.',
+            '- Registration Fees: $25 for 11 & Up, $15 for 10 & Under - Includes t-shirt. First 10 kids to register receive live dozen shiners.',
+            '- Location: Miccosukee Indian Village, 500 US Highway 41 Miami, FL 33194',
+            '*Questions? Contact the Miccosukee Fish & Wildlife Department at 305-223-8380 ext. 2242.',
+          ]
+        : [
+            'Más de $4,000 en premios en efectivo y regalos; presentado por el Departamento de Pesca y Vida Silvestre Miccosukee. Este torneo tiene como objetivo informar al público sobre los efectos nocivos de los peces exóticos y fomentar su extracción y consumo.',
+            '- La pesca comienza el 24 de marzo de 2023 a las 7 PM y finaliza el 25 de marzo de 2023 antes de las 3 PM.',
+            '- Tarifas de Inscripción: $25 para mayores de 11 años, $15 para menores de 10 años - Incluye camiseta. Los primeros 10 niños que se registren recibirán una docena de carnada natural para pescar.',
+            '- Ubicación: Miccosukee Indian Village, 500 US Highway 41 Miami, FL 33194',
+            '*¿Preguntas? Comuníquese con el Departamento de Pesca y Vida Silvestre Miccosukee al 305-223-8380 ext. 2242.',
+          ],
+      // format is html or youtube
+      buttons: [
+        {
+          key: 1,
+          name: 'Register',
+          href:
+            'https://www.eventbrite.com/e/2023-removal-of-the-swamp-invaders-fishing-tournament-tickets-520595263447',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      id: '6',
       title: 'Miccosukee Indian Arts & Crafts Festival',
       type: 'standard',
       category: '',
@@ -106,7 +147,7 @@ export const events = (language) => {
       ],
     },
     {
-      id: '2',
+      id: '5',
       title: 'American Indian Day',
       type: 'standard',
       category: '',
@@ -173,7 +214,7 @@ export const events = (language) => {
           ],
     },
     {
-      id: '5',
+      id: '3',
       title: language
         ? 'Labor Day Weekend CAR & BIKE SHOW'
         : 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
@@ -200,7 +241,7 @@ export const events = (language) => {
           ],
     },
     {
-      id: '3',
+      id: '2',
       title: 'Carritos y Cafecito',
       type: 'standard',
       category: '',
@@ -248,6 +289,7 @@ export const events = (language) => {
             'Roadrage Media presents Wheels & Meals - a car, truck, jeep and motorcycle food truck festival.',
           ],
     },
+    /*
     {
       id: '0',
       title: 'Removal of the Swamp Invaders Fishing Tournament',
@@ -292,6 +334,7 @@ export const events = (language) => {
         },
       ],
     },
+    */
     /*
     {
       title: 'American Indian Day (Virtual Event)',
