@@ -18,6 +18,7 @@ import image1 from 'assets/media/img/mrg/dining/cafe-hammock/CafeHammock_Interio
 import image2 from 'assets/media/img/mrg/dining/cafe-hammock/filet.jpg';
 import image3 from 'assets/media/img/mrg/dining/cafe-hammock/chicken.jpg';
 import image4 from 'assets/media/img/mrg/dining/cafe-hammock/caprese.jpg';
+import webbanner from 'assets/media/img/mrg/dining/cafe-hammock/Cafe-Hammock_Webbanner.jpg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -91,6 +92,17 @@ const CafeHammock = () => {
               >
                 {language ? 'Menu' : 'Menú'}
               </Button>{' '}
+              <img
+                style={{
+                  width: '100%',
+                  margin: '10px 0',
+                  marginTop: '30px',
+                  boxShadow:
+                    '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+                }}
+                src={webbanner}
+                alt="meal promotion"
+              />
             </div>
           </GridItem>
           {/*
