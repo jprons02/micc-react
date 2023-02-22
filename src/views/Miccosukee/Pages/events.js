@@ -1,3 +1,6 @@
+import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
+import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
+
 import React, { useState, useEffect } from 'react';
 import { Link, withRouter, useRouteMatch } from 'react-router-dom';
 
@@ -253,6 +256,24 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                         </Button>
                       );
                     })}
+                {!event.sponsors ? null : (
+                  <div style={{ marginTop: '30px', marginBottom: '60px' }}>
+                    <h4>Sponsors:</h4>
+                    {event.sponsors.map((sponsor) => {
+                      return (
+                        <React.Fragment>
+                          <a target="_blank" href={sponsor.link}>
+                            <img
+                              style={sponsor.imageStyle}
+                              src={sponsor.image}
+                            />
+                          </a>
+                        </React.Fragment>
+                      );
+                    })}
+                  </div>
+                )}
+
                 {/*event.eventbriteButton ? (
                   <Button
                     color="success"

@@ -3,6 +3,10 @@ import { eventbriteIDs } from 'assets/data/events/eventbriteIDs.js';
 //import aid2021 from 'assets/media/video/AID_savethedate_spot_30sec.mp4';
 import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg';
 
+import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/Fish&Wildlife_Logo.jpeg';
+import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
+import wildlifeSponsor3 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
+
 export const events = (language) => {
   return [
     /* VIRTUAL EVENT THAT LINKS DIRECTLY TO EVENT
@@ -79,7 +83,37 @@ export const events = (language) => {
             '- Ubicación: Miccosukee Indian Village, 500 US Highway 41 Miami, FL 33194',
             '*¿Preguntas? Comuníquese con el Departamento de Pesca y Vida Silvestre Miccosukee al 305-223-8380 ext. 2242.',
           ],
-      // format is html or youtube
+      sponsors: [
+        {
+          name: '',
+          image: wildlifeSponsor1,
+          imageStyle: {
+            display: 'block',
+            maxWidth: '190px',
+            width: '100%',
+            marginBottom: '25px',
+            marginTop: '25px',
+          },
+          //link: '',
+        },
+        {
+          name: 'Monster3X Concept Lures',
+          image: wildlifeSponsor2,
+          imageStyle: { display: 'block', maxWidth: '350px', width: '100%' },
+          link: 'https://monster3xusa.com/',
+        },
+        {
+          name: "Iggie's Bait & Tackle",
+          image: wildlifeSponsor3,
+          imageStyle: {
+            marginTop: '30px',
+            display: 'block',
+            maxWidth: '200px',
+            width: '100%',
+          },
+          link: 'https://www.facebook.com/IggiesBaitTackle/',
+        },
+      ],
       buttons: [
         {
           key: 1,

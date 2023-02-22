@@ -1,3 +1,6 @@
+import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
+import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
+
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch, useHistory } from 'react-router-dom';
 
@@ -101,6 +104,27 @@ const EventPage = ({ entityMargin, entity }) => {
         });
       } else {
         return 'Loading...';
+      }
+    };
+
+    const renderSponsors = () => {
+      if (event.sponsors) {
+        return (
+          <div>
+            <h4>Sponsors: </h4>
+            {event.sponsors.map((sponsor) => {
+              return (
+                <React.Fragment>
+                  <a target="_blank" href={sponsor.link}>
+                    <img style={sponsor.imageStyle} src={sponsor.image} />
+                  </a>
+                </React.Fragment>
+              );
+            })}
+          </div>
+        );
+      } else {
+        return null;
       }
     };
 
@@ -221,6 +245,7 @@ const EventPage = ({ entityMargin, entity }) => {
             {renderPromoVideo()}
             <div style={{ marginTop: '25px' }}>{renderFullDescription()}</div>
             <div style={{ marginTop: '20px' }}>{renderButtons()}</div>
+            <div style={{ marginTop: '40px' }}>{renderSponsors()}</div>
           </div>
         </div>
       </div>
