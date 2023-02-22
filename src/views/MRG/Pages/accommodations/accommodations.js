@@ -65,12 +65,13 @@ const Accommodations = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>{language ? 'Accommodations' : 'Habitaciones'}</h2>
+              {/*
               <h6>
                 {language
                   ? 'Guests must be 18 or older to enter the building.'
                   : 'Los invitados deben tener 18 años o más para entrar al establecimiento.'}
               </h6>
-
+              */}
               <p>
                 {language
                   ? 'Standing at the edge of the magnificent Florida Everglades, the Resort boasts rooms designed with comfort as the number one priority as well as amazing views of the surrounding ecosystem.'

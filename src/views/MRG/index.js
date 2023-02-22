@@ -207,22 +207,6 @@ export default function Miccosukee(props) {
             </a>
           </div>
           <ReactHelmetComponent url={window.location.pathname} />
-          <StandardAlert
-            message={
-              <div id="alert2">
-                <div>
-                  <b>
-                    {language
-                      ? 'Given the extreme impact of the recent hurricanes in the state of Florida and our surrounding counties, Miccosukee Casino & Resort is extending welcome to guests of all ages to our resort and facility until further notice.'
-                      : 'Dado el impacto extremo de los recientes huracanes en el estado de la Florida y los condados circundantes, Miccosukee Casino & Resort da la bienvenida a los huéspedes de todas las edades a nuestro resort e instalaciones hasta nuevo aviso.'}
-                  </b>
-                </div>
-              </div>
-            }
-            close
-            color="info"
-            //icon="info_outline"
-          />
           {/*
             <StandardAlert
               message={

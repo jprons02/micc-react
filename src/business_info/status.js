@@ -93,8 +93,8 @@ export const mrgStatus = {
     isOpen: true,
     details: (language) => [
       language
-        ? 'Our hotel is now open, welcome back! Guests must be 18 and over to enter our premises. Questions? Please call 305-925-2555.'
-        : '¡ El hotel ya abierto! Los huéspedes deben tener 18 años o más para ingresar a nuestras instalaciones. ¿Preguntas? Llame al 305-925-2555.',
+        ? 'Our hotel is now open, welcome back! Questions? Please call 305-925-2555.'
+        : '¡ El hotel ya abierto! ¿Preguntas? Llame al 305-925-2555.',
     ],
   },
   amenities: [

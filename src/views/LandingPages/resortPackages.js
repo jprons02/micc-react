@@ -76,8 +76,8 @@ const ResortPackages = () => {
         </p>
         <p style={{ fontStyle: 'italic' }}>
           {language
-            ? 'Room occupants must be 18 years of age or older. Rates may not be combined with any other discount or offer. Management reserves all rights.'
-            : 'Los ocupantes de la habitación deben tener 18 años de edad o más. Las tarifas no se pueden combinar con otro descuento u oferta. La gerencia se reserva todos los derechos.'}
+            ? 'Rates may not be combined with any other discount or offer. Management reserves all rights.'
+            : 'Las tarifas no se pueden combinar con otro descuento u oferta. La gerencia se reserva todos los derechos.'}
         </p>
       </div>
     );
