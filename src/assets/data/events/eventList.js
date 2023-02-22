@@ -99,8 +99,8 @@ export const events = (language) => {
         {
           name: 'Monster3X Concept Lures',
           image: wildlifeSponsor2,
-          imageStyle: { display: 'block', maxWidth: '350px', width: '100%' },
-          link: 'https://monster3xusa.com/',
+          imageStyle: { display: 'block', maxWidth: '250px', width: '100%' },
+          //link: 'https://monster3xusa.com/',
         },
         {
           name: "Iggie's Bait & Tackle",
@@ -108,10 +108,10 @@ export const events = (language) => {
           imageStyle: {
             marginTop: '30px',
             display: 'block',
-            maxWidth: '200px',
+            maxWidth: '150px',
             width: '100%',
           },
-          link: 'https://www.facebook.com/IggiesBaitTackle/',
+          //link: 'https://www.facebook.com/IggiesBaitTackle/',
         },
       ],
       buttons: [
