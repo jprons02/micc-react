@@ -108,7 +108,7 @@ export const events = (language) => {
           imageStyle: {
             marginTop: '30px',
             display: 'block',
-            maxWidth: '150px',
+            maxWidth: '100px',
             width: '100%',
           },
           //link: 'https://www.facebook.com/IggiesBaitTackle/',
