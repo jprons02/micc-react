@@ -395,6 +395,7 @@ const GamingPromos = (props) => {
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
+        {/*
         <div style={{ textAlign: 'center' }}>
           <h2 style={{ fontSize: '30px' }}>{getMonth()}</h2>
           <a target="_blank" href={getCalendarPdf()}>
@@ -411,6 +412,7 @@ const GamingPromos = (props) => {
             </span>
           </a>
         </div>
+        */}
         <div className={classes.cardContainer}>
           <Hidden mdUp>{renderMobileView()}</Hidden>
           <Hidden smDown>{renderDesktopView()}</Hidden>
