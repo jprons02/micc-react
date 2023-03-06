@@ -107,6 +107,30 @@ const EventPage = ({ entityMargin, entity }) => {
       }
     };
 
+    const renderFlyer = () => {
+      if (event.flyer) {
+        return (
+          <a
+            target="_blank"
+            href="https://www.eventbrite.com/e/2023-removal-of-the-swamp-invaders-fishing-tournament-tickets-520595263447"
+          >
+            <img
+              style={{
+                width: '100%',
+                maxWidth: '600px',
+                marginTop: '20px',
+                marginBottom: '20px',
+              }}
+              alt={event.flyer.alt}
+              src={event.flyer.img}
+            />
+          </a>
+        );
+      } else {
+        return null;
+      }
+    };
+
     const renderSponsors = () => {
       if (event.sponsors) {
         return (
@@ -242,6 +266,7 @@ const EventPage = ({ entityMargin, entity }) => {
                 {`${event.startTime} - ${event.endTime}`}
               </p>
             ) : null}
+            {renderFlyer()}
             {renderPromoVideo()}
             <div style={{ marginTop: '25px' }}>{renderFullDescription()}</div>
             <div style={{ marginTop: '20px' }}>{renderButtons()}</div>

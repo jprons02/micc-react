@@ -3,6 +3,7 @@ import { eventbriteIDs } from 'assets/data/events/eventbriteIDs.js';
 //import aid2021 from 'assets/media/video/AID_savethedate_spot_30sec.mp4';
 import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg';
 
+import wildlifeFlyer from 'assets/media/img/events/wildlife/wildlifeflyer.jpg';
 import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/Fish&Wildlife_Logo.jpeg';
 import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
 import wildlifeSponsor3 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
@@ -56,6 +57,12 @@ export const events = (language) => {
       id: '7',
       title: 'Removal of the Swamp Invaders Fishing Tournament',
       type: 'standard',
+      flyer: {
+        img: wildlifeFlyer,
+        alt: 'image with details of the wildlife event.',
+        link:
+          'https://www.eventbrite.com/e/2023-removal-of-the-swamp-invaders-fishing-tournament-tickets-520595263447',
+      },
       //link: "/virtual-event/aid",
       category: '',
       //annual: true,
