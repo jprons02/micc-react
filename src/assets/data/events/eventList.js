@@ -6,7 +6,8 @@ import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg'
 import wildlifeFlyer from 'assets/media/img/events/wildlife/wildlifeflyer.jpg';
 import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/Fish&Wildlife_Logo.jpeg';
 import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
-import wildlifeSponsor3 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
+import wildlifeSponsor3 from 'assets/media/logos/sponsors/wildlifeEvent/Invasive-Species-Brewing.jpg';
+import wildlifeSponsor4 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
 
 export const events = (language) => {
   return [
@@ -110,8 +111,19 @@ export const events = (language) => {
           //link: 'https://monster3xusa.com/',
         },
         {
-          name: "Iggie's Bait & Tackle",
+          name: 'Invasive Species Brewing',
           image: wildlifeSponsor3,
+          imageStyle: {
+            marginTop: '30px',
+            display: 'block',
+            maxWidth: '120px',
+            width: '100%',
+          },
+          //link: 'https://www.facebook.com/IggiesBaitTackle/',
+        },
+        {
+          name: "Iggie's Bait & Tackle",
+          image: wildlifeSponsor4,
           imageStyle: {
             marginTop: '30px',
             display: 'block',
