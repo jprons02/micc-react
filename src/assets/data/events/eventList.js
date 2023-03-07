@@ -54,6 +54,36 @@ export const events = (language) => {
     $15 Teachers, First Responders & Military Personnel (with valid ID)
     Free Entry for Miccosukee Community & Tribal Members
     */
+
+    /*
+    A Guarachar Concert with Melena Burke, Albita, and Luis Bofill on Saturday, March 18, 2023 at Miccosukee Casino & Resort.
+    10 AM - 2 PM
+    Call 305-677-2250 to reserve your spot. Sponsored by ClinicalCare Medical Centers.
+    */
+
+    {
+      id: '8',
+      title: 'A Guarachar Concert with Melena Burke, Albita, and Luis Bofill',
+      type: 'standard',
+      category: '',
+      admission: language ? 'FREE' : 'GRATIS',
+      startDate: '3/18/2023',
+      endDate: '3/18/2023',
+      startTime: '10:00 A.M.',
+      endTime: '2:00 P.M.',
+      excerpt: language
+        ? 'Call 305-677-2250 to reserve your spot. Sponsored by ClinicalCare Medical Centers.'
+        : 'Llame ahora para reservar su asiento 305-677-2250. Patrocinado por ClinicalCare Medical Centers.',
+      fullDescription: language
+        ? [
+            'Call 305-677-2250 to reserve your spot.',
+            'Sponsored by ClinicalCare Medical Centers.',
+          ]
+        : [
+            'Llame ahora para reservar su asiento 305-677-2250.',
+            'Patrocinado por ClinicalCare Medical Centers.',
+          ],
+    },
     {
       id: '7',
       title: 'Removal of the Swamp Invaders Fishing Tournament',
