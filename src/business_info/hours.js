@@ -158,9 +158,22 @@ export const mrgHours = {
     ],
     poker: [
       {
-        days: (language) => (language ? '' : ''),
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(4).combinedString}`,
+        days: (language) => (language ? 'Monday - Thursday' : 'lunes - jueves'),
+        open: `${getMinutes(10).combinedString}`,
+        close: `${getMinutes(22).combinedString}`,
+        details: (language) => (language ? '' : ''),
+      },
+      {
+        days: (language) =>
+          language ? 'Friday & Saturday' : 'viernes y sábado',
+        open: `${getMinutes(10).combinedString}`,
+        close: `${getMinutes(1).combinedString}`,
+        details: (language) => (language ? '' : ''),
+      },
+      {
+        days: (language) => (language ? 'Sunday' : 'domingo'),
+        open: `${getMinutes(10).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
     ],

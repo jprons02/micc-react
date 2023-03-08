@@ -235,7 +235,7 @@ export default GamingPromos;
 */
 
 import React, { useState, useEffect, useContext } from 'react';
-import { useRouteMatch, useLocation } from 'react-router-dom';
+import { useRouteMatch, useLocation, Link } from 'react-router-dom';
 
 //My Custom Component
 import HeroSection from 'components/CustomSections/HeroSection.js';
@@ -410,6 +410,20 @@ const GamingPromos = (props) => {
               {language ? 'CALENDAR VIEW' : 'VER CALENDARIO'}
             </span>
           </a>
+          &nbsp; &nbsp; &nbsp;
+          <Link to={'/mcr/poker'}>
+            <span
+              style={{
+                color: 'red',
+                textAlign: 'center',
+                fontSize: '20px',
+                fontWeight: '400',
+                marginTop: '-5px',
+              }}
+            >
+              {language ? 'POKER PROMOTIONS' : 'PROMOCIONES DE PÓQUER'}
+            </span>
+          </Link>
         </div>
         <div className={classes.cardContainer}>
           <Hidden mdUp>{renderMobileView()}</Hidden>

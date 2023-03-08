@@ -17,6 +17,8 @@ import CustomVerticalTabs from 'components/CustomTabs/CustomVerticalTabs.js';
 // Images
 import bgImage from 'assets/media/img/mrg/poker/Poker_Header.jpeg';
 import image1 from 'assets/media/img/mrg/poker/Poker_Logo.jpeg';
+import pokerWeekly1 from 'assets/media/img/mrg/gaming/poker/weekly-poker-promos-layout-A.jpg';
+import pokerWeekly2 from 'assets/media/img/mrg/gaming/poker/weekly-poker-promos-layout-B.jpg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -27,6 +29,7 @@ import { mrgHours } from 'business_info/hours.js';
 
 // Services
 import { renderPoiHours } from 'services/functions/renderPoiHours.js';
+import { isRunning } from 'services/functions/scheduleThis';
 
 // Context
 import { useLanguage } from 'contexts/languageContext.js';
@@ -35,6 +38,7 @@ const useStyles = makeStyles(styles);
 
 //const imageArray = [image1];
 const imageObj = [{ src: image1, alt: 'Poker cards' }];
+//const imageObj = [{ src: pokerWeekly2, alt: 'Poker Weekly Details' }];
 
 const sliderContent = [
   {
@@ -178,6 +182,18 @@ const Poker = () => {
     },
   ];
 
+  /*
+  All Bets are On!
+  NEW 24/7 POKER ROOM
+  Opening on Friday, March 24, 2023, at 6 PM.
+  Featuring 20 live-action tables, daily promotions, tournaments, and thousands in guaranteed cash prizes.
+
+  ¡Hagan sus Apuestas!
+  NUEVA SALA DE PÓQUER 24/7
+  Inauguración el viernes, 24 de marzo de 2023 a las 6 PM
+  20 mesas de acción en vivo, promociones diarias, torneos y miles de premios en efectivo garantizados.
+  */
+
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
@@ -186,38 +202,44 @@ const Poker = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>{language ? 'Poker' : 'Póquer'}</h2>
-              <h6>
-                {language ? 'Poker Grand Opening' : 'Gran Apertura de Póquer'}
-                <br />
-                {language
-                  ? 'Friday, March 24, 2023 at 6 PM'
-                  : 'viernes, 24 de marzo de 2023 a las 6 PM'}
-              </h6>
-              {/*renderPoiHours(mrgHours.poi.poker, language)*/}
+              {isRunning([2023, 3, 24]) ? null : (
+                <h6>
+                  {language ? 'Poker Grand Opening' : 'Gran Apertura de Póquer'}
+                  <br />
+                  {language
+                    ? 'Friday, March 24, 2023 at 6 PM'
+                    : 'viernes, 24 de marzo de 2023 a las 6 PM'}
+                </h6>
+              )}
+              {isRunning([2023, 3, 24])
+                ? renderPoiHours(mrgHours.poi.poker, language)
+                : null}
               <p>
-                {language ? "WE'RE ALL-IN!" : '¡LO ESTAMOS APOSTANDO TODO!'}
+                {language ? 'All Bets are On!' : '¡Hagan sus Apuestas!'}
+                <br />
+                {language ? 'NEW 24/7 POKER ROOM' : 'NUEVA SALA DE PÓQUER 24/7'}
               </p>
               <p>
                 {language
-                  ? 'Be the first high hand winner of $5,000!'
-                  : '¡Sea el primer ganador de $5,000!'}
+                  ? 'Featuring 20 live-action tables, daily promotions, tournaments, and thousands in guaranteed cash prizes.'
+                  : '20 mesas de acción en vivo, promociones diarias, torneos y miles de premios en efectivo garantizados.'}
               </p>
               {/*
-              <div style={{ marginTop: "30px", marginBottom: "20px" }}>
-                <Hidden mdUp>
-                  <CustomHorizontalTabs
-                    sectionTitle="Monthly Promotions"
-                    tabContent={tabContent}
-                  />
-                </Hidden>
-                <Hidden smDown>
-                  <CustomVerticalTabs
-                    customboxstyle={{ height: "400px", overflow: "auto" }}
-                    boxSpacing={0}
-                    tabContent={tabContent}
-                  />
-                </Hidden>
-              </div>
+                <div style={{ marginTop: '30px', marginBottom: '20px' }}>
+                  <Hidden mdUp>
+                    <CustomHorizontalTabs
+                      sectionTitle="Monthly Promotions"
+                      tabContent={tabContent}
+                    />
+                  </Hidden>
+                  <Hidden smDown>
+                    <CustomVerticalTabs
+                      customboxstyle={{ height: '400px', overflow: 'auto' }}
+                      boxSpacing={0}
+                      tabContent={tabContent}
+                    />
+                  </Hidden>
+                </div>
               */}
             </div>
           </GridItem>
@@ -233,3 +255,57 @@ const Poker = () => {
 };
 
 export default Poker;
+
+// ORIGINAL return
+/*
+return (
+  <React.Fragment>
+    <HeroSection sliderContent={sliderContent} />
+    <RaisedContainer>
+      <GridContainer>
+        <GridItem md={7}>
+          <div className={classes.leftTextArea}>
+            <h2>{language ? 'Poker' : 'Póquer'}</h2>
+            <h6>
+              {language ? 'Poker Grand Opening' : 'Gran Apertura de Póquer'}
+              <br />
+              {language
+                ? 'Friday, March 24, 2023 at 6 PM'
+                : 'viernes, 24 de marzo de 2023 a las 6 PM'}
+            </h6>
+            {//renderPoiHours(mrgHours.poi.poker, language)}
+            <p>
+              {language ? "WE'RE ALL-IN!" : '¡LO ESTAMOS APOSTANDO TODO!'}
+            </p>
+            <p>
+              {language
+                ? 'Be the first high hand winner of $5,000!'
+                : '¡Sea el primer ganador de $5,000!'}
+            </p>
+              <div style={{ marginTop: '30px', marginBottom: '20px' }}>
+                <Hidden mdUp>
+                  <CustomHorizontalTabs
+                    sectionTitle="Monthly Promotions"
+                    tabContent={tabContent}
+                  />
+                </Hidden>
+                <Hidden smDown>
+                  <CustomVerticalTabs
+                    customboxstyle={{ height: '400px', overflow: 'auto' }}
+                    boxSpacing={0}
+                    tabContent={tabContent}
+                  />
+                </Hidden>
+              </div>
+          </div>
+        </GridItem>
+        <GridItem md={5}>
+          <div className={classes.imageArea}>
+            <CustomImageSlider images={imageObj} />
+          </div>
+        </GridItem>
+      </GridContainer>
+    </RaisedContainer>
+  </React.Fragment>
+);
+*/

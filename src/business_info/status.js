@@ -1,6 +1,9 @@
 // Open or Closed
 import { mrgHours } from './hours';
 import { renderPoiHoursSimple } from 'services/functions/renderPoiHours.js';
+import { isRunning } from 'services/functions/scheduleThis';
+
+//isRunning([2021, 12, 22], [2021, 12, 31]) ? 'do this during this timeframe' : 'this is done outside of this timeframe'
 
 export const mrgStatus = {
   gaming: [
@@ -20,7 +23,7 @@ export const mrgStatus = {
     },
     {
       name: (language) => (language ? 'Poker Room' : 'Sala de Póquer'),
-      isOpen: false,
+      isOpen: isRunning([2023, 3, 24]) ? false : true,
     },
   ],
   dining: [
