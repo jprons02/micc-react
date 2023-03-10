@@ -2,6 +2,7 @@ import React from 'react';
 
 // material-ui core components
 import { Hidden } from '@material-ui/core';
+import Button from 'components/CustomButtons/Button.js';
 
 // Core Components
 import GridContainer from 'components/Grid/GridContainer.js';
@@ -224,6 +225,21 @@ const Poker = () => {
                   ? 'Featuring 20 live-action tables, daily promotions, tournaments, and thousands in guaranteed cash prizes.'
                   : '20 mesas de acción en vivo, promociones diarias, torneos y miles de premios en efectivo garantizados.'}
               </p>
+              <Button
+                href="https://mapa-media.s3.amazonaws.com/mcr/PokerJackpotRules_Web.pdf"
+                target="_blank"
+                usetheme="contained"
+              >
+                {language ? 'Jackpot Rules' : ''}
+              </Button>
+              &nbsp; &nbsp;
+              <Button
+                href="https://mapa-media.s3.amazonaws.com/mcr/PokerGeneralRules_Web.pdf"
+                target="_blank"
+                usetheme="contained"
+              >
+                {language ? 'General Rules' : ''}
+              </Button>
               {/*
                 <div style={{ marginTop: '30px', marginBottom: '20px' }}>
                   <Hidden mdUp>

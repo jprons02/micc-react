@@ -1,15 +1,15 @@
-import { january } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/0_january.js';
-import { february } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/1_february.js';
-import { march } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/2_march.js';
-import { april } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/3_april.js';
-import { may } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/4_may.js';
-import { june } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/5_june.js';
-import { july } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/6_july.js';
-import { august } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/7_august.js';
-import { september } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/8_september.js';
-import { october } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/9_october.js';
-import { november } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/10_november.js';
-import { december } from 'views/MRG/Pages/gaming/gamingPromos/cardContent/months/11_december.js';
+import { january } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/0_january.js';
+import { february } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/1_february.js';
+import { march } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/2_march.js';
+import { april } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/3_april.js';
+import { may } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/4_may.js';
+import { june } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/5_june.js';
+import { july } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/6_july.js';
+import { august } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/7_august.js';
+import { september } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/8_september.js';
+import { october } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/9_october.js';
+import { november } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/10_november.js';
+import { december } from 'views/MRG/Pages/gaming/gamingPromos/machinePromos/cardContent/months/11_december.js';
 
 export const content = (language, month) => {
   const d = new Date();

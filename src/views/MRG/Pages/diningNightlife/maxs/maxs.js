@@ -28,6 +28,8 @@ import { renderPoiHours } from 'services/functions/renderPoiHours.js';
 // Context
 import { useLanguage } from 'contexts/languageContext.js';
 
+import { isRunning } from 'services/functions/scheduleThis';
+
 const useStyles = makeStyles(styles);
 
 //const imageArray = [image1];
@@ -65,13 +67,15 @@ const Maxs = () => {
                   ? 'Your one-stop shop for breakfast, lunch, and dinner favorites, open 24/7 for your convenience at our temporary pop-up location in the Resort deli. Savor worldwide cuisine with our new Country Bowl Combos, or grab a quick bite and head back to your favorite gaming machine in time to hit the jackpot!'
                   : 'Abierto para desayuno, almuerzo y cena las 24 horas, los 7 días de la semana. Visite nuestro nuevo local, temporalmente ubicado en el deli del Resort. Saboree la cocina mundial con nuestros nuevos Country Bowl Combos, ¡o compre un aperitivo y regrese a su máquina de juego favorita a tiempo para ganar el gran premio!'}
               </p>
-              <Button
-                target="_blank"
-                href="https://mapa-media.s3.amazonaws.com/website/Max's_DigitalMenu.pdf"
-                usetheme="contained"
-              >
-                {language ? 'MENU' : 'MENÚ'}
-              </Button>{' '}
+              {isRunning([2023, 3, 13]) ? (
+                <Button
+                  target="_blank"
+                  href="https://mapa-media.s3.amazonaws.com/website/Max's_DigitalMenu.pdf"
+                  usetheme="contained"
+                >
+                  {language ? 'MENU' : 'MENÚ'}
+                </Button>
+              ) : null}
             </div>
           </GridItem>
           <GridItem md={5}>
