@@ -278,7 +278,7 @@ const GamingMachinePromos = (props) => {
     //Purpose is ability to link to specific promos from url
     // full example ENGLISH: http://localhost:3000/mrg/promotions#0
     content(language, month).data.map((item) => {
-      if (window.location.hash === `#video${item.id}`) {
+      if (window.location.hash === `#machine${item.id}`) {
         setSelectedPromo(item);
         setShowModal(true);
       }

@@ -44,7 +44,7 @@ const sliderContent = [
   },
 ];
 
-const Maxs = () => {
+const MaxsGrabAndGo = () => {
   const language = useLanguage();
   const classes = useStyles();
 
@@ -55,32 +55,21 @@ const Maxs = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Max's Room</h2>
-              {renderPoiHours(mrgHours.poi.maxs, language)}
-              <p
-                style={{
-                  marginTop: '-13px',
-                  marginBottom: '15px',
-                  fontSize: '12px',
-                }}
-              >
-                {language
-                  ? '(Breakfast ends at 12 P.M.)'
-                  : 'Desayuno termina a las 12 P.M.'}
-              </p>
+              <h2>Max's Grab & Go</h2>
+              {renderPoiHours(mrgHours.poi.maxsgrabandgo, language)}
               <p style={{ textTransform: 'uppercase', fontWeight: 400 }}>
                 {language
-                  ? 'Located on the 2nd Floor'
-                  : 'Ubicado en el segundo piso'}
+                  ? 'Located in the Hotel Lobby'
+                  : 'Ubicado en el Lobby del Hotel'}
               </p>
               <p>
                 {language
-                  ? 'Stop by for breakfast, lunch, and dinner favorites at our second-floor location. Savor worldwide cuisine with our international plates, including Mexican, Asian, and Hispanic combinations. Take it to another level with flavorful executive plates perfect for steak and seafood lovers.'
-                  : 'Visítanos para desayunar, almorzar y cenar en nuestra ubicación en el segundo piso. Saborea la cocina mundial con nuestros platos internacionales, que incluyen combinaciones mexicanas, asiáticas e hispanas. Llévalo a otro nivel con sabrosos platos ejecutivos perfectos para los amantes de la carne y los mariscos.'}
+                  ? 'Craving a quick bite or a sweet treat? Choose from a variety of sandwiches, snacks, desserts, and beverages conveniently located in the hotel lobby next to the gaming action.'
+                  : '¿Se le antoja un aperitivo o algo dulce? Elija entre una variedad de sándwiches, refrigerios, postres y bebidas convenientemente ubicados en el lobby del hotel junto a la acción del juego.'}
               </p>
               <Button
                 target="_blank"
-                href="https://mapa-media.s3.amazonaws.com/website/MaxsRoomMenu_Web.pdf"
+                href="https://mapa-media.s3.amazonaws.com/website/Max's_DigitalMenu.pdf"
                 usetheme="contained"
               >
                 {language ? 'MENU' : 'MENÚ'}
@@ -100,4 +89,4 @@ const Maxs = () => {
   );
 };
 
-export default Maxs;
+export default MaxsGrabAndGo;

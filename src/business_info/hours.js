@@ -196,6 +196,19 @@ export const mrgHours = {
     maxs: [
       {
         days: (language) =>
+          language ? 'Tuesday - Thursday' : 'martes - jueves',
+        open: `${getMinutes(13).combinedString}`,
+        close: `${getMinutes(23).combinedString}`,
+      },
+      {
+        days: (language) => (language ? 'Friday - Monday' : 'viernes - lunes'),
+        open: `${getMinutes(7).combinedString}`,
+        close: `${getMinutes(23).combinedString}`,
+      },
+    ],
+    maxsgrabandgo: [
+      {
+        days: (language) =>
           language ? 'Seven days a week' : 'Seite días a la semana',
         open: `${getMinutes(0).combinedString}`,
         close: `${getMinutes(0).combinedString}`,

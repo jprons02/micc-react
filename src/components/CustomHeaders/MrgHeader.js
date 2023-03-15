@@ -154,8 +154,13 @@ const MrgHeader = () => {
           target: '',
         },
         {
-          text: "Max's",
+          text: "Max's Room",
           link: '/maxs',
+          target: '',
+        },
+        {
+          text: "Max's Grab & Go",
+          link: '/maxsgrabandgo',
           target: '',
         },
         /*

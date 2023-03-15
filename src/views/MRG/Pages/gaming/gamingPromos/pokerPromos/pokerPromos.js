@@ -157,7 +157,7 @@ const PokerPromos = (props) => {
               marginTop: '-5px',
             }}
           >
-            {language ? 'JACKPOT RULES' : 'JACKPOT RULES'}
+            {language ? 'JACKPOT RULES' : 'REGLAS DE PREMIOS'}
           </span>
         </a>
         &nbsp; <span style={{ fontSize: '20px' }}>|</span> &nbsp;
@@ -176,13 +176,33 @@ const PokerPromos = (props) => {
               marginTop: '-5px',
             }}
           >
-            {language ? 'GENERAL RULES' : 'GENERAL RULES'}
+            {language ? 'GENERAL RULES' : 'REGLAS GENERALES'}
+          </span>
+        </a>
+        &nbsp; <span style={{ fontSize: '20px' }}>|</span> &nbsp;
+        <a
+          target="_blank"
+          href={
+            'https://mapa-media.s3.amazonaws.com/mcr/PokerCalendar_March.pdf'
+          }
+        >
+          <span
+            style={{
+              color: standardLinkColor.color,
+              textAlign: 'center',
+              fontSize: '16px',
+              fontWeight: '400',
+              marginTop: '-5px',
+            }}
+          >
+            {language ? 'CALENDAR VIEW' : 'VER CALENDARIO'}
           </span>
         </a>
       </div>
       <div className={classes.cardContainer}>
         <Hidden mdUp>{renderMobileView()}</Hidden>
         <Hidden smDown>{renderDesktopView()}</Hidden>
+        <p className={classes.hook}>*ONE CARD TAKES ALL*</p>
       </div>
       <CustomPokerPromoModal
         selectedPromo={selectedPromo}

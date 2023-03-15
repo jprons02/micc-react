@@ -124,7 +124,7 @@ export const events = (language) => {
           ],
       sponsors: [
         {
-          name: '',
+          name: 'fish and wildlife',
           image: wildlifeSponsor1,
           imageStyle: {
             display: 'block',

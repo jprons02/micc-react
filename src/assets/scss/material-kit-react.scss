@@ -69,3 +69,42 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "AvenirNextCondensed";
+      src: url("../../fonts/AvenirNextCondensed/AvenirNextCondensed-Regular-08.woff2")
+      format("woff2"),
+    url("../../fonts/AvenirNextCondensed/AvenirNextCondensed-Regular-08.woff") format("woff"),
+    url("../..//fonts/AvenirNextCondensed/AvenirNextCondensed-Regular-08.ttf")
+      format("truetype"),
+    url("../..//fonts/AvenirNextCondensed/AvenirNextCondensed-Regular-08.svg") format("svg"),
+    url("../../fonts/AvenirNextCondensed/AvenirNextCondensed-Regular-08.eot");    
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextCondensedBold";
+      src: url("../../fonts/AvenirNextCondensedBold/AvenirNextCondensed-Bold-01.woff2")
+      format("woff2"),
+    url("../../fonts/AvenirNextCondensedBold/AvenirNextCondensed-Bold-01.woff") format("woff"),
+    url("../../fonts/AvenirNextCondensedBold/AvenirNextCondensed-Bold-01.ttf")
+      format("truetype"),
+    url("../../fonts/AvenirNextCondensedBold/AvenirNextCondensed-Bold-01.svg") format("svg"),
+    url("../../fonts/AvenirNextCondensedBold/AvenirNextCondensed-Bold-01.eot");    
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextCondensedHeavy";
+      src: url("../../fonts/AvenirNextCondensedHeavy/AvenirNextCondensed-Heavy-09.woff2")
+      format("woff2"),
+    url("../../fonts/AvenirNextCondensedHeavy/AvenirNextCondensed-Heavy-09.woff") format("woff"),
+    url("../../fonts/AvenirNextCondensedHeavy/AvenirNextCondensed-Heavy-09.ttf")
+      format("truetype"),
+    url("../../fonts/AvenirNextCondensedHeavy/AvenirNextCondensed-Heavy-09.svg") format("svg"),
+    url("../../fonts/AvenirNextCondensedHeavy/AvenirNextCondensed-Heavy-09.eot");    
+  font-weight: normal;
+  font-style: normal;
+}

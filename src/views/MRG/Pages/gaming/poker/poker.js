@@ -215,31 +215,53 @@ const Poker = () => {
               {isRunning([2023, 3, 24])
                 ? renderPoiHours(mrgHours.poi.poker, language)
                 : null}
-              <p>
-                {language ? 'All Bets are On!' : '¡Hagan sus Apuestas!'}
-                <br />
-                {language ? 'NEW 24/7 POKER ROOM' : 'NUEVA SALA DE PÓQUER 24/7'}
-              </p>
-              <p>
-                {language
-                  ? 'Featuring 20 live-action tables, daily promotions, tournaments, and thousands in guaranteed cash prizes.'
-                  : '20 mesas de acción en vivo, promociones diarias, torneos y miles de premios en efectivo garantizados.'}
-              </p>
-              <Button
-                href="https://mapa-media.s3.amazonaws.com/mcr/PokerJackpotRules_Web.pdf"
-                target="_blank"
-                usetheme="contained"
+              <div
+                style={{
+                  borderBottom: '1px solid #e8e8e8',
+                  paddingBottom: '20px',
+                  border: 'none',
+                }}
               >
-                {language ? 'Jackpot Rules' : ''}
-              </Button>
-              &nbsp; &nbsp;
-              <Button
-                href="https://mapa-media.s3.amazonaws.com/mcr/PokerGeneralRules_Web.pdf"
-                target="_blank"
-                usetheme="contained"
-              >
-                {language ? 'General Rules' : ''}
-              </Button>
+                <p>
+                  {language ? 'All Bets are On!' : '¡Hagan sus Apuestas!'}
+                  <br />
+                  {language
+                    ? 'NEW 24/7 POKER ROOM'
+                    : 'NUEVA SALA DE PÓQUER 24/7'}
+                </p>
+                <p>
+                  {language
+                    ? 'Featuring 20 live-action tables, daily promotions, tournaments, and thousands in guaranteed cash prizes.'
+                    : '20 mesas de acción en vivo, promociones diarias, torneos y miles de premios en efectivo garantizados.'}
+                </p>
+                <Button
+                  href="https://mapa-media.s3.amazonaws.com/mcr/PokerJackpotRules_Web.pdf"
+                  target="_blank"
+                  usetheme="contained"
+                >
+                  {language ? 'Jackpot Rules' : 'Reglas de Premios'}
+                </Button>
+                &nbsp; &nbsp;
+                <Button
+                  href="https://mapa-media.s3.amazonaws.com/mcr/PokerGeneralRules_Web.pdf"
+                  target="_blank"
+                  usetheme="contained"
+                >
+                  {language ? 'General Rules' : 'Reglas Generales'}
+                </Button>
+              </div>
+              {/*
+              <div style={{ paddingTop: '20px' }}>
+                <p>
+                  {language
+                    ? 'Fuel up your game with mouthwatering appetizers delivered right to your table.'
+                    : 'Alimenta tu juego con deliciosos aperitivos entregados directamente en tu mesa.'}
+                </p>
+                <Button href="#" target="_blank" usetheme="contained">
+                  {language ? 'Menu' : 'Menú'}
+                </Button>
+              </div>
+              */}
               {/*
                 <div style={{ marginTop: '30px', marginBottom: '20px' }}>
                   <Hidden mdUp>

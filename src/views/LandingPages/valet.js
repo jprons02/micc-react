@@ -16,7 +16,7 @@ import Button from 'components/CustomButtons/Button.js';
 import MrgFooter from 'components/CustomFooters/MrgFooter.js';
 
 // styles
-import styles from 'assets/jss/material-kit-react/views/landingPage/poker.js';
+import styles from 'assets/jss/material-kit-react/views/landingPage/valet.js';
 import headerStyle from 'assets/jss/material-kit-react/views/miccosukee/components/header.js';
 
 // Images
@@ -28,7 +28,7 @@ import { SettingsInputAntennaTwoTone } from '@material-ui/icons';
 const useStyles = makeStyles(styles);
 const useHeaderStyles = makeStyles(headerStyle);
 
-const Poker = () => {
+const Valet = () => {
   const classes = useStyles();
   const headerClasses = useHeaderStyles();
 
@@ -247,4 +247,4 @@ const Poker = () => {
   );
 };
 
-export default Poker;
+export default Valet;

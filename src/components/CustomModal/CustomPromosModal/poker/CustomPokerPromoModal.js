@@ -69,7 +69,7 @@ const CustomPokerPromoModal = (props) => {
         </IconButton>
         <h1 className={rulesClasses.promoTitle}>
           {props.selectedPromo.title
-            ? props.selectedPromo.title.standard
+            ? props.selectedPromo.title.leftStandard
             : 'No Title'}
         </h1>
       </DialogTitle>

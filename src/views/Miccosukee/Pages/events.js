@@ -261,7 +261,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                     <h4>Sponsors:</h4>
                     {event.sponsors.map((sponsor) => {
                       return (
-                        <React.Fragment>
+                        <React.Fragment key={sponsor.name}>
                           <a target="_blank" href={sponsor.link}>
                             <img
                               style={sponsor.imageStyle}

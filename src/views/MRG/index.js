@@ -60,6 +60,7 @@ import CafeHammock from 'views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammoc
 import CypressLounge from 'views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js';
 import MartiniBar from 'views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js';
 import Maxs from 'views/MRG/Pages/diningNightlife/maxs/maxs.js';
+import MaxsGrabAndGo from './Pages/diningNightlife/maxs/maxsgrabandgo';
 import BanquetsCatering from 'views/MRG/Pages/banquetsCatering/banquetsCatering.js';
 import MrgEvents from 'views/MRG/Pages/events/mrgEvents.js';
 import MrgEventPage from 'views/MRG/Pages/events/mrgEventPage';
@@ -295,6 +296,11 @@ export default function Miccosukee(props) {
               component={SawgrassCafe}
             />
             <Route exact path={`${match.path}/maxs`} component={Maxs} />
+            <Route
+              exact
+              path={`${match.path}/maxsgrabandgo`}
+              component={MaxsGrabAndGo}
+            />
             <Route
               exact
               path={`${match.path}/bravo-bravissimo`}

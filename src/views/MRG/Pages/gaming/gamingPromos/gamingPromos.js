@@ -49,11 +49,11 @@ const GamingPromos = (props) => {
 
   const [state, setState] = useState('machinePromos');
 
-  const regexVideo = /#video\w*/;
+  const regexMachine = /#machine\w*/;
   const regexPoker = /#poker\w*/;
 
   useEffect(() => {
-    if (regexVideo.test(window.location.hash)) {
+    if (regexMachine.test(window.location.hash)) {
       setState('machinePromos');
     }
     if (regexPoker.test(window.location.hash)) {
@@ -103,12 +103,15 @@ const GamingPromos = (props) => {
     setState(state);
   };
 
+  // SWITCH OUT CURRENT MONTH ON POKER WHEN CARD CONTENT IS ADDED FOR FUTURE MONTH
+  // SWITCH OUT CURRENT MONTH ON POKER WHEN CARD CONTENT IS ADDED FOR FUTURE MONTH
+  // SWITCH OUT CURRENT MONTH ON POKER WHEN CARD CONTENT IS ADDED FOR FUTURE MONTH
   const renderContent = () => {
     switch (state) {
       case 'machinePromos':
         return <GamingMachinePromos month={month} />;
       case 'pokerPromos':
-        return <PokerPromos month={month} />;
+        return <PokerPromos month={currentMonth} />;
       default:
         return <GamingMachinePromos month={month} />;
     }
@@ -126,14 +129,15 @@ const GamingPromos = (props) => {
           >
             {language ? 'Machine Promos' : 'Máquinas de Juego'}
           </Button>
-          &nbsp; &nbsp;
           {/*
+          &nbsp; &nbsp;
           <Button
             onClick={() => handleClick('pokerPromos')}
             usetheme={state === 'pokerPromos' ? 'contained' : 'outlined'}
           >
             {language ? 'Poker Promos' : 'Póquer'}
-          </Button>*/}
+          </Button>
+          */}
         </div>
         <div style={{ paddingTop: '80px' }}>{renderContent()}</div>
       </RaisedContainer>
