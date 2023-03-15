@@ -249,6 +249,10 @@ const Poker = () => {
                 >
                   {language ? 'General Rules' : 'Reglas Generales'}
                 </Button>
+                &nbsp; &nbsp;
+                <Button href="/mcr/promotions#poker" usetheme="contained">
+                  {language ? 'Poker Promos' : 'promociones de póquer'}
+                </Button>
               </div>
               {/*
               <div style={{ paddingTop: '20px' }}>
