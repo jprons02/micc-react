@@ -129,7 +129,6 @@ const GamingPromos = (props) => {
           >
             {language ? 'Machine Promos' : 'Máquinas de Juego'}
           </Button>
-          {/*
           &nbsp; &nbsp;
           <Button
             onClick={() => handleClick('pokerPromos')}
@@ -137,7 +136,6 @@ const GamingPromos = (props) => {
           >
             {language ? 'Poker Promos' : 'Póquer'}
           </Button>
-          */}
         </div>
         <div style={{ paddingTop: '80px' }}>{renderContent()}</div>
       </RaisedContainer>
