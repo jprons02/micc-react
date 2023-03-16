@@ -117,7 +117,11 @@ export const march = {
       rules: {
         subSections: [
           { id: '00', title: 'Day', body: 'Fridays & Saturdays' },
-          { id: '01', title: 'Time', body: '12:30 P.M to 1 A.M.' },
+          {
+            id: '01',
+            title: 'Time',
+            body: '12:30 P.M to 1 A.M., 11:30 P.M. - 1 A.M.',
+          },
           { id: '02', title: 'Frequency', body: 'Every 30 minutes' },
           {
             id: '03',
