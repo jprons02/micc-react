@@ -24,12 +24,12 @@ export const march = {
           right: 'Friday - Sunday',
         },
       ],
-      disclaimer: 'Payouts once daily at noon',
+      disclaimer: 'Payouts at noon',
       rules: {
         subSections: [
           { id: '00', title: 'Day', body: 'Monday through Sunday' },
           { id: '01', title: 'Time', body: '12:00 P.M.' },
-          { id: '02', title: 'Frequency', body: 'Once daily at 12:00 P.M.' },
+          { id: '02', title: 'Frequency', body: 'At 12:00 P.M.' },
           {
             id: '03',
             title: 'Prize Amount',
@@ -104,6 +104,8 @@ export const march = {
           id: '0',
           left: '$500',
           right: '12:30 PM - 1 AM*',
+          rightTop: '12:30 PM - 6:30 PM',
+          rightBottom: '11:30 PM - 1 AM',
         },
         {
           id: '1',

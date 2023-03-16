@@ -129,28 +129,49 @@ export default function PokerPromoCard(props) {
         <Hidden smDown>{renderDesktopTitle()}</Hidden>
 
         {props.content.body.map((item) => {
+          const leftSideBody = () => {
+            if (item.leftTop && item.leftBottom) {
+              return (
+                <GridItem md={6}>
+                  <p className={classes.bodyLeft}>
+                    {item.leftTop}
+                    <br />
+                    {item.leftBottom}
+                  </p>
+                </GridItem>
+              );
+            } else {
+              return (
+                <GridItem md={6}>
+                  <p className={classes.bodyLeft}>{item.left}</p>
+                </GridItem>
+              );
+            }
+          };
+          const rightSideBody = () => {
+            if (item.rightTop && item.rightBottom) {
+              return (
+                <GridItem md={6} style={{ padding: '2px' }}>
+                  <p className={classes.bodyRightTop}>
+                    {item.rightTop}
+                    <br />
+                    {item.rightBottom}
+                    <br />
+                  </p>
+                </GridItem>
+              );
+            } else {
+              return (
+                <GridItem md={6} style={{ padding: '2px' }}>
+                  <p className={classes.bodyRight}>{item.right}</p>
+                </GridItem>
+              );
+            }
+          };
           return (
             <GridContainer key={item.id} className={classes.bottomCardBody}>
-              <GridItem md={6}>
-                <p
-                  style={{
-                    margin: '0px',
-                    fontSize: '28px',
-                    fontWeight: '600',
-                    fontFamily: 'AvenirNextBold, sans-serif',
-                    color: '#f8a14e',
-                  }}
-                >
-                  {item.left}
-                </p>
-              </GridItem>
-              <GridItem md={6} style={{ padding: '2px' }}>
-                <p
-                  style={{ margin: '0px', fontSize: '23px', fontWeight: '400' }}
-                >
-                  {item.right}
-                </p>
-              </GridItem>
+              {leftSideBody()}
+              {rightSideBody()}
             </GridContainer>
           );
         })}

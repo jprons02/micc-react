@@ -73,6 +73,23 @@ const pokerPromoCardStyle = {
     borderBottom: '1px solid #393939',
     fontFamily: 'AvenirNextCondensed, sans-serif',
   },
+  bodyLeft: {
+    margin: '0 0 5px 0',
+    fontSize: '28px',
+    fontWeight: '600',
+    fontFamily: 'AvenirNextBold, sans-serif',
+    color: '#f8a14e',
+  },
+  bodyRight: {
+    margin: '0px',
+    fontSize: '23px',
+    fontWeight: '400',
+  },
+  bodyRightTop: {
+    margin: '0px',
+    fontSize: '18px',
+    fontWeight: '400',
+  },
   buttonStyle: {
     display: 'block',
     margin: 'auto',
@@ -115,6 +132,12 @@ const pokerPromoCardStyle = {
       paddingTop: '30px',
       paddingBottom: '70px',
       fontSize: '70px',
+    },
+    bottomCardBody: {
+      height: '60px',
+    },
+    bodyLeft: {
+      margin: '0',
     },
   },
 };
