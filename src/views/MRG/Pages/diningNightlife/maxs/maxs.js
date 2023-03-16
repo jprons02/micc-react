@@ -66,10 +66,10 @@ const Maxs = () => {
                   ? 'BREAKFAST Friday - Monday, 7 AM to noon'
                   : 'DESAYUNO viernes a lunes, de 7 AM a mediodía'}
               </h6>
-              <p style={{ textTransform: 'uppercase', fontWeight: 400 }}>
+              <p style={{ fontWeight: 400 }}>
                 {language
-                  ? 'Located on the 2nd Floor'
-                  : 'Ubicado en el segundo piso'}
+                  ? 'Located in the upstairs buffet area.'
+                  : 'Ubicado en el área de bufé del segundo piso.'}
               </p>
               <p>
                 {language
