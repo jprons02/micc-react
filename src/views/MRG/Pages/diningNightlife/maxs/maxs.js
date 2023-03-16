@@ -56,18 +56,16 @@ const Maxs = () => {
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
               <h2>Max's Room</h2>
-              {renderPoiHours(mrgHours.poi.maxs, language)}
-              <p
-                style={{
-                  marginTop: '-13px',
-                  marginBottom: '15px',
-                  fontSize: '12px',
-                }}
-              >
+              {/*renderPoiHours(mrgHours.poi.maxs, language)*/}
+              <h6>
                 {language
-                  ? '(Breakfast ends at 12 P.M.)'
-                  : 'Desayuno termina a las 12 P.M.'}
-              </p>
+                  ? 'OPEN DAILY 1 PM - 11 PM'
+                  : 'ABIERTO TODOS LOS DÍAS 1 PM a 11 PM'}
+                <br />
+                {language
+                  ? 'BREAKFAST Friday - Monday, 7 AM to noon'
+                  : 'DESAYUNO viernes a lunes, de 7 AM a mediodía'}
+              </h6>
               <p style={{ textTransform: 'uppercase', fontWeight: 400 }}>
                 {language
                   ? 'Located on the 2nd Floor'
