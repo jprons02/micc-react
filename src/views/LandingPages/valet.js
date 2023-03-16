@@ -88,7 +88,7 @@ const Valet = () => {
             alt="miccosukee emblem logo"
           />
           <h1 className={classes.headerTitle}>
-            <span className={classes.headerTitleSpan}>POKER</span>
+            <span className={classes.headerTitleSpan}>VALET</span>
           </h1>
         </div>
       </div>
@@ -224,6 +224,16 @@ const Valet = () => {
         <div className={classes.container} style={{ marginBottom: '20px' }}>
           <RaisedContainer>
             {languageToggler()}
+            <h1
+              style={{
+                textAlign: 'center',
+                paddingTop: '30px',
+                paddingBottom: '30px',
+              }}
+            >
+              COMING SOON
+            </h1>
+            {/*
             <div className={classes.contentSection}>
               {renderTopSection()}
               {renderDetails()}
@@ -233,6 +243,7 @@ const Valet = () => {
               />
               {disclaimer()}
             </div>
+            */}
           </RaisedContainer>
         </div>
       </div>
