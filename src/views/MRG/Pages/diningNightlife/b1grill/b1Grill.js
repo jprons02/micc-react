@@ -92,8 +92,8 @@ const B1Grill = () => {
               </p>
               <p>
                 {language
-                  ? "Our laid-back cafe is home to the $8 Combo providing all the fuel you need to get back to the gaming action. Serving tasty sandwiches, soups, salads, and Latino favorites like pastelitos, we know you'll enjoy our appetizing dishes and generous portions."
-                  : 'Nuestro café relajado es el lugar del Combo de $8 que provee todo el combustible que necesita para volver a la acción del juego. Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos, sabemos que disfrutará de nuestros apetitosos platos y generosas porciones.'}
+                  ? 'Do it your way with quick and casual eats located in the Bingo Hall. Open Sunday - Thursday, 12 PM - 12 AM, and Friday & Saturday, 12 PM - 1 AM.'
+                  : 'Nuestro café sirve sándwiches, sopas, ensaladas en la Sala de Bingo. Abierto de domingo a jueves, de 12 PM a 12 AM, y viernes y sábado, de 12 PM a 1 AM.'}
               </p>
               {/*
               <Button
