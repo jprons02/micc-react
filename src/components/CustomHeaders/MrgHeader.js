@@ -149,8 +149,8 @@ const MrgHeader = () => {
         },
         */
         {
-          text: 'Sawgrass Cafe',
-          link: '/sawgrass-cafe',
+          text: 'B1 Grill',
+          link: '/b1grill',
           target: '',
         },
         {

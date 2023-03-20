@@ -223,11 +223,9 @@ const ResortPackages = () => {
           return (
             <React.Fragment>
               {/* //mrg to mcr change */}
-              <Link to="/mcr/sawgrass-cafe">
+              <Link to="/mcr/b1grill">
                 <Button className={classes.contentButton}>
-                  <span className={classes.contentButtonText}>
-                    Sawgrass Cafe
-                  </span>
+                  <span className={classes.contentButtonText}>B1 Grill</span>
                 </Button>
               </Link>
               <Link to="/mcr/maxs">
@@ -244,20 +242,6 @@ const ResortPackages = () => {
               </Link>
             </React.Fragment>
           );
-
-          /*return (
-            <ul>
-              <Link to="/mrg/sawgrass-cafe">
-                <li>Sawgrass Cafe</li>
-              </Link>
-              <Link to="/mrg/maxs">
-                <li>Max's</li>
-              </Link>
-              <Link to="/mrg/cafe-hammock">
-                <li>Café Hammock</li>
-              </Link>
-            </ul>
-          );*/
         },
       },
       body: [

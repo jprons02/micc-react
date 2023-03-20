@@ -135,7 +135,7 @@ export default function ScrollableTabsButtonAuto(props) {
   };
 
   const disclaimer = (title) => {
-    if (title === 'Sawgrass Cafe Menu') {
+    if (title === 'B1 Grill Menu') {
       // display disclaimer if tab is "combos" or "hot stuff"
       if (value === 3 || value === 2) {
         return (

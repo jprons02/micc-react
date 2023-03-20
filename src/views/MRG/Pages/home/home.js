@@ -181,14 +181,14 @@ const Home = (props) => {
         src: cardImage2,
         alt: 'burger and fries',
       },
-      title: language ? 'Sawgrass Cafe' : 'Sawgrass Cafe',
+      title: language ? 'B1 Grill' : 'B1 Grill',
       body: language
-        ? 'Sawgrass Cafe serves tasty sandwiches, soups, salads, and Latino favorites like pastelitos.'
+        ? 'B1 Grill serves tasty sandwiches, soups, salads, and Latino favorites like pastelitos.'
         : 'Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos.',
       buttonText: language ? 'See Details' : 'Más Detalles',
       linkObj: {
         type: 'internal',
-        link: '/sawgrass-cafe',
+        link: '/b1grill',
       },
     },
     {

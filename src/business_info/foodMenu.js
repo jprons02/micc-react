@@ -90,8 +90,8 @@ export const ourLittleShackMenu = [
   },
 ];
 
-// Sawgrass Cafe
-export const sawgrassCafeMenu = [
+// B1 Grill
+export const b1GrillMenu = [
   /*
   {
     name: 'Breakfast',

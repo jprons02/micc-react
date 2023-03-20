@@ -214,7 +214,7 @@ export const mrgHours = {
         close: `${getMinutes(0).combinedString}`,
       },
     ],
-    sawgrassCafe: [
+    b1Grill: [
       {
         days: (language) =>
           language ? 'Sunday - Thursday' : 'domingo - jueves',

@@ -23,7 +23,7 @@ import styles from 'assets/jss/material-kit-react/views/mrg/basicPage.js';
 
 // BusinessInfo
 import { mrgHours } from 'business_info/hours.js';
-import { sawgrassCafeMenu } from 'business_info/foodMenu.js';
+import { b1GrillMenu } from 'business_info/foodMenu.js';
 
 // Services
 import { renderPoiHours } from 'services/functions/renderPoiHours.js';
@@ -49,7 +49,7 @@ const sliderContent = [
   },
 ];
 
-const SawgrassCafe = () => {
+const B1Grill = () => {
   const language = useLanguage();
   const classes = useStyles();
   let location = useLocation();
@@ -61,10 +61,10 @@ const SawgrassCafe = () => {
   useEffect(() => {
     //mrg to mcr change
     if (
-      location.pathname === '/mrg/sawgrass-cafe-menu' ||
-      location.pathname === '/mrg/sawgrass-cafe-menu/' ||
-      location.pathname === '/mcr/sawgrass-cafe-menu' ||
-      location.pathname === '/mcr/sawgrass-cafe-menu/'
+      location.pathname === '/mrg/b1grill-menu' ||
+      location.pathname === '/mrg/b1grill-menu/' ||
+      location.pathname === '/mcr/b1grill-menu' ||
+      location.pathname === '/mcr/b1grill-menu/'
     ) {
       setShowFoodMenu(true);
     } else {
@@ -83,19 +83,26 @@ const SawgrassCafe = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Sawgrass Cafe</h2>
-              {renderPoiHours(mrgHours.poi.sawgrassCafe, language)}
+              <h2>B1 Grill</h2>
+              {renderPoiHours(mrgHours.poi.b1Grill, language)}
+              <p style={{ fontWeight: 400 }}>
+                {language
+                  ? 'Located in the Bingo Hall.'
+                  : 'Ubicado en la Sala de Bingo.'}
+              </p>
               <p>
                 {language
                   ? "Our laid-back cafe is home to the $8 Combo providing all the fuel you need to get back to the gaming action. Serving tasty sandwiches, soups, salads, and Latino favorites like pastelitos, we know you'll enjoy our appetizing dishes and generous portions."
                   : 'Nuestro café relajado es el lugar del Combo de $8 que provee todo el combustible que necesita para volver a la acción del juego. Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos, sabemos que disfrutará de nuestros apetitosos platos y generosas porciones.'}
               </p>
+              {/*
               <Button
                 onClick={() => setShowFoodMenu(true)}
                 usetheme="contained"
               >
                 {language ? 'MENU' : 'MENÚ'}
               </Button>{' '}
+              */}
             </div>
           </GridItem>
           <GridItem md={5}>
@@ -108,11 +115,11 @@ const SawgrassCafe = () => {
       <CustomFoodMenuModal
         showModal={showFoodMenu}
         closeModal={() => closeModal(setShowFoodMenu)}
-        menu={sawgrassCafeMenu}
-        title="Sawgrass Cafe Menu"
+        menu={b1GrillMenu}
+        title="B1 Grill Menu"
       />
     </React.Fragment>
   );
 };
 
-export default SawgrassCafe;
+export default B1Grill;

@@ -40,13 +40,9 @@ export const mrgStatus = {
       ],
     },
     {
-      name: (language) =>
-        language
-          ? 'Sawgrass Café (Breakfast 9 AM - 11 AM)'
-          : 'Sawgrass Café (Desayuno 9 AM - 11 AM)',
-      //Sawgrass Café (Breakfast 9 AM – 11 AM)
+      name: (language) => (language ? 'B1 Grill' : 'B1 Grill'),
       isOpen: true,
-      hours: mrgHours.poi.sawgrassCafe,
+      hours: mrgHours.poi.b1Grill,
     },
     {
       name: (language) => 'Empeeke Aya Deli',

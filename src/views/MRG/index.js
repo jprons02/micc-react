@@ -52,7 +52,7 @@ import GamingPromos from 'views/MRG/Pages/gaming/gamingPromos/gamingPromos.js';
 import OneRewards from 'views/MRG/Pages/gaming/oneRewards/oneRewards.js';
 import Bingo from 'views/MRG/Pages/gaming/bingo/bingo.js';
 import Poker from 'views/MRG/Pages/gaming/poker/poker.js';
-import SawgrassCafe from 'views/MRG/Pages/diningNightlife/sawgrass-cafe/sawgrassCafe.js';
+import B1Grill from 'views/MRG/Pages/diningNightlife/b1grill/b1Grill.js';
 import InternationalBuffet from 'views/MRG/Pages/diningNightlife/international-buffet/internationalBuffet.js';
 import Bravo from 'views/MRG/Pages/diningNightlife/bravo-bravissimo/bravoBravissimo.js';
 import Deli from 'views/MRG/Pages/diningNightlife/deli/deli.js';
@@ -285,15 +285,11 @@ export default function Miccosukee(props) {
               path={`${match.path}/miccosukee-one`}
               component={OneRewards}
             />
+            <Route exact path={`${match.path}/b1grill`} component={B1Grill} />
             <Route
               exact
-              path={`${match.path}/sawgrass-cafe`}
-              component={SawgrassCafe}
-            />
-            <Route
-              exact
-              path={`${match.path}/sawgrass-cafe-menu`}
-              component={SawgrassCafe}
+              path={`${match.path}/b1grill-menu`}
+              component={B1Grill}
             />
             <Route exact path={`${match.path}/maxs`} component={Maxs} />
             <Route
