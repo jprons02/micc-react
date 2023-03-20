@@ -119,7 +119,7 @@ const PokerPromos = (props) => {
     return <Slider {...settings}>{renderCards()}</Slider>;
   };
 
-  const renderDisclaimer = () => {
+  const renderOpeningAnnouncement = () => {
     if (isRunning([2023, 3, 24])) {
       return null;
     } else {
@@ -138,10 +138,20 @@ const PokerPromos = (props) => {
     }
   };
 
+  const renderDisclaimer = () => {
+    return (
+      <p className={classes.disclaimer}>
+        Subject to change or cancellation without notice at the discretion of
+        management. See your gaming attendant for details. Must be 18 years or
+        older with proper ID.
+      </p>
+    );
+  };
+
   return (
     <React.Fragment>
       <div style={{ textAlign: 'center' }}>
-        <div>{renderDisclaimer()}</div>
+        <div>{renderOpeningAnnouncement()}</div>
         <a
           target="_blank"
           href={
@@ -202,7 +212,12 @@ const PokerPromos = (props) => {
       <div className={classes.cardContainer}>
         <Hidden mdUp>{renderMobileView()}</Hidden>
         <Hidden smDown>{renderDesktopView()}</Hidden>
+        <p className={classes.subHook}>
+          Payouts every 30 min for all promotions. Noon high hand payout once
+          daily at 12 PM.
+        </p>
         <p className={classes.hook}>*ONE CARD TAKES ALL*</p>
+        {renderDisclaimer()}
       </div>
       <CustomPokerPromoModal
         selectedPromo={selectedPromo}

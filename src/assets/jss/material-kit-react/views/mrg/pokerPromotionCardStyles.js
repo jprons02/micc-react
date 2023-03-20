@@ -7,6 +7,15 @@ const pokerPromoCardStyle = {
     fontSize: '30px',
     fontFamily: 'AvenirNextCondensedBold',
   },
+  subHook: {
+    fontWeight: 'bold',
+    fontSize: '16px',
+    marginBottom: '16px',
+  },
+  disclaimer: {
+    fontSize: '11px',
+    fontStyle: 'italic',
+  },
   cardContainer: {
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -133,12 +142,18 @@ const pokerPromoCardStyle = {
       paddingBottom: '70px',
       fontSize: '70px',
     },
+    subHook: {
+      fontWeight: 'bold',
+      fontSize: '20px',
+      marginTop: '30px',
+    },
     bottomCardBody: {
       height: '60px',
     },
     bodyLeft: {
       margin: '0',
     },
+    disclaimer: { fontSize: '14px' },
   },
 };
 

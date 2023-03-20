@@ -24,7 +24,7 @@ export const march = {
           right: 'Friday - Sunday',
         },
       ],
-      disclaimer: 'Payouts at noon',
+      disclaimer: 'Payout at noon',
       rules: {
         subSections: [
           { id: '00', title: 'Day', body: 'Monday through Sunday' },
@@ -210,7 +210,7 @@ export const march = {
           right: 'Friday - Sunday',
         },
       ],
-      disclaimer: 'Payouts at noon',
+      disclaimer: 'Payout at noon',
       rules: {
         subSections: [
           { id: '00', title: 'Day', body: 'Monday through Sunday' },
