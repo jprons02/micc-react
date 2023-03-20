@@ -183,8 +183,8 @@ const Home = (props) => {
       },
       title: language ? 'B1 Grill' : 'B1 Grill',
       body: language
-        ? 'B1 Grill serves tasty sandwiches, soups, salads, and Latino favorites like pastelitos.'
-        : 'Sirviendo deliciosos sándwiches, sopas, ensaladas y favoritos latinos como pastelitos.',
+        ? 'Do it your way with quick and casual eats located in the Bingo Hall.'
+        : 'Nuestro café sirve sándwiches, sopas, ensaladas en la Sala de Bingo.',
       buttonText: language ? 'See Details' : 'Más Detalles',
       linkObj: {
         type: 'internal',
