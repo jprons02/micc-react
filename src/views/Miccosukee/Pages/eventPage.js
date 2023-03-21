@@ -1,6 +1,3 @@
-import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
-import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
-
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch, useHistory } from 'react-router-dom';
 
@@ -10,9 +7,7 @@ import classNames from 'classnames';
 
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-
-// @material-ui/icons
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Hidden } from '@material-ui/core';
 
 // Core components
 import Button from 'components/CustomButtons/Button.js';
@@ -136,15 +131,51 @@ const EventPage = ({ entityMargin, entity }) => {
         return (
           <div>
             <h4>Sponsors: </h4>
-            {event.sponsors.map((sponsor) => {
-              return (
-                <React.Fragment>
-                  <a target="_blank" href={sponsor.link}>
-                    <img style={sponsor.imageStyle} src={sponsor.image} />
-                  </a>
-                </React.Fragment>
-              );
-            })}
+            <Hidden mdUp>
+              <div>
+                {event.sponsors.map((sponsor) => {
+                  return (
+                    <React.Fragment key={sponsor.name}>
+                      <a
+                        style={{
+                          display: 'inline-block',
+                          marginRight: '15px',
+                        }}
+                        target="_blank"
+                        href={sponsor.link}
+                      >
+                        <img style={sponsor.imageStyle} src={sponsor.image} />
+                      </a>
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+            </Hidden>
+            <Hidden smDown>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                {event.sponsors.map((sponsor) => {
+                  return (
+                    <React.Fragment key={sponsor.name}>
+                      <a
+                        style={{
+                          display: 'inline-block',
+                          marginRight: '15px',
+                        }}
+                        target="_blank"
+                        href={sponsor.link}
+                      >
+                        <img style={sponsor.imageStyle} src={sponsor.image} />
+                      </a>
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+            </Hidden>
           </div>
         );
       } else {

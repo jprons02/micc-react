@@ -4,11 +4,12 @@ import { eventbriteIDs } from 'assets/data/events/eventbriteIDs.js';
 import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg';
 
 import wildlifeFlyer from 'assets/media/img/events/wildlife/wildlifeflyer.jpg';
-import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/Fish&Wildlife_Logo.jpeg';
-import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
-import wildlifeSponsor3 from 'assets/media/logos/sponsors/wildlifeEvent/Invasive-Species-Brewing.jpg';
-import wildlifeSponsor4 from 'assets/media/logos/sponsors/wildlifeEvent/EVERGLADESFISHINGCO.jpg';
-import wildlifeSponsor5 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
+import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/BassPro Official Logo.png';
+import wildlifeSponsor2 from 'assets/media/logos/sponsors/wildlifeEvent/Fish&Wildlife_Logo.jpeg';
+import wildlifeSponsor3 from 'assets/media/logos/sponsors/wildlifeEvent/LOGOm3x.jpg';
+import wildlifeSponsor4 from 'assets/media/logos/sponsors/wildlifeEvent/Invasive-Species-Brewing.jpg';
+import wildlifeSponsor5 from 'assets/media/logos/sponsors/wildlifeEvent/EVERGLADESFISHINGCO.jpg';
+import wildlifeSponsor6 from 'assets/media/logos/sponsors/wildlifeEvent/Iggies store logo.png';
 
 export const events = (language) => {
   return [
@@ -124,7 +125,7 @@ export const events = (language) => {
           ],
       sponsors: [
         {
-          name: 'fish and wildlife',
+          name: 'bass pro shops',
           image: wildlifeSponsor1,
           imageStyle: {
             display: 'block',
@@ -136,14 +137,26 @@ export const events = (language) => {
           //link: '',
         },
         {
-          name: 'Monster3X Concept Lures',
+          name: 'fish and wildlife',
           image: wildlifeSponsor2,
+          imageStyle: {
+            display: 'block',
+            maxWidth: '160px',
+            width: '100%',
+            marginBottom: '25px',
+            marginTop: '25px',
+          },
+          //link: '',
+        },
+        {
+          name: 'Monster3X Concept Lures',
+          image: wildlifeSponsor3,
           imageStyle: { display: 'block', maxWidth: '250px', width: '100%' },
           //link: 'https://monster3xusa.com/',
         },
         {
           name: 'Invasive Species Brewing',
-          image: wildlifeSponsor3,
+          image: wildlifeSponsor4,
           imageStyle: {
             marginTop: '30px',
             display: 'block',
@@ -154,7 +167,7 @@ export const events = (language) => {
         },
         {
           name: 'Everglades Fishing Co',
-          image: wildlifeSponsor4,
+          image: wildlifeSponsor5,
           imageStyle: {
             marginTop: '30px',
             display: 'block',
@@ -165,7 +178,7 @@ export const events = (language) => {
         },
         {
           name: "Iggie's Bait & Tackle",
-          image: wildlifeSponsor5,
+          image: wildlifeSponsor6,
           imageStyle: {
             marginTop: '30px',
             display: 'block',
