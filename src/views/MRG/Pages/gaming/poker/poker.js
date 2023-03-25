@@ -212,9 +212,11 @@ const Poker = () => {
                     : 'viernes, 24 de marzo de 2023 a las 6 PM'}
                 </h6>
               )}
-              {isRunning([2023, 3, 24])
+
+              {/*THIS WAS VERY WRONG HOURS isRunning([2023, 3, 24])
                 ? renderPoiHours(mrgHours.poi.poker, language)
-                : null}
+                : null*/}
+              <h6>{language ? 'Now Open - 24/7' : 'Ahora Abierto - 24/7'}</h6>
               <div
                 style={{
                   borderBottom: '1px solid #e8e8e8',
@@ -222,13 +224,7 @@ const Poker = () => {
                   border: 'none',
                 }}
               >
-                <p>
-                  {language ? 'All Bets are On!' : '¡Hagan sus Apuestas!'}
-                  <br />
-                  {language
-                    ? 'NEW 24/7 POKER ROOM'
-                    : 'NUEVA SALA DE PÓQUER 24/7'}
-                </p>
+                <p>{language ? 'All Bets are On!' : '¡Hagan sus Apuestas!'}</p>
                 <p>
                   {language
                     ? 'Featuring 20 live-action tables, daily promotions, tournaments, and thousands in guaranteed cash prizes.'
