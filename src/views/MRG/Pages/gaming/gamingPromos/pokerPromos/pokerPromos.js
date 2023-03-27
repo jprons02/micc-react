@@ -73,8 +73,25 @@ const PokerPromos = (props) => {
     });
   }, []);
 
+  useEffect(() => {
+    props.setStringState(getMonthString());
+  }, [language, props.state]);
+
   const month = props.month;
   const monthContent = content(language, month);
+
+  // Used if there is undefined content - will revert a url "X Promos" to "Current Month Promos".
+  const getMonthString = () => {
+    if (monthContent.data !== undefined) {
+      if (language) {
+        return monthContent.month.toUpperCase();
+      } else {
+        return monthContent.monthEs.toUpperCase();
+      }
+    } else {
+      return 'LOADING...';
+    }
+  };
 
   const promoClick = (promo) => {
     setSelectedPromo(promo);
@@ -119,25 +136,6 @@ const PokerPromos = (props) => {
     return <Slider {...settings}>{renderCards()}</Slider>;
   };
 
-  const renderOpeningAnnouncement = () => {
-    if (isRunning([2023, 3, 24])) {
-      return null;
-    } else {
-      return (
-        <p
-          style={{
-            color: 'red',
-            fontWeight: '600',
-            marginBottom: '20px',
-            fontStyle: 'italic',
-          }}
-        >
-          POKER GRAND OPENING FRIDAY, MARCH 24, 2023 AT 6 PM
-        </p>
-      );
-    }
-  };
-
   const renderDisclaimer = () => {
     return (
       <p className={classes.disclaimer}>
@@ -151,7 +149,6 @@ const PokerPromos = (props) => {
   return (
     <React.Fragment>
       <div style={{ textAlign: 'center' }}>
-        <div>{renderOpeningAnnouncement()}</div>
         <a
           target="_blank"
           href={
@@ -192,9 +189,7 @@ const PokerPromos = (props) => {
         &nbsp; <span style={{ fontSize: '20px' }}>|</span> &nbsp;
         <a
           target="_blank"
-          href={
-            'https://mapa-media.s3.amazonaws.com/mcr/PokerCalendar_March.pdf'
-          }
+          href={'https://mapa-media.s3.amazonaws.com/mcr/PokerCalendar.pdf'}
         >
           <span
             style={{

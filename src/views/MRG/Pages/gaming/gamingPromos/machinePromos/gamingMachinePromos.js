@@ -276,7 +276,7 @@ const GamingMachinePromos = (props) => {
 
   useEffect(() => {
     //Purpose is ability to link to specific promos from url
-    // full example ENGLISH: http://localhost:3000/mrg/promotions#0
+    // full example ENGLISH: http://localhost:3000/mrg/promotions#machine2
     content(language, month).data.map((item) => {
       if (window.location.hash === `#machine${item.id}`) {
         setSelectedPromo(item);
@@ -285,13 +285,26 @@ const GamingMachinePromos = (props) => {
     });
   }, []);
 
+  useEffect(() => {
+    props.setStringState(getMonthString());
+  }, [language, props.state]);
+
   const month = props.month;
+  const monthContent = content(language, month);
 
   // Used if there is undefined content - will revert a url "X Promos" to "Current Month Promos".
-  const monthString = content(language, month).month;
-  props.getMachineMonthString(monthString);
-
-  const monthContent = content(language, month);
+  const getMonthString = () => {
+    if (monthContent.data !== undefined) {
+      if (language) {
+        return monthContent.month.toUpperCase();
+      } else {
+        console.log('should be es...');
+        return monthContent.monthEs.toUpperCase();
+      }
+    } else {
+      return 'LOADING...';
+    }
+  };
 
   const getCalendarPdf = () => {
     if (language) {

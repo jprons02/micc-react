@@ -238,8 +238,8 @@ export const mrgHours = {
       },
       {
         days: (language) => (language ? 'Sunday' : 'domingo'),
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(20).combinedString}`,
+        open: `${getMinutes(17).combinedString}`,
+        close: `${getMinutes(22).combinedString}`,
       },
     ],
     cypressLounge: [

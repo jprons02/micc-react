@@ -48,6 +48,7 @@ const GamingPromos = (props) => {
   const classes = useStyles();
 
   const [state, setState] = useState('machinePromos');
+  const [monthString, setMonthStringState] = useState('');
 
   const regexMachine = /#machine\w*/;
   const regexPoker = /#poker\w*/;
@@ -102,14 +103,14 @@ const GamingPromos = (props) => {
 
   const getMachineMonthString = () => {
     return language
-      ? `${month.toUpperCase()} PROMOTIONS`
-      : `PROMOCIONES DE ${month.toUpperCase()}`;
+      ? `${monthString.toUpperCase()} PROMOTIONS`
+      : `PROMOCIONES DE ${monthString.toUpperCase()}`;
   };
 
   const getPokerMonthString = () => {
     return language
-      ? `${month.toUpperCase()} PROMOTIONS`
-      : `PROMOCIONES DE ${month.toUpperCase()}`;
+      ? `${monthString.toUpperCase()} PROMOTIONS`
+      : `PROMOCIONES DE ${monthString.toUpperCase()}`;
   };
 
   // Month may change depending if I have machine or poker promos ready. Need to revert to current month if data is undefined.
@@ -134,16 +135,24 @@ const GamingPromos = (props) => {
       case 'machinePromos':
         return (
           <GamingMachinePromos
-            getMachineMonthString={getMachineMonthString}
+            setStringState={setMonthStringState}
+            state={state}
             month={month}
           />
         );
       case 'pokerPromos':
-        return <PokerPromos month={currentMonth} />;
+        return (
+          <PokerPromos
+            setStringState={setMonthStringState}
+            state={state}
+            month={month}
+          />
+        );
       default:
         return (
           <GamingMachinePromos
-            getMachineMonthString={getMachineMonthString}
+            setStringState={setMonthStringState}
+            state={state}
             month={month}
           />
         );
