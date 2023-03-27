@@ -92,10 +92,33 @@ const GamingPromos = (props) => {
     ? props.match.params.month
     : currentMonth;
 
+  /* ORIGINAL HERE.
   const getMonth = () => {
     return language
       ? `${month.toUpperCase()} PROMOTIONS`
       : `PROMOCIONES DE ${month.toUpperCase()}`;
+  };
+  */
+
+  const getMachineMonthString = () => {
+    return language
+      ? `${month.toUpperCase()} PROMOTIONS`
+      : `PROMOCIONES DE ${month.toUpperCase()}`;
+  };
+
+  const getPokerMonthString = () => {
+    return language
+      ? `${month.toUpperCase()} PROMOTIONS`
+      : `PROMOCIONES DE ${month.toUpperCase()}`;
+  };
+
+  // Month may change depending if I have machine or poker promos ready. Need to revert to current month if data is undefined.
+  const getMonthString = () => {
+    if (state === 'machinePromos') {
+      return getMachineMonthString();
+    } else {
+      return getPokerMonthString();
+    }
   };
 
   const handleClick = (state) => {
@@ -109,11 +132,21 @@ const GamingPromos = (props) => {
   const renderContent = () => {
     switch (state) {
       case 'machinePromos':
-        return <GamingMachinePromos month={month} />;
+        return (
+          <GamingMachinePromos
+            getMachineMonthString={getMachineMonthString}
+            month={month}
+          />
+        );
       case 'pokerPromos':
         return <PokerPromos month={currentMonth} />;
       default:
-        return <GamingMachinePromos month={month} />;
+        return (
+          <GamingMachinePromos
+            getMachineMonthString={getMachineMonthString}
+            month={month}
+          />
+        );
     }
   };
 
@@ -122,7 +155,7 @@ const GamingPromos = (props) => {
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
         <div style={{ textAlign: 'center' }}>
-          <h2 style={{ fontSize: '30px' }}>{getMonth()}</h2>
+          <h2 style={{ fontSize: '30px' }}>{getMonthString()}</h2>
           <Button
             onClick={() => handleClick('machinePromos')}
             usetheme={state === 'machinePromos' ? 'contained' : 'outlined'}

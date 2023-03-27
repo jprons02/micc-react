@@ -287,6 +287,10 @@ const GamingMachinePromos = (props) => {
 
   const month = props.month;
 
+  // Used if there is undefined content - will revert a url "X Promos" to "Current Month Promos".
+  const monthString = content(language, month).month;
+  props.getMachineMonthString(monthString);
+
   const monthContent = content(language, month);
 
   const getCalendarPdf = () => {
