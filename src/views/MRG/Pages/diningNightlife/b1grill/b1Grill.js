@@ -95,14 +95,13 @@ const B1Grill = () => {
                   ? 'Do it your way with quick and casual eats located in the Bingo Hall. Open Sunday - Thursday, 12 PM - 12 AM, and Friday & Saturday, 12 PM - 1 AM.'
                   : 'Nuestro café sirve sándwiches, sopas, ensaladas en la Sala de Bingo. Abierto de domingo a jueves, de 12 PM a 12 AM, y viernes y sábado, de 12 PM a 1 AM.'}
               </p>
-              {/*
               <Button
-                onClick={() => setShowFoodMenu(true)}
+                href="https://mapa-media.s3.amazonaws.com/website/B1Grill_menu.pdf"
+                target="_blank"
                 usetheme="contained"
               >
                 {language ? 'MENU' : 'MENÚ'}
               </Button>{' '}
-              */}
             </div>
           </GridItem>
           <GridItem md={5}>
