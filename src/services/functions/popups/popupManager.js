@@ -1,9 +1,8 @@
 // Show popups on certain pages
 // Stop showing popup after 1 time load... may need to change how state works
-//import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
 
-//JAN BINGO PROMO HERE
-import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+//import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
+import mrgImage from 'assets/media/img/popups/M-Sphere_Popup.jpg';
 
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -81,14 +80,14 @@ const mrgPopup = {
   showPopup: scheduler({
     start: {
       year: '23',
-      month: 'February',
+      month: 'March',
       day: '28',
       time: '',
     },
     end: {
-      year: '23',
-      month: 'April',
-      day: '1',
+      year: '24',
+      month: 'March',
+      day: '28',
       time: '',
     },
   }),
@@ -113,10 +112,9 @@ const mrgPopup = {
   */
   content: {
     image: mrgImage,
-    alt: 'Bingo Promotion',
+    alt: 'M Sphere Promo',
+    link: '',
     linkType: '',
-    link: '/mcr/bingo',
-    linkType: 'internal',
   },
 };
 const mrgGamingPromotionsPopup = {
