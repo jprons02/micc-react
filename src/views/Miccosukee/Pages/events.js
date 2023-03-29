@@ -27,6 +27,10 @@ import Button from 'components/CustomButtons/Button.js';
 // Custom Functions
 import { setEstTime } from 'services/functions/setEstTime.js';
 import { urlify } from 'services/functions/urlify.js';
+import {
+  sortByDateAscending,
+  sortByDateDescending,
+} from 'services/functions/sortByDate.js';
 
 // Colors
 import { standardLinkColor, errorColor } from 'themes/colors.js';
@@ -45,6 +49,15 @@ const Events = ({ history, badgeColor, entityMargin }) => {
   const [defaultUpcommingText, setDefaultUpcommingText] = useState(false);
 
   let match = useRouteMatch();
+
+  const sortedEventsDescending = sortByDateDescending(
+    events(language),
+    'startDate'
+  );
+  const sortedEventsAscending = sortByDateAscending(
+    events(language),
+    'startDate'
+  );
 
   useEffect(() => {
     // Set the default category depending on url.
@@ -221,7 +234,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     };
 
     const renderUpcommingEvents = () => {
-      return events(language).map((event) => {
+      return sortedEventsAscending.map((event) => {
         if (isCategory(event)) {
           if (isUpcomming(event)) {
             return (
@@ -332,7 +345,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     };
 
     const renderPastEvents = () => {
-      return events(language).map((event) => {
+      return sortedEventsDescending.map((event) => {
         if (isCategory(event)) {
           if (!isUpcomming(event)) {
             return (
