@@ -113,8 +113,8 @@ const mrgPopup = {
   content: {
     image: mrgImage,
     alt: 'M Sphere Promo',
-    link: '',
-    linkType: '',
+    link: '/mcr/msphere',
+    linkType: 'internal',
   },
 };
 const mrgGamingPromotionsPopup = {

@@ -112,7 +112,15 @@ export default function Miccosukee(props) {
       //window.location.reload();
     }
 
-    //mrg to mcr change
+    //mrg to mcr change and redirections.
+    if (
+      window.location.pathname === '/mrg/miccosukee-one' ||
+      window.location.pathname === '/mrg/miccosukee-one/' ||
+      window.location.pathname === '/mcr/miccosukee-one' ||
+      window.location.pathname === '/mcr/miccosukee-one/'
+    ) {
+      props.history.push('/mcr/msphere');
+    }
     if (
       window.location.pathname === '/mrg/dining-nightlife' ||
       window.location.pathname === '/mrg/dining-nightlife/' ||
