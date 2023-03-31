@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Mui Core
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
@@ -19,9 +19,13 @@ import Button from 'components/CustomButtons/Button.js';
 //import Button from '@material-ui/core/Button';
 
 // Images
-import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
-
-import image from 'views/MRG/Pages/gaming/mSphere/MiccosukeeOne_3Cards.jpg';
+//import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
+import bgImage from 'assets/media/img/mrg/gaming/msphere/WebHeaderBanner_MSphere_2x.jpg';
+import selectImage from 'assets/media/img/mrg/gaming/msphere/MSphere_Select.png';
+import primeImage from 'assets/media/img/mrg/gaming/msphere/MSphere_Prime.png';
+import nobleImage from 'assets/media/img/mrg/gaming/msphere/MSphere_Noble.png';
+import regalImage from 'assets/media/img/mrg/gaming/msphere/MSphere_Regal.png';
+import chairmanImage from 'assets/media/img/mrg/gaming/msphere/MSphere_Chairman.png';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -39,7 +43,7 @@ const useButtonStyles = makeStyles(customButtonStyles);
 const usePanelStyles = makeStyles(panelStyles);
 
 //const imageArray = [image];
-const imageObj = [{ src: image, alt: 'Miccosukee One cards' }];
+//const imageObj = [{ src: image, alt: 'Miccosukee One cards' }];
 
 const sliderContent = [
   {
@@ -56,12 +60,16 @@ const MSphere = () => {
   const buttonClasses = useButtonStyles();
   const panelClasses = usePanelStyles();
 
-  const [cardSelected, setCardSelected] = useState('select');
+  /*
+  useEffect(() => {
+    //NEED TO REDIRECT /miccosukee-one to /msphere.
+    //NEED TO REDIRECT /miccosukee-one to /msphere.
+    //NEED TO REDIRECT /miccosukee-one to /msphere.
+    //NEED TO REDIRECT /miccosukee-one to /msphere.
+  }, [])
+  */
 
-  //NEED TO REDIRECT /miccosukee-one to /msphere.
-  //NEED TO REDIRECT /miccosukee-one to /msphere.
-  //NEED TO REDIRECT /miccosukee-one to /msphere.
-  //NEED TO REDIRECT /miccosukee-one to /msphere.
+  const [cardSelected, setCardSelected] = useState('select');
 
   const handleClick = (state) => {
     setCardSelected(state);
@@ -404,18 +412,62 @@ const MSphere = () => {
   };
 
   const renderCardButtons = () => {
-    return null;
+    const cardStyle = {
+      width: '200px',
+      marginLeft: '-40px',
+      cursor: 'pointer',
+    };
+    return (
+      <div>
+        <img
+          onClick={() => handleClick('select')}
+          src={selectImage}
+          style={{ width: '200px', cursor: 'pointer' }}
+        />
+        <img
+          onClick={() => handleClick('prime')}
+          src={primeImage}
+          style={cardStyle}
+        />
+        <img
+          onClick={() => handleClick('noble')}
+          src={nobleImage}
+          style={cardStyle}
+        />
+        <img
+          onClick={() => handleClick('regal')}
+          src={regalImage}
+          style={cardStyle}
+        />
+        <img
+          onClick={() => handleClick('chairman')}
+          src={chairmanImage}
+          style={cardStyle}
+        />
+      </div>
+    );
   };
 
   const renderTierDetails = () => {
     const divStyle = { marginTop: '15px' };
+    const imageStyle = { marginTop: '-30px', width: '100px' };
     const selectDetails = () => {
       if (language) {
         return (
           <div style={divStyle}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Select <br />0 - 749
-            </p>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Select <br />0 - 749
+              </p>
+              <img src={selectImage} style={imageStyle} />
+            </div>
             <ul>
               <li>Earn Tier Points on Slot, Bingo, and Poker Play</li>
               <li>Redeemable Points for Gaming, Retail, and Dining</li>
@@ -432,10 +484,20 @@ const MSphere = () => {
         );
       } else {
         return (
-          <div style={{ marginTop: '15px', marginBottom: '60px' }}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Select <br />0 - 749
-            </p>
+          <div style={divStyle}>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Select <br />0 - 749
+              </p>
+              <img src={selectImage} style={imageStyle} />
+            </div>
             <ul>
               <li>
                 Gane puntos de nivel en juegos de tragamonedas, bingo y póquer
@@ -458,12 +520,22 @@ const MSphere = () => {
       if (language) {
         return (
           <div style={divStyle}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Prime <br />
-              750 - 4,999 <br />
-              <span style={{ fontSize: '16px' }}>
-                Benefits include all M Sphere Select Rewards, plus
-              </span>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Prime <br />
+                750 - 4,999 <br />
+              </p>
+              <img src={primeImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '10px' }}>
+              Benefits include all M Sphere Select Rewards, plus
             </p>
             <ul>
               <li>
@@ -482,13 +554,23 @@ const MSphere = () => {
         );
       } else {
         return (
-          <div style={{ marginTop: '15px', marginBottom: '60px' }}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Prime <br />
-              750 - 4,999 <br />
-              <span style={{ fontSize: '16px' }}>
-                Incluye todos los beneficios del nivel Select de M Sphere, más
-              </span>
+          <div style={divStyle}>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Prime <br />
+                750 - 4,999 <br />
+              </p>
+              <img src={primeImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '16px' }}>
+              Incluye todos los beneficios del nivel Select de M Sphere, más
             </p>
             <ul>
               <li>
@@ -511,16 +593,27 @@ const MSphere = () => {
         );
       }
     };
+    //Noble 5,000 - 24,999
     const nobleDetails = () => {
       if (language) {
         return (
           <div style={divStyle}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Noble <br />
-              5,000 - 24,999 <br />
-              <span style={{ fontSize: '16px' }}>
-                Benefits include all M Sphere Prime Rewards, plus
-              </span>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Noble <br />
+                5,000 - 24,999 <br />
+              </p>
+              <img src={nobleImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '10px' }}>
+              Benefits include all M Sphere Prime Rewards, plus
             </p>
             <ul>
               <li>
@@ -539,13 +632,23 @@ const MSphere = () => {
         );
       } else {
         return (
-          <div style={{ marginTop: '15px', marginBottom: '60px' }}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Noble <br />
-              5,000 - 24,999 <br />
-              <span style={{ fontSize: '16px' }}>
-                Incluye todos los beneficios del nivel Prime de M Sphere, más
-              </span>
+          <div style={divStyle}>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Noble <br />
+                5,000 - 24,999 <br />
+              </p>
+              <img src={nobleImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '10px' }}>
+              Incluye todos los beneficios del nivel Prime de M Sphere, más
             </p>
             <ul>
               <li>
@@ -568,16 +671,27 @@ const MSphere = () => {
         );
       }
     };
+    //Regal 25,000+
     const regalDetails = () => {
       if (language) {
         return (
           <div style={divStyle}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Regal <br />
-              25,000+ <br />
-              <span style={{ fontSize: '16px' }}>
-                Benefits include all M Sphere Noble Rewards, plus
-              </span>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Regal <br />
+                25,000+ <br />
+              </p>
+              <img src={regalImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '10px' }}>
+              Benefits include all M Sphere Noble Rewards, plus
             </p>
             <ul>
               <li>
@@ -600,13 +714,23 @@ const MSphere = () => {
         );
       } else {
         return (
-          <div style={{ marginTop: '15px', marginBottom: '60px' }}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Regal <br />
-              25,000+ <br />
-              <span style={{ fontSize: '16px' }}>
-                Incluye todos los beneficios del nivel Noble de M Sphere, más
-              </span>
+          <div style={divStyle}>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Regal <br />
+                25,000+ <br />
+              </p>
+              <img src={regalImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '10px' }}>
+              Incluye todos los beneficios del nivel Noble de M Sphere, más
             </p>
             <ul>
               <li>
@@ -637,16 +761,27 @@ const MSphere = () => {
         );
       }
     };
+    //Chairman By Invitation
     const chairmanDetails = () => {
       if (language) {
         return (
           <div style={divStyle}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Chairman <br />
-              By Invitation <br />
-              <span style={{ fontSize: '16px' }}>
-                Benefits include all M Sphere Regal Rewards, plus
-              </span>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Chairman <br />
+                By Invitation <br />
+              </p>
+              <img src={chairmanImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '10px' }}>
+              Benefits include all M Sphere Regal Rewards, plus
             </p>
             <ul>
               <li>Free Entry to Miccosukee Indian Village & Airboat Rides</li>
@@ -668,13 +803,23 @@ const MSphere = () => {
         );
       } else {
         return (
-          <div style={{ marginTop: '15px', marginBottom: '60px' }}>
-            <p style={{ fontSize: '22px', lineHeight: '1.3' }}>
-              Chairman <br />
-              Por invitación <br />
-              <span style={{ fontSize: '16px' }}>
-                Incluye todos los beneficios del nivel Regal de M Sphere, más
-              </span>
+          <div style={divStyle}>
+            <div>
+              <p
+                style={{
+                  display: 'inline-block',
+                  fontSize: '22px',
+                  lineHeight: '1.3',
+                  marginRight: '20px',
+                }}
+              >
+                Chairman <br />
+                Por invitación <br />
+              </p>
+              <img src={chairmanImage} style={imageStyle} />
+            </div>
+            <p style={{ fontSize: '16px', paddingTop: '10px' }}>
+              Incluye todos los beneficios del nivel Regal de M Sphere, más
             </p>
             <ul>
               <li>
@@ -764,6 +909,7 @@ const MSphere = () => {
           <h2>M Sphere Rewards</h2>
           <div style={{ marginTop: '30px' }}>
             <h4>{language ? 'Member Benefits' : 'Beneficios para Miembros'}</h4>
+            {/*renderCardButtons()*/}
             {renderButtons()}
             {renderTierDetails()}
             {renderComingSoon()}

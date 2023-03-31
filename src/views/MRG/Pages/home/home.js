@@ -31,8 +31,10 @@ import StandardCard from 'components/CustomCards/StandardCard.js';
 import Slider from 'react-slick';
 
 // Images
-import heroImg1 from 'assets/media/img/mrg/home/mrg_hero.jpg';
-import heroImg2 from 'assets/media/img/mrg/home/building.jpg';
+import heroImg1 from 'assets/media/img/mrg/home/MSphere_Hero.jpg';
+import heroImg2 from 'assets/media/img/mrg/home/MCR_Hero.jpg';
+//import heroImg2 from 'assets/media/img/mrg/home/mrg_hero.jpg';
+//import heroImg2 from 'assets/media/img/mrg/home/building.jpg';
 import heroImg3 from 'assets/media/img/mrg/home/accommodations_hero.jpg';
 
 import cardImage1 from 'assets/media/img/mrg/gaming/machines/MRG_Gaming1.jpg';
@@ -119,6 +121,20 @@ const Home = (props) => {
       {
         id: 1,
         bgImage: heroImg1,
+        header: language
+          ? 'A WORLD OF REWARDS AWAITS!'
+          : '¡UN MUNDO DE RECOMPENSAS TE ESPERA!',
+        subHeader: language
+          ? 'Welcome to our new M Sphere Rewards program. Join for free and earn points redeemable for gaming, retail, dining, hotel accommodations, exclusive events, and much more!'
+          : 'Bienvenido a nuestro nuevo programa M Sphere Rewards. ¡Únete gratis y gana puntos canjeables por juegos, compras, cenas, alojamiento en nuestro hotel, eventos exclusivos y mucho más!',
+        button: {
+          text: language ? 'M SPHERE REWARDS' : 'M SPHERE REWARDS',
+          link: '/mcr/msphere',
+        },
+      },
+      {
+        id: 2,
+        bgImage: heroImg2,
         header: language ? 'MONTHLY PROMOTIONS' : 'PROMOCIONES MENSUALES',
         subHeader: language
           ? 'Miccosukee One Members, enter our drawings for chances to win thousands in cash and plenty of Free Play!'
@@ -128,9 +144,8 @@ const Home = (props) => {
           link: '/mcr/promotions',
         },
       },
-
       {
-        id: 2,
+        id: 3,
         bgImage: heroImg3,
         header: language ? 'UNWIND IN LUXURY' : 'RELÁJESE EN LUJO',
         subHeader: language
