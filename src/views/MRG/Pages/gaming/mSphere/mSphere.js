@@ -58,6 +58,11 @@ const MSphere = () => {
 
   const [cardSelected, setCardSelected] = useState('select');
 
+  //NEED TO REDIRECT /miccosukee-one to /msphere.
+  //NEED TO REDIRECT /miccosukee-one to /msphere.
+  //NEED TO REDIRECT /miccosukee-one to /msphere.
+  //NEED TO REDIRECT /miccosukee-one to /msphere.
+
   const handleClick = (state) => {
     setCardSelected(state);
   };
@@ -398,6 +403,10 @@ const MSphere = () => {
     );
   };
 
+  const renderCardButtons = () => {
+    return null;
+  };
+
   const renderTierDetails = () => {
     const divStyle = { marginTop: '15px' };
     const selectDetails = () => {
@@ -582,10 +591,10 @@ const MSphere = () => {
               <li>Priority Slot Service</li>
               <li>Gated VIP Parking</li>
               <li>Priority Lines for Hotel, Cage, and Rewards Club</li>
-              <li>Suite Upgrade (Based on Availability)</li>
+              <li>Suite Upgrade (Based on Availability)**</li>
               <li>Resort Fee Waived</li>
               <li>Two Tickets to Regular Season Sporting Event**</li>
-              <li>Early Check-In / Late Check-Out</li>
+              <li>Early Check-In / Late Check-Out**</li>
             </ul>
           </div>
         );
@@ -617,13 +626,12 @@ const MSphere = () => {
               <li>
                 Líneas prioritarias para el hotel, cajeros, y club de premios
               </li>
-              <li>Actualización de suite (según disponibilidad)</li>
+              <li>Actualización de suite (según disponibilidad)**</li>
               <li>Tarifa de resort eliminada</li>
               <li>
                 Dos entradas para el evento deportivo de la temporada regular**
               </li>
-              <li>Exención de la tarifa de cambio de cheques</li>
-              <li>Entrada anticipada / salida tardía</li>
+              <li>Entrada anticipada / salida tardía**</li>
             </ul>
           </div>
         );
@@ -642,6 +650,9 @@ const MSphere = () => {
             </p>
             <ul>
               <li>Free Entry to Miccosukee Indian Village & Airboat Rides</li>
+              <li>
+                25% Discount Miccosukee Indian Village Purchases & Airboat Rides
+              </li>
               <li>25% Hotel and Dining Cash Discount</li>
               <li>Free Express Valet Parking and Retrieval</li>
               <li>25% Miccosukee Golf & Country Club Discount*</li>
@@ -670,6 +681,7 @@ const MSphere = () => {
                 Entrada gratuita a Miccosukee Indian Village y paseos en
                 hidrodeslizador
               </li>
+              <li>25% de descuento en Miccosukee Indian Village & Airboats</li>
               <li>25% de descuento en efectivo en el hotel y restaurantes</li>
               <li>
                 Servicio de estacionamiento y recuperación de valet exprés
@@ -749,7 +761,7 @@ const MSphere = () => {
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
         <div className={classes.leftTextArea}>
-          <h2>M Sphere</h2>
+          <h2>M Sphere Rewards</h2>
           <div style={{ marginTop: '30px' }}>
             <h4>{language ? 'Member Benefits' : 'Beneficios para Miembros'}</h4>
             {renderButtons()}
