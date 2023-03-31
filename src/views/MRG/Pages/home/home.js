@@ -131,14 +131,15 @@ const Home = (props) => {
           text: language ? 'M SPHERE REWARDS' : 'M SPHERE REWARDS',
           link: '/mcr/msphere',
         },
+        gradient: '.7',
       },
       {
         id: 2,
         bgImage: heroImg2,
         header: language ? 'MONTHLY PROMOTIONS' : 'PROMOCIONES MENSUALES',
         subHeader: language
-          ? 'M Sphere Rewards members, enter our drawings for chances to win thousands in cash and plenty of Free Play!'
-          : 'M Sphere Rewards members, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho Free Play!​',
+          ? 'M Sphere Rewards members, enter our drawings for chances to win thousands in cash and plenty of free play!'
+          : '¡Miembros de M Sphere, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho free play!​',
         button: {
           text: language ? 'SEE PROMOS' : 'VER PROMOCIONES',
           link: '/mcr/promotions',

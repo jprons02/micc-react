@@ -51,6 +51,7 @@ const sliderContent = [
     bgImage: bgImage,
     header: '',
     subHeader: '',
+    gradient: '.1',
   },
 ];
 
