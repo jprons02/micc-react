@@ -137,8 +137,8 @@ const Home = (props) => {
         bgImage: heroImg2,
         header: language ? 'MONTHLY PROMOTIONS' : 'PROMOCIONES MENSUALES',
         subHeader: language
-          ? 'Miccosukee One Members, enter our drawings for chances to win thousands in cash and plenty of Free Play!'
-          : '¡Miembros de Miccosukee One, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho Free Play!​',
+          ? 'M Sphere Rewards members, enter our drawings for chances to win thousands in cash and plenty of Free Play!'
+          : 'M Sphere Rewards members, participen en nuestros sorteos para tener oportunidades de ganar miles de dólares en efectivo y mucho Free Play!​',
         button: {
           text: language ? 'SEE PROMOS' : 'VER PROMOCIONES',
           link: '/mcr/promotions',
