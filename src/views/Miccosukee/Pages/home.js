@@ -15,7 +15,8 @@ import CardFooter from 'components/Card/CardFooter';
 import styles from 'assets/jss/material-kit-react/views/miccosukee/pages/home.js';
 
 //images
-import mrgGolfImg from 'assets/media/img/miccosukee/pages/home/home-mrg.jpg';
+//import mcrImg from 'assets/media/img/miccosukee/pages/home/home-mrg.jpg';
+import mcrImg from 'assets/media/img/mrg/home/MCR_Hero.jpg';
 import evergladesImg from 'assets/media/img/miccosukee/pages/home/home-airboats.jpg';
 import historyImg from 'assets/media/img/miccosukee/pages/home/Mic_family.jpg';
 import eventsImg from 'assets/media/img/miccosukee/pages/home/home-admin.jpg';
@@ -45,7 +46,7 @@ const Home = ({ history }) => {
         background: `linear-gradient(
                 rgba(156, 39, 176, 0.45), 
                 rgba(156, 39, 176, 0.45)),
-                url(${mrgGolfImg})`,
+                url(${mcrImg})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
