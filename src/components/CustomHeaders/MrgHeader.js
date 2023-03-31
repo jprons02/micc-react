@@ -111,7 +111,7 @@ const MrgHeader = () => {
         },
         */
         {
-          text: 'M Sphere',
+          text: 'M Sphere Rewards',
           link: '/msphere',
           target: '',
         },

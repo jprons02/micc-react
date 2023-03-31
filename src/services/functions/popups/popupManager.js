@@ -2,7 +2,8 @@
 // Stop showing popup after 1 time load... may need to change how state works
 
 //import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
-import mrgImage from 'assets/media/img/popups/M-Sphere_Popup.jpg';
+//import mrgImage from 'assets/media/img/popups/M-Sphere_Popup.jpg';
+import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -79,15 +80,15 @@ const mrgPopup = {
   id: '02',
   showPopup: scheduler({
     start: {
-      year: '23',
+      year: '24',
       month: 'March',
       day: '28',
       time: '',
     },
     end: {
-      year: '24',
-      month: 'March',
-      day: '28',
+      year: '28',
+      month: 'April',
+      day: '29',
       time: '',
     },
   }),
@@ -112,8 +113,8 @@ const mrgPopup = {
   */
   content: {
     image: mrgImage,
-    alt: 'M Sphere Promo',
-    link: '/mcr/msphere',
+    alt: 'Bingo Promo',
+    link: '/mcr/bingo',
     linkType: 'internal',
   },
 };
