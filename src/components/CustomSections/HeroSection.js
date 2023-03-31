@@ -165,7 +165,11 @@ export default function HeroSection(props) {
             };
           } else {
             return {
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.bgImage})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, ${
+                slide.gradient ? slide.gradient : '0.5'
+              }), rgba(0, 0, 0, ${
+                slide.gradient ? slide.gradient : '0.5'
+              })), url(${slide.bgImage})`,
             };
           }
         };
