@@ -49,7 +49,7 @@ import PoolGym from 'views/MRG/Pages/amenities/pool-gym/poolGym.js';
 import TeenArcade from 'views/MRG/Pages/amenities/teen-arcade/teenArcade.js';
 import GamingMachines from 'views/MRG/Pages/gaming/gamingMachines/gamingMachines.js';
 import GamingPromos from 'views/MRG/Pages/gaming/gamingPromos/gamingPromos.js';
-import OneRewards from 'views/MRG/Pages/gaming/oneRewards/oneRewards.js';
+import MSphere from 'views/MRG/Pages/gaming/mSphere/mSphere.js';
 import Bingo from 'views/MRG/Pages/gaming/bingo/bingo.js';
 import Poker from 'views/MRG/Pages/gaming/poker/poker.js';
 import B1Grill from 'views/MRG/Pages/diningNightlife/b1grill/b1Grill.js';
@@ -280,11 +280,7 @@ export default function Miccosukee(props) {
               path={`${match.path}/promotions/es`}
               component={GamingPromos}
             />
-            <Route
-              exact
-              path={`${match.path}/miccosukee-one`}
-              component={OneRewards}
-            />
+            <Route exact path={`${match.path}/msphere`} component={MSphere} />
             <Route exact path={`${match.path}/b1grill`} component={B1Grill} />
             <Route
               exact

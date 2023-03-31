@@ -103,9 +103,16 @@ const MrgHeader = () => {
           link: '/promotions',
           target: '',
         },
+        /*
         {
           text: 'Miccosukee One',
           link: '/miccosukee-one',
+          target: '',
+        },
+        */
+        {
+          text: 'M Sphere',
+          link: '/msphere',
           target: '',
         },
         {
