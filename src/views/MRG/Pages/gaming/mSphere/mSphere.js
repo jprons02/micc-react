@@ -61,14 +61,23 @@ const MSphere = () => {
   const buttonClasses = useButtonStyles();
   const panelClasses = usePanelStyles();
 
-  /*
   useEffect(() => {
-    //NEED TO REDIRECT /miccosukee-one to /msphere.
-    //NEED TO REDIRECT /miccosukee-one to /msphere.
-    //NEED TO REDIRECT /miccosukee-one to /msphere.
-    //NEED TO REDIRECT /miccosukee-one to /msphere.
-  }, [])
-  */
+    if (window.location.hash === '#select') {
+      handleClick('select');
+    }
+    if (window.location.hash === '#prime') {
+      handleClick('prime');
+    }
+    if (window.location.hash === '#noble') {
+      handleClick('noble');
+    }
+    if (window.location.hash === '#regal') {
+      handleClick('regal');
+    }
+    if (window.location.hash === '#chairman') {
+      handleClick('chairman');
+    }
+  }, []);
 
   const [cardSelected, setCardSelected] = useState('select');
 
@@ -935,25 +944,3 @@ const MSphere = () => {
 };
 
 export default MSphere;
-
-/*
- <GridContainer>
-          <GridItem md={7}>
-            <div className={classes.leftTextArea}>
-              <h2>M Sphere Rewards program</h2>
-              <h4>
-                {language ? 'Live it up! PLAY ON.' : 'Live it up! PLAY ON.'}
-              </h4>
-              <div style={{ marginTop: '25px' }}>
-                <div style={{ width: '100%' }}>{renderExpansionPanel()}</div>
-              </div>
-              {renderDisclaimer()}
-            </div>
-          </GridItem>
-          <GridItem md={5}>
-            <div className={classes.imageArea}>
-              <CustomImageSlider images={imageObj} />
-            </div>
-          </GridItem>
-        </GridContainer>
-*/
