@@ -81,7 +81,7 @@ const Home = () => {
         ? '(MEANS WELCOME IN OUR MIKASUKI LANGUAGE)'
         : 'SIGNIFICA BIENVENIDO EN NUESTRO IDIOMA MIKASUKI',
       button: {
-        text: 'See Admission',
+        text: language ? 'See Admission' : 'ADMISIONES',
         link: '',
         clickFunction: () => openModal(setShowPricingModal),
       },
@@ -113,12 +113,12 @@ const Home = () => {
                 <StorefrontIcon className={classes.icons} color="primary" />
               </Link>
               <Typography className={classes.poiTitle} component="h4">
-                Gift Shop
+                {language ? 'Gift Shop' : 'TIENDA'}
               </Typography>
               <p className={classes.iconText}>
                 {language
                   ? 'Visit the Miccosukee Indian Gift Shop to find crafts created by natives around the world.'
-                  : 'Visite el Miccosukee Indian Gift shop y encuentre artesanías creadas por nativos alrededor del mundo.'}
+                  : 'Visita la tienda miccosukee y encuentra artesanías creadas por nativos alrededor del mundo.'}
               </p>
             </GridItem>
             <GridItem className={classes.iconSection} xs={12} sm={6} md={3}>

@@ -54,13 +54,13 @@ const GamingMachines = () => {
               <h2>{language ? 'Gaming Machines' : 'Máquinas de Juego'}</h2>
               <p>
                 {language
-                  ? 'Miccosukee Casino & Resort is South Florida’s gaming pioneer. Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor — from classic games to the most cutting-edge machines featuring the latest gaming innovations, special effects, bonuses and rewards!'
-                  : 'Miccosukee Casino & Resort es el pionero en juegos de casino en el Sur de la Florida. ¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas de nuestro casino – desde juegos clásicos, hasta las máquinas más modernas y tecnológicas con efectos especiales, bonos y premios!'}
+                  ? 'Miccosukee Casino & Resort is South Florida’s gaming pioneer. Players of all levels can try their luck on any of the sizzling 1,800+ machines on our floor — from classic games to the most cutting-edge machines featuring the latest gaming innovations, special effects, bonuses and rewards!'
+                  : 'Miccosukee Casino & Resort es el pionero en juegos de casino en el Sur de la Florida. ¡Jugadores de todos los niveles pueden probar su suerte en más de 1,800 increíbles máquinas de nuestro casino – desde juegos clásicos, hasta las máquinas más modernas y tecnológicas con efectos especiales, bonos y premios!'}
               </p>
               <p>
                 {language
                   ? 'Exclusive gaming spaces like our swanky High Limit Room are waiting to enhance your gaming experience. Miccosukee Casino & Resort is a non-smoking facility with designated smoking areas outside the building for your convenience. Regardless of how you enjoy yourself, you can play in the comfort of your individual style.'
-                  : 'Espacios exclusivos como nuestra elegante High Limit Room están disponibles para realzar su experiencia de juego. Miccosukee Casino & Resort es un edificio libre de humo con áreas designadas para fumadores fuera del edificio para su conveniencia. Cualquiera que sea su preferencia, aquí puede jugar en la comodidad de su estilo individual.'}
+                  : 'Espacios exclusivos como nuestra elegante High Limit Room están disponibles para realzar tu experiencia de juego. Miccosukee Casino & Resort es un edificio libre de humo con áreas designadas para fumadores fuera del edificio para tu conveniencia. Cualquiera que sea tu preferencia, aquí puedes jugar en la comodidad de tu estilo individual.'}
               </p>
             </div>
           </GridItem>

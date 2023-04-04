@@ -65,7 +65,7 @@ const MaxsGrabAndGo = () => {
               <p>
                 {language
                   ? 'Craving a quick bite or a sweet treat? Choose from a variety of sandwiches, snacks, desserts, and beverages conveniently located in the hotel lobby next to the gaming action.'
-                  : '¿Se le antoja un aperitivo o algo dulce? Elija entre una variedad de sándwiches, refrigerios, postres y bebidas convenientemente ubicados en el lobby del hotel junto a la acción del juego.'}
+                  : '¿Se te antoja un aperitivo o algo dulce? Elige entre una variedad de sándwiches, refrigerios, postres y bebidas en nuestro local ubicado en el lobby del hotel junto a la acción del juego.'}
               </p>
               <Button
                 target="_blank"

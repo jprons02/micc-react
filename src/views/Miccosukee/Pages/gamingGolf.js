@@ -38,8 +38,8 @@ const GamingGolf = () => {
       title: language ? 'Casino & Resort' : 'Casino & Resort',
       theme: mrgBusinessInfo.name,
       description: language
-        ? 'Come for the gaming, stay for the fun!'
-        : 'Venga a jugar, ¡quédese a divertirse!',
+        ? 'Live it Up! Play On.'
+        : '¡Vive el momento y disfruta el juego!',
       imgSrc: mrgImg,
       buttonOne: {
         text: language ? 'WEBSITE' : 'Página web',

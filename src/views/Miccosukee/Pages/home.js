@@ -40,8 +40,8 @@ const Home = ({ history }) => {
         ? 'Miccosukee Casino & Resort'
         : 'Miccosukee Casino & Resort',
       description: language
-        ? 'Come for the gaming, stay for the fun!'
-        : 'Venga a jugar, ¡quédese a divertirse!',
+        ? 'Live it Up! Play On.'
+        : '¡Vive el momento y disfruta el juego!',
       cardBackground: {
         background: `linear-gradient(
                 rgba(156, 39, 176, 0.45), 
@@ -64,7 +64,7 @@ const Home = ({ history }) => {
         : 'Experiencias en los Everglades',
       description: language
         ? 'Enjoy the Miccosukee Indian Village and airboat rides.'
-        : 'Disfrute la Aldea Indígena y tome un paseo en los airboats.',
+        : 'Disfruta la aldea indígena y toma un paseo en nuestro hidrodeslizadores.',
       cardBackground: {
         background: `linear-gradient(
                 rgba(67, 169, 70, 0.45), 
@@ -112,7 +112,7 @@ const Home = ({ history }) => {
         : 'Historia y Administración',
       description: language
         ? 'Learn about the Miccosukee Tribe’s history and current Tribal leaders.'
-        : 'Aprenda acerca de la Tribu Miccosukee y sus líderes.',
+        : 'Aprende acerca de la Tribu Miccosukee y sus líderes.',
       cardBackground: {
         background: `linear-gradient(
                 rgba(224, 206, 0, 0.45), 

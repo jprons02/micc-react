@@ -83,7 +83,7 @@ const MartiniBar = () => {
               <p>
                 {language
                   ? 'Chic and comfortable, the Martini Bar is the perfect place to unwind. Join us for live entertainment, classic cocktails, and great times!'
-                  : 'Elegante y cómodo, el Martini Bar es el lugar perfecto para relajarse. ¡Visítenos para disfrutar de entretenimiento en vivo, cócteles clásicos y mucha diversión!'}
+                  : 'Elegante y cómodo, el Martini Bar es el lugar perfecto para relajarte. ¡Visítanos para disfrutar de entretenimiento en vivo, cócteles clásicos y mucha diversión!'}
               </p>
             </div>
           </GridItem>

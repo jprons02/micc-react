@@ -46,7 +46,7 @@ const GamingGolf = () => {
       theme: 'village',
       description: language
         ? 'Adventure into the native habitat of the Miccosukee Tribe and learn about their culture, lifestyle and history.'
-        : 'Descubra el hábitat nativo de la Tribu Miccosukee y aprenda sobre su cultura, estilo de vida e historia.',
+        : 'Descubre el hábitat nativo de la Tribu Miccosukee y aprende sobre su cultura, estilo de vida e historia.',
       imgSrc: villageImg,
       buttonOne: {
         text: language ? 'WEBSITE' : 'Página web',
@@ -73,7 +73,7 @@ const GamingGolf = () => {
       theme: airboatsBusinessInfo.name,
       description: language
         ? 'Take an exhilarating ride and discover the Everglades like never before!'
-        : '¡Tome un paseo emocionante y descrubra los Everglades como nunca antes!',
+        : '¡Toma un paseo emocionante y descrubre los Everglades como nunca antes!',
       imgSrc: airboatsImg,
       buttonOne: {
         text: language ? 'WEBSITE' : 'Página web',

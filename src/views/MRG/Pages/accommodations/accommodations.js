@@ -75,7 +75,7 @@ const Accommodations = () => {
               <p>
                 {language
                   ? 'Standing at the edge of the magnificent Florida Everglades, the Resort boasts rooms designed with comfort as the number one priority as well as amazing views of the surrounding ecosystem.'
-                  : 'Localizado en el corazón de los Everglades de la Florida, el Resort tiene habitaciones diseñadas con su comodidad como prioridad número uno, además de increíbles vistas del ecosistema a su alrededor.'}
+                  : 'Localizado en el corazón de los Everglades de la Florida, el Resort tiene habitaciones diseñadas con tu comodidad como prioridad número uno, además de increíbles vistas del ecosistema a su alrededor.'}
               </p>
               <p>
                 {language

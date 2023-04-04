@@ -1,30 +1,30 @@
 /*eslint-disable*/
-import React, { useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 // material-ui core components
-import { ListItem } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import { ListItem } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 // Custom Components
-import Button from "components/CustomButtons/Button.js";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
+import Button from 'components/CustomButtons/Button.js';
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
 
 // My Custom Components
-import CustomInput from "components/Footer/Components/CustomTextField.js";
-import CustomFooterModal from "components/CustomModal/CustomFooterModals/CustomFooterModal.js";
+import CustomInput from 'components/Footer/Components/CustomTextField.js';
+import CustomFooterModal from 'components/CustomModal/CustomFooterModals/CustomFooterModal.js';
 
 // CSS
-import styles from "assets/jss/material-kit-react/components/footerStyle.js";
+import styles from 'assets/jss/material-kit-react/components/footerStyle.js';
 
 // Context
-import { SignupFormContext } from "contexts/SignupFormContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { SignupFormContext } from 'contexts/SignupFormContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // Custom Functions
-import { inputErrorsExist } from "services/functions/validateInput.js";
+import { inputErrorsExist } from 'services/functions/validateInput.js';
 
 const useStyles = makeStyles(styles);
 
@@ -72,7 +72,7 @@ const DesktopFooter = (props) => {
               <Typography
                 onClick={item.clickFunction ? item.clickFunction : null}
                 className={classes.expansionPanelDetailText}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: 'pointer' }}
               >
                 {item.linkText}
               </Typography>
@@ -91,7 +91,7 @@ const DesktopFooter = (props) => {
           return (
             <GridItem
               key={section.headerDesktop}
-              style={{ padding: "0" }}
+              style={{ padding: '0' }}
               md={6}
             >
               <Typography className={classes.titleDesktop}>
@@ -99,43 +99,43 @@ const DesktopFooter = (props) => {
               </Typography>
               <ListItem
                 style={{
-                  paddingBottom: "0px",
+                  paddingBottom: '0px',
                 }}
                 className={classes.listItemDesktop}
               >
                 <CustomInput
                   name="name"
                   id="name-desktop"
-                  label={language ? "Name" : "Nombre"}
+                  label={language ? 'Name' : 'Nombre'}
                   style={{
                     margin: 8,
-                    marginLeft: "0px",
+                    marginLeft: '0px',
                   }}
                   fullWidth={true}
                 />
               </ListItem>
               <ListItem
                 style={{
-                  paddingBottom: "0px",
-                  paddingTop: "0px",
+                  paddingBottom: '0px',
+                  paddingTop: '0px',
                 }}
                 className={classes.listItemDesktop}
               >
                 <CustomInput
                   name="email"
                   id="email-desktop"
-                  label={language ? "Email" : "Correo Electrónico"}
+                  label={language ? 'Email' : 'Correo Electrónico'}
                   style={{
                     margin: 8,
-                    marginLeft: "0px",
+                    marginLeft: '0px',
                   }}
                   fullWidth={true}
                 />
               </ListItem>
               <ListItem
                 style={{
-                  paddingBottom: "0px",
-                  paddingTop: "0px",
+                  paddingBottom: '0px',
+                  paddingTop: '0px',
                 }}
                 className={classes.listItemDesktop}
               >
@@ -145,24 +145,24 @@ const DesktopFooter = (props) => {
                     formValues.inputValues.emailError
                   )}
                   style={{
-                    margin: "8px 8px 8px 0",
+                    margin: '8px 8px 8px 0',
                   }}
                   fullWidth
                   onClick={props.onSubscribe}
                   usetheme="contained"
                 >
-                  {language ? "SUBSCRIBE" : "SUSCRÍBASE"}
+                  {language ? 'SUBSCRIBE' : 'SUSCRÍBETE'}
                 </Button>
               </ListItem>
             </GridItem>
           );
         } else {
           return (
-            <GridItem key={section.header} style={{ padding: "0" }} md={2}>
+            <GridItem key={section.header} style={{ padding: '0' }} md={2}>
               <Typography className={classes.titleDesktop}>
                 {section.header}
               </Typography>
-              {renderDesktopFooterSubMenu(section.subMenu) || "Testing"}
+              {renderDesktopFooterSubMenu(section.subMenu) || 'Testing'}
             </GridItem>
           );
         }
@@ -170,7 +170,7 @@ const DesktopFooter = (props) => {
     };
 
     return (
-      <GridContainer style={{ textAlign: "left" }}>
+      <GridContainer style={{ textAlign: 'left' }}>
         {renderDesktopMenu()}
       </GridContainer>
     );
@@ -179,8 +179,8 @@ const DesktopFooter = (props) => {
   return (
     <div
       style={{
-        width: "100%",
-        marginBottom: "20px",
+        width: '100%',
+        marginBottom: '20px',
       }}
     >
       {renderDesktopFooter()}

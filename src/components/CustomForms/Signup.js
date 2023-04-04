@@ -1,34 +1,34 @@
-import React, { useEffect, useState, useContext } from "react";
-import classNames from "classnames";
+import React, { useEffect, useState, useContext } from 'react';
+import classNames from 'classnames';
 
 // material-ui core components
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "components/CustomButtons/Button.js";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Typography from "@material-ui/core/Typography";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Checkbox from "@material-ui/core/Checkbox";
+import { makeStyles } from '@material-ui/core/styles';
+import Button from 'components/CustomButtons/Button.js';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Typography from '@material-ui/core/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Checkbox from '@material-ui/core/Checkbox';
 
 // @material-ui/icons
-import Check from "@material-ui/icons/Check";
+import Check from '@material-ui/icons/Check';
 
 // Custom Components
-import checkboxStyles from "assets/jss/material-kit-react/customCheckboxRadioSwitch.js";
+import checkboxStyles from 'assets/jss/material-kit-react/customCheckboxRadioSwitch.js';
 
 // My Custom Components
-import CustomInput from "components/Footer/Components/CustomTextField.js";
+import CustomInput from 'components/Footer/Components/CustomTextField.js';
 
 // Custom Functions
-import { signupFunction } from "services/functions/signupFucntion.js";
+import { signupFunction } from 'services/functions/signupFucntion.js';
 
 // Context
-import { SignupFormContext } from "contexts/SignupFormContext.js";
-import { interests } from "contexts/SignupFormContext.js";
-import { AlertContext, signupAlertId } from "contexts/AlertContext.js";
-import { useLanguage } from "contexts/languageContext.js";
+import { SignupFormContext } from 'contexts/SignupFormContext.js';
+import { interests } from 'contexts/SignupFormContext.js';
+import { AlertContext, signupAlertId } from 'contexts/AlertContext.js';
+import { useLanguage } from 'contexts/languageContext.js';
 
 // Custom functions
-import { inputErrorsExist } from "services/functions/validateInput.js";
+import { inputErrorsExist } from 'services/functions/validateInput.js';
 
 // validate as you type, snackbar, mailchimp api
 const useCheckboxStyles = makeStyles(checkboxStyles);
@@ -65,8 +65,8 @@ export default function SignUpForm(props) {
     setFormValues({
       ...formValues,
       inputValues: {
-        name: "",
-        email: "",
+        name: '',
+        email: '',
       },
     });
   };
@@ -123,7 +123,7 @@ export default function SignUpForm(props) {
           <div
             key={interest.id}
             style={{
-              paddingBottom: "12px",
+              paddingBottom: '12px',
             }}
             className={wrapperDiv}
           >
@@ -153,36 +153,36 @@ export default function SignUpForm(props) {
         );
       });
     };
-    return <div style={{ marginLeft: "10px" }}>{renderCheckboxes()}</div>;
+    return <div style={{ marginLeft: '10px' }}>{renderCheckboxes()}</div>;
   };
 
   const renderFullForm = () => {
     return (
-      <div style={{ paddingTop: "15px" }}>
+      <div style={{ paddingTop: '15px' }}>
         <CustomInput
           name="name"
           id="name"
-          label={language ? "Name" : "Nombre"}
+          label={language ? 'Name' : 'Nombre'}
           fullWidth={true}
         />
         <CustomInput
           name="email"
           id="email"
-          label={language ? "Email" : "Correo Electrónico"}
+          label={language ? 'Email' : 'Correo Electrónico'}
           fullWidth={true}
         />
         <div
           style={{
-            paddingTop: "30px",
+            paddingTop: '30px',
           }}
         >
           <Typography
             style={{
-              fontSize: "16px",
-              fontWeight: "300",
+              fontSize: '16px',
+              fontWeight: '300',
             }}
           >
-            {language ? "Confirm Your Interests:" : "Confirme sus intereses:"}
+            {language ? 'Confirm Your Interests:' : 'Confirme sus intereses:'}
           </Typography>
         </div>
         {renderCheckboxSection()}
@@ -196,7 +196,7 @@ export default function SignUpForm(props) {
         {props.isDesktop ? renderCheckboxSection() : renderFullForm()}
         <div
           style={{
-            position: "relative",
+            position: 'relative',
           }}
         >
           <Button
@@ -207,7 +207,7 @@ export default function SignUpForm(props) {
               ) || loading
             }
             style={{
-              margin: "15px 0 0 0",
+              margin: '15px 0 0 0',
             }}
             fullWidth
             onClick={submit}
@@ -215,20 +215,20 @@ export default function SignUpForm(props) {
           >
             {props.isDesktop
               ? language
-                ? "Done"
-                : "Terminar"
+                ? 'Done'
+                : 'Terminar'
               : language
-              ? "Subscribe"
-              : "Suscríbase"}
+              ? 'Subscribe'
+              : 'SUSCRÍBETE'}
           </Button>
           {loading && (
             <CircularProgress
               style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                marginTop: "-5px",
-                marginLeft: "-12px",
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                marginTop: '-5px',
+                marginLeft: '-12px',
               }}
               size={24}
               color="primary"

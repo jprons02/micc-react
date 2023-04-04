@@ -97,17 +97,17 @@ const AdministrationFooter = () => {
       subMenu: [
         {
           externalLink: true,
-          linkText: 'Privacy Policy',
+          linkText: language ? 'Privacy Policy' : 'PÓLIZA DE PRIVACIDAD',
           linkTo: privacyPolicy,
         },
         {
           externalLink: true,
-          linkText: 'Cookie Policy',
+          linkText: language ? 'Cookie Policy' : 'PÓLIZA DE COOKIES',
           linkTo: cookiePolicy,
         },
         {
           externalLink: true,
-          linkText: 'Terms & Conditions',
+          linkText: language ? 'Terms & Conditions' : 'TÉRMINOS Y CONDICIONES',
           linkTo: termsConditions,
         },
       ],

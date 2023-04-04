@@ -20,10 +20,15 @@ import { privacyPolicy } from 'business_info/legal';
 import { cookiePolicy } from 'business_info/legal';
 import { termsConditions } from 'business_info/legal';
 
+// Context
+import { useLanguage } from 'contexts/languageContext.js';
+
 const useStyles = makeStyles(styles);
 
 const MiccosukeeFooter = () => {
   const classes = useStyles();
+
+  const language = useLanguage();
 
   const [showContactModal, setShowContactModal] = useContext(
     ContactModalContext
@@ -81,7 +86,7 @@ const MiccosukeeFooter = () => {
           }}
           role="button"
         >
-          MEDIA INQUIRIES
+          {language ? 'MEDIA INQUIRIES' : 'CONTACTO PARA MEDIOS'}
         </span>
         <a
           target="_blank"
@@ -93,7 +98,7 @@ const MiccosukeeFooter = () => {
             marginRight: '12px',
           }}
         >
-          PRIVACY POLICY
+          {language ? 'PRIVACY POLICY' : 'POLÍTICA DE PRIVACIDAD'}
         </a>
         <a
           target="_blank"
@@ -105,14 +110,14 @@ const MiccosukeeFooter = () => {
             marginRight: '12px',
           }}
         >
-          COOKIE POLICY
+          {language ? 'COOKIE POLICY' : 'POLÍTICA DE COOKIES'}
         </a>
         <a
           target="_blank"
           href={termsConditions}
           style={{ color: '#3c4858', fontWeight: '500', fontSize: '11px' }}
         >
-          TERMS &amp; CONDITIONS
+          {language ? 'TERMS & CONDITIONS' : 'TÉRMINOS Y CONDICIONES'}
         </a>
       </div>
       {/*

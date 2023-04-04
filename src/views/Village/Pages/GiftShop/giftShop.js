@@ -60,7 +60,7 @@ const GiftShop = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Gift Shop</h2>
+              <h2>{language ? 'Gift Shop' : 'Tienda'}</h2>
               {language ? (
                 <p>
                   Visit the Miccosukee Indian Gift Shop to find crafts created
@@ -69,9 +69,9 @@ const GiftShop = () => {
                 </p>
               ) : (
                 <p>
-                  Visite el Miccosukee Indian Gift shop y encuentre artesanías
-                  creadas por nativos alrededor del mundo, y regalos especiales
-                  hechos por miembros de nuestra Tribu Miccosukee.
+                  Visita la tienda Miccosukee y encuentra artesanías creadas por
+                  nativos alrededor del mundo, y regalos especiales hechos por
+                  miembros de nuestra Tribu Miccosukee.​
                 </p>
               )}
               {/*
