@@ -148,7 +148,7 @@ const Home = (props) => {
       {
         id: 3,
         bgImage: heroImg3,
-        header: language ? 'UNWIND IN LUXURY' : 'RELÁJESE EN LUJO',
+        header: language ? 'UNWIND IN LUXURY' : 'RELÁJATE EN LUJO',
         subHeader: language
           ? 'Take in scenic views of the Florida Everglades with 302 elegant guest rooms and suites featuring modern amenities and outstanding service.'
           : 'Mientras contempla las vistas panorámicas de los Everglades de Florida con 302 elegantes habitaciones y suites que ofrecen comodidades modernas y un servicio excepcional.',
@@ -185,7 +185,7 @@ const Home = (props) => {
       body: language
         ? 'Players of all levels can try their luck on any of the sizzling 2,000+ machines on our floor!'
         : '¡Jugadores de todos los niveles pueden probar su suerte en cualquiera de las 2,000+ increíbles máquinas!',
-      buttonText: language ? 'Learn More' : 'Conozca Más',
+      buttonText: language ? 'Learn More' : 'Conoce Más',
       linkObj: {
         type: 'internal',
         link: '/gaming-machines',
@@ -216,8 +216,8 @@ const Home = (props) => {
       title: language ? 'Bingo' : 'Bingo',
       body: language
         ? 'Miccosukee Casino & Resort’s Bingo Hall is the high-stakes bingo room to try your luck in the classic game of chance!'
-        : '¡La Sala de Bingo de Miccosukee Casino & Resort es el lugar ideal para probar su suerte con el bingo de altas apuestas!',
-      buttonText: language ? 'Learn More' : 'Conozca Más',
+        : '¡La Sala de Bingo de Miccosukee Casino & Resort es el lugar ideal para probar tu suerte con el bingo de altas apuestas!',
+      buttonText: language ? 'Learn More' : 'Conoce Más',
       linkObj: {
         type: 'internal',
         link: '/bingo',
@@ -277,7 +277,7 @@ const Home = (props) => {
           <Typography className={classes.welcome} paragraph component="h1">
             {language
               ? 'Welcome to Miccosukee Casino & Resort'
-              : 'Bienvenido a Miccosukee Casino & Resort'}
+              : 'Bienvenidos a Miccosukee Casino & Resort'}
           </Typography>
           <Typography
             className={classes.subWelcome}

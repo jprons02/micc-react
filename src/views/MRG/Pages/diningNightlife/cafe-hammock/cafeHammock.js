@@ -73,7 +73,7 @@ const CafeHammock = () => {
         >
           {language
             ? 'Café Hammock has moved to the Resort 2nd floor. Please join us upstairs for your fine dining favorites!'
-            : 'Café Hammock se ha mudado al Segundo piso del Resort. ¡Visítenos para disfrutar de sus platos favoritos!'}
+            : 'Café Hammock se ha mudado al segundo piso del resort. ¡visítanos para disfrutar de tus platos favoritos!'}
         </p>
         <GridContainer>
           <GridItem md={7}>
@@ -83,7 +83,7 @@ const CafeHammock = () => {
               <p>
                 {language
                   ? 'Enjoy casual dining with a sophisticated flair. Café Hammock serves up lunch & dinner favorites on the second floor of the Resort. Tasty dishes, craft cocktails, and a relaxed ambiance are all on the menu, so stop by and enjoy a delicious meal before or after you game with us.'
-                  : 'Disfrute de una cena informal con un toque sofisticado. Café Hammock sirve sus comidas favoritas en el segundo piso del Resort. Deliciosos platos, cócteles artesanales y un ambiente relajado están todos en el menú, así que pase y disfrute de una deliciosa comida antes o después de jugar con nosotros.'}
+                  : 'Disfruta de una cena informal con un toque sofisticado. Café Hammock sirve tus comidas favoritas en el segundo piso del Resort. Deliciosos platos, cócteles artesanales y un ambiente relajado están todos en el menú, así que pasa y disfruta de una deliciosa comida antes o después de visitar nuestra sala de juegos.'}
               </p>
               <Button
                 href="https://mapa-media.s3.amazonaws.com/website/CafeHammock_Menu_Web_2.pdf"

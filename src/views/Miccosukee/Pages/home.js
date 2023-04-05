@@ -64,7 +64,7 @@ const Home = ({ history }) => {
         : 'Experiencias en los Everglades',
       description: language
         ? 'Enjoy the Miccosukee Indian Village and airboat rides.'
-        : 'Disfruta la aldea indígena y toma un paseo en nuestro hidrodeslizadores.',
+        : 'Visita la aldea indígena y toma un paseo en nuestros hidrodeslizadores.',
       cardBackground: {
         background: `linear-gradient(
                 rgba(67, 169, 70, 0.45), 
@@ -86,8 +86,8 @@ const Home = ({ history }) => {
       url: 'events',
       title: language ? 'Events' : 'Eventos',
       description: language
-        ? 'Home to live music, cabaret shows and sporting events.'
-        : 'Lugar ideal para música en vivo, espectáculos y eventos deportivos.',
+        ? 'Live music, festivals, sporting events, and more entertainment for you.'
+        : 'Música en vivo, festivales, eventos deportivos y más entretenimiento para ti.',
       cardBackground: {
         background: `linear-gradient(
                 rgba(197, 78, 69, 0.45), 
