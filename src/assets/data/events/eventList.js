@@ -61,8 +61,62 @@ export const events = (language) => {
     A Guarachar Concert with Melena Burke, Albita, and Luis Bofill on Saturday, March 18, 2023 at Miccosukee Casino & Resort.
     10 AM - 2 PM
     Call 305-677-2250 to reserve your spot. Sponsored by ClinicalCare Medical Centers.
+    sábado 29 de abril
     */
-
+    {
+      id: '10',
+      title: language
+        ? 'Car, Bike & Food Trucks at Miccosukee Casino & Resort!'
+        : '¡Autos, Motos y Camiones de Comida en Miccosukee Casino & Resort!',
+      type: 'standard',
+      category: '',
+      admission: language
+        ? '$15 for cars and bikes; $5 per person entry walk up'
+        : '$15 para autos y motos; $ 5 por persona entrada a pie',
+      startDate: '5/4/2023',
+      endDate: '5/4/2023',
+      startTime: '6:00 P.M.',
+      endTime: '10:00 P.M.',
+      excerpt: language
+        ? 'Check out amazing rides, food & drinks, music, and more!'
+        : '¡Echa un vistazo a increíbles carros y disfruta variedad de comida, bebidas, música y mucho más!',
+      fullDescription: language
+        ? [
+            'Check out amazing rides, food & drinks, music, and more!',
+            'Hosted by Betty Osceola',
+          ]
+        : [
+            '¡Echa un vistazo a increíbles carros y disfruta variedad de comida, bebidas, música y mucho más!',
+            'Presentado por Betty Osceola',
+          ],
+    },
+    {
+      id: '9',
+      title: language
+        ? 'M&R Boxing Promotions Presents: Got Talent XXV '
+        : 'M&R Boxing Promotions Presenta: Got Talent XXV',
+      type: 'standard',
+      category: '',
+      admission: language ? 'Sold out!' : 'No hay entradas disponibles.',
+      startDate: '4/29/2023',
+      endDate: '4/29/2023',
+      startTime: '6:00 P.M.',
+      endTime: '12:30 A.M.',
+      excerpt: language
+        ? 'Boxing fans, get ready for an exciting night of fights with M&R Boxing Promotions...'
+        : 'Aficionados al boxeo, ¡prepárense para una emocionante noche de peleas con M&R Boxing Promotions...',
+      fullDescription: language
+        ? [
+            'Boxing fans, get ready for an exciting night of fights with M&R Boxing Promotions, bringing you young and upcoming talent to the ring, from every corner of the world!',
+            'Miccosukee Casino & Resort (2nd Floor Ballrooms)',
+            'SOLD OUT',
+          ]
+        : [
+            'Aficionados al boxeo, ¡prepárense para una emocionante noche de peleas con M&R Boxing Promotions, que les trae al cuadrilátero jóvenes y futuros talentos de todos los rincones del mundo!',
+            'Miccosukee Casino & Resort (Salas de Baile del Segundo Piso)',
+            'NO HAY ENTRADAS DISPONIBLES.',
+          ],
+    },
     {
       id: '8',
       title: 'A Guarachar Concert with Melena Burke, Albita, and Luis Bofill',
@@ -560,3 +614,20 @@ export const events = (language) => {
     */
   ];
 };
+
+/*
+
+M&R Boxing Promotions Presents: Got Talent XXV 
+Saturday, April 29 
+6 PM 
+Boxing fans, get ready for an exciting night of fights with M&R Boxing Promotions, bringing you young and upcoming talent to the ring, from every corner of the world!
+Miccosukee Casino & Resort (2nd Floor Ballrooms)
+
+
+M&R Boxing Promotions Presenta: Got Talent XXV
+sábado 29 de abril
+6 PM
+Aficionados al boxeo, ¡prepárense para una emocionante noche de peleas con M&R Boxing Promotions, que les trae al cuadrilátero jóvenes y futuros talentos de todos los rincones del mundo!
+Miccosukee Casino & Resort (Salas de Baile del Segundo Piso)
+
+*/
