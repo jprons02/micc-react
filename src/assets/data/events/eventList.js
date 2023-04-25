@@ -66,13 +66,13 @@ export const events = (language) => {
     {
       id: '10',
       title: language
-        ? 'Car, Bike & Food Trucks at Miccosukee Casino & Resort!'
-        : '¡Autos, Motos y Camiones de Comida en Miccosukee Casino & Resort!',
+        ? 'Car & Bike Show at Miccosukee Casino & Resort!'
+        : '¡Show de Autos y Motos en Miccosukee Casino & Resort!',
       type: 'standard',
       category: '',
       admission: language
-        ? '$15 for cars and bikes; $5 per person entry walk up'
-        : '$15 para autos y motos; $ 5 por persona entrada a pie',
+        ? 'Free to Walk-In, $5 to Park in Event Space, $15 to Compete'
+        : 'Gratis Entrada a Pie, $5 Estacionamiento, $15 para Competir',
       startDate: '5/4/2023',
       endDate: '5/4/2023',
       startTime: '6:00 P.M.',
@@ -83,11 +83,11 @@ export const events = (language) => {
       fullDescription: language
         ? [
             'Check out amazing rides, food & drinks, music, and more!',
-            'Hosted by Betty Osceola',
+            'Hosted by Betty Osceola & Neil Sanders',
           ]
         : [
             '¡Echa un vistazo a increíbles carros y disfruta variedad de comida, bebidas, música y mucho más!',
-            'Presentado por Betty Osceola',
+            'Presentado por Betty Osceola y Neil Sanders',
           ],
     },
     {
@@ -97,7 +97,7 @@ export const events = (language) => {
         : 'M&R Boxing Promotions Presenta: Got Talent XXV',
       type: 'standard',
       category: '',
-      admission: language ? 'Sold out!' : 'No hay entradas disponibles.',
+      admission: language ? 'Starting from $50' : 'Starting from $50',
       startDate: '4/29/2023',
       endDate: '4/29/2023',
       startTime: '6:00 P.M.',
@@ -109,13 +109,20 @@ export const events = (language) => {
         ? [
             'Boxing fans, get ready for an exciting night of fights with M&R Boxing Promotions, bringing you young and upcoming talent to the ring, from every corner of the world!',
             'Miccosukee Casino & Resort (2nd Floor Ballrooms)',
-            'SOLD OUT',
           ]
         : [
             'Aficionados al boxeo, ¡prepárense para una emocionante noche de peleas con M&R Boxing Promotions, que les trae al cuadrilátero jóvenes y futuros talentos de todos los rincones del mundo!',
             'Miccosukee Casino & Resort (Salas de Baile del Segundo Piso)',
-            'NO HAY ENTRADAS DISPONIBLES.',
           ],
+      buttons: [
+        {
+          key: 1,
+          name: language ? 'PURCHASE TICKETS' : 'COMPRA BOLETOS',
+          href:
+            'https://www.eventbrite.com/e/mr-boxing-promotion-presents-season-5-got-talent-xxv-tickets-610615927677',
+          target: '_blank',
+        },
+      ],
     },
     {
       id: '8',
@@ -614,20 +621,3 @@ export const events = (language) => {
     */
   ];
 };
-
-/*
-
-M&R Boxing Promotions Presents: Got Talent XXV 
-Saturday, April 29 
-6 PM 
-Boxing fans, get ready for an exciting night of fights with M&R Boxing Promotions, bringing you young and upcoming talent to the ring, from every corner of the world!
-Miccosukee Casino & Resort (2nd Floor Ballrooms)
-
-
-M&R Boxing Promotions Presenta: Got Talent XXV
-sábado 29 de abril
-6 PM
-Aficionados al boxeo, ¡prepárense para una emocionante noche de peleas con M&R Boxing Promotions, que les trae al cuadrilátero jóvenes y futuros talentos de todos los rincones del mundo!
-Miccosukee Casino & Resort (Salas de Baile del Segundo Piso)
-
-*/
