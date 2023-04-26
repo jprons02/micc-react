@@ -4,7 +4,7 @@ import { Link, withRouter, useRouteMatch } from 'react-router-dom';
 import { eventbriteIDs } from 'assets/data/events/eventbriteIDs';
 
 //TESTING
-import carBikeShow from 'assets/media/img/events/eventsList/Social-tempSLIDE1.jpg';
+import carBikeShow from 'assets/media/img/events/eventsList/carAndBike.jpg';
 
 // nodejs library that concatenates classes
 import classNames from 'classnames';
@@ -85,7 +85,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     // When category changes, insert default upcomming text if needed.
     const renderUpcommingDefault = () => {
       if (document.getElementById('upcomming')) {
-        if (!document.getElementById('upcomming').innerText) {
+        if (!document.getElementById('upcomming').innerHTML) {
           setDefaultUpcommingText(true);
         } else {
           setDefaultUpcommingText(false);
@@ -185,10 +185,11 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     );
   };
 
+  const getUrl = (title, startDate) =>
+    `${match.path}/${urlify(title)}${startDate.split('/').join('')}`;
+
   const renderTitle = (title, startDate, type, link) => {
-    const url = `${match.path}/${urlify(title)}${startDate
-      .split('/')
-      .join('')}`;
+    const url = getUrl(title, startDate);
 
     if (type === 'standard') {
       return (
@@ -236,18 +237,48 @@ const Events = ({ history, badgeColor, entityMargin }) => {
       }
     };
 
-    const renderUpcommingEvents = () => {
+    const newRenderUpcommingEvents = () => {
       return sortedEventsAscending.map((event) => {
+        // url is needed to link to from an image
+        const title = language ? event.titleEn : event.titleSp;
+        const url = getUrl(title, event.startDate);
         if (isCategory(event)) {
           if (isUpcomming(event)) {
             return (
-              <div style={{ marginBottom: '22px' }} key={event.titleEn}>
-                {renderTitle(
-                  language ? event.titleEn : event.titleSp,
-                  event.startDate,
-                  event.type,
-                  event.link
-                )}
+              <div
+                style={{ padding: '20px', display: 'inline-block' }}
+                key={event.titleEn}
+              >
+                <Link to={url}>
+                  <img
+                    style={{
+                      width: '260px',
+                      boxShadow:
+                        '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+                    }}
+                    src={event.thumbnail}
+                  />
+                </Link>
+              </div>
+            );
+          }
+        }
+      });
+    };
+
+    const renderUpcommingEvents = () => {
+      return sortedEventsAscending.map((event) => {
+        // url is needed to link to from an image
+        const title = language ? event.titleEn : event.titleSp;
+        const url = getUrl(title, event.startDate);
+        if (isCategory(event)) {
+          if (isUpcomming(event)) {
+            return (
+              <div style={{ marginBottom: '40px' }} key={event.titleEn}>
+                {/*renderTitle(title, event.startDate, event.type, event.link)*/}
+                <Link to={url}>
+                  <img style={{ width: '200px' }} src={carBikeShow} />
+                </Link>
                 <h6>{eventDate(event)}</h6>
                 <h6>
                   {language
@@ -354,7 +385,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         if (isCategory(event)) {
           if (!isUpcomming(event)) {
             return (
-              <div style={{ marginBottom: '22px' }} key={event.titleEn}>
+              <div style={{ marginBottom: '40px' }} key={event.titleEn}>
                 {renderTitle(
                   language ? event.titleEn : event.titleSp,
                   event.startDate,
@@ -377,7 +408,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
 
     return (
       <React.Fragment>
-        <h3 style={{ marginBottom: '20px' }}>
+        <h3 style={{ marginBottom: '10px' }}>
           {
             /* Weird if statements here is necessary for spanish "Todos los Proximos..." copy. */
             language
@@ -387,7 +418,9 @@ const Events = ({ history, badgeColor, entityMargin }) => {
               : category + ' Próximos Eventos'
           }
         </h3>
-        <div id="upcomming">{renderUpcommingEvents()}</div>
+        <div id="upcomming" style={{ marginBottom: '30px' }}>
+          {newRenderUpcommingEvents()}
+        </div>
         {defaultUpcommingText ? (
           <p>
             {language

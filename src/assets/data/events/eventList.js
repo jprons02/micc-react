@@ -2,7 +2,8 @@ import React from 'react';
 import { eventbriteIDs } from 'assets/data/events/eventbriteIDs.js';
 //import aid2021 from 'assets/media/video/AID_savethedate_spot_30sec.mp4';
 import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg';
-import carBikeShow from 'assets/media/img/events/eventsList/Social-tempSLIDE1.jpg';
+import carBikeShow from 'assets/media/img/events/eventsList/carAndBike.jpg';
+import boxing1 from 'assets/media/img/events/eventsList/M_R-Boxing-Promotions-Presents--Got-Talent-XXV.jpg';
 
 import wildlifeFlyer from 'assets/media/img/events/wildlife/wildlifeflyer.jpg';
 import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/BassPro Official Logo.png';
@@ -83,6 +84,7 @@ export const events = () => {
     },
     {
       id: '9',
+      thumbnail: boxing1,
       titleEn: 'M&R Boxing Promotions Presents: Got Talent XXV',
       titleSp: 'M&R Boxing Promotions Presenta: Got Talent XXV',
       type: 'standard',
@@ -256,158 +258,6 @@ export const events = () => {
         },
       ],
     },
-    {
-      id: '6',
-      titleEn: 'Miccosukee Indian Arts & Crafts Festival',
-      titleSp: 'Miccosukee Indian Arts & Crafts Festival',
-      type: 'standard',
-      category: '',
-      admissionEn:
-        '$20 Adults (12+), $10 Children (6-12), $15 Teachers, First Responders & Military Personnel (with valid ID), Free Entry for Miccosukee Community & Tribal Members',
-      admissionSp:
-        '$20 Adultos (12+), $10 Niños (6-12), $15 Maestros, Socorristas y Personal Militar (con identificación válida), Entrada Gratis para Miembros Tribales y de la Comunidad Miccosukee',
-      startDate: '12/29/2022',
-      endDate: '12/31/2022',
-      startTime: '10:00 A.M.',
-      endTime: '5:00 P.M.',
-      excerptEn:
-        'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades...',
-      excerptSp:
-        'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida...',
-      fullDescriptionEn: [
-        'Location: Historic Miccosukee Indian Village Fairgrounds - 500 US Hwy 41, Miami, FL 33194',
-        'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades, December 29 – 31, 2022, from 10 AM – 5 PM at the historic Miccosukee Indian Village festival grounds, 20 miles west of Krome Avenue and SW 8th Street.',
-        'Gather in the Everglades for indigenous music and dance performances, an artisan market featuring crafts and authentic cuisine, and alligator demonstrations teaching this traditional art of survival.',
-        'Live Music & Dance Performances by: Joe Tohonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.',
-        'Airboat rides are available across the street.',
-        "You're invited to take part in our holiday tradition with your family.",
-        'FREE shuttle service to and from Miccosukee Casino & Resort / Indian Village available all day from 9:30 AM to 5 PM.',
-      ],
-      fullDescriptionSp: [
-        'Lugar: Área de ferias del Miccosukee Indian Village - 500 US Hwy 41, Miami, FL 33194',
-        'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida, 29 al 31 de diciembre, de 10 AM a 5 PM, 20 millas al oeste de la Avenida Krome y la Calle 8 del suroeste.',
-        'Visite los Everglades para disfrutar de espectáculos de música y danza indígenas, un mercado artisanal, cocina auténtica, y demostraciones de caimanes que enseñan este arte tradicional de supervivencia.',
-        'Actuaciones de danza y música en vivo a cargo de: Joe Tohonnie Jr. y White Mountain Apache Crown Dancers, Iroquois Sky Dancers y Native Pride.',
-        'Los paseos en hidrodeslizador están disponibles al otro lado de la calle.',
-        'Los invitamos a participar en nuestra tradición navideña con su familia.',
-        'Servicio de transporte GRATIS desde y hacia Miccosukee Casino & Resort / Indian Village disponible todo el día de 9:30 AM a 5 PM.',
-      ],
-      /*eventbriteButton: [
-        {
-          name: language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ',
-          eventbrite: {
-            eventId: eventbriteIDs.aid2022,
-            modalTriggerElementId: 'example-widget-trigger',
-          },
-          href: '',
-          target: '',
-        },
-      ],*/
-      buttons: [
-        {
-          key: 1,
-          nameEn: 'Tickets',
-          nameSp: 'Entradas',
-          href:
-            'https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=website',
-          target: '_blank',
-        },
-      ],
-    },
-    {
-      id: '5',
-      titleEn: 'American Indian Day',
-      titleSp: 'American Indian Day',
-      type: 'standard',
-      category: '',
-      admissionEn: 'FREE',
-      admissionSp: 'GRATIS',
-      startDate: '9/24/2022',
-      endDate: '9/24/2022',
-      startTime: '12:00 P.M.',
-      endTime: '6:00 P.M.',
-      excerptEn:
-        'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Casino & Resort! Admission is free, so bring the whole tribe!...',
-      excerptSp:
-        'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita, ¡así que traiga a toda su tribu!...',
-      fullDescriptionEn: [
-        'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Casino & Resort! Admission is free, so bring the whole tribe!',
-        'On American Indian Day, we honor the culture and traditions of indigenous First Nations and their contributions to the world.',
-        'This family-friendly festival provides a glimpse into the Miccosukee Tribe’s culture as we host indigenous craft and food vendors, alligator wrestling shows, airboat rides, and more. Visit us and connect with Miami’s original locals in the heart of the Florida Everglades.',
-      ],
-      fullDescriptionSp: [
-        'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita, ¡así que traiga a toda su tribu!',
-        'En el Día del Indio Americano, honramos la cultura y las tradiciones de las Primeras Naciones indígenas y sus contribuciones al mundo.',
-        'Este festival familiar ofrece un vistazo a la cultura de la tribu Miccosukee mientras presentamos vendedores de comida y artesanía indígena, espectáculos de lucha con lagartos, paseos en hidrodeslizador y más. Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.',
-      ],
-      /*eventbriteButton: [
-        {
-          name: language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ',
-          eventbrite: {
-            eventId: eventbriteIDs.aid2022,
-            modalTriggerElementId: 'example-widget-trigger',
-          },
-          href: '',
-          target: '',
-        },
-      ],*/
-      buttons: [
-        {
-          key: 1,
-          nameEn: 'Register',
-          nameSp: 'Regístrese',
-          href:
-            'https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website',
-          target: '_blank',
-        },
-      ],
-    },
-    {
-      id: '4',
-      titleEn: 'Florida Mega Market',
-      titleSp: 'Florida Mega Market',
-      type: 'standard',
-      category: '',
-      admissionEn: 'FREE',
-      admissionSp: 'GRATIS',
-      startDate: '9/4/2022',
-      endDate: '9/4/2022',
-      startTime: '11:00 A.M.',
-      endTime: '7:00 P.M.',
-      excerptEn:
-        'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Casino & Resort! Buy unique items from...',
-      excerptSp:
-        '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Casino & Resort! Compre artículos únicos de...',
-      fullDescriptionEn: [
-        'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Casino & Resort! Buy unique items from hundreds of vendors, chow down with delicious food trucks, and dance the afternoon away with live music and entertainment.',
-      ],
-      fullDescriptionSp: [
-        '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Casino & Resort! Compre artículos únicos de cientos de vendedores, disfrute de deliciosos camiones de comida y baile toda la tarde con música en vivo y entretenimiento.',
-      ],
-    },
-    {
-      id: '3',
-      titleEn: 'Labor Day Weekend CAR & BIKE SHOW',
-      titleSp: 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
-      type: 'standard',
-      category: '',
-      admissionEn: 'FREE',
-      admissionSp: 'GRATIS',
-      startDate: '9/3/2022',
-      endDate: '9/3/2022',
-      startTime: '11:00 A.M.',
-      endTime: '5:00 P.M.',
-      excerptEn:
-        'Calling all gear heads! Rev up your engines and head down to Miccosukee Casino & Resort for a...',
-      excerptSp:
-        '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Casino & Resort para un...',
-      fullDescriptionEn: [
-        'Calling all gear heads! Rev up your engines and head down to Miccosukee Casino & Resort for a spectacular Car & Bike Show on Saturday, September 3! Check out amazing rides, food trucks, music, vendors, and contests in this outdoor event rated E for everyone!',
-      ],
-      fullDescriptionSp: [
-        '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Casino & Resort para un espectacular show de Carros y Motos el sábado, 3 de septiembre! ¡Tendremos increíbles vehículos, camiones de comida, música, vendedores y concursos en este evento al aire libre apto para todo público!',
-      ],
-    },
   ];
 };
 
@@ -574,6 +424,159 @@ export const events = () => {
       ],
       fullDescriptionSp: [
         'Roadrage Media presents Wheels & Meals - a car, truck, jeep and motorcycle food truck festival.',
+      ],
+    },
+
+    {
+      id: '6',
+      titleEn: 'Miccosukee Indian Arts & Crafts Festival',
+      titleSp: 'Miccosukee Indian Arts & Crafts Festival',
+      type: 'standard',
+      category: '',
+      admissionEn:
+        '$20 Adults (12+), $10 Children (6-12), $15 Teachers, First Responders & Military Personnel (with valid ID), Free Entry for Miccosukee Community & Tribal Members',
+      admissionSp:
+        '$20 Adultos (12+), $10 Niños (6-12), $15 Maestros, Socorristas y Personal Militar (con identificación válida), Entrada Gratis para Miembros Tribales y de la Comunidad Miccosukee',
+      startDate: '12/29/2022',
+      endDate: '12/31/2022',
+      startTime: '10:00 A.M.',
+      endTime: '5:00 P.M.',
+      excerptEn:
+        'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades...',
+      excerptSp:
+        'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida...',
+      fullDescriptionEn: [
+        'Location: Historic Miccosukee Indian Village Fairgrounds - 500 US Hwy 41, Miami, FL 33194',
+        'Native American culture comes alive in a three-day gathering of music, arts, and entertainment in the heart of the Florida Everglades, December 29 – 31, 2022, from 10 AM – 5 PM at the historic Miccosukee Indian Village festival grounds, 20 miles west of Krome Avenue and SW 8th Street.',
+        'Gather in the Everglades for indigenous music and dance performances, an artisan market featuring crafts and authentic cuisine, and alligator demonstrations teaching this traditional art of survival.',
+        'Live Music & Dance Performances by: Joe Tohonnie Jr. and the White Mountain Apache Crown Dancers, Iroquois Sky Dancers & Native Pride.',
+        'Airboat rides are available across the street.',
+        "You're invited to take part in our holiday tradition with your family.",
+        'FREE shuttle service to and from Miccosukee Casino & Resort / Indian Village available all day from 9:30 AM to 5 PM.',
+      ],
+      fullDescriptionSp: [
+        'Lugar: Área de ferias del Miccosukee Indian Village - 500 US Hwy 41, Miami, FL 33194',
+        'La cultura nativa americana cobra vida en una reunión de tres días de música, arte y entretenimiento en el corazón de los Everglades de Florida, 29 al 31 de diciembre, de 10 AM a 5 PM, 20 millas al oeste de la Avenida Krome y la Calle 8 del suroeste.',
+        'Visite los Everglades para disfrutar de espectáculos de música y danza indígenas, un mercado artisanal, cocina auténtica, y demostraciones de caimanes que enseñan este arte tradicional de supervivencia.',
+        'Actuaciones de danza y música en vivo a cargo de: Joe Tohonnie Jr. y White Mountain Apache Crown Dancers, Iroquois Sky Dancers y Native Pride.',
+        'Los paseos en hidrodeslizador están disponibles al otro lado de la calle.',
+        'Los invitamos a participar en nuestra tradición navideña con su familia.',
+        'Servicio de transporte GRATIS desde y hacia Miccosukee Casino & Resort / Indian Village disponible todo el día de 9:30 AM a 5 PM.',
+      ],
+      eventbriteButton: [
+        {
+          name: language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ',
+          eventbrite: {
+            eventId: eventbriteIDs.aid2022,
+            modalTriggerElementId: 'example-widget-trigger',
+          },
+          href: '',
+          target: '',
+        },
+      ],
+      buttons: [
+        {
+          key: 1,
+          nameEn: 'Tickets',
+          nameSp: 'Entradas',
+          href:
+            'https://www.eventbrite.com/e/miccosukee-indian-arts-crafts-festival-2022-tickets-453191858047?aff=website',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      id: '5',
+      titleEn: 'American Indian Day',
+      titleSp: 'American Indian Day',
+      type: 'standard',
+      category: '',
+      admissionEn: 'FREE',
+      admissionSp: 'GRATIS',
+      startDate: '9/24/2022',
+      endDate: '9/24/2022',
+      startTime: '12:00 P.M.',
+      endTime: '6:00 P.M.',
+      excerptEn:
+        'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Casino & Resort! Admission is free, so bring the whole tribe!...',
+      excerptSp:
+        'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita, ¡así que traiga a toda su tribu!...',
+      fullDescriptionEn: [
+        'Miccosukee Celebrates American Indian Day with a fun-packed event on Saturday, September 24, at Miccosukee Casino & Resort! Admission is free, so bring the whole tribe!',
+        'On American Indian Day, we honor the culture and traditions of indigenous First Nations and their contributions to the world.',
+        'This family-friendly festival provides a glimpse into the Miccosukee Tribe’s culture as we host indigenous craft and food vendors, alligator wrestling shows, airboat rides, and more. Visit us and connect with Miami’s original locals in the heart of the Florida Everglades.',
+      ],
+      fullDescriptionSp: [
+        'Miccosukee celebra el Día del Indio Americano (American Indian Day) con un evento lleno de diversión el sábado, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita, ¡así que traiga a toda su tribu!',
+        'En el Día del Indio Americano, honramos la cultura y las tradiciones de las Primeras Naciones indígenas y sus contribuciones al mundo.',
+        'Este festival familiar ofrece un vistazo a la cultura de la tribu Miccosukee mientras presentamos vendedores de comida y artesanía indígena, espectáculos de lucha con lagartos, paseos en hidrodeslizador y más. Visítenos y conéctese con los habitantes originales de Miami en el corazón de los Everglades de Florida.',
+      ],
+      eventbriteButton: [
+        {
+          name: language ? 'REGISTER HERE' : 'REGÍSTRESE AQUÍ',
+          eventbrite: {
+            eventId: eventbriteIDs.aid2022,
+            modalTriggerElementId: 'example-widget-trigger',
+          },
+          href: '',
+          target: '',
+        },
+      ],
+      buttons: [
+        {
+          key: 1,
+          nameEn: 'Register',
+          nameSp: 'Regístrese',
+          href:
+            'https://www.eventbrite.com/e/miccosukee-celebrates-american-indian-day-registration-389611878617?aff=website',
+          target: '_blank',
+        },
+      ],
+    },
+    {
+      id: '4',
+      titleEn: 'Florida Mega Market',
+      titleSp: 'Florida Mega Market',
+      type: 'standard',
+      category: '',
+      admissionEn: 'FREE',
+      admissionSp: 'GRATIS',
+      startDate: '9/4/2022',
+      endDate: '9/4/2022',
+      startTime: '11:00 A.M.',
+      endTime: '7:00 P.M.',
+      excerptEn:
+        'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Casino & Resort! Buy unique items from...',
+      excerptSp:
+        '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Casino & Resort! Compre artículos únicos de...',
+      fullDescriptionEn: [
+        'Skip the mall and experience an outdoor shopping event like no other at Miccosukee Casino & Resort! Buy unique items from hundreds of vendors, chow down with delicious food trucks, and dance the afternoon away with live music and entertainment.',
+      ],
+      fullDescriptionSp: [
+        '¡Olvide el centro comercial y experimente un evento de compras al aire libre como ningún otro en Miccosukee Casino & Resort! Compre artículos únicos de cientos de vendedores, disfrute de deliciosos camiones de comida y baile toda la tarde con música en vivo y entretenimiento.',
+      ],
+    },
+    {
+      id: '3',
+      titleEn: 'Labor Day Weekend CAR & BIKE SHOW',
+      titleSp: 'SHOW DE CARROS Y MOTOS el Fin de Semana de Labor Day',
+      type: 'standard',
+      category: '',
+      admissionEn: 'FREE',
+      admissionSp: 'GRATIS',
+      startDate: '9/3/2022',
+      endDate: '9/3/2022',
+      startTime: '11:00 A.M.',
+      endTime: '5:00 P.M.',
+      excerptEn:
+        'Calling all gear heads! Rev up your engines and head down to Miccosukee Casino & Resort for a...',
+      excerptSp:
+        '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Casino & Resort para un...',
+      fullDescriptionEn: [
+        'Calling all gear heads! Rev up your engines and head down to Miccosukee Casino & Resort for a spectacular Car & Bike Show on Saturday, September 3! Check out amazing rides, food trucks, music, vendors, and contests in this outdoor event rated E for everyone!',
+      ],
+      fullDescriptionSp: [
+        '¡Llamando a todos los fanáticos de autos! ¡Aceleren sus motores y diríjanse a Miccosukee Casino & Resort para un espectacular show de Carros y Motos el sábado, 3 de septiembre! ¡Tendremos increíbles vehículos, camiones de comida, música, vendedores y concursos en este evento al aire libre apto para todo público!',
       ],
     },
     */
