@@ -3,6 +3,9 @@ import { Link, withRouter, useRouteMatch } from 'react-router-dom';
 
 import { eventbriteIDs } from 'assets/data/events/eventbriteIDs';
 
+//TESTING
+import carBikeShow from 'assets/media/img/events/eventsList/Social-tempSLIDE1.jpg';
+
 // nodejs library that concatenates classes
 import classNames from 'classnames';
 
@@ -238,18 +241,20 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         if (isCategory(event)) {
           if (isUpcomming(event)) {
             return (
-              <div style={{ marginBottom: '22px' }} key={event.title}>
+              <div style={{ marginBottom: '22px' }} key={event.titleEn}>
                 {renderTitle(
-                  event.title,
+                  language ? event.titleEn : event.titleSp,
                   event.startDate,
                   event.type,
                   event.link
                 )}
                 <h6>{eventDate(event)}</h6>
-                <h6>{`${language ? 'Admission: ' : 'Admisión: '}${
-                  event.admission
-                }`}</h6>
-                <p>{event.excerpt}</p>
+                <h6>
+                  {language
+                    ? 'Admission: ' + event.admissionEn
+                    : 'Admisión: ' + event.admissionSp}
+                </h6>
+                <p>{language ? event.excerptEn : event.excerptSp}</p>
                 {!event.buttons
                   ? null
                   : event.buttons.map((button) => {
@@ -263,7 +268,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                           className={classes.button}
                           variant="contained"
                         >
-                          {button.name}
+                          {language ? button.nameEn : button.nameSp}
                         </Button>
                       );
                     })}
@@ -349,16 +354,20 @@ const Events = ({ history, badgeColor, entityMargin }) => {
         if (isCategory(event)) {
           if (!isUpcomming(event)) {
             return (
-              <div style={{ marginBottom: '22px' }} key={event.title}>
+              <div style={{ marginBottom: '22px' }} key={event.titleEn}>
                 {renderTitle(
-                  event.title,
+                  language ? event.titleEn : event.titleSp,
                   event.startDate,
                   event.type,
                   event.link
                 )}
                 <h6>{eventDate(event)}</h6>
-                <h6>{`Admission: ${event.admission}`}</h6>
-                <p>{event.excerpt}</p>
+                <h6>
+                  {language
+                    ? `Admission: ${event.admissionEn}`
+                    : `Admission: ${event.admissionSp}`}
+                </h6>
+                <p>{language ? event.excerptEn : event.excerptSp}</p>
               </div>
             );
           }

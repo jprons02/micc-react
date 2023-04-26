@@ -31,22 +31,9 @@ const EventPage = ({ entityMargin, entity }) => {
 
   // Fetch event that matches url and set as state
   useEffect(() => {
-    const matchedEvent = events(language).find((event) => {
-      const title = () => {
-        if (event) {
-          if (language) {
-            return event.test.english;
-          } else {
-            return event.test.spanish;
-          }
-        } else {
-          return 'no event selected';
-        }
-      };
-      const eventUrl = `${urlify(event.title)}${event.startDate
-        .split('/')
-        .join('')}`;
-
+    const matchedEvent = events().find((event) => {
+      const title = language ? event.titleEn : event.titleSp;
+      const eventUrl = `${urlify(title)}${event.startDate.split('/').join('')}`;
       return eventUrl === match.params.eventId;
     });
     setEvent(matchedEvent);
@@ -60,25 +47,27 @@ const EventPage = ({ entityMargin, entity }) => {
       };
       history.push(url());
     }
-  }, [language]);
+  }, []);
 
   useEffect(() => {
     // if event object is not empty
-    if (Object.keys(event).length !== 0) {
-      if (event.buttons) {
-        if (event.buttons[0].eventbrite) {
-          var exampleCallbackEventPage = function () {
-            console.log('Order complete!');
-          };
+    if (event) {
+      if (Object.keys(event).length !== 0) {
+        if (event.buttons) {
+          if (event.buttons[0].eventbrite) {
+            var exampleCallbackEventPage = function () {
+              console.log('Order complete!');
+            };
 
-          window.EBWidgets.createWidget({
-            widgetType: 'checkout',
-            eventId: event.buttons[0].eventbrite.eventId,
-            modal: true,
-            modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`,
-            iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
-            //onOrderComplete: exampleCallbackEventPage,
-          });
+            window.EBWidgets.createWidget({
+              widgetType: 'checkout',
+              eventId: event.buttons[0].eventbrite.eventId,
+              modal: true,
+              modalTriggerElementId: `${event.buttons[0].eventbrite.modalTriggerElementId}eventpage`,
+              iframeContainerId: `eventbrite-widget-container-${event.buttons[0].eventbrite.eventId}`,
+              //onOrderComplete: exampleCallbackEventPage,
+            });
+          }
         }
       }
     }
@@ -93,12 +82,22 @@ const EventPage = ({ entityMargin, entity }) => {
         : `${event.startDate} - ${event.endDate}`;
 
     const renderFullDescription = () => {
-      if (event.fullDescription) {
-        return event.fullDescription.map((content) => {
-          return <p key={content}>{content}</p>;
-        });
+      if (language) {
+        if (event.fullDescriptionEn) {
+          return event.fullDescriptionEn.map((content) => {
+            return <p key={content}>{content}</p>;
+          });
+        } else {
+          return 'Loading...';
+        }
       } else {
-        return 'Loading...';
+        if (event.fullDescriptionSp) {
+          return event.fullDescriptionSp.map((content) => {
+            return <p key={content}>{content}</p>;
+          });
+        } else {
+          return 'Loading...';
+        }
       }
     };
 
@@ -255,19 +254,23 @@ const EventPage = ({ entityMargin, entity }) => {
               className={classes.button}
               variant="contained"
             >
-              {event.buttons[0] ? event.buttons[0].name : 'Null'}
+              {event.buttons[0]
+                ? language
+                  ? event.buttons[0].nameEn
+                  : event.buttons[0].nameSp
+                : 'Null'}
             </Button>
           );
         }
         return event.buttons.map((item) => {
           return (
             <Button
-              key={item.name}
+              key={item.nameEn}
               style={{ marginRight: '5px' }}
               href={item.href}
               target={item.target}
             >
-              {item.name}
+              {language ? item.nameEn : item.nameSp}
             </Button>
           );
         });
@@ -286,7 +289,7 @@ const EventPage = ({ entityMargin, entity }) => {
             className={classes.container}
             style={{ padding: '15px', paddingBottom: '40px' }}
           >
-            <h3>{event.title}</h3>
+            <h3>{language ? event.titleEn : event.titleSp}</h3>
             <p>
               <span style={{ fontWeight: '400' }}>Date: </span>
               {eventDate}
@@ -297,6 +300,19 @@ const EventPage = ({ entityMargin, entity }) => {
                 {`${event.startTime} - ${event.endTime}`}
               </p>
             ) : null}
+            {language ? (
+              event.admissionEn ? (
+                <p>
+                  <span style={{ fontWeight: '400' }}>Admission: </span>
+                  {event.admissionEn}
+                </p>
+              ) : null
+            ) : (
+              <p>
+                <span style={{ fontWeight: '400' }}>Admission: </span>
+                {event.admissionSp}
+              </p>
+            )}
             {renderFlyer()}
             {renderPromoVideo()}
             <div style={{ marginTop: '25px' }}>{renderFullDescription()}</div>
