@@ -396,7 +396,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
                 <h6>
                   {language
                     ? `Admission: ${event.admissionEn}`
-                    : `Admission: ${event.admissionSp}`}
+                    : `Entrada: ${event.admissionSp}`}
                 </h6>
                 <p>{language ? event.excerptEn : event.excerptSp}</p>
               </div>

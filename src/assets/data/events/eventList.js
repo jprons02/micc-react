@@ -4,6 +4,7 @@ import { eventbriteIDs } from 'assets/data/events/eventbriteIDs.js';
 import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg';
 import carBikeShow from 'assets/media/img/events/eventsList/carAndBike.jpg';
 import boxing1 from 'assets/media/img/events/eventsList/M_R-Boxing-Promotions-Presents--Got-Talent-XXV.jpg';
+import boxing2 from 'assets/media/img/events/eventsList/boxing.jpg';
 
 import wildlifeFlyer from 'assets/media/img/events/wildlife/wildlifeflyer.jpg';
 import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/BassPro Official Logo.png';
@@ -88,6 +89,10 @@ export const events = () => {
       titleEn: 'M&R Boxing Promotions Presents: Got Talent XXV',
       titleSp: 'M&R Boxing Promotions Presenta: Got Talent XXV',
       type: 'standard',
+      flyer: {
+        img: boxing2,
+        alt: 'image with details of the boxing event',
+      },
       category: '',
       admissionEn: 'Starting from $50',
       admissionSp: 'Comenzando en $50',

@@ -104,10 +104,7 @@ const EventPage = ({ entityMargin, entity }) => {
     const renderFlyer = () => {
       if (event.flyer) {
         return (
-          <a
-            target="_blank"
-            href="https://www.eventbrite.com/e/2023-removal-of-the-swamp-invaders-fishing-tournament-tickets-520595263447"
-          >
+          <a target="_blank" href={event.flyer.link ? event.flyer.link : null}>
             <img
               style={{
                 width: '100%',
@@ -265,6 +262,7 @@ const EventPage = ({ entityMargin, entity }) => {
         return event.buttons.map((item) => {
           return (
             <Button
+              color="success"
               key={item.nameEn}
               style={{ marginRight: '5px' }}
               href={item.href}
@@ -291,12 +289,16 @@ const EventPage = ({ entityMargin, entity }) => {
           >
             <h3>{language ? event.titleEn : event.titleSp}</h3>
             <p>
-              <span style={{ fontWeight: '400' }}>Date: </span>
+              <span style={{ fontWeight: '400' }}>
+                {language ? 'Date: ' : 'Fecha: '}{' '}
+              </span>
               {eventDate}
             </p>
             {event.startTime ? (
               <p>
-                <span style={{ fontWeight: '400' }}>Time: </span>{' '}
+                <span style={{ fontWeight: '400' }}>
+                  {language ? 'Time: ' : 'Hora: '}{' '}
+                </span>
                 {`${event.startTime} - ${event.endTime}`}
               </p>
             ) : null}
@@ -309,7 +311,7 @@ const EventPage = ({ entityMargin, entity }) => {
               ) : null
             ) : (
               <p>
-                <span style={{ fontWeight: '400' }}>Admission: </span>
+                <span style={{ fontWeight: '400' }}>Entrada: </span>
                 {event.admissionSp}
               </p>
             )}
