@@ -61,9 +61,9 @@ export const events = () => {
       type: 'standard',
       category: '',
       admissionEn:
-        'Free Walk-in Entry, $5 to Park in Event Space, $15 to Compete',
+        'Free Walk-in Entry, $5 to Park in Event Space. It’s an additional $5 to compete in the event show.',
       admissionSp:
-        'Gratis Entrada a Pie, $5 Estacionamiento, $15 para Competir',
+        'Entrada gratuita, $5 para estacionar su auto adentro del evento. Son $5 adicionales para competir en el programa del evento.',
       startDate: '5/4/2023',
       endDate: '5/4/2023',
       startTime: '6:00 P.M.',
