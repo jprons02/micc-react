@@ -3,6 +3,7 @@ import { eventbriteIDs } from 'assets/data/events/eventbriteIDs.js';
 //import aid2021 from 'assets/media/video/AID_savethedate_spot_30sec.mp4';
 import aid2021poster from 'assets/media/img/events/aid/21/savethedatePoster.jpg';
 import carBikeShow from 'assets/media/img/events/eventsList/carAndBike.jpg';
+import carBikeShowFlyer from 'assets/media/img/events/eventsList/carandbikeflyer.jpg';
 import boxing1 from 'assets/media/img/events/eventsList/M_R-Boxing-Promotions-Presents--Got-Talent-XXV.jpg';
 import boxing2 from 'assets/media/img/events/eventsList/boxing.jpg';
 
@@ -59,6 +60,10 @@ export const events = () => {
       titleEn: 'Bike & Car Nights Krome at Miccosukee Casino & Resort',
       titleSp: 'Noche de Autos y Motos Krome en Miccosukee Casino & Resort',
       type: 'standard',
+      flyer: {
+        img: carBikeShowFlyer,
+        alt: 'image with details of the car and bike show',
+      },
       category: '',
       admissionEn:
         'Free Walk-in Entry, $5 to Park in Event Space. It’s an additional $5 to compete in the event show.',
