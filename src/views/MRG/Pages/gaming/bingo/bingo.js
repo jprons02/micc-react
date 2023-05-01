@@ -90,7 +90,7 @@ const Bingo = () => {
                   </li>
                 </ul>
 
-                {isRunning([2023, 3, 31], [2023, 5, 1]) ? (
+                {isRunning([2023, 5, 1], [2023, 6, 1]) ? (
                   <img
                     style={{
                       width: '100%',

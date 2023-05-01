@@ -1,10 +1,8 @@
 export const april = {
   month: 'april',
   monthEs: 'abril',
-  calendarLink:
-    'https://mapa-media.s3.amazonaws.com/mcr_monthly_promos/april_en.pdf',
-  calendarLinkEs:
-    'https://mapa-media.s3.amazonaws.com/mcr_monthly_promos/april_sp.pdf',
+  calendarLink: 'https://mapa-media.s3.amazonaws.com/mcr/PokerCalendar.pdf',
+  calendarLinkEs: 'https://mapa-media.s3.amazonaws.com/mcr/PokerCalendar.pdf',
   data: [
     {
       id: '0',

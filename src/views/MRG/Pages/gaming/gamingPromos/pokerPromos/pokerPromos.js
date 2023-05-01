@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouteMatch, useLocation, Link } from 'react-router-dom';
-
 //My Custom Component
 import StandardCard from 'components/CustomCards/PokerPromoCard.js';
 import CustomPokerPromoModal from 'components/CustomModal/CustomPromosModal/poker/CustomPokerPromoModal.js';
@@ -187,10 +186,7 @@ const PokerPromos = (props) => {
           </span>
         </a>
         &nbsp; <span style={{ fontSize: '20px' }}>|</span> &nbsp;
-        <a
-          target="_blank"
-          href={'https://mapa-media.s3.amazonaws.com/mcr/PokerCalendar.pdf'}
-        >
+        <a target="_blank" href={monthContent.calendarLink}>
           <span
             style={{
               color: standardLinkColor.color,
