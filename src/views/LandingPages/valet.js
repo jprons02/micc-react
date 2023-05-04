@@ -229,6 +229,7 @@ const Valet = () => {
             >
               {language ? 'VALET PARKING' : 'SERVICIO DE VALET'}
             </h2>
+            {/*
             <div style={{ marginLeft: '10px' }}>
               <p
                 style={{
@@ -248,7 +249,9 @@ const Valet = () => {
                 </li>
               </ul>
             </div>
+            */}
             <div style={{ marginLeft: '10px' }}>
+              {/*
               <p
                 style={{
                   fontSize: '18px',
@@ -258,11 +261,17 @@ const Valet = () => {
               >
                 {language ? 'HOURS: ' : 'HORARIO: '}
               </p>
+              */}
               <ul style={{ paddingLeft: '24px', marginTop: '0px' }}>
-                <li style={detailsCss}>
+                <li style={{ fontSize: '18px', marginBottom: '8px' }}>
                   {language
-                    ? 'Friday 8 AM - Monday 8 AM'
-                    : 'viernes 8 AM a lunes 8 AM'}
+                    ? 'Friday 8 am to Sunday at midnight'
+                    : 'viernes 8 am a domingo a la medianoche'}
+                </li>
+                <li style={{ fontSize: '18px' }}>
+                  {language
+                    ? 'Please retrieve your keys at the Front Desk after Sunday at Midnight.'
+                    : 'Busque sus llaves en la recepción del hotel si es después de la medianoche el domingo.'}
                 </li>
               </ul>
             </div>
@@ -281,22 +290,12 @@ const Valet = () => {
         >
           <RaisedContainer>
             {languageToggler()}
-            <h1
-              style={{
-                textAlign: 'center',
-                fontSize: '50px',
-                marginTop: '30px',
-              }}
-            >
-              COMING SOON
-            </h1>
-            {/*{ratesAndHours()}
+            {ratesAndHours()}
             <div style={{ paddingTop: '40px', paddingBottom: '40px' }}>
               {horizontalRule()}
             </div>
             {disclaimer()}
             <div style={{ height: '40px' }}></div>
-            */}
           </RaisedContainer>
         </div>
       </div>
@@ -318,3 +317,13 @@ const Valet = () => {
 };
 
 export default Valet;
+
+/*
+VALET HOURS
+
+FRIDAY 8 AM TO SUNDAY AT MIDNIGHT
+
+Please retrieve your keys at the Front Desk after Sunday at Midnight.
+
+Busque sus llaves en la recepción del hotel si es después de la medianoche el domingo
+*/
