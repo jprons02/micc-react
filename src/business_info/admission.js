@@ -39,7 +39,9 @@ export const airboatsPricing = [
         ? 'Private tour, 30 minutes'
         : `Tour de grupo privado – 30 minutos`,
     detail: (language) =>
-      language ? 'Minimum six people per boat' : 'Mínimo 6 pasajeros por bote',
+      language
+        ? 'Up to 6 passengers/boat (each additional person $25)'
+        : 'Hasta 6 pasajeros/barco (cada persona adicional $25)​',
     price: (language) => '$150',
   },
   {
@@ -47,8 +49,8 @@ export const airboatsPricing = [
       language ? 'Private tour, one hour' : 'Tour de grupo privado – una hora',
     detail: (language) =>
       language
-        ? 'Minimum eight people per boat'
-        : 'Mínimo 8 pasajeros por bote',
+        ? 'Up to 8 passengers/boat (each additional person $55)'
+        : 'Hasta 8 pasajeros/barco (cada persona adicional $55)',
     price: (language) => '$300',
   },
 ];
