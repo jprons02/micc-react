@@ -19,18 +19,17 @@ export const villagePricing = [
 export const airboatsPricing = [
   {
     title: (language) => (language ? 'Adult admission' : 'Adultos'),
-    detail: (language) => (language ? '12 years old and up' : '12 años y más'),
+    detail: (language) => '', //(language ? '12 years old and up' : '12 años y más'),
     price: (language) => '$20',
   },
   {
     title: (language) => (language ? 'Child admission' : 'Niños'),
-    detail: (language) => (language ? '6 — 12 years old' : '6 – 12 años'),
+    detail: (language) => '(6-12)',
     price: (language) => '$12',
   },
   {
     title: (language) => (language ? 'Child admission' : 'Niños'),
-    detail: (language) =>
-      language ? 'Under 6 Years Old' : 'Menores de 6 años',
+    detail: (language) => (language ? '(5 and under)' : '(Menores de 5 años)'),
     price: (language) => (language ? 'Free' : 'Gratis'),
   },
   {
