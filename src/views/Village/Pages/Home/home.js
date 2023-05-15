@@ -103,8 +103,8 @@ const Home = () => {
           </Typography>
           <Typography className={classes.subWelcome} paragraph component="h3">
             {language
-              ? 'Showcasing Miccosukee tribal arts & culture, with crafts, airboat rides & alligators.'
-              : 'Mostrando la cultura y arte tribal de los Miccosukee con artesanías, paseos en airboat (hidrodeslizador) y lagartos.'}
+              ? 'Showcasing Miccosukee tribal arts & culture with a museum, craft demonstrations, and alligator shows.'
+              : 'Exhibición de arte y cultura de la Tribu Miccosukee con un museo, demostraciones de artesanía y espectáculos de caimanes.​'}
           </Typography>
           <hr className={classes.hr} />
           <GridContainer style={{ marginTop: '60px' }} justify="center">

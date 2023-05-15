@@ -56,7 +56,7 @@ export const getMetaData = (uri, pageObj) => {
       name: 'Miccosukee Village',
       title: 'Miccosukee Village',
       description:
-        'Showcasing Miccosukee tribal arts & culture, with crafts, airboat rides & alligators.',
+        'Showcasing Miccosukee tribal arts & culture with a museum, craft demonstrations, and alligator shows.',
       thumbnail:
         'https://mapa-media.s3.amazonaws.com/websiteMetadataImages/villageMeta.jpg',
       slug: uri,

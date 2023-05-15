@@ -35,8 +35,8 @@ export const airboatsPricing = [
   {
     title: (language) =>
       language
-        ? 'Private tour, 30 minutes'
-        : `Tour de grupo privado – 30 minutos`,
+        ? 'Private tour, 35 minutes'
+        : `Tour de grupo privado – 35 minutos`,
     detail: (language) =>
       language
         ? 'Up to 6 passengers/boat (each additional person $25)'
