@@ -6,6 +6,10 @@ import carBikeShow from 'assets/media/img/events/eventsList/carAndBike.jpg';
 import carBikeShowFlyer from 'assets/media/img/events/eventsList/carandbikeflyer.jpg';
 import boxing1 from 'assets/media/img/events/eventsList/M_R-Boxing-Promotions-Presents--Got-Talent-XXV.jpg';
 import boxing2 from 'assets/media/img/events/eventsList/boxing.jpg';
+import boxing_610 from 'assets/media/img/events/eventsList/box_6-10.jpeg';
+import boxing_thumb2_610 from 'assets/media/img/events/eventsList/boxing_thumb2_6-10.jpg';
+import aid2023Thumb from 'assets/media/img/events/eventsList/aid23Thumb.jpg';
+import aid2023Flyer from 'assets/media/img/events/eventsList/aid23Flyer.jpg';
 
 import wildlifeFlyer from 'assets/media/img/events/wildlife/wildlifeflyer.jpg';
 import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/BassPro Official Logo.png';
@@ -54,6 +58,112 @@ export const events = () => {
       ],
     },
     */
+    /*
+AMERICAN INDIAN DAY 2023
+Celebrate American Indian Day with the Miccosukee Tribe of Indians of Florida on Saturday, September 23, and Sunday, September 24, at Miccosukee Casino & Resort. Admission is free and includes fun activities the whole family will enjoy.
+Learn about the Miccosukee Tribe and other indigenous communities in this cultural event with food and craft vendors, alligator demonstrations, airboat rides, a Miccosukee fashion show, carnival rides, a petting zoo, and many more surprises!
+Join us for a pre-festival movie night at sundown on Friday, September 22, featuring films by Miccosukee director Montana Cypress.
+
+Festival Hours:
+Saturday, 9/23 – noon to 8 PM
+Sunday, 9/24 – 10 AM – 6 PM
+
+
+ 
+Celebra el Día del Indio Americano con la Tribu Miccosukee de Indios de Florida el sábado, 23 y el domingo, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita e incluye actividades divertidas que disfrutará toda la familia.
+Aprende sobre la Tribu Miccosukee y otras comunidades indígenas en este evento cultural con vendedores de alimentos y artesanías, demostraciones de caimanes, paseos en hidrodeslizador, un desfile de modas Miccosukee, juegos mecánicos, un zoológico interactivo y muchas sorpresas más.
+También tendremos una noche de cine previa al festival al atardecer del viernes, 22 de septiembre, con películas del director Miccosukee Montana Cypress.
+
+Horario del Festival:
+sábado, 23 de septiembre – mediodía a 8 PM
+domingo, 24 de septiembre – 10 AM a 6 PM
+*/
+    {
+      id: '12',
+      thumbnail: aid2023Thumb,
+      titleEn: 'American Indian Day 2023',
+      titleSp: 'American Indian Day 2023',
+      type: 'standard',
+      flyer: {
+        img: aid2023Flyer,
+        alt: 'image with details of the American Indian Day event in 2023',
+      },
+      category: '',
+      admissionEn: 'Free',
+      admissionSp: 'Gratis',
+      startDate: '9/23/2023',
+      endDate: '9/24/2023',
+      startTime: '',
+      endTime: '',
+      excerptEn:
+        'Celebrate American Indian Day with the Miccosukee Tribe of Indians...',
+      excerptSp:
+        'Celebra el Día del Indio Americano con la Tribu Miccosukee de Indios de Florida...',
+      fullDescriptionEn: [
+        'Celebrate American Indian Day with the Miccosukee Tribe of Indians of Florida on Saturday, September 23, and Sunday, September 24, at Miccosukee Casino & Resort. Admission is free and includes fun activities the whole family will enjoy.',
+        'Learn about the Miccosukee Tribe and other indigenous communities in this cultural event with food and craft vendors, alligator demonstrations, airboat rides, a Miccosukee fashion show, carnival rides, a petting zoo, and many more surprises!',
+        'Join us for a pre-festival movie night at sundown on Friday, September 22, featuring films by Miccosukee director Montana Cypress.',
+      ],
+      fullDescriptionSp: [
+        'Celebra el Día del Indio Americano con la Tribu Miccosukee de Indios de Florida el sábado, 23 y el domingo, 24 de septiembre en Miccosukee Casino & Resort. La entrada es gratuita e incluye actividades divertidas que disfrutará toda la familia.',
+        'Aprende sobre la Tribu Miccosukee y otras comunidades indígenas en este evento cultural con vendedores de alimentos y artesanías, demostraciones de caimanes, paseos en hidrodeslizador, un desfile de modas Miccosukee, juegos mecánicos, un zoológico interactivo y muchas sorpresas más.',
+        'También tendremos una noche de cine previa al festival al atardecer del viernes, 22 de septiembre, con películas del director Miccosukee Montana Cypress.',
+      ],
+      /*
+  buttons: [
+    {
+      key: 1,
+      nameEn: 'PURCHASE TICKETS',
+      nameSp: 'COMPRA BOLETOS',
+      href:
+        '',
+      target: '_blank',
+    },
+  ],
+  */
+    },
+    {
+      id: '11',
+      thumbnail: boxing_thumb2_610,
+      titleEn:
+        'M&R Boxing Promotions & Chirino Promotions Presents: Fight Night in Miami',
+      titleSp:
+        'M&R Boxing Promotions y Chirino Promotions Presentan: Noche de Boxeo en Miami',
+      type: 'standard',
+      flyer: {
+        img: boxing_610,
+        alt: 'image with details of the boxing event',
+      },
+      category: '',
+      admissionEn: 'TBA',
+      admissionSp: 'Por Anunciarse',
+      startDate: '6/10/2023',
+      endDate: '6/10/2023',
+      startTime: '6:00 P.M.',
+      endTime: 'TBD',
+      excerptEn:
+        'Experience the intensity of live boxing action with new international fighters facing...',
+      excerptSp:
+        'Experimente la intensidad de la acción del boxeo en vivo con nuevo talento internacional enfrentándose en...',
+      fullDescriptionEn: [
+        'Experience the intensity of live boxing action with new international fighters facing off in the ring at Miccosukee Casino & Resort. Doors open at 6 PM in the 2nd Floor Ballrooms.',
+      ],
+      fullDescriptionSp: [
+        'Experimente la intensidad de la acción del boxeo en vivo con nuevo talento internacional enfrentándose en el ring en Miccosukee Casino & Resort. Las puertas abren a las 6 PM en los salones de baile del segundo piso.',
+      ],
+      /*
+      buttons: [
+        {
+          key: 1,
+          nameEn: 'PURCHASE TICKETS',
+          nameSp: 'COMPRA BOLETOS',
+          href:
+            '',
+          target: '_blank',
+        },
+      ],
+      */
+    },
     {
       id: '10',
       thumbnail: carBikeShow,
