@@ -1,4 +1,5 @@
 export const may = {
+  type: 'card',
   month: 'may',
   monthEs: 'mayo',
   calendarLink: 'https://mapa-media.s3.amazonaws.com/mcr/may_pokerCalendar.pdf',

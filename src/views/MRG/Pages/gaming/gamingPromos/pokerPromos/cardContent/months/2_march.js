@@ -1,4 +1,5 @@
 export const march = {
+  type: 'card',
   month: 'march',
   monthEs: 'marzo',
   calendarLink:

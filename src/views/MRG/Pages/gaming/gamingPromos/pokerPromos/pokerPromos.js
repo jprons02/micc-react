@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useRouteMatch, useLocation, Link } from 'react-router-dom';
+import GridContainer from 'components/Grid/GridContainer.js';
+import GridItem from 'components/Grid/GridItem.js';
 //My Custom Component
 import StandardCard from 'components/CustomCards/PokerPromoCard.js';
 import CustomPokerPromoModal from 'components/CustomModal/CustomPromosModal/poker/CustomPokerPromoModal.js';
@@ -61,6 +63,7 @@ const PokerPromos = (props) => {
 
   let location = useLocation();
 
+  /*
   useEffect(() => {
     //Purpose is ability to link to specific promos from url
     // full example ENGLISH: http://localhost:3000/mrg/promotions#0
@@ -71,10 +74,15 @@ const PokerPromos = (props) => {
       }
     });
   }, []);
+  */
 
   useEffect(() => {
     props.setStringState(getMonthString());
   }, [language, props.state]);
+
+  const black = '#262626';
+  const gold = '#b5966c';
+  const silver = '#c4c2b6';
 
   const month = props.month;
   const monthContent = content(language, month);
@@ -117,30 +125,45 @@ const PokerPromos = (props) => {
     });
   };
 
+  const renderCalendarView = () => {
+    const content = language
+      ? monthContent.data(classes)
+      : monthContent.dataEs(classes);
+    return content;
+  };
+
   const renderDesktopView = () => {
-    return renderCards();
+    if (monthContent.type === 'card') {
+      return renderCards();
+    } else {
+      return renderCalendarView();
+    }
   };
 
   const renderMobileView = () => {
-    const settings = {
-      arrows: false,
-      infinite: false,
-      speed: 150,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: false,
-      dots: true,
-      dotsClass: `slick-dots ${classes.dots}`,
-    };
-    return <Slider {...settings}>{renderCards()}</Slider>;
+    if (monthContent.type === 'card') {
+      const settings = {
+        arrows: false,
+        infinite: false,
+        speed: 150,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        dots: true,
+        dotsClass: `slick-dots ${classes.dots}`,
+      };
+      return <Slider {...settings}>{renderCards()}</Slider>;
+    } else {
+      return renderCalendarView();
+    }
   };
 
   const renderDisclaimer = () => {
     return (
       <p className={classes.disclaimer}>
-        Subject to change or cancellation without notice at the discretion of
-        management. See your gaming attendant for details. Must be 18 years or
-        older with proper ID.
+        {language
+          ? 'Subject to change or cancellation without notice at the discretion of management. See your gaming attendant for details. Must be 18 years or older with proper ID.'
+          : 'Sujeto a cambio o cancelación sin previo aviso a discreción de la gerencia. Consulte a su asistente de juego para obtener más detalles. Debe tener 18 años o más con identificación adecuada.​'}
       </p>
     );
   };
@@ -185,29 +208,37 @@ const PokerPromos = (props) => {
             {language ? 'GENERAL RULES' : 'REGLAS GENERALES'}
           </span>
         </a>
-        &nbsp; <span style={{ fontSize: '20px' }}>|</span> &nbsp;
-        <a target="_blank" href={monthContent.calendarLink}>
-          <span
-            style={{
-              color: standardLinkColor.color,
-              textAlign: 'center',
-              fontSize: '16px',
-              fontWeight: '400',
-              marginTop: '-5px',
-            }}
-          >
-            {language ? 'CALENDAR VIEW' : 'VER CALENDARIO'}
-          </span>
-        </a>
+        {monthContent.type === 'calendar' ? null : (
+          <React.Fragment>
+            &nbsp; <span style={{ fontSize: '20px' }}>|</span> &nbsp;
+            <a target="_blank" href={monthContent.calendarLink}>
+              <span
+                style={{
+                  color: standardLinkColor.color,
+                  textAlign: 'center',
+                  fontSize: '16px',
+                  fontWeight: '400',
+                  marginTop: '-5px',
+                }}
+              >
+                {language ? 'CALENDAR VIEW' : 'VER CALENDARIO'}
+              </span>
+            </a>
+          </React.Fragment>
+        )}
       </div>
       <div className={classes.cardContainer}>
         <Hidden mdUp>{renderMobileView()}</Hidden>
         <Hidden smDown>{renderDesktopView()}</Hidden>
-        <p className={classes.subHook}>
-          Payouts every 30 min for all promotions. Noon high hand payout once
-          daily at 12 PM.
-        </p>
-        <p className={classes.hook}>*ONE CARD TAKES ALL*</p>
+        {monthContent.type !== 'calendar' ? (
+          <div>
+            <p className={classes.subHook}>
+              Payouts every 30 min for all promotions. Noon high hand payout
+              once daily at 12 PM.
+            </p>
+            <p className={classes.hook}>*ONE CARD TAKES ALL*</p>
+          </div>
+        ) : null}
         {renderDisclaimer()}
       </div>
       <CustomPokerPromoModal

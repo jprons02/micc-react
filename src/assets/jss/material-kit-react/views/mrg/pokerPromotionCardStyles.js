@@ -1,5 +1,9 @@
 import { mrgColor } from 'themes/colors.js';
 
+const black = '#262626';
+const gold = '#b5966c';
+const silver = '#c4c2b6';
+
 const pokerPromoCardStyle = {
   hook: {
     paddingBottom: '24px',
@@ -15,6 +19,7 @@ const pokerPromoCardStyle = {
   disclaimer: {
     fontSize: '11px',
     fontStyle: 'italic',
+    paddingBottom: '20px',
   },
   cardContainer: {
     marginLeft: 'auto',
@@ -119,6 +124,101 @@ const pokerPromoCardStyle = {
     position: 'relative !important',
     marginTop: '-5px',
   },
+  calendarMainDetailsWhite: {
+    fontFamily: 'AvenirNextCondensedBold',
+    color: 'white',
+    fontSize: '16px',
+    textTransform: 'uppercase',
+    //DESKTOP VIEW
+    '@media screen and (min-width: 960px)': {
+      fontFamily: 'AvenirNext',
+      fontSize: '20px',
+      fontWeight: '600',
+      marginBottom: '10px',
+    },
+  },
+  calendarMainDetailsGold: {
+    fontFamily: 'AvenirNextCondensedBold',
+    color: gold,
+    fontSize: '16px',
+    textTransform: 'uppercase',
+    //DESKTOP VIEW
+    '@media screen and (min-width: 960px)': {
+      fontSize: '22px',
+    },
+  },
+  calendarMainSectionStyle: {
+    maxWidth: '650px',
+    paddingTop: '30px',
+    paddingBottom: '30px',
+    margin: 'auto',
+    marginTop: '35px',
+    marginBottom: '30px',
+    backgroundColor: black,
+  },
+  calendarItemMargin: {
+    //DESKTOP VIEW
+    '@media screen and (min-width: 960px)': {
+      marginLeft: '50px',
+    },
+  },
+  calendarDescriptionSection: {
+    marginTop: '10px',
+    textAlign: 'left',
+  },
+  calendarSectionTitleStyle: {
+    fontFamily: 'AvenirNext',
+    fontSize: '22px',
+    textAlign: 'left',
+    textTransform: 'uppercase',
+    backgroundColor: silver,
+    color: black,
+    marginTop: '30px',
+    padding: '7px 7px 7px 10px',
+  },
+  calendarDescriptionStyleLeft: {
+    fontFamily: 'AvenirNextCondensed',
+    fontSize: '20px',
+    fontWeight: '600',
+    color: 'white',
+    marginLeft: '10px',
+    marginBottom: '8px',
+  },
+  calendarDescriptionStyleLeftSpan: {
+    fontFamily: 'AvenirNextCondensed',
+    fontSize: '20px',
+    fontWeight: '600',
+    color: gold,
+    marginBottom: '8px',
+  },
+  calendarDescriptionStyleRight: {
+    fontFamily: 'AvenirNext',
+    fontSize: '20px',
+    color: gold,
+  },
+  calendarDescriptionStyleRightSpan: {
+    fontFamily: 'AvenirNext',
+    fontSize: '65%',
+    color: gold,
+    display: 'block',
+    //DESKTOP VIEW
+    '@media screen and (min-width: 960px)': {
+      display: 'inline',
+      fontSize: '75%',
+    },
+  },
+  calendarDescriptionDisclaimer: {
+    color: gold,
+    fontSize: '80%',
+    fontWeight: 600,
+    marginTop: '10px',
+    textAlign: 'center',
+    //DESKTOP VIEW
+    '@media screen and (min-width: 960px)': {
+      fontSize: '100%',
+      marginTop: '15px',
+    },
+  },
   //DESKTOP VIEW
   '@media screen and (min-width: 960px)': {
     cardContainer: {
@@ -153,7 +253,12 @@ const pokerPromoCardStyle = {
     bodyLeft: {
       margin: '0',
     },
-    disclaimer: { fontSize: '14px' },
+    disclaimer: {
+      fontSize: '14px',
+      maxWidth: '600px',
+      margin: 'auto',
+      paddingBottom: '30px',
+    },
   },
 };
 
