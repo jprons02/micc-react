@@ -106,8 +106,8 @@ const MSphere = () => {
                 </p>
                 <p>
                   <span style={{ fontWeight: '500' }}>Reward Points</span> are
-                  earned through slot, bingo, and poker play, as well as hotel
-                  and dining purchases.
+                  earned through slot and bingo play, as well as hotel and
+                  dining purchases.
                 </p>
                 <p>
                   <span style={{ fontWeight: '500' }}>Tier Points</span> are
@@ -214,8 +214,7 @@ const MSphere = () => {
                 </p>
                 <p>
                   Los puntos de recompensa se obtienen a través de tragamonedas,
-                  bingo, juegos de póquer, además de compras en el hotel y
-                  restaurantes.
+                  bingo, además de compras en el hotel y restaurantes.
                 </p>
                 <p>
                   Los puntos de nivel se ganan igual que los puntos de

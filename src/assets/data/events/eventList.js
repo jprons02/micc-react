@@ -144,7 +144,6 @@ buttons: [
   ],
   */
     },
-    /*
     {
       id: '11',
       thumbnail: boxing_thumb2_610,
@@ -174,6 +173,7 @@ buttons: [
       fullDescriptionSp: [
         'Experimente la intensidad de la acción del boxeo en vivo con nuevo talento internacional enfrentándose en el ring en Miccosukee Casino & Resort. Las puertas abren a las 6 PM en los salones de baile del segundo piso.',
       ],
+      /*
       buttons: [
         {
           key: 1,
@@ -184,8 +184,8 @@ buttons: [
           target: '_blank',
         },
       ],
+      */
     },
-    */
     {
       id: '10',
       thumbnail: carBikeShow,
