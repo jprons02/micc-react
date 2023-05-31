@@ -317,9 +317,9 @@ const EventPage = ({ entityMargin, entity }) => {
             )}
             {renderPromoVideo()}
             <div style={{ marginTop: '25px' }}>{renderFullDescription()}</div>
-            {renderFlyer()}
             <div style={{ marginTop: '20px' }}>{renderButtons()}</div>
             <div style={{ marginTop: '40px' }}>{renderSponsors()}</div>
+            {renderFlyer()}
           </div>
         </div>
       </div>

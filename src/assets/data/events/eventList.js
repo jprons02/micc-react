@@ -157,12 +157,12 @@ buttons: [
         alt: 'image with details of the boxing event',
       },
       category: '',
-      admissionEn: 'TBA',
-      admissionSp: 'Por Anunciarse',
+      admissionEn: 'Starting from $60',
+      admissionSp: 'Comenzando en $60',
       startDate: '6/10/2023',
       endDate: '6/10/2023',
       startTime: '6:00 P.M.',
-      endTime: 'TBD',
+      endTime: '10:00 P.M.',
       excerptEn:
         'Experience the intensity of live boxing action with new international fighters facing...',
       excerptSp:
@@ -173,18 +173,16 @@ buttons: [
       fullDescriptionSp: [
         'Experimente la intensidad de la acción del boxeo en vivo con nuevo talento internacional enfrentándose en el ring en Miccosukee Casino & Resort. Las puertas abren a las 6 PM en los salones de baile del segundo piso.',
       ],
-      /*
       buttons: [
         {
           key: 1,
           nameEn: 'PURCHASE TICKETS',
           nameSp: 'COMPRA BOLETOS',
           href:
-            '',
+            'https://www.eventbrite.com/e/mr-boxing-promotions-got-talent-fn-xxv-tickets-645452715447',
           target: '_blank',
         },
       ],
-      */
     },
     {
       id: '10',

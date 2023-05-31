@@ -85,6 +85,13 @@ const MartiniBar = () => {
                   ? 'Chic and comfortable, the Martini Bar is the perfect place to unwind. Join us for classic cocktails and great times!'
                   : 'Elegante y cómodo, el Martini Bar es el lugar perfecto para relajarte. ¡Visítanos para disfrutar de cócteles clásicos y mucha diversión!'}
               </p>
+              <Button
+                href="https://mapa-media.s3.amazonaws.com/mcr/MartiniBarMenu.pdf"
+                target="_blank"
+                usetheme="contained"
+              >
+                {language ? 'Menu' : 'Menú'}
+              </Button>{' '}
             </div>
           </GridItem>
           <GridItem md={5}>
