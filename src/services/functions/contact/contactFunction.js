@@ -5,62 +5,86 @@ const getEmail = (value) => {
   switch (value) {
     // MRG CASES
     case 'Banquet Sales':
-      return ['mrgsales&catering@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'mrgsales&catering@miccosukee.com'];
     case 'Banquet/Catering':
-      return ['mrgsales&catering@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'mrgsales&catering@miccosukee.com'];
     case 'Bingo':
-      return ['alouie@miccosukee.com', 'jmedina@miccosukee.com'];
+      return [
+        'asaunders@miccosukee.com',
+        'alouie@miccosukee.com',
+        'jmedina@miccosukee.com',
+      ];
     case 'Child Care Center':
-      return ['glledes@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'glledes@miccosukee.com'];
     case 'Event & Meeting Planning':
-      return ['mrgsales&catering@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'mrgsales&catering@miccosukee.com'];
     case 'Event Tickets':
-      return ['sales@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'sales@miccosukee.com'];
     case 'Food & Beverage':
-      return ['F&BSupervisors@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'F&BSupervisors@miccosukee.com'];
     case 'Finance & Accounting':
-      return ['MIGAccountingSupervisors@miccosukee.com'];
+      return [
+        'asaunders@miccosukee.com',
+        'MIGAccountingSupervisors@miccosukee.com',
+      ];
     case 'Food & Beverage – Comment Card':
-      return ['F&BSupervisors@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'F&BSupervisors@miccosukee.com'];
     case 'Gaming Machines':
       return [
+        'asaunders@miccosukee.com',
         'Bking@miccosukee.com',
         'gbotero@miccosukee.com',
         'crodriguez@miccosukee.com',
       ];
     case 'Group Sales':
-      return ['ggalarza@miccosukee.com', 'kwhiting@miccosukee.com'];
+      return [
+        'asaunders@miccosukee.com',
+        'ggalarza@miccosukee.com',
+        'kwhiting@miccosukee.com',
+      ];
     case 'Promotions & Special Events':
-      return ['rduncan@miccosukee.com'];
+      return [
+        'asaunders@miccosukee.com',
+        'iguerra@miccosukee.com',
+        'rduncan@miccosukee.com',
+      ];
     case 'Player’s Club':
-      return ['rduncan@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'rduncan@miccosukee.com'];
     case 'Room Rates & Reservations':
       return [
+        'asaunders@miccosukee.com',
         'tmitchelson@miccosukee.com',
         'reservations@miccosukee.com',
         'kwhiting@miccosukee.com',
       ];
     case 'Spa & Salon':
-      return ['kwhiting@miccosukee.com', 'cklimekoski@miccosukee.com'];
+      return [
+        'asaunders@miccosukee.com',
+        'kwhiting@miccosukee.com',
+        'cklimekoski@miccosukee.com',
+      ];
     case 'Valet Services':
       return [
+        'asaunders@miccosukee.com',
         'tmitchelson@miccosukee.com',
         'kwhiting@miccosukee.com',
         'transportation@miccosukee.com',
       ];
     case 'Human Resources':
-      return ['damaro@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'damaro@miccosukee.com'];
     case 'Other':
       return [
+        'asaunders@miccosukee.com',
         'KWhiting@miccosukee.com',
         'TMitchelson@miccosukee.com',
         'reservations@miccosukee.com',
       ];
     case 'Website Feedback':
-      return ['jronselli@miccosukee.com'];
+      return ['asaunders@miccosukee.com', 'jronselli@miccosukee.com'];
     // Media Inquiry
     case 'Media Inquiry':
       return [
+        'asaunders@miccosukee.com',
         'AFrye@miccosukee.com',
         'JenniferM@miccosukeetribe.com',
         'iguerra@miccosukee.com',

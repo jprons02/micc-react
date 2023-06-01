@@ -80,15 +80,15 @@ const mrgPopup = {
   id: '02',
   showPopup: scheduler({
     start: {
-      year: '24',
-      month: 'March',
-      day: '28',
+      year: '23',
+      month: 'June',
+      day: '1',
       time: '',
     },
     end: {
-      year: '28',
-      month: 'April',
-      day: '29',
+      year: '23',
+      month: 'July',
+      day: '1',
       time: '',
     },
   }),
