@@ -12,9 +12,9 @@ export const june = {
   month: 'june',
   monthEs: 'junio',
   calendarLink:
-    'https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/july_en.pdf',
+    'https://mapa-media.s3.amazonaws.com/mcr_monthly_promos/june_en.pdf',
   calendarLinkEs:
-    'https://mapa-media.s3.amazonaws.com/mrg_monthly_promos/july_sp.pdf',
+    'https://mapa-media.s3.amazonaws.com/mcr_monthly_promos/june_sp.pdf',
   data: [
     {
       id: 0,
