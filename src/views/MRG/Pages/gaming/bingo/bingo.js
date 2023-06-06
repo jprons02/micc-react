@@ -19,6 +19,8 @@ import image4 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE4.jpeg';
 //import bingoPromoEn from 'assets/media/img/mrg/gaming/bingo/BINGO-ENLIGH-WEB.jpg';
 import bingoPromoEn from 'assets/media/img/mrg/gaming/bingo/bingo_promos_en.jpg';
 import bingoPromoSp from 'assets/media/img/mrg/gaming/bingo/bingo_promos_sp.jpg';
+import july4En from 'assets/media/img/mrg/gaming/bingo/July4_BINGO_banner_ENG.jpg';
+import july4Sp from 'assets/media/img/mrg/gaming/bingo/July4_BINGO_banner_SPA.jpg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -52,6 +54,29 @@ const sliderContent = [
 const Bingo = () => {
   const language = useLanguage();
   const classes = useStyles();
+
+  const renderPromoMessage = () => {
+    const en = () => {
+      return (
+        <div>
+          Presale for the 4th of July Bingo program is on. Visit the Bingo
+          Admissions counter to purchase your admission pack and play to win up
+          to $40,000 in cash prizes!
+        </div>
+      );
+    };
+    const sp = () => {
+      return (
+        <div>
+          La preventa para el programa de Bingo del 4 de julio está ya comenzó.
+          ¡Visita el mostrador de Bingo Admissions para comprar tu paquete de
+          admisión y juega para ganar hasta $40,000 en premios en efectivo!
+        </div>
+      );
+    };
+    return language ? en() : sp();
+  };
+
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
@@ -102,6 +127,30 @@ const Bingo = () => {
                     alt="bingo promotion"
                   />
                 ) : null}
+
+                {isRunning([2023, 6, 1], [2023, 7, 5]) ? (
+                  <div>
+                    <hr
+                      style={{
+                        margin: '50px 0',
+                        width: '20%',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                      }}
+                    />
+                    {renderPromoMessage()}
+                    <img
+                      style={{
+                        width: '100%',
+                        margin: '20px 0 30px 0',
+                        boxShadow:
+                          '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+                      }}
+                      src={language ? july4En : july4Sp}
+                      alt="july bingo promotion"
+                    />
+                  </div>
+                ) : null}
               </div>
             </div>
           </GridItem>
@@ -121,21 +170,3 @@ const Bingo = () => {
 };
 
 export default Bingo;
-
-/*
-Wednesday – Saturday
-Sales: 4:15 PM
-Warm-Ups: 6:30 PM
-Regular Session: 7:15 PM
-
-Sunday 
-Regular Session: 6:15 PM
-
-miércoles a sábado
-Ventas: 4:15 PM 
-Prácticas: 6:30 PM 
-Sesión Regular: 7:15 PM
-
-domingo
-Sesión Regular: 6:15 PM ​
-*/

@@ -1,44 +1,45 @@
-import { mrgColor } from "themes/colors.js";
+import { mrgColor } from 'themes/colors.js';
 
 const homeCardStyle = {
   cardContainer: {
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "center",
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    textAlign: 'center',
   },
   serviceCards: {
-    display: "block",
+    display: 'block',
     //width: "95%",
-    width: "20rem",
-    marginLeft: "auto",
-    marginRight: "auto",
-    textAlign: "left",
+    width: '20rem',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    textAlign: 'left',
   },
   imgStyle: {
-    height: "180px",
-    width: "100%",
-    display: "block",
+    height: '180px',
+    width: '100%',
+    display: 'block',
   },
   cardTitle: {
     //fontSize: "40px",
   },
   cardBodyText: {
     //fontSize: "10px",
+    minHeight: '80px',
   },
   dots: {
-    position: "relative !important",
-    marginTop: "-5px",
+    position: 'relative !important',
+    marginTop: '-5px',
   },
   //DESKTOP VIEW
-  "@media screen and (min-width: 960px)": {
+  '@media screen and (min-width: 960px)': {
     cardContainer: {
-      textAlign: "center",
-      paddingBottom: "15px",
+      textAlign: 'center',
+      paddingBottom: '15px',
     },
     serviceCards: {
-      display: "inline-block",
-      margin: "15px",
-      width: "20rem",
+      display: 'inline-block',
+      margin: '15px',
+      width: '20rem',
     },
     cardTitle: {
       //fontSize: "40px",
