@@ -13,6 +13,7 @@ import aid2023Thumb from 'assets/media/img/events/eventsList/aid23Thumb.jpg';
 import aid2023Flyer from 'assets/media/img/events/eventsList/aid23Flyer.jpg';
 import iac2023Thumb from 'assets/media/img/events/eventsList/iac23Thumb.jpg';
 import iac2023Flyer from 'assets/media/img/events/eventsList/iac23Flyer.jpg';
+import bikeCarThumb_622 from 'assets/media/img/events/eventsList/Bike & Car Nights Krome Thumb.jpeg';
 
 import wildlifeFlyer from 'assets/media/img/events/wildlife/wildlifeflyer.jpg';
 import wildlifeSponsor1 from 'assets/media/logos/sponsors/wildlifeEvent/BassPro Official Logo.png';
@@ -61,6 +62,32 @@ export const events = () => {
       ],
     },
     */
+    {
+      id: '14',
+      thumbnail: bikeCarThumb_622,
+      titleEn: 'Bike & Car Nights Krome',
+      titleSp: 'Noche de Autos y Motos Krome',
+      type: 'standard',
+      category: '',
+      admissionEn:
+        'Free Walk-in Entry, $5 to Park in Event Space. It’s an additional $5 to compete in the event show.',
+      admissionSp:
+        'Entrada gratuita, $5 para estacionar su auto adentro del evento. Son $5 adicionales para competir en el programa del evento.',
+      startDate: '6/22/2023',
+      endDate: '6/22/2023',
+      startTime: '6:00 P.M.',
+      endTime: '10:00 P.M.',
+      excerptEn:
+        'Get your motor running and cruise into Miccosukee Casino & Resort for a night of supercharged...',
+      excerptSp:
+        '¡Pon tu motor en marcha y llega hasta Miccosukee Casino & Resort para una...',
+      fullDescriptionEn: [
+        'Get your motor running and cruise into Miccosukee Casino & Resort for a night of supercharged cars & bikes, food, drinks, music, prizes, and more!',
+      ],
+      fullDescriptionSp: [
+        '¡Pon tu motor en marcha y llega hasta Miccosukee Casino & Resort para una noche de autos y motos, comida, bebidas, música, premios y más!',
+      ],
+    },
     {
       id: '13',
       thumbnail: iac2023Thumb,
