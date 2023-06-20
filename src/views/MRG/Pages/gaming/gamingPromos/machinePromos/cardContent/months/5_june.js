@@ -393,16 +393,16 @@ export const june = {
       title: 'Pick Your Present B-Day Hot Seat',
       img: cardImage7,
       oneLiner:
-        'June birthdays play for a slice of $2,500 free play on Monday, June 26, with hot seats from 6 PM – 9 PM.',
+        'June birthdays play for a slice of $2,500 free play on Tuesday, June 27, with hot seats from 6 PM – 9 PM.',
       rules: {
         subSections: [
-          { id: '60', title: 'Day', body: 'Monday, June 26, 2023' },
+          { id: '60', title: 'Day', body: 'Tuesday, June 27, 2023' },
           { id: '61', title: 'Promotion Type', body: 'Ricochet / Drawing' },
           {
             id: '62',
             title: 'Description',
             body:
-              'Celebrate your birthday in style. Join our birthday hot seat promotion on June 26 for a chance to claim your share of $2,000 in free play!',
+              'Celebrate your birthday in style. Join our birthday hot seat promotion on June 27 for a chance to claim your share of $2,000 in free play!',
           },
           {
             id: '63',
@@ -414,7 +414,7 @@ export const june = {
           {
             id: '65',
             title: 'Dates and Times',
-            body: 'June 26, between 6 PM and 9 PM',
+            body: 'June 27, between 6 PM and 9 PM',
           },
           {
             id: '66',
@@ -917,10 +917,10 @@ export const june = {
       title: 'Elige tu Regalo de Cumpleaños',
       img: cardImage7,
       oneLiner:
-        'Los cumpleañeros de junio juegan para ganar su parte de $2,500 free play el lunes, 26 de junio con asientos calientes de 6 PM a 9 PM.',
+        'Los cumpleañeros de junio juegan para ganar su parte de $2,500 free play el martes, 27 de junio con asientos calientes de 6 PM a 9 PM.',
       rules: {
         subSections: [
-          { id: '60', title: 'Día', body: 'lunes, 26 de junio de 2023' },
+          { id: '60', title: 'Día', body: 'martes, 27 de junio de 2023' },
           {
             id: '61',
             title: 'Tipo de Promoción',
@@ -930,7 +930,7 @@ export const june = {
             id: '62',
             title: 'Descripción',
             body:
-              'Celebra tu cumpleaños con estilo. ¡Únete a nuestra promoción de cumpleaños el 26 de junio para tener la oportunidad de reclamar tu parte de $2,000 en free play!',
+              'Celebra tu cumpleaños con estilo. ¡Únete a nuestra promoción de cumpleaños el 27 de junio para tener la oportunidad de reclamar tu parte de $2,000 en free play!',
           },
           {
             id: '63',
@@ -942,7 +942,7 @@ export const june = {
           {
             id: '65',
             title: 'Fechas y Horarios',
-            body: '26 de junio, entre las 6 PM y 9 PM',
+            body: '27 de junio, entre las 6 PM y 9 PM',
           },
           {
             id: '66',
