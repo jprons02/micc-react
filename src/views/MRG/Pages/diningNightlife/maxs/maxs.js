@@ -14,6 +14,7 @@ import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js
 // Images
 import bgImage from 'assets/media/img/mrg/dining/dining_header.jpg';
 import image1 from 'assets/media/img/mrg/dining/deli/deli-01.jpg';
+import buffetPromo from 'assets/media/img/mrg/dining/maxs/Buffet_banner.jpeg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -83,6 +84,76 @@ const Maxs = () => {
               >
                 {language ? 'MENU' : 'MENÚ'}
               </Button>
+              {isRunning([2023, 6, 1], [2023, 7, 1]) ? (
+                <img
+                  style={{
+                    width: '100%',
+                    margin: '30px 0 10px 0',
+                    boxShadow:
+                      '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+                  }}
+                  src={buffetPromo}
+                  alt="Buffet announcement"
+                />
+              ) : null}
+              {isRunning([2023, 7, 1]) ? (
+                <div>
+                  <h3 style={{ fontWeight: '400' }}>
+                    {language ? 'Buffet' : 'Bufé'}
+                  </h3>
+                  <p>
+                    {language
+                      ? 'Back by popular demand, the Miccosukee Casino & Resort buffet offers a wide selection of Brunch and Dinner favorites for $29.99. Indulge in delectable dishes, drinks, and desserts in a comfortable and casual culinary experience the whole family will enjoy.'
+                      : 'De regreso por demanda popular, el bufé de Miccosukee Casino & Resort ofrece una amplia selección de los platos favoritos de Brunch y Cena por $29.99. Te deleitarás con deliciosos platos, bebidas y postres en una experiencia culinaria cómoda e informal que disfrutará toda la familia.'}
+                  </p>
+                  <h4
+                    style={{
+                      textTransform: 'uppercase',
+                      fontWeight: '400',
+                      fontSize: '14px',
+                      marginTop: '20px',
+                    }}
+                  >
+                    {language ? 'BUFFET DETAILS' : 'detalles del buffet'}
+                  </h4>
+                  {language ? (
+                    <p>
+                      $29.99 plus tax/ svc charge
+                      <br />
+                      Open Daily
+                      <br />
+                      Brunch
+                      <br />
+                      7 AM - 2 PM
+                      <br />
+                      Dinner
+                      <br />
+                      Sunday - Wednesday, 4 PM - 10 PM
+                      <br />
+                      Thursday - Saturday, 4 PM - 11 PM
+                      <br />
+                      Located on the second floor of the Resort.
+                    </p>
+                  ) : (
+                    <p>
+                      $29.99 más impuestos/cargo de servicio Abierto todos los
+                      días
+                      <br />
+                      Brunch
+                      <br />
+                      7 AM – 2 PM
+                      <br />
+                      Cena
+                      <br />
+                      domingo a miércoles, 4 PM a 10 PM
+                      <br />
+                      jueves a sábado, 4 PM a 11 PM
+                      <br />
+                      Ubicado en el segundo piso del hotel.
+                    </p>
+                  )}
+                </div>
+              ) : null}
             </div>
           </GridItem>
           <GridItem md={5}>

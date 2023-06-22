@@ -93,21 +93,22 @@ export default function Miccosukee(props) {
         <div>
           <VillageHeader />
           <ReactHelmetComponent url={window.location.pathname} />
-          {isRunning([2023, 4, 4], [2023, 4, 9]) ? (
+          {isRunning([2023, 6, 22], [2023, 7, 2]) ? (
             <StandardAlert
               message={
                 language ? (
                   <div>
                     <b>
-                      The Village will be closed for a private event on
-                      Saturday, April 8.
+                      Both the Gift Shop and Village will be closed on July 1,
+                      2023. They will reopen on July 2, 2023.
                     </b>
                   </div>
                 ) : (
                   <div>
                     <b>
-                      La Aldea (Village) estará cerrada por un evento privado el
-                      sábado, 8 de abril.
+                      La tienda de regalos y el Village (aldea indígena​)
+                      estarán cerrados el 1 de julio de 2023. Volverán a abrir
+                      el 2 de julio de 2023.
                     </b>
                   </div>
                 )
