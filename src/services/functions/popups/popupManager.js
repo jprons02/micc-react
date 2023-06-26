@@ -3,7 +3,8 @@
 
 //import mrgImage from 'assets/media/img/popups/florida-resident-discount-popup_B.png';
 //import mrgImage from 'assets/media/img/popups/M-Sphere_Popup.jpg';
-import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+//import mrgImage from 'assets/media/img/popups/bingo_promo_en.jpg';
+import mrgImage from 'assets/media/img/popups/July4th_bingo_websitepopup.jpeg';
 
 import aidImage from 'assets/media/img/popups/bingo_promo_en.jpg';
 import promoImage1 from 'assets/media/img/popups/bingo_promo_en.jpg';
@@ -88,7 +89,7 @@ const mrgPopup = {
     end: {
       year: '23',
       month: 'July',
-      day: '1',
+      day: '5',
       time: '',
     },
   }),
@@ -114,8 +115,9 @@ const mrgPopup = {
   content: {
     image: mrgImage,
     alt: 'Bingo Promo',
-    link: '/mcr/bingo',
-    linkType: 'internal',
+    link:
+      'https://mapa-media.s3.amazonaws.com/mcr/July4th_Bingo+Program_Web.pdf',
+    linkType: 'external',
   },
 };
 const mrgGamingPromotionsPopup = {
