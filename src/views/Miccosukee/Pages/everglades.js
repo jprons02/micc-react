@@ -31,7 +31,7 @@ import {
 
 const useStyles = makeStyles(styles);
 
-const GamingGolf = () => {
+const Everglades = () => {
   const language = useLanguage();
   const classes = useStyles();
 
@@ -122,4 +122,4 @@ const GamingGolf = () => {
   );
 };
 
-export default GamingGolf;
+export default Everglades;

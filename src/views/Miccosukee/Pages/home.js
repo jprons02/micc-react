@@ -33,6 +33,7 @@ const Home = ({ history }) => {
   const classes = useStyles();
 
   const cards = [
+    /*
     {
       id: 1,
       url: 'mcr',
@@ -56,6 +57,7 @@ const Home = ({ history }) => {
       footer: '',
       buttonColor: 'primary',
     },
+    */
     {
       id: 2,
       url: 'glades',
@@ -81,6 +83,7 @@ const Home = ({ history }) => {
       footer: '',
       buttonColor: 'success',
     },
+    /*
     {
       id: 3,
       url: 'events',
@@ -104,6 +107,7 @@ const Home = ({ history }) => {
       footer: '',
       buttonColor: 'info',
     },
+    */
     {
       id: 4,
       url: 'history-admin',
