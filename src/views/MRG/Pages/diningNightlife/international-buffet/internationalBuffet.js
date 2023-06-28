@@ -58,7 +58,7 @@ const InternationalBuffet = () => {
 
   const history = useHistory();
   useEffect(() => {
-    history.push('/mcr');
+    history.push('/mcr/buffet');
   }, []);
 
   const weekdayContent = () => {

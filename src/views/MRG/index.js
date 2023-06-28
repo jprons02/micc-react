@@ -53,7 +53,7 @@ import MSphere from 'views/MRG/Pages/gaming/mSphere/mSphere.js';
 import Bingo from 'views/MRG/Pages/gaming/bingo/bingo.js';
 import Poker from 'views/MRG/Pages/gaming/poker/poker.js';
 import B1Grill from 'views/MRG/Pages/diningNightlife/b1grill/b1Grill.js';
-import InternationalBuffet from 'views/MRG/Pages/diningNightlife/international-buffet/internationalBuffet.js';
+import Buffet from 'views/MRG/Pages/diningNightlife/buffet/buffet.js';
 import Bravo from 'views/MRG/Pages/diningNightlife/bravo-bravissimo/bravoBravissimo.js';
 import Deli from 'views/MRG/Pages/diningNightlife/deli/deli.js';
 import CafeHammock from 'views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js';
@@ -306,11 +306,7 @@ export default function Miccosukee(props) {
               path={`${match.path}/bravo-bravissimo`}
               component={Bravo}
             />
-            <Route
-              exact
-              path={`${match.path}/international-buffet`}
-              component={InternationalBuffet}
-            />
+            <Route exact path={`${match.path}/buffet`} component={Buffet} />
             <Route exact path={`${match.path}/deli`} component={Deli} />
             <Route
               exact

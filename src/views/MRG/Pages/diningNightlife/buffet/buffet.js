@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useRouteMatch, useHistory } from 'react-router-dom';
+import React from 'react';
 
 // Core Components
 import GridContainer from 'components/Grid/GridContainer.js';
@@ -15,7 +14,8 @@ import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js
 // Images
 import bgImage from 'assets/media/img/mrg/dining/dining_header.jpg';
 import image1 from 'assets/media/img/mrg/dining/deli/deli-01.jpg';
-import buffetPromo from 'assets/media/img/mrg/dining/maxs/Buffet_banner.jpeg';
+//import buffetPromo from 'assets/media/img/mrg/dining/maxs/Buffet_banner.jpeg';
+import buffetPromo from 'assets/media/img/mrg/dining/buffet/Buffet-ReopeningA.jpg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -46,16 +46,9 @@ const sliderContent = [
   },
 ];
 
-const Maxs = () => {
+const Buffet = () => {
   const language = useLanguage();
   const classes = useStyles();
-  const history = useHistory();
-
-  /*
-  useEffect(() => {
-    history.push('/mcr/buffet');
-  }, []);
-  */
 
   return (
     <React.Fragment>
@@ -64,34 +57,38 @@ const Maxs = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>Max's Room</h2>
-              {/*renderPoiHours(mrgHours.poi.maxs, language)*/}
-              <h6>
-                {language
-                  ? 'OPEN DAILY 1 PM - 11 PM'
-                  : 'ABIERTO TODOS LOS DÍAS 1 PM a 11 PM'}
-                <br />
-                {language
-                  ? 'BREAKFAST Friday - Monday, 7 AM to noon'
-                  : 'DESAYUNO viernes a lunes, de 7 AM a mediodía'}
-              </h6>
-              <p style={{ fontWeight: 400 }}>
-                {language
-                  ? 'Located in the upstairs buffet area.'
-                  : 'Ubicado en el área de bufé del segundo piso.'}
-              </p>
-              <p>
-                {language
-                  ? 'Stop by for breakfast, lunch, and dinner favorites at our second-floor location. Savor worldwide cuisine with our international plates, including Mexican, Asian, and Hispanic combinations. Take it to another level with flavorful executive plates perfect for steak and seafood lovers.'
-                  : 'Visítanos para desayunar, almorzar y cenar en nuestra ubicación en el segundo piso. Saborea la cocina mundial con nuestros platos internacionales, que incluyen combinaciones mexicanas, asiáticas e hispanas. Llévalo a otro nivel con sabrosos platos ejecutivos perfectos para los amantes de la carne y los mariscos.'}
-              </p>
-              <Button
-                target="_blank"
-                href="https://mapa-media.s3.amazonaws.com/website/MaxsRoomMenu_Web.pdf"
-                usetheme="contained"
-              >
-                {language ? 'MENU' : 'MENÚ'}
-              </Button>
+              {isRunning([2023, 7, 1]) ? (
+                <React.Fragment>
+                  <h2>Buffet</h2>
+                  <h6>
+                    {language
+                      ? 'OPEN 7 DAYS A WEEK'
+                      : 'ABIERTO LOS 7 DÍAS DE LA SEMANA'}
+                    <br />
+                    BRUNCH: {language ? '7 AM - 2PM' : '7 AM - 2PM'}
+                    <br />
+                    DINNER:
+                    <br />
+                    {language
+                      ? 'SUNDAY - WEDNESDAY, 4 PM - 10 PM'
+                      : 'domingo a miércoles, 4 PM - 10 PM'}
+                    <br />
+                    {language
+                      ? 'THURSDAY - SATURDAY, 4 PM - 11 PM'
+                      : 'jueves a sábado, 4 PM - 11 PM'}
+                  </h6>
+                  <p style={{ fontWeight: 400 }}>
+                    {language
+                      ? 'Located on the second floor of the Resort. $29.99 plus tax/ svc charge.'
+                      : 'Ubicado en el segundo piso del hotel. $29.99 más impuestos/cargo de servicio Abierto todos los días'}
+                  </p>
+                  <p>
+                    {language
+                      ? 'Back by popular demand, the Miccosukee Casino & Resort buffet offers a wide selection of Brunch and Dinner favorites for $29.99. Indulge in delectable dishes, drinks, and desserts in a comfortable and casual culinary experience the whole family will enjoy.'
+                      : 'De regreso por demanda popular, el bufé de Miccosukee Casino & Resort ofrece una amplia selección de los platos favoritos de Brunch y Cena por $29.99. Te deleitarás con deliciosos platos, bebidas y postres en una experiencia culinaria cómoda e informal que disfrutará toda la familia.'}
+                  </p>
+                </React.Fragment>
+              ) : null}
               {isRunning([2023, 6, 1], [2023, 7, 1]) ? (
                 <img
                   style={{
@@ -119,4 +116,4 @@ const Maxs = () => {
   );
 };
 
-export default Maxs;
+export default Buffet;

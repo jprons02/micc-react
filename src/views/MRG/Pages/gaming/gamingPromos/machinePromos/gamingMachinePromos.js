@@ -298,7 +298,6 @@ const GamingMachinePromos = (props) => {
       if (language) {
         return monthContent.month.toUpperCase();
       } else {
-        console.log('should be es...');
         return monthContent.monthEs.toUpperCase();
       }
     } else {

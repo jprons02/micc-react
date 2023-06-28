@@ -161,14 +161,25 @@ const MrgHeader = () => {
           target: '',
         },
         {
-          text: "Max's Room",
-          link: '/maxs',
+          text: 'Buffet',
+          link: '/buffet',
+          target: '',
+        },
+        {
+          text: 'Café Hammock',
+          link: '/cafe-hammock',
           target: '',
         },
         {
           text: "Max's Grab & Go",
           link: '/maxsgrabandgo',
           target: '',
+        },
+        {
+          text: "Max's Room",
+          link: '/maxs',
+          target: '',
+          divider: true,
         },
         /*
         {
@@ -177,14 +188,6 @@ const MrgHeader = () => {
           target: '',
         },
         */
-
-        {
-          text: 'Café Hammock',
-          link: '/cafe-hammock',
-          target: '',
-          divider: true,
-        },
-
         /*
         {
           text: 'Cypress Lounge',
