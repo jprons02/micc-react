@@ -51,11 +51,9 @@ const Maxs = () => {
   const classes = useStyles();
   const history = useHistory();
 
-  /*
   useEffect(() => {
     history.push('/mcr/buffet');
   }, []);
-  */
 
   return (
     <React.Fragment>

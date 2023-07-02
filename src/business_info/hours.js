@@ -201,20 +201,24 @@ export const mrgHours = {
         close: `${getMinutes(0).combinedString}`,
       },
     ],
+    // Closed sun - tues. Wed: 5-12.
     b1Grill: [
       {
         days: (language) =>
-          language ? 'Sunday - Thursday' : 'domingo - jueves',
+          language ? 'Thursday - Saturday' : 'jueves - sábado',
         open: `${getMinutes(12).combinedString}`,
         close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? '' : ''),
       },
       {
-        days: (language) =>
-          language ? 'Friday & Saturday' : 'viernes y sábado',
-        open: `${getMinutes(12).combinedString}`,
-        close: `${getMinutes(1).combinedString}`,
+        days: (language) => (language ? 'Wednesday' : 'miercoles'),
+        open: `${getMinutes(17).combinedString}`,
+        close: `${getMinutes(0).combinedString}`,
         details: (language) => (language ? '' : ''),
+      },
+      {
+        daysClosed: (language) =>
+          language ? 'Sunday - Tuesday' : 'domingo - martes',
       },
     ],
     deli: [

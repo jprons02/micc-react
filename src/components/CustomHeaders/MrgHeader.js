@@ -174,13 +174,16 @@ const MrgHeader = () => {
           text: "Max's Grab & Go",
           link: '/maxsgrabandgo',
           target: '',
+          divider: true,
         },
+        /*
         {
           text: "Max's Room",
           link: '/maxs',
           target: '',
-          divider: true,
+          
         },
+        */
         /*
         {
           text: 'Empeeke Aya Deli',
