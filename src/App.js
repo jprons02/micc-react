@@ -143,10 +143,7 @@ const App = () => {
                   <ReactHelmetComponent url={window.location.pathname} />
                   <Switch>
                     {/*<Route exact path={"/virtual-event/aid"} component={AID} />*/}
-                    {/* //mrg to mcr change */}
-                    {/* using both mrg and mcr to keep legacy links active. */}
-                    <Route path="/mrg" component={MRG} />
-                    <Route path="/mcr" component={MRG} />
+                    <Route path="/" component={MRG} />
                     <Route path="/golf" component={Golf} />
                     <Route path="/village" component={Village} />
                     <Route path="/airboats" component={Airboats} />
@@ -170,7 +167,6 @@ const App = () => {
                     <Route path={'/holidaycards'} component={HolidayCards} />
                     <Route path={'/artsandcrafts'} component={ArtsAndCrafts} />
                     {/* END LANDING PAGES */}
-                    <Route path="/" component={Miccosukee} />
                   </Switch>
                 </Router>
                 {renderSnackbar()}
