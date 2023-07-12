@@ -2,6 +2,7 @@ export const mrgSocialMedia = {
   facebook: 'https://www.facebook.com/Miccosukee.Casino.Resort',
   instagram: 'https://www.instagram.com/miccosukee.casino.resort/',
   twitter: 'https://twitter.com/miccnationmiami',
+  linkedin: 'https://www.linkedin.com/company/miccosukee/',
 };
 
 export const golfSocialMedia = {

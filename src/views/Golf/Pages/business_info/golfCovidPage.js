@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 
 // My custom component
-import HeroSection from "components/CustomSections/HeroSection";
-import CovidPage from "views/Miccosukee/Pages/covidPage.js";
-import { golfColor } from "themes/colors.js";
+import HeroSection from 'components/CustomSections/HeroSection';
+import AboutUs from 'views/Miccosukee/Pages/aboutUs.js';
+import { golfColor } from 'themes/colors.js';
 
 // Images
-import bgImage from "assets/media/img/golf/Golf_Header.jpg";
+import bgImage from 'assets/media/img/golf/Golf_Header.jpg';
 
 const sliderContent = [
   {
     id: 1,
     bgImage: bgImage,
-    header: "",
-    subHeader: "",
+    header: '',
+    subHeader: '',
   },
 ];
 
@@ -21,7 +21,7 @@ const GolfInfoPage = () => {
   return (
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
-      <CovidPage badgeColor={golfColor[500]} entityMargin={true} />
+      <AboutUs badgeColor={golfColor[500]} entityMargin={true} />
     </React.Fragment>
   );
 };

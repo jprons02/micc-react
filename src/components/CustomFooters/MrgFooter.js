@@ -45,14 +45,26 @@ const MrgFooter = () => {
     {
       header: 'MICCOSUKEE',
       subMenu: [
+        /*
         {
           linkText: language ? 'Main Home' : 'Página Principal',
           linkTo: '/',
         },
+        */
         {
-          linkText: 'Info',
+          linkText: language ? 'Contact' : 'Contacto',
+          //linkTo: "#contact",
+          clickFunction: () => openModal(setShowContactModal),
+        },
+        {
+          linkText: 'About Us',
           //mrg to mcr change
-          linkTo: '/mcr/info',
+          linkTo: '/about-us',
+        },
+        {
+          externalLink: true,
+          linkText: language ? 'Directions' : 'Direcciones',
+          linkTo: 'https://goo.gl/maps/yZ9QCXJ869UqZRxJ9',
         },
         {
           externalLink: true,
@@ -64,22 +76,6 @@ const MrgFooter = () => {
     {
       header: language ? 'ADDITIONAL LINKS' : 'ENLACES ADICIONALES',
       subMenu: [
-        {
-          linkText: language ? 'Contact' : 'Contacto',
-          //linkTo: "#contact",
-          clickFunction: () => openModal(setShowContactModal),
-        },
-        {
-          externalLink: true,
-          linkText: language ? 'Directions' : 'Direcciones',
-          linkTo: 'https://goo.gl/maps/yZ9QCXJ869UqZRxJ9',
-        },
-        {
-          externalLink: true,
-          linkText: language ? 'Banquets & Catering' : 'Banquetes y Catering',
-          //mrg to mcr change
-          linkTo: 'https://www.miccosukee.com/banquets-catering',
-        },
         {
           externalLink: true,
           linkText: language ? 'Privacy Policy' : 'PÓLIZA DE PRIVACIDAD',
@@ -112,8 +108,8 @@ const MrgFooter = () => {
         },
         {
           externalLink: true,
-          linkText: 'Twitter',
-          linkTo: mrgSocialMedia.twitter,
+          linkText: 'LinkedIn',
+          linkTo: mrgSocialMedia.linkedin,
         },
       ],
     },

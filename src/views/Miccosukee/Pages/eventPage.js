@@ -12,6 +12,9 @@ import { Hidden } from '@material-ui/core';
 // Core components
 import Button from 'components/CustomButtons/Button.js';
 
+// Icons
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+
 // Styles
 import styles from 'assets/jss/material-kit-react/views/miccosukee/components/customRaisedContainerStyle.js';
 
@@ -72,6 +75,43 @@ const EventPage = ({ entityMargin, entity }) => {
       }
     }
   }, [event]);
+
+  const handleBackButtonClick = () => {
+    history.goBack();
+  };
+
+  const renderBackButton = () => {
+    return (
+      <div
+        style={{
+          margin: '0px 0px 0px -5px',
+          display: 'flex',
+          alignItems: 'center',
+        }}
+      >
+        <a
+          onClick={() => handleBackButtonClick()}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            cursor: 'pointer',
+          }}
+        >
+          <ChevronLeftIcon style={{ fontSize: '16px', color: '#494949' }} />
+          <span
+            style={{
+              color: '#494949',
+              fontWeight: '500',
+              fontSize: '12px',
+              textTransform: 'uppercase',
+            }}
+          >
+            Back
+          </span>
+        </a>
+      </div>
+    );
+  };
 
   if (!event) {
     return <p>redirecting...</p>;
@@ -320,6 +360,9 @@ const EventPage = ({ entityMargin, entity }) => {
             <div style={{ marginTop: '20px' }}>{renderButtons()}</div>
             <div style={{ marginTop: '40px' }}>{renderSponsors()}</div>
             {renderFlyer()}
+            <div style={{ marginTop: '20px', paddingBottom: '20px' }}>
+              {renderBackButton()}
+            </div>
           </div>
         </div>
       </div>

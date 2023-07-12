@@ -11,9 +11,10 @@ import Button from 'components/CustomButtons/Button.js';
 import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
 import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import FoodAndBevDisclaimer from '../disclaimer/disclaimer';
 
 // Images
-import bgImage from 'assets/media/img/mrg/dining/dining_header.jpg';
+import bgImage from 'assets/media/img/mrg/dining/cafe-hammock/Cafe-Hammock-page-banner.jpeg';
 import image1 from 'assets/media/img/mrg/dining/cafe-hammock/CafeHammock_Interior.jpeg';
 import image2 from 'assets/media/img/mrg/dining/cafe-hammock/filet.jpg';
 import image3 from 'assets/media/img/mrg/dining/cafe-hammock/chicken.jpg';
@@ -64,17 +65,6 @@ const CafeHammock = () => {
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
-        <p
-          style={{
-            textAlign: 'center',
-            fontWeight: 'bold',
-            textTransform: 'uppercase',
-          }}
-        >
-          {language
-            ? 'Café Hammock has moved to the Resort 2nd floor. Please join us upstairs for your fine dining favorites!'
-            : 'Café Hammock se ha mudado al segundo piso del resort. ¡visítanos para disfrutar de tus platos favoritos!'}
-        </p>
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
@@ -113,6 +103,7 @@ const CafeHammock = () => {
           </GridItem>
           */}
         </GridContainer>
+        <FoodAndBevDisclaimer />
       </RaisedContainer>
     </React.Fragment>
   );

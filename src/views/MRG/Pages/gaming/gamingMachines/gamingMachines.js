@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link, withRouter, useRouteMatch } from 'react-router-dom';
 
 // Core Components
 import GridContainer from 'components/Grid/GridContainer.js';
 import GridItem from 'components/Grid/GridItem.js';
+import Button from 'components/CustomButtons/Button.js';
 
 // My Custom Components
 import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
@@ -10,7 +12,7 @@ import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
+import bgImage from 'assets/media/img/mrg/gaming/machines/slots-page-banner-1.jpeg';
 import image1 from 'assets/media/img/mrg/gaming/machines/MRG_Gaming1.jpg';
 import image2 from 'assets/media/img/mrg/gaming/machines/MRG_Gaming2.jpg';
 import image3 from 'assets/media/img/mrg/gaming/machines/MRG_Gaming3.jpg';
@@ -54,14 +56,16 @@ const GamingMachines = () => {
               <h2>{language ? 'Gaming Machines' : 'Máquinas de Juego'}</h2>
               <p>
                 {language
-                  ? 'Miccosukee Casino & Resort is South Florida’s gaming pioneer. Players of all levels can try their luck on any of the sizzling 1,800+ machines on our floor — from classic games to the most cutting-edge machines featuring the latest gaming innovations, special effects, bonuses and rewards!'
-                  : 'Miccosukee Casino & Resort es el pionero en juegos de casino en el Sur de la Florida. ¡Jugadores de todos los niveles pueden probar su suerte en más de 1,800 increíbles máquinas de nuestro casino – desde juegos clásicos, hasta las máquinas más modernas y tecnológicas con efectos especiales, bonos y premios!'}
+                  ? 'Get your game on with close to 2,000 slot machines featuring the latest special effects, bonuses, and rewards in a smoke-free environment. Enhance your gaming experience in our High-Limit Room, and feel free to light up in our dedicated Smoking Casino Area next to the M Sphere Rewards desk.'
+                  : 'Empieza a jugar con cerca de 2000 máquinas tragamonedas que cuentan con los últimos efectos especiales, bonos y recompensas en un ambiente libre de humo. Mejore su experiencia de juego en nuestra sala de límite alto y siéntase libre de fumar en nuestra área de casino para fumadores junto al escritorio de M Sphere Rewards.'}
               </p>
-              <p>
-                {language
-                  ? 'Exclusive gaming spaces like our swanky High Limit Room are waiting to enhance your gaming experience. Miccosukee Casino & Resort is a non-smoking facility with designated smoking areas outside the building for your convenience. Regardless of how you enjoy yourself, you can play in the comfort of your individual style.'
-                  : 'Espacios exclusivos como nuestra elegante High Limit Room están disponibles para realzar tu experiencia de juego. Miccosukee Casino & Resort es un edificio libre de humo con áreas designadas para fumadores fuera del edificio para tu conveniencia. Cualquiera que sea tu preferencia, aquí puedes jugar en la comodidad de tu estilo individual.'}
-              </p>
+              <Button
+                component={Link}
+                to="/casino/promotions"
+                usetheme="contained"
+              >
+                {language ? 'Slots Promos' : 'promociones'}
+              </Button>
             </div>
           </GridItem>
           <GridItem md={5}>

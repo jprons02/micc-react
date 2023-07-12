@@ -917,9 +917,15 @@ const MSphere = () => {
         <div className={classes.leftTextArea}>
           <h2>M Sphere Rewards</h2>
           <p>
-            {language
-              ? 'Unlock the benefits you deserve by using your M Sphere Rewards card with every purchase. Gain access to exclusive events and experiences by earning points and advancing through our five-tier program designed just for you.'
-              : 'Accede a los beneficios que te mereces usando tu tarjeta M Sphere Rewards con cada compra. Obtén acceso a eventos y experiencias exclusivas ganando puntos y avanzando a través de nuestro programa de cinco niveles diseñado sólo para tí.'}
+            Join our loyalty program for free and start earning points
+            redeemable for gaming, retail, dining, hotel accommodations,
+            exclusive events, and much more!
+          </p>
+          <p>
+            Unlock the benefits you deserve by using your M Sphere Rewards card
+            with every purchase. Gain access to exclusive experiences by earning
+            points and advancing through our five-tier program designed just for
+            you.
           </p>
           <div style={{ marginTop: '30px' }}>
             <h4>{language ? 'Member Benefits' : 'Beneficios para Miembros'}</h4>

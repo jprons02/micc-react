@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { mrgHours } from 'business_info/hours.js';
 import { mrgStatus } from 'business_info/status.js';
+import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 
 import Collapse from '@material-ui/core/Collapse';
 
@@ -11,7 +12,9 @@ import { renderPoiHoursSimple } from 'services/functions/renderPoiHours';
 
 const MrgCovidInfo = (props) => {
   const sectionStyle = { marginTop: '20px' };
-  const sectionHeaderStyle = { textDecoration: 'underline', cursor: 'pointer' };
+  const sectionHeaderStyle = {
+    textDecoration: 'underline' /*cursor: 'pointer'*/,
+  };
   const ulStyle = { marginTop: '0px' };
   const innerUlStyle = { paddingLeft: '20px' };
   const liStyle = { fontSize: '14px' };
@@ -309,22 +312,37 @@ const MrgCovidInfo = (props) => {
           controlsList="nodownload"
           />*/}
         <p>
-          {props.language
-            ? 'Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium.'
-            : 'Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida.'}
+          Miccosukee Casino & Resort is your ultimate destination for gaming,
+          entertainment, and leisure in the heart of the Florida Everglades.
+        </p>
+        <p>
+          Located 17 miles west of Miami International Airport, on the edge of
+          this scenic wetland ecosystem, the Resort offers 302 elegant guest
+          rooms and suites designed with comfort and luxury in mind.
+        </p>
+        <p>
+          Featured amenities include a high-stakes Bingo Hall, a 20-table Poker
+          Room, over 1,800 slot machines, 24-hour dining options, and live
+          entertainment.
+        </p>
+        <p>
+          Our Resort’s second floor offers over 20,000 square feet of space,
+          ideal for corporate events, private parties, and wedding ceremonies.
+          Banquet and catering services can accommodate up to 1,200 guests.
+        </p>
+        <p>
+          It’s time to live it up and play on at the all-new Miccosukee Casino &
+          Resort!
         </p>
       </div>
       <div style={sectionStyle}>
-        <h4
-          onClick={() => setMrg({ ...mrg, hours: !mrg.hours })}
-          style={sectionHeaderStyle}
-        >
+        <h4 style={sectionHeaderStyle}>
           {props.language ? 'Hours of Operation' : 'Horarios'}
         </h4>
         {
           <ul style={ulStyle}>
             <li style={liStyle}>
-              {mrgHours.hours.days(props.language)}
+              {props.language ? 'Monday - Sunday' : 'lunes — domingo'}
               {', '}
               {mrgHours.hours.open === mrgHours.hours.close
                 ? props.language
@@ -335,7 +353,22 @@ const MrgCovidInfo = (props) => {
           </ul>
         }
       </div>
-
+      <div style={sectionStyle}>
+        <h4 style={sectionHeaderStyle}>
+          {props.language ? 'Contact' : 'Contacto'}
+        </h4>
+        {
+          <ul>
+            <li style={liStyle}>
+              500 SW 177th Ave
+              <br />
+              Miami, FL 33194
+              <br />
+              {mrgBusinessInfo.phone}
+            </li>
+          </ul>
+        }
+      </div>
       <div style={sectionStyle}>
         <h4
           onClick={() => setMrg({ ...mrg, entryDetails: !mrg.entryDetails })}
@@ -344,16 +377,6 @@ const MrgCovidInfo = (props) => {
           {props.language ? 'Entry Details' : 'Normas de Acceso'}
         </h4>
         <ul style={ulStyle}>
-          <li style={liStyle}>
-            {props.language
-              ? 'We are operating at full capacity.'
-              : 'Estamos operando a máxima capacidad.'}
-          </li>
-          <li style={liStyle}>
-            {props.language
-              ? 'Temperature screenings are no longer required when entering the building.'
-              : 'No se requiere controles de temperatura para entrar al edificio.'}
-          </li>
           <li style={liStyle}>
             {props.language
               ? 'All guests must have a government-issued photo ID.'
@@ -378,18 +401,6 @@ const MrgCovidInfo = (props) => {
           </ul>
           <li style={liStyle}>
             {props.language
-              ? 'There have been disinfecting wipe dispensers installed all around the facility.'
-              : 'Se han instalado dispensadores de toallas desinfectantes alrededor de toda la edificio.'}
-          </li>
-          <ul style={innerUlStyle}>
-            <li style={liStyle}>
-              {props.language
-                ? 'Guests must wipe down each machine after use.'
-                : 'Todas las máquinas deberán ser desinfectadas con una toalla al finalizar su uso.'}
-            </li>
-          </ul>
-          <li style={liStyle}>
-            {props.language
               ? 'Eighteen-wheelers can park in the Raccoon Parking Lot but must register first with the Hotel Security Dispatch and are required to rent a hotel room.'
               : 'Los camiones de dieciocho ruedas deben parquearse en el Estacionamiento Raccoon, pero antes deben registrarse con el Despacho de Seguridad del hotel y alquilar un cuarto de hotel.'}
           </li>
@@ -409,62 +420,14 @@ const MrgCovidInfo = (props) => {
                 ? 'There will be a charge of $25.00 + tax per night for overnight RV parking.'
                 : 'Habrá un cargo de $25.00 + impuestos por noche para el estacionamiento nocturno de RVs.'}
             </li>
+            <li style={liStyle}>
+              {props.language
+                ? 'Everyone in the RV must be 18 years of age and over in order to enter the property.'
+                : 'Todos en el RV deben tener 18 años o más para poder ingresar a la propiedad.'}
+            </li>
           </ul>
         </ul>
       </div>
-      {/*
-      <div style={sectionStyle}>
-        <h4
-          onClick={() => setMrg({ ...mrg, gaming: !mrg.gaming })}
-          style={sectionHeaderStyle}
-        >
-          {props.language ? 'Casino' : 'Casino'}
-        </h4>
-        <Collapse in={mrg.gaming}>
-          {renderGaming()}
-          <span
-            style={{
-              fontSize: '10px',
-              fontStyle: 'italic',
-              lineHeight: '10px',
-            }}
-          >
-            {props.language
-              ? 'Once disqualification is declared, it is final. Offers are subject to change or cancellation, without notice, at the discretion of management. See a Player’s Club Attendant for details. Any individual that has self-excluded or been trespassed by Miccosukee Casino & Resort may not be enrolled or participate in the Miccosukee One program without written documentation that such status has been rescinded.'
-              : 'Cualquier individuo que se haya autoexcluido o haya traspasado por Miccosukee Casino & Resort no podrá inscribirse o participar en el programa de Miccosukee One sin mostrar documentación que establezca que el estatus haya sido rescindido. Una vez declarada la descalificación, es definitiva. La oferta está sujeta a cambios o cancelaciones, sin previo aviso, a discreción de la gerencia. Consulte a un asistente del Player’s Club para más detalles.'}
-          </span>
-        </Collapse>
-      </div>
-      <div style={sectionStyle}>
-        <h4
-          onClick={() => setMrg({ ...mrg, dining: !mrg.dining })}
-          style={sectionHeaderStyle}
-        >
-          {props.language ? 'Dining & Nightlife' : 'Restaurantes & Bares'}
-        </h4>
-        <Collapse in={mrg.dining}>{renderDining()}</Collapse>
-      </div>
-      <div style={sectionStyle}>
-        <h4
-          onClick={() =>
-            setMrg({ ...mrg, accommodations: !mrg.accommodations })
-          }
-          style={sectionHeaderStyle}
-        >
-          {props.language ? 'Accommodations' : 'Alojamiento'}
-        </h4>
-        <Collapse in={mrg.accommodations}>{renderAccommodations()}</Collapse>
-      </div>
-      <div style={sectionStyle}>
-        <h4
-          onClick={() => setMrg({ ...mrg, amenities: !mrg.amenities })}
-          style={sectionHeaderStyle}
-        >
-          {props.language ? 'Amenities' : 'Comodidades'}
-        </h4>
-        <Collapse in={mrg.amenities}>{renderAmenities()}</Collapse>
-      </div>
-      */}
     </div>
   );
 };

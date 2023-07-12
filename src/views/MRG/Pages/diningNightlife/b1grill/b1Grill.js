@@ -11,9 +11,10 @@ import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
 import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 import CustomFoodMenuModal from 'components/CustomModal/CustomFoodMenuModal/CustomFoodMenuModal.js';
+import FoodAndBevDisclaimer from '../disclaimer/disclaimer';
 
 // Images
-import bgImage from 'assets/media/img/mrg/dining/dining_header.jpg';
+import bgImage from 'assets/media/img/mrg/dining/b1grill/b1-grill-banner.jpeg';
 import image1 from 'assets/media/img/mrg/home/burgerfries.jpg';
 import image2 from 'assets/media/img/mrg/home/fresh-tasty-hot-dog-with-fried-potatoes.jpg';
 
@@ -61,10 +62,10 @@ const B1Grill = () => {
   useEffect(() => {
     //mrg to mcr change
     if (
-      location.pathname === '/mrg/b1grill-menu' ||
-      location.pathname === '/mrg/b1grill-menu/' ||
-      location.pathname === '/mcr/b1grill-menu' ||
-      location.pathname === '/mcr/b1grill-menu/'
+      location.pathname === '/mrg/b1-grill-menu' ||
+      location.pathname === '/mrg/b1-grill-menu/' ||
+      location.pathname === '/mcr/b1-grill-menu' ||
+      location.pathname === '/mcr/b1-grill-menu/'
     ) {
       setShowFoodMenu(true);
     } else {
@@ -110,6 +111,7 @@ const B1Grill = () => {
             </div>
           </GridItem>
         </GridContainer>
+        <FoodAndBevDisclaimer />
       </RaisedContainer>
       <CustomFoodMenuModal
         showModal={showFoodMenu}

@@ -446,7 +446,7 @@ const Events = ({ history, badgeColor, entityMargin }) => {
     >
       <div>
         <div className={classes.container} style={{ padding: '15px' }}>
-          {renderBadges()}
+          {/*renderBadges()*/}
           <div>{renderEvents()}</div>
         </div>
       </div>

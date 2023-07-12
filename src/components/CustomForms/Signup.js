@@ -234,6 +234,19 @@ export default function SignUpForm(props) {
               color="primary"
             />
           )}
+          <div
+            style={{
+              padding: '0 16px',
+              marginTop: '10px',
+              textAlign: 'center',
+            }}
+          >
+            <p style={{ fontStyle: 'italic', fontSize: '11px' }}>
+              {language
+                ? 'By submitting this form you are subscribing to email marketing from Miccosukee Casino & Resort and our affiliates. You may unsubscribe at any time.'
+                : 'Al enviar este formulario, se está suscribiendo al marketing por correo electrónico de Miccosukee Casino & Resort y nuestros afiliados. Puede darse de baja en cualquier momento.'}
+            </p>
+          </div>
         </div>
       </form>
     </React.Fragment>

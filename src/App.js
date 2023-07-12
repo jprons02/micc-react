@@ -21,15 +21,21 @@ import { MobileMenuDrawerProvider } from 'contexts/MobileMenuDrawerContext.js';
 import SnackbarContent from 'components/Snackbar/SnackbarContent.js';
 import Check from '@material-ui/icons/Check';
 
-// my pages
-import Miccosukee from 'views/Miccosukee';
-import MRG from 'views/MRG';
+// MCR
+import MCR from 'views/MRG';
+
+// Golf
 import Golf from 'views/Golf';
+
+// Experiences
 import Village from 'views/Village';
 import Airboats from 'views/Airboats';
+
+// Tribe
 import History from 'views/History';
+
+// Admin
 import Administration from 'views/Administration';
-//import AID from 'views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js';
 
 // landing pages
 import Tomahawk from 'views/LandingPages/tomahawk.js';
@@ -40,6 +46,7 @@ import Banquets from 'views/LandingPages/banquets.js';
 import HolidayCards from 'views/LandingPages/community/holidayCards/index.js';
 import ArtsAndCrafts from 'views/LandingPages/artsandcrafts.js';
 import Valet from 'views/LandingPages/valet.js';
+//import AID from 'views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js';
 
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
@@ -143,7 +150,7 @@ const App = () => {
                   <ReactHelmetComponent url={window.location.pathname} />
                   <Switch>
                     {/*<Route exact path={"/virtual-event/aid"} component={AID} />*/}
-                    <Route path="/" component={MRG} />
+                    <Route path="/" component={MCR} />
                     <Route path="/golf" component={Golf} />
                     <Route path="/village" component={Village} />
                     <Route path="/airboats" component={Airboats} />

@@ -10,9 +10,10 @@ import Button from 'components/CustomButtons/Button.js';
 import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
 import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import FoodAndBevDisclaimer from '../disclaimer/disclaimer';
 
 // Images
-import bgImage from 'assets/media/img/mrg/dining/dining_header.jpg';
+import bgImage from 'assets/media/img/mrg/dining/maxs/maxs-grabngo-banner.jpeg';
 import image1 from 'assets/media/img/mrg/dining/deli/deli-01.jpg';
 
 // Styling
@@ -84,6 +85,7 @@ const MaxsGrabAndGo = () => {
             */}
           </GridItem>
         </GridContainer>
+        <FoodAndBevDisclaimer />
       </RaisedContainer>
     </React.Fragment>
   );

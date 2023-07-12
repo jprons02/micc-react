@@ -1,14 +1,25 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 
 // core components
 import Header from 'components/Header/Header.js';
 import HeaderLinks from 'components/Header/HeaderLinks.js';
+
+// Icons
 import { Icon } from '@material-ui/core';
+// @material-ui/icons
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedinIcon from '@material-ui/icons/LinkedIn';
+import LanguageIcon from '@material-ui/icons/Language';
 
 // Context
 import { BookRoomContext } from 'contexts/BookRoomContext.js';
 import { MobileMenuDrawerContext } from 'contexts/MobileMenuDrawerContext.js';
-import { useLanguage } from 'contexts/languageContext.js';
+import { useLanguage, useLanguageUpdate } from 'contexts/languageContext.js';
+
+// Custom Components
+import Badge from 'components/Badge/Badge.js';
 
 //testing
 import styles from 'assets/jss/material-kit-react/views/mrg';
@@ -26,6 +37,7 @@ const useStyles = makeStyles(styles);
 
 const MrgHeader = () => {
   const language = useLanguage();
+  const toggleLanguage = useLanguageUpdate();
   //classes needed for social icon
   //const classes = useStyles();
   useEffect(() => {
@@ -47,185 +59,167 @@ const MrgHeader = () => {
 
   const menuLinks = [
     {
-      text: language ? 'Accommodations' : 'Habitaciones',
-      itemType: '',
-      href: '',
-      target: '',
-      color: '',
-      link: '/accommodations',
-      //icon: () => <Icon>chevron_right</Icon>,
-    },
-    {
-      text: language ? 'Amenities' : 'Comodidades',
-      itemType: 'dropdown',
-      href: '',
-      target: '',
-      color: '',
-      link: '',
-      subMenu: [
-        /*
-        {
-          text: language ? 'Salon & Spa' : 'Salón y Spa',
-          link: '/salon-spa',
-          target: '',
-        },
-        {
-          text: 'Club Egret',
-          link: '/club-egret',
-          target: '',
-        },
-        */
-        {
-          text: language ? 'Pool & Gym' : 'Piscina y Gimnasio',
-          link: '/pool-gym',
-          target: '',
-        },
-        /*
-        {
-          text: language ? 'Teen Arcade' : 'Sala de Juegos',
-          link: '/teen-arcade',
-          target: '',
-        },
-        */
-      ],
-      //icon: () => <Icon>chevron_right</Icon>,
-    },
-    {
       text: language ? 'Casino' : 'Casino',
       itemType: 'dropdown',
       href: '',
       target: '',
       color: '',
-      link: '/gaming',
+      link: '',
       subMenu: [
         {
-          text: language ? 'Promotions' : 'Promociones',
-          link: '/promotions',
-          target: '',
-        },
-        /*
-        {
-          text: 'Miccosukee One',
-          link: '/miccosukee-one',
-          target: '',
-        },
-        */
-        {
-          text: 'M Sphere Rewards',
-          link: '/msphere',
+          text: language ? 'Casino Promotions' : 'Casino Promociones',
+          link: 'casino/promotions',
           target: '',
         },
         {
-          text: language ? 'Gaming Machines' : 'Máquinas de Juego',
-          link: '/gaming-machines',
-          target: '',
-        },
-        {
-          text: language ? 'Poker' : 'Póquer',
-          link: '/poker',
+          text: language ? 'Slots' : 'Slots',
+          link: 'casino/slots',
           target: '',
         },
         {
           text: 'Bingo',
-          link: '/bingo',
+          link: 'casino/bingo',
+          target: '',
+        },
+        {
+          text: language ? 'Poker' : 'Póquer',
+          link: 'casino/poker',
+          target: '',
+        },
+        {
+          text: language ? 'Hosts' : 'Hosts',
+          link: 'casino/hosts',
           target: '',
         },
       ],
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: language ? 'Dining & Nightlife' : 'Restaurantes y Vida Nocturna',
+      text: language ? 'Resort' : 'Resort',
       itemType: 'dropdown',
       href: '',
       target: '',
       color: '',
       link: '',
       subMenu: [
-        /*
         {
-          text: 'Bravo Bravissimo!',
-          link: '/bravo-bravissimo',
-          target: '',
-        },
-        */
-        /*
-        {
-          text: 'Empeeke Aaweeke International Buffet',
-          link: '/international-buffet',
-          target: '',
-        },
-        */
-        {
-          text: 'B1 Grill',
-          link: '/b1grill',
+          text: language ? 'Rooms & Suites' : 'Rooms & Suites',
+          link: 'resort/rooms',
           target: '',
         },
         {
-          text: 'Buffet',
-          link: '/buffet',
+          text: 'Pool & Fitness Center',
+          link: 'resort/pool-fitness',
           target: '',
         },
         {
-          text: 'Café Hammock',
-          link: '/cafe-hammock',
-          target: '',
+          text: language ? 'Golf & Country Club' : 'Golf & Country Club',
+          link: 'https://www.miccosukeegolf.com/',
+          target: '_blank',
         },
         {
-          text: "Max's Grab & Go",
-          link: '/maxsgrabandgo',
-          target: '',
-          divider: true,
-        },
-        /*
-        {
-          text: "Max's Room",
-          link: '/maxs',
-          target: '',
-          
-        },
-        */
-        /*
-        {
-          text: 'Empeeke Aya Deli',
-          link: '/deli',
-          target: '',
-        },
-        */
-        /*
-        {
-          text: 'Cypress Lounge',
-          link: '/cypress-lounge',
-          target: '',
-        },
-        */
-        {
-          text: 'Martini Bar',
-          link: '/martini-bar',
+          text: language ? 'Experiences' : 'Experiences',
+          link: 'resort/experiences',
           target: '',
         },
       ],
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: language ? 'Events' : 'Eventos',
+      text: language ? 'Entertainment' : 'Entertainment',
+      itemType: 'dropdown',
+      href: '',
+      target: '',
+      color: '',
+      link: '',
+      subMenu: [
+        {
+          text: language ? 'Events & Concerts' : 'Events & Concerts',
+          link: 'entertainment/events-concerts',
+          target: '',
+        },
+      ],
+      //icon: () => <Icon>chevron_right</Icon>,
+    },
+    {
+      text: language ? 'Food & Drink' : 'Food & Drink',
+      itemType: 'dropdown',
+      href: '',
+      target: '',
+      color: '',
+      link: '',
+      subMenu: [
+        {
+          text: 'B1 Grill',
+          link: 'food-drink/b1-grill',
+          target: '',
+        },
+        {
+          text: 'Buffet',
+          link: 'food-drink/buffet',
+          target: '',
+        },
+        {
+          text: 'Café Hammock',
+          link: 'food-drink/cafe-hammock',
+          target: '',
+        },
+        {
+          text: "Max's Grab & Go",
+          link: 'food-drink/maxs-grab-go',
+          target: '',
+          divider: true,
+        },
+        {
+          text: 'Martini Bar',
+          link: 'food-drink/martini-bar',
+          target: '',
+        },
+      ],
+      //icon: () => <Icon>chevron_right</Icon>,
+    },
+    {
+      text: language ? 'Meetings & Events' : 'Meetings & Events',
+      itemType: 'dropdown',
+      href: '',
+      target: '',
+      color: '',
+      link: '',
+      subMenu: [
+        {
+          text: 'Meetings',
+          link: 'meeting-events/meetings',
+          target: '',
+        },
+        {
+          text: 'Weddings',
+          link: 'meeting-events/weddings',
+          target: '',
+        },
+        {
+          text: 'Banquets',
+          link: 'meeting-events/banquets',
+          target: '',
+        },
+        {
+          text: 'Corporate Retreats',
+          link: 'meeting-events/corporate-retreats',
+          target: '',
+        },
+      ],
+      //icon: () => <Icon>chevron_right</Icon>,
+    },
+    {
+      text: language ? 'M Sphere' : 'M Sphere',
       itemType: '',
       href: '',
       target: '',
       color: '',
-      link: '/events',
+      link: 'msphere',
       //icon: () => <Icon>chevron_right</Icon>,
     },
     {
-      text: 'Golf & Country Club',
-      itemType: 'external',
-      href: 'http://www.miccosukeegolf.com/',
-      target: '_blank',
-      color: '',
-      link: '',
-      //icon: () => <Icon>chevron_right</Icon>,
-    },
-    {
-      text: language ? 'Book A Room' : 'Reservar una Habitación',
+      text: language ? 'Book A Room' : 'Reservar Una Habitación',
       itemType: 'action',
       href: '',
       target: '',
@@ -236,15 +230,114 @@ const MrgHeader = () => {
     },
   ];
 
+  const renderTopHeader = () => {
+    return (
+      <React.Fragment>
+        <div
+          style={{
+            backgroundColor: '#4c413f',
+            padding: '8px',
+            height: '40px',
+            display: 'flex',
+            alignItems: 'center',
+            lineHeight: '0',
+          }}
+        >
+          <div
+            style={{
+              display: 'inline-block',
+              position: 'absolute',
+              left: '0',
+              marginLeft: '20px',
+            }}
+          >
+            <div
+              onClick={toggleLanguage}
+              role="button"
+              style={{
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+              }}
+            >
+              <LanguageIcon
+                fontSize="small"
+                style={{ color: 'white', marginRight: '5px' }}
+              />
+              <span
+                style={{
+                  color: 'white',
+                  fontWeight: '400',
+                  textDecoration: 'underline',
+                  fontSize: '12px',
+                }}
+              >
+                {language ? 'Español' : 'English'}
+              </span>
+            </div>
+          </div>
+          <div
+            style={{
+              display: 'inline-block',
+              position: 'absolute',
+              right: '0',
+              marginRight: '20px',
+            }}
+          >
+            <Link to="/news">
+              <span
+                style={{
+                  color: 'white',
+                  fontWeight: '400',
+                  textDecoration: 'underline',
+                  marginRight: '10px',
+                  fontSize: '12px',
+                }}
+              >
+                {language ? 'News' : 'Noticias'}
+              </span>
+            </Link>
+            <a href="https://goo.gl/maps/yZ9QCXJ869UqZRxJ9" target="_blank">
+              <span
+                style={{
+                  color: 'white',
+                  fontWeight: '400',
+                  textDecoration: 'underline',
+                  marginRight: '10px',
+                  fontSize: '12px',
+                }}
+              >
+                {language ? 'Directions' : 'Direcciones'}
+              </span>
+            </a>
+          </div>
+        </div>
+      </React.Fragment>
+    );
+  };
+
   return (
     <React.Fragment>
+      {/*
+      <div
+        style={{
+          backgroundColor: '#4c413f',
+          minHeight: '35px',
+        }}
+      >
+        <p style={{ color: 'white', padding: '5px', marginLeft: '5px' }}>
+          BUTTON HERE.
+        </p>
+      </div>
+      */}
+      {renderTopHeader()}
       <Header
         borderColor={mrgColor[500]}
         color="white"
         brand={mrgLogo}
         brandAlt="Miccosukee Casino and Resort logo"
         //mrg to mcr change
-        brandLink="/mcr"
+        brandLink="/"
         rightLinks={<HeaderLinks menuItems={menuLinks} />}
         fixed
         changeColorOnScroll={{

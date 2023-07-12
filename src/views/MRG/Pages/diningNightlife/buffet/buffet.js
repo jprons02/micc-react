@@ -10,9 +10,10 @@ import Button from 'components/CustomButtons/Button.js';
 import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
 import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import FoodAndBevDisclaimer from '../disclaimer/disclaimer';
 
 // Images
-import bgImage from 'assets/media/img/mrg/dining/dining_header.jpg';
+import bgImage from 'assets/media/img/mrg/dining/buffet/buffet-banner.jpeg';
 import image1 from 'assets/media/img/mrg/dining/deli/deli-01.jpg';
 //import buffetPromo from 'assets/media/img/mrg/dining/maxs/Buffet_banner.jpeg';
 import buffetPromo from 'assets/media/img/mrg/dining/buffet/Buffet-ReopeningA.jpg';
@@ -111,6 +112,7 @@ const Buffet = () => {
             */}
           </GridItem>
         </GridContainer>
+        <FoodAndBevDisclaimer />
       </RaisedContainer>
     </React.Fragment>
   );

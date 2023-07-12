@@ -61,48 +61,30 @@ const Accommodations = () => {
     <React.Fragment>
       <HeroSection sliderContent={sliderContent} />
       <RaisedContainer>
-        <GridContainer>
-          <GridItem md={7}>
-            <div className={classes.leftTextArea}>
-              <h2>{language ? 'Accommodations' : 'Habitaciones'}</h2>
-              {/*
-              <h6>
-                {language
-                  ? 'Guests must be 18 or older to enter the building.'
-                  : 'Los invitados deben tener 18 años o más para entrar al establecimiento.'}
-              </h6>
-              */}
-              <p>
-                {language
-                  ? 'Standing at the edge of the magnificent Florida Everglades, the Resort boasts rooms designed with comfort as the number one priority as well as amazing views of the surrounding ecosystem.'
-                  : 'Localizado en el corazón de los Everglades de la Florida, el Resort tiene habitaciones diseñadas con tu comodidad como prioridad número uno, además de increíbles vistas del ecosistema a su alrededor.'}
-              </p>
-              <p>
-                {language
-                  ? 'In addition to specific room amenities, all of our rooms conveniently feature Wi- Fi, premium cable programming, pay-per-view, in-room safe, flat screen TVs and a lot more.'
-                  : 'Todas nuestras habitaciones ofrecen Wi-Fi, canales de cable, Pay-Per-View, una caja fuerte, televisiones de pantalla plana y mucho más.'}
-              </p>
-              <p>
-                {language
-                  ? 'Executive and Deluxe-level rooms are available with upgraded amenities and services.'
-                  : 'Habitaciones Ejecutivas y de nivel Deluxe están disponibles con comodidades y servicios adicionales.'}
-              </p>
-              {
-                <Button
-                  onClick={() => setShowBookRoomModal(true)}
-                  usetheme="contained"
-                >
-                  {language ? 'Book A Room' : 'Reservar una Habitación'}
-                </Button>
-              }
-            </div>
-          </GridItem>
-          <GridItem md={5}>
-            <div className={classes.imageArea}>
-              <CustomImageSlider images={imageObj} />
-            </div>
-          </GridItem>
-        </GridContainer>
+        <div style={{ paddingBottom: '20px' }}>
+          <h2>{language ? 'Accommodations' : 'Habitaciones'}</h2>
+          <p>
+            Standing at the edge of the magnificent Florida Everglades, the
+            Resort boasts rooms designed with comfort as the number one priority
+            and amazing views of the surrounding ecosystem. In addition to
+            specific room amenities, all of our rooms conveniently feature
+            Wi-Fi, premium cable programming, pay-per-view, in-room safe,
+            flat-screen TVs, and a lot more.
+          </p>
+
+          <p>
+            Executive and Deluxe-level rooms are available with upgraded
+            amenities and services.
+          </p>
+          {
+            <Button
+              onClick={() => setShowBookRoomModal(true)}
+              usetheme="contained"
+            >
+              {language ? 'Book A Room' : 'Reservar una Habitación'}
+            </Button>
+          }
+        </div>
       </RaisedContainer>
     </React.Fragment>
   );

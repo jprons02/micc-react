@@ -220,7 +220,7 @@ const BookRoomForm = (props) => {
         <GridItem sm={12} md={6}>
           <CustomTextField
             onChange={(e) => handleChange(e, setChildren)}
-            disabled
+            //disabled
             value={children}
             error={false}
             name="children"

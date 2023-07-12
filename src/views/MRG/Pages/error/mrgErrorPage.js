@@ -19,7 +19,7 @@ const sliderContent = [
 
 const MrgErrorPage = (props) => {
   const handleClick = () => {
-    props.history.push('/mcr');
+    props.history.push('/');
   };
 
   return (

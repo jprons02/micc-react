@@ -15,8 +15,8 @@ import GamingMachinePromos from 'views/MRG/Pages/gaming/gamingPromos/machineProm
 import PokerPromos from 'views/MRG/Pages/gaming/gamingPromos/pokerPromos/pokerPromos.js';
 
 // Images
-import bgImageMachines from 'assets/media/img/mrg/gaming/casino_header.jpg';
-import bgImagePoker from 'assets/media/img/mrg/poker/Poker_Header.jpeg';
+import bgImageMachines from 'assets/media/img/mrg/gaming/promos/promotions-page-banner.jpeg';
+import bgImagePoker from 'assets/media/img/mrg/gaming/poker/poker-page-banner.jpeg';
 import image1 from 'assets/media/img/mrg/amenities/club-egret/club_egret_01.jpg';
 import image2 from 'assets/media/img/mrg/amenities/club-egret/club_egret_02.jpg';
 import image3 from 'assets/media/img/mrg/amenities/club-egret/club_egret_03.jpg';
@@ -169,7 +169,7 @@ const GamingPromos = (props) => {
             onClick={() => handleClick('machinePromos')}
             usetheme={state === 'machinePromos' ? 'contained' : 'outlined'}
           >
-            {language ? 'Machine Promos' : 'Máquinas de Juego'}
+            {language ? 'Slots Promos' : 'Máquinas de Juego'}
           </Button>
           &nbsp; &nbsp;
           <Button

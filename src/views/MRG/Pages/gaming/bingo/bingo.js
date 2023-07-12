@@ -11,7 +11,7 @@ import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js
 import Button from 'components/CustomButtons/Button.js';
 
 // Images
-import bgImage from 'assets/media/img/mrg/gaming/casino_header.jpg';
+import bgImage from 'assets/media/img/mrg/gaming/bingo/bingo-page-banner.jpeg';
 import image1 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE1.jpeg';
 import image2 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE2.jpeg';
 import image3 from 'assets/media/img/mrg/gaming/bingo/BINGO_SLIDE3.jpeg';

@@ -7,7 +7,11 @@ const getEmail = (value) => {
     case 'Banquet Sales':
       return ['asaunders@miccosukee.com', 'mrgsales&catering@miccosukee.com'];
     case 'Banquet/Catering':
-      return ['asaunders@miccosukee.com', 'mrgsales&catering@miccosukee.com'];
+      return [
+        'asaunders@miccosukee.com',
+        'mrgsales&catering@miccosukee.com',
+        'Sales&Catering@miccosukee.com',
+      ];
     case 'Bingo':
       return [
         'asaunders@miccosukee.com',
@@ -17,7 +21,11 @@ const getEmail = (value) => {
     case 'Child Care Center':
       return ['asaunders@miccosukee.com', 'glledes@miccosukee.com'];
     case 'Event & Meeting Planning':
-      return ['asaunders@miccosukee.com', 'mrgsales&catering@miccosukee.com'];
+      return [
+        'asaunders@miccosukee.com',
+        'mrgsales&catering@miccosukee.com',
+        'Sales&Catering@miccosukee.com',
+      ];
     case 'Event Tickets':
       return ['asaunders@miccosukee.com', 'sales@miccosukee.com'];
     case 'Food & Beverage':

@@ -27,7 +27,7 @@ import { errorColor } from 'themes/colors.js';
 
 const useStyles = makeStyles(styles);
 
-const InfoPage = ({ history, badgeColor, entityMargin }) => {
+const AboutUs = ({ history, badgeColor, entityMargin }) => {
   const language = useLanguage();
   const classes = useStyles();
 
@@ -59,7 +59,7 @@ const InfoPage = ({ history, badgeColor, entityMargin }) => {
     // ex) if url === mrg/events, category default is "Casino & Resort"
     switch (history.location.pathname) {
       //mrg to mcr change
-      case '/mcr/info':
+      case '/info':
         setCategory('Casino & Resort');
         break;
       case '/mrg/info':
@@ -74,6 +74,8 @@ const InfoPage = ({ history, badgeColor, entityMargin }) => {
       case '/airboats/info':
         setCategory('Airboats');
         break;
+      default:
+        setCategory('Casino & Resort');
     }
   }, []);
 
@@ -139,6 +141,14 @@ const InfoPage = ({ history, badgeColor, entityMargin }) => {
     >
       <div>
         <div className={classes.container} style={{ padding: '15px' }}>
+          <div style={{ marginBottom: '40px' }}>
+            <h2>{language ? 'About Us' : 'Sobre Nosotros'}</h2>
+            <p>
+              {language
+                ? 'The Miccosukee Tribe of Indians of Florida first ventured into the gaming industry when they opened the Miccosukee Indian Bingo Hall in 1990. Nine years later, after much success and high demand, they established a complete resort and gaming facility boasting over 1,800 slot machines, 20 live-action poker tables, bingo, and entertainment, 24/7. Located at the edge of the Everglades at 500 SW 177 Ave, Miccosukee Casino & Resort is a world-class hotel with modernized suites, ancillary amenities, and excellent eateries ranging from deli favorites to fine dining. For reservations and information, call 1-877-242-6464 or visit Miccosukee.com.'
+                : 'The Miccosukee Tribe of Indians of Florida first ventured into the gaming industry when they opened the Miccosukee Indian Bingo Hall in 1990. Nine years later, after much success and high demand, they established a complete resort and gaming facility boasting over 1,800 slot machines, 20 live-action poker tables, bingo, and entertainment, 24/7. Located at the edge of the Everglades at 500 SW 177 Ave, Miccosukee Casino & Resort is a world-class hotel with modernized suites, ancillary amenities, and excellent eateries ranging from deli favorites to fine dining. For reservations and information, call 1-877-242-6464 or visit Miccosukee.com.'}
+            </p>
+          </div>
           {renderBadges()}
           <div>{renderContentBody()}</div>
         </div>
@@ -147,24 +157,4 @@ const InfoPage = ({ history, badgeColor, entityMargin }) => {
   );
 };
 
-export default withRouter(InfoPage);
-
-/*
-        {events.map((event) => {
-          if (event.category) {
-            return (
-              <Badge
-                key={event.title}
-                margin="2px"
-                styleProp={
-                  event.category === category ? selectedStyle : defaultStyle
-                }
-                color="danger"
-                onClick={() => handleBadgeClick(event.category)}
-              >
-                {event.category}
-              </Badge>
-            );
-          }
-        })}
-*/
+export default withRouter(AboutUs);

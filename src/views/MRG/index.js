@@ -42,6 +42,12 @@ import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 
 // Pages
 import Home from 'views/MRG/Pages/home/home.js';
+import News from 'views/MRG/Pages/news/news.js';
+import NewsPage from 'views/MRG/Pages/news/newsPage.js';
+import Meetings from 'views/MRG/Pages/meetings/meetings.js';
+import Weddings from 'views/MRG/Pages/meetings/weddings';
+import Banquets from 'views/MRG/Pages/meetings/banquets';
+import CorporateRetreats from 'views/MRG/Pages/meetings/corporate-retreats';
 import Accommodations from 'views/MRG/Pages/accommodations/accommodations.js';
 import SalonSpa from 'views/MRG/Pages/amenities/salon-spa/salonSpa.js';
 import ClubEgret from 'views/MRG/Pages/amenities/club-egret/clubEgret.js';
@@ -52,6 +58,7 @@ import GamingPromos from 'views/MRG/Pages/gaming/gamingPromos/gamingPromos.js';
 import MSphere from 'views/MRG/Pages/gaming/mSphere/mSphere.js';
 import Bingo from 'views/MRG/Pages/gaming/bingo/bingo.js';
 import Poker from 'views/MRG/Pages/gaming/poker/poker.js';
+import Hosts from 'views/MRG/Pages/gaming/hosts/hosts.js';
 import B1Grill from 'views/MRG/Pages/diningNightlife/b1grill/b1Grill.js';
 import Buffet from 'views/MRG/Pages/diningNightlife/buffet/buffet.js';
 import Bravo from 'views/MRG/Pages/diningNightlife/bravo-bravissimo/bravoBravissimo.js';
@@ -64,8 +71,8 @@ import MaxsGrabAndGo from './Pages/diningNightlife/maxs/maxsgrabandgo';
 import BanquetsCatering from 'views/MRG/Pages/banquetsCatering/banquetsCatering.js';
 import MrgEvents from 'views/MRG/Pages/events/mrgEvents.js';
 import MrgEventPage from 'views/MRG/Pages/events/mrgEventPage';
-import MrgCovidPage from 'views/MRG/Pages/business_info/mrgCovidPage.js';
-import MrgErrorPage from 'views/MRG/Pages/error/mrgErrorPage.js';
+import McrInfoPage from 'views/MRG/Pages/business_info/mrgCovidPage.js';
+import McrErrorPage from 'views/MRG/Pages/error/mrgErrorPage.js';
 
 // Business info
 import { mrgBusinessInfo } from 'business_info/genericInfo.js';
@@ -120,6 +127,16 @@ export default function Miccosukee(props) {
       window.location.pathname === '/mcr/miccosukee-one/'
     ) {
       props.history.push('/mcr/msphere');
+    }
+    if (
+      window.location.pathname === '/mrg/info' ||
+      window.location.pathname === '/mrg/info/' ||
+      window.location.pathname === '/mcr/info' ||
+      window.location.pathname === '/mcr/info/' ||
+      window.location.pathname === '/info' ||
+      window.location.pathname === '/info/'
+    ) {
+      props.history.push('/about-us');
     }
     if (
       window.location.pathname === '/mrg/dining-nightlife' ||
@@ -200,6 +217,7 @@ export default function Miccosukee(props) {
       <BookRoomProvider>
         <div>
           <MrgHeader />
+          {/*
           <div className={classes.webBannerDiv}>
             <a href="tel:+13059252555" target="_blank">
               <Hidden mdUp>
@@ -215,6 +233,7 @@ export default function Miccosukee(props) {
               </Hidden>
             </a>
           </div>
+          */}
           <ReactHelmetComponent url={window.location.pathname} />
           {/*
             <StandardAlert
@@ -244,100 +263,107 @@ export default function Miccosukee(props) {
             />
             */}
           <Switch>
-            <Route exact path={`${match.path}/`} component={Home} />
+            <Route exact path={`/`} component={Home} />
+            <Route exact path={`/news`} component={News} />
             <Route
               exact
-              path={`${match.path}/accommodations`}
-              component={Accommodations}
+              path={`/meeting-events/meetings`}
+              component={Meetings}
             />
             <Route
               exact
-              path={`${match.path}/salon-spa`}
-              component={SalonSpa}
+              path={`/meeting-events/weddings`}
+              component={Weddings}
             />
             <Route
               exact
-              path={`${match.path}/club-egret`}
-              component={ClubEgret}
-            />
-            <Route exact path={`${match.path}/pool-gym`} component={PoolGym} />
-            <Route
-              exact
-              path={`${match.path}/teen-arcade`}
-              component={TeenArcade}
+              path={`/meeting-events/banquets`}
+              component={Banquets}
             />
             <Route
               exact
-              path={`${match.path}/gaming-machines`}
-              component={GamingMachines}
+              path={`/meeting-events/corporate-retreats`}
+              component={CorporateRetreats}
             />
-            <Route exact path={`${match.path}/bingo`} component={Bingo} />
-            <Route exact path={`${match.path}/poker`} component={Poker} />
+            <Route exact path={`/news/:newsId`} component={NewsPage} />
+            {/*CASINO*/}
+            <Route exact path={`/casino/promotions`} component={GamingPromos} />
             <Route
               exact
-              path={`${match.path}/promotions`}
+              path={`/casino/promotions/:month`}
               component={GamingPromos}
             />
             <Route
               exact
-              path={`${match.path}/promotions/:month`}
+              path={`/casio/promotions/es`}
               component={GamingPromos}
+            />
+            <Route exact path={`/casino/hosts`} component={Hosts} />
+            <Route exact path={`/casino/slots`} component={GamingMachines} />
+            <Route exact path={`/casino/bingo`} component={Bingo} />
+            <Route exact path={`/casino/poker`} component={Poker} />
+            {/*<Route exact path={`/casino/hosts`} component={CasinoHosts} />*/}
+
+            {/*RESORT*/}
+            <Route exact path={`/resort/rooms`} component={Accommodations} />
+            <Route exact path={`/resort/pool-fitness`} component={PoolGym} />
+            {/*<Route exact path={`/casino/experiences`} component={Experiences} />*/}
+
+            {/*ENTERTAINMENT*/}
+            <Route
+              exact
+              path={`/entertainment/events-concerts`}
+              component={MrgEvents}
             />
             <Route
               exact
-              path={`${match.path}/promotions/es`}
-              component={GamingPromos}
+              path={`/entertainment/events-concerts/:eventId`}
+              component={MrgEventPage}
             />
-            <Route exact path={`${match.path}/msphere`} component={MSphere} />
-            <Route exact path={`${match.path}/b1grill`} component={B1Grill} />
+
+            {/*FOOD & DRINK*/}
+            <Route exact path={`/food-drink/b1-grill`} component={B1Grill} />
             <Route
               exact
-              path={`${match.path}/b1grill-menu`}
+              path={`/food-drink/b1-grill-menu`}
               component={B1Grill}
             />
-            <Route exact path={`${match.path}/maxs`} component={Maxs} />
+            <Route exact path={`/food-drink/buffet`} component={Buffet} />
             <Route
               exact
-              path={`${match.path}/maxsgrabandgo`}
+              path={`/food-drink/maxs-grab-go`}
               component={MaxsGrabAndGo}
             />
             <Route
               exact
-              path={`${match.path}/bravo-bravissimo`}
-              component={Bravo}
-            />
-            <Route exact path={`${match.path}/buffet`} component={Buffet} />
-            <Route exact path={`${match.path}/deli`} component={Deli} />
-            <Route
-              exact
-              path={`${match.path}/cafe-hammock`}
+              path={`/food-drink/cafe-hammock`}
               component={CafeHammock}
             />
             <Route
               exact
-              path={`${match.path}/cypress-lounge`}
+              path={`/food-drink/cypress-lounge`}
               component={CypressLounge}
             />
             <Route
               exact
-              path={`${match.path}/martini-bar`}
+              path={`/food-drink/martini-bar`}
               component={MartiniBar}
             />
+
+            <Route exact path={`/salon-spa`} component={SalonSpa} />
+            <Route exact path={`/club-egret`} component={ClubEgret} />
+            <Route exact path={`/teen-arcade`} component={TeenArcade} />
+            <Route exact path={`/msphere`} component={MSphere} />
+
             <Route
               exact
-              path={`${match.path}/banquets-catering`}
+              path={`/banquets-catering`}
               component={BanquetsCatering}
             />
-            <Route exact path={`${match.path}/events`} component={MrgEvents} />
-            <Route
-              exact
-              path={`${match.path}/events/:eventId`}
-              component={MrgEventPage}
-            />
-            {/* Old covid page. */}
-            <Route exact path={`${match.path}/info`} component={MrgCovidPage} />
-            <Route exact path={`/404`} component={MrgErrorPage} />
-            <Route exact path={`${match.path}/*`} component={MrgErrorPage} />
+
+            <Route exact path={`/about-us`} component={McrInfoPage} />
+            <Route exact path={`/404`} component={McrErrorPage} />
+            <Route exact path={`/*`} component={McrErrorPage} />
           </Switch>
           <MrgFooter />
           <PopupModal />
