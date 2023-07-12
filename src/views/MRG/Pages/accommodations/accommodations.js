@@ -10,6 +10,7 @@ import Button from 'components/CustomButtons/Button.js';
 import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
 import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import Rooms from 'views/MRG/Pages/accommodations/rooms.js';
 
 // Images
 //import bgImage from 'assets/media/img/mrg/MRG_Header1.jpg';
@@ -76,15 +77,16 @@ const Accommodations = () => {
             Executive and Deluxe-level rooms are available with upgraded
             amenities and services.
           </p>
-          {
+          {/*
             <Button
               onClick={() => setShowBookRoomModal(true)}
               usetheme="contained"
             >
               {language ? 'Book A Room' : 'Reservar una Habitación'}
             </Button>
-          }
+            */}
         </div>
+        <Rooms />
       </RaisedContainer>
     </React.Fragment>
   );

@@ -6,8 +6,6 @@ import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 
 import Collapse from '@material-ui/core/Collapse';
 
-//import mrgCovidVideo from "assets/media/video/GAMING-SAFE_MRG.mp4";
-import winItAll from 'assets/media/video/mrg_win_it_all.mp4';
 import { renderPoiHoursSimple } from 'services/functions/renderPoiHours';
 
 const MrgCovidInfo = (props) => {

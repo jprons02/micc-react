@@ -51,8 +51,8 @@ import modalStyle from 'assets/jss/material-kit-react/virtualLoginModal.js';
 
 import cafeHammockVidImage from 'assets/media/img/mrg/home/Cafe-Hammock-thubnail_1x.jpg';
 //import cafeHammockVid from 'assets/media/video/Cafe_Hammock_720p.mp4';
-import hotelVid from 'assets/media/video/MRG_BookToday_720p.mov';
-import hotelImage from 'assets/media/img/mrg/home/MRG_BookToday_image.jpg';
+import hotelVid from 'assets/media/video/MICCOSUKEE CASINO & RESORT WELCOMES YOU.mp4';
+import hotelImage from 'assets/media/img/mrg/home/building.jpg';
 
 // context
 import { useLanguage } from 'contexts/languageContext.js';
@@ -120,6 +120,25 @@ const Home = (props) => {
     [
       {
         id: 1,
+        bgImage: hotelImage,
+        bgVideo: hotelVid,
+        gradient: '0',
+        /*
+        header: language
+          ? 'HOTEL NOW OPEN! Welcome Back!'
+          : 'HOTEL YA ABIERTO! ¡Bienvenidos!',
+        subHeader: language
+          ? 'Stay, play and experience the Miccosukee Everglades.'
+          : 'Descanse, juegue y experimente los Everglades Miccosukee.',
+        button: {
+          text: language ? 'SEE DETAILS' : 'MÁS DETALLES',
+          link: '/mcr/accommodations',
+        },
+        */
+      },
+      /*
+      {
+        id: 2,
         bgImage: heroImg1,
         header: language
           ? 'A WORLD OF REWARDS AWAITS!'
@@ -134,7 +153,7 @@ const Home = (props) => {
         gradient: '.7',
       },
       {
-        id: 2,
+        id: 3,
         bgImage: heroImg2,
         header: language ? 'MONTHLY PROMOTIONS' : 'PROMOCIONES MENSUALES',
         subHeader: language
@@ -146,7 +165,7 @@ const Home = (props) => {
         },
       },
       {
-        id: 3,
+        id: 4,
         bgImage: heroImg3,
         header: language ? 'UNWIND IN LUXURY' : 'RELÁJATE EN LUJO',
         subHeader: language
@@ -157,21 +176,7 @@ const Home = (props) => {
           link: '/mcr/accommodations',
         },
       },
-      /*
-    {
-      id: 3,
-      bgImage: image3,
-      header: "ARTS & CRAFTS FESTIVAL",
-      subHeader:
-        "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.",
-    },
-    {
-      id: 4,
-      bgImage: image1,
-      header: "GAMING",
-      subHeader: "",
-    },
-    */
+      */
     ];
 
   const cardContent = [
@@ -271,7 +276,7 @@ const Home = (props) => {
 
   return (
     <React.Fragment>
-      <HeroSection large={true} sliderContent={sliderContent} />
+      <HeroSection mcr={true} sliderContent={sliderContent} />
       <RaisedContainer>
         <div className={classes.welcomeContainer}>
           <Typography className={classes.welcome} paragraph component="h1">

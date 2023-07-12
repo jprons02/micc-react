@@ -94,10 +94,20 @@ export default function HeroSection(props) {
   const renderSlides = () => {
     return props.sliderContent.map((slide) => {
       const renderDesktop = () => {
+        const mainDivStyle = () => {
+          if (props.mcr) {
+            return classes.mcr;
+          } else if (props.large) {
+            return classes.large;
+          } else {
+            return classes.standard;
+          }
+        };
         return (
           <div key={slide.id}>
             <div
-              className={props.large ? classes.large : classes.standard}
+              //className={props.large ? classes.large : classes.standard}
+              className={mainDivStyle()}
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, ${
                   slide.gradient ? slide.gradient : '0.5'
