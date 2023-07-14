@@ -205,6 +205,7 @@ export const july = {
     {
       id: 4,
       title: 'Top Tier Slot Tourney',
+      featured: true,
       img: cardImage5,
       oneLiner:
         'Let the races begin! M Sphere Rewards members compete to win one of the top 3 prizes for each tier! Thursdays • 6 pm – 9 pm',
@@ -266,6 +267,7 @@ export const july = {
     {
       id: 5,
       title: '2X Tier Points',
+      featured: true,
       img: cardImage6,
       oneLiner:
         'Play with your M Sphere Rewards card & unlock the next level by earning double tier points on slots, Bingo & Poker! Sundays, July 9, 16, 23 & 30 • 4 pm – 8 pm',
@@ -416,6 +418,7 @@ export const july = {
     {
       id: 8,
       title: 'New Members & Referrals Win Big',
+      featured: true,
       img: cardImage9,
       oneLiner:
         'A new M Sphere Rewards member or referral will win $2,500 cash, $2,500 free play & a hotel stay! Monday, July 31 • Drawing: 8 pm',
@@ -664,6 +667,7 @@ export const july = {
     {
       id: 4,
       title: 'Torneo de Tragamonedas de Primer Nivel',
+      featured: true,
       img: cardImage5,
       oneLiner:
         '¡Que empiecen las carreras! ¡Los miembros de M Sphere Rewards compiten para ganar uno de los 3 mayores premios de cada nivel!  jueves • 6 pm a 9 pm',
@@ -730,6 +734,7 @@ export const july = {
     {
       id: 5,
       title: '2X Puntos de Nivel',
+      featured: true,
       img: cardImage6,
       oneLiner:
         '¡Juega con tu tarjeta M Sphere Rewards y accede al siguiente nivel ganando doble puntos en máquinas, bingo y póquer! domingos 9, 16, 23 y 30 de julio • 4 pm a 8 pm',
@@ -887,6 +892,7 @@ export const july = {
     {
       id: 8,
       title: 'Nuevos Miembros y Referidos Ganan en Grande',
+      featured: true,
       img: cardImage9,
       oneLiner:
         '¡Un nuevo miembro o referido de M Sphere Rewards ganará $2,500 en efectivo, $2,500 free play y estadía de una noche en el hotel! lunes, 31 de julio • Sorteo: 8 pm',

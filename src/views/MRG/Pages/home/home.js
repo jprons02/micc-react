@@ -51,8 +51,13 @@ import modalStyle from 'assets/jss/material-kit-react/virtualLoginModal.js';
 
 import cafeHammockVidImage from 'assets/media/img/mrg/home/Cafe-Hammock-thubnail_1x.jpg';
 //import cafeHammockVid from 'assets/media/video/Cafe_Hammock_720p.mp4';
-import hotelVid from 'assets/media/video/MICCOSUKEE CASINO & RESORT WELCOMES YOU.mp4';
+import hotelVid from 'assets/media/video/mcr-hero-video.mp4';
 import hotelImage from 'assets/media/img/mrg/home/building.jpg';
+
+// Home page spots
+import AccommodationsSpot from './accommodationsSpot';
+import PromotionsSpot from './promotionsSpot';
+import MsphereSpot from './msphereSpot';
 
 // context
 import { useLanguage } from 'contexts/languageContext.js';
@@ -69,14 +74,6 @@ const Home = (props) => {
   const classes = useStyles();
   const cardClasses = useCardStyles();
   const modalClasses = useModalStyles();
-
-  /**
-   *  HOTEL NOW OPEN! Welcome Back!
-      Stay, play and experience the Miccosukee Everglades.
- 
-      HOTEL YA ABIERTO! ¡Bienvenidos!
-      Descanse, juegue y experimente los Everglades Miccosukee.
-   */
 
   const sliderContent =
     /*isRunning([2021, 12, 22])
@@ -120,7 +117,7 @@ const Home = (props) => {
     [
       {
         id: 1,
-        bgImage: hotelImage,
+        //bgImage: hotelImage,
         bgVideo: hotelVid,
         gradient: '0',
         /*
@@ -280,9 +277,7 @@ const Home = (props) => {
       <RaisedContainer>
         <div className={classes.welcomeContainer}>
           <Typography className={classes.welcome} paragraph component="h1">
-            {language
-              ? 'Welcome to Miccosukee Casino & Resort'
-              : 'Bienvenidos a Miccosukee Casino & Resort'}
+            Miccosukee Casino & Resort
           </Typography>
           <Typography
             className={classes.subWelcome}
@@ -291,15 +286,28 @@ const Home = (props) => {
             variant="h3"
           >
             {language
-              ? 'Located in the heart of the Everglades — home to South Florida’s original gaming and all-around entertainment emporium.'
-              : 'Localizado en el corazón de los Everglades, somos el emporio de entretenimiento y juegos de azar más original del Sur de la Florida.'}
+              ? 'Welcome to your ultimate destination for gaming, entertainment, and leisure in the heart of the Florida Everglades.'
+              : 'Welcome to your ultimate destination for gaming, entertainment, and leisure in the heart of the Florida Everglades.'}
           </Typography>
           <hr className={classes.hr} />
         </div>
+        <div>
+          <MsphereSpot />
+        </div>
+        <hr className={classes.hrStyle2} />
+        <div>
+          <PromotionsSpot />
+        </div>
+        <hr className={classes.hrStyle2} />
+        <div className={classes.accommodationsContainer}>
+          <AccommodationsSpot />
+        </div>
+        {/*
         <div className={cardClasses.cardContainer}>
           <Hidden mdUp>{renderMobileView()}</Hidden>
           <Hidden smDown>{renderDesktopView()}</Hidden>
         </div>
+        */}
       </RaisedContainer>
     </React.Fragment>
   );

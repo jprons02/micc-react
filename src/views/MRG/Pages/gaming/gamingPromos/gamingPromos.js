@@ -169,7 +169,7 @@ const GamingPromos = (props) => {
             onClick={() => handleClick('machinePromos')}
             usetheme={state === 'machinePromos' ? 'contained' : 'outlined'}
           >
-            {language ? 'Slots Promos' : 'Máquinas de Juego'}
+            {language ? 'Casino Promotions' : 'Casino Promotions'}
           </Button>
           &nbsp; &nbsp;
           <Button

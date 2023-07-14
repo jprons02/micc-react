@@ -10,12 +10,12 @@ import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Images
-import bgImage from 'assets/media/img/mrg/amenities/amenities_header.jpg';
-import image1 from 'assets/media/img/mrg/amenities/pool-gym/pool.jpg';
-import image2 from 'assets/media/img/mrg/amenities/pool-gym/pool_2.jpg';
-import image3 from 'assets/media/img/mrg/amenities/pool-gym/gym2.jpg';
-import image4 from 'assets/media/img/mrg/amenities/pool-gym/gym.jpg';
-import image5 from 'assets/media/img/mrg/amenities/pool-gym/courtyard.jpg';
+import bgImage from 'assets/media/img/mrg/amenities/pool-gym/pool-fitness-page-banner.jpeg';
+import image1 from 'assets/media/img/mrg/amenities/pool-gym/pool.jpeg';
+import image2 from 'assets/media/img/mrg/amenities/pool-gym/pool-chairs.jpeg';
+import image3 from 'assets/media/img/mrg/amenities/pool-gym/hottub.jpeg';
+import image4 from 'assets/media/img/mrg/amenities/pool-gym/fitness1.jpeg';
+import image5 from 'assets/media/img/mrg/amenities/pool-gym/fitness2.jpeg';
 
 // Styling
 import { makeStyles } from '@material-ui/core/styles';
@@ -61,15 +61,31 @@ const PoolGym = () => {
         <GridContainer>
           <GridItem md={7}>
             <div className={classes.leftTextArea}>
-              <h2>
-                {language ? 'Pool & Fitness Center' : 'Piscina y Gimnasio'}
-              </h2>
-              {renderPoiHours(mrgHours.poi.poolGym, language)}
-              <p>
-                {language
-                  ? 'Cool off in our indoor pool or take a relaxing dip in our jacuzzi. Maybe unwind in our sauna. Enjoy South Florida’s gorgeous weather on our outdoor patio. Whether you’re soaking up the sun or cooling off under the serene shadow of one of our chickees, our outdoor patio is the perfect place to relax all year round.'
-                  : 'Refréscate en nuestra pisicina interior o relájate en nuestro jacuzzi o sauna. Disfruta el clima espectacular del Sur de la Florida en nuestro patio al aire libre, ya sea tomando sol durante el día o disfrutando de la sombra serena de uno de nuestros chickees; este lugar es perfecto para relajarse durante todo el año.'}
-              </p>
+              <div>
+                <h2>{language ? 'Pool & Spa' : 'Piscina'}</h2>
+                {renderPoiHours(mrgHours.poi.poolGym, language)}
+                <p>
+                  Looking for a luxurious getaway with a stunning pool? Look no
+                  further than Miccosukee Casino Resort! Our pool area boasts a
+                  unique design with plenty of seating options for our guests to
+                  enjoy. The pool area also features a hot tub, perfect for a
+                  relaxing soak after a long day.
+                </p>
+              </div>
+              <div style={{ marginTop: '30px' }}>
+                <h2>{language ? 'Fitness Center' : 'Fitness Center'}</h2>
+                {renderPoiHours(mrgHours.poi.poolGym, language)}
+                <p>
+                  We understand the importance of maintaining a healthy
+                  lifestyle even while on vacation. That’s why we offer our
+                  fully equipped fitness center to all guests.
+                </p>
+                <p>
+                  Whether you’re a fitness enthusiast or just looking to
+                  maintain your health while on vacation, our fitness center
+                  provides a comfortable and motivating environment for all.
+                </p>
+              </div>
             </div>
           </GridItem>
           <GridItem md={5}>

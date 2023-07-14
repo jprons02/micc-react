@@ -49,6 +49,7 @@ import Weddings from 'views/MRG/Pages/meetings/weddings';
 import Banquets from 'views/MRG/Pages/meetings/banquets';
 import CorporateRetreats from 'views/MRG/Pages/meetings/corporate-retreats';
 import Accommodations from 'views/MRG/Pages/accommodations/accommodations.js';
+import Experiences from 'views/MRG/Pages/experiences/experiences.js';
 import SalonSpa from 'views/MRG/Pages/amenities/salon-spa/salonSpa.js';
 import ClubEgret from 'views/MRG/Pages/amenities/club-egret/clubEgret.js';
 import PoolGym from 'views/MRG/Pages/amenities/pool-gym/poolGym.js';
@@ -74,12 +75,32 @@ import MrgEventPage from 'views/MRG/Pages/events/mrgEventPage';
 import McrInfoPage from 'views/MRG/Pages/business_info/mrgCovidPage.js';
 import McrErrorPage from 'views/MRG/Pages/error/mrgErrorPage.js';
 
+// Landing Pages
+import Tomahawk from 'views/LandingPages/tomahawk.js';
+import ResortPackages from 'views/LandingPages/resortPackages.js';
+import Amenities from 'views/LandingPages/amenities.js';
+import Aid from 'views/LandingPages/aid.js';
+import HolidayCards from 'views/LandingPages/community/holidayCards/index.js';
+import ArtsAndCrafts from 'views/LandingPages/artsandcrafts.js';
+import Valet from 'views/LandingPages/valet.js';
+
+// Properties
+import Golf from 'views/Golf';
+import Village from 'views/Village';
+import Airboats from 'views/Airboats';
+//import History from 'views/History';
+import Administration from 'views/Administration';
+
+import TribeHistory from 'views/MRG/Pages/tribe/tribeHistory.js';
+import TribeAdministration from 'views/MRG/Pages/tribe/tribeAdministration.js';
+
 // Business info
 import { mrgBusinessInfo } from 'business_info/genericInfo.js';
 
 // services
 import { popupManager } from 'services/functions/popups/popupManager';
 import { isRunning } from 'services/functions/scheduleThis';
+import { is } from 'date-fns/locale';
 
 const useStyles = makeStyles(styles);
 
@@ -210,13 +231,33 @@ export default function Miccosukee(props) {
     setState(false);
   };
 
-  //alert colors: success, warning, danger, info
+  const villageRegex = /\/village(\/.*)?/i;
+  const isVillage = villageRegex.test(location.pathname);
+
+  const airboatsRegex = /\/airboats(\/.*)?/i;
+  const isAirboats = airboatsRegex.test(location.pathname);
+
+  const renderHeader = () => {
+    if (isVillage || isAirboats) {
+      return null;
+    } else {
+      return <MrgHeader />;
+    }
+  };
+
+  const renderFooter = () => {
+    if (isVillage || isAirboats) {
+      return null;
+    } else {
+      return <MrgFooter />;
+    }
+  };
 
   return (
     <ThemeProvider theme={theme('mrg')}>
       <BookRoomProvider>
         <div>
-          <MrgHeader />
+          {renderHeader()}
           {/*
           <div className={classes.webBannerDiv}>
             <a href="tel:+13059252555" target="_blank">
@@ -264,6 +305,17 @@ export default function Miccosukee(props) {
             */}
           <Switch>
             <Route exact path={`/`} component={Home} />
+            {/* Other Properties */}
+            <Route path="/golf" component={Golf} />
+            <Route path="/village" component={Village} />
+            <Route path="/airboats" component={Airboats} />
+            <Route path="/miccosukee-tribe-history" component={TribeHistory} />
+            <Route
+              path="/miccosukee-tribe-administration"
+              component={TribeAdministration}
+            />
+            <Route path="/administration" component={Administration} />
+
             <Route exact path={`/news`} component={News} />
             <Route
               exact
@@ -307,7 +359,7 @@ export default function Miccosukee(props) {
             {/*RESORT*/}
             <Route exact path={`/resort/rooms`} component={Accommodations} />
             <Route exact path={`/resort/pool-fitness`} component={PoolGym} />
-            {/*<Route exact path={`/casino/experiences`} component={Experiences} />*/}
+            <Route exact path={`/resort/experiences`} component={Experiences} />
 
             {/*ENTERTAINMENT*/}
             <Route
@@ -362,10 +414,24 @@ export default function Miccosukee(props) {
             />
 
             <Route exact path={`/about-us`} component={McrInfoPage} />
+            {/* LANDING PAGES */}
+            <Route path="/valet" component={Valet} />
+            <Route exact path={'/tomahawk'} component={Tomahawk} />
+            <Route exact path={'/resortpackages'} component={ResortPackages} />
+            <Route
+              exact
+              path={'/casino-resort-amenities'}
+              component={Amenities}
+            />
+            <Route path={'/aid'} component={Aid} />
+            <Route path={'/banquets-catering'} component={Banquets} />
+            <Route path={'/holidaycards'} component={HolidayCards} />
+            <Route path={'/artsandcrafts'} component={ArtsAndCrafts} />
+            {/* END LANDING PAGES */}
             <Route exact path={`/404`} component={McrErrorPage} />
             <Route exact path={`/*`} component={McrErrorPage} />
           </Switch>
-          <MrgFooter />
+          {renderFooter()}
           <PopupModal />
           <CustomContactModal
             language={language}

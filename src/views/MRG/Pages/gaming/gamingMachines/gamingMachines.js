@@ -64,7 +64,7 @@ const GamingMachines = () => {
                 to="/casino/promotions"
                 usetheme="contained"
               >
-                {language ? 'Slots Promos' : 'promociones'}
+                {language ? 'Casino Promotions' : 'promociones'}
               </Button>
             </div>
           </GridItem>

@@ -37,17 +37,6 @@ import History from 'views/History';
 // Admin
 import Administration from 'views/Administration';
 
-// landing pages
-import Tomahawk from 'views/LandingPages/tomahawk.js';
-import ResortPackages from 'views/LandingPages/resortPackages.js';
-import Amenities from 'views/LandingPages/amenities.js';
-import Aid from 'views/LandingPages/aid.js';
-import Banquets from 'views/LandingPages/banquets.js';
-import HolidayCards from 'views/LandingPages/community/holidayCards/index.js';
-import ArtsAndCrafts from 'views/LandingPages/artsandcrafts.js';
-import Valet from 'views/LandingPages/valet.js';
-//import AID from 'views/Miccosukee/Pages/virtual_event/21_americanIndianDay.js';
-
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
 
@@ -156,24 +145,6 @@ const App = () => {
                     <Route path="/airboats" component={Airboats} />
                     <Route path="/history" component={History} />
                     <Route path="/administration" component={Administration} />
-                    <Route path="/valet" component={Valet} />
-                    {/* LANDING PAGES */}
-                    <Route exact path={'/tomahawk'} component={Tomahawk} />
-                    <Route
-                      exact
-                      path={'/resortpackages'}
-                      component={ResortPackages}
-                    />
-                    <Route
-                      exact
-                      path={'/casino-resort-amenities'}
-                      component={Amenities}
-                    />
-                    <Route path={'/aid'} component={Aid} />
-                    <Route path={'/banquets-catering'} component={Banquets} />
-                    <Route path={'/holidaycards'} component={HolidayCards} />
-                    <Route path={'/artsandcrafts'} component={ArtsAndCrafts} />
-                    {/* END LANDING PAGES */}
                   </Switch>
                 </Router>
                 {renderSnackbar()}

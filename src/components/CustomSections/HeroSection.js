@@ -227,22 +227,14 @@ export default function HeroSection(props) {
           </div>
         );
       };
-      return (
-        <div key={slide.id}>
-          <Hidden smDown>{renderDesktop()}</Hidden>
-          <Hidden mdUp>{renderMobile()}</Hidden>
-        </div>
-      );
+      return <div key={slide.id}>{renderDesktop()}</div>;
     });
   };
 
   return <Slider {...settings}>{renderSlides()}</Slider>;
 }
 
-//'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("../../media/examples/lizard.png")',
-
 /*
-<video id="videoBG" poster={golfVidImage} autoPlay muted loop>
-  <source src={golfVid} type="video/mp4" />
-</video>
+<Hidden smDown>{renderDesktop()}</Hidden>
+<Hidden mdUp>{renderMobile()}</Hidden>
 */

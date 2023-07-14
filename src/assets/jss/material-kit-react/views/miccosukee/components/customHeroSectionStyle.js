@@ -44,9 +44,7 @@ const customHeroSectionStyle = {
     marginTop: '-20px',
   },
   mcr: {
-    backgroundSize: 'cover',
-    backgroundPosition: 'center center',
-    height: '60vh',
+    height: '170px',
     //DESKTOP VIEW
     '@media screen and (min-width: 960px)': {
       height: '62vh',

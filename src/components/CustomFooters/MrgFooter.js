@@ -77,6 +77,16 @@ const MrgFooter = () => {
       header: language ? 'ADDITIONAL LINKS' : 'ENLACES ADICIONALES',
       subMenu: [
         {
+          externalLink: false,
+          linkText: language ? 'Miccosukee Tribe' : 'Miccosukee Tribe',
+          linkTo: '/miccosukee-tribe-history',
+        },
+        {
+          externalLink: false,
+          linkText: language ? 'Tribe Administration' : 'Tribe Administration',
+          linkTo: '/miccosukee-tribe-administration',
+        },
+        {
           externalLink: true,
           linkText: language ? 'Privacy Policy' : 'PÓLIZA DE PRIVACIDAD',
           linkTo: privacyPolicy,
