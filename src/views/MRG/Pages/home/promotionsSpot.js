@@ -16,14 +16,38 @@ const PromotionsSpot = () => {
   const language = useLanguage();
   const classes = useStyles();
 
-  // Get list of current month promos and pick one that has attribute "feature"
+  const d = new Date();
+  const month = d.getMonth();
 
-  const renderDesktopCards = () => {
-    return <p>desktop cards.</p>;
-  };
-
-  const renderMobileCards = () => {
-    return <p>mobile cards.</p>;
+  const getMonth = (month) => {
+    switch (month) {
+      case 0:
+        return language ? 'january' : 'enero';
+      case 1:
+        return language ? 'february' : 'febrero';
+      case 2:
+        return language ? 'march' : 'marzo';
+      case 3:
+        return language ? 'april' : 'abril';
+      case 4:
+        return language ? 'may' : 'mayo';
+      case 5:
+        return language ? 'june' : 'junio';
+      case 6:
+        return language ? 'july' : 'julio';
+      case 7:
+        return language ? 'august' : 'agosto';
+      case 8:
+        return language ? 'september' : 'septiembre';
+      case 9:
+        return language ? 'october' : 'octubre';
+      case 10:
+        return language ? 'november' : 'noviembre';
+      case 11:
+        return language ? 'december' : 'diciembre';
+      default:
+        return '';
+    }
   };
 
   return (
@@ -38,10 +62,10 @@ const PromotionsSpot = () => {
       </div>
       <div>
         <Hidden mdUp>
-          <CasinoPromos mobile={true} />
+          <CasinoPromos month={getMonth()} mobile={true} />
         </Hidden>
         <Hidden smDown>
-          <CasinoPromos mobile={false} />
+          <CasinoPromos month={getMonth()} mobile={false} />
         </Hidden>
       </div>
     </React.Fragment>

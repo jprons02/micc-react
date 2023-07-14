@@ -12,6 +12,7 @@ import GridItem from 'components/Grid/GridItem.js';
 import RaisedContainer from 'components/CustomSections/RaisedContainer.js';
 import HeroSection from 'components/CustomSections/HeroSection.js';
 import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
+import PokerPromos from 'views/MRG/Pages/gaming/gamingPromos/pokerPromos/pokerPromos.js';
 
 // Images
 import bgImage from 'assets/media/img/mrg/gaming/poker/poker-page-banner.jpeg';
@@ -60,9 +61,11 @@ const Poker = () => {
               >
                 <p>{language ? 'All Bets are On!' : '¡Hagan sus Apuestas!'}</p>
                 <p>
-                  {language
-                    ? 'Featuring 20 live-action tables, daily promotions, tournaments, and thousands in guaranteed cash prizes.'
-                    : '20 mesas de acción en vivo, promociones diarias, torneos y miles de premios en efectivo garantizados.'}
+                  Experience the heart-pounding thrills of 24/7 live Poker
+                  action at Miccosukee! Pull up a seat and stack the chips in
+                  one of 20 tables, plus take advantage of daily promotions,
+                  tournaments, and thousands in guaranteed cash prizes, all day,
+                  every day!
                 </p>
                 <Button
                   href="https://mapa-media.s3.amazonaws.com/mcr/PokerJackpotRules_Web.pdf"

@@ -169,14 +169,14 @@ const GamingPromos = (props) => {
             onClick={() => handleClick('machinePromos')}
             usetheme={state === 'machinePromos' ? 'contained' : 'outlined'}
           >
-            {language ? 'Casino Promotions' : 'Casino Promotions'}
+            {language ? 'Gaming' : 'Gaming'}
           </Button>
           &nbsp; &nbsp;
           <Button
             onClick={() => handleClick('pokerPromos')}
             usetheme={state === 'pokerPromos' ? 'contained' : 'outlined'}
           >
-            {language ? 'Poker Promos' : 'Póquer'}
+            {language ? 'Poker' : 'Póquer'}
           </Button>
         </div>
         <div style={{ paddingTop: '80px' }}>{renderContent()}</div>

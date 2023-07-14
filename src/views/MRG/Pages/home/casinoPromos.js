@@ -31,7 +31,7 @@ const CasinoPromos = (props) => {
   const [selectedPromo, setSelectedPromo] = useState({});
 
   const month = props.month;
-  const monthContent = content(language, 'july');
+  const monthContent = content(language, month);
 
   const closeModal = () => {
     setShowModal(false);
