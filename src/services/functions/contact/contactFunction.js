@@ -4,6 +4,8 @@ import { keys } from 'keys.js';
 const getEmail = (value) => {
   switch (value) {
     // MRG CASES
+    case 'Vendors':
+      return ['asaunders@miccosukee.com'];
     case 'Banquet Sales':
       return ['asaunders@miccosukee.com', 'mrgsales&catering@miccosukee.com'];
     case 'Banquet/Catering':

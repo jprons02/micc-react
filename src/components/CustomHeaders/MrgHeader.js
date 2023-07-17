@@ -205,6 +205,12 @@ const MrgHeader = () => {
           text: 'Corporate Retreats',
           link: 'meeting-events/corporate-retreats',
           target: '',
+          divider: true,
+        },
+        {
+          text: 'Vendors',
+          link: 'vendors',
+          target: '',
         },
       ],
       //icon: () => <Icon>chevron_right</Icon>,

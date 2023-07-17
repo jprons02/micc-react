@@ -1,130 +1,139 @@
 const MrgSelectOptions = [
   {
-    value: "Banquet Sales",
-    label: "Banquet Sales",
+    value: 'Banquet Sales',
+    label: 'Banquet Sales',
   },
   {
-    value: "Banquet/Catering",
-    label: "Banquet/Catering",
+    value: 'Banquet/Catering',
+    label: 'Banquet/Catering',
   },
   {
-    value: "Bingo",
-    label: "Bingo",
+    value: 'Bingo',
+    label: 'Bingo',
   },
   {
-    value: "Child Care Center",
-    label: "Child Care Center",
+    value: 'Child Care Center',
+    label: 'Child Care Center',
   },
   {
-    value: "Event & Meeting Planning",
-    label: "Event & Meeting Planning",
+    value: 'Event & Meeting Planning',
+    label: 'Event & Meeting Planning',
   },
   {
-    value: "Event Tickets",
-    label: "Event Tickets",
+    value: 'Event Tickets',
+    label: 'Event Tickets',
   },
   {
-    value: "Food & Beverage",
-    label: "Food & Beverage",
+    value: 'Food & Beverage',
+    label: 'Food & Beverage',
   },
   {
-    value: "Finance & Accounting",
-    label: "Finance & Accounting",
+    value: 'Finance & Accounting',
+    label: 'Finance & Accounting',
   },
   {
-    value: "Food & Beverage - Comment Card",
-    label: "Food & Beverage - Comment Card",
+    value: 'Food & Beverage - Comment Card',
+    label: 'Food & Beverage - Comment Card',
   },
   {
-    value: "Gaming Machines",
-    label: "Gaming Machines",
+    value: 'Gaming Machines',
+    label: 'Gaming Machines',
   },
   {
-    value: "Group Sales",
-    label: "Group Sales",
+    value: 'Group Sales',
+    label: 'Group Sales',
   },
   {
-    value: "Promotions & Special Events",
-    label: "Promotions & Special Events",
+    value: 'Promotions & Special Events',
+    label: 'Promotions & Special Events',
   },
   {
     value: "Player's Club",
     label: "Player's Club",
   },
   {
-    value: "Room Rates & Reservations",
-    label: "Room Rates & Reservations",
+    value: 'Room Rates & Reservations',
+    label: 'Room Rates & Reservations',
   },
   {
-    value: "Spa & Salon",
-    label: "Spa & Salon",
+    value: 'Spa & Salon',
+    label: 'Spa & Salon',
   },
   {
-    value: "Valet Services",
-    label: "Valet Services",
+    value: 'Valet Services',
+    label: 'Valet Services',
   },
   {
-    value: "Human Resources",
-    label: "Human Resources",
+    value: 'Human Resources',
+    label: 'Human Resources',
   },
   {
-    value: "Other",
-    label: "Other",
+    value: 'Other',
+    label: 'Other',
   },
   {
-    value: "Website Feedback",
-    label: "Website Feedback",
+    value: 'Website Feedback',
+    label: 'Website Feedback',
   },
 ];
 
 const mediaSelectOptions = [
   {
-    value: "Media Inquiry",
-    label: "Media Inquiry",
+    value: 'Media Inquiry',
+    label: 'Media Inquiry',
   },
 ];
 
 const villageSelectOptions = [
   {
-    value: "Indian Village",
-    label: "Indian Village",
+    value: 'Indian Village',
+    label: 'Indian Village',
   },
   {
-    value: "Indian Village Groups",
-    label: "Indian Village Groups",
+    value: 'Indian Village Groups',
+    label: 'Indian Village Groups',
   },
 ];
 
 const airboatsSelectOptions = [
   {
-    value: "Airboats",
-    label: "Airboats",
+    value: 'Airboats',
+    label: 'Airboats',
   },
   {
-    value: "Airboat Groups",
-    label: "Airboat Groups",
+    value: 'Airboat Groups',
+    label: 'Airboat Groups',
   },
 ];
 
 const golfSelectOptions = [
   {
-    value: "Golf",
-    label: "Golf",
+    value: 'Golf',
+    label: 'Golf',
+  },
+];
+
+const mcrVendorForm = [
+  {
+    value: 'Vendors',
+    label: 'Vendors',
   },
 ];
 
 export const getOptions = (entity) => {
   switch (entity) {
-    case "mrg":
+    case 'mrg':
       return MrgSelectOptions;
-    case "media":
+    case 'media':
       return mediaSelectOptions;
-    case "village":
+    case 'village':
       return villageSelectOptions;
-    case "airboats":
+    case 'airboats':
       return airboatsSelectOptions;
-    case "golf":
+    case 'golf':
       return golfSelectOptions;
+    case 'mcrVendorForm':
+      return mcrVendorForm;
     default:
       return MrgSelectOptions;
   }

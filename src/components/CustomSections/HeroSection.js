@@ -75,21 +75,6 @@ export default function HeroSection(props) {
   };
   */
 
-  const videoStyle = {
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    minWidth: '100%',
-    minHeight: '100%',
-    width: 'auto',
-    height: 'auto',
-    zIndex: '-100',
-    transform: `translateX(-50%) translateY(-50%)`,
-    //background: `url('${props.bgImage}') no-repeat`,
-    backgroundSize: 'cover',
-    transition: '1s opacity',
-  };
-
   // desktop and mobile renders needed to implement bgImage dynamically for video background when transitioning to mobile view and we need to hide video and keep bg image.
   const renderSlides = () => {
     return props.sliderContent.map((slide) => {
@@ -166,6 +151,7 @@ export default function HeroSection(props) {
           </div>
         );
       };
+      /*
       const renderMobile = () => {
         const getStyle = () => {
           if (slide.backgroundPlain) {
@@ -227,6 +213,7 @@ export default function HeroSection(props) {
           </div>
         );
       };
+      */
       return <div key={slide.id}>{renderDesktop()}</div>;
     });
   };

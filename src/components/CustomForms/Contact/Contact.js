@@ -1,43 +1,43 @@
-import React, { useEffect, useState, useContext } from "react";
-import classNames from "classnames";
+import React, { useEffect, useState, useContext } from 'react';
+import classNames from 'classnames';
 
 // material-ui core components
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "components/CustomButtons/Button.js";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Typography from "@material-ui/core/Typography";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Checkbox from "@material-ui/core/Checkbox";
+import { makeStyles } from '@material-ui/core/styles';
+import Button from 'components/CustomButtons/Button.js';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Typography from '@material-ui/core/Typography';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Checkbox from '@material-ui/core/Checkbox';
 
 // @material-ui/icons
-import Check from "@material-ui/icons/Check";
+import Check from '@material-ui/icons/Check';
 
 // Custom Components
-import checkboxStyles from "assets/jss/material-kit-react/customCheckboxRadioSwitch.js";
+import checkboxStyles from 'assets/jss/material-kit-react/customCheckboxRadioSwitch.js';
 
 // My Custom Components
-import CustomInput from "components/CustomForms/Contact/ContactInput.js";
+import CustomInput from 'components/CustomForms/Contact/ContactInput.js';
 
 // Custom Functions
-import { signupFunction } from "services/functions/signupFucntion.js";
-import { contactFunction } from "services/functions/contact/contactFunction.js";
+import { signupFunction } from 'services/functions/signupFucntion.js';
+import { contactFunction } from 'services/functions/contact/contactFunction.js';
 
 // Context
-import { ContactFormContext } from "contexts/ContactFormContext.js";
-import { interests } from "contexts/SignupFormContext.js";
-import { AlertContext, contactAlertId } from "contexts/AlertContext.js";
+import { ContactFormContext } from 'contexts/ContactFormContext.js';
+import { interests } from 'contexts/SignupFormContext.js';
+import { AlertContext, contactAlertId } from 'contexts/AlertContext.js';
 
 // Custom functions
-import { inputErrorsExistContact } from "services/functions/validateInput.js";
-import { contactOptions } from "services/functions/contact/contactOptions.js";
-import profilePageStyle from "assets/jss/material-kit-react/views/profilePage";
-import { getOptions } from "services/functions/contact/contactOptions";
+import { inputErrorsExistContact } from 'services/functions/validateInput.js';
+import { contactOptions } from 'services/functions/contact/contactOptions.js';
+import profilePageStyle from 'assets/jss/material-kit-react/views/profilePage';
+import { getOptions } from 'services/functions/contact/contactOptions';
 
 // recaptcha
-import ReCaptchaV2 from "react-google-recaptcha";
+import ReCaptchaV2 from 'react-google-recaptcha';
 
 // service
-import { reCaptchaService } from "services/functions/recaptchaService";
+import { reCaptchaService } from 'services/functions/recaptchaService';
 
 const Contact = (props) => {
   const [formValues, setFormValues] = useContext(ContactFormContext);
@@ -48,19 +48,19 @@ const Contact = (props) => {
   const resetState = () => {
     setFormValues({
       inputValues: {
-        name: "",
-        email: "",
-        phone: "",
-        select: "",
-        message: "",
+        name: '',
+        email: '',
+        phone: '',
+        select: '',
+        message: '',
       },
     });
   };
 
   const onChange = (value) => {
     const isSuccess = (value) => {
-      if (isSuccess === "success") {
-        alert("Failed bot test. Please retry.");
+      if (isSuccess === 'success') {
+        alert('Failed bot test. Please retry.');
       } else {
         // The send message button is disabled until this value is set
         setReCaptchaToken(value);
@@ -87,7 +87,9 @@ const Contact = (props) => {
     const uploaded = (e) => {
       setLoading(false);
       resetState();
-      props.closeModal();
+      if (!props.noModal) {
+        props.closeModal();
+      }
       // Set state of the snackbar and pass the id to create a unique snackbar state - this allows for multiple snackbars handled independently
       if (!e) {
         setAlerts({ ...alerts, [contactAlertId]: true });
@@ -100,23 +102,23 @@ const Contact = (props) => {
 
   const renderFullForm = () => {
     return (
-      <div style={{ paddingTop: "15px" }}>
+      <div style={{ paddingTop: '15px' }}>
         <CustomInput
           name="name"
           id="name"
-          label={props.language ? "Name" : "Nombre"}
+          label={props.language ? 'Name' : 'Nombre'}
           fullWidth={true}
         />
         <CustomInput
           name="phone"
           id="phone"
-          label={props.language ? "Phone" : "Teléfono"}
+          label={props.language ? 'Phone' : 'Teléfono'}
           fullWidth={true}
         />
         <CustomInput
           name="email"
           id="email"
-          label={props.language ? "Email" : "Correo Electrónico"}
+          label={props.language ? 'Email' : 'Correo Electrónico'}
           fullWidth={true}
         />
         <CustomInput
@@ -126,8 +128,8 @@ const Contact = (props) => {
             props.selectLabel
               ? props.selectLabel
               : props.language
-              ? "Select option"
-              : "Seleccione una opción"
+              ? 'Select option'
+              : 'Seleccione una opción'
           }
           options={getOptions(props.entity)}
           fullWidth={true}
@@ -135,7 +137,7 @@ const Contact = (props) => {
         <CustomInput
           name="message"
           id="message"
-          label={props.language ? "Message" : "Mensaje"}
+          label={props.language ? 'Message' : 'Mensaje'}
           fullWidth={true}
         />
       </div>
@@ -148,14 +150,14 @@ const Contact = (props) => {
         {renderFullForm()}
         <div
           style={{
-            position: "relative",
+            position: 'relative',
           }}
         >
           <ReCaptchaV2
             onChange={onChange}
             onExpired={handleExpire}
             sitekey={process.env.REACT_APP_SITE_KEY}
-            style={{ paddingTop: "30px" }}
+            style={{ paddingTop: '30px' }}
           />
           <Button
             disabled={
@@ -170,22 +172,22 @@ const Contact = (props) => {
               ReCaptchaToken === null
             }
             style={{
-              margin: "15px 0 0 0",
+              margin: '15px 0 0 0',
             }}
             fullWidth
             onClick={submit}
             usetheme="contained"
           >
-            {props.language ? "Send Message" : "Envíe Mensaje "}
+            {props.language ? 'Send Message' : 'Envíe Mensaje '}
           </Button>
           {loading && (
             <CircularProgress
               style={{
-                position: "absolute",
-                top: "83%",
-                left: "50%",
-                marginTop: "-5px",
-                marginLeft: "-12px",
+                position: 'absolute',
+                top: '83%',
+                left: '50%',
+                marginTop: '-5px',
+                marginLeft: '-12px',
               }}
               size={24}
               color="primary"

@@ -43,6 +43,7 @@ import ReactHelmetComponent from 'components/ReactHelmet/ReactHelmetComponent';
 // Pages
 import Home from 'views/MRG/Pages/home/home.js';
 import News from 'views/MRG/Pages/news/news.js';
+import Vendors from 'views/MRG/Pages/vendors/vendors.js';
 import NewsPage from 'views/MRG/Pages/news/newsPage.js';
 import Meetings from 'views/MRG/Pages/meetings/meetings.js';
 import Weddings from 'views/MRG/Pages/meetings/weddings';
@@ -315,7 +316,7 @@ export default function Miccosukee(props) {
               component={TribeAdministration}
             />
             <Route path="/administration" component={Administration} />
-
+            <Route exact path={`/vendors`} component={Vendors} />
             <Route exact path={`/news`} component={News} />
             <Route
               exact
