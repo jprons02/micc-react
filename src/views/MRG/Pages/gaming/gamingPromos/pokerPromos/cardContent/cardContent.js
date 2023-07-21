@@ -11,7 +11,7 @@ import { october } from 'views/MRG/Pages/gaming/gamingPromos/pokerPromos/cardCon
 import { november } from 'views/MRG/Pages/gaming/gamingPromos/pokerPromos/cardContent/months/10_november.js';
 import { december } from 'views/MRG/Pages/gaming/gamingPromos/pokerPromos/cardContent/months/11_december.js';
 
-export const content = (language, month) => {
+export const pokerContent = (language, month) => {
   const d = new Date();
 
   const contentByMonth = [
@@ -32,53 +32,29 @@ export const content = (language, month) => {
   // If url is bad or if month data is not available, use current month promos
   switch (month) {
     case 'january':
-      return contentByMonth[0].data
-        ? contentByMonth[0]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[0].data ? contentByMonth[0] : 'undefined';
     case 'february':
-      return contentByMonth[1].data
-        ? contentByMonth[1]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[1].data ? contentByMonth[1] : 'undefined';
     case 'march':
-      return contentByMonth[2].data
-        ? contentByMonth[2]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[2].data ? contentByMonth[2] : 'undefined';
     case 'april':
-      return contentByMonth[3].data
-        ? contentByMonth[3]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[3].data ? contentByMonth[3] : 'undefined';
     case 'may':
-      return contentByMonth[4].data
-        ? contentByMonth[4]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[4].data ? contentByMonth[4] : 'undefined';
     case 'june':
-      return contentByMonth[5].data
-        ? contentByMonth[5]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[5].data ? contentByMonth[5] : 'undefined';
     case 'july':
-      return contentByMonth[6].data
-        ? contentByMonth[6]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[6].data ? contentByMonth[6] : 'undefined';
     case 'august':
-      return contentByMonth[7].data
-        ? contentByMonth[7]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[7].data ? contentByMonth[7] : 'undefined';
     case 'september':
-      return contentByMonth[8].data
-        ? contentByMonth[8]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[8].data ? contentByMonth[8] : 'undefined';
     case 'october':
-      return contentByMonth[9].data
-        ? contentByMonth[9]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[9].data ? contentByMonth[9] : 'undefined';
     case 'november':
-      return contentByMonth[10].data
-        ? contentByMonth[10]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[10].data ? contentByMonth[10] : 'undefined';
     case 'december':
-      return contentByMonth[11].data
-        ? contentByMonth[11]
-        : contentByMonth[d.getMonth()];
+      return contentByMonth[11].data ? contentByMonth[11] : 'undefined';
     default:
       return contentByMonth[d.getMonth()];
   }

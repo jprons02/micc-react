@@ -20,11 +20,13 @@ const pokerPromoCardStyle = {
     fontSize: '11px',
     fontStyle: 'italic',
     paddingBottom: '20px',
-  },
-  cardContainer: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    textAlign: 'center',
+    //DESKTOP VIEW
+    '@media screen and (min-width: 960px)': {
+      fontSize: '14px',
+      maxWidth: '600px',
+      margin: 'auto',
+      paddingBottom: '30px',
+    },
   },
   serviceCards: {
     display: 'block',
@@ -148,13 +150,14 @@ const pokerPromoCardStyle = {
     },
   },
   calendarMainSectionStyle: {
-    maxWidth: '650px',
     paddingTop: '30px',
     paddingBottom: '30px',
-    margin: 'auto',
-    marginTop: '35px',
-    marginBottom: '30px',
+    //maxWidth: '650px',
+    //margin: 'auto',
+    //marginTop: '35px',
+    //marginBottom: '30px',
     backgroundColor: black,
+    textAlign: 'center',
   },
   calendarItemMargin: {
     //DESKTOP VIEW
@@ -221,10 +224,6 @@ const pokerPromoCardStyle = {
   },
   //DESKTOP VIEW
   '@media screen and (min-width: 960px)': {
-    cardContainer: {
-      textAlign: 'center',
-      paddingBottom: '15px',
-    },
     serviceCards: {
       display: 'inline-block',
       margin: '24px',
@@ -252,12 +251,6 @@ const pokerPromoCardStyle = {
     },
     bodyLeft: {
       margin: '0',
-    },
-    disclaimer: {
-      fontSize: '14px',
-      maxWidth: '600px',
-      margin: 'auto',
-      paddingBottom: '30px',
     },
   },
 };

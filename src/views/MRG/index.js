@@ -56,7 +56,7 @@ import ClubEgret from 'views/MRG/Pages/amenities/club-egret/clubEgret.js';
 import PoolGym from 'views/MRG/Pages/amenities/pool-gym/poolGym.js';
 import TeenArcade from 'views/MRG/Pages/amenities/teen-arcade/teenArcade.js';
 import GamingMachines from 'views/MRG/Pages/gaming/gamingMachines/gamingMachines.js';
-import GamingPromos from 'views/MRG/Pages/gaming/gamingPromos/gamingPromos.js';
+import GamingPromosPage from 'views/MRG/Pages/gaming/gamingPromos/gamingPromosPage2.js';
 import MSphere from 'views/MRG/Pages/gaming/mSphere/mSphere.js';
 import Bingo from 'views/MRG/Pages/gaming/bingo/bingo.js';
 import Poker from 'views/MRG/Pages/gaming/poker/poker.js';
@@ -68,6 +68,7 @@ import Deli from 'views/MRG/Pages/diningNightlife/deli/deli.js';
 import CafeHammock from 'views/MRG/Pages/diningNightlife/cafe-hammock/cafeHammock.js';
 import CypressLounge from 'views/MRG/Pages/diningNightlife/cypress-lounge/cypressLounge.js';
 import MartiniBar from 'views/MRG/Pages/diningNightlife/martini-bar/martiniBar.js';
+import TemptLounge from 'views/MRG/Pages/diningNightlife/tempt-lounge/temptLounge.js';
 import Maxs from 'views/MRG/Pages/diningNightlife/maxs/maxs.js';
 import MaxsGrabAndGo from './Pages/diningNightlife/maxs/maxsgrabandgo';
 import BanquetsCatering from 'views/MRG/Pages/banquetsCatering/banquetsCatering.js';
@@ -340,16 +341,20 @@ export default function Miccosukee(props) {
             />
             <Route exact path={`/news/:newsId`} component={NewsPage} />
             {/*CASINO*/}
-            <Route exact path={`/casino/promotions`} component={GamingPromos} />
+            <Route
+              exact
+              path={`/casino/promotions`}
+              component={GamingPromosPage}
+            />
             <Route
               exact
               path={`/casino/promotions/:month`}
-              component={GamingPromos}
+              component={GamingPromosPage}
             />
             <Route
               exact
               path={`/casio/promotions/es`}
-              component={GamingPromos}
+              component={GamingPromosPage}
             />
             <Route exact path={`/casino/hosts`} component={Hosts} />
             <Route exact path={`/casino/slots`} component={GamingMachines} />
@@ -380,6 +385,11 @@ export default function Miccosukee(props) {
               exact
               path={`/food-drink/b1-grill-menu`}
               component={B1Grill}
+            />
+            <Route
+              exact
+              path={`/food-drink/tempt-lounge`}
+              component={TemptLounge}
             />
             <Route exact path={`/food-drink/buffet`} component={Buffet} />
             <Route

@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CasinoPromos from './casinoPromos';
@@ -62,11 +63,58 @@ const PromotionsSpot = () => {
       </div>
       <div>
         <Hidden mdUp>
-          <CasinoPromos month={getMonth()} mobile={true} />
+          <CasinoPromos isFeatured={true} month={getMonth()} mobile={true} />
         </Hidden>
         <Hidden smDown>
-          <CasinoPromos month={getMonth()} mobile={false} />
+          <CasinoPromos isFeatured={true} month={getMonth()} mobile={false} />
         </Hidden>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default PromotionsSpot;
+*/
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CasinoPromos from 'views/MRG/Pages/gaming/gamingPromos/casinoPromos/casinoPromos2.js';
+
+// Services
+import { getPromoMonth } from 'services/functions/getPromoMonth';
+
+// Context
+import { useLanguage } from 'contexts/languageContext.js';
+
+// Styling
+import { Hidden } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import styles from 'assets/jss/material-kit-react/views/mrg/home.js';
+
+const useStyles = makeStyles(styles);
+
+const PromotionsSpot = () => {
+  const language = useLanguage();
+  const classes = useStyles();
+
+  const monthObj = getPromoMonth('casinoPromos', language);
+
+  return (
+    <React.Fragment>
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+        <h1 className={classes.promotionsSpotH1}>Live it Up! Play On.</h1>
+        <Link to="/casino/promotions">
+          <span className={classes.promotionsSpotLink}>
+            VIEW ALL PROMOTIONS
+          </span>
+        </Link>
+      </div>
+      <div>
+        <CasinoPromos
+          monthObj={monthObj}
+          language={language}
+          isFeatured={true}
+        />
       </div>
     </React.Fragment>
   );

@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 // @material-ui/core components
+
 import { makeStyles } from '@material-ui/core/styles';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
-//import DialogActions from "@material-ui/core/DialogActions";
 import IconButton from '@material-ui/core/IconButton';
+
 // @material-ui/icons
 import Close from '@material-ui/icons/Close';
+
 // core components
 import modalStyle from 'assets/jss/material-kit-react/roomDetailsModal.js';
+
 // @material-ui/icons
 import Typography from '@material-ui/core/Typography';
 import Button from 'components/CustomButtons/Button.js';
 
 // My custom components
-import BookRoomForm from 'components/CustomForms/BookRoom/BookRoom.js';
+import CustomImageSlider from 'components/CustomImageSlider/CustomImageSlider.js';
 
 // Context
 import { useLanguage } from 'contexts/languageContext';
@@ -29,6 +32,13 @@ const RoomDetailModal = (props) => {
 
   const imageSrc = props.selectedRoom.img ? props.selectedRoom.img.src : null;
   const imageAlt = props.selectedRoom.img ? props.selectedRoom.img.alt : null;
+
+  /*
+  const imageObj = [
+    { src: image1, alt: 'Hamburger' },
+    { src: image2, alt: 'Hot dog' },
+  ];
+  */
 
   const renderButton = () => {
     return (
@@ -83,7 +93,8 @@ const RoomDetailModal = (props) => {
           id="modal-slide-description"
           className={classes.modalBody}
         >
-          <img alt={imageAlt} src={imageSrc} className={classes.imageStyle} />
+          {/*<img alt={imageAlt} src={imageSrc} className={classes.imageStyle} />*/}
+          {<CustomImageSlider images={props.selectedRoom.imageObj} />}
           <div style={{ marginTop: '40px' }}>
             <h3 className={classes.subTitle}>Features</h3>
             {props.selectedRoom.features ? props.selectedRoom.features() : null}

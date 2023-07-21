@@ -27,7 +27,7 @@ const homeCardStyle = {
     },
   },
   cardTitle: {
-    fontSize: '16px',
+    fontSize: '15px',
   },
   cardBodyText: {
     //fontSize: "10px",

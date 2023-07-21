@@ -175,6 +175,11 @@ const MrgHeader = () => {
           link: 'food-drink/martini-bar',
           target: '',
         },
+        {
+          text: 'Tempt Lounge',
+          link: 'food-drink/tempt-lounge',
+          target: '',
+        },
       ],
       //icon: () => <Icon>chevron_right</Icon>,
     },

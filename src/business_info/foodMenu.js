@@ -92,91 +92,6 @@ export const ourLittleShackMenu = [
 
 // B1 Grill
 export const b1GrillMenu = [
-  /*
-  {
-    name: 'Breakfast',
-    subMenu: [
-      {
-        name:
-          'Omelette Combo, includes: two eggs any style (fried or scrambled), two proteins (sausage, bacon, ham), breakfast potatoes, toast and one american coffee',
-        items: [
-          { name: 'Veggie Omelette Combo', price: '$9.00' },
-          { name: 'Ham & Cheese Omelette Combo', price: '$9.50' },
-          { name: 'All Meat Omelette Combo', price: '$10.50' },
-          {
-            name: 'Two Eggs Combo (includes toast & home potatoes)',
-            price: '$6.00',
-          },
-        ],
-      },
-
-      {
-        name: 'Sides',
-        items: [
-          { name: 'Oatmeal (6 oz.)', price: '$2.50' },
-          { name: 'French Fries (4 oz.)', price: '$2.50' },
-          { name: 'Steak Ham (4 oz.)', price: '$3.25' },
-          { name: 'Sausage (2 pc.)', price: '$2.25' },
-          { name: 'Hash Brown (2 pc.)', price: '$2.00' },
-          { name: 'Home Potatoes (4 oz.)', price: '$2.50' },
-          { name: 'Bacon (4 pc.)', price: '$3.50' },
-          { name: 'Two eggs any style (fried or scrambled)', price: '$2.30' },
-        ],
-      },
-      {
-        name: 'Extras',
-        items: [
-          { name: 'Two Eggs', price: '$2.50' },
-          { name: 'Egg White', price: '$2.50' },
-          {
-            name: 'Choice of American, Mozzarella, Cheddar or Swiss cheese',
-            price: '$1.25',
-          },
-          { name: 'Cheese', price: '$1.50' },
-          { name: 'Topping', price: '$1.50' },
-          { name: 'Sausage', price: '$2.50' },
-          { name: 'Meat', price: '$2.50' },
-          { name: 'Steak Ham', price: '$3.50' },
-          { name: 'Bacon', price: '$3.50' },
-          { name: 'Onions, Peppers, Tomatoes or Mushrooms', price: '$1.50' },
-          { name: 'Toast', price: '$2.50' },
-          { name: 'Cuban Toast', price: '$3.00' },
-        ],
-      },
-    ],
-  },
-  */
-  {
-    name: 'Drinks',
-    subMenu: [
-      {
-        name: 'Cold Beverages',
-        items: [
-          { name: 'Soda Can (12 oz.)', price: '$2.50' },
-          { name: 'Soda Bottle (20 oz.)', price: '$3.00' },
-          { name: 'Fountain Soda', price: '$2.00' },
-          { name: 'Monster', price: '$4.00' },
-          { name: 'Powerade', price: '$3.50' },
-          { name: 'Dunkin Donuts Beverages', price: '$3.50' },
-          { name: 'Gold Peak Tea', price: '$3.00' },
-          { name: 'Water Bottle', price: '$1.50' },
-          { name: 'Juice', price: '$3.00' },
-        ],
-      },
-      {
-        name: 'Hot Beverages',
-        items: [
-          { name: 'Hot Tea', price: '$1.50' },
-          { name: 'American Coffee', price: '$2.00' },
-          { name: 'Colada', price: '$2.50' },
-          { name: 'Cortadito', price: '$3.00' },
-          { name: 'Café con Leche', price: '$4.00' },
-          { name: 'Hot Chocolate', price: '$4.00' },
-          { name: 'Cappuccino', price: '$4.50' },
-        ],
-      },
-    ],
-  },
   {
     name: 'Appetizers',
     items: [
@@ -194,9 +109,9 @@ export const b1GrillMenu = [
       { name: 'Papa Rellena', price: '$3.00' },
       { name: 'Cheese Tequeño', price: '$3.00' },
       { name: 'Guava Cheese Tequeño', price: '$3.00' },
-      { name: 'Chorizo Empanada', price: '$3.50' },
-      { name: 'Spinach Empanada', price: '$3.50' },
       { name: 'Chicken Empanada', price: '$3.50' },
+      { name: 'Spinach Empanada', price: '$3.50' },
+      { name: 'Chorizo Empanada', price: '$3.50' },
       { name: 'Meat Empanada', price: '$3.50' },
       { name: 'Jamaican Curry Chicken Pattie', price: '$4.00' },
       { name: 'Jamaican Beef Spicy Pattie', price: '$4.00' },
@@ -226,64 +141,355 @@ export const b1GrillMenu = [
     ],
   },
   {
-    name: 'Hot Stuff',
+    name: 'Hot Items and Pizza',
     items: [
       { name: 'Hot Dog & Fries', price: '$7.00' },
       { name: 'Chicken Tenders', price: '$11.50' },
       { name: 'Chicken Wings', price: '$14.00' },
+      { name: 'Cheese Pizza (Slice)', price: '$4.00' },
+      { name: 'Pepperoni Pizza (Slice)', price: '$4.00' },
+      { name: 'Whole Pizza', price: '$20.00' },
     ],
   },
   {
-    name: 'Salad',
+    name: 'Soups and Sandwiches',
     subMenu: [
       {
-        name:
-          '$8 Combo includes: 16 oz. Soup and Garden Salad with a 16 oz. Drink (no Fries included)',
+        name: 'Soups',
         items: [
-          { name: 'Mac Salad Scoop', price: '$3.91' },
-          { name: 'Chicken Salad Scoop', price: '$5.75' },
-          { name: 'Tuna Salad Scoop', price: '$6.21' },
-          { name: 'Garden Salad', price: '$7.50' },
+          { name: 'Miccosukee Chicken Soup', price: '$6.00' },
+          { name: 'Soup of the Day', price: '$5.52' },
+        ],
+      },
+      {
+        name: 'Sandwiches',
+        items: [
+          { name: 'Grilled Cheese', price: '$7.00' },
+          { name: 'Chicken Salad Sandwich', price: '$10.00' },
+          { name: 'BLT Sandwich', price: '$9.50' },
+          { name: 'Ham & Cheese Sandwich', price: '$9.00' },
+          { name: 'Turkey & Provolone Sandwich', price: '$9.50' },
+          { name: 'Croqueta Preparada', price: '$9.50' },
+          { name: 'Tuna Salad Sandwich', price: '$10.00' },
+          { name: 'Chicken Sandwich', price: '$10.50' },
+          { name: 'Cuban Sandwich', price: '$10.50' },
+          { name: 'Club Sandwich', price: '$12.00' },
+          { name: 'Steak Palomilla Sandwich', price: '$12.00' },
+          { name: 'Pork Special Sandwich', price: '$10.00' },
+        ],
+      },
+      {
+        name: 'Burgers',
+        items: [
+          { name: 'Hamburger', price: '$10.00' },
+          { name: 'Cheeseburger', price: '$10.50' },
         ],
       },
     ],
   },
-  {
-    name: 'Sandwiches',
-    items: [
-      { name: 'Grilled Cheese', price: '$7.00' },
-      { name: 'Chicken Salad Sandwich', price: '$10.00' },
-      { name: 'BLT Sandwich', price: '$9.50' },
-      { name: 'Ham & Cheese Sandwich', price: '$9.00' },
-      { name: 'Turkey & Provolone Sandwich', price: '$9.50' },
-      { name: 'Croqueta Preparada', price: '$9.50' },
-      { name: 'Tuna Salad Sandwich', price: '$10.00' },
-      { name: 'Hamburger', price: '$10.00' },
-      { name: 'Chicken Sandwich', price: '$10.50' },
-      { name: 'Cuban Sandwich', price: '$10.50' },
-      { name: 'Cheeseburger', price: '$10.50' },
-      { name: 'Club Sandwich', price: '$12.00' },
-      { name: 'Steak Palomilla Sandwich', price: '$12.00' },
-      { name: 'Pork Special Sandwich', price: '$10.00' },
-    ],
-  },
+
   {
     name: 'Sides',
     items: [{ name: 'French Fries (8 oz.)', price: '$4.50' }],
   },
   {
-    name: 'Soup',
-    items: [
-      { name: 'Miccosukee Chicken Soup', price: '$6.00' },
-      { name: 'Soup of the Day', price: '$5.52' },
+    name: 'Drinks',
+    subMenu: [
+      {
+        name: 'Cold Beverages',
+        items: [
+          { name: 'Soda Can (12 oz.)', price: '$2.50' },
+          { name: 'Soda Bottle (20 oz.)', price: '$3.00' },
+          { name: 'Fountain Soda', price: '$2.00' },
+          { name: 'Monster® Energy Drink', price: '$4.00' },
+          { name: 'Powerade®', price: '$3.50' },
+          { name: 'Dunkin Donuts® Beverages', price: '$3.50' },
+          { name: 'Gold Peak® Tea', price: '$3.00' },
+          { name: 'Water Bottle', price: '$1.50' },
+          { name: 'Juice', price: '$3.00' },
+        ],
+      },
+      {
+        name: 'Hot Beverages',
+        items: [
+          { name: 'Hot Tea', price: '$1.50' },
+          { name: 'American Coffee', price: '$2.00' },
+          { name: 'Colada', price: '$2.50' },
+          { name: 'Cortadito', price: '$3.00' },
+          { name: 'Café con Leche', price: '$4.00' },
+          { name: 'Hot Chocolate', price: '$4.00' },
+          { name: 'Cappuccino', price: '$4.50' },
+        ],
+      },
+    ],
+  },
+];
+
+// Cafe Hammock
+export const cafeHammock = [
+  {
+    name: 'Appetizers & Soups',
+    subMenu: [
+      {
+        name: 'Appetizers',
+        items: [
+          { name: 'Chicharrones', price: '$15' },
+          { name: 'Fried Calamari', price: '$15' },
+          { name: 'Conch Fritters', price: '$15' },
+        ],
+      },
+      {
+        name: 'Soups (served in a sourdough bread bowl)',
+        items: [
+          { name: 'Broccoli & Cheese', price: '$10' },
+          { name: 'Clam Chowder', price: '$10' },
+        ],
+      },
     ],
   },
   {
-    name: 'Pizza',
+    name: 'Pasta & Pizza',
+    subMenu: [
+      {
+        name: 'Pasta',
+        items: [
+          {
+            name:
+              'Baked Ziti - Ziti, Ricotta, Pomodorina, Parmesan, Mozzarella',
+            price: '$24',
+          },
+          {
+            name: 'Lasagna - Layers of beef, Sausages, Cheese, Onions, Peppers',
+            price: '$24',
+          },
+          { name: 'Linguini & Clam Sauce - Red or White', price: '$24' },
+        ],
+      },
+      {
+        name:
+          'Build Your Own Pasta (Served with a Caesar Salad or Soup with Ciabatta Bread) - $25',
+        items: [
+          { name: 'Choose a Pasta - Ziti, Spaghetti, Linquini', price: '' },
+          { name: 'Choose a Sauce - Marinara, Alfredo, Pesto', price: '' },
+          {
+            name: 'Choose a Protein - Shrimp, Meatballs, Chicken Breast',
+            price: '',
+          },
+        ],
+      },
+      {
+        name: 'Pizza',
+        items: [
+          { name: 'Cheese - Tomato Sauce, House Blend Cheeses', price: '$15' },
+          {
+            name: 'Margherita - Fresh Tomatoes, Mozzarella, Basil',
+            price: '$15',
+          },
+          {
+            name: 'Chef’s Pie - Sausage, Meatball, Roasted Peppers',
+            price: '$15',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Entrées',
+    subMenu: [
+      {
+        name: 'Main Courses',
+        items: [
+          {
+            name:
+              'Chicken or Veal Parmigiana - Topped with house blend Tomato Sauce, Mozzarella',
+            price: '$25',
+          },
+          {
+            name:
+              'Broiled Atlantic Salmon - Center-cut Fillet with Fresh Herbs',
+            price: '$25',
+          },
+          {
+            name:
+              'Pork Tenderloin Bites - Garlic Butter, Pork Bites with Lemon Green Beans',
+            price: '$25',
+          },
+        ],
+      },
+      {
+        name:
+          'Meats (Served with choice of Baked Potato, Mashed Potato, White Rice or any Pasta)',
+        items: [
+          { name: 'Half Rack BB Ribs', price: '$25' },
+          { name: 'New York Strip', price: '$28' },
+          { name: 'Churrasco', price: '$30' },
+          { name: 'Pork Tomahawk', price: '$60' },
+          { name: 'Beef Tomahawk', price: '$95' },
+        ],
+      },
+      {
+        name: 'Surf & Turf (Served with choice of Meat and Two Sides) +$15',
+        items: [{ name: 'Maine Lobster Tail', price: '' }],
+      },
+    ],
+  },
+  {
+    name: 'Kids',
+    subMenu: [
+      {
+        name: 'Kids Menu (served with French Fries)',
+        items: [
+          { name: 'Chicken Wings', price: '$12' },
+          { name: 'Chicken Tenders', price: '$12' },
+          { name: 'Cheeseburger', price: '$12' },
+          { name: 'Mac & Cheese', price: '$12' },
+          { name: 'Hamburger', price: '$12' },
+        ],
+      },
+    ],
+  },
+];
+
+// Max's Grab & Go
+export const maxsgrabandgoMenu = [
+  {
+    name: 'Breakfast',
+    subMenu: [
+      {
+        name: 'Breakfast available from 7:00 A.M. — 10:00 A.M.',
+        items: [{ name: '', price: '' }],
+      },
+      {
+        name: 'Omelets (Served with home potatoes, toast, and American coffee)',
+        items: [
+          { name: 'Veggie', price: '$9.00' },
+          { name: 'Ham & Cheese', price: '$9.50' },
+          { name: 'All Meat', price: '$10.50' },
+        ],
+      },
+      {
+        name: 'Combo (Served with home potatoes, toast, and American coffee)',
+        items: [
+          {
+            name:
+              'Two Eggs (fried or scrambled) with two proteins (sausage, bacon, or ham)',
+            price: '$8.00',
+          },
+        ],
+      },
+      {
+        name: 'Extras',
+        items: [
+          { name: 'Oatmeal (6 oz.)', price: '$2.50' },
+          { name: 'French Fries (4 oz.)', price: '$2.50' },
+          { name: 'Steak Ham (4 oz.)', price: '$3.50' },
+          { name: 'Hash Brown (2 pc)', price: '$2.00' },
+          { name: 'Home Potatoes (4 oz.)', price: '$2.50' },
+          { name: 'Bacon (4 pc)', price: '$3.50' },
+          { name: 'Sausage (2 pc)', price: '$2.50' },
+          { name: 'Two Eggs (fried or scrambled)', price: '$2.50' },
+          { name: 'Egg White', price: '$2.50' },
+          { name: 'Cuban Toast', price: '$3.00' },
+          { name: 'Toast', price: '$2.50' },
+          { name: 'Extra Sausage', price: '$2.50' },
+          { name: 'Extra Bacon', price: '$2.50' },
+          {
+            name: 'American, Mozzarella, Cheddar, or Swiss Cheese',
+            price: '$2.00',
+          },
+          { name: 'Onion, Pepper, Tomato, or Mushroom', price: '$1.50' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'A la Carté',
     items: [
-      { name: 'Cheese Pizza (Slice)', price: '$4.00' },
-      { name: 'Pepperoni Pizza (Slice)', price: '$4.50' },
-      { name: 'Whole Pizza', price: '$20.00' },
+      { name: 'Chip ', price: '$1.00' },
+      { name: 'Croqueta ', price: '$1.50' },
+      { name: 'Pandabono ', price: '$2.50' },
+      { name: 'Pastelito ', price: '$2.50' },
+      { name: 'Papa / Yuca Rellena ', price: '$3.00' },
+      { name: 'Tequeño ', price: '$3.00' },
+      { name: 'Croquetas (3) ', price: '$3.00' },
+      { name: 'Empanadas ', price: '$3.00' },
+      { name: 'Hot Dog ', price: '$3.00' },
+      { name: 'Rice Pudding ', price: '$3.00' },
+      { name: 'Flan ', price: '$3.00' },
+      { name: 'Tres Leches ', price: '$3.00' },
+      { name: 'Slice of Cheese Pizza ', price: '$3.00' },
+      { name: 'Slice of Pepperoni Pizza ', price: '$3.00' },
+      { name: 'Jamaican Patty ', price: '$3.00' },
+    ],
+  },
+  {
+    name: 'Combo',
+    items: [{ name: 'Hot Dog & Beer', price: '$5.50' }],
+  },
+  {
+    name: 'Country Bowl Combos',
+    items: [
+      {
+        name:
+          'Cuban - Roasted pork, white rice, black beans, fried plantain, and mojo sauce',
+        price: '$14.95',
+      },
+
+      {
+        name:
+          'Peruvian - Lomo or chicken saltado, white rice or lo-mein, french fries, and Huancaina sauce',
+        price: '$14.95',
+      },
+
+      {
+        name:
+          'Mexican - Beef or chicken fajita, cilantro rice, red beans, guacamole, and pico de gallo',
+        price: '$14.95',
+      },
+
+      {
+        name:
+          'Colombian - Chorizo, churrasco, mini chicharron, white rice, red beans, fried plantain, mini arepa, and fried egg',
+        price: '$14.95',
+      },
+
+      {
+        name:
+          'Chinese - Chicken or beef fried rice, mini egg roll, and sweet & sour sauce',
+        price: '$14.95',
+      },
+
+      {
+        name:
+          'Italian - Grilled chicken alfredo or pesto linguini, parmesan cheese, and garlic bread',
+        price: '$14.95',
+      },
+
+      {
+        name:
+          'American Super Max - Salmon (4 oz.), shrimp skewer, lobster tail (4 oz.), white rice, and baked potato',
+        price: '$14.95',
+      },
+    ],
+  },
+  {
+    name: 'Drinks',
+    items: [
+      { name: 'Hot Tea', price: '$1.50' },
+      { name: 'Soda Can (12 oz.)', price: '$2.50' },
+      { name: 'Water Bottle', price: '$1.50' },
+      { name: 'Colada', price: '$2.50' },
+      { name: 'Cortadito', price: '$3.00' },
+      { name: 'Soda Bottle (20 oz.)', price: '$3.00' },
+      { name: 'Sweet / Unsweet Tea', price: '$3.00' },
+      { name: 'Dunkin Donuts® Coffee', price: '$3.50' },
+      { name: 'Powerade®', price: '$3.00' },
+      { name: 'Minute Maid® Juice', price: '$3.00' },
+      { name: 'Monster® Energy Drink', price: '$4.00' },
+      { name: 'Café con Leche', price: '$4.00' },
+      { name: 'Hot Chocolate', price: '$4.00' },
+      { name: 'Cappuccino', price: '$4.50' },
+      { name: 'Fountain Soda', price: '$2.00' },
     ],
   },
 ];
