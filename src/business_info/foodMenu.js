@@ -109,10 +109,10 @@ export const b1GrillMenu = [
       { name: 'Papa Rellena', price: '$3.00' },
       { name: 'Cheese Tequeño', price: '$3.00' },
       { name: 'Guava Cheese Tequeño', price: '$3.00' },
-      { name: 'Chicken Empanada', price: '$3.50' },
-      { name: 'Spinach Empanada', price: '$3.50' },
-      { name: 'Chorizo Empanada', price: '$3.50' },
-      { name: 'Meat Empanada', price: '$3.50' },
+      { name: 'Chicken Empanada', price: '$3.75' },
+      { name: 'Spinach Empanada', price: '$3.75' },
+      { name: 'Chorizo Empanada', price: '$3.75' },
+      { name: 'Meat Empanada', price: '$3.75' },
       { name: 'Jamaican Curry Chicken Pattie', price: '$4.00' },
       { name: 'Jamaican Beef Spicy Pattie', price: '$4.00' },
       { name: 'Jamaican Beef Mild Pattie', price: '$4.00' },
@@ -198,6 +198,9 @@ export const b1GrillMenu = [
       {
         name: 'Cold Beverages',
         items: [
+          { name: 'Import Beers', price: '$8.00' },
+          { name: 'Domestic Beers', price: '$7.00' },
+          { name: 'Wine', price: '$9.00' },
           { name: 'Soda Can (12 oz.)', price: '$2.50' },
           { name: 'Soda Bottle (20 oz.)', price: '$3.00' },
           { name: 'Fountain Soda', price: '$2.00' },
@@ -412,7 +415,7 @@ export const maxsgrabandgoMenu = [
       { name: 'Papa / Yuca Rellena ', price: '$3.00' },
       { name: 'Tequeño ', price: '$3.00' },
       { name: 'Croquetas (3) ', price: '$3.00' },
-      { name: 'Empanadas ', price: '$3.00' },
+      { name: 'Empanadas ', price: '$3.75' },
       { name: 'Hot Dog ', price: '$3.00' },
       { name: 'Rice Pudding ', price: '$3.00' },
       { name: 'Flan ', price: '$3.00' },
@@ -475,6 +478,9 @@ export const maxsgrabandgoMenu = [
   {
     name: 'Drinks',
     items: [
+      { name: 'Import Beers', price: '$8.00' },
+      { name: 'Domestic Beers', price: '$7.00' },
+      { name: 'Wine', price: '$9.00' },
       { name: 'Hot Tea', price: '$1.50' },
       { name: 'Soda Can (12 oz.)', price: '$2.50' },
       { name: 'Water Bottle', price: '$1.50' },

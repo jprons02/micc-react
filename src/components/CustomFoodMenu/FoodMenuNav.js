@@ -134,23 +134,6 @@ export default function ScrollableTabsButtonAuto(props) {
     });
   };
 
-  const disclaimer = (title) => {
-    if (title === 'B1 Grill Menu') {
-      // display disclaimer if tab is "combos" or "hot stuff"
-      if (value === 3 || value === 2) {
-        return (
-          <p style={{ fontSize: '12px', fontStyle: 'italic' }}>
-            {language
-              ? '8.7% tax plus a 20% service charge will be added to all items prepared to order.'
-              : 'Se agregará un impuesto del 8.7 % más un cargo por servicio del 20% a todos los artículos preparados para ordenar.'}
-          </p>
-        );
-      }
-    } else {
-      return null;
-    }
-  };
-
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
@@ -167,7 +150,6 @@ export default function ScrollableTabsButtonAuto(props) {
         </Tabs>
       </AppBar>
       <div style={{ marginTop: '20px' }}>{renderTabPanel()}</div>
-      {disclaimer(props.title)}
     </div>
   );
 }
