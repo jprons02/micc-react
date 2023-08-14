@@ -39,6 +39,7 @@ import Administration from 'views/Administration';
 
 // my components
 import PopupModal from 'components/CustomModal/CustomPopup/CustomPopupModal.js';
+import PasswordProtected from 'components/Wrappers/PasswordProtected';
 
 var hist = createBrowserHistory();
 
@@ -135,18 +136,23 @@ const App = () => {
           <ContactModalProvider>
             <ContactFormProvider>
               <FoodMenuProvider>
-                <Router history={hist}>
-                  <ReactHelmetComponent url={window.location.pathname} />
-                  <Switch>
-                    {/*<Route exact path={"/virtual-event/aid"} component={AID} />*/}
-                    <Route path="/" component={MCR} />
-                    <Route path="/golf" component={Golf} />
-                    <Route path="/village" component={Village} />
-                    <Route path="/airboats" component={Airboats} />
-                    <Route path="/history" component={History} />
-                    <Route path="/administration" component={Administration} />
-                  </Switch>
-                </Router>
+                <PasswordProtected>
+                  <Router history={hist}>
+                    <ReactHelmetComponent url={window.location.pathname} />
+                    <Switch>
+                      {/*<Route exact path={"/virtual-event/aid"} component={AID} />*/}
+                      <Route path="/" component={MCR} />
+                      <Route path="/golf" component={Golf} />
+                      <Route path="/village" component={Village} />
+                      <Route path="/airboats" component={Airboats} />
+                      <Route path="/history" component={History} />
+                      <Route
+                        path="/administration"
+                        component={Administration}
+                      />
+                    </Switch>
+                  </Router>
+                </PasswordProtected>
                 {renderSnackbar()}
               </FoodMenuProvider>
             </ContactFormProvider>
